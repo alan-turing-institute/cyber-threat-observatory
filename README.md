@@ -1,1 +1,1 @@
-# cyber-threat-observatory
+# Cyber Threat Observatory
