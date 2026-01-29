@@ -32,7 +32,7 @@ A vulnerability’s priority depends on:
 •	How the software is actually deployed (public-facing vs internal)
 
 4-Tier System Logic:
-TIER 1: Immediate external threat, no barriers, high value (initial access, RCE, data breach)
-TIER 2: High value but requires prerequisites (exploited/PoC but can't access from outside immediately, but provides high-impact gain)
-TIER 3: Arsenal value, post-compromise utility, significant prerequisites, or barriers + low impact
-TIER 4: Low kill chain utility, theoretical, or admin-only where legitimate access suffices
+- TIER 1: Immediate external threat, no barriers, high value (initial access, RCE, data breach)
+- TIER 2: High value but requires prerequisites (exploited/PoC but can't access from outside immediately, but provides high-impact gain)
+- TIER 3: Arsenal value, post-compromise utility, significant prerequisites, or barriers + low impact
+- TIER 4: Low kill chain utility, theoretical, or admin-only where legitimate access suffices
