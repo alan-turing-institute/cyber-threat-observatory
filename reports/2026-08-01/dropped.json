@@ -1,0 +1,1121 @@
+[
+  {
+    "id": "CVE-2026-13339",
+    "identity": {
+      "title": "CVE-2026-13339",
+      "published": "2026-08-01 23:29:35",
+      "modified": "2026-08-02 00:16:22",
+      "description": "The CubeWP Framework plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 1.1.30 via the 'cubewp_get_svg_content' function. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. This is exploitable by unauthenticated attackers because the required nonce is publicly emitted into the markup of any page rendering the CubeWP posts shortcode or widget with AJAX loading enabled, making it harvestable by any guest visitor before submitting the AJAX request."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/changeset/3627738/cubewp-framework"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "cubewp1211",
+      "products": "CubeWP Framework",
+      "cpe_uris": "cpe:2.3:*:cubewp1211:cubewp_framework:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/changeset/3627738/cubewp-framework",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/7ea72320-0e1e-45e3-987d-9ab7eecf1aee?source=cve",
+      "https://plugins.trac.wordpress.org/browser/cubewp-framework/tags/1.1.30/cube/functions/admin-functions.php#L1170"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-13339",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-13339"
+    },
+    "item_id": "CVE-2026-13339",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint, explicitly excluded by overlay drop rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-8457",
+    "identity": {
+      "title": "CVE-2026-8457",
+      "published": "2026-08-01 23:29:35",
+      "modified": "2026-08-02 00:16:23",
+      "description": "The WooCommerce - Social Login plugin for WordPress is vulnerable to Authentication Bypass in all versions up to and including 2.8.7. This is due to the plugin's Apple login handler accepting the Apple id_token and decoding only its base64 payload without verifying the JWT signature against Apple's public keys or validating the issuer, audience, or expiry claims, combined with the security nonce required to invoke the login flow being publicly exposed to unauthenticated users via a localized JavaScript object on the login page. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including administrators — by supplying a forged id_token whose payload contains the target user's email address, as that email is used without any role exclusion to resolve a WordPress account and immediately issue an authenticated session for it."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/53e83037-2cc5-4dc9-b55d-03829df12a65?source=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-289"
+      ],
+      "cwe_primary": "CWE-289",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-289": "Authentication Bypass by Alternate Name"
+      }
+    },
+    "software": {
+      "vendors": "WPWeb",
+      "products": "WooCommerce - Social Login",
+      "cpe_uris": "cpe:2.3:*:wpweb:woocommerce_-_social_login:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/53e83037-2cc5-4dc9-b55d-03829df12a65?source=cve",
+      "https://codecanyon.net/item/social-login-wordpress-woocommerce-plugin/8495883"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-8457",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-8457"
+    },
+    "item_id": "CVE-2026-8457",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress plugin despite authentication bypass mechanism, lacks enterprise/DPI footprint per overlay drop rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18352",
+    "identity": {
+      "title": "CVE-2026-18352",
+      "published": "2026-08-01 23:29:34",
+      "modified": "2026-08-02 00:16:22",
+      "description": "The User Access Manager plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 2.3.15 via the 'uamgetfile' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. This is possible because when attachment_url_to_postid() returns 0 for a traversal path, the plugin falls back to the global post set by a valid ?attachment_id parameter supplied by the attacker, causing the access check to pass against a legitimate public attachment while the file streamed is the attacker-chosen path."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/user-access-manager/tags/2.3.14/src/Controller/Frontend/RedirectController.php%3A50-99%2C119-141%2C245-252"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "gm_alex",
+      "products": "User Access Manager",
+      "cpe_uris": "cpe:2.3:*:gm\\_alex:user_access_manager:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/user-access-manager/tags/2.3.14/src/Controller/Frontend/RedirectController.php%3A50-99%2C119-141%2C245-252",
+      "https://plugins.trac.wordpress.org/browser/user-access-manager/tags/2.3.14/src/Controller/BaseControllerTrait.php%3A22-50",
+      "https://plugins.trac.wordpress.org/browser/user-access-manager/tags/2.3.14/src/UserAccessManager.php%3A512-516",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/4e88efe0-ffad-4d66-bb03-3f3a9dcbe5b1?source=cve",
+      "https://plugins.trac.wordpress.org/changeset/3628895/user-access-manager",
+      "https://plugins.trac.wordpress.org/browser/user-access-manager/tags/2.3.14/src/File/FileHandler.php%3A79-124%2C270-294"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18352",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18352"
+    },
+    "item_id": "CVE-2026-18352",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint, explicitly excluded by overlay drop rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-67352",
+    "identity": {
+      "title": "CVE-2026-67352",
+      "published": "2026-08-01 12:22:16",
+      "modified": "2026-08-01 13:17:05",
+      "description": "luci-app-https-dns-proxy contains a stored cross-site scripting vulnerability in the resolver_url parameter that allows authenticated users to inject active HTML. When an administrator views the HTTPS DNS Proxy status page, the resolver URL is rendered as raw HTML and executes JavaScript in the administrator's browser origin."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/openwrt/luci/security/advisories/GHSA-c6vf-395q-4jv6"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "openwrt",
+      "products": "luci",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/openwrt/luci/security/advisories/GHSA-c6vf-395q-4jv6",
+      "https://www.vulncheck.com/advisories/luci-app-https-dns-proxy-stored-xss-via-resolver-url"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-67352",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-67352"
+    },
+    "item_id": "CVE-2026-67352",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "OpenWrt router firmware web interface (LuCI) with stored XSS, falling under the consumer/home router drop class with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16635",
+    "identity": {
+      "title": "CVE-2026-16635",
+      "published": "2026-08-01 08:32:29",
+      "modified": "2026-08-01 09:17:00",
+      "description": "The Pronamic Pay plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 10.1.0 This is due to the `maybe_update_user_role()` function passing an attacker-controlled Gravity Forms field value (`$lead[$feed->user_role_field_id]`) directly into `WP_User::set_role()` without any allowlist validation, capability comparison, or permission check to constrain which roles can be assigned. This makes it possible for authenticated attackers, with Subscriber-level access and above, to escalate their own WordPress account to Administrator by tampering with the role field value in a form submission. Exploitation requires that an administrator has already configured a Pronamic Pay payment feed in Gravity Forms with the **Update User Role** option enabled and mapped to a form field; once that configuration is in place, no further preconditions exist to prevent an authenticated attacker from exploiting this vulnerability."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00309,
+      "percentile": 0.23258,
+      "date": "2026-08-02"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L144"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "pronamic",
+      "products": "Pronamic Pay",
+      "cpe_uris": "cpe:2.3:*:pronamic:pronamic_pay:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L144",
+      "https://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L988",
+      "https://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L376",
+      "https://plugins.trac.wordpress.org/browser/pronamic-ideal/tags/10.1.0/packages/wp-pay-extensions/gravityforms/src/Extension.php#L379",
+      "https://plugins.trac.wordpress.org/changeset/3630401/pronamic-ideal/trunk/packages/wp-pay-extensions/gravityforms/src/Extension.php",
+      "https://plugins.trac.wordpress.org/changeset?old_path=%2Fpronamic-ideal/tags/10.1.0&new_path=%2Fpronamic-ideal/tags/10.2.0",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/d42b8856-e5d0-4122-98a4-8c959832b271?source=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16635",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16635"
+    },
+    "item_id": "CVE-2026-16635",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin privilege escalation, explicitly excluded as consumer-only software with no enterprise or DPI footprint per overlay drop rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15964",
+    "identity": {
+      "title": "CVE-2026-15964",
+      "published": "2026-08-01 08:32:27",
+      "modified": "2026-08-01 09:17:00",
+      "description": "The Single Sign On For TNG plugin for WordPress is vulnerable to Authentication Bypass via unauthenticated password reset in all versions up to, and including, 2.0.0. This is due to the `ssoprocess_ajax()` function — registered on `wp_ajax_nopriv_ssoprocess_ajax` and therefore reachable without authentication — accepting an attacker-supplied `email` parameter with the `setnewpassword` operation and calling `reset_password()` on the resolved account without any ownership token, email confirmation link, or capability check. The sole guard is a call to `check_ajax_referer()`, which provides no authorization barrier because the `ssoajaxnonce` nonce is publicly broadcast on every front-end page via `wp_localize_script()` into the `SSOPWDREQUIREMENT` JavaScript object; since WordPress computes nonces for logged-out visitors against a shared anonymous session context, any unauthenticated visitor can scrape a valid nonce from the homepage and use it to authenticate the request. This makes it possible for unauthenticated attackers to change the password of any WordPress account, including administrator accounts, enabling complete site takeover."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00489,
+      "percentile": 0.39437,
+      "date": "2026-08-02"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/single-sign-on-for-tng/tags/2.0.0/single-sign-on-for-tng.php#L102"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-620"
+      ],
+      "cwe_primary": "CWE-620",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-620": "Unverified Password Change"
+      }
+    },
+    "software": {
+      "vendors": "britcoder",
+      "products": "Single Sign On For TNG",
+      "cpe_uris": "cpe:2.3:*:britcoder:single_sign_on_for_tng:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/single-sign-on-for-tng/tags/2.0.0/single-sign-on-for-tng.php#L102",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/1d8d393e-764c-491d-8afb-7d4f8d0c387a?source=cve",
+      "https://plugins.trac.wordpress.org/browser/single-sign-on-for-tng/tags/2.0.0/single-sign-on-for-tng.php#L120",
+      "https://plugins.trac.wordpress.org/browser/single-sign-on-for-tng/tags/2.0.0/single-sign-on-for-tng.php#L96",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&old=3624827%40single-sign-on-for-tng&new=3624827%40single-sign-on-for-tng",
+      "https://plugins.trac.wordpress.org/browser/single-sign-on-for-tng/tags/2.0.0/single-sign-on-for-tng.php#L69"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15964",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15964"
+    },
+    "item_id": "CVE-2026-15964",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin authentication bypass, explicitly excluded as consumer-only software with no enterprise or DPI footprint per overlay drop rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15052",
+    "identity": {
+      "title": "CVE-2026-15052",
+      "published": "2026-08-01 07:49:51",
+      "modified": "2026-08-01 09:16:58",
+      "description": "The MailChimp Subscribe Form, Optin Builder, PopUp Builder, Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Form Field Values in all versions up to, and including, 4.3.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00241,
+      "percentile": 0.15375,
+      "date": "2026-08-02"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/4.3.3/admin/classes/ajax-requests-class.php#L1224"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "umarbajwa",
+      "products": "MailChimp Subscribe Form, Optin Builder, PopUp Builder, Form Builder",
+      "cpe_uris": "cpe:2.3:*:umarbajwa:mailchimp_subscribe_form\\,_optin_builder\\,_popup_builder\\,_form_builder:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/4.3.3/admin/classes/ajax-requests-class.php#L1224",
+      "https://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/4.3.3/integrations/form-builder-database/extension.php#L127",
+      "https://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/4.3.3/integrations/form-builder-database/extension.php#L179",
+      "https://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/4.3.3/admin/classes/ajax-requests-class.php#L906",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/c3d2425e-69e5-4efe-bbc6-0ef121e74341?source=cve",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&old=3627272%40mailchimp-subscribe-sm&new=3627272%40mailchimp-subscribe-sm",
+      "https://plugins.trac.wordpress.org/browser/mailchimp-subscribe-sm/tags/4.3.3/admin/classes/ajax-requests-class.php#L2311"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15052",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15052"
+    },
+    "item_id": "CVE-2026-15052",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress marketing plugin with no enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15450",
+    "identity": {
+      "title": "CVE-2026-15450",
+      "published": "2026-08-01 07:49:51",
+      "modified": "2026-08-01 09:16:59",
+      "description": "The Nex Forms – Ultimate Form Builder – Lite plugin for WordPress is vulnerable to arbitrary file deletion via path traversal in versions up to, and including, 9.2.3. This is due to the delete_file() AJAX handler retrieving a file path from the database and passing it directly to unlink() with no validation (no realpath(), basename(), or allowlist check), combined with the insert_record() AJAX handler that lets the same authenticated user store an arbitrary value in the target 'location' column (wp_kses() only strips HTML tags and does not neutralize path traversal or absolute paths). This makes it possible for authenticated attackers, with admin-level access and above, to delete arbitrary files on the affected site's server, including wp-config. When the plugin's user-level option is configured to something else, this may be exploitable with lower privileges."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00376,
+      "percentile": 0.30352,
+      "date": "2026-08-02"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.3/includes/classes/class.db.php#L805"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "webaways",
+      "products": "NEX-Forms – Ultimate Forms Plugin for WordPress",
+      "cpe_uris": "cpe:2.3:*:webaways:nex-forms_ultimate_forms_plugin_for_wordpress:*:*:*:*:*:wordpress:*:*",
+      "software_map": [
+        {
+          "key": "webaways:nex-forms – ultimate forms plugin for wordpress",
+          "vendor": "webaways",
+          "product": "NEX-Forms – Ultimate Forms Plugin for WordPress",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.3/includes/classes/class.db.php#L805",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/bb5c8cb3-df67-4f2c-869a-48e34f5619ff?source=cve",
+      "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.3/includes/classes/class.db.php#L269",
+      "https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/9.2.3/includes/classes/class.db.php#L273",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&old=3625615%40nex-forms-express-wp-form-builder&new=3625615%40nex-forms-express-wp-form-builder"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15450",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15450"
+    },
+    "item_id": "CVE-2026-15450",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress form plugin requiring admin access, with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16144",
+    "identity": {
+      "title": "CVE-2026-16144",
+      "published": "2026-08-01 07:49:50",
+      "modified": "2026-08-01 09:17:00",
+      "description": "The Kali Forms — Contact Form & Drag-and-Drop Builder plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 2.4.20 via the _save_data function. This is due to insufficient validation of the 'thisPermalink' field value before it overwrites a trusted callable placeholder, allowing attacker-controlled strings to reach call_user_func() in _save_data(). This makes it possible for unauthenticated attackers to execute code on the server. Exploitation requires the target form to define a field with a name matching one of the reserved placeholder keys ('thisPermalink', 'entryCounter', or 'submission_link'), as check_if_placeholders_changed() only processes POST keys present in the form's field_type_map."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00688,
+      "percentile": 0.4916,
+      "date": "2026-08-02"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.19/Inc/Frontend/class-form-processor.php#L1033"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "wpchill",
+      "products": "Kali Forms — Contact Form & Drag-and-Drop Builder",
+      "cpe_uris": "cpe:2.3:*:wpchill:kali_forms_contact_form_\\&_drag-and-drop_builder:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.19/Inc/Frontend/class-form-processor.php#L1033",
+      "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.19/Inc/Frontend/class-form-processor.php#L976",
+      "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.19/Inc/Frontend/class-form-processor.php#L172",
+      "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.20/Inc/Frontend/class-form-processor.php#L277",
+      "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.20/Inc/Frontend/class-form-processor.php#L1033",
+      "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.20/Inc/Frontend/class-form-processor.php#L976",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/9d692aff-8bb2-45bb-9caf-bc33d3ed5b10?source=cve",
+      "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.20/Inc/Frontend/class-form-processor.php#L172",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&old=3623024%40kali-forms&new=3623024%40kali-forms",
+      "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.19/Inc/Frontend/class-form-processor.php#L277",
+      "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.20/Inc/Frontend/class-form-processor.php#L90",
+      "https://plugins.trac.wordpress.org/browser/kali-forms/tags/2.4.19/Inc/Frontend/class-form-processor.php#L90"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16144",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16144"
+    },
+    "item_id": "CVE-2026-16144",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress contact form plugin with no enterprise/DPI footprint or exploitation signal, despite unauthenticated RCE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15988",
+    "identity": {
+      "title": "CVE-2026-15988",
+      "published": "2026-08-01 06:48:48",
+      "modified": "2026-08-01 08:16:29",
+      "description": "The AI Engine – The Chatbot, AI Framework & MCP for WordPress plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.6.5 This is due to missing or incorrect nonce validation on the reauth_for_authorize function. This makes it possible for unauthenticated attackers to create new administrator accounts with attacker-supplied credentials via a CSRF-based REST authentication bypass, granted they can trick a site administrator into performing an action such as clicking on a link. This bypass can be combined with WordPress's ?_method=POST method-override support to convert a top-navigation GET request into an authenticated POST to the REST users endpoint, requiring no existing account on the attacker's part."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00217,
+      "percentile": 0.12219,
+      "date": "2026-08-02"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/changeset?old_path=%2Fai-engine/tags/3.6.5&new_path=%2Fai-engine/tags/3.6.6"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-352"
+      ],
+      "cwe_primary": "CWE-352",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-352": "Cross-Site Request Forgery (CSRF)"
+      }
+    },
+    "software": {
+      "vendors": "tigroumeow",
+      "products": "AI Engine – The Chatbot, AI Framework & MCP for WordPress",
+      "cpe_uris": "cpe:2.3:*:tigroumeow:ai_engine_the_chatbot\\,_ai_framework_\\&_mcp_for_wordpress:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/changeset?old_path=%2Fai-engine/tags/3.6.5&new_path=%2Fai-engine/tags/3.6.6",
+      "https://plugins.trac.wordpress.org/changeset/3628188/ai-engine/trunk/labs/mcp-oauth.php",
+      "https://plugins.trac.wordpress.org/browser/ai-engine/tags/3.6.2/labs/mcp-oauth.php#L127",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/45816c45-42bc-4163-b700-a1e913f32c97?source=cve",
+      "https://plugins.trac.wordpress.org/browser/ai-engine/tags/3.6.2/labs/mcp-oauth.php#L49",
+      "https://plugins.trac.wordpress.org/browser/ai-engine/tags/3.6.2/labs/mcp-oauth.php#L121",
+      "https://plugins.trac.wordpress.org/browser/ai-engine/tags/3.6.2/labs/mcp-oauth.php#L120"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15988",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15988"
+    },
+    "item_id": "CVE-2026-15988",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress AI/chatbot plugin with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-3141",
+    "identity": {
+      "title": "CVE-2026-3141",
+      "published": "2026-08-01 05:33:54",
+      "modified": "2026-08-01 06:16:26",
+      "description": "The FormGent plugin for WordPress is vulnerable to unauthorized arbitrary file deletion due to a missing capability check on the /wp-json/formgent/responses/attachments REST API endpoint in all versions up to, and including, 1.9.2 This is due to the REST API route being registered without any authentication middleware in routes/rest/api.php. This makes it possible for unauthenticated attackers to delete arbitrary files within the formgent uploads directory. Additionally, on Linux servers where the wp-content/uploads/formgent directory does not yet exist (the default state after plugin installation), the path traversal protection can be bypassed, enabling deletion of arbitrary files including wp-config.php which can lead to complete site takeover via a fresh WordPress installation."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00467,
+      "percentile": 0.38067,
+      "date": "2026-08-02"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/changeset?old_path=%2Fformgent/tags/1.9.2&new_path=%2Fformgent/tags/1.10.0"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "wpwax",
+      "products": "FormGent – Next-Gen AI Form Builder for WordPress with Multi-Step, Quizzes, Payments & More",
+      "cpe_uris": "cpe:2.3:*:wpwax:formgent_next-gen_ai_form_builder_for_wordpress_with_multi-step\\,_quizzes\\,_payments_\\&_more:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/changeset?old_path=%2Fformgent/tags/1.9.2&new_path=%2Fformgent/tags/1.10.0",
+      "https://plugins.trac.wordpress.org/browser/formgent/tags/1.3.1/routes/rest/api.php#L27",
+      "https://plugins.trac.wordpress.org/browser/formgent/trunk/routes/rest/api.php#L27",
+      "https://plugins.trac.wordpress.org/browser/formgent/trunk/app/Http/Controllers/AttachmentController.php#L59",
+      "https://plugins.trac.wordpress.org/browser/formgent/tags/1.3.1/app/Http/Controllers/AttachmentController.php#L59",
+      "https://plugins.trac.wordpress.org/changeset/3604540/formgent/trunk/app/Http/Controllers/AttachmentController.php",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/097a9d0f-fa38-4fdc-9048-43dd65e7652c?source=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-3141",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-3141"
+    },
+    "item_id": "CVE-2026-3141",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress form plugin with no enterprise/DPI footprint or exploitation signal, despite high CVSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15006",
+    "identity": {
+      "title": "CVE-2026-15006",
+      "published": "2026-08-01 01:29:56",
+      "modified": "2026-08-01 03:16:25",
+      "description": "The Bit integrations – Form Integration, Webhook, Spreadsheets, CRM, LMS & Email Automation plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 2.9.0 via the processAttachment function. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00835,
+      "percentile": 0.54123,
+      "date": "2026-08-02"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.8.11/backend/Triggers/CF7/Hooks.php#L11"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "bitpressadmin",
+      "products": "Bit integrations – Form Integration, Webhook, Spreadsheets, CRM, LMS & Email Automation",
+      "cpe_uris": "cpe:2.3:*:bitpressadmin:bit_integrations_form_integration\\,_webhook\\,_spreadsheets\\,_crm\\,_lms_\\&_email_automation:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.8.11/backend/Triggers/CF7/Hooks.php#L11",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&old=3605525%40bit-integrations&new=3605525%40bit-integrations",
+      "https://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.8.11/backend/Actions/Mail/MailController.php#L59",
+      "https://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.8.11/backend/Triggers/CF7/CF7Controller.php#L127",
+      "https://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.9.0/backend/Actions/Mail/MailController.php#L123",
+      "https://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.9.0/backend/Triggers/CF7/Hooks.php#L11",
+      "https://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.9.0/backend/Triggers/CF7/CF7Controller.php#L127",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/9b00da60-7d2d-467e-ab58-0bb4af0cbda5?source=cve",
+      "https://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.8.11/backend/Actions/Mail/MailController.php#L123",
+      "https://plugins.trac.wordpress.org/browser/bit-integrations/tags/2.9.0/backend/Actions/Mail/MailController.php#L59"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15006",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15006"
+    },
+    "item_id": "CVE-2026-15006",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress integration plugin with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15414",
+    "identity": {
+      "title": "CVE-2026-15414",
+      "published": "2026-08-01 01:29:56",
+      "modified": "2026-08-01 03:16:25",
+      "description": "The Subscriptions for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.0.0. This is due to the `save_meta_boxes()` function persisting the `_wps_plan_user_role` membership plan meta from `$_POST` without an allowlist that excludes privileged roles — the only validations applied, `sanitize_key()` and `wp_roles()->is_role()`, both accept `'administrator'` as a valid value, and the UI's `disabled` attribute on the role dropdown is a client-side-only control trivially bypassed via DevTools or a direct POST request; additionally, because the `wps_membership_plan` custom post type is registered with `capability_type => 'post'`, any user who can edit posts satisfies the `current_user_can('edit_post', $post_id)` guard in `save_meta_boxes()`. This makes it possible for authenticated attackers, with Contributor-level access and above, to escalate their privileges to Administrator by storing `'administrator'` as the role granted on membership acquisition, which the Pro companion plugin then applies via `add_role()` during membership lifecycle events. Successful exploitation requires the Subscriptions for WooCommerce Pro companion plugin to be active, as it is the component that reads the stored `_wps_plan_user_role` meta via `get_post_meta()` and calls `add_role()` to apply the role during membership lifecycle events."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00335,
+      "percentile": 0.26111,
+      "date": "2026-08-02"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/changeset?reponame=&old=3624543%40subscriptions-for-woocommerce&new=3624543%40subscriptions-for-woocommerce"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "wpswings",
+      "products": "Subscriptions for WooCommerce",
+      "cpe_uris": "cpe:2.3:*:wpswings:subscriptions_for_woocommerce:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/changeset?reponame=&old=3624543%40subscriptions-for-woocommerce&new=3624543%40subscriptions-for-woocommerce",
+      "https://plugins.trac.wordpress.org/browser/subscriptions-for-woocommerce/tags/2.0.0/admin/partials/membership/meta-box-plan-details.php#L102",
+      "https://plugins.trac.wordpress.org/browser/subscriptions-for-woocommerce/tags/2.0.0/includes/membership/class-wps-membership-plan-cpt.php#L477",
+      "https://plugins.trac.wordpress.org/browser/subscriptions-for-woocommerce/tags/2.0.0/includes/membership/class-wps-membership-plan-cpt.php#L275",
+      "https://plugins.trac.wordpress.org/browser/subscriptions-for-woocommerce/tags/2.0.0/includes/membership/class-wps-membership-plan-cpt.php#L483",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/195f86a5-e3dc-4414-bbe3-dea312bf30a9?source=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15414",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15414"
+    },
+    "item_id": "CVE-2026-15414",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress/WooCommerce e-commerce plugin with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  }
+]
