@@ -1,0 +1,604 @@
+{
+  "generated_at": "2026-08-03T05:00:06.484203+00:00",
+  "input": "cve_last_1day.filtered.jsonl",
+  "model": "Qwen3.6-27B-Q4_K_M.gguf",
+  "cve_count": 14,
+  "analysed_ok": 12,
+  "total_seconds": 13101.013,
+  "total_gpu_calls": 66,
+  "total_gpu_seconds": 5683.193,
+  "total_completion_tokens": 107172,
+  "total_prompt_tokens": 1379628,
+  "mean_completion_tokens_per_call": 1624,
+  "mean_seconds_per_analysed_cve": 478.554,
+  "per_cve": [
+    {
+      "cve_id": "CVE-2026-3245",
+      "status": "ok",
+      "tier": 3,
+      "seconds": 184.768,
+      "gpu_calls": 4,
+      "gpu_seconds_total": 175.684,
+      "gpu_seconds": [
+        29.813,
+        11.973,
+        4.401,
+        129.497
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11251,
+          "completion": 294,
+          "total": 11545
+        },
+        {
+          "prompt": 12302,
+          "completion": 247,
+          "total": 12549
+        },
+        {
+          "prompt": 12619,
+          "completion": 86,
+          "total": 12705
+        },
+        {
+          "prompt": 13819,
+          "completion": 3089,
+          "total": 16908
+        }
+      ],
+      "completion_tokens_total": 3716,
+      "prompt_tokens_total": 49991
+    },
+    {
+      "cve_id": "CVE-2026-18577",
+      "status": "error",
+      "seconds": 3673.084,
+      "gpu_calls": 0,
+      "gpu_seconds_total": 0,
+      "gpu_seconds": [],
+      "error": "Request timed out.",
+      "gpu_tokens": [],
+      "completion_tokens_total": 0,
+      "prompt_tokens_total": 0
+    },
+    {
+      "cve_id": "CVE-2026-10848",
+      "status": "ok",
+      "tier": 3,
+      "seconds": 267.052,
+      "gpu_calls": 3,
+      "gpu_seconds_total": 263.995,
+      "gpu_seconds": [
+        12.78,
+        108.033,
+        143.182
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11792,
+          "completion": 217,
+          "total": 12009
+        },
+        {
+          "prompt": 22055,
+          "completion": 2104,
+          "total": 24159
+        },
+        {
+          "prompt": 22506,
+          "completion": 3256,
+          "total": 25762
+        }
+      ],
+      "completion_tokens_total": 5577,
+      "prompt_tokens_total": 56353
+    },
+    {
+      "cve_id": "CVE-2026-65321",
+      "status": "ok",
+      "tier": 3,
+      "seconds": 758.925,
+      "gpu_calls": 8,
+      "gpu_seconds_total": 751.985,
+      "gpu_seconds": [
+        14.801,
+        88.024,
+        55.874,
+        194.379,
+        103.868,
+        58.785,
+        71.28,
+        164.975
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11455,
+          "completion": 279,
+          "total": 11734
+        },
+        {
+          "prompt": 12467,
+          "completion": 2110,
+          "total": 14577
+        },
+        {
+          "prompt": 19811,
+          "completion": 1027,
+          "total": 20838
+        },
+        {
+          "prompt": 20648,
+          "completion": 4455,
+          "total": 25103
+        },
+        {
+          "prompt": 20888,
+          "completion": 2392,
+          "total": 23280
+        },
+        {
+          "prompt": 21726,
+          "completion": 1320,
+          "total": 23046
+        },
+        {
+          "prompt": 22185,
+          "completion": 1621,
+          "total": 23806
+        },
+        {
+          "prompt": 22537,
+          "completion": 3753,
+          "total": 26290
+        }
+      ],
+      "completion_tokens_total": 16957,
+      "prompt_tokens_total": 151717
+    },
+    {
+      "cve_id": "CVE-2026-68582",
+      "status": "ok",
+      "tier": 3,
+      "seconds": 586.66,
+      "gpu_calls": 9,
+      "gpu_seconds_total": 579.824,
+      "gpu_seconds": [
+        14.337,
+        7.772,
+        4.455,
+        47.227,
+        5.699,
+        102.148,
+        71.888,
+        70.716,
+        255.583
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11446,
+          "completion": 257,
+          "total": 11703
+        },
+        {
+          "prompt": 13618,
+          "completion": 99,
+          "total": 13717
+        },
+        {
+          "prompt": 13908,
+          "completion": 88,
+          "total": 13996
+        },
+        {
+          "prompt": 14363,
+          "completion": 1119,
+          "total": 15482
+        },
+        {
+          "prompt": 14721,
+          "completion": 114,
+          "total": 14835
+        },
+        {
+          "prompt": 35121,
+          "completion": 1446,
+          "total": 36567
+        },
+        {
+          "prompt": 35568,
+          "completion": 1514,
+          "total": 37082
+        },
+        {
+          "prompt": 37916,
+          "completion": 1398,
+          "total": 39314
+        },
+        {
+          "prompt": 37885,
+          "completion": 4030,
+          "total": 41915
+        }
+      ],
+      "completion_tokens_total": 10065,
+      "prompt_tokens_total": 214546
+    },
+    {
+      "cve_id": "CVE-2026-68580",
+      "status": "ok",
+      "tier": 3,
+      "seconds": 776.715,
+      "gpu_calls": 6,
+      "gpu_seconds_total": 772.5,
+      "gpu_seconds": [
+        19.875,
+        175.716,
+        160.33,
+        103.553,
+        91.881,
+        221.145
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11388,
+          "completion": 302,
+          "total": 11690
+        },
+        {
+          "prompt": 36330,
+          "completion": 2502,
+          "total": 38832
+        },
+        {
+          "prompt": 36929,
+          "completion": 3138,
+          "total": 40067
+        },
+        {
+          "prompt": 39476,
+          "completion": 1937,
+          "total": 41413
+        },
+        {
+          "prompt": 39822,
+          "completion": 1793,
+          "total": 41615
+        },
+        {
+          "prompt": 40324,
+          "completion": 4336,
+          "total": 44660
+        }
+      ],
+      "completion_tokens_total": 14008,
+      "prompt_tokens_total": 204269
+    },
+    {
+      "cve_id": "CVE-2026-68581",
+      "status": "ok",
+      "tier": 2,
+      "seconds": 674.971,
+      "gpu_calls": 6,
+      "gpu_seconds_total": 671.433,
+      "gpu_seconds": [
+        22.265,
+        62.833,
+        5.672,
+        234.912,
+        135.996,
+        209.755
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11511,
+          "completion": 347,
+          "total": 11858
+        },
+        {
+          "prompt": 17697,
+          "completion": 995,
+          "total": 18692
+        },
+        {
+          "prompt": 18266,
+          "completion": 82,
+          "total": 18348
+        },
+        {
+          "prompt": 38006,
+          "completion": 3871,
+          "total": 41877
+        },
+        {
+          "prompt": 46917,
+          "completion": 2334,
+          "total": 49251
+        },
+        {
+          "prompt": 52369,
+          "completion": 3877,
+          "total": 56246
+        }
+      ],
+      "completion_tokens_total": 11506,
+      "prompt_tokens_total": 184766
+    },
+    {
+      "cve_id": "CVE-2026-68579",
+      "status": "ok",
+      "tier": 2,
+      "seconds": 708.411,
+      "gpu_calls": 7,
+      "gpu_seconds_total": 701.937,
+      "gpu_seconds": [
+        19.37,
+        76.201,
+        41.96,
+        89.24,
+        99.614,
+        52.177,
+        323.375
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11540,
+          "completion": 284,
+          "total": 11824
+        },
+        {
+          "prompt": 20174,
+          "completion": 1168,
+          "total": 21342
+        },
+        {
+          "prompt": 20780,
+          "completion": 799,
+          "total": 21579
+        },
+        {
+          "prompt": 21564,
+          "completion": 1728,
+          "total": 23292
+        },
+        {
+          "prompt": 21902,
+          "completion": 1947,
+          "total": 23849
+        },
+        {
+          "prompt": 23269,
+          "completion": 969,
+          "total": 24238
+        },
+        {
+          "prompt": 23870,
+          "completion": 6361,
+          "total": 30231
+        }
+      ],
+      "completion_tokens_total": 13256,
+      "prompt_tokens_total": 143099
+    },
+    {
+      "cve_id": "CVE-2026-67357",
+      "status": "error",
+      "seconds": 3685.275,
+      "gpu_calls": 0,
+      "gpu_seconds_total": 0,
+      "gpu_seconds": [],
+      "error": "Request timed out.",
+      "gpu_tokens": [],
+      "completion_tokens_total": 0,
+      "prompt_tokens_total": 0
+    },
+    {
+      "cve_id": "CVE-2026-68578",
+      "status": "ok",
+      "tier": 2,
+      "seconds": 187.76,
+      "gpu_calls": 2,
+      "gpu_seconds_total": 186.288,
+      "gpu_seconds": [
+        15.84,
+        170.448
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11267,
+          "completion": 243,
+          "total": 11510
+        },
+        {
+          "prompt": 13041,
+          "completion": 3292,
+          "total": 16333
+        }
+      ],
+      "completion_tokens_total": 3535,
+      "prompt_tokens_total": 24308
+    },
+    {
+      "cve_id": "CVE-2026-67356",
+      "status": "ok",
+      "tier": 3,
+      "seconds": 546.506,
+      "gpu_calls": 9,
+      "gpu_seconds_total": 538.483,
+      "gpu_seconds": [
+        11.835,
+        9.696,
+        47.742,
+        45.941,
+        50.471,
+        50.759,
+        69.814,
+        43.621,
+        208.606
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11273,
+          "completion": 181,
+          "total": 11454
+        },
+        {
+          "prompt": 13004,
+          "completion": 118,
+          "total": 13122
+        },
+        {
+          "prompt": 23059,
+          "completion": 548,
+          "total": 23607
+        },
+        {
+          "prompt": 23440,
+          "completion": 883,
+          "total": 24323
+        },
+        {
+          "prompt": 24764,
+          "completion": 938,
+          "total": 25702
+        },
+        {
+          "prompt": 25197,
+          "completion": 974,
+          "total": 26171
+        },
+        {
+          "prompt": 25751,
+          "completion": 1343,
+          "total": 27094
+        },
+        {
+          "prompt": 26616,
+          "completion": 813,
+          "total": 27429
+        },
+        {
+          "prompt": 26788,
+          "completion": 3670,
+          "total": 30458
+        }
+      ],
+      "completion_tokens_total": 9468,
+      "prompt_tokens_total": 199892
+    },
+    {
+      "cve_id": "CVE-2025-71401",
+      "status": "ok",
+      "tier": 3,
+      "seconds": 208.217,
+      "gpu_calls": 2,
+      "gpu_seconds_total": 207.151,
+      "gpu_seconds": [
+        18.006,
+        189.146
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11374,
+          "completion": 251,
+          "total": 11625
+        },
+        {
+          "prompt": 12050,
+          "completion": 3523,
+          "total": 15573
+        }
+      ],
+      "completion_tokens_total": 3774,
+      "prompt_tokens_total": 23424
+    },
+    {
+      "cve_id": "CVE-2025-71399",
+      "status": "ok",
+      "tier": 2,
+      "seconds": 420.934,
+      "gpu_calls": 5,
+      "gpu_seconds_total": 417.124,
+      "gpu_seconds": [
+        17.575,
+        6.59,
+        75.701,
+        97.426,
+        219.832
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11466,
+          "completion": 270,
+          "total": 11736
+        },
+        {
+          "prompt": 12512,
+          "completion": 77,
+          "total": 12589
+        },
+        {
+          "prompt": 12882,
+          "completion": 1400,
+          "total": 14282
+        },
+        {
+          "prompt": 13289,
+          "completion": 1805,
+          "total": 15094
+        },
+        {
+          "prompt": 13810,
+          "completion": 4097,
+          "total": 17907
+        }
+      ],
+      "completion_tokens_total": 7649,
+      "prompt_tokens_total": 63959
+    },
+    {
+      "cve_id": "CVE-2025-71400",
+      "status": "ok",
+      "tier": 2,
+      "seconds": 421.731,
+      "gpu_calls": 5,
+      "gpu_seconds_total": 416.789,
+      "gpu_seconds": [
+        14.612,
+        66.142,
+        63.245,
+        99.087,
+        173.703
+      ],
+      "gpu_tokens": [
+        {
+          "prompt": 11273,
+          "completion": 221,
+          "total": 11494
+        },
+        {
+          "prompt": 12221,
+          "completion": 1202,
+          "total": 13423
+        },
+        {
+          "prompt": 12643,
+          "completion": 1166,
+          "total": 13809
+        },
+        {
+          "prompt": 13374,
+          "completion": 1830,
+          "total": 15204
+        },
+        {
+          "prompt": 13793,
+          "completion": 3242,
+          "total": 17035
+        }
+      ],
+      "completion_tokens_total": 7661,
+      "prompt_tokens_total": 63304
+    }
+  ]
+}
