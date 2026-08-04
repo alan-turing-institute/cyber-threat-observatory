@@ -1,0 +1,5195 @@
+[
+  {
+    "id": "CVE-2026-18685",
+    "identity": {
+      "title": "CVE-2026-18685",
+      "published": "2026-08-03 23:15:08",
+      "modified": "2026-08-04 00:16:40",
+      "description": "A security vulnerability has been detected in GL.iNet GL-MT3000 up to 4.4.5. Impacted is the function set_upgrade of the file /cgi-bin/glc of the component modem.so. Such manipulation leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/tree/main/GL-iNet/MT3000/4.4.5/modem_set_upgrade_glc_rce"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL.iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:*:gl.inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/385611",
+      "https://vuldb.com/submit/851593",
+      "https://vuldb.com/cve/CVE-2026-18685",
+      "https://github.com/StrTzz123/iot_vul/tree/main/GL-iNet/MT3000/4.4.5/modem_set_upgrade_glc_rce",
+      "https://vuldb.com/vuln/385611/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18685",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18685"
+    },
+    "item_id": "CVE-2026-18685",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router with public exploit disclosure but no enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18684",
+    "identity": {
+      "title": "CVE-2026-18684",
+      "published": "2026-08-03 22:45:10",
+      "modified": "2026-08-03 23:16:45",
+      "description": "A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. This issue affects the function remove_profile of the file /cgi-bin/glc of the component modem.so. This manipulation causes command injection. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/tree/main/GL-iNet/MT3000/4.4.5/modem_remove_profile_glc_rce"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL.iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:*:gl.inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/cve/CVE-2026-18684",
+      "https://github.com/StrTzz123/iot_vul/tree/main/GL-iNet/MT3000/4.4.5/modem_remove_profile_glc_rce",
+      "https://vuldb.com/vuln/385610",
+      "https://vuldb.com/submit/851581",
+      "https://vuldb.com/vuln/385610/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18684",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18684"
+    },
+    "item_id": "CVE-2026-18684",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router with public exploit disclosure but no enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-47746",
+    "identity": {
+      "title": "CVE-2026-47746",
+      "published": "2026-08-03 21:56:40",
+      "modified": "2026-08-03 22:16:49",
+      "description": "Misskey is an open source, federated social media platform. Versions 12.37.0 and later, but prior to 2026.5.4, are vulnerable to timing attacks during JSON-LD signature validation and the compaction process. Because the JSON-LD parsing context is not shared between signature verification and subsequent processing, the application may trust information that should not be trusted, resulting in a time-of-check to time-of-use (TOCTOU) flaw. This allows an attacker to have fraudulent activities accepted as valid, leading to a loss of integrity. This issue has been fixed in version 2026.5.4."
+    },
+    "cvss": {
+      "base_score": 8.9,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/misskey-dev/misskey/releases/tag/2026.5.4"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-367"
+      ],
+      "cwe_primary": "CWE-367",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-367": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+      }
+    },
+    "software": {
+      "vendors": "misskey-dev",
+      "products": "misskey",
+      "cpe_uris": "cpe:2.3:a:misskey-dev:misskey:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "misskey-dev:misskey",
+          "vendor": "misskey-dev",
+          "product": "misskey",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/misskey-dev/misskey/releases/tag/2026.5.4",
+      "https://github.com/misskey-dev/misskey/security/advisories/GHSA-38jx-423m-g387"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-47746",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-47746"
+    },
+    "item_id": "CVE-2026-47746",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Open-source social media platform with signature validation flaw, excluded as consumer-only software with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-46713",
+    "identity": {
+      "title": "CVE-2026-46713",
+      "published": "2026-08-03 21:37:45",
+      "modified": "2026-08-03 22:16:49",
+      "description": "Misskey is an open source, federated social media platform. Versions 12.37.0 and later, but prior to 2026.5.4, contain a vulnerability in the JSON-LD signature validation and compaction process that allows spoofed activities to be accepted as valid. This issue has been fixed in version 2026.5.4."
+    },
+    "cvss": {
+      "base_score": 9.2,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/misskey-dev/misskey/security/advisories/GHSA-w8x2-gpq6-jxvf"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-347"
+      ],
+      "cwe_primary": "CWE-347",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-347": "Improper Verification of Cryptographic Signature"
+      }
+    },
+    "software": {
+      "vendors": "misskey-dev",
+      "products": "misskey",
+      "cpe_uris": "cpe:2.3:a:misskey-dev:misskey:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "misskey-dev:misskey",
+          "vendor": "misskey-dev",
+          "product": "misskey",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/misskey-dev/misskey/security/advisories/GHSA-w8x2-gpq6-jxvf",
+      "https://github.com/misskey-dev/misskey/releases/tag/2026.5.4"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-46713",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-46713"
+    },
+    "item_id": "CVE-2026-46713",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Open-source social media platform with signature validation flaw, excluded as consumer-only software with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-41447",
+    "identity": {
+      "title": "CVE-2026-41447",
+      "published": "2026-08-03 20:58:05",
+      "modified": "2026-08-03 21:16:38",
+      "description": "FirmaCheck for Windows before 1.3.16 contains a dll hijacking vulnerability that allows local attackers to execute arbitrary code by placing a crafted openssl.cnf file in the unvalidated C:\\Program Files (x86)\\Common Files\\SSL\\ directory path. Attackers can write a malicious OpenSSL configuration file referencing an attacker-controlled DLL to achieve code execution at startup process privilege level when FirmaCheck.exe runs automatically at system startup."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.zucchetti.it/it/cms/soluzioni/gestione-documentale/firme-e-marche/software-gestione-firme-digitali-firmacheck/software-gratuito-gestione-firme-e-documenti-descrizione.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-426"
+      ],
+      "cwe_primary": "CWE-426",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-426": "Untrusted Search Path"
+      }
+    },
+    "software": {
+      "vendors": "Zucchetti S.p.a.",
+      "products": "FirmaCheck",
+      "cpe_uris": "cpe:2.3:a:zucchetti_s.p.a.:firmacheck:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.zucchetti.it/it/cms/soluzioni/gestione-documentale/firme-e-marche/software-gestione-firme-digitali-firmacheck/software-gratuito-gestione-firme-e-documenti-descrizione.html",
+      "https://www.vulncheck.com/advisories/firmacheck-dll-hijacking-via-unvalidated-openssl-configuration-path"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-41447",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-41447"
+    },
+    "item_id": "CVE-2026-41447",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local DLL hijacking in consumer Windows utility requiring high privileges to write to Program Files, with no enterprise or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-48063",
+    "identity": {
+      "title": "CVE-2026-48063",
+      "published": "2026-08-03 20:55:08",
+      "modified": "2026-08-03 21:16:39",
+      "description": "Baileys is a cocket-based TS/JavaScript API for WhatsApp Web. In versions prior to both 6.7.22 and 7.0.0-rc12, any Baileys session  can be sent a malicious payload via the placeholderResendMessage and trigger a fake messages.upsert event with a fake message key and payload. This allows anyone to spoof messages. The same exploit also allows an attacker to corrupt the app state sync system by sending fake key shares, and also allows for history sync spoofing which also serves the same problem, injecting fake previous context or \"on-demand\" sync. This issue has been fixed in versions 6.7.22 and 7.0.0-rc12."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00018,
+      "percentile": 0.04968,
+      "date": "2026-06-13"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/WhiskeySockets/Baileys/security/advisories/GHSA-qvv5-jq5g-4cgg"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-290",
+        "CWE-345",
+        "CWE-346"
+      ],
+      "cwe_primary": "CWE-290",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-290": "Authentication Bypass by Spoofing",
+        "CWE-345": "Insufficient Verification of Data Authenticity",
+        "CWE-346": "Origin Validation Error"
+      }
+    },
+    "software": {
+      "vendors": "WhiskeySockets,WhiskeySockets",
+      "products": "Baileys,@whiskeysockets/baileys",
+      "cpe_uris": "cpe:2.3:a:whiskeysockets:baileys:*:*:*:*:*:*:*:*,cpe:2.3:a:whiskeysockets:baileys:*:*:*:*:*:*:*:*,cpe:2.3:a:whiskeysockets:\\@whiskeysockets\\/baileys:*:*:*:*:*:*:*:*,cpe:2.3:a:whiskeysockets:\\@whiskeysockets\\/baileys:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/WhiskeySockets/Baileys/security/advisories/GHSA-qvv5-jq5g-4cgg",
+      "https://github.com/WhiskeySockets/Baileys/commit/3beb08eecfcb4e65722e674034bd84fb11a9de35"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-48063",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-48063"
+    },
+    "item_id": "CVE-2026-48063",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Third-party WhatsApp Web API library with message spoofing flaw, classified as consumer messaging software with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-66065",
+    "identity": {
+      "title": "CVE-2026-66065",
+      "published": "2026-08-03 20:20:27",
+      "modified": "2026-08-03 21:16:41",
+      "description": "Ouroboros is a local-first runtime for AI coding agents that records their actions and applies user-defined policies to constrain behavior. Versions prior to 0.42.1 have an incomplete denylist. Several execution-routing keys of the same RCE class were omitted, so a malicious cloned repo can still reach arbitrary command execution by shipping a .env (auto-loaded at import, with no review step). The CVE-2026-47211 fix added _UNTRUSTED_ENV_DENYLIST to stop an untrusted project-directory .env from redirecting execution, but it did not account for all keys. The backend config-home and MCP/plugin roots bypass the approval gate by pointing the nested agent, MCP servers, and plugin roster at attacker config. Other variables re-enable blocked local transports, replace sub-agent prompts, switch backends, and lower tool approval classes, further weakening the approval gate. This issue has been fixed in version 0.42.1."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Q00/ouroboros/security/advisories/GHSA-jv2h-4p9v-wf5w"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-15",
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-15",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-15": "External Control of System or Configuration Setting",
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Q00",
+      "products": "ouroboros",
+      "cpe_uris": "cpe:2.3:a:q00:ouroboros:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/Q00/ouroboros/security/advisories/GHSA-jv2h-4p9v-wf5w",
+      "https://github.com/Q00/ouroboros/releases/tag/v0.42.1"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66065",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66065"
+    },
+    "item_id": "CVE-2026-66065",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Local-first AI dev tool requiring user to clone and execute malicious repo, no remote DPI nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-47211",
+    "identity": {
+      "title": "CVE-2026-47211",
+      "published": "2026-08-03 20:01:03",
+      "modified": "2026-08-03 22:16:49",
+      "description": "Ouroboros is a local-first runtime for AI coding agents that records their actions and applies user-defined policies to constrain behavior. In versions prior to 0.39.0, if a user clones a malicious repository and runs Ouroboros commands within that directory, it can lead to arbitrary code execution and potential system takeover. The vulnerability stems from Ouroboros loading the .env file from the current working directory. Execution-affecting environment variables such as OUROBOROS_CLI_PATH, OPENCODE_CLI_PATH, and other backend selectors are accepted directly from this local .env. An attacker can include a malicious script in the repository and point the CLI path variable to it (e.g., OUROBOROS_CLI_PATH=./malicious_script.sh). When the user executes a command like ouroboros init or any command that instantiates the adapter, the malicious script is executed instead of the intended CLI. This issue has been fixed in version 0.39.0."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00557,
+      "percentile": 0.68745,
+      "date": "2026-06-13"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/Q00/ouroboros/security/advisories/GHSA-c4m7-2gwp-vw76"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-426"
+      ],
+      "cwe_primary": "CWE-426",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-426": "Untrusted Search Path"
+      }
+    },
+    "software": {
+      "vendors": "Q00",
+      "products": "ouroboros",
+      "cpe_uris": "cpe:2.3:a:q00:ouroboros:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/Q00/ouroboros/security/advisories/GHSA-c4m7-2gwp-vw76",
+      "https://github.com/Q00/ouroboros/pull/1078",
+      "https://github.com/Q00/ouroboros/commit/4e70b760b4eb157469b58645339ba831f6513d37"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-47211",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-47211"
+    },
+    "item_id": "CVE-2026-47211",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Local AI runtime requiring execution of untrusted cloned repository, no remote enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-67598",
+    "identity": {
+      "title": "CVE-2026-67598",
+      "published": "2026-08-03 19:02:06",
+      "modified": "2026-08-03 20:17:27",
+      "description": "Emlog Pro through 2.6.23 contains a disabled TLS certificate validation vulnerability in include/service/ai.php that allows network-adjacent attackers to intercept outbound HTTPS requests to configured LLM providers by presenting arbitrary TLS certificates, as CURLOPT_SSL_VERIFYPEER and CURLOPT_SSL_VERIFYHOST are unconditionally disabled across sendStream(), sendImageRequest(), send(), and fetchSearchHtml() with no option to re-enable verification. Attackers can perform man-in-the-middle interception to extract Authorization Bearer API keys from every AI request and inject crafted AI responses that may be acted upon by the tool-call execution pipeline, including the query_database and update_config tool handlers."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/emlog/emlog/security/advisories/GHSA-hf85-99vj-m4c5"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-295"
+      ],
+      "cwe_primary": "CWE-295",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-295": "Improper Certificate Validation"
+      }
+    },
+    "software": {
+      "vendors": "emlog",
+      "products": "emlog",
+      "cpe_uris": "cpe:2.3:a:emlog:emlog:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "emlog:emlog",
+          "vendor": "emlog",
+          "product": "emlog",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/emlog/emlog/security/advisories/GHSA-hf85-99vj-m4c5",
+      "https://www.vulncheck.com/advisories/emlog-pro-tls-certificate-validation-disabled-in-ai-php"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-67598",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-67598"
+    },
+    "item_id": "CVE-2026-67598",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer blog/CMS platform with disabled TLS verification, no enterprise or DPI footprint, and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18616",
+    "identity": {
+      "title": "CVE-2026-18616",
+      "published": "2026-08-03 18:30:10",
+      "modified": "2026-08-03 19:16:45",
+      "description": "A vulnerability was identified in GL-iNet GL-MT3000 up to 4.4.5. The impacted element is the function server.set_peer of the file /cgi-bin/glc of the component wg-server.so Native Plugin. The manipulation of the argument public_key leads to command injection. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/wg_set_peer_rce/CVE.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL-iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:h:gl-inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/385536",
+      "https://vuldb.com/submit/851580",
+      "https://vuldb.com/cve/CVE-2026-18616",
+      "https://vuldb.com/vuln/385536/cti",
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/wg_set_peer_rce/CVE.md"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18616",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18616"
+    },
+    "item_id": "CVE-2026-18616",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer/prosumer router with remote command injection, no enterprise or DPI footprint, and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18615",
+    "identity": {
+      "title": "CVE-2026-18615",
+      "published": "2026-08-03 18:15:08",
+      "modified": "2026-08-03 21:16:37",
+      "description": "A vulnerability was determined in GL-iNet GL-MT3000 up to 4.4.5. The affected element is the function wg-server.generate_publickey of the file /cgi-bin/glc of the component wg-server.so Native Plugin. Executing a manipulation of the argument private_key can lead to command injection. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/wg_generate_publickey_glc/CVE.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL-iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:h:gl-inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/385535/cti",
+      "https://vuldb.com/submit/851566",
+      "https://vuldb.com/cve/CVE-2026-18615",
+      "https://vuldb.com/vuln/385535",
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/wg_generate_publickey_glc/CVE.md"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18615",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18615"
+    },
+    "item_id": "CVE-2026-18615",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer/prosumer router with remote command injection, no enterprise or DPI footprint, and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18614",
+    "identity": {
+      "title": "CVE-2026-18614",
+      "published": "2026-08-03 18:00:09",
+      "modified": "2026-08-03 19:16:45",
+      "description": "A vulnerability was found in GL-iNet GL-MT3000 up to 4.4.5. Impacted is the function s2s.enable_echo_server of the file /cgi-bin/glc of the component s2s.so Native Plugin. Performing a manipulation of the argument port results in command injection. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/s2s_enable_echo_server_glc_rce/CVE.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL-iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:h:gl-inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/851558",
+      "https://vuldb.com/vuln/385534",
+      "https://vuldb.com/cve/CVE-2026-18614",
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/s2s_enable_echo_server_glc_rce/CVE.md",
+      "https://vuldb.com/vuln/385534/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18614",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18614"
+    },
+    "item_id": "CVE-2026-18614",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer/prosumer router with remote command injection, no enterprise or DPI footprint, and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59913",
+    "identity": {
+      "title": "CVE-2026-59913",
+      "published": "2026-08-03 17:57:19",
+      "modified": "2026-08-03 21:16:40",
+      "description": "Dell Display and Peripheral Manager (DDPM Mac), versions prior to 2.3.0.1005, contain a Missing Authentication for Critical Function vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.dell.com/support/kbdoc/en-us/000490035/dsa-2026-319"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": "Dell",
+      "products": "Display and Peripheral Manager (DDPM Mac)",
+      "cpe_uris": "cpe:2.3:*:dell:display_and_peripheral_manager_\\(ddpm_mac\\):*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.dell.com/support/kbdoc/en-us/000490035/dsa-2026-319"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59913",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59913"
+    },
+    "item_id": "CVE-2026-59913",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in endpoint peripheral management software with no active exploitation signal or direct DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59912",
+    "identity": {
+      "title": "CVE-2026-59912",
+      "published": "2026-08-03 17:53:44",
+      "modified": "2026-08-03 19:16:48",
+      "description": "Dell Display and Peripheral Manager (DDPM Mac), versions prior to 2.3.0.1005, contain an Improper Access Control vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges and arbitrary code execution."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.dell.com/support/kbdoc/en-us/000490035/dsa-2026-319"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "cwe_primary": "CWE-284",
+      "cwe_family": "AuthZ/Access Control",
+      "cwe_names": {
+        "CWE-284": "Improper Access Control"
+      }
+    },
+    "software": {
+      "vendors": "Dell",
+      "products": "Display and Peripheral Manager (DDPM Mac)",
+      "cpe_uris": "cpe:2.3:*:dell:display_and_peripheral_manager_\\(ddpm_mac\\):*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.dell.com/support/kbdoc/en-us/000490035/dsa-2026-319"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59912",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59912"
+    },
+    "item_id": "CVE-2026-59912",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation and code execution in endpoint peripheral management software with no active exploitation signal or direct DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18613",
+    "identity": {
+      "title": "CVE-2026-18613",
+      "published": "2026-08-03 17:45:09",
+      "modified": "2026-08-03 22:16:48",
+      "description": "A vulnerability has been found in GL-iNet GL-MT3000 up to 4.4.5. This issue affects the function plugins.set_config of the file /cgi-bin/glc of the component plugins.so Native Plugin. Such manipulation leads to injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/plugins_set_config_glc_write/CVE.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-707",
+        "CWE-74"
+      ],
+      "cwe_primary": "CWE-707",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-707": "Improper Neutralization",
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL-iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:h:gl-inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/851557",
+      "https://vuldb.com/cve/CVE-2026-18613",
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/plugins_set_config_glc_write/CVE.md",
+      "https://vuldb.com/vuln/385533",
+      "https://vuldb.com/vuln/385533/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18613",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18613"
+    },
+    "item_id": "CVE-2026-18613",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router with no enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18612",
+    "identity": {
+      "title": "CVE-2026-18612",
+      "published": "2026-08-03 17:30:09",
+      "modified": "2026-08-03 21:16:36",
+      "description": "A flaw has been found in GL-iNet GL-MT3000 up to 4.4.5. This vulnerability affects the function plugins.remove_package/plugins.install_package of the file /cgi-bin/glc of the component plugins.so Native Plugin. This manipulation causes command injection. The attack can be initiated remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/plugins_package_name_glc_rce/CVE.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL-iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:h:gl-inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:h:gl-inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/plugins_package_name_glc_rce/CVE.md",
+      "https://vuldb.com/vuln/385532/cti",
+      "https://vuldb.com/submit/851600",
+      "https://vuldb.com/submit/851597",
+      "https://vuldb.com/vuln/385532",
+      "https://vuldb.com/submit/851553",
+      "https://vuldb.com/submit/851596",
+      "https://vuldb.com/cve/CVE-2026-18612"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18612",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18612"
+    },
+    "item_id": "CVE-2026-18612",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router with no enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61524",
+    "identity": {
+      "title": "CVE-2026-61524",
+      "published": "2026-08-03 17:19:51",
+      "modified": "2026-08-03 19:16:48",
+      "description": "WebsiteBaker CMS before 2.13.10 contains an unrestricted file upload vulnerability in the module installation feature that allows authenticated administrators to achieve remote code execution by uploading a crafted ZIP archive containing a PHP webshell alongside a valid info.php metadata file. Attackers can place the malicious archive through the module installation interface, causing the application to extract the webshell into a web-accessible modules/ subdirectory where it becomes immediately executable by any unauthenticated user via direct HTTP request."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://addon.websitebaker.org/en/browse-add-ons/?type=5&cid=997"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-434"
+      ],
+      "cwe_primary": "CWE-434",
+      "cwe_family": "File Upload",
+      "cwe_names": {
+        "CWE-434": "Unrestricted Upload of File with Dangerous Type"
+      }
+    },
+    "software": {
+      "vendors": "WebsiteBaker Org e.V.",
+      "products": "WebsiteBaker CMS",
+      "cpe_uris": "cpe:2.3:a:websitebaker_org_e.v.:websitebaker_cms:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://addon.websitebaker.org/en/browse-add-ons/?type=5&cid=997",
+      "https://medium.com/@benjaminasareagyapong2006/two-rce-vulnerabilities-i-found-on-my-birthday-evening-4563006a615a",
+      "https://www.vulncheck.com/advisories/websitebaker-cms-file-upload-rce-via-module-installation"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-61524",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-61524"
+    },
+    "item_id": "CVE-2026-61524",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche consumer CMS with no enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61523",
+    "identity": {
+      "title": "CVE-2026-61523",
+      "published": "2026-08-03 17:18:45",
+      "modified": "2026-08-03 19:16:48",
+      "description": "WebsiteBaker CMS before 2.13.10 contains a code injection vulnerability in the Droplets editor that allows authenticated administrators to inject arbitrary PHP code by submitting malicious content through the droplet Code field, which is written verbatim to a publicly accessible PHP file with no content sanitization. Attackers can save a PHP webshell via the save_droplet handler to a predictable path inside the modules directory, enabling unauthenticated users to achieve remote code execution by making direct HTTP requests to the written file."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://addon.websitebaker.org/en/browse-add-ons/?type=5&cid=997"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "WebsiteBaker Org e.V.",
+      "products": "WebsiteBaker CMS",
+      "cpe_uris": "cpe:2.3:a:websitebaker_org_e.v.:websitebaker_cms:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://addon.websitebaker.org/en/browse-add-ons/?type=5&cid=997",
+      "https://www.vulncheck.com/advisories/websitebaker-cms-code-injection-via-droplets-editor",
+      "https://medium.com/@benjaminasareagyapong2006/two-rce-vulnerabilities-i-found-on-my-birthday-evening-4563006a615a"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-61523",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-61523"
+    },
+    "item_id": "CVE-2026-61523",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche consumer CMS with no enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18718",
+    "identity": {
+      "title": "CVE-2026-18718",
+      "published": "2026-08-03 16:54:17",
+      "modified": "2026-08-03 22:16:48",
+      "description": "Ghidra contains an arbitrary code execution vulnerability in the Swift demangler analyzer that allows an attacker to execute arbitrary binaries by supplying a malicious Ghidra project with a crafted Swift tool directory path. When a victim opens the attacker-supplied project, SwiftDemanglerAnalyzer restores the persisted Swift binary directory from project state and SwiftNativeDemangler executes the resolved binary without integrity or signature verification, causing attacker-controlled executables to run under the Ghidra process user with no prompt or confirmation."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/NationalSecurityAgency/ghidra/commit/c03a70d"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-427"
+      ],
+      "cwe_primary": "CWE-427",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-427": "Uncontrolled Search Path Element"
+      }
+    },
+    "software": {
+      "vendors": "National Security Agency",
+      "products": "Ghidra",
+      "cpe_uris": "cpe:2.3:a:national_security_agency:ghidra:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/ghidra-swift-demangler-analyzer-arbitrary-code-execution-via-project-state",
+      "https://app.notion.com/p/Conditional-Arbitrary-Code-Execution-via-Swift-Demangler-Analyzer-ACE-GHIDRA-3a650723849f80679876df165fe4368b",
+      "https://github.com/NationalSecurityAgency/ghidra/commit/c03a70d",
+      "https://github.com/NationalSecurityAgency/ghidra/security/advisories/GHSA-pcfh-853f-q3gh",
+      "https://github.com/NationalSecurityAgency/ghidra"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18718",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18718"
+    },
+    "item_id": "CVE-2026-18718",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Security research tool requiring user interaction to open a crafted project, with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18607",
+    "identity": {
+      "title": "CVE-2026-18607",
+      "published": "2026-08-03 16:45:09",
+      "modified": "2026-08-03 21:16:36",
+      "description": "A security vulnerability has been detected in Wavlink WN572, WN570H, WN573, WN529, WN530, WN531, WN535, etc. WN529, WN530, WN531, WN535, WN536, WN551, WN557 and NU516 up to 20260609. Affected by this issue is the function strcpy of the file upload.cgi of the component lighttpd. The manipulation of the argument HTTP_COOKIE leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/0xcc12138/WAVLINK-vul"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Wavlink,Wavlink,Wavlink,Wavlink,Wavlink,Wavlink,Wavlink,Wavlink,Wavlink,Wavlink,Wavlink,Wavlink,Wavlink,Wavlink,Wavlink",
+      "products": "WN572,WN570H,WN573,WN529,WN530,WN531,WN535,etc. WN529,WN530,WN531,WN535,WN536,WN551,WN557,NU516",
+      "cpe_uris": "cpe:2.3:*:wavlink:wn572:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn570h:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn573:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn529:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn530:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn531:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn535:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:etc._wn529:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn530:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn531:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn535:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn536:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn551:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:wn557:20260609:*:*:*:*:*:*:*,cpe:2.3:*:wavlink:nu516:20260609:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/385530",
+      "https://vuldb.com/cve/CVE-2026-18607",
+      "https://vuldb.com/vuln/385530/cti",
+      "https://vuldb.com/submit/852637",
+      "https://github.com/0xcc12138/WAVLINK-vul"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18607",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18607"
+    },
+    "item_id": "CVE-2026-18607",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer networking hardware with no enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18606",
+    "identity": {
+      "title": "CVE-2026-18606",
+      "published": "2026-08-03 16:15:07",
+      "modified": "2026-08-03 17:16:35",
+      "description": "A weakness has been identified in Razer RzUpdateService 1.10.14.0. Affected by this vulnerability is an unknown functionality of the file C:\\Program Files (x86)\\Razer\\RzUpdateEngineService\\RzUpdateService.exe of the component Named Pipe Handler. Executing a manipulation of the argument lpThreadParameter can lead to improper privilege management. The attack requires local access. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://vuldb.com/vuln/385529/cti"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-266",
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-266",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-266": "Incorrect Privilege Assignment",
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "Razer",
+      "products": "RzUpdateService",
+      "cpe_uris": "cpe:2.3:*:razer:rzupdateservice:1.10.14.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/385529/cti",
+      "https://vuldb.com/cve/CVE-2026-18606",
+      "https://vuldb.com/submit/852045",
+      "https://vuldb.com/vuln/385529",
+      "https://opcodic.notion.site/Privilege-Escalation-via-Insecure-Named-Pipe-in-RzUpdateService-2d88e7fec518803fa5decf10fb0e1e27"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18606",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18606"
+    },
+    "item_id": "CVE-2026-18606",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer gaming peripheral software requiring local access, with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18602",
+    "identity": {
+      "title": "CVE-2026-18602",
+      "published": "2026-08-03 15:30:08",
+      "modified": "2026-08-03 17:16:35",
+      "description": "A vulnerability was determined in GL.iNet GL-MT3000 up to 4.4.5. Affected is the function ovpn-client.get_recommend_config of the file /cgi-bin/glc of the component ovpn-client.so Native Plugin. Executing a manipulation of the argument Hostname can lead to command injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/ovpn_get_recommend_config_glc_rce/CVE.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL.iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:*:gl.inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/851542",
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/ovpn_get_recommend_config_glc_rce/CVE.md",
+      "https://vuldb.com/cve/CVE-2026-18602",
+      "https://vuldb.com/vuln/385517",
+      "https://vuldb.com/vuln/385517/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18602",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18602"
+    },
+    "item_id": "CVE-2026-18602",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer/prosumer router firmware with remote command injection, lacking enterprise or DPI sector footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-67609",
+    "identity": {
+      "title": "CVE-2026-67609",
+      "published": "2026-08-03 13:32:37",
+      "modified": "2026-08-03 17:16:43",
+      "description": "Telenia Software TVox 26.5.3 and prior 26.x versions, and 24.9.21 and prior 24.x versions, contain a privilege escalation vulnerability that allows attackers with access to the apache account to execute arbitrary commands as root by exploiting an insecure sudoers configuration in /etc/sudoers.d/telenia. The configuration grants the apache user NOPASSWD execution of /bin/nice, which can be leveraged to invoke arbitrary commands, enabling full root-level command execution without supplying a password."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.vulncheck.com/advisories/telenia-tvox-privilege-escalation-via-insecure-sudoers-configuration"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-250"
+      ],
+      "cwe_primary": "CWE-250",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-250": "Execution with Unnecessary Privileges"
+      }
+    },
+    "software": {
+      "vendors": "Telenia Software",
+      "products": "TVox",
+      "cpe_uris": "cpe:2.3:a:telenia_software:tvox:*:*:*:*:*:*:*:*,cpe:2.3:a:telenia_software:tvox:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/telenia-tvox-privilege-escalation-via-insecure-sudoers-configuration",
+      "https://karmainsecurity.com/KIS-2026-16",
+      "https://www.teleniasoftware.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-67609",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-67609"
+    },
+    "item_id": "CVE-2026-67609",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in niche telephony software requiring prior apache access, no clear DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-67608",
+    "identity": {
+      "title": "CVE-2026-67608",
+      "published": "2026-08-03 13:30:35",
+      "modified": "2026-08-03 16:31:34",
+      "description": "Telenia Software TVox 26.5.3 and prior 26.x versions, and 24.9.21 and prior 24.x versions, contain an OS command injection vulnerability in action_audio.php that allows authenticated attackers to execute arbitrary operating system commands by passing an unsanitized pid parameter into an exec() call when the action parameter is set to checkProcess. Attackers can inject malicious OS commands through the pid request parameter to execute arbitrary commands with the privileges of the apache user."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://karmainsecurity.com/KIS-2026-15"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Telenia Software",
+      "products": "TVox",
+      "cpe_uris": "cpe:2.3:a:telenia_software:tvox:*:*:*:*:*:*:*:*,cpe:2.3:a:telenia_software:tvox:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://karmainsecurity.com/KIS-2026-15",
+      "https://www.teleniasoftware.com/",
+      "https://www.vulncheck.com/advisories/telenia-tvox-os-command-injection-via-action-audio-php"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-67608",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-67608"
+    },
+    "item_id": "CVE-2026-67608",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Authenticated OS command injection in niche telephony software with no DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-64827",
+    "identity": {
+      "title": "CVE-2026-64827",
+      "published": "2026-08-03 13:26:10",
+      "modified": "2026-08-03 16:16:30",
+      "description": "Telenia Software TVox 26.5.3 and prior 26.x versions, and 24.9.21 and prior 24.x versions, contain an authentication bypass vulnerability in set_env.php where the redirectToLoginAdminIRequestHaveAccessToken() function derives the current page name from PHP_SELF and skips authentication when the value matches 'login_admin.php'. Attackers can append '/login_admin.php' to the path of any target PHP script to cause the authentication check to pass and gain unauthenticated access to all PHP scripts under the manager HTML directory."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.vulncheck.com/advisories/telenia-tvox-authentication-bypass-via-set-env-php"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-807"
+      ],
+      "cwe_primary": "CWE-807",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-807": "Reliance on Untrusted Inputs in a Security Decision"
+      }
+    },
+    "software": {
+      "vendors": "Telenia Software",
+      "products": "TVox",
+      "cpe_uris": "cpe:2.3:a:telenia_software:tvox:*:*:*:*:*:*:*:*,cpe:2.3:a:telenia_software:tvox:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/telenia-tvox-authentication-bypass-via-set-env-php",
+      "https://karmainsecurity.com/KIS-2026-14",
+      "https://www.teleniasoftware.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-64827",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-64827"
+    },
+    "item_id": "CVE-2026-64827",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in niche telephony admin panel with no DPI sector nexus; high CVSS does not override scope exclusions.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69093",
+    "identity": {
+      "title": "CVE-2026-69093",
+      "published": "2026-08-03 13:20:46",
+      "modified": "2026-08-03 16:16:31",
+      "description": "Admidio before 5.0.11 does not validate the adm_csrf_token in modules/category-report/preferences.php, which performs persistent Category Report configuration changes based on GET parameters (delete and copy). An attacker can trick an authenticated administrator into visiting a crafted URL to delete or duplicate Category Report configurations, affecting the integrity and availability of that module's configuration."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Admidio/admidio/security/advisories/GHSA-mvx3-m6p6-7r9w"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-352"
+      ],
+      "cwe_primary": "CWE-352",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-352": "Cross-Site Request Forgery (CSRF)"
+      }
+    },
+    "software": {
+      "vendors": "Admidio",
+      "products": "admidio",
+      "cpe_uris": "cpe:2.3:a:admidio:admidio:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "admidio:admidio",
+          "vendor": "Admidio",
+          "product": "admidio",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/Admidio/admidio/security/advisories/GHSA-mvx3-m6p6-7r9w",
+      "https://github.com/Admidio/admidio/commit/e1fe6fd2fcafb6a65a550760f79447abdef31461",
+      "https://www.vulncheck.com/advisories/admidio-before-csrf-via-category-report-preferences"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69093",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69093"
+    },
+    "item_id": "CVE-2026-69093",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer/small-org membership management system (Admidio) CSRF vulnerability requiring authenticated admin interaction, with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69091",
+    "identity": {
+      "title": "CVE-2026-69091",
+      "published": "2026-08-03 13:20:44",
+      "modified": "2026-08-03 17:16:45",
+      "description": "Admidio before 5.0.11 contains an authentication bypass vulnerability in the forum module when configured in login-only mode. The access control logic in modules/forum.php fails to validate the login-only configuration state, allowing unauthenticated attackers to read forum topics and posts by directly accessing the module with read-only parameters."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Admidio/admidio/security/advisories/GHSA-cf48-6jrq-gjcm"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": "Admidio",
+      "products": "admidio",
+      "cpe_uris": "cpe:2.3:a:admidio:admidio:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "admidio:admidio",
+          "vendor": "Admidio",
+          "product": "admidio",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/admidio-before-authentication-bypass-via-forum-php",
+      "https://github.com/Admidio/admidio/security/advisories/GHSA-cf48-6jrq-gjcm"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69091",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69091"
+    },
+    "item_id": "CVE-2026-69091",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer/small-org membership system (Admidio) forum authentication bypass with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69089",
+    "identity": {
+      "title": "CVE-2026-69089",
+      "published": "2026-08-03 13:20:43",
+      "modified": "2026-08-03 20:17:29",
+      "description": "Grav CMS 2.0.10 contains a path traversal vulnerability in ImageMedium::watermark(), which passes its unsanitized $image argument to RocketTheme\\Toolbox\\ResourceLocator\\UniformResourceLocator::findResource(). Because the file:// scheme branch only lexically collapses '..' segments without a realpath/containment check, an editor authoring Markdown image syntax with traversal sequences can cause arbitrary image files outside Grav's media sandbox to be composited into a carrier image, which is then cached and served from a public, unauthenticated URL — disclosing those files to anonymous visitors."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/getgrav/grav/security/advisories/GHSA-w3f4-8pj2-599w"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "getgrav",
+      "products": "grav",
+      "cpe_uris": "cpe:2.3:a:getgrav:grav:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "getgrav:grav",
+          "vendor": "getgrav",
+          "product": "grav",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/grav-cms-before-path-traversal-via-watermark",
+      "https://github.com/getgrav/grav/security/advisories/GHSA-w3f4-8pj2-599w",
+      "https://github.com/getgrav/grav/commit/b282200a65ce979377963180629babd2335212ba",
+      "https://github.com/getgrav/grav/commit/c569a53304cd7d95ff21bffa6fc590adcf0be83d",
+      "https://github.com/getgrav/grav/commit/db8c1fcd63aaaf6d6b244bc6b4cfa5f7b96bbc7f"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69089",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69089"
+    },
+    "item_id": "CVE-2026-69089",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Flat-file CMS (Grav) path traversal requiring editor access, falling under consumer CMS exclusion with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69087",
+    "identity": {
+      "title": "CVE-2026-69087",
+      "published": "2026-08-03 13:20:42",
+      "modified": "2026-08-03 16:16:31",
+      "description": "The Grav form plugin (getgrav/grav-plugin-form) before 9.1.13 contains an open redirect vulnerability. Since v9.1.11, the redirect process action evaluates user-supplied form data inside Twig expressions, and Grav::redirect() accepts external URLs without origin validation. When a form blueprint defines a redirect target such as redirect: \"{{ form.value('next') }}\" using an attacker-controllable field, an unauthenticated form submitter can supply a value like https://evil.com to cause a 302 redirect to an arbitrary external site, enabling phishing."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/getgrav/grav/security/advisories/GHSA-j2j9-gp72-wqvm"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-601"
+      ],
+      "cwe_primary": "CWE-601",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-601": "URL Redirection to Untrusted Site ('Open Redirect')"
+      }
+    },
+    "software": {
+      "vendors": "getgrav",
+      "products": "grav-plugin-form",
+      "cpe_uris": "cpe:2.3:a:getgrav:grav-plugin-form:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/getgrav/grav/security/advisories/GHSA-j2j9-gp72-wqvm",
+      "https://www.vulncheck.com/advisories/grav-form-plugin-before-open-redirect-via-form-value-twig"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69087",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69087"
+    },
+    "item_id": "CVE-2026-69087",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer CMS plugin (Grav form) open redirect vulnerability with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69088",
+    "identity": {
+      "title": "CVE-2026-69088",
+      "published": "2026-08-03 13:20:42",
+      "modified": "2026-08-03 16:16:31",
+      "description": "Grav CMS versions 2.0.7 through 2.0.10 fail to validate fully-qualified static method calls (Class::method) in blueprint dynamic-field directives because Blueprint::isSafeDynamicCall() only applies its dangerous-callable denylist to strings that do not contain '::'. An account with only page-editing rights (admin.pages, not super-admin or admin.pages_twig) can plant a directive in a page's form-field frontmatter that invokes an arbitrary public static PHP method with attacker-controlled arguments. Using built-in gadget methods this allows reading of any server-readable file (disclosed to anonymous visitors of the crafted page) and arbitrary creation/copying of files and directories under the web-server account. Fixed in 2.0.11."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/getgrav/grav/security/advisories/GHSA-7pgq-cr25-xvc8"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "getgrav",
+      "products": "grav",
+      "cpe_uris": "cpe:2.3:a:getgrav:grav:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "getgrav:grav",
+          "vendor": "getgrav",
+          "product": "grav",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/getgrav/grav/security/advisories/GHSA-7pgq-cr25-xvc8",
+      "https://www.vulncheck.com/advisories/grav-cms-through-arbitrary-method-invocation-via-blueprint"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69088",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69088"
+    },
+    "item_id": "CVE-2026-69088",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "CMS (Grav) arbitrary method execution requiring page-editing privileges, falling under consumer CMS exclusion with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69086",
+    "identity": {
+      "title": "CVE-2026-69086",
+      "published": "2026-08-03 13:20:41",
+      "modified": "2026-08-03 17:16:45",
+      "description": "SiYuan versions before v3.7.3 fail to validate the avID parameter on all code branches in attribute-view read endpoints, allowing attackers to construct traversal paths that escape the storage directory. Authenticated users with RoleReader permissions or anonymous clients when publish authentication is disabled can read JSON files outside the attribute-view directory to disclose cross-scope database content."
+    },
+    "cvss": {
+      "base_score": 8.3,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-7hm9-v7vf-7g4w"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-7hm9-v7vf-7g4w",
+      "https://www.vulncheck.com/advisories/siyuan-before-path-traversal-via-unvalidated-avid"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69086",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69086"
+    },
+    "item_id": "CVE-2026-69086",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal knowledge base application (SiYuan) path traversal with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69085",
+    "identity": {
+      "title": "CVE-2026-69085",
+      "published": "2026-08-03 13:20:40",
+      "modified": "2026-08-03 15:16:21",
+      "description": "SiYuan before v3.7.3 contains a SQL injection vulnerability in the /api/filetree/searchDocs endpoint, where the caller-supplied keyword parameter is concatenated directly into SQL statements with no escaping or parameter binding. The endpoint is reachable by a publish RoleReader token, or unauthenticated when publish mode is enabled with Publish.Auth.Enable set to false. Because the statement executes on a read-write SQLite handle via a driver that supports stacked (semicolon-separated) statements, an attacker can read and modify database content across all cleartext (non-encrypted) notebooks on the instance."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-33jq-p8c2-q3q4"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-33jq-p8c2-q3q4",
+      "https://www.vulncheck.com/advisories/siyuan-before-sql-injection-via-searchdocs"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69085",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69085"
+    },
+    "item_id": "CVE-2026-69085",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Personal note-taking application (SiYuan) SQL injection with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69083",
+    "identity": {
+      "title": "CVE-2026-69083",
+      "published": "2026-08-03 13:20:39",
+      "modified": "2026-08-03 16:16:31",
+      "description": "SiYuan versions before v3.7.3 contain SQL injection vulnerabilities in the fullTextSearchAssetContent endpoint reachable by unauthenticated users and publish RoleReader tokens. Attackers can execute arbitrary SQL on the read-write asset-content database via unescaped method parameters and REGEXP clauses to read, modify, or delete cross-notebook data."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-fph3-ghq9-vw66"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-fph3-ghq9-vw66",
+      "https://www.vulncheck.com/advisories/siyuan-before-sql-injection-via-fulltextsearchassetcontent"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69083",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69083"
+    },
+    "item_id": "CVE-2026-69083",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Personal knowledge base application (SiYuan) SQL injection with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69084",
+    "identity": {
+      "title": "CVE-2026-69084",
+      "published": "2026-08-03 13:20:39",
+      "modified": "2026-08-03 20:17:29",
+      "description": "SiYuan versions <= v3.7.2 expose the /api/search/searchEmbedBlock endpoint, which passes a client-supplied SQL statement verbatim to the main read-write siyuan.db handle with no single-statement, read-only, or admin restrictions. The endpoint is gated only by CheckAuth, making it reachable by the publish RoleReader token and by anonymous users when publish authentication is disabled. Because the underlying driver executes stacked statements, an attacker can read and modify content across all opened cleartext notebooks (encrypted per-box notebooks are excluded). Fixed in v3.7.3."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-vh22-h7hf-www7"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/siyuan-before-sql-injection-via-searchembedblock",
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-vh22-h7hf-www7"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69084",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69084"
+    },
+    "item_id": "CVE-2026-69084",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Personal note-taking application (SiYuan) SQL injection with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-68587",
+    "identity": {
+      "title": "CVE-2026-68587",
+      "published": "2026-08-03 13:20:38",
+      "modified": "2026-08-03 16:16:31",
+      "description": "SiYuan versions before v3.7.3 contain an information disclosure vulnerability in the getHeadingDeleteTransaction, getHeadingLevelTransaction, and getHeadingInsertTransaction endpoints that return rendered block DOM without publish-access checks. Anonymous readers or publish RoleReader tokens can supply a heading block ID to read full rendered content of publish-disabled documents that should be restricted."
+    },
+    "cvss": {
+      "base_score": 9.2,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-69mh-gvh4-8gp7"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/siyuan-before-information-disclosure-via-getheading-transaction",
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-69mh-gvh4-8gp7"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-68587",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-68587"
+    },
+    "item_id": "CVE-2026-68587",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal knowledge base application (SiYuan) information disclosure with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-68586",
+    "identity": {
+      "title": "CVE-2026-68586",
+      "published": "2026-08-03 13:20:37",
+      "modified": "2026-08-03 17:16:44",
+      "description": "SiYuan before v3.7.3 fails to apply publish-access filters to the getBacklinkDoc and getBackmentionDoc content endpoints (/api/ref/getBacklinkDoc and /api/ref/getBackmentionDoc). While the corresponding backlink list endpoints filter publish-forbidden documents, the content endpoints (gated only by CheckAuth) do not. A publish-mode reader — including an anonymous reader when publish Basic Auth is disabled — can call these endpoints directly with a publish-forbidden document's ID to retrieve its rendered DOM content and to determine whether the document references a given block (a reference-existence oracle)."
+    },
+    "cvss": {
+      "base_score": 9.2,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-36v8-mpjm-8j5r"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/siyuan-before-content-disclosure-via-getbacklinkdoc",
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-36v8-mpjm-8j5r"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-68586",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-68586"
+    },
+    "item_id": "CVE-2026-68586",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal knowledge-base application publish-mode access control bypass; lacks enterprise or digital public infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-68584",
+    "identity": {
+      "title": "CVE-2026-68584",
+      "published": "2026-08-03 13:20:36",
+      "modified": "2026-08-03 20:17:28",
+      "description": "SiYuan versions before v3.7.3 contain an authentication bypass vulnerability in publish mode where content-returning endpoints getHeadingChildrenDOM, getHeading*Transaction, and getBacklinkDoc perform no password check despite protecting the primary getDoc endpoint. Anonymous attackers can retrieve full content of password-protected documents by obtaining internal block IDs from reader-accessible endpoints and calling unprotected content endpoints to bypass the password gate."
+    },
+    "cvss": {
+      "base_score": 9.2,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-7j72-f6wg-cxw6"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-288"
+      ],
+      "cwe_primary": "CWE-288",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-288": "Authentication Bypass Using an Alternate Path or Channel"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/siyuan-before-authentication-bypass-via-content-endpoints",
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-7j72-f6wg-cxw6"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-68584",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-68584"
+    },
+    "item_id": "CVE-2026-68584",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal note-taking application publish-mode authentication bypass; lacks enterprise or digital public infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18601",
+    "identity": {
+      "title": "CVE-2026-18601",
+      "published": "2026-08-03 13:15:08",
+      "modified": "2026-08-03 20:17:16",
+      "description": "A vulnerability was found in GL.iNet GL-MT3000 up to 4.4.5. This impacts the function ovpn-client.check_config of the file /cgi-bin/glc of the component ovpn-client.so Native Plugin. Performing a manipulation of the argument filename results in command injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/ovpn_check_config_glc_rce/CVE.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL.iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:*:gl.inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/385516",
+      "https://vuldb.com/cve/CVE-2026-18601",
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/ovpn_check_config_glc_rce/CVE.md",
+      "https://vuldb.com/submit/851540",
+      "https://vuldb.com/vuln/385516/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18601",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18601"
+    },
+    "item_id": "CVE-2026-18601",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router command injection with public exploit; explicitly excluded as consumer IoT with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18600",
+    "identity": {
+      "title": "CVE-2026-18600",
+      "published": "2026-08-03 13:00:10",
+      "modified": "2026-08-03 16:16:28",
+      "description": "A vulnerability has been found in GL.iNet GL-MT3000 up to 4.4.5. This affects the function network.switch_info/network.switch_status of the file /usr/lib/oui-httpd/rpc/network of the component Network Lua RPC Plugin. Such manipulation of the argument switch leads to command injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/network_switch_info_rpc_rce/CVE.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL.iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:*:gl.inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/385515/cti",
+      "https://vuldb.com/submit/851537",
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/network_switch_info_rpc_rce/CVE.md",
+      "https://vuldb.com/vuln/385515",
+      "https://vuldb.com/cve/CVE-2026-18600"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18600",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18600"
+    },
+    "item_id": "CVE-2026-18600",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router remote command injection; excluded as consumer IoT without enterprise or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18599",
+    "identity": {
+      "title": "CVE-2026-18599",
+      "published": "2026-08-03 12:00:09",
+      "modified": "2026-08-03 17:16:35",
+      "description": "A flaw has been found in GL.iNet GL-MT3000 up to 4.4.5. The impacted element is the function logread.set_config of the file /usr/lib/oui-httpd/rpc/logread of the component Logread Lua RPC Plugin. This manipulation of the argument record_size causes command injection. The exploit has been published and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 8.0,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/logread_set_config_rpc_rce/CVE.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL.iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:*:gl.inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/logread_set_config_rpc_rce/CVE.md",
+      "https://vuldb.com/cve/CVE-2026-18599",
+      "https://vuldb.com/vuln/385514",
+      "https://vuldb.com/vuln/385514/cti",
+      "https://vuldb.com/submit/851536"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18599",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18599"
+    },
+    "item_id": "CVE-2026-18599",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router remote command injection; explicitly excluded as consumer IoT with no enterprise or DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-2346",
+    "identity": {
+      "title": "CVE-2026-2346",
+      "published": "2026-08-03 11:49:45",
+      "modified": "2026-08-03 14:16:26",
+      "description": "Authorization bypass through User-Controlled key vulnerability in Menulux Software Inc. Mobile App allows Software Integrity Attack.\n\nThis issue affects Mobile App: through 12.05.2026."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0729"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "cwe_primary": "CWE-639",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-639": "Authorization Bypass Through User-Controlled Key"
+      }
+    },
+    "software": {
+      "vendors": "Menulux Software Inc.",
+      "products": "Mobile App",
+      "cpe_uris": "cpe:2.3:a:menulux:mobile_app:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "menulux software inc.:mobile app",
+          "vendor": "Menulux Software Inc.",
+          "product": "Mobile App",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0729"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-2346",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-2346"
+    },
+    "item_id": "CVE-2026-2346",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer mobile app with no enterprise or DPI footprint, despite high CVSS and authorization bypass wording.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18598",
+    "identity": {
+      "title": "CVE-2026-18598",
+      "published": "2026-08-03 11:30:10",
+      "modified": "2026-08-03 20:17:16",
+      "description": "A vulnerability was detected in GL.iNet GL-MT3000 up to 4.4.5. The affected element is the function logread.get_system_log of the file /usr/lib/oui-httpd/rpc/logread of the component Logread Lua RPC plugin. The manipulation of the argument module results in command injection. The attack can be launched remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/logread_get_system_log_rpc_rce/CVE.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "GL.iNet",
+      "products": "GL-MT3000",
+      "cpe_uris": "cpe:2.3:*:gl.inet:gl-mt3000:4.4.0:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.1:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.2:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.3:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.4:*:*:*:*:*:*:*,cpe:2.3:*:gl.inet:gl-mt3000:4.4.5:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/cve/CVE-2026-18598",
+      "https://vuldb.com/vuln/385513",
+      "https://vuldb.com/submit/851535",
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/logread_get_system_log_rpc_rce/CVE.md",
+      "https://vuldb.com/vuln/385513/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18598",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18598"
+    },
+    "item_id": "CVE-2026-18598",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router (GL.iNet) with public exploit, explicitly excluded as consumer-only hardware with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21555",
+    "identity": {
+      "title": "CVE-2026-21555",
+      "published": "2026-08-03 07:18:31",
+      "modified": "2026-08-03 13:17:19",
+      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed"
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00403,
+      "percentile": 0.33189,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "cwe_primary": "CWE-20",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-20": "Improper Input Validation"
+      }
+    },
+    "software": {
+      "vendors": "Unisoc (Shanghai) Technologies Co., Ltd.",
+      "products": "UDX710",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21555",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21555"
+    },
+    "item_id": "CVE-2026-21555",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Vague modem vulnerability with no vendor, product, or exploitation signal, lacking enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21554",
+    "identity": {
+      "title": "CVE-2026-21554",
+      "published": "2026-08-03 07:18:29",
+      "modified": "2026-08-03 13:17:18",
+      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed"
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00403,
+      "percentile": 0.33189,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "cwe_primary": "CWE-20",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-20": "Improper Input Validation"
+      }
+    },
+    "software": {
+      "vendors": "Unisoc (Shanghai) Technologies Co., Ltd.",
+      "products": "UDX710",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21554",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21554"
+    },
+    "item_id": "CVE-2026-21554",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Vague modem vulnerability with no vendor, product, or exploitation signal, lacking enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21553",
+    "identity": {
+      "title": "CVE-2026-21553",
+      "published": "2026-08-03 07:18:27",
+      "modified": "2026-08-03 15:16:19",
+      "description": "In modem, there is a possible improper input validation. This could lead to remote denial of service with no additional execution privileges needed"
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00403,
+      "percentile": 0.33187,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "cwe_primary": "CWE-20",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-20": "Improper Input Validation"
+      }
+    },
+    "software": {
+      "vendors": "Unisoc (Shanghai) Technologies Co., Ltd.",
+      "products": "T8100/T9100/T8200/T8300",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "unisoc (shanghai) technologies co.:t8100/t9100/t8200/t8300",
+          "vendor": "Unisoc (Shanghai) Technologies Co.",
+          "product": "T8100/T9100/T8200/T8300",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21553",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21553"
+    },
+    "item_id": "CVE-2026-21553",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Vague modem vulnerability with no vendor, product, or exploitation signal, lacking enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21548",
+    "identity": {
+      "title": "CVE-2026-21548",
+      "published": "2026-08-03 07:18:17",
+      "modified": "2026-08-03 16:16:29",
+      "description": "In nr modem, there is a possible improper input validation. This could lead to remote denial of service with System execution privileges needed."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00403,
+      "percentile": 0.33189,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "cwe_primary": "CWE-20",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-20": "Improper Input Validation"
+      }
+    },
+    "software": {
+      "vendors": "Unisoc (Shanghai) Technologies Co., Ltd.",
+      "products": "T8100/T9100/T8200/T8300",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "unisoc (shanghai) technologies co.:t8100/t9100/t8200/t8300",
+          "vendor": "Unisoc (Shanghai) Technologies Co.",
+          "product": "T8100/T9100/T8200/T8300",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.unisoc.com/en/support/product-security-bulletin/2084109408382668801"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21548",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21548"
+    },
+    "item_id": "CVE-2026-21548",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Requires system-level privileges already held, lacking remote attack vector or clear DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18589",
+    "identity": {
+      "title": "CVE-2026-18589",
+      "published": "2026-08-03 06:30:10",
+      "modified": "2026-08-03 20:17:15",
+      "description": "A vulnerability was found in Wavlink WL-NU516U1 708c073-mt7628. This impacts the function change_password of the file nas.cgi. The manipulation of the argument User1Passwd results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been made public and could be used. The affected component should be upgraded. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00609,
+      "percentile": 0.45754,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report2.md"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Wavlink",
+      "products": "WL-NU516U1",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "wavlink:wl-nu516u1",
+          "vendor": "Wavlink",
+          "product": "WL-NU516U1",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/cve/CVE-2026-18589",
+      "https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-07-13-4b8a21f-mt7628-squashfs-sysupgrade.bin",
+      "https://vuldb.com/vuln/385417/cti",
+      "https://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report2.md",
+      "https://vuldb.com/submit/850501",
+      "https://vuldb.com/vuln/385417"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18589",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18589"
+    },
+    "item_id": "CVE-2026-18589",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer Wi-Fi adapter/router with no enterprise or DPI footprint, despite high CVSS and public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-9593",
+    "identity": {
+      "title": "CVE-2026-9593",
+      "published": "2026-08-03 06:28:19",
+      "modified": "2026-08-03 16:16:32",
+      "description": "A vulnerability in the iDTM FDI allows an attacker with elevated privileges and access to the host system to enable the debug interface by placing a crafted file in the application directory, potentially resulting in unauthorized access to connected devices and exposure, modification, or disruption of device data or operation."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00115,
+      "percentile": 0.01777,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.certvde.com/en/advisories/VDE-2026-065/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-427"
+      ],
+      "cwe_primary": "CWE-427",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-427": "Uncontrolled Search Path Element"
+      }
+    },
+    "software": {
+      "vendors": "Endress+Hauser",
+      "products": "FDI Package library",
+      "cpe_uris": "cpe:2.3:a:endress:fdi_package_library:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-065/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-9593",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-9593"
+    },
+    "item_id": "CVE-2026-9593",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Requires elevated host privileges and local file placement, lacking remote attack vector or clear DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16539",
+    "identity": {
+      "title": "CVE-2026-16539",
+      "published": "2026-08-03 06:00:14",
+      "modified": "2026-08-03 18:16:37",
+      "description": "The sm page duplicator WordPress plugin through 1.0.0 does not sanitise and escape a stored value before using it in a SQL statement when duplicating a page, allowing users with the Editor role and above to perform SQL Injection attacks."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00156,
+      "percentile": 0.05265,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/8e2c97d8-5392-4464-94e5-3fc353302f1f/"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "sm page duplicator",
+      "cpe_uris": "cpe:2.3:*:*:sm_page_duplicator:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/8e2c97d8-5392-4464-94e5-3fc353302f1f/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16539",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16539"
+    },
+    "item_id": "CVE-2026-16539",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin requiring authenticated Editor role, explicitly excluded as consumer-only software with no DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16572",
+    "identity": {
+      "title": "CVE-2026-16572",
+      "published": "2026-08-03 06:00:14",
+      "modified": "2026-08-03 17:16:31",
+      "description": "The LogMyTrip WordPress plugin through 1.9 does not sanitize and escape a value taken from a cookie before using it in a SQL query, allowing unauthenticated users to perform SQL injection attacks on any page that renders one of the LogMyTrip WordPress plugin through 1.9's shortcodes."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0019,
+      "percentile": 0.08866,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/2d9b816c-25b3-427f-ad72-f9812d9aa86d/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "LogMyTrip",
+      "cpe_uris": "cpe:2.3:*:*:logmytrip:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/2d9b816c-25b3-427f-ad72-f9812d9aa86d/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16572",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16572"
+    },
+    "item_id": "CVE-2026-16572",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint, despite unauthenticated SQL injection.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16300",
+    "identity": {
+      "title": "CVE-2026-16300",
+      "published": "2026-08-03 06:00:13",
+      "modified": "2026-08-03 17:16:30",
+      "description": "The ChamaWP  WordPress plugin before 1.0.13 does not properly validate a password reset request, allowing unauthenticated attackers to reset the password of arbitrary users, including administrators, which could lead to a full site takeover."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00149,
+      "percentile": 0.04609,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/0508f8c8-8ecc-4982-b14c-bf5f1c3d1c8f/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "ChamaWP",
+      "cpe_uris": "cpe:2.3:*:*:chamawp:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/0508f8c8-8ecc-4982-b14c-bf5f1c3d1c8f/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16300",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16300"
+    },
+    "item_id": "CVE-2026-16300",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint; matches explicit drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15930",
+    "identity": {
+      "title": "CVE-2026-15930",
+      "published": "2026-08-03 06:00:12",
+      "modified": "2026-08-03 18:16:36",
+      "description": "The Simple Membership WordPress plugin before 4.7.8 does not verify whether user creation failed during registration before using the returned value as a user ID to update an account, allowing unauthenticated attackers to overwrite the primary administrator's account data (including the email address) and take over that account through the password reset flow."
+    },
+    "cvss": {
+      "base_score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00136,
+      "percentile": 0.03517,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/e46948f1-0e06-4e76-8fc8-df661eb786a5/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Simple Membership",
+      "cpe_uris": "cpe:2.3:a:simple-membership-plugin:simple_membership:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/e46948f1-0e06-4e76-8fc8-df661eb786a5/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15930",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15930"
+    },
+    "item_id": "CVE-2026-15930",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint; matches explicit drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-12965",
+    "identity": {
+      "title": "CVE-2026-12965",
+      "published": "2026-08-03 06:00:11",
+      "modified": "2026-08-03 17:16:29",
+      "description": "The Super Store Finder WordPress plugin through 7.8 does not sanitize a parameter of an unauthenticated AJAX action before using it in a SQL query, allowing unauthenticated attackers to perform SQL injection and extract data from the database."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.0019,
+      "percentile": 0.08883,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/fd13bf8a-ce99-4e2b-ba36-e899df33cf98/"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Super Store Finder WordPress",
+      "cpe_uris": "cpe:2.3:*:*:super_store_finder_wordpress:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/fd13bf8a-ce99-4e2b-ba36-e899df33cf98/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-12965",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-12965"
+    },
+    "item_id": "CVE-2026-12965",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint; matches explicit drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18588",
+    "identity": {
+      "title": "CVE-2026-18588",
+      "published": "2026-08-03 06:00:11",
+      "modified": "2026-08-03 16:16:28",
+      "description": "A vulnerability has been found in Wavlink WL-NU516U1 708c073-mt7628. This affects the function fgets of the file nas.cgi. The manipulation of the argument CONTENT_LENGTH leads to stack-based buffer overflow. Remote exploitation of the attack is possible. You should upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00609,
+      "percentile": 0.45754,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report2.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Wavlink",
+      "products": "WL-NU516U1",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "wavlink:wl-nu516u1",
+          "vendor": "Wavlink",
+          "product": "WL-NU516U1",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/vuln/385416/cti",
+      "https://vuldb.com/cve/CVE-2026-18588",
+      "https://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report2.md",
+      "https://vuldb.com/submit/850500",
+      "https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-07-13-4b8a21f-mt7628-squashfs-sysupgrade.bin",
+      "https://vuldb.com/vuln/385416"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18588",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18588"
+    },
+    "item_id": "CVE-2026-18588",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer NAS/router hardware with no enterprise or DPI footprint; matches explicit drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16532",
+    "identity": {
+      "title": "CVE-2026-16532",
+      "published": "2026-08-03 06:00:10",
+      "modified": "2026-08-03 17:16:31",
+      "description": "The Link Library WordPress plugin before 7.9.3 does not properly sanitise and escape a user-supplied value before using it in a SQL query, allowing unauthenticated users to perform SQL injection attacks."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00177,
+      "percentile": 0.07435,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/da3b8caa-ac99-4097-8286-f3c418ddb63d/"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Link Library",
+      "cpe_uris": "cpe:2.3:a:ylefebvre:link_library:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/da3b8caa-ac99-4097-8286-f3c418ddb63d/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16532",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16532"
+    },
+    "item_id": "CVE-2026-16532",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint; matches explicit drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16534",
+    "identity": {
+      "title": "CVE-2026-16534",
+      "published": "2026-08-03 06:00:10",
+      "modified": "2026-08-03 17:16:31",
+      "description": "The Import and export users and customers WordPress plugin before 2.4.2 does not enforce WordPress's role-assignment and per-user edit permissions during CSV import, allowing a user holding only the user-creation capability to create an administrator account and to overwrite an existing administrator's password or email."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00132,
+      "percentile": 0.03166,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/0d1246a0-3cd1-4b6d-bd3e-6ed89745da26/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Import and export users and customers",
+      "cpe_uris": "cpe:2.3:a:codection:import_and_export_users_and_customers:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/0d1246a0-3cd1-4b6d-bd3e-6ed89745da26/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16534",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16534"
+    },
+    "item_id": "CVE-2026-16534",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint; matches explicit drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18587",
+    "identity": {
+      "title": "CVE-2026-18587",
+      "published": "2026-08-03 05:45:11",
+      "modified": "2026-08-03 21:16:36",
+      "description": "A flaw has been found in Wavlink WL-NU516U1 708c073-mt7628. The impacted element is an unknown function of the component Config Import. Executing a manipulation of the argument Password can lead to os command injection. The attack may be launched remotely. This attack is characterized by high complexity. The exploitability is regarded as difficult. The exploit has been published and may be used. It is advisable to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.01256,
+      "percentile": 0.66588,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report.md"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-77",
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-77",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Wavlink",
+      "products": "WL-NU516U1",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "wavlink:wl-nu516u1",
+          "vendor": "Wavlink",
+          "product": "WL-NU516U1",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/vuln/385415",
+      "https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-07-13-4b8a21f-mt7628-squashfs-sysupgrade.bin",
+      "https://vuldb.com/submit/850494",
+      "https://vuldb.com/cve/CVE-2026-18587",
+      "https://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report.md",
+      "https://vuldb.com/vuln/385415/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18587",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18587"
+    },
+    "item_id": "CVE-2026-18587",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer NAS/router hardware with no enterprise or DPI footprint; matches explicit drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-20479",
+    "identity": {
+      "title": "CVE-2026-20479",
+      "published": "2026-08-03 02:05:38",
+      "modified": "2026-08-03 20:17:20",
+      "description": "In Modem, there is a possible out of bounds read due to a missing bounds check. This could lead to remote denial of service, if a UE has connected to a rogue base station controlled by the attacker, with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: MOLY00741071; Issue ID: MSV-7620."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00208,
+      "percentile": 0.11144,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.mediatek.com/product-security-bulletin/August-2026"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "cwe_primary": "CWE-125",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-125": "Out-of-bounds Read"
+      }
+    },
+    "software": {
+      "vendors": "MediaTek, Inc.",
+      "products": "MediaTek chipset",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.mediatek.com/product-security-bulletin/August-2026"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-20479",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-20479"
+    },
+    "item_id": "CVE-2026-20479",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Telecom modem firmware flaw requiring rogue base station connection, no DPI sector or identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-20465",
+    "identity": {
+      "title": "CVE-2026-20465",
+      "published": "2026-08-03 02:05:15",
+      "modified": "2026-08-03 20:17:18",
+      "description": "In wlan AP driver, there is a possible out of bounds write due to a missing bounds check. This could lead to remote (proximal/adjacent) escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: WCNCR00489200; Issue ID: MSV-7834."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00166,
+      "percentile": 0.06262,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.mediatek.com/product-security-bulletin/August-2026"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-122"
+      ],
+      "cwe_primary": "CWE-122",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-122": "Heap-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "MediaTek, Inc.",
+      "products": "MediaTek chipset",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.mediatek.com/product-security-bulletin/August-2026"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-20465",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-20465"
+    },
+    "item_id": "CVE-2026-20465",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WLAN AP driver flaw requiring proximal access, no enterprise or DPI sector footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-65875",
+    "identity": {
+      "title": "CVE-2026-65875",
+      "published": "2026-08-03 00:13:39",
+      "modified": "2026-08-03 16:16:30",
+      "description": "BaserCMS provided by baserCMS Users Community contains a CSV file injection vulnerability. If a user downloads and opens a CSV file containing malicious code injected by an attacker, the malicious code may be executed."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00152,
+      "percentile": 0.04856,
+      "date": "2026-08-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://basercms.net/security/JVN_94952030"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-1236"
+      ],
+      "cwe_primary": "CWE-1236",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-1236": "Improper Neutralization of Formula Elements in a CSV File"
+      }
+    },
+    "software": {
+      "vendors": "baserCMS Users Community",
+      "products": "BaserCMS",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://basercms.net/security/JVN_94952030",
+      "https://jvn.jp/en/vu/JVNVU94952030/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-65875",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-65875"
+    },
+    "item_id": "CVE-2026-65875",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer/small-business CMS with CSV injection, no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  }
+]
