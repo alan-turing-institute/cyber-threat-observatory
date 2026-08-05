@@ -1,0 +1,306 @@
+[
+  {
+    "id": "CVE-2026-69703",
+    "published": "2026-08-04 18:41:26",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Atlas-Livre contains an improper access control vulnerability in the admin controllers under Espace_admin/controleur/ that allows unauthenticated attackers to bypass session-based authentication guards by sending raw HTTP requests that ignore redirects. Attackers can invoke destructive admin actions such as record deletion by requesting controller endpoints with GET parameters like supp, because the PHP header() redirect is never followed by an exit or die call, allowing all subsequent code including database operations to execute regardless of session state.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic PHP web application with session bypass, no identity infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63456",
+    "published": "2026-08-04 16:41:00",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Multiple vulnerabilities in the REST API interface of HPE Networking SD-WAN Orchestrator could allow an unauthenticated remote attacker to bypass web authentication mechanisms and access system functions. Successful exploitation could allow an attacker to view and modify potentially sensitive information on the target system.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise SD-WAN orchestrator web auth bypass, lacks direct identity/access management or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61514",
+    "published": "2026-08-04 14:00:26",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Puwell IP Camera firmware versions 2.x through 4.x contains an authentication bypass vulnerability that allows unauthenticated attackers to access device functions by sending protocol-conforming packets over TCP port 23456 without credentials. Attackers can exploit the unvalidated Session field in the proprietary control protocol header to access live video streams, control pan and tilt motors, activate audio functions, and remotely restart the device.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT IP camera firmware, explicitly excluded by base and overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63455",
+    "published": "2026-08-04 16:40:50",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Multiple vulnerabilities in the REST API interface of HPE Networking SD-WAN Orchestrator could allow an unauthenticated remote attacker to bypass web authentication mechanisms and access system functions. Successful exploitation could allow an attacker to view and modify potentially sensitive information on the target system.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise SD-WAN orchestrator web auth bypass, lacks direct identity/access management or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70552",
+    "published": "2026-08-04 19:28:27",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MaxSite CMS 109.5 and earlier contains an authentication bypass vulnerability in the AJAX dispatcher that allows unauthenticated attackers to access admin-gated endpoints by supplying any X-Requested-With header and requesting a base64-encoded path resolving to any *-ajax.php file in the codebase. Attackers can exploit this dispatcher bypass to reach privileged plugin endpoints without credentials, enabling actions such as manipulating poll states and vote counts, and amplifying the impact of any dangerous operation performed by admin-only ajax files across the plugin tree.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic CMS with AJAX dispatcher bypass, no identity infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-41452",
+    "published": "2026-08-03 15:43:05",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Krayin CRM 2.2.4 contains a missing authentication vulnerability in the installer middleware that allows unauthenticated remote attackers to overwrite the primary administrator account by sending a crafted HTTP POST request with the X-Requested-With: XMLHttpRequest header to bypass the CanInstall middleware redirect check. Attackers can supply arbitrary name, email, and password values to the admin-config-setup endpoint, which performs an unauthenticated updateOrInsert targeting the hardcoded administrator user ID, enabling full administrative access to all CRM data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Commercial CRM installer middleware bypass, lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69091",
+    "published": "2026-08-03 13:20:44",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Admidio before 5.0.11 contains an authentication bypass vulnerability in the forum module when configured in login-only mode. The access control logic in modules/forum.php fails to validate the login-only configuration state, allowing unauthenticated attackers to read forum topics and posts by directly accessing the module with read-only parameters.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Membership/forum web application auth bypass, no core identity infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-58075",
+    "published": "2026-08-04 15:56:03",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability allowing an unauthenticated attacker to read arbitrary files from the host, which can be further leveraged toescalate privileges locally.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no product or identity nexus, pure file-read/privilege escalation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18759",
+    "published": "2026-08-04 07:25:09",
+    "cvss": 8.5,
+    "epss": 0.00116,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The background service of ABP or AES runs as NT AUTHORITY\\SYSTEM and implements a file-based inter-process communication (IPC) mechanism protected by AES encryption. Because the encryption key file is readable by standard users and protected using DPAPI. Any authenticated local user can recover the key and forge valid IPC requests. Furthermore, the service does not check the identity of the requesting process and validates destination paths using an insufficient substring check. A local attacker can submit crafted encrypted requests containing directory traversal sequences to perform arbitrary file reads and arbitrary file writes as NT AUTHORITY\\SYSTEM, leading to full local privilege escalation.\nAffected products and versions include: ABP (ASUSTOR Backup Plan) 2.0.7.10171 and earlier as well as AES (ASUSTOR EZSync) 1.1.1.3113 and earlier.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer NAS backup software with local privilege escalation via IPC key exposure, no DPI identity or access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-58071",
+    "published": "2026-08-04 15:56:03",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability in Veeam Service Provider Console allowing an unauthenticated attacker to access the proxied appliance API asPortal Administrator during a short window after an administrator session begins.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise backup console session window vulnerability, not core identity or access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70482",
+    "published": "2026-08-04 19:51:58",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.8.0 until 0.11.0, when ENABLE_OAUTH_TOKEN_EXCHANGE=True, /oauth/{provider}/token/exchange accepts a raw provider access token and validates it by calling the provider userinfo endpoint without confirming which OAuth client the token was issued to. Anyone holding an access token minted for any client registered with the same provider could exchange it for an Open WebUI session as that token user, including applications the operator does not control and has never authorized. This issue is fixed in 0.11.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Self-hosted AI platform OAuth token exchange flaw, not core DPI identity or access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-24079",
+    "published": "2026-08-04 15:07:17",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Cryptographic Issue while processing registration requests with malformed or missing authentication parameters.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no product, mechanism, or sector cues, cannot assess DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59913",
+    "published": "2026-08-03 17:57:19",
+    "cvss": 7.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell Display and Peripheral Manager (DDPM Mac), versions prior to 2.3.0.1005, contain a Missing Authentication for Critical Function vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Endpoint peripheral management software with local missing authentication, not DPI identity or access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18810",
+    "published": "2026-08-04 20:00:09",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security vulnerability has been detected in H3C NX15 V100R017. Impacted is an unknown function of the file /api/wizard/networkSetup. Such manipulation leads to missing authentication. The attack may be performed from remote. The vendor was contacted early about this disclosure.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Network equipment API missing authentication, not core identity or access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70594",
+    "published": "2026-08-04 21:53:45",
+    "cvss": 6.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Ghost is a Node.js content management system. From 2.2.0 until 6.54.1, Ghost Admin did not invalidate existing sessions on login which could have allowed for session fixation attacks. Successful exploitation would have required another vulnerability on the same domain where Ghost Admin was hosted. This issue is fixed in version 6.54.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Blog/CMS session fixation vulnerability, explicitly excluded as non-DPI identity infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-8508",
+    "published": "2026-08-04 01:57:51",
+    "cvss": 6.5,
+    "epss": 0.00544,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An improper authentication vulnerability in the \"social_login.cgi\" CGI program in Zyxel WAX650S firmware versions through 7.10(ABRM.4)C0 could allow an attacker on the WLAN to bypass captive portal authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer Wi-Fi router captive portal authentication bypass, explicitly excluded as non-DPI identity infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69245",
+    "published": "2026-08-03 21:05:08",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Guzzle is an extensible PHP HTTP client. Prior to 7.15.2 and 8.0.1, SetCookie::matchesDomain() gives every subdomain of a cookie Domain that cookie unless SetCookie::matchesDomain() recognizes the Domain as an IP literal or a numeric host, and the decision comes from the domain's own text, so two spellings a transport reads as an address keep subdomain scope. Hexadecimal and mixed-base forms such as 0x7f000001 and 0177.0.0.0x1 go unrecognized while libcurl 8.21.0 reads both as 127.0.0.1. A percent-escaped Domain keeps that scope on both branches because percent-decoding sits above numeric parsing, so 192.168.0.%31 and 127.0.0.1%2e are registered names in the URI grammar rather than address literals, and no numeric rule in any base classifies them, while libcurl decodes the host before resolving and reads them as 192.168.0.1 and 127.0.0.1. A cookie stored for Domain=0x7f000001 is placed in the Cookie header of a request to evil.0x7f000001, disclosing a session identifier or token to a host that is not that address, and a response from evil.0x7f000001 setting Domain=0x7f000001 is accepted into the jar and replayed to the address, so a server answering for the look-alike name can fix a session or set application state. Exploitation requires the application to enable cookie support, address an origin by one of these spellings, and contact a host whose name ends in that spelling. This issue is fixed in versions 7.15.2 and 8.0.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Generic PHP HTTP client library cookie parsing flaw with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18610",
+    "published": "2026-08-03 17:00:09",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in NewType WebEIP up to 3.0. This affects an unknown part of the file /EIP_Com_FileList.aspx. The manipulation results in improper authentication. It is possible to launch the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Generic improper authentication flaw in enterprise portal software with no specific identity infrastructure or DPI sector evidence.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18816",
+    "published": "2026-08-04 21:45:08",
+    "cvss": 5.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in Baserow up to 2.3.2. Affected by this vulnerability is the function verify of the file backend/src/baserow/api/two_factor_auth/views.py of the component 2FA Verify Endpoint. Such manipulation leads to improper authentication. The attack may be launched remotely. This attack is characterized by high complexity. The exploitation appears to be difficult. Upgrading to version 2.3.3 addresses this issue. You should upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "2FA bypass in Baserow productivity database software, which lacks a core identity/access infrastructure or DPI sector role.",
+      "fail_open": false
+    }
+  }
+]
