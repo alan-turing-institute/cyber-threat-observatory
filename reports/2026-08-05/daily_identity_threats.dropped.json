@@ -1,0 +1,290 @@
+[
+  {
+    "id": "CVE-2026-71214",
+    "published": "2026-08-05 06:59:32",
+    "cvss": 9.8,
+    "epss": 0.00336,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Aerie/PlanDev sequencing-server's authorization middleware (sequencing-server/src/app.ts) derives the caller's Hasura session role via getHasuraSession(), which prefers a session_variables object taken directly from the client-supplied JSON request body over the Authorization header's JWT claims, with no verification that the request actually originated from Hasura. By setting {\"session_variables\":{\"x-hasura-role\":\"aerie_admin\"}} in the body of a request to POST /command-expansion/put-expansion with no Authorization header, an unauthenticated attacker satisfies the role check and can insert arbitrary expansion rules into sequencing.expansion_rule, which govern how spacecraft activities are translated into commands. Separately, POST /put-dictionary is explicitly listed in the ENDPOINTS_WHITELIST and is exempt from any authentication, allowing unauthenticated writes of command dictionaries.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Aerospace spacecraft sequencing software with JWT/session role bypass, but lacks DPI sector nexus or identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61514",
+    "published": "2026-08-04 14:00:26",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Puwell IP Camera firmware versions 2.x through 4.x contains an authentication bypass vulnerability that allows unauthenticated attackers to access device functions by sending protocol-conforming packets over TCP port 23456 without credentials. Attackers can exploit the unvalidated Session field in the proprietary control protocol header to access live video streams, control pan and tilt motors, activate audio functions, and remotely restart the device.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IP camera firmware auth bypass, explicitly excluded by base DPI and overlay consumer IoT rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71262",
+    "published": "2026-08-05 12:26:10",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IoTSharp BlobStorageController.cs lacks the [Authorize] attribute applied to every other controller in the application (DevicesController, CustomersController, TenantsController, etc.), and no global authorization FallbackPolicy is configured in Startup.cs, leaving its Upload/Download/List/Modify/Delete endpoints reachable by unauthenticated remote attackers. The path/filename parameters passed to these endpoints (e.g. `_blob.WriteFileAsync($\"{path}/{formFile.FileName}\", ...)`) are used without sanitization, enabling path traversal that allows writing, reading, modifying, and deleting arbitrary files outside the intended blob storage directory, including web-accessible paths that can be leveraged for remote code execution via webshell upload.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Open-source IoT platform missing authorization and path traversal, lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70552",
+    "published": "2026-08-04 19:28:27",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MaxSite CMS 109.5 and earlier contains an authentication bypass vulnerability in the AJAX dispatcher that allows unauthenticated attackers to access admin-gated endpoints by supplying any X-Requested-With header and requesting a base64-encoded path resolving to any *-ajax.php file in the codebase. Attackers can exploit this dispatcher bypass to reach privileged plugin endpoints without credentials, enabling actions such as manipulating poll states and vote counts, and amplifying the impact of any dangerous operation performed by admin-only ajax files across the plugin tree.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic CMS AJAX dispatcher auth bypass, excluded by base CMS/blog exclusion and overlay consumer software rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69703",
+    "published": "2026-08-04 18:41:26",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Atlas-Livre contains an improper access control vulnerability in the admin controllers under Espace_admin/controleur/ that allows unauthenticated attackers to bypass session-based authentication guards by sending raw HTTP requests that ignore redirects. Attackers can invoke destructive admin actions such as record deletion by requesting controller endpoints with GET parameters like supp, because the PHP header() redirect is never followed by an exit or die call, allowing all subsequent code including database operations to execute regardless of session state.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche PHP application session bypass, lacks identity infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71319",
+    "published": "2026-08-05 21:26:59",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Nuxt is an open-source web development framework for Vue.js. Prior to 3.3.1, Nuxt DevTools (development mode only) exposes a bidirectional RPC channel over the Vite HMR WebSocket via the nuxt:devtools:rpc plugin. On affected versions the channel has no authentication: any client that can reach the Vite HMR endpoint (ws://<host>:<port>/, subprotocol vite-hmr) can call RPC methods, with no token, handshake, or origin check before the channel is established. The updateOptions(), clearOptions(), and openInEditor() methods do not enforce the ensureDevAuthToken check that the other mutating methods use. openInEditor() reads the persisted behavior.openInEditor value and passes it to the launch-editor package, which spawns it as a child process. That value is settable through the equally unauthenticated updateOptions(). An attacker who can reach the HMR port can therefore chain updateOptions('behavior', { openInEditor: '<command>' }) then openInEditor('<any-existing-file>') to execute an arbitrary program on the developer's machine. This issue is fixed in 3.3.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Development-only framework tool (Nuxt DevTools) with missing auth, excluded as non-production software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-9273",
+    "published": "2026-08-05 04:25:27",
+    "cvss": 9.3,
+    "epss": 0.00276,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Membership Plugin – Kadence Memberships plugin for WordPress (formerly Restrict Content) is vulnerable to password reset link poisoning leading to account takeover in all versions up to, and including, 4.0.0. This is due to the legacy lost-password handler rc_process_lost_password_form() consuming the attacker-controlled rc_redirect POST parameter into two unvalidated sinks in legacy/includes/forms.php: wp_redirect( esc_url( $_POST['rc_redirect'] ) . ... ) at line 243, and add_query_arg( array( 'key' => $key, 'login' => ... ), $_POST['rc_redirect'] ) inside rc_send_password_reset_email() at line 306. The nonce required to reach the handler is broadcast by the public [login_form] shortcode at line 207 to any anonymous visitor. This makes it possible for unauthenticated attackers to issue a password-reset request for any account (including administrators) whose reset email body points the victim at an attacker-controlled host carrying a valid reset key/login. When the victim clicks the link, the reset key leaks to the attacker, who can replay it against the legitimate site to complete account takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin, explicitly excluded by base and overlay consumer/hobbyist rule despite auth bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15210",
+    "published": "2026-08-05 06:00:12",
+    "cvss": 9.1,
+    "epss": 0.00146,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The OTP Login With Phone Number, OTP Verification WordPress plugin before 1.8.71 does not limit the number of OTP verification attempts or invalidate a one-time login code after a wrong guess, and an unauthenticated user can request a login code for any account. Because the code is a short numeric OTP, an attacker can brute-force it and take over any account, including an administrator's.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin, explicitly excluded by base and overlay consumer/hobbyist rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71277",
+    "published": "2026-08-05 12:26:23",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "rust-iot-platform's AuthToken request-guard implementation (api/src/main.rs) only checks whether the Authorization HTTP header is present, and never validates its value against any session, token store, or signature. Any request carrying an arbitrary non-empty Authorization header (e.g. `Authorization: fake`) satisfies the guard, granting access to every endpoint protected only by this request guard.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "IoT platform software, explicitly excluded by base and overlay consumer/IoT rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-60009",
+    "published": "2026-08-05 10:59:24",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Eclipse Theia versions up to and including 1.73.1, the `@theia/filesystem` backend binds `POST /file-upload` in every filesystem-enabled deployment. The handler takes an attacker-supplied absolute path from the multipart `uri` field and calls `fs.move(tmp, target, { overwrite: true })` with no workspace confinement and no authentication. In browser (non-Electron) deployments the connection token is enforced only on WebSocket upgrades; the HTTP middleware in `@theia/core` re-issues the cookie and calls `next()` without rejecting tokenless HTTP requests. Because `multipart/form-data` is a CORS-safelisted request type, a cross-origin web page can trigger the write with no preflight and no credentials, resulting in an unauthenticated arbitrary file write outside the workspace to any absolute path the backend process can write. This can escalate to remote code execution, for example by overwriting a startup-executed file such as `~/.bashrc`. Electron mode uses a separate `ElectronSecurityToken` and is not affected via this path.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Development platform (Eclipse Theia) with arbitrary file write, no identity/access nexus or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-58075",
+    "published": "2026-08-04 15:56:03",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability allowing an unauthenticated attacker to read arbitrary files from the host, which can be further leveraged toescalate privileges locally.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no product, mechanism, or identity nexus identified.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69111",
+    "published": "2026-08-05 19:18:23",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Milvus through 2.6.22 and 3.0.0 contains an unauthenticated denial of service vulnerability that allows remote attackers to terminate service components by sending a crafted HTTP GET request to the management server on port 9091. Attackers can exploit the unprotected /management/stop endpoint, which bypasses REST API authentication middleware, by supplying a 'role' parameter to shut down the proxy, datanode, or querynode components, resulting in denial of service.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Vector database DoS via endpoint bypass, explicitly excluded as pure DoS with no identity/access impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18759",
+    "published": "2026-08-04 07:25:09",
+    "cvss": 8.5,
+    "epss": 0.00116,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The background service of ABP or AES runs as NT AUTHORITY\\SYSTEM and implements a file-based inter-process communication (IPC) mechanism protected by AES encryption. Because the encryption key file is readable by standard users and protected using DPAPI. Any authenticated local user can recover the key and forge valid IPC requests. Furthermore, the service does not check the identity of the requesting process and validates destination paths using an insufficient substring check. A local attacker can submit crafted encrypted requests containing directory traversal sequences to perform arbitrary file reads and arbitrary file writes as NT AUTHORITY\\SYSTEM, leading to full local privilege escalation.\nAffected products and versions include: ABP (ASUSTOR Backup Plan) 2.0.7.10171 and earlier as well as AES (ASUSTOR EZSync) 1.1.1.3113 and earlier.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer NAS backup software with local privilege escalation, no identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-58071",
+    "published": "2026-08-04 15:56:03",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability in Veeam Service Provider Console allowing an unauthenticated attacker to access the proxied appliance API asPortal Administrator during a short window after an administrator session begins.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise backup console session hijack, lacks identity/access infrastructure nexus required by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-24079",
+    "published": "2026-08-04 15:07:17",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Cryptographic Issue while processing registration requests with malformed or missing authentication parameters.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate description lacking product name or exploitable detail, cannot establish identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70482",
+    "published": "2026-08-04 19:51:58",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.8.0 until 0.11.0, when ENABLE_OAUTH_TOKEN_EXCHANGE=True, /oauth/{provider}/token/exchange accepts a raw provider access token and validates it by calling the provider userinfo endpoint without confirming which OAuth client the token was issued to. Anyone holding an access token minted for any client registered with the same provider could exchange it for an Open WebUI session as that token user, including applications the operator does not control and has never authorized. This issue is fixed in 0.11.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "OAuth token validation flaw in Open WebUI (AI/LLM platform), explicitly excluded by base Digital Identity exclusion list for LLM-style tooling and non-identity software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16055",
+    "published": "2026-08-05 06:00:12",
+    "cvss": 7.5,
+    "epss": 0.00192,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Contest Gallery  WordPress plugin before 30.0.7 does not route its front-end login through the standard WordPress authentication flow, issuing an authentication cookie directly after the password check, which bypasses installed brute-force-protection and two-factor-authentication Contest Gallery  WordPress plugin before 30.0.7 and enables unlimited, unthrottled password guessing against any account (including administrators) up to full account takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin authentication bypass explicitly excluded by base Digital Identity and overlay hard exclude rules for consumer/WordPress software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15372",
+    "published": "2026-08-05 06:00:12",
+    "cvss": 7.5,
+    "epss": 0.00192,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WP 2FA  WordPress plugin before 4.1.0 does not validate the second authentication factor when one of its supported methods is selected at login, allowing an attacker who already knows a user's password to bypass two-factor authentication and fully access the account, including administrator accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress 2FA plugin bypass explicitly excluded by base Digital Identity and overlay hard exclude rules for consumer/WordPress software.",
+      "fail_open": false
+    }
+  }
+]
