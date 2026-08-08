@@ -1,0 +1,338 @@
+[
+  {
+    "id": "CVE-2026-63508",
+    "published": "2026-08-06 22:37:46",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function in Microsoft Planetary Computer Pro allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication in non-identity enterprise software (Planetary Computer Pro) lacks DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-56162",
+    "published": "2026-08-06 22:37:44",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper authentication in Azure SQL Database allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Improper authentication in Azure SQL Database (cloud data store, not identity/access infrastructure) lacks DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14364",
+    "published": "2026-08-07 04:25:56",
+    "cvss": 9.8,
+    "epss": 0.00285,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The TrueBooker – Appointment Booking and Scheduler System plugin for WordPress is vulnerable to account takeover via improper password reset validation in all versions up to, and including, 1.2.3. This is due to the plugin not properly validating a user's identity before resetting their password. This makes it possible for unauthenticated attackers to reset the password of arbitrary user accounts, including administrators, and gain access to those accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with improper password reset validation explicitly excluded as consumer/hobbyist software with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14205",
+    "published": "2026-08-07 06:00:10",
+    "cvss": 9.8,
+    "epss": 0.00132,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WP Events Manager WordPress plugin before 2.2.5 does not validate the requested quantity when registering for a paid event and computes the price from the attacker-controlled quantity, allowing any authenticated user to create a completed booking for a paid event without making a payment.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "WordPress plugin pricing bypass with no authentication or identity nexus, explicitly excluded.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61808",
+    "published": "2026-08-07 20:09:49",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LightRAG provides simple and fast retrieval-augmented generation. Through version 1.5.4, the LightRAG API server binds to all network interfaces with authentication disabled by default, allowing an unauthenticated network attacker to read indexed document content, upload or delete documents, modify the knowledge graph, cancel pipelines, clear caches, and consume LLM resources. This issue is mitigated in version 1.5.5rc1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "LLM/RAG tooling with disabled authentication explicitly excluded as non-DPI software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-48087",
+    "published": "2026-08-06 21:32:30",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.2, the registration handler at `POST /api/auth/register/{userId}` validates the relationship between the WebAuthn challenge and the registration cookie's email but never validates that the `userId` in the URL belongs to that email. An unauthenticated attacker requests a challenge for their own email, generates a registration response with their own authenticator, and submits it against any victim user's URL. The challenge-vs-cookie email match passes, the WebAuthn ceremony validates, and `addPasskey` writes the attacker's credential into the victim's `user_passkey` rows. The next victim-email login accepts a passkey assertion from the attacker's authenticator and issues a session as the victim. User IDs are not strictly secret on this platform, but the exact set of exposure surfaces should be assessed by the maintainers. Staff-list endpoints return user IDs to authenticated tenant members per the route signature; live verification of all exposure surfaces (whether user IDs leak through any unauthenticated route, through invite-confirmation URLs, or through other administrative views) is part of the pending live PoC. Where the attacker knows the victim's email and userId, the analysis below becomes account takeover. Version 1.0.2 fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WebAuthn registration flaw in niche appointment booking software lacks core identity infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-62896",
+    "published": "2026-08-06 22:37:35",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper authentication in Microsoft Teams allows an authorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Improper authentication in Microsoft Teams (collaboration SaaS, not identity/access infrastructure) lacks DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-46409",
+    "published": "2026-08-07 22:11:57",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenYak is a local-first agent runtime for reliable tool-using models, with a desktop workspace built on top. Prior to version 1.1.3, the OpenYak desktop backend binds an HTTP API to `127.0.0.1:<random port>` (commonly 19141) without server-side Origin validation, loopback authentication, or Content-Type enforcement, and with a wildcard CORS policy. Any webpage a user visits while OpenYak is running can issue cross-origin requests to this local server — the browser acts as a proxy into loopback, bypassing OS-level network isolation. Chained, this lets a malicious page execute arbitrary shell commands on the host (RCE) via the build agent with `permission_presets.bash=true`, shut down the service, and exfiltrate chat history and account PII — with no user interaction beyond opening the page. Version 1.1.3 patches the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Local AI agent runtime with CORS/loopback bypass lacks authentication or identity nexus, explicitly excluded.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-65520",
+    "published": "2026-08-06 14:27:28",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Unauthenticated SQL Injection in WP OAuth Server <= 6.2.0 versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by base DPI rules despite OAuth naming.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-48039",
+    "published": "2026-08-07 19:29:39",
+    "cvss": 9.1,
+    "epss": 0.0013,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Meta Ads MCP is a Model Context Protocol (MCP) server that lets AI assistants run Meta Ads. Prior to version 1.0.109, `AuthInjectionMiddleware.dispatch()` at `http_auth_integration.py:272` unconditionally forwards unauthenticated Streamable HTTP requests to downstream MCP tool handlers without issuing a `401` response, allowing any network-reachable caller to invoke MCP tools without authentication. When no per-request credential is present, tool handlers fall back to the `META_ACCESS_TOKEN` environment variable, and when the downstream Meta Graph API call fails, `api.py:263–269` serialises the raw `httpx` request URL—including the operator's `access_token` as a query parameter—into the JSON-RPC response body, delivering the credential to the unauthenticated caller. Version 1.0.109 fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI/LLM tooling and marketing ad platform excluded by base DPI rules; credential leak targets ad API, not public-sector identity infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-53984",
+    "published": "2026-08-06 15:33:49",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Ground Station prior to 0.6.0 contains an unauthenticated database-destruction and arbitrary-data-injection vulnerability in the Socket.IO server's database_backup event handler that allows any unauthenticated network peer to wipe or replace the entire SQLite database by sending a single full_restore command with a caller-supplied SQL blob. Attackers can connect to the Socket.IO server on port 7000 without credentials due to disabled authentication enforcement and a wildcard CORS policy, then emit the database_backup event to drop every existing table and recreate the database from attacker-controlled CREATE TABLE and INSERT INTO statements executed via raw exec_driver_sql, permanently destroying all satellite records, orbital sources, hardware configurations, and observation schedules, or planting fabricated orbital-source URLs and observation entries that redirect the ground station to attacker-controlled servers on the next scheduled sync.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Satellite ground station software falls under industrial/SCADA exclusion; vulnerability is database destruction, not identity/access.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70559",
+    "published": "2026-08-06 19:36:36",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dinky's SysConfigController.getAll() handler for GET /api/sysConfig/getAll carries a method-level @SaIgnore annotation that short-circuits the class-level @SaCheckLogin, so the Sa-Token interceptor lets the request through with no session or role check. Any remote unauthenticated caller who can reach the Dinky HTTP port (8888 by default) receives the full live system configuration (54 entries on a stock v1.2.5 install) with one parameterless GET. Only one credential field (sys.maven.settings.repositoryPassword) has a desensitization handler wired; the other credential-bearing fields (sys.env.settings.dinkyToken, sys.ldap.settings.userPassword, sys.resource.settings.oss.accessKey and secretKey, and sys.dolphinscheduler.settings.token) return in cleartext. A bare install leaks the shipped defaults, including the hardcoded dinkyToken efda1551-7958-4e0f-80a8-dfd107df3e38 and minioadmin/minioadmin OSS keys; once an operator configures LDAP, object storage, or DolphinScheduler through the Settings Center, those live third-party credentials leak from the same endpoint. Because dinkyToken is the sole gate on the sibling POST /download/uploadFromRsByLocal arbitrary file write, this disclosure defeats token rotation as a mitigation for that vulnerability. Affects Dinky v1.2.5 (the current release, 2025-11-05) and the development branch (dev HEAD 63b5a5a), where the affected code is byte-identical.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche data integration platform lacks DPI-relevant identity/access role; credential leak is internal configuration, not IdAM infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-53977",
+    "published": "2026-08-06 14:43:37",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenChamber 1.11.7 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to terminate the server process by sending a POST request to the /api/system/shutdown endpoint, which is registered before the authentication middleware in the Express route handler chain. Attackers can exploit the route registration order in bootstrap-runtime.js to reach the shutdown handler before auth middleware executes, causing denial of service to all active AI coding sessions and locking out legitimate remote users regardless of whether UI_PASSWORD is configured.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI coding assistant tooling excluded by base DPI rules; vulnerability is denial-of-service, not identity/access.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-53985",
+    "published": "2026-08-06 15:19:44",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Ground Station prior to 0.6.0 contains an unauthenticated denial-of-service vulnerability in the Socket.IO server's service_control event handler that allows any unauthenticated network peer to forcibly terminate the ground-station process by sending a single restart_service command. Attackers can connect to the Socket.IO server on port 7000 without credentials due to disabled authentication enforcement and a wildcard CORS policy, then emit the service_control event to terminate all active satellite-tracking sessions, SDR recording pipelines, demodulators, decoders, and rotator controllers, with repeated triggering possible in Docker deployments to create a persistent denial-of-service condition.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Satellite ground station software falls under industrial/SCADA exclusion; vulnerability is denial-of-service, not identity/access.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55978",
+    "published": "2026-08-06 09:18:32",
+    "cvss": 8.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An improper access control vulnerability in CatchPulse could allow a non-administrative local attacker to connect to an unrestricted kernel filter communication port and bypass CatchPulse's security policy enforcement.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Endpoint security software lacks DPI nexus; local access control bypass does not target public-sector identity or critical infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15459",
+    "published": "2026-08-06 04:26:51",
+    "cvss": 8.1,
+    "epss": 0.0051,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WPMU DEV Dashboard plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 5.0.0. On sites not yet connected to the WPMU DEV Hub — the default state after installation — the site API key that keys the WDP-AUTH request signature is empty, making the signature verified by validate_hash() trivially forgeable; version 5.0.0 additionally removed the replay check in validate_nonce(), and the remote handler is bound to the public init hook with no capability check. This makes it possible for unauthenticated attackers to invoke privileged Hub actions — including installing and activating a plugin from an attacker-supplied URL (resulting in remote code execution), deleting plugins and themes, upgrading WordPress core, or logging in as an administrator via SSO. Sites connected to a WPMU DEV account, which have a non-empty 64-character API key, are not affected.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by base DPI rules despite authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16030",
+    "published": "2026-08-07 06:00:13",
+    "cvss": 8.1,
+    "epss": 0.00136,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The MStore API  WordPress plugin before 4.21.0 does not correctly verify the cryptographic signature of the token used to authenticate its phone-based login, allowing unauthenticated attackers who know a registered user's phone number to forge a token and take over that user's account, including administrator accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite token forgery and account takeover mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-64665",
+    "published": "2026-08-06 19:25:01",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Statamic is a Laravel and Git powered content management system (CMS). Prior to 5.74.1 and 6.24.0, when OAuth login was enabled with a provider that does not guarantee verified email addresses, an unauthenticated attacker could sign in as an existing user, potentially including a super admin, without knowing that user's password, because the application matched OAuth identities to accounts by email address alone. Exploitation requires OAuth to be explicitly enabled with such a provider. This issue is fixed in versions 5.74.1 and 6.24.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic CMS lacks DPI sector nexus; OAuth identity-matching flaw in non-identity infrastructure falls under hard exclude.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-56793",
+    "published": "2026-08-07 12:08:13",
+    "cvss": 7.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell OpenManage Server Administrator, versions prior to 11.1.0.2, contains an Improper Authentication vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Enterprise server management tool lacks clear DPI sector or identity/access infrastructure nexus; improper authentication alone insufficient.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18990",
+    "published": "2026-08-06 02:15:08",
+    "cvss": 7.3,
+    "epss": 0.00397,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in letta-ai LettaBot 0.2.0. Impacted is an unknown function of the file src/api/server.ts of the component API Status Route. The manipulation results in missing authentication. The attack may be performed from remote. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "LLM agent framework explicitly excluded; boilerplate description lacks exploitable identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-71409",
+    "published": "2026-08-07 19:02:50",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Lack of authentication for Very High Frequency Data Link messages allows rogue ground stations to inject CPDLC messages leading to unexpected or misleading clearances and potential pilot confusion. This type of attack can be carried out remotely over radio frequency.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Aviation data-link safety protocol flaw lacks DPI sector or identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  }
+]
