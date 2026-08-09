@@ -1,0 +1,146 @@
+[
+  {
+    "id": "CVE-2026-14364",
+    "published": "2026-08-07 04:25:56",
+    "cvss": 9.8,
+    "epss": 0.00285,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The TrueBooker – Appointment Booking and Scheduler System plugin for WordPress is vulnerable to account takeover via improper password reset validation in all versions up to, and including, 1.2.3. This is due to the plugin not properly validating a user's identity before resetting their password. This makes it possible for unauthenticated attackers to reset the password of arbitrary user accounts, including administrators, and gain access to those accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded as consumer/hobbyist software despite authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14205",
+    "published": "2026-08-07 06:00:10",
+    "cvss": 9.8,
+    "epss": 0.00132,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WP Events Manager WordPress plugin before 2.2.5 does not validate the requested quantity when registering for a paid event and computes the price from the attacker-controlled quantity, allowing any authenticated user to create a completed booking for a paid event without making a payment.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with business logic flaw, no identity/access nexus and explicitly excluded.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61808",
+    "published": "2026-08-07 20:09:49",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LightRAG provides simple and fast retrieval-augmented generation. Through version 1.5.4, the LightRAG API server binds to all network interfaces with authentication disabled by default, allowing an unauthenticated network attacker to read indexed document content, upload or delete documents, modify the knowledge graph, cancel pipelines, clear caches, and consume LLM resources. This issue is mitigated in version 1.5.5rc1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "LLM/RAG developer tooling explicitly excluded from DPI scope despite missing authentication.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-46409",
+    "published": "2026-08-07 22:11:57",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenYak is a local-first agent runtime for reliable tool-using models, with a desktop workspace built on top. Prior to version 1.1.3, the OpenYak desktop backend binds an HTTP API to `127.0.0.1:<random port>` (commonly 19141) without server-side Origin validation, loopback authentication, or Content-Type enforcement, and with a wildcard CORS policy. Any webpage a user visits while OpenYak is running can issue cross-origin requests to this local server — the browser acts as a proxy into loopback, bypassing OS-level network isolation. Chained, this lets a malicious page execute arbitrary shell commands on the host (RCE) via the build agent with `permission_presets.bash=true`, shut down the service, and exfiltrate chat history and account PII — with no user interaction beyond opening the page. Version 1.1.3 patches the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Desktop AI agent runtime with CORS/local proxy bypass, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-48039",
+    "published": "2026-08-07 19:29:39",
+    "cvss": 9.1,
+    "epss": 0.0013,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Meta Ads MCP is a Model Context Protocol (MCP) server that lets AI assistants run Meta Ads. Prior to version 1.0.109, `AuthInjectionMiddleware.dispatch()` at `http_auth_integration.py:272` unconditionally forwards unauthenticated Streamable HTTP requests to downstream MCP tool handlers without issuing a `401` response, allowing any network-reachable caller to invoke MCP tools without authentication. When no per-request credential is present, tool handlers fall back to the `META_ACCESS_TOKEN` environment variable, and when the downstream Meta Graph API call fails, `api.py:263–269` serialises the raw `httpx` request URL—including the operator's `access_token` as a query parameter—into the JSON-RPC response body, delivering the credential to the unauthenticated caller. Version 1.0.109 fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Marketing/advertising MCP server with credential leak, excluded as non-DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16030",
+    "published": "2026-08-07 06:00:13",
+    "cvss": 8.1,
+    "epss": 0.00136,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The MStore API  WordPress plugin before 4.21.0 does not correctly verify the cryptographic signature of the token used to authenticate its phone-based login, allowing unauthenticated attackers who know a registered user's phone number to forge a token and take over that user's account, including administrator accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded as consumer/hobbyist software despite token forgery flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-56793",
+    "published": "2026-08-07 12:08:13",
+    "cvss": 7.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell OpenManage Server Administrator, versions prior to 11.1.0.2, contains an Improper Authentication vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Enterprise server management software with improper authentication, lacks specific DPI identity/access or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-71409",
+    "published": "2026-08-07 19:02:50",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Lack of authentication for Very High Frequency Data Link messages allows rogue ground stations to inject CPDLC messages leading to unexpected or misleading clearances and potential pilot confusion. This type of attack can be carried out remotely over radio frequency.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Aviation communication protocol flaw, outside DPI sectors and identity/access scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17599",
+    "published": "2026-08-07 16:07:42",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Nexus Repository 3 contained an endpoint used to change the administrator account password during initial onboarding. This endpoint did not verify that onboarding was still in progress before allowing the password change, relying instead on the presence of a local onboarding artifact. As a result, an account holding the nexus:* permission could invoke the endpoint outside the intended onboarding flow to replace the administrator password, and existing sessions were not invalidated after the change.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Authentication and session management flaw in Nexus Repository 3 (DevOps artifact manager) lacks a core identity/access infrastructure or DPI sector nexus, falling under the general enterprise software exclusion.",
+      "fail_open": false
+    }
+  }
+]
