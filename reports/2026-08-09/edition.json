@@ -1,0 +1,160 @@
+{
+  "alert_id": "7e55ff07",
+  "report_date": "2026-08-09",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-08-10 01:20:19",
+  "items": [
+    {
+      "item_id": "phish-9dd18f2cd7",
+      "item_type": "campaign",
+      "title": "The Illicit Consent Grant Part 2: Device-Code Phishing and the AI PhaaS Wave | SlashID Blog",
+      "url": "https://slashid.com/blog/illicit-consent-grant-part-2",
+      "source": "ketch",
+      "published": "2026-08-09",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "Explores the convergence of AI-generated phishing templates and illicit OAuth consent grants via device codes. Attackers automate credential harvesting at scale, bypassing traditional MFA. Infrastructure defenders must audit third-party application permissions, enforce strict conditional access policies, and deploy identity threat detection platforms to monitor anomalous consent requests and token issuance patterns.",
+      "signals": {
+        "dpi_fit": 9.4
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-1986672e9c",
+      "item_type": "campaign",
+      "title": "The Device Code Phishing Tsunami: What We’re Seeing in the Wild",
+      "url": "https://www.levelblue.com/blogs/spiderlabs-blog/the-device-code-phishing-tsunami-what-were-seeing-in-the-wild",
+      "source": "ketch",
+      "published": "2026-08-09",
+      "category": "threats",
+      "pir": [
+        "1.i"
+      ],
+      "excerpt": "Analyzes the rapid escalation of device code phishing campaigns targeting enterprise OAuth flows. Victims are tricked into entering short codes on attacker-controlled portals, granting full account access. IT teams should disable unnecessary device code grant types in identity providers, implement token binding, and monitor for rapid, high-privilege consent approvals across cloud directories.",
+      "signals": {
+        "dpi_fit": 9.2
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-cc02412158",
+      "item_type": "campaign",
+      "title": "Device Code Phishing: Turning a Convenience Feature Into an MFA Bypass",
+      "url": "https://trendmicro.com/en/research/26/g/device-code-phishing.html",
+      "source": "ketch",
+      "published": "2026-08-09",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "Details how device code authentication flows are weaponized to circumvent multi-factor authentication by leveraging pre-authenticated sessions. Defenders must prioritize identity-centric security controls, enforce step-up authentication for sensitive actions, and restrict device code grants to approved applications only. Network egress filtering and DNS sinkholing remain critical for blocking phishing infrastructure.",
+      "signals": {
+        "dpi_fit": 9.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-2b6671e1c0",
+      "item_type": "campaign",
+      "title": "Device Code Phishing is an Evolution in Identity Takeover",
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/device-code-phishing-evolution-identity-takeover",
+      "source": "ketch",
+      "published": "2026-08-09",
+      "category": "threats",
+      "pir": [
+        "1.j"
+      ],
+      "excerpt": "Examines how device code phishing facilitates complete identity takeover by capturing valid OAuth tokens rather than raw credentials. Infrastructure teams should deploy user and entity behavior analytics to detect token abuse, enforce short-lived access tokens, and implement continuous authentication. Regular revocation of stale consent grants is essential for mitigating lateral movement risks.",
+      "signals": {
+        "dpi_fit": 8.9
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-506f3932de",
+      "item_type": "campaign",
+      "title": "Abuse of Cloud-Native Infrastructure in Modern Phishing Campaigns - CYFIRMA",
+      "url": "https://cyfirma.com/research/abuse-of-cloud-native-infrastructure-in-modern-phishing-campaigns",
+      "source": "ketch",
+      "published": "2026-08-09",
+      "category": "threats",
+      "pir": [
+        "1.h"
+      ],
+      "excerpt": "Investigates how threat actors leverage serverless functions, object storage, and CDN services to host phishing pages that evade traditional URL filtering. Defenders must implement cloud security posture management, monitor for misconfigured storage buckets, and enforce strict egress controls. Integrating cloud-native telemetry with SIEM platforms enables rapid detection of malicious infrastructure provisioning.",
+      "signals": {
+        "dpi_fit": 8.7
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-8f9843e6a1",
+      "item_type": "campaign",
+      "title": "Tycoon2FA Returns: PhaaS Platform Survives Law Enforcement Disruption",
+      "url": "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/03/CSA_research_note_Tycoon2FA-PhaaS-resurrection-MaaS-resilience-20260326-csa-styled.pdf",
+      "source": "ketch",
+      "published": "2026-08-09",
+      "category": "threats",
+      "pir": [
+        "1.g"
+      ],
+      "excerpt": "Documents the operational resilience of the Tycoon2FA Phishing-as-a-Service platform following law enforcement takedowns. Attackers rapidly migrate infrastructure and reuse templated campaigns. Security operations centers should update threat intelligence feeds with known PhaaS indicators, block associated domains at the proxy level, and educate users on recognizing cloned login portals.",
+      "signals": {
+        "dpi_fit": 8.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-045a651a49",
+      "item_type": "campaign",
+      "title": "Device Code Phishing — The Attack That Makes MFA Irrelevant",
+      "url": "https://cybergrind.org/blog/2026-06-02-device-code-phishing",
+      "source": "ketch",
+      "published": "2026-08-09",
+      "category": "threats",
+      "pir": [
+        "1.i"
+      ],
+      "excerpt": "Breaks down the technical mechanics of device code phishing campaigns that render traditional step-up authentication ineffective. Attackers exploit OAuth 2.0 device authorization flows to capture session tokens. Infrastructure defenders should enforce certificate-based authentication, disable device code grants where possible, and implement real-time alerting for unusual consent grant patterns across identity providers.",
+      "signals": {
+        "dpi_fit": 8.4
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-f74a7cdc93",
+      "item_type": "campaign",
+      "title": "Sophisticated Spearphishing Campaign Targets Government Organizations, IGOs, and NGOs | CISA",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-148a",
+      "source": "ketch",
+      "published": "2026-08-09",
+      "category": "threats",
+      "pir": [
+        "1.a"
+      ],
+      "excerpt": "CISA advisory detailing targeted spearphishing operations using malicious documents and credential harvesting sites. Defenders must deploy advanced email security gateways with attachment sandboxing, enforce strict URL rewriting, and implement user awareness training. Monitoring for anomalous outbound connections to newly registered domains helps identify early-stage compromise attempts.",
+      "signals": {
+        "dpi_fit": 8.2
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 0,
+      "daily_phishing_campaigns": 8,
+      "daily_identity_threats": 0
+    }
+  }
+}
