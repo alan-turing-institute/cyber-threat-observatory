@@ -1,0 +1,3889 @@
+[
+  {
+    "id": "CVE-2025-30241",
+    "identity": {
+      "title": "CVE-2025-30241",
+      "published": "2026-08-10 22:26:08",
+      "modified": "2026-08-10 23:16:50",
+      "description": "Certain web\ninterface components in affected TP-Link Aginet devices do not validate and sanitize user-supplied input properly before\npassing it to system-level command execution functions.  An authenticated adjacent attacker may inject\nspecially crafted input to execute arbitrary operation system commands with\nelevated privileges.\n\n\n\n\n\n\n\n\n\nSuccessful\nexploitation may allow execution of arbitrary system commands, potentially\nleading to full device compromise."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.tp-link.com/us/support/faq/5239/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.",
+      "products": "HB810(US2) V1.0/1.6/2.0/2.6,HB810(EU1) V2.0,HB710(US2) V1.6/1.0,HB710(EU1) 1.0,HB610(US2) V2.6/2.0,HB610(EU1),HB610(CA) V2.0,HB410( EU1) 1.0,HB210(US2) 1.0,HB210(EU1) 1.0,HB210 Pro(EU1)1.0,HB210 Pro(US2)1.0/1.6,EB210 Pro(EU1) 1.0,EB210 Pro(US1) 1.0,EB810v(EU1) V1.0,EX220(BR) V1.0/1.20/1.28/1.29/1.8,EX220(BR) V2.0,EX220(EU1) V1.0/1.20,EX220(RU) V1.0,EX220(US1) V1.0,EX222(EU1) V1.0,EX222(KR) V1.0,EX222(US1) V1.0,EX520v(EU1)1.0,EX820v(EU1) V1.0,EX920(US2) V1.6/V1.0,XX530v(BR)v2.0,XX530v(EU1),XX230v(BR) V1.0,VX800v(DE) V1.0,VX420-G2h(AU) V3.0",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.tp-link.com/us/support/faq/5239/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-30241",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-30241"
+    },
+    "item_id": "CVE-2025-30241",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer networking device (TP-Link Aginet) command injection requiring authentication; falls under consumer-only exclusion with no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-30239",
+    "identity": {
+      "title": "CVE-2025-30239",
+      "published": "2026-08-10 22:25:03",
+      "modified": "2026-08-10 23:16:50",
+      "description": "In affected TP-Link Aginet devices, use of\nhardcoded cryptographic keys embedded in the firmware to protect sensitive\nconfiguration data may allow an attacker who has access to device storage to\nrecover the keys and decrypt stored data.\n\n\n\n\n\nSuccessful\nexploitation may allow access to decrypted sensitive configuration data,\nincluding credentials and service-related information."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.tp-link.com/us/support/faq/5239/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-321"
+      ],
+      "cwe_primary": "CWE-321",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-321": "Use of Hard-coded Cryptographic Key"
+      }
+    },
+    "software": {
+      "vendors": "TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.",
+      "products": "HB810(US2) V1.0/1.6/2.0/2.6,HB810(EU1) V2.0,HB710(US2) V1.6/1.0,HB710(EU1) 1.0,HB610(US2) V2.6/2.0,HB610(EU1),HB610(CA) V2.0,HB410( EU1) 1.0,HB210(US2) 1.0,HB210(EU1) 1.0,HB210 Pro(EU1)1.0,HB210 Pro(US2)1.0/1.6,HX510(US1) V2.0,HX510(EU1) V2.0,HX510(CA) V1.0/2.0,HX510(AU) V1.0/2.0,HX510(US2) 2.6,HX710(EU1) V1.0,HX710 Pro(EU1) V1.0,HX220(US1) V1.0/1.0,HX220(EU1) V1.0,HX220(CA) V1.0,HX220(AU) V1.0,HX141(EU1) V1.0,HC220-G5(US1) V1.0/1.6,HC220-G5(EU1) V1.20/1.0,HC220-G5(BR) V1.30,EB210 Pro(EU1) 1.0,EB210 Pro(US1) 1.0,EB810v(EU1) V1.0,EC220-G5(BR) V3.0,EC220-G5(EU1) V3.0,EC220-G5(US1) V3.0,EC225-G5(BR) V1.0,EC225-G5(EU1) V1.0,EC225-G5(US1) V1.0,EX141(BR) V1.0/1.9,EX141(EU1) V1.0,EX141(US1) V1.0,EX220(BR) V1.0/1.20/1.28/1.29/1.8,EX220(BR) V2.0,EX220(EU1) V1.0/1.20,EX220(RU) V1.0,EX220(US1) V1.0,EX222(EU1) V1.0,EX222(KR) V1.0,EX222(US1) V1.0,EX511(BR) V2.0/2.8/2.9,EX511(EU1) V2.0,EX511(US1) V2.0,EX520(US1) V1.0,EX520v(EU1)1.0,EX521(US1) V1.0,EX820v(EU1) V1.0,EX920(US2) V1.6/V1.0,XC220-G3v(EU1) V2.30,XC220-G3v(US1) V2.30,XX530v(BR)v1.0,XX530v(BR)v2.0,XX530v(US1),XX530v(EU1),XX230v(BR) V1.0,VX800v(DE) V1.0,VX1800v(EU1) V1.0,VX420-G2h(AU) V3.0",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.tp-link.com/us/support/faq/5239/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-30239",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-30239"
+    },
+    "item_id": "CVE-2025-30239",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer networking device hardcoded key exposure requiring physical/storage access; falls under consumer-only exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-30238",
+    "identity": {
+      "title": "CVE-2025-30238",
+      "published": "2026-08-10 22:24:20",
+      "modified": "2026-08-10 23:16:49",
+      "description": "In affected TP-Link Aginet devices, insufficient\nauthorization validation allows authenticated low-privileged users to execute higher-privileged\noperations.\n\n\n\n\n\nAn attacker\nmay perform administrative actions such as creating privileged accounts or\nmodifying critical configuration settings."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.tp-link.com/us/support/faq/5239/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-863"
+      ],
+      "cwe_primary": "CWE-863",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-863": "Incorrect Authorization"
+      }
+    },
+    "software": {
+      "vendors": "TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.",
+      "products": "HB810(US2) V1.0/1.6/2.0/2.6,HB810(EU1) V2.0,HB710(US2) V1.6/1.0,HB710(EU1) 1.0,HB610(US2) V2.6/2.0,HB610(EU1),HB610(CA) V2.0,HB410( EU1) 1.0,HB210(US2) 1.0,HB210(EU1) 1.0,HB210 Pro(EU1)1.0,HB210 Pro(US2)1.0/1.6,HX510(US1) V2.0,HX510(EU1) V2.0,HX510(CA) V1.0/2.0,HX510(AU) V1.0/2.0,HX510(US2) 2.6,HX710(EU1) V1.0,HX710 Pro(EU1) V1.0,HX220(US1) V1.0/1.0,HX220(EU1) V1.0,HX220(CA) V1.0,HX220(AU) V1.0,HX141(EU1) V1.0,HC220-G5(US1) V1.0/1.6,HC220-G5(EU1) V1.20/1.0,HC220-G5(BR) V1.30,EB210 Pro(EU1) 1.0,EB210 Pro(US1) 1.0,EB810v(EU1) V1.0,EX141(BR) V1.0/1.9,EX141(EU1) V1.0,EX141(US1) V1.0,EX220(BR) V1.0/1.20/1.28/1.29/1.8,EX220(BR) V2.0,EX220(EU1) V1.0/1.20,EX220(RU) V1.0,EX220(US1) V1.0,EX222(EU1) V1.0,EX222(KR) V1.0,EX222(US1) V1.0,EX511(BR) V2.0/2.8/2.9,EX511(EU1) V2.0,EX511(US1) V2.0,EX520(US1) V1.0,EX520v(EU1)1.0,EX521(US1) V1.0,EX820v(EU1) V1.0,EX920(US2) V1.6/V1.0,XC220-G3v(EU1) V2.30,XC220-G3v(US1) V2.30,XX530v(BR)v1.0,XX530v(BR)v2.0,XX530v(US1),XX530v(EU1),XX230v(BR) V1.0,VX800v(DE) V1.0,VX1800v(EU1) V1.0,VX420-G2h(AU) V3.0",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.tp-link.com/us/support/faq/5239/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-30238",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-30238"
+    },
+    "item_id": "CVE-2025-30238",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer networking device privilege escalation requiring prior authentication; falls under consumer-only exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-30237",
+    "identity": {
+      "title": "CVE-2025-30237",
+      "published": "2026-08-10 22:23:41",
+      "modified": "2026-08-10 23:16:48",
+      "description": "The affected TP-Link Aginet devices contain a flaw in the web management interface where authentication\nchecks are not consistently enforced on certain endpoints. An attacker can send\nspecially crafted requests to bypass authentication and directly invoke\nprivileged functionality without valid credentials. This issue arises from\nimproper enforcement of access control mechanisms on sensitive operations.\n\n\n\n\n\nSuccessful\nexploitation may allow an unauthenticated attacker to execute privileged\noperations and gain full control of the device."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.tp-link.com/us/support/faq/5239/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.,TP-Link Systems Inc.",
+      "products": "HB810(US2) V1.0/1.6/2.0/2.6,HB810(EU1) V2.0,HB710(US2) V1.6/1.0,HB710(EU1) 1.0,HB610(US2) V2.6/2.0,HB610(EU1),HB610(CA) V2.0,HB410( EU1) 1.0,HB210(US2) 1.0,HB210(EU1) 1.0,HB210 Pro(EU1)1.0,HB210 Pro(US2)1.0/1.6,HX510(US1) V2.0,HX510(EU1) V2.0,HX510(CA) V1.0/2.0,HX510(AU) V1.0/2.0,HX510(US2) 2.6,HX710(EU1) V1.0,HX710 Pro(EU1) V1.0,HX220(US1) V1.0/1.0,HX220(EU1) V1.0,HX220(CA) V1.0,HX220(AU) V1.0,HX141(EU1) V1.0,HC220-G5(US1) V1.0/1.6,HC220-G5(EU1) V1.20/1.0,HC220-G5(BR) V1.30,EX141(BR) V1.0/1.9,EX141(EU1) V1.0,EX141(US1) V1.0,EX220(BR) V1.0/1.20/1.28/1.29/1.8,EX220(BR) V2.0,EX220(EU1) V1.0/1.20,EX220(RU) V1.0,EX220(US1) V1.0,EX222(EU1) V1.0,EX222(KR) V1.0,EX222(US1) V1.0,EX511(BR) V2.0/2.8/2.9,EX511(EU1) V2.0,EX511(US1) V2.0,EX520(US1) V1.0,EX520v(EU1)1.0,EX521(US1) V1.0,EX820v(EU1) V1.0,EX920(US2) V1.6/V1.0,XC220-G3v(EU1) V2.30,XC220-G3v(US1) V2.30,XX530v(BR)v1.0,XX530v(BR)v2.0,XX530v(US1),XX530v(EU1),XX230v(BR) V1.0,VX800v(DE) V1.0,VX1800v(EU1) V1.0,VX420-G2h(AU) V3.0",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.tp-link.com/us/support/faq/5239/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-30237",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-30237"
+    },
+    "item_id": "CVE-2025-30237",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Consumer networking device authentication bypass; falls under consumer-only exclusion despite unauthenticated access due to lack of enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72903",
+    "identity": {
+      "title": "CVE-2026-72903",
+      "published": "2026-08-10 20:39:57",
+      "modified": "2026-08-10 21:17:24",
+      "description": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.235, a malicious SFTP server can return a backslash traversal filename through entry.name. In tabby-ssh/src/session/sftp.ts, SFTPSession.readdir() and _makeFile() use POSIX path processing that preserves the backslashes as ordinary filename characters. In tabby-ssh/src/components/sftpPanel.component.ts, downloadFolderRecursive() propagates item.name into the local relative path. In tabby-electron/src/services/platform.service.ts, ElectronDirectoryDownload.createFile() passes that path to Windows-native path.join(), and in tabby-electron/src/sftpContextMenu.ts, EditSFTPContextMenu.edit() passes item.name to path.join() for the temporary edit path. Windows interprets the preserved backslashes and parent-directory components as traversal, allowing attacker-controlled content to be created or overwritten outside the selected download directory or temporary edit directory. This issue is fixed in version 1.0.235."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Eugeny/tabby/commit/3a4a41431a61d41dd51d4119e60cad9bf13c3399"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "Eugeny",
+      "products": "tabby",
+      "cpe_uris": "cpe:2.3:a:eugeny:tabby:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "eugeny:tabby",
+          "vendor": "Eugeny",
+          "product": "tabby",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/Eugeny/tabby/commit/3a4a41431a61d41dd51d4119e60cad9bf13c3399",
+      "https://github.com/Eugeny/tabby/releases/tag/v1.0.235",
+      "https://github.com/Eugeny/tabby/security/advisories/GHSA-59p9-8gwf-v9v7"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72903",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72903"
+    },
+    "item_id": "CVE-2026-72903",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer terminal emulator requiring malicious SFTP server interaction; no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-11810",
+    "identity": {
+      "title": "CVE-2026-11810",
+      "published": "2026-08-10 20:23:23",
+      "modified": "2026-08-10 21:17:19",
+      "description": "The UpdateHub firmware-update agent's probe handler (z_impl_updatehub_probe() in subsys/mgmt/updatehub/updatehub.c) parses the JSON metadata returned by the update server into a fixed two-level nested-array struct. After parsing it validates only the outer array length (objects_len != 2) and then dereferences objects[1].objects[0].objects.sha256sum via strlen() without checking that the inner object array of element [1] is non-empty.\n\nThe metadata is attacker-influenceable network input: the agent fetches it over CoAP from the configured UpdateHub server during its routine OTA probe. A malicious or compromised update server (or, when DTLS is disabled, a network man-in-the-middle) can return a response whose second outer object array is empty. Because the parse target is zero-initialised, the corresponding objects[1].objects[0].objects.sha256sum pointer is NULL, and the subsequent strlen() dereferences address zero. The same defect exists in both the 'any boards' and 'some boards' metadata layouts.\n\nThe resulting CPU fault is fatal under Zephyr's default error handling, halting or resetting the device, so the flaw is a remotely triggerable denial of service. Impact is limited to availability; it is a read from NULL with no out-of-bounds write, memory corruption, or information disclosure. The fix rejects metadata whose inner object array is empty before any dereference, on both layouts."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/zephyrproject-rtos/zephyr/commit/3424082022cb39d568434021b1d6f68b6a7fb3bf"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "cwe_primary": "CWE-476",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-476": "NULL Pointer Dereference"
+      }
+    },
+    "software": {
+      "vendors": "zephyrproject",
+      "products": "zephyr",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "zephyrproject:zephyr",
+          "vendor": "zephyrproject",
+          "product": "zephyr",
+          "source": "cpe",
+          "sample_cpe": "cpe:2.3:o:zephyrproject:zephyr:*:-:*:*:*:*:*:*",
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/zephyrproject-rtos/zephyr/commit/3424082022cb39d568434021b1d6f68b6a7fb3bf",
+      "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-jfpc-324j-84ww"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-11810",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-11810"
+    },
+    "item_id": "CVE-2026-11810",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "IoT/edge firmware update agent requiring compromised server or MITM; no clear enterprise or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-73033",
+    "identity": {
+      "title": "CVE-2026-73033",
+      "published": "2026-08-10 20:15:30",
+      "modified": "2026-08-10 21:17:26",
+      "description": "Sucuri Security WordPress plugin through version 2.7.3 contains a path traversal vulnerability in the pageIntegritySubmission() method in src/integrity.lib.php that allows authenticated administrators to delete arbitrary files by supplying directory traversal sequences in the sucuriscan_integrity parameter. Attackers can manipulate the unsanitized file path concatenated with ABSPATH to traverse outside the WordPress installation directory and invoke unlink() on sensitive files such as wp-config.php and .htaccess, causing site outage or enabling malicious reinstallation."
+    },
+    "cvss": {
+      "base_score": 7.0,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Sucuri/sucuri-wordpress-plugin/issues/217"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "Sucuri",
+      "products": "sucuri-wordpress-plugin",
+      "cpe_uris": "cpe:2.3:a:sucuri:sucuri-wordpress-plugin:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/Sucuri/sucuri-wordpress-plugin/issues/217",
+      "https://www.vulncheck.com/advisories/sucuri-wordpress-plugin-path-traversal-via-integrity-lib-php"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-73033",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-73033"
+    },
+    "item_id": "CVE-2026-73033",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint; explicitly excluded consumer CMS add-on.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-15683",
+    "identity": {
+      "title": "CVE-2025-15683",
+      "published": "2026-08-10 19:38:57",
+      "modified": "2026-08-10 20:17:25",
+      "description": "TBEA TLogger V2.1.0.0B0.0.0.0 contains multiple unauthenticated denial-of-service vulnerabilities in its web server. An unauthenticated remote attacker can invoke specific HTTP endpoints to reboot or reset the device, clear application data, or terminate the web server through a segmentation fault. In addition, multiple action endpoints process attacker-controlled parameters using unsafe string operations such as sprintf() and strcat() without adequate bounds checking, allowing crafted input to trigger buffer overflows and crash the web server. The affected endpoints include onRestart, onReset, ClearData, uploadInvFile, getIndiaRPData, YearCaparity, TotalfaultData, recordData, InvHistoryData, CollectHistoryData, InvFaultData, GetPortTableByParm, and UpdatePortConfig."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://en.tbea.com/about.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-121",
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-121",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-121": "Stack-based Buffer Overflow",
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": "TBEA",
+      "products": "TBEA TLogger (TBEA Communication Box 3rd Generation)",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://en.tbea.com/about.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-15683",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-15683"
+    },
+    "item_id": "CVE-2025-15683",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Industrial/energy monitoring device with unauthenticated DoS; lacks explicit healthcare, finance, government, or identity sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69114",
+    "identity": {
+      "title": "CVE-2026-69114",
+      "published": "2026-08-10 19:28:49",
+      "modified": "2026-08-10 20:17:32",
+      "description": "Spacebar Server before commit 8d126f4 contains a cross-channel message deletion vulnerability in the single-delete and bulk-delete message handlers that fail to scope message queries to the requested channel. Authenticated users with MANAGE_MESSAGES permission in any controlled channel can delete arbitrary messages in other channels by routing delete requests through their own channel."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/spacebarchat/server/security/advisories/GHSA-62g6-28hv-h6hc"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "cwe_primary": "CWE-639",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-639": "Authorization Bypass Through User-Controlled Key"
+      }
+    },
+    "software": {
+      "vendors": "Spacebar Server",
+      "products": "Spacebar Server",
+      "cpe_uris": "cpe:2.3:a:spacebar_server:spacebar_server:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/spacebarchat/server/security/advisories/GHSA-62g6-28hv-h6hc",
+      "https://github.com/spacebarchat/server/commit/8d126f401914d68fa8a97f7e5986dcfcc42de9a8",
+      "https://www.vulncheck.com/advisories/spacebar-server-cross-channel-message-deletion-via-permission-check-bypass",
+      "https://github.com/spacebarchat/server/issues/1685"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69114",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69114"
+    },
+    "item_id": "CVE-2026-69114",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche messaging server with authenticated cross-channel message deletion, no enterprise or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69112",
+    "identity": {
+      "title": "CVE-2026-69112",
+      "published": "2026-08-10 19:05:41",
+      "modified": "2026-08-10 20:17:31",
+      "description": "Hugging Face Accelerate through 1.14.0 contains a path traversal vulnerability in load_checkpoint_in_model and load_checkpoint_and_dispatch functions that fail to sanitize weight_map entries from sharded checkpoint indexes. Attackers can supply relative paths with ../ sequences or absolute paths to read arbitrary files, or point shard entries at named pipes to cause indefinite blocking and denial of service."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/huggingface/accelerate/pull/4070"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "huggingface",
+      "products": "accelerate",
+      "cpe_uris": "cpe:2.3:a:huggingface:accelerate:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/huggingface/accelerate/pull/4070",
+      "https://www.vulncheck.com/advisories/hugging-face-accelerate-path-traversal-and-dos-via-weight-map",
+      "https://github.com/huggingface/accelerate/pull/4138",
+      "https://github.com/huggingface/accelerate/issues/4067"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69112",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69112"
+    },
+    "item_id": "CVE-2026-69112",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Hugging Face ML library path traversal, explicitly excluded as non-DPI developer tooling with no enterprise or sector footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59091",
+    "identity": {
+      "title": "CVE-2026-59091",
+      "published": "2026-08-10 18:48:36",
+      "modified": "2026-08-10 19:17:30",
+      "description": "A flaw was found in GIMP's file format plugins, including those for PSD and PAA files. A remote attacker could exploit these vulnerabilities by tricking a user into opening a specially crafted image file. This could lead to unexpected application behavior or other potential security impacts without requiring further user interaction."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://gitlab.gnome.org/GNOME/gimp/-/work_items/16510"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-787",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "Red Hat,Red Hat,Red Hat,Red Hat",
+      "products": "Red Hat Enterprise Linux 6,Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 9",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "red hat:red hat enterprise linux 6",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 6",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 7",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 7",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 8",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 8",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 9",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 9",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://gitlab.gnome.org/GNOME/gimp/-/work_items/16510",
+      "https://access.redhat.com/security/cve/CVE-2026-59091",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2496585"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59091",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59091"
+    },
+    "item_id": "CVE-2026-59091",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Desktop image editor (GIMP) requiring user interaction to open crafted files; consumer-only software with no DPI or enterprise footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71969",
+    "identity": {
+      "title": "CVE-2026-71969",
+      "published": "2026-08-10 18:18:43",
+      "modified": "2026-08-10 20:17:32",
+      "description": "OP-TEE OS through 4.10.0, fixed in commit 7b8b494, contains a buffer underwrite vulnerability in the RSA NOPAD encrypt and decrypt operations within the mbedTLS software backend and SE050 hardware driver that allows a malicious Trusted Application to corrupt secure-world heap memory by supplying an input length exceeding the RSA modulus size. When src_len exceeds rsa_len, the subtraction expression wraps to a large unsigned value, causing a subsequent memcpy to write attacker-controlled data before the destination buffer in S-EL1 secure-world heap memory."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/OP-TEE/optee_os/commit/7b8b494e0a324cefec8ed386b7de413b44f1aaf3"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-124",
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-124",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-124": "Buffer Underwrite ('Buffer Underflow')",
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "OP-TEE",
+      "products": "optee_os",
+      "cpe_uris": "cpe:2.3:a:op-tee:optee\\_os:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "op-tee:optee_os",
+          "vendor": "OP-TEE",
+          "product": "optee_os",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/OP-TEE/optee_os/commit/7b8b494e0a324cefec8ed386b7de413b44f1aaf3",
+      "https://www.vulncheck.com/advisories/op-tee-os-buffer-underwrite-via-rsa-nopad-encrypt-decrypt-operations",
+      "https://github.com/OP-TEE/optee_os/pull/7808",
+      "https://github.com/OP-TEE/optee_os/pull/7898"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-71969",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-71969"
+    },
+    "item_id": "CVE-2026-71969",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Specialized TEE OS vulnerability requiring malicious Trusted Application with high privileges; no clear DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71968",
+    "identity": {
+      "title": "CVE-2026-71968",
+      "published": "2026-08-10 18:15:10",
+      "modified": "2026-08-10 19:17:32",
+      "description": "OP-TEE OS through 4.10.0, fixed in commit 8794043, contains a use-after-free vulnerability in the Trusted Application loader that allows attackers with the ability to load a signed Trusted Application to corrupt secure-world kernel memory by setting the TA_FLAG_CONCURRENT flag in a user TA signed header. Attackers can cause two concurrent sessions to operate on the same shared context without locking, corrupting the uctx->vm_info.regions list during memref parameter mapping and unmapping to free vm_region nodes still in use, resulting in a use-after-free in S-EL1 secure-world kernel memory."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/OP-TEE/optee_os/commit/8794043c4065c26a2b8b1313794ba5ba5f06d296"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-362",
+        "CWE-416"
+      ],
+      "cwe_primary": "CWE-362",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-362": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')",
+        "CWE-416": "Use After Free"
+      }
+    },
+    "software": {
+      "vendors": "OP-TEE",
+      "products": "optee_os",
+      "cpe_uris": "cpe:2.3:a:op-tee:optee\\_os:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "op-tee:optee_os",
+          "vendor": "OP-TEE",
+          "product": "optee_os",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/op-tee-os-use-after-free-via-trusted-application-loader-ta-flag-concurrent",
+      "https://github.com/OP-TEE/optee_os/commit/8794043c4065c26a2b8b1313794ba5ba5f06d296",
+      "https://github.com/OP-TEE/optee_os/pull/7900"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-71968",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-71968"
+    },
+    "item_id": "CVE-2026-71968",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Specialized TEE OS vulnerability requiring ability to load signed Trusted Applications; no clear DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-12984",
+    "identity": {
+      "title": "CVE-2026-12984",
+      "published": "2026-08-10 12:37:35",
+      "modified": "2026-08-10 18:17:39",
+      "description": "Insufficiently Protected Credentials vulnerability in Zyxel Networks WAH7601 allows Retrieve Embedded Sensitive Data.\n\nThis issue affects WAH7601: through 20072026."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0799"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-522"
+      ],
+      "cwe_primary": "CWE-522",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-522": "Insufficiently Protected Credentials"
+      }
+    },
+    "software": {
+      "vendors": "Zyxel Networks",
+      "products": "WAH7601",
+      "cpe_uris": "cpe:2.3:a:zyxel:wah7601:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0799"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-12984",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-12984"
+    },
+    "item_id": "CVE-2026-12984",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Consumer/SMB networking hardware with embedded credentials, lacks active exploitation signal or explicit DPI-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-13206",
+    "identity": {
+      "title": "CVE-2026-13206",
+      "published": "2026-08-10 12:25:21",
+      "modified": "2026-08-10 18:17:39",
+      "description": "Improper neutralization of special elements used in an OS command ('OS command injection') vulnerability in Zyxel Networks WAH7601 allows OS Command Injection.\n\nThis issue affects WAH7601: through 20072026."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0799"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Zyxel Networks",
+      "products": "WAH7601",
+      "cpe_uris": "cpe:2.3:a:zyxel:wah7601:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0799"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-13206",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-13206"
+    },
+    "item_id": "CVE-2026-13206",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "OS command injection in consumer/SMB wireless access point, lacks active exploitation or clear DPI-sector deployment context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-6374",
+    "identity": {
+      "title": "CVE-2026-6374",
+      "published": "2026-08-10 12:15:20",
+      "modified": "2026-08-10 18:18:50",
+      "description": "Use of Hard-coded Credentials vulnerability in Zyxel Networks WAH7601 allows Read Sensitive Constants Within an Executable.\n\nThis issue affects WAH7601: through 20.07.2026."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0799"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-798"
+      ],
+      "cwe_primary": "CWE-798",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-798": "Use of Hard-coded Credentials"
+      }
+    },
+    "software": {
+      "vendors": "Zyxel Networks",
+      "products": "WAH7601",
+      "cpe_uris": "cpe:2.3:a:zyxel:wah7601:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0799"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-6374",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-6374"
+    },
+    "item_id": "CVE-2026-6374",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Hard-coded credentials in consumer/SMB networking hardware, no exploitation signal or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59090",
+    "identity": {
+      "title": "CVE-2026-59090",
+      "published": "2026-08-10 12:10:40",
+      "modified": "2026-08-10 14:17:25",
+      "description": "A flaw was found in GIMP's PSD file format plugin. This vulnerability, an unsigned integer underflow in the `block_rem` variable, occurs when a user opens a specially crafted `.psd` image file. The underflow leads to parser confusion, enabling an attacker to inject arbitrary data as layer resource blocks. This can ultimately result in arbitrary code execution, allowing the attacker to run malicious code on the victim's system."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://bugzilla.redhat.com/show_bug.cgi?id=2496584"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-191"
+      ],
+      "cwe_primary": "CWE-191",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-191": "Integer Underflow (Wrap or Wraparound)"
+      }
+    },
+    "software": {
+      "vendors": "Red Hat,Red Hat,Red Hat,Red Hat",
+      "products": "Red Hat Enterprise Linux 6,Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 9",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "red hat:red hat enterprise linux 6",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 6",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 7",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 7",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 8",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 8",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 9",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 9",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2496584",
+      "https://gitlab.gnome.org/GNOME/gimp/-/work_items/16509",
+      "https://access.redhat.com/security/cve/CVE-2026-59090"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59090",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59090"
+    },
+    "item_id": "CVE-2026-59090",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Arbitrary code execution in consumer image editor (GIMP), no enterprise or DPI-sector deployment context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59087",
+    "identity": {
+      "title": "CVE-2026-59087",
+      "published": "2026-08-10 10:47:07",
+      "modified": "2026-08-10 11:17:26",
+      "description": "A flaw was found in the GIMP image manipulation program, specifically within its Seattle Filmworks file loader. A remote attacker could exploit this vulnerability by tricking a user into opening a specially crafted Seattle Filmworks file. This could lead to a heap overflow, allowing the attacker to write several kilobytes of controlled data beyond the intended memory buffer. Such an overflow can result in memory corruption, potentially leading to arbitrary code execution or a denial of service."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://bugzilla.redhat.com/show_bug.cgi?id=2496576"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-787",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "Red Hat,Red Hat,Red Hat,Red Hat",
+      "products": "Red Hat Enterprise Linux 6,Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 9",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "red hat:red hat enterprise linux 6",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 6",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 7",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 7",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 8",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 8",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 9",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 9",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2496576",
+      "https://gitlab.gnome.org/GNOME/gimp/-/work_items/16491",
+      "https://access.redhat.com/security/cve/CVE-2026-59087"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59087",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59087"
+    },
+    "item_id": "CVE-2026-59087",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer desktop image editor requiring user interaction to open crafted file, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72594",
+    "identity": {
+      "title": "CVE-2026-72594",
+      "published": "2026-08-10 10:41:57",
+      "modified": "2026-08-10 14:17:31",
+      "description": "A stored cross-site scripting (XSS) vulnerability in lobehub/lobe-chat through v2.2.13 allows a low-privileged authenticated user to inject arbitrary JavaScript into the application by uploading a crafted SVG file as a user avatar."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/lobehub/lobe-chat"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "lobehub",
+      "products": "lobe-chat",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "lobehub:lobe-chat",
+          "vendor": "lobehub",
+          "product": "lobe-chat",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/lobehub/lobe-chat"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72594",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72594"
+    },
+    "item_id": "CVE-2026-72594",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Open-source AI chat interface requiring authentication for stored XSS, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72591",
+    "identity": {
+      "title": "CVE-2026-72591",
+      "published": "2026-08-10 10:41:47",
+      "modified": "2026-08-10 14:17:31",
+      "description": "A server-side request forgery (SSRF) vulnerability in gabehf/Koito through v0.3.2 allows an authenticated user to make the server perform HTTP requests to arbitrary internal or external hosts by supplying a crafted image_url value in the PATCH /apis/web/v1/album/{id}/image endpoint."
+    },
+    "cvss": {
+      "base_score": 7.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/gabehf/Koito"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cwe_primary": "CWE-918",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-918": "Server-Side Request Forgery (SSRF)"
+      }
+    },
+    "software": {
+      "vendors": "gabehf",
+      "products": "Koito",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/gabehf/Koito"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72591",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72591"
+    },
+    "item_id": "CVE-2026-72591",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Self-hosted personal photo gallery requiring authentication for SSRF, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72586",
+    "identity": {
+      "title": "CVE-2026-72586",
+      "published": "2026-08-10 10:41:33",
+      "modified": "2026-08-10 14:17:29",
+      "description": "A missing authentication vulnerability in frangoteam/FUXA through 1.3.3 allows an unauthenticated remote attacker to query all historical sensor data via the DAQ_QUERY Socket.IO event. When secureEnabled=true, all other sensitive Socket.IO events (DEVICE_BROWSE, HOST_INTERFACES, DEVICE_TAGS_REQUEST, etc.) call isSocketAdminAuthorized to verify the connection token, but the DAQ_QUERY handler in server/runtime/index.js lacks this check entirely."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/frangoteam/FUXA/blob/master/server/runtime/index.js"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": "frangoteam",
+      "products": "FUXA",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/frangoteam/FUXA/blob/master/server/runtime/index.js",
+      "https://github.com/frangoteam/FUXA"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72586",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72586"
+    },
+    "item_id": "CVE-2026-72586",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Industrial SCADA/IIoT platform missing authentication for sensor data, falls outside core DPI sectors (identity, finance, health, government).",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72581",
+    "identity": {
+      "title": "CVE-2026-72581",
+      "published": "2026-08-10 10:41:18",
+      "modified": "2026-08-10 14:17:28",
+      "description": "A server-side request forgery (SSRF) vulnerability in duhow/xiaoai-patch through commit fb07049 allows a remote attacker to make the Xiaomi smart speaker perform HTTP requests to arbitrary internal or external URLs. The /auth endpoint in api/main.py uses the user-supplied url POST parameter to redirect to a Home Assistant instance without validating the destination URL, enabling internal network scanning and access to internal services."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/duhow/xiaoai-patch"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cwe_primary": "CWE-918",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-918": "Server-Side Request Forgery (SSRF)"
+      }
+    },
+    "software": {
+      "vendors": "duhow",
+      "products": "xiaoai-patch",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/duhow/xiaoai-patch",
+      "https://github.com/duhow/xiaoai-patch/blob/main/api/main.py"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72581",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72581"
+    },
+    "item_id": "CVE-2026-72581",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer smart-home/IoT software (Xiaomi speaker patch) with no enterprise or DPI footprint, explicitly excluded by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72580",
+    "identity": {
+      "title": "CVE-2026-72580",
+      "published": "2026-08-10 10:41:15",
+      "modified": "2026-08-10 14:17:28",
+      "description": "An OS command injection vulnerability in duhow/xiaoai-patch through commit fb07049 allows a remote attacker to execute arbitrary system commands on Xiaomi smart speakers running the patch. The /mute and /unmute endpoint handlers in api/main.py pass the user-supplied silent query parameter directly to os.system() without sanitization, enabling command injection via shell metacharacters."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/duhow/xiaoai-patch"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "duhow",
+      "products": "xiaoai-patch",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/duhow/xiaoai-patch",
+      "https://github.com/duhow/xiaoai-patch/blob/main/api/main.py"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72580",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72580"
+    },
+    "item_id": "CVE-2026-72580",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer smart-home/IoT software (Xiaomi speaker patch) with no enterprise or DPI footprint, explicitly excluded despite high CVSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72571",
+    "identity": {
+      "title": "CVE-2026-72571",
+      "published": "2026-08-10 10:40:49",
+      "modified": "2026-08-10 18:18:51",
+      "description": "A path traversal vulnerability in mustafaakin/cast-localvideo (all versions) allows an unauthenticated remote attacker to read arbitrary files from the server. The app.js handler at lines 151-153 passes the user-supplied req.body.dir parameter directly to res.sendFile() without sanitization, enabling directory traversal via absolute paths or ../ sequences to read sensitive system files."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/mustafaakin/cast-localvideo/blob/main/app.js"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "mustafaakin",
+      "products": "cast-localvideo",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/mustafaakin/cast-localvideo/blob/main/app.js",
+      "https://github.com/mustafaakin/cast-localvideo"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72571",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72571"
+    },
+    "item_id": "CVE-2026-72571",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer media casting tool with no enterprise or DPI footprint; unauthenticated path traversal lacks sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72569",
+    "identity": {
+      "title": "CVE-2026-72569",
+      "published": "2026-08-10 10:40:43",
+      "modified": "2026-08-10 14:17:27",
+      "description": "A path traversal vulnerability in cube-root/directory-serve through 1.3.7 allows an unauthenticated remote attacker to delete arbitrary files outside the intended served directory when the application is run with the --delete option."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/cube-root/directory-serve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "cube-root",
+      "products": "directory-serve",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/cube-root/directory-serve",
+      "https://github.com/cube-root/directory-serve/blob/main/lib/middleware/file-remove.js"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72569",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-72569"
+    },
+    "item_id": "CVE-2026-72569",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Generic developer static file server utility with no enterprise or DPI footprint; high CVSS does not override consumer-only exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-66915",
+    "identity": {
+      "title": "CVE-2026-66915",
+      "published": "2026-08-10 09:53:28",
+      "modified": "2026-08-10 13:19:53",
+      "description": "Joomla Extension - fabrikar.com - Remote code execution in Fabrik < 4.6.7 - An unauthenticated attacker could execute arbitrary code by using the ajax_calc feature of the calc plugin."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.0078,
+      "percentile": 0.52508,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/",
+      "https://mysites.guru/blog/fabrik-unauthenticated-rce-calc-element/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66915",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66915"
+    },
+    "item_id": "CVE-2026-66915",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla extension/plugin with no enterprise or DPI footprint; falls under consumer CMS add-on exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-66407",
+    "identity": {
+      "title": "CVE-2026-66407",
+      "published": "2026-08-10 08:00:43",
+      "modified": "2026-08-10 18:18:49",
+      "description": "DEEBOT PRO M1 and DEEBOT PRO K1VAC improperly implement authentication in WebSocket communication.\r\nThe WebSocket private key may be retrieved through analyzing the traffic data via a man-in-the-middle attack, and communication contents may be altered."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00329,
+      "percentile": 0.25484,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://robot.hellohas.co.jp/news/update_20260331/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-327"
+      ],
+      "cwe_primary": "CWE-327",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-327": "Use of a Broken or Risky Cryptographic Algorithm"
+      }
+    },
+    "software": {
+      "vendors": "ECOVACS ROBOTICS,ECOVACS ROBOTICS",
+      "products": "DEEBOT PRO M1,DEEBOT PRO K1VAC",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://robot.hellohas.co.jp/news/update_20260331/",
+      "https://jvn.jp/en/vu/JVNVU92804348/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66407",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66407"
+    },
+    "item_id": "CVE-2026-66407",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Commercial/consumer robotic vacuum cleaner with no enterprise or DPI footprint; falls under IoT/consumer device exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-66405",
+    "identity": {
+      "title": "CVE-2026-66405",
+      "published": "2026-08-10 07:59:40",
+      "modified": "2026-08-10 18:18:49",
+      "description": "DEEBOT PRO M1 and DEEBOT PRO K1VAC leave the telnet servers enabled. The telnet service may be leveraged to log in to the affected products."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00508,
+      "percentile": 0.40632,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://robot.hellohas.co.jp/news/update_20260331/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-489"
+      ],
+      "cwe_primary": "CWE-489",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-489": "Active Debug Code"
+      }
+    },
+    "software": {
+      "vendors": "ECOVACS ROBOTICS,ECOVACS ROBOTICS",
+      "products": "DEEBOT PRO M1,DEEBOT PRO K1VAC",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://robot.hellohas.co.jp/news/update_20260331/",
+      "https://jvn.jp/en/vu/JVNVU92804348/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66405",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66405"
+    },
+    "item_id": "CVE-2026-66405",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Commercial/consumer robotic vacuum cleaner with no enterprise or DPI footprint; falls under IoT/consumer device exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-66403",
+    "identity": {
+      "title": "CVE-2026-66403",
+      "published": "2026-08-10 07:58:47",
+      "modified": "2026-08-10 18:18:49",
+      "description": "DEEBOT PRO M1 and DEEBOT PRO K1VAC leave the web server for debugging purposes enabled. The floor map and log information stored on the affected products may be retrieved."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00432,
+      "percentile": 0.35561,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://robot.hellohas.co.jp/news/update_20260331/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-489"
+      ],
+      "cwe_primary": "CWE-489",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-489": "Active Debug Code"
+      }
+    },
+    "software": {
+      "vendors": "ECOVACS ROBOTICS,ECOVACS ROBOTICS",
+      "products": "DEEBOT PRO M1,DEEBOT PRO K1VAC",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://robot.hellohas.co.jp/news/update_20260331/",
+      "https://jvn.jp/en/vu/JVNVU92804348/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66403",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66403"
+    },
+    "item_id": "CVE-2026-66403",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Commercial/consumer robotic vacuum cleaner with no enterprise or DPI footprint; falls under IoT/consumer device exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21079",
+    "identity": {
+      "title": "CVE-2026-21079",
+      "published": "2026-08-10 07:43:27",
+      "modified": "2026-08-10 18:17:45",
+      "description": "Missing encryption of sensitive data in Smart Switch prior to version 3.7.72.6 allows adjacent attackers to intercept transmitted data."
+    },
+    "cvss": {
+      "base_score": 7.0,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00065,
+      "percentile": 0.00019,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.samsungmobile.com/serviceWeb.smsb?year=2026&month=08"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-311"
+      ],
+      "cwe_primary": "CWE-311",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-311": "Missing Encryption of Sensitive Data"
+      }
+    },
+    "software": {
+      "vendors": "Samsung Mobile",
+      "products": "Smart Switch",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "samsung mobile:smart switch",
+          "vendor": "Samsung Mobile",
+          "product": "Smart Switch",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://security.samsungmobile.com/serviceWeb.smsb?year=2026&month=08"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21079",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21079"
+    },
+    "item_id": "CVE-2026-21079",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal mobile application (Samsung Smart Switch) with no enterprise or DPI footprint; falls under consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21074",
+    "identity": {
+      "title": "CVE-2026-21074",
+      "published": "2026-08-10 07:42:31",
+      "modified": "2026-08-10 18:17:44",
+      "description": "Incorrect default permissions in Bixby prior to version 4.0.86.0 allows local attackers to execute arbitrary commands with Bixby privilege."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00103,
+      "percentile": 0.01136,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.samsungmobile.com/serviceWeb.smsb?year=2026&month=08"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-276"
+      ],
+      "cwe_primary": "CWE-276",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-276": "Incorrect Default Permissions"
+      }
+    },
+    "software": {
+      "vendors": "Samsung Mobile",
+      "products": "Bixby",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://security.samsungmobile.com/serviceWeb.smsb?year=2026&month=08"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21074",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21074"
+    },
+    "item_id": "CVE-2026-21074",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal mobile application (Samsung Bixby) requiring local access with no enterprise or DPI footprint; falls under consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21068",
+    "identity": {
+      "title": "CVE-2026-21068",
+      "published": "2026-08-10 07:41:24",
+      "modified": "2026-08-10 18:17:43",
+      "description": "Stack-based buffer overflow in libril_sem.so prior to SMR Aug-2026 Release 1 allows privileged local attackers to execute arbitrary code."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00127,
+      "percentile": 0.02715,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=08"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-121",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Samsung Mobile",
+      "products": "Samsung Mobile Devices",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "samsung mobile:samsung mobile devices",
+          "vendor": "Samsung Mobile",
+          "product": "Samsung Mobile Devices",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=08"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21068",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21068"
+    },
+    "item_id": "CVE-2026-21068",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Android system library requiring privileged local access with no enterprise or DPI footprint; falls under consumer OS component exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21064",
+    "identity": {
+      "title": "CVE-2026-21064",
+      "published": "2026-08-10 07:40:40",
+      "modified": "2026-08-10 17:17:31",
+      "description": "Improper access control in Weaver prior to SMR Aug-2026 Release 1 allows local attackers to cause device inoperability."
+    },
+    "cvss": {
+      "base_score": 7.0,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00113,
+      "percentile": 0.0163,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=08"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "cwe_primary": "CWE-284",
+      "cwe_family": "AuthZ/Access Control",
+      "cwe_names": {
+        "CWE-284": "Improper Access Control"
+      }
+    },
+    "software": {
+      "vendors": "Samsung Mobile",
+      "products": "Samsung Mobile Devices",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "samsung mobile:samsung mobile devices",
+          "vendor": "Samsung Mobile",
+          "product": "Samsung Mobile Devices",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=08"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21064",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21064"
+    },
+    "item_id": "CVE-2026-21064",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Device component requiring local access with no enterprise or DPI footprint; falls under consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-64940",
+    "identity": {
+      "title": "CVE-2026-64940",
+      "published": "2026-08-10 07:09:50",
+      "modified": "2026-08-10 18:18:48",
+      "description": "Tegalog -Fumy Otegaru Memo Logger- provided by Nishishi Factory contains a vulnerability due to a permissive regular expression, which may allow an attacker who can access the affected product to log in to the management console. As a result, the attacker may perform any operations available from the management console."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00398,
+      "percentile": 0.32606,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://jvn.jp/en/jp/JVN99975039/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-625"
+      ],
+      "cwe_primary": "CWE-625",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-625": "Permissive Regular Expression"
+      }
+    },
+    "software": {
+      "vendors": "Nishishi Factory",
+      "products": "Tegalog -Fumy Otegaru Memo Logger-",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://jvn.jp/en/jp/JVN99975039/",
+      "https://www.nishishi.com/cgi/tegalog/info/notice20260629.shtml"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-64940",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-64940"
+    },
+    "item_id": "CVE-2026-64940",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche consumer memo logger application with no enterprise or DPI footprint; falls under consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17022",
+    "identity": {
+      "title": "CVE-2026-17022",
+      "published": "2026-08-10 06:00:17",
+      "modified": "2026-08-10 20:17:28",
+      "description": "The Salon Booking System  WordPress plugin through 10.30.33 does not properly validate a booking's ownership token before loading it in its booking-wizard confirmation steps, allowing unauthenticated attackers to disclose other customers' booking records, including personal information, by supplying a sequential booking identifier."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00145,
+      "percentile": 0.0429,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/ddc84492-408b-477c-ac6c-b9ec96ccf223/"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Salon Booking System",
+      "cpe_uris": "cpe:2.3:a:salonbookingsystem:salon_booking_system:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/ddc84492-408b-477c-ac6c-b9ec96ccf223/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17022",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17022"
+    },
+    "item_id": "CVE-2026-17022",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19053",
+    "identity": {
+      "title": "CVE-2026-19053",
+      "published": "2026-08-10 06:00:17",
+      "modified": "2026-08-10 20:17:30",
+      "description": "The ProSolution WP Client WordPress plugin before 2.0.6 does not sanitise and escape a parameter before using it in a SQL statement reachable by unauthenticated visitors, leading to a blind SQL injection."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00162,
+      "percentile": 0.05875,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/c9bad349-d2d6-4b67-a107-818f25d9bf76/"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "ProSolution WP Client",
+      "cpe_uris": "cpe:2.3:*:*:prosolution_wp_client:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/c9bad349-d2d6-4b67-a107-818f25d9bf76/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19053",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19053"
+    },
+    "item_id": "CVE-2026-19053",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18946",
+    "identity": {
+      "title": "CVE-2026-18946",
+      "published": "2026-08-10 06:00:16",
+      "modified": "2026-08-10 20:17:30",
+      "description": "The Contact Form to Any API WordPress plugin before 3.0.7 does not use a random filename when copying files uploaded through contact forms into a publicly accessible directory, allowing unauthenticated attackers to enumerate and download files submitted by other users."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00145,
+      "percentile": 0.0429,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/fa13ebbb-8eea-492d-8f59-58228efb94d8/"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Contact Form to Any API",
+      "cpe_uris": "cpe:2.3:a:itpathsolutions:contact_form_to_any_api:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/fa13ebbb-8eea-492d-8f59-58228efb94d8/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18946",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18946"
+    },
+    "item_id": "CVE-2026-18946",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14206",
+    "identity": {
+      "title": "CVE-2026-14206",
+      "published": "2026-08-10 06:00:15",
+      "modified": "2026-08-10 20:17:26",
+      "description": "The HT Contact Form  WordPress plugin before 2.9.3 does not perform any authorization check on the endpoint that returns a saved form draft, allowing unauthenticated users to read the personal data (name, email, phone, address) stored in form drafts."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00156,
+      "percentile": 0.05252,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/36ae857c-6812-46e0-a0e7-6c868108ef39/"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "HT Contact Form",
+      "cpe_uris": "cpe:2.3:*:*:ht_contact_form:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/36ae857c-6812-46e0-a0e7-6c868108ef39/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-14206",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-14206"
+    },
+    "item_id": "CVE-2026-14206",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-13133",
+    "identity": {
+      "title": "CVE-2026-13133",
+      "published": "2026-08-10 06:00:12",
+      "modified": "2026-08-10 18:17:39",
+      "description": "A vulnerability has been identified in LineInst.exe (LINE for Windows) prior to version 26.4.0, where Msftedit.dll is loaded via a relative path without a secure DLL search path, allowing a malicious DLL placed in the installer's directory to be loaded ahead of the legitimate System32 copy."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00117,
+      "percentile": 0.01946,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://line.github.io/security-advisory-blog/CVE-2026-13133/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-427"
+      ],
+      "cwe_primary": "CWE-427",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-427": "Uncontrolled Search Path Element"
+      }
+    },
+    "software": {
+      "vendors": "LY Corporation",
+      "products": "LINE for Windows",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://line.github.io/security-advisory-blog/CVE-2026-13133/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-13133",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-13133"
+    },
+    "item_id": "CVE-2026-13133",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer messaging application installer vulnerability with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18470",
+    "identity": {
+      "title": "CVE-2026-18470",
+      "published": "2026-08-10 06:00:12",
+      "modified": "2026-08-10 20:17:29",
+      "description": "The Login & Register Forms  WordPress plugin before 4.0.2 does not verify that a password reset request comes from the account's owner, and does not adequately redact the address returned in its response, allowing unauthenticated users to obtain registered users' email addresses, including administrators'."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00156,
+      "percentile": 0.05253,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/589b7661-4a0d-4041-8c29-2819d8b1e402/"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Login & Register Forms",
+      "cpe_uris": "cpe:2.3:*:*:login_\\&_register_forms:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/589b7661-4a0d-4041-8c29-2819d8b1e402/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18470",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18470"
+    },
+    "item_id": "CVE-2026-18470",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise IdAM or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17541",
+    "identity": {
+      "title": "CVE-2026-17541",
+      "published": "2026-08-10 06:00:10",
+      "modified": "2026-08-10 20:17:29",
+      "description": "The File Manager WordPress plugin before 6.9.1 does not have authorisation checks on one of its REST API routes, allowing unauthenticated users to read its file activity log, disclosing the file operations performed on the site, the paths involved and the name of the user who performed them."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00156,
+      "percentile": 0.05253,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/972bf72f-08c4-41ec-b6e9-2d6083d21734/"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "File Manager",
+      "cpe_uris": "cpe:2.3:a:media_file_manager_project:media_file_manager:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/972bf72f-08c4-41ec-b6e9-2d6083d21734/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17541",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17541"
+    },
+    "item_id": "CVE-2026-17541",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17542",
+    "identity": {
+      "title": "CVE-2026-17542",
+      "published": "2026-08-10 06:00:10",
+      "modified": "2026-08-10 20:17:29",
+      "description": "The File Manager WordPress plugin before 6.9.1 does not perform any capability check on one of its file manager connector endpoints, allowing any authenticated user, such as a subscriber, to browse the entire WordPress installation directory and download files of certain types from it, including archives and documents which may contain sensitive data."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00149,
+      "percentile": 0.04647,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/d17f3de9-b0f9-4bbd-8a57-18cda9d43d79/"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "File Manager",
+      "cpe_uris": "cpe:2.3:a:media_file_manager_project:media_file_manager:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/d17f3de9-b0f9-4bbd-8a57-18cda9d43d79/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17542",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17542"
+    },
+    "item_id": "CVE-2026-17542",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19384",
+    "identity": {
+      "title": "CVE-2026-19384",
+      "published": "2026-08-10 01:30:11",
+      "modified": "2026-08-10 03:16:40",
+      "description": "A weakness has been identified in SourceCodester Simple Doctors Appointment System 1.0. The affected element is an unknown function of the file /admin/ajax.php?action=set_appointment. This manipulation of the argument ID causes sql injection. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00263,
+      "percentile": 0.17963,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/HZFW2026/cve/issues/2"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Simple Doctors Appointment System",
+      "cpe_uris": "cpe:2.3:*:sourcecodester:simple_doctors_appointment_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/387284",
+      "https://github.com/HZFW2026/cve/issues/2",
+      "https://vuldb.com/cve/CVE-2026-19384",
+      "https://vuldb.com/submit/867120",
+      "https://www.sourcecodester.com/",
+      "https://vuldb.com/vuln/387284/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19384",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19384"
+    },
+    "item_id": "CVE-2026-19384",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer PHP appointment script with spurious 'doctor' naming, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19381",
+    "identity": {
+      "title": "CVE-2026-19381",
+      "published": "2026-08-10 00:30:09",
+      "modified": "2026-08-10 18:17:42",
+      "description": "A security flaw has been discovered in Kingston FURY CTRL RGB Control Software 2.0.65.0. The impacted element is an unknown function in the library NTIOLib_KSFX.sys of the component Driver. Performing a manipulation results in improper privilege management. The attack needs to be approached locally. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00111,
+      "percentile": 0.01509,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://drive.google.com/file/d/19a8Qix5YVMNy8TH5k4PWiu0FQLtPRsJp/view?usp=sharing;https://drive.google.com/file/d/1Vqw9d9jkKbl4r2dC1Ry5m_1uzL5JV25H/view?usp=sharing"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-266",
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-266",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-266": "Incorrect Privilege Assignment",
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "Kingston",
+      "products": "FURY CTRL RGB Control Software",
+      "cpe_uris": "cpe:2.3:*:kingston:fury_ctrl_rgb_control_software:2.0.65.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://drive.google.com/file/d/19a8Qix5YVMNy8TH5k4PWiu0FQLtPRsJp/view?usp=sharing;https://drive.google.com/file/d/1Vqw9d9jkKbl4r2dC1Ry5m_1uzL5JV25H/view?usp=sharing",
+      "https://vuldb.com/vuln/387274/cti",
+      "https://vuldb.com/submit/866727",
+      "https://vuldb.com/cve/CVE-2026-19381",
+      "https://vuldb.com/vuln/387274"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19381",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19381"
+    },
+    "item_id": "CVE-2026-19381",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer RGB lighting control driver requiring local access, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19379",
+    "identity": {
+      "title": "CVE-2026-19379",
+      "published": "2026-08-10 00:00:12",
+      "modified": "2026-08-10 01:16:47",
+      "description": "A vulnerability was determined in EFM ipTIME AX8004M 15.09.0. Impacted is the function popen of the file /cgi/d.cgi of the component CGI Endpoint. This manipulation of the argument fname causes os command injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.01657,
+      "percentile": 0.74358,
+      "date": "2026-08-11"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/seting-and-break/vulnerability-reports/blob/main/ipTIME_AX8004M_Vulnerability_Report.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-77",
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-77",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "EFM",
+      "products": "ipTIME AX8004M",
+      "cpe_uris": "cpe:2.3:*:efm:iptime_ax8004m:15.09.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/387272/cti",
+      "https://github.com/seting-and-break/vulnerability-reports/blob/main/ipTIME_AX8004M_Vulnerability_Report.md",
+      "https://vuldb.com/submit/866635",
+      "https://vuldb.com/vuln/387272",
+      "https://vuldb.com/cve/CVE-2026-19379"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19379",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19379"
+    },
+    "item_id": "CVE-2026-19379",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router firmware with remote command injection, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "CVE-2026-72593",
+    "published": "2026-08-10 10:41:54",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A missing authentication vulnerability in dulldusk/phpfm through 1.8.0 allows an unauthenticated remote attacker to access the full file manager functionality including reading, writing, deleting, and uploading files anywhere on the server filesystem.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic PHP file manager script, consumer/hobbyist software exclusion applies despite missing authentication CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72577",
+    "published": "2026-08-10 10:41:06",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Multiple vulnerabilities in NASA fprime-gds through 3.4.3 allow an unauthenticated remote attacker to achieve arbitrary code execution on the ground station host and inject arbitrary commands to connected spacecraft. The Flask application in src/fprime_gds/flask/app.py applies no authentication to any endpoint.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Aerospace ground station software, not identity/access infrastructure or DPI-relevant sector; auth CWE on non-identity software exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-15681",
+    "published": "2026-08-10 19:31:05",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "TBEA TLogger V2.1.0.0B0.0.0.0 contains an authentication bypass in its web server. After a user has previously authenticated to the device, an unauthenticated attacker can directly access protected functionality through the /index.asp endpoint without providing valid credentials. This allows the attacker to access functionality intended for authenticated users and may expose or modify device configuration and data. Logging out from the bypassed state can additionally cause the web server to crash.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Industrial SCADA/IIoT device (TBEA TLogger), excluded from Digital Identity sector; auth bypass on non-identity infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-15683",
+    "published": "2026-08-10 19:38:57",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "TBEA TLogger V2.1.0.0B0.0.0.0 contains multiple unauthenticated denial-of-service vulnerabilities in its web server. An unauthenticated remote attacker can invoke specific HTTP endpoints to reboot or reset the device, clear application data, or terminate the web server through a segmentation fault. In addition, multiple action endpoints process attacker-controlled parameters using unsafe string operations such as sprintf() and strcat() without adequate bounds checking, allowing crafted input to trigger buffer overflows and crash the web server. The affected endpoints include onRestart, onReset, ClearData, uploadInvFile, getIndiaRPData, YearCaparity, TotalfaultData, recordData, InvHistoryData, CollectHistoryData, InvFaultData, GetPortTableByParm, and UpdatePortConfig.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial SCADA device with pure DoS and buffer overflow vulnerabilities, no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-12984",
+    "published": "2026-08-10 12:37:35",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Insufficiently Protected Credentials vulnerability in Zyxel Networks WAH7601 allows Retrieve Embedded Sensitive Data.\n\nThis issue affects WAH7601: through 20072026.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer/SMB wireless access point hardware, excluded under consumer IoT/router hard exclusion despite credential exposure CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15581",
+    "published": "2026-08-10 20:44:18",
+    "cvss": 8.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in the TrustyAI Service (TAS) deployment. This vulnerability allows any pod on the cluster network to bypass authentication and directly access the TAS backend API. An attacker can exploit this to read, tamper with, or delete monitoring data and configurations, and inject arbitrary data into the service, potentially disrupting tenant operations.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "AI/ML monitoring service for Kubernetes, not identity/access infrastructure; auth bypass on non-identity software with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-66763",
+    "published": "2026-08-11 00:17:50",
+    "cvss": 7.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "SAP BusinessObjects Business Intelligence Platform stores certain sensitive credentials associated with user objects using a hard-coded cryptographic key. An attacker with high privileges and local access to the server could retrieve these objects and decrypt the stored credentials. Successful exploitation could allow the attacker to obtain sensitive authentication data and modify protected information, resulting in a high impact on confidentiality and integrity. There is no impact on availability.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Enterprise BI platform, not identity/access infrastructure or secrets manager; credential storage flaw on non-identity software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18941",
+    "published": "2026-08-10 20:44:42",
+    "cvss": 7.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Feast and feast-operator. The default configuration for both the Feast SDK and the feast-operator is \"no_auth,\" meaning no security manager is installed. This default allows unauthenticated and unauthorized access to feature-server, registry-server, and offline-server endpoints. A remote attacker, by exploiting this missing authentication, could achieve remote code execution (RCE) by storing a malicious User-Defined Function (UDF) on the feature-server, trigger a denial of service (DoS) by forcing re-materialization of all tenant features, and gain unauthorized access to cross-tenant data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Machine learning feature store platform, not identity/access infrastructure; missing authentication on non-identity software with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72586",
+    "published": "2026-08-10 10:41:33",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A missing authentication vulnerability in frangoteam/FUXA through 1.3.3 allows an unauthenticated remote attacker to query all historical sensor data via the DAQ_QUERY Socket.IO event. When secureEnabled=true, all other sensitive Socket.IO events (DEVICE_BROWSE, HOST_INTERFACES, DEVICE_TAGS_REQUEST, etc.) call isSocketAdminAuthorized to verify the connection token, but the DAQ_QUERY handler in server/runtime/index.js lacks this check entirely.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Open-source SCADA/HMI platform for IIoT, excluded under industrial/SCADA hard exclusion despite missing authentication.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55814",
+    "published": "2026-08-10 10:21:28",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing Authentication in Apache Ranger Download APIs on versions <= 2.8.0.\nUsers are recommended to upgrade to version 2.9.0, which fixes this issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Big data access control framework, but description is boilerplate with no concrete mechanism or DPI sector evidence; leans drop per overlay precision bias.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72688",
+    "published": "2026-08-10 11:59:02",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A missing authentication vulnerability in OpenSignLabs opensignserver through 2.37.0 allows an unauthenticated remote attacker to read arbitrary stored documents via the fileupload Parse cloud function. The function mints MASTER_KEY-signed file access tokens for any caller-supplied URL without performing any session check, defeating the only access control protecting stored contract files.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Missing authentication in open-source e-signature server lacks core IdAM or DPI sector nexus; software fit is weak.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72871",
+    "published": "2026-08-10 18:47:58",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the unauthenticated /api/providers/github/setup route in apps/dokploy/pages/api/providers/github/setup.ts trusts gh_init organizationId and userId values from the state parameter and calls createGithub in packages/server/src/services/github.ts, allowing an attacker to insert a GitHub App provider containing client_secret, webhook_secret, and PEM private key material into another organization. This issue is fixed in version 0.29.13.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Unauthenticated credential injection in self-hosted PaaS platform lacks core identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19342",
+    "published": "2026-08-09 07:30:09",
+    "cvss": 7.3,
+    "epss": 0.00405,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in code-projects Task Management System 1.0. Affected is an unknown function of the file /index.php of the component Login. Performing a manipulation of the argument Password results in improper authentication. The attack is possible to be carried out remotely. The exploit is now public and may be used.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Improper authentication in generic task management web application; consumer/hobbyist software exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71577",
+    "published": "2026-08-10 16:43:20",
+    "cvss": 6.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in multicluster-global-hub. During a ManagedClusterMigration, the system incorrectly grants all managed hubs read access to a shared communication topic. This allows a compromised managed hub to intercept and collect sensitive bootstrap kubeconfigs, which contain API server tokens intended for other hubs. These tokens have an extended validity of approximately 9.86 years, significantly increasing the risk of unauthorized access and information disclosure to other managed clusters.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Token exposure in Kubernetes cluster management tool lacks core identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72917",
+    "published": "2026-08-10 21:35:33",
+    "cvss": 5.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. From 1.0.0 to 1.15.0, AnythingLLM's unauthenticated account-recovery flow in server/utils/PasswordRecovery/index.js uses recoverAccount() to deduplicate the raw recoveryCodes values before trimming them, so one valid code submitted twice with different surrounding whitespace can satisfy the two-code check. Each normalized value can also match the same stored hash instead of consuming a distinct hash. An attacker who knows the target username and one recovery code can call POST /api/system/recover-account in multi-user mode, receive a password-reset token, and use POST /api/system/reset-password to take over the account, including an administrator account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Weak password recovery in LLM tooling application; explicit LLM/consumer software exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19361",
+    "published": "2026-08-09 17:15:09",
+    "cvss": 3.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw has been found in macrozheng mall 0504e86. This vulnerability affects unknown code of the file /sso/getAuthCode of the component mall-portal Module. Executing a manipulation can lead to weak password recovery. The attack may be launched remotely. This attack is characterized by high complexity. It is stated that the exploitability is difficult. The exploit has been published and may be used. The vendor deleted the GitHub issue for this vulnerability without any explanation. Afterwards the vendor was contacted early about this disclosure via email but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Weak password recovery in open-source e-commerce demo framework lacks DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19380",
+    "published": "2026-08-10 00:15:09",
+    "cvss": 2.3,
+    "epss": 0.00118,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in Mullvad wireguard.sys 0.10.1. The affected element is the function AdapterState of the component IOCTL Handler. Such manipulation leads to improper update of reference count. Local access is required to approach this attack. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Local reference count bug in WireGuard network driver; no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-40920",
+    "published": "2026-08-10 10:25:49",
+    "cvss": 0.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Privilege Escalation via URL Parameter is reported in Apache Ranger versions <= 2.8.0.\n\nUsers are recommended to upgrade to version 2.9.0, which fixes this issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no exploitable detail for privilege escalation in data governance framework; insufficient evidence to judge.",
+      "fail_open": false
+    }
+  }
+]
