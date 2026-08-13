@@ -1,0 +1,274 @@
+[
+  {
+    "id": "CVE-2026-20349",
+    "published": "2026-08-11 17:06:03",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "A vulnerability in the Remote Access SSL VPN service for Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.&nbsp;\r\n\r\nThis vulnerability is due to insufficient error checking when processing HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to the Remote Access SSL VPN service on an affected device. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Pure denial-of-service in VPN service with no authentication bypass or access-control impact, excluded by overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-68820",
+    "published": "2026-08-11 17:05:15",
+    "cvss": 7.0,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Use after free in Windows Ancillary Function Driver for WinSock allows an authorized attacker to elevate privileges locally.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in Windows network driver with no identity, authentication, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-58115",
+    "published": "2026-08-11 12:20:24",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been identified in SIMATIC IoT2050 Advanced (6ES7647-0BA00-1YA2) (All versions < V4.3.4.1 running Industrial OS with Node-RED installed). Affected devices do not enforce authentication on the Node-RED HTTP interface, allowing unauthenticated access to programming nodes that are capable of executing system commands on the server.\r\nThis could allow an unauthenticated remote attacker to create malicious flows through the HTTP interface in order to execute arbitrary code on the underlying server with maximum privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication on industrial/SCADA IoT device, excluded by base DPI sector rules for IIoT/industrial contexts.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2024-27253",
+    "published": "2026-08-12 21:23:03",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM DOORS Next 7.0.3 through 7.0.3 Interim Fix 018 could allow an authenticated user to bypass security logic to perform unauthorized activities.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Security logic bypass in niche engineering requirements software with no identity or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-49819",
+    "published": "2026-08-12 23:13:46",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "UpSnap is a wake on lan web app. Versions 4.4.1 through 5.3.5 are vulnerable to a missing-authentication / privilege-escalation chain in `pb.HandlerInitSuperuser` (`backend/pb/handlers.go:249`), reachable as `POST /api/upsnap/init-superuser`. The vulnerable code lacks any authentication, setup token, IP allow-list, or rate limit and is gated only by a `totalSuperusers > 0` count check — a condition that is false on every fresh install — allowing an unauthenticated network-adjacent attacker to register the initial superuser account, receive a long-lived JWT, and pivot to root remote code execution at `backend/networking/wake.go:43` (`exec.CommandContext(ctx, \"/bin/sh\", \"-c\", wake_cmd)`). Version 5.4.0 fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in consumer wake-on-LAN web application, excluded by overlay hard rules for hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72593",
+    "published": "2026-08-10 10:41:54",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A missing authentication vulnerability in dulldusk/phpfm through 1.8.0 allows an unauthenticated remote attacker to access the full file manager functionality including reading, writing, deleting, and uploading files anywhere on the server filesystem.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication in generic PHP file manager web script with no identity or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72577",
+    "published": "2026-08-10 10:41:06",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Multiple vulnerabilities in NASA fprime-gds through 3.4.3 allow an unauthenticated remote attacker to achieve arbitrary code execution on the ground station host and inject arbitrary commands to connected spacecraft. The Flask application in src/fprime_gds/flask/app.py applies no authentication to any endpoint.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication in NASA ground station control software, excluded as non-identity infrastructure with no DPI access-control nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-73296",
+    "published": "2026-08-12 16:29:03",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. Prior to 3.0.8, create_mobile_data_collection_server and create_mobile_action_server in ufo/client/mcp/http_servers/mobile_mcp_server.py exposed Streamable HTTP MCP services on TCP ports 8020 and 8021 without authentication, allowing an unauthenticated remote attacker to invoke capture_screenshot, get_ui_tree, tap, swipe, type_text, launch_app, press_key, and click_control against an ADB-connected Android device, disclose screen and device data, and modify device state. This issue is fixed in version 3.0.8.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Open-source automation framework with missing authentication lacks DPI identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-50561",
+    "published": "2026-08-12 14:07:07",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Yuxi is a large-model-based intelligent knowledge base and knowledge graph agent development platform. Prior to version 0.6.2, the project's authentication mechanism contains a flaw. In affected versions, the system does not sufficiently validate the identity token in the Authorization header — only performing a validity check. This allows an administrator token generated in another deployment instance or local testing environment to be used to access the backend management interfaces of a different affected instance. An attacker who obtains or constructs an acceptable administrator Authorization token may bypass normal login authentication and gain administrator privileges. This vulnerability could allow an attacker to access system configurations, invoke backend management APIs, create administrator accounts, and ultimately take over the system backend. This issue has been fixed in version 0.6.2. Before upgrading, users are advised to implement the following temporary measures: Set the environment variable `JWT_SECRET_KEY` to a non-default value, and configure a unique, sufficiently strong JWT/authentication key for each deployment instance; and/or avoid exposing backend management interfaces directly to the public network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "AI knowledge platform token validation flaw lacks core identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-15681",
+    "published": "2026-08-10 19:31:05",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "TBEA TLogger V2.1.0.0B0.0.0.0 contains an authentication bypass in its web server. After a user has previously authenticated to the device, an unauthenticated attacker can directly access protected functionality through the /index.asp endpoint without providing valid credentials. This allows the attacker to access functionality intended for authenticated users and may expose or modify device configuration and data. Logging out from the bypassed state can additionally cause the web server to crash.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial/SCADA logging device authentication bypass falls under explicit industrial/energy exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72794",
+    "published": "2026-08-12 19:07:41",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "siyuan versions before v3.7.4 expose the session cookie signing key through the /api/system/getConf endpoint to unauthenticated users in publish mode. Attackers can retrieve the CookieKey value and forge valid session cookies to impersonate users or gain administrative access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal note-taking application session key exposure falls under consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72793",
+    "published": "2026-08-12 19:07:41",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "SiYuan versions before v3.7.4 fail to mask sensitive configuration fields in the /api/system/getConf endpoint, allowing anonymous or publish-reader users to obtain the session-cookie signing key, OS username via pandoc path, and encrypted-notebook key material. Attackers can forge and tamper with session cookies to impersonate users, and on instances without access-auth codes configured, escalate to administrator privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal note-taking application session key exposure falls under consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72748",
+    "published": "2026-08-11 12:17:02",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "AVideo contains an unauthenticated arbitrary file write vulnerability in the aVideoEncoderChunk.json.php endpoint that allows remote attackers to write up to 4 GB of arbitrary content to the server filesystem via HTTP PUT requests without authentication. Attackers can exhaust disk space causing denial of service, poison the video encoding pipeline, or chain this with local file inclusion to achieve remote code execution.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Video hosting platform arbitrary file write lacks authentication or access-control impact and falls under media software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19426",
+    "published": "2026-08-12 07:07:00",
+    "cvss": 8.8,
+    "epss": 0.00297,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "POS System developed by FitSoft has a Missing Authentication vulnerability. Unauthenticated remote attackers can directly access and operate the system.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a commercial POS system lacks a DPI identity/access or financial infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-15683",
+    "published": "2026-08-10 19:38:57",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "TBEA TLogger V2.1.0.0B0.0.0.0 contains multiple unauthenticated denial-of-service vulnerabilities in its web server. An unauthenticated remote attacker can invoke specific HTTP endpoints to reboot or reset the device, clear application data, or terminate the web server through a segmentation fault. In addition, multiple action endpoints process attacker-controlled parameters using unsafe string operations such as sprintf() and strcat() without adequate bounds checking, allowing crafted input to trigger buffer overflows and crash the web server. The affected endpoints include onRestart, onReset, ClearData, uploadInvFile, getIndiaRPData, YearCaparity, TotalfaultData, recordData, InvHistoryData, CollectHistoryData, InvFaultData, GetPortTableByParm, and UpdatePortConfig.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated DoS and buffer overflows in an industrial energy logger device lack a DPI identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-66875",
+    "published": "2026-08-11 21:31:42",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In the Mira hormone monitor device firmware v1.7.1.47 build 01070147, a remote unauthenticated attacker within BLE range (approximately 10–30 meters) can silently rebind the device to an attacker-controlled account, extract stored hormone measurements in cleartext, cause a denial-of-service via malformed or undocumented command opcodes, and passively track the user via a static random BLE address that never rotates.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer health monitoring IoT device with BLE auth bypass lacks a DPI identity or clinical infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-73222",
+    "published": "2026-08-11 18:27:09",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Claude Code Templates is a CLI tool for configuring and monitoring Claude Code. Prior to 1.29.4, the Claude Code Studio server launched by the --studio option in cli-tool/src/sandbox-server.js binds to all interfaces on port 3444, permits cross-origin requests, and requires no authentication. The POST /api/execute endpoint passes the prompt request-body field to executeLocalTask(), and POST /api/install-agent passes the agentName request-body field to a child process. The same unsafe agent field path is reachable from /api/execute through checkAndInstallAgent(). These attacker-controlled values reach child_process.spawn() with shell execution enabled, causing Node.js to construct a shell command in which metacharacters are interpreted. An attacker who can reach the port directly, or who convinces a developer running Studio to visit a malicious website, can execute arbitrary operating-system commands with the developer's privileges and compromise source code, credentials, and local data. This issue is fixed in version 1.29.4.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication and RCE in an LLM developer CLI tool falls under the LLM/tooling exclusion and lacks a DPI nexus.",
+      "fail_open": false
+    }
+  }
+]
