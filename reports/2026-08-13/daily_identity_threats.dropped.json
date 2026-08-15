@@ -1,0 +1,306 @@
+[
+  {
+    "id": "CVE-2026-66443",
+    "published": "2026-08-13 13:36:54",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Unauthenticated Sensitive Data Exposure in REST API Log <= 1.7.1 versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Generic REST API logging software with data exposure, no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-66441",
+    "published": "2026-08-13 13:36:53",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Unauthenticated Broken Access Control in MultiVendorX <= 5.0.10 versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Broken access control in generic marketplace software, no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59500",
+    "published": "2026-08-13 09:18:37",
+    "cvss": 10.0,
+    "epss": 0.00381,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CWE-287: Improper Authentication",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Boilerplate CWE-only description with no software, mechanism, or exploitable detail to assess.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2024-27253",
+    "published": "2026-08-12 21:23:03",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM DOORS Next 7.0.3 through 7.0.3 Interim Fix 018 could allow an authenticated user to bypass security logic to perform unauthorized activities.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Security logic bypass in engineering lifecycle management software, no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-12949",
+    "published": "2026-08-14 05:30:43",
+    "cvss": 9.8,
+    "epss": 0.00339,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Wishlist Member plugin for WordPress is vulnerable to Account Takeover via Insufficient Verification of Data Authenticity in versions up to and including 3.34.1. This is due to the wpm_register() function validating the registration cookie only against the GET reg parameter while accepting the POST mergewith and POST wpm_id parameters without verifying that the mergewith user ID references a temporary or incomplete registrant that is bound to the current registration transaction. This makes it possible for unauthenticated attackers to take over any existing WordPress account — including administrator accounts — by supplying an arbitrary user's numeric ID as the mergewith value, which causes wp_update_user() to overwrite the target account's username (additionally written via a direct $wpdb UPDATE), password, email address, first name, and last name with attacker-controlled values, while WordPress password and email change notification emails are explicitly suppressed. When wpm_id references a non-existent membership level, no role key is added to the update payload, causing wp_update_user() to preserve the target user's existing role — including administrator — making full privilege escalation a direct consequence of the takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin account takeover, explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14182",
+    "published": "2026-08-13 06:00:12",
+    "cvss": 9.8,
+    "epss": 0.00149,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Customer Email Verification for WooCommerce WordPress plugin before 3.2.6 does not correctly validate the email-verification activation code, relying on a loose comparison that an attacker can satisfy with a crafted value type, allowing unauthenticated users to verify and take over the account of any registered user who has not yet confirmed their email address.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WooCommerce WordPress plugin account takeover, explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72822",
+    "published": "2026-08-14 11:35:31",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The getgrav/grav-plugin-api Composer package before 1.0.13 (affected <= 1.0.12) fails to enforce API key scope caps on the disable2fa endpoint. Unlike the sibling generate2fa endpoint, disable2fa authorizes the admin (non-self) path solely via ACL reads (isSuperAdmin/hasPermission) and never invokes requirePermission(), so the api_key_scopes cap is never applied. As a result, a holder of a narrow-scope API key on a super account, or a non-super account whose ACL includes api.users.write, can force-disable two-factor authentication on any non-super target account via POST /api/v1/users/{user}/2fa/disable without providing a TOTP code, facilitating account takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "CMS plugin 2FA bypass, falls under consumer/web software exclusion with no enterprise identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-66691",
+    "published": "2026-08-13 13:37:16",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Unauthenticated Broken Access Control in Nokri <= 1.6.6 versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Broken access control in generic web application, no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-49827",
+    "published": "2026-08-13 12:51:54",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "WebErpMesv2 is a Resource Management and Manufacturing execution system Web for industry. Versions 1.19 and prior allow any self-registered user to upload arbitrary PHP files through the HR Expense scan_file parameter, leading to Remote Code Execution. Combined with open registration (no invite required) and broken role middleware (CheckUserRole silently swallows RouteNotFoundException), this chain is effectively unauthenticated RCE against any default installation. The issue is patched in commit 5c54862fa044b363fd2be03d586750e81afd6818.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "RCE in manufacturing execution system via file upload, no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72776",
+    "published": "2026-08-13 21:14:18",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "AgenticSeek (commit fc242c7) contains an unauthenticated remote code execution vulnerability that allows any network-adjacent attacker to execute arbitrary commands by submitting crafted queries to the unprotected POST /query API endpoint bound to 0.0.0.0:7777 with wildcard CORS. Attackers can send unauthenticated HTTP requests that cause the autonomous agent to generate and execute shell commands through BashInterpreter using subprocess.Popen with shell=True and safety=False, bypassing the incomplete command blocklist to achieve full host-level code execution.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "RCE in AI agent tool via unprotected API, no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-49819",
+    "published": "2026-08-12 23:13:46",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "UpSnap is a wake on lan web app. Versions 4.4.1 through 5.3.5 are vulnerable to a missing-authentication / privilege-escalation chain in `pb.HandlerInitSuperuser` (`backend/pb/handlers.go:249`), reachable as `POST /api/upsnap/init-superuser`. The vulnerable code lacks any authentication, setup token, IP allow-list, or rate limit and is gated only by a `totalSuperusers > 0` count check — a condition that is false on every fresh install — allowing an unauthenticated network-adjacent attacker to register the initial superuser account, receive a long-lived JWT, and pivot to root remote code execution at `backend/networking/wake.go:43` (`exec.CommandContext(ctx, \"/bin/sh\", \"-c\", wake_cmd)`). Version 5.4.0 fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer wake-on-LAN utility with missing authentication, excluded as non-DPI hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-73843",
+    "published": "2026-08-13 22:02:41",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenChoreo is a complete, open-source developer platform for Kubernetes. Prior to 1.0.2 and 1.1.2, internal/cluster-gateway/server.go served caller-facing management APIs on the externally reachable agent listener without authentication, allowing network-reachable attackers to invoke /api/proxy/ and /api/exec/ operations, proxy the data-plane Kubernetes API, and execute commands in workload pods in multi-cluster deployments. This issue is fixed in versions 1.0.2 and 1.1.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Kubernetes developer platform with missing authentication on management APIs, excluded as non-identity infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-73296",
+    "published": "2026-08-12 16:29:03",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. Prior to 3.0.8, create_mobile_data_collection_server and create_mobile_action_server in ufo/client/mcp/http_servers/mobile_mcp_server.py exposed Streamable HTTP MCP services on TCP ports 8020 and 8021 without authentication, allowing an unauthenticated remote attacker to invoke capture_screenshot, get_ui_tree, tap, swipe, type_text, launch_app, press_key, and click_control against an ADB-connected Android device, disclose screen and device data, and modify device state. This issue is fixed in version 3.0.8.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Mobile automation framework with unauthenticated MCP services, excluded as non-DPI developer tooling.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-50561",
+    "published": "2026-08-12 14:07:07",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Yuxi is a large-model-based intelligent knowledge base and knowledge graph agent development platform. Prior to version 0.6.2, the project's authentication mechanism contains a flaw. In affected versions, the system does not sufficiently validate the identity token in the Authorization header — only performing a validity check. This allows an administrator token generated in another deployment instance or local testing environment to be used to access the backend management interfaces of a different affected instance. An attacker who obtains or constructs an acceptable administrator Authorization token may bypass normal login authentication and gain administrator privileges. This vulnerability could allow an attacker to access system configurations, invoke backend management APIs, create administrator accounts, and ultimately take over the system backend. This issue has been fixed in version 0.6.2. Before upgrading, users are advised to implement the following temporary measures: Set the environment variable `JWT_SECRET_KEY` to a non-default value, and configure a unique, sufficiently strong JWT/authentication key for each deployment instance; and/or avoid exposing backend management interfaces directly to the public network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "AI knowledge platform with cross-instance token validation flaw, excluded as non-identity application software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59506",
+    "published": "2026-08-13 09:41:12",
+    "cvss": 9.3,
+    "epss": 0.00395,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CWE-306: Missing Authentication for Critical Function",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Boilerplate CWE description with no product or vulnerability context, dropped per hard exclude rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72793",
+    "published": "2026-08-12 19:07:41",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "SiYuan versions before v3.7.4 fail to mask sensitive configuration fields in the /api/system/getConf endpoint, allowing anonymous or publish-reader users to obtain the session-cookie signing key, OS username via pandoc path, and encrypted-notebook key material. Attackers can forge and tamper with session cookies to impersonate users, and on instances without access-auth codes configured, escalate to administrator privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer note-taking application with session cookie exposure; excluded by consumer/hobbyist software rule despite authentication mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72794",
+    "published": "2026-08-12 19:07:41",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "siyuan versions before v3.7.4 expose the session cookie signing key through the /api/system/getConf endpoint to unauthenticated users in publish mode. Attackers can retrieve the CookieKey value and forge valid session cookies to impersonate users or gain administrative access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer note-taking application with session cookie exposure; excluded by consumer/hobbyist software rule despite authentication mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-73501",
+    "published": "2026-08-12 21:23:40",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "kin-openapi is a Go project for handling OpenAPI files. Prior to 0.144.0, ValidationHandler.Load() in openapi3filter/validation_handler.go silently replaces a nil AuthenticationFunc with NoopAuthenticationFunc, which returns nil without checking credentials. This substitution causes every OpenAPI security requirement to be satisfied for unauthenticated requests when an application relies on ValidationHandler as its enforcement middleware. The no-op callback prevents the fail-closed ErrAuthenticationServiceMissing path from being reached and forwards the request to protected handlers that may require an API key, OAuth token, or another security scheme. This issue is fixed in version 0.144.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Generic Go OpenAPI validation library with authentication bypass; lacks specific DPI-sector anchor or named identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-73842",
+    "published": "2026-08-13 21:59:24",
+    "cvss": 9.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenChoreo is a complete, open-source developer platform for Kubernetes. Prior to 1.0.3, 1.1.3, and 1.2.0-rc.2, internal/cluster-gateway/server.go exposed /api/proxy/, /api/exec/, and /api/wirelogs/ on an internal listener without requiring a client certificate or token, allowing any network-reachable caller to read tenant Kubernetes Secrets, mutate workloads, and execute commands across connected data planes. This issue is fixed in versions 1.0.3, 1.1.3, and 1.2.0-rc.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Kubernetes developer platform with missing authentication on internal APIs; lacks dedicated identity/access infrastructure role or DPI sector anchor.",
+      "fail_open": false
+    }
+  }
+]
