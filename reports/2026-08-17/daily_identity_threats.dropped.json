@@ -1,0 +1,178 @@
+[
+  {
+    "id": "CVE-2026-19977",
+    "published": "2026-08-17 03:00:09",
+    "cvss": 10.0,
+    "epss": 0.00711,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in EFM ipTIME A3004T 14.19.0. The affected element is the function httpcon_check_session_url of the component Session Validation. Performing a manipulation results in improper authentication. Remote exploitation of the attack is possible. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home router excluded by overlay hard rule despite improper authentication wording.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19924",
+    "published": "2026-08-16 01:00:13",
+    "cvss": 9.8,
+    "epss": 0.00901,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security vulnerability has been detected in Tenda AC10 16.03.10.09_multi_TDE01. This vulnerability affects the function R7WebsSecurityHandler of the component httpd. The manipulation leads to improper authentication. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer Wi-Fi router excluded by overlay hard rule despite improper authentication wording.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-74894",
+    "published": "2026-08-17 11:04:56",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "openssl_encrypt before 1.4.0 contains an authentication bypass vulnerability in the verify_api_token function that accepts any non-empty Bearer token string without validation. Attackers can upload arbitrary public keys, enumerate all keys, and revoke keys belonging to any user by providing any Bearer token in the Authorization header.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Generic cryptographic library function lacks clear enterprise identity or DPI sector nexus despite auth bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71566",
+    "published": "2026-08-17 14:22:16",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "FakeFish handles incoming credentials by passing them down\n to scripts. This works for real hardware because in the end it's up to \nthe BMC to validate them. However, KubeVirt relies on a KUBECONFIG file \nmounted to the container and completely ignores the credentials. This allows any user of the cluster to control VMs of the \nuser that created fakefish, power them on and off, and mount arbitrary CD\n images to them.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Virtualization platform credential bypass lacks direct identity/access management or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-27621",
+    "published": "2026-08-17 15:42:30",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "UpTrain is an open-source platform to evaluate and improve generative AI applications. In version 0.7.1 and prior, the UpTrain backend creates a new default user with a static username, where the username is also used as the default API key. The UpTrain backend also has an open CORS policy. Using these two primitives, any website can make a authenticated cross-origin request to the UpTrain instance by providing the default API key in the header `uptrain-access-token`. This issue may allow arbitrary websites to perform privileged operations on the UpTrain instance, as if they were the default logged in user. As of time of publication, no known patches are available.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI evaluation developer tool excluded by base LLM/tooling exclusion despite static API key flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75479",
+    "published": "2026-08-17 20:36:05",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "JimuReport contains an authentication bypass vulnerability in the report folder template listing endpoint that allows unauthenticated attackers to enumerate all reports and retrieve share tokens. Attackers can use disclosed share tokens to access protected report endpoints and retrieve full report definitions including embedded SQL statements and live query data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Business intelligence reporting tool lacks identity/access infrastructure or DPI sector nexus despite auth bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-56677",
+    "published": "2026-08-17 21:14:06",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "9Router is an AI router & token saver. In 0.5.4 and earlier, the POST /api/auth/oidc/test endpoint in src/app/api/auth/oidc/test/route.js passes the user-controlled issuerUrl parameter to fetchOidcDiscovery() in src/lib/auth/oidc.js without restricting private or loopback destinations, allowing unauthenticated attackers when dashboard login is disabled to scan internal services and reflect OIDC discovery fields including token_endpoint and jwks_uri.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI developer tool excluded by base LLM/tooling exclusion despite OIDC endpoint SSRF.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57485",
+    "published": "2026-08-17 19:31:30",
+    "cvss": 8.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Stirling-PDF is a locally hosted web application that facilitates various operations on PDF files. Prior to 2.9.0, the /api/v1/pipeline/handleData endpoint in app/core/src/main/java/stirling/software/SPDF/controller/api/pipeline/PipelineProcessor.java injects the STIRLING-PDF-BACKEND-API-USER API key into pipeline subrequests, allowing an authenticated ROLE_USER to retrieve the key through /api/v1/user/get-api-key, impersonate the internal service account, bypass normal rate limits, and access internal endpoints including /api/v1/info/requests/all and /api/v1/info/load/all. This issue is fixed in version 2.9.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Self-hosted PDF utility lacks identity/access infrastructure or DPI sector nexus despite API key exposure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75060",
+    "published": "2026-08-17 15:54:40",
+    "cvss": 8.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In JetBrains PyCharm before 2026.2.1 code execution was possible via unauthenticated Jupyter MCP tools",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Developer IDE and Jupyter tooling excluded as non-identity software with no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19974",
+    "published": "2026-08-17 02:15:08",
+    "cvss": 5.6,
+    "epss": 0.00364,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security flaw has been discovered in treefrogframework treefrog-framework up to 2.11.2. This vulnerability affects the function std::strncmp of the file src/tsessioncookiestore.cpp of the component Session Cookie Handler. The manipulation results in improper authentication. The attack can be launched remotely. A high complexity level is associated with this attack. It is stated that the exploitability is difficult. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Improper authentication in a generic C++ web framework (treefrog-framework) lacks a specific identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19971",
+    "published": "2026-08-17 01:30:08",
+    "cvss": 4.7,
+    "epss": 0.00362,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw has been found in LB-Link WR1210M 1.0.3. This impacts the function main of the file /www/cgi-bin/backup.cgi of the component Backup Endpoint. This manipulation causes missing authentication. The attack is only possible within the local network. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a consumer home router (LB-Link WR1210M), explicitly excluded as consumer IoT/hobbyist software.",
+      "fail_open": false
+    }
+  }
+]
