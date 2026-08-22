@@ -1,0 +1,979 @@
+[
+  {
+    "id": "CVE-2026-77235",
+    "identity": {
+      "title": "CVE-2026-77235",
+      "published": "2026-08-21 17:42:12",
+      "modified": "2026-08-21 20:16:45",
+      "description": "Missing privilege verification in the secure context cleanup handler in FreeRTOS-Kernel before 11.3.1 might allow local users to cause a use-after-free condition in secure-world memory via the SVC handler for secure context deallocation. To remediate this issue, users should upgrade to version 11.3.1 or later."
+    },
+    "cvss": {
+      "base_score": 8.3,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/releases/tag/V11.3.1"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "cwe_primary": "CWE-416",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-416": "Use After Free"
+      }
+    },
+    "software": {
+      "vendors": "FreeRTOS",
+      "products": "FreeRTOS-Kernel",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://aws.amazon.com/security/security-bulletins/2026-086-aws/",
+      "https://github.com/FreeRTOS/FreeRTOS-Kernel/releases/tag/V11.3.1",
+      "https://github.com/FreeRTOS/FreeRTOS-Kernel/security/advisories/GHSA-55pf-q87x-c58c"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77235",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77235"
+    },
+    "item_id": "CVE-2026-77235",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Embedded RTOS local privilege escalation with no explicit DPI sector nexus or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77234",
+    "identity": {
+      "title": "CVE-2026-77234",
+      "published": "2026-08-21 17:40:04",
+      "modified": "2026-08-21 20:16:44",
+      "description": "Improper input validation in FreeRTOS-Kernel before 11.3.1 might allow an unprivileged task on MPU-enabled ports to execute code in privileged kernel context. To remediate this issue, users should upgrade to version 11.3.1 or later."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/security/advisories/GHSA-w3vr-pr75-5hc6"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-863"
+      ],
+      "cwe_primary": "CWE-863",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-863": "Incorrect Authorization"
+      }
+    },
+    "software": {
+      "vendors": "FreeRTOS",
+      "products": "FreeRTOS-Kernel",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/FreeRTOS/FreeRTOS-Kernel/security/advisories/GHSA-w3vr-pr75-5hc6",
+      "https://aws.amazon.com/security/security-bulletins/2026-086-aws/",
+      "https://github.com/FreeRTOS/FreeRTOS-Kernel/releases/tag/V11.3.1"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77234",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77234"
+    },
+    "item_id": "CVE-2026-77234",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Embedded RTOS local kernel context execution with no explicit DPI sector nexus or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-41451",
+    "identity": {
+      "title": "CVE-2026-41451",
+      "published": "2026-08-21 17:36:02",
+      "modified": "2026-08-21 18:16:48",
+      "description": "UAC (Unix-like Artifacts Collector) versions prior to 3.3.0 contain a command injection vulnerability in the user substitution logic within parse_artifact.sh where usernames and home directories from /etc/passwd are substituted directly into command strings without escaping before execution via eval. Attackers can inject shell metacharacters such as command substitution syntax or semicolons through crafted usernames or home directory paths in /etc/passwd entries to execute arbitrary commands on the analyst's host system."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/tclahr/uac/pull/443"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "tclahr",
+      "products": "uac",
+      "cpe_uris": "cpe:2.3:a:tclahr:uac:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/uac-command-injection-via-user-substitution-in-parse-artifact-sh",
+      "https://github.com/tclahr/uac/pull/443",
+      "https://github.com/tclahr/uac/commit/2cc367d8ead388f05abd3cfb8af537788a124e72"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-41451",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-41451"
+    },
+    "item_id": "CVE-2026-41451",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Niche forensic artifact collector command injection; lacks enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-41450",
+    "identity": {
+      "title": "CVE-2026-41450",
+      "published": "2026-08-21 17:35:04",
+      "modified": "2026-08-21 18:16:48",
+      "description": "UAC (Unix-like Artifacts Collector) versions prior to 3.3.0 contain a command injection vulnerability in the _command_collector function where foreach command output lines are substituted directly into command strings via sed without proper escaping before being evaluated with eval. Attackers can exploit this by crafting malicious filenames or artifact definitions containing shell metacharacters such as command substitution syntax or semicolons to execute arbitrary commands on the analyst's host system."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/tclahr/uac/commit/2cc367d8ead388f05abd3cfb8af537788a124e72"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "tclahr",
+      "products": "uac",
+      "cpe_uris": "cpe:2.3:a:tclahr:uac:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/tclahr/uac/commit/2cc367d8ead388f05abd3cfb8af537788a124e72",
+      "https://github.com/tclahr/uac/pull/443",
+      "https://www.vulncheck.com/advisories/uac-command-injection-via-command-collector-sh"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-41450",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-41450"
+    },
+    "item_id": "CVE-2026-41450",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Niche forensic artifact collector command injection; lacks enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-41449",
+    "identity": {
+      "title": "CVE-2026-41449",
+      "published": "2026-08-21 17:33:50",
+      "modified": "2026-08-21 19:17:01",
+      "description": "UAC (Unix-like Artifacts Collector) versions prior to 3.3.0 contain a command injection vulnerability in the _run_command function that allows attackers to execute arbitrary commands by injecting shell metacharacters into untrusted data such as usernames, process names, or filenames. Attackers can exploit this vulnerability through crafted evidence inputs, mounted images with hostile filenames, or tampered artifact definitions to achieve remote code execution on the analyst's host when processing evidence."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/tclahr/uac/pull/443"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "tclahr",
+      "products": "uac",
+      "cpe_uris": "cpe:2.3:a:tclahr:uac:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/tclahr/uac/pull/443",
+      "https://www.vulncheck.com/advisories/uac-command-injection-via-run-command-sh",
+      "https://github.com/tclahr/uac/commit/2cc367d8ead388f05abd3cfb8af537788a124e72"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-41449",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-41449"
+    },
+    "item_id": "CVE-2026-41449",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Niche forensic artifact collector command injection; lacks enterprise/DPI footprint or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17252",
+    "identity": {
+      "title": "CVE-2026-17252",
+      "published": "2026-08-21 17:16:51",
+      "modified": "2026-08-21 18:16:47",
+      "description": "A\nstack-based out-of-bounds write vulnerability exists in the login request\nhandling functionality of the administrative web interface of TP-Link TL-MR6400 v7 routers. An unauthenticated adjacent attacker can trigger the vulnerability\nby sending a specially crafted malformed HTTP request. \n\n\n\n\n\nSuccessful\nexploitation may cause the web service process to crash, resulting in a\ndenial-of-service condition and temporary loss of access to the router's web\nmanagement interface."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.tp-link.com/us/support/faq/5259/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-787",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "TP-Link Systems Inc.",
+      "products": "TL-MR6400 v7.0",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.tp-link.com/us/support/faq/5259/",
+      "https://www.tp-link.com/en/support/download/tl-mr6400/v7/#Firmware",
+      "https://www.tp-link.com/tw/support/download/tl-mr6400/v7/#Firmware"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17252",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17252"
+    },
+    "item_id": "CVE-2026-17252",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router DoS vulnerability with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17251",
+    "identity": {
+      "title": "CVE-2026-17251",
+      "published": "2026-08-21 17:16:45",
+      "modified": "2026-08-21 18:16:47",
+      "description": "A NULL\npointer dereference vulnerability exists in the HTTP request parsing\nfunctionality of \nTL-MR6400 v7. An unauthenticated remote attacker can\ntrigger the vulnerability by sending a specially crafted HTTP request\ncontaining a malformed session cookie header. \n\n\n\n\n\nSuccessful\nexploitation may cause the HTTP service process to crash, resulting in a\ndenial-of-service condition and temporary loss of management or CGI\nfunctionality until service recovery."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.tp-link.com/us/support/faq/5259/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "cwe_primary": "CWE-476",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-476": "NULL Pointer Dereference"
+      }
+    },
+    "software": {
+      "vendors": "TP-Link Systems Inc.",
+      "products": "TL-MR6400 v7.0",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.tp-link.com/us/support/faq/5259/",
+      "https://www.tp-link.com/en/support/download/tl-mr6400/v7/#Firmware",
+      "https://www.tp-link.com/tw/support/download/tl-mr6400/v7/#Firmware"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17251",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17251"
+    },
+    "item_id": "CVE-2026-17251",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router DoS vulnerability with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17250",
+    "identity": {
+      "title": "CVE-2026-17250",
+      "published": "2026-08-21 17:16:38",
+      "modified": "2026-08-21 18:16:47",
+      "description": "A\nstack-based buffer overflow vulnerability exists in the firmware update\nfunctionality of TL-MR6400 v7 due to unsafe processing of\nattacker-controlled metadata within a firmware image. \n\n\n\n\n\nSuccessful\nexploitation may allow an authenticated attacker to trigger memory corruption\nand execute arbitrary code on the affected device."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.tp-link.com/us/support/faq/5259/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-121",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "TP-Link Systems Inc.",
+      "products": "TL-MR6400 v7.0",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.tp-link.com/us/support/faq/5259/",
+      "https://www.tp-link.com/en/support/download/tl-mr6400/v7/#Firmware",
+      "https://www.tp-link.com/tw/support/download/tl-mr6400/v7/#Firmware"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17250",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-17250"
+    },
+    "item_id": "CVE-2026-17250",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router RCE vulnerability with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75796",
+    "identity": {
+      "title": "CVE-2026-75796",
+      "published": "2026-08-21 06:00:17",
+      "modified": "2026-08-21 13:18:19",
+      "description": "The AI Engine  WordPress plugin before 3.6.1 does not verify that the requesting user is authorized to act on the targeted account before performing privileged user management operations, allowing users with the Administrator role on a Multisite sub-site to take over any account on the network, including the Network Administrator's."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00144,
+      "percentile": 0.04201,
+      "date": "2026-08-22"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/919da0c7-7643-4903-9454-2fb66353f5cb/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "AI Engine",
+      "cpe_uris": "cpe:2.3:a:meowapps:ai_engine:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/919da0c7-7643-4903-9454-2fb66353f5cb/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-75796",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-75796"
+    },
+    "item_id": "CVE-2026-75796",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16576",
+    "identity": {
+      "title": "CVE-2026-16576",
+      "published": "2026-08-21 06:00:16",
+      "modified": "2026-08-21 13:16:53",
+      "description": "The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.0.14 does not correctly check user capabilities on some of its admin REST API routes, checking only for a WooCommerce management capability instead of the Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.0.14-installation capability, allowing users such as Shop Managers to install and activate arbitrary Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.0.14 from WordPress.org."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00132,
+      "percentile": 0.03217,
+      "date": "2026-08-22"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/801e9008-e912-4606-8c21-3d31dc0bd2c7/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "cwe_primary": "CWE-284",
+      "cwe_family": "AuthZ/Access Control",
+      "cwe_names": {
+        "CWE-284": "Improper Access Control"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Dokan: AI Powered WooCommerce Multivendor Marketplace Solution",
+      "cpe_uris": "cpe:2.3:*:*:dokan\\:_ai_powered_woocommerce_multivendor_marketplace_solution:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/801e9008-e912-4606-8c21-3d31dc0bd2c7/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16576",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16576"
+    },
+    "item_id": "CVE-2026-16576",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress/WooCommerce plugin with no enterprise or DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18781",
+    "identity": {
+      "title": "CVE-2026-18781",
+      "published": "2026-08-21 06:00:16",
+      "modified": "2026-08-21 13:16:55",
+      "description": "The Drag and Drop Multiple File Upload for Contact Form 7 WordPress plugin before 1.3.9.9 does not validate the final name of an uploaded file after stripping characters from it, allowing unauthenticated users to defeat its file type restrictions and execute arbitrary code on the server."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00208,
+      "percentile": 0.113,
+      "date": "2026-08-22"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/fb59519b-80ae-48e4-a31a-71d24ded205b/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Drag and Drop Multiple File Upload for Contact Form 7",
+      "cpe_uris": "cpe:2.3:*:*:drag_and_drop_multiple_file_upload_for_contact_form_7:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/fb59519b-80ae-48e4-a31a-71d24ded205b/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18781",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18781"
+    },
+    "item_id": "CVE-2026-18781",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint or exploitation signal, despite unauthenticated RCE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18409",
+    "identity": {
+      "title": "CVE-2026-18409",
+      "published": "2026-08-21 03:37:48",
+      "modified": "2026-08-21 16:17:15",
+      "description": "The WPForms Pro plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Single Line Text and Paragraph Text Field Values in all versions up to, and including, 2.0.0.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit relies on the plugin's own wp_kses_allowed_html filter widening the 'post' allowlist to permit iframe elements with a data-src attribute, which is not on WordPress's URI-attribute sanitization list, allowing a javascript: URI stored in data-src to survive kses processing and subsequently be promoted to a live src attribute by the bundled admin script view-entry.min.js."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00231,
+      "percentile": 0.14281,
+      "date": "2026-08-22"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpforms.com/docs/how-to-view-recent-changes-to-the-wpforms-plugin-changelog/#Changelog"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "WPForms",
+      "products": "WPForms Pro",
+      "cpe_uris": "cpe:2.3:a:wpforms:wpforms_pro:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpforms.com/docs/how-to-view-recent-changes-to-the-wpforms-plugin-changelog/#Changelog",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/f26cbc41-8ed9-4dc6-a8bc-9986ecab5e6e?source=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18409",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18409"
+    },
+    "item_id": "CVE-2026-18409",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  }
+]

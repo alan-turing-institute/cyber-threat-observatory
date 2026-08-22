@@ -1,0 +1,322 @@
+[
+  {
+    "id": "CVE-2026-77806",
+    "published": "2026-08-21 13:37:43",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "SPIP before 4.4.21 allows unauthenticated remote attackers to execute arbitrary code, as exploited in the wild in August 2026. This is related to code injection via an X-Spip-Filtre HTTP request header that is mishandled by analyse_resultat_skel.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "CMS software (SPIP) with code injection vulnerability; consumer web platform exclusion applies with no identity or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-20317",
+    "published": "2026-08-19 16:19:28",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Secure Workload engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20317 are related to improper authentication issues that are grouped under the Common Weakness Enumeration (CWE) CWE-287.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise workload security software with improper authentication CWE but lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-20357",
+    "published": "2026-08-19 16:18:44",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Crosswork engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20357 are related to missing authentication for critical function issues that are grouped under the Common Weakness Enumeration (CWE) CWE-306.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Network management platform (Cisco Crosswork) with missing authentication CWE but no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-20359",
+    "published": "2026-08-19 16:18:52",
+    "cvss": 9.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Crosswork engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities trackled by CVE-2026-20359 are related to insufficiently protected credentials issues that are grouped under the Common Weakness Enumeration (CWE) CWE-522.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Network management platform with insufficiently protected credentials CWE but lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77264",
+    "published": "2026-08-21 07:39:24",
+    "cvss": 9.8,
+    "epss": 0.00481,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Automation Web Platform – Notifications and OTP for WooCommerce, Advanced Country Code plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 4.8.6. This is due to the handle_email_otp_return() function returning the secret magic login token in the response to a publicly accessible OTP request, rather than only delivering it to the user's email address. This makes it possible for unauthenticated attackers to log in as any user on the site, including administrators, if they know that user's email address.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with authentication bypass; consumer/hobbyist software exclusion applies per overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18031",
+    "published": "2026-08-19 06:00:18",
+    "cvss": 9.8,
+    "epss": 0.00146,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The TabaPay Gateway WordPress plugin through 1.4.0 does not validate the payment callback before establishing a session for the account associated with the referenced order, allowing unauthenticated attackers to log in as any registered user, including an administrator.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with session and authentication bypass; consumer/hobbyist software exclusion applies per overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63722",
+    "published": "2026-08-19 19:13:45",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "ICEcoder 8.1 contains an unauthenticated remote code execution vulnerability that allows unauthenticated attackers to execute arbitrary OS commands by chaining an authentication bypass, CSRF validation bypass, and unsanitized command execution. Attackers can send a single HTTP POST request to the terminal endpoint with a password parameter to bypass authentication, a non-empty csrf parameter to skip CSRF validation, and an arbitrary command string passed directly to proc_open() to achieve remote code execution as the web-server user.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Web-based code editor (ICEcoder) with authentication bypass and RCE; lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-72529",
+    "published": "2026-08-19 16:55:14",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A remote unauthorized attacker with network access via port 4307/TCP to the TrueConf server versions 5.3.X to 5.3.9, 5.4.X to 5.4.9, 5.5.X to 5.5.5, and earlier could execute an arbitrary script by calling an undocumented function.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Video conferencing server with RCE via undocumented function; no authentication, identity, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17142",
+    "published": "2026-08-20 21:54:07",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary commands due to improper authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "General-purpose OS (AIX/PowerVM) improper authentication flaw, not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55642",
+    "published": "2026-08-20 16:38:29",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "dbx is a cross-platform database client for databases. Prior to 0.5.51, dbx-web auth_middleware in crates/dbx-web/src/auth.rs passes every protected request to the handler chain when password_hash is None. A fresh deployment reaches that state when DBX_PASSWORD is unset and no stored password exists, while crates/dbx-web/src/main.rs binds the service to 0.0.0.0 on port 4224 by default. An unauthenticated network attacker can call the /api/connection/connect and /api/query/execute routes to use configured database credentials and execute arbitrary SQL, allowing disclosure, modification, or destruction of data in connected databases. The desktop Tauri application is not affected because it binds only to loopback. This issue is fixed in version 0.5.51.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Niche database client tool with missing auth on default config, falls under consumer/hobbyist software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15706",
+    "published": "2026-08-20 13:27:51",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function vulnerability in Baylan Measuring Instruments Industry and Trade Inc. Baylan Smart Meter Management Application (BMS) allows Authentication Bypass.\n\nThis issue affects Baylan Smart Meter Management Application (BMS): before v1.1.10.142.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Industrial/SCADA smart meter management application, excluded by base Digital Identity and overlay industrial software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18265",
+    "published": "2026-08-20 16:13:34",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OSNEXUS QuantaStor Missing Authentication Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OSNEXUS QuantaStor. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the configuration of Kapacitor. The issue results from the lack of authentication prior to allowing access to functionality. An attacker can leverage this vulnerability to execute code in the context of root. Was ZDI-CAN-30036.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise storage management software (QuantaStor/Kapacitor) missing authentication, not identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16656",
+    "published": "2026-08-19 14:55:53",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to gain root privileges due to improper authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "General-purpose OS (AIX/PowerVM) improper authentication flaw, not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77644",
+    "published": "2026-08-20 21:54:48",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A critical bypass access control vulnerability has been reported in PTC Windchill Risk and Reliability (WRR) Enterprise Edition.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise PLM software (PTC Windchill) access control bypass, not identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76157",
+    "published": "2026-08-21 01:47:44",
+    "cvss": 8.8,
+    "epss": 0.00418,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for a critical function in the upload API endpoint of Datiphy Data Management Center from v8.3.0 through v8.5.1 allows an unauthenticated remote attacker to upload arbitrary files to the server's configured upload directory.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise data management software missing authentication on upload API, not identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19842",
+    "published": "2026-08-19 06:00:21",
+    "cvss": 8.8,
+    "epss": 0.00107,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The SAML Single Sign On  WordPress plugin before 5.4.7 does not verify the signature of a SAML response before storing the certificate it carries, and offers an administrator a one-click control that promotes that stored certificate to the site's trusted signing certificate, allowing unauthenticated attackers to have a certificate of their own trusted and then authenticate as any user, including an administrator.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress SAML plugin, explicitly excluded by overlay hard rule for consumer/hobbyist and base WordPress exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-48050",
+    "published": "2026-08-21 22:40:12",
+    "cvss": 8.8,
+    "epss": 0.0009,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Arc is an open, SQL-native time-series database for telemetry. Versions prior to 26.06.1 register Go's `net/http/pprof` handlers at `/debug/pprof/*` via `app.Use(pprof.New())` in `internal/api/server.go`, and `/debug/pprof` is added to `PublicPrefixes` in `cmd/arc/main.go`. The auth middleware short-circuits before the token check on prefix match, so the endpoints are reachable without any authentication. Version 26.06.1 contains a patch. Some workarounds are available. Block `/debug/pprof*` at a reverse proxy / load balancer in front of Arc, restrict Arc's API port to known-trusted networks via firewall rules, and/or patch the running build: comment out `app.Use(pprof.New())` in `internal/api/server.go` and rebuild.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Debug endpoint exposure in a telemetry database, no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19489",
+    "published": "2026-08-19 12:45:16",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in NetScaler ADC and NetScaler Gateway.\n\nThis issue affects ADC: from 14.1 through 73.32 and from 13.1 through 63.21; Gateway: from 14.1 through 73.32 and from 13.1 through 63.21.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no exploitable detail, despite NetScaler being identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14952",
+    "published": "2026-08-20 08:19:46",
+    "cvss": 8.7,
+    "epss": 0.00486,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated remote attacker can retrieve sensible files from the FDS Web server, such as the backup archive at /FdsBackup.zip and additional files under /downloads/*, directly over HTTP without a valid session. These files disclose detailed railway signaling and track layout information that should not be available to unauthenticated users.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated file disclosure in railway signaling web server, no identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76633",
+    "published": "2026-08-20 13:46:24",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "WeGIA before 3.9.2 contains an authorization bypass vulnerability in the password change flow that allows any authenticated user to change their account password without providing existing credentials by exploiting the unconditional exclusion of the alterarSenha method from permission checks in controle/control.php. Attackers can manipulate the redir parameter to point to alterar_senha.php, routing through verificarSenhaConfig() instead of verificarSenha() to bypass current password verification and convert temporary session access into permanent account takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Password-change authorization bypass in niche web application with no clear DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  }
+]
