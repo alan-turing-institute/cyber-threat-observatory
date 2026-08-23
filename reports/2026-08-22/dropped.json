@@ -1,0 +1,2375 @@
+[
+  {
+    "id": "CVE-2026-0551",
+    "identity": {
+      "title": "CVE-2026-0551",
+      "published": "2026-08-22 23:27:19",
+      "modified": "2026-08-23 00:16:49",
+      "description": "The PPWP – Password Protect Pages plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.9.18 via deserialization of untrusted input from the 'post_protection_roles' vulnerable parameter. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/b8f53282-740e-4ac3-a2e1-7a97893e3355?source=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data"
+      }
+    },
+    "software": {
+      "vendors": "buildwps",
+      "products": "PPWP – Password Protect Pages",
+      "cpe_uris": "cpe:2.3:*:buildwps:ppwp_password_protect_pages:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/b8f53282-740e-4ac3-a2e1-7a97893e3355?source=cve",
+      "https://plugins.trac.wordpress.org/changeset/3567221/password-protect-page",
+      "https://plugins.trac.wordpress.org/browser/password-protect-page/trunk/includes/services/class-ppw-passwords.php#L699"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-0551",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-0551"
+    },
+    "item_id": "CVE-2026-0551",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16149",
+    "identity": {
+      "title": "CVE-2026-16149",
+      "published": "2026-08-22 23:27:18",
+      "modified": "2026-08-23 00:16:50",
+      "description": "The Security Hardener plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 2.4.4. The vulnerability exists because the plugin's user-enumeration protection, which is enabled by default, hooks the rest_endpoints filter via secure_user_endpoints() and overwrites every registered handler's permission_callback on both the /wp/v2/users and /wp/v2/users/(?P<id>[\\d]+) routes — including POST, PUT, PATCH, and DELETE handlers — with a bare closure that returns only is_user_logged_in(), completely stripping WordPress Core's original capability checks such as create_users, promote_user, edit_users, and delete_users that WP_REST_Users_Controller normally enforces. This makes it possible for authenticated attackers with Subscriber-level access and above to create new Administrator accounts by sending POST request to /wp/v2/users with administrator role, or to reset an existing Administrator's password by issuing a PUT/POST request to /wp/v2/users/<id>. Because the block_user_enum option defaults to enabled, no special plugin configuration is required — the overwrite is active on every request as soon as the plugin is installed."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L180"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "marc4",
+      "products": "Security Hardener",
+      "cpe_uris": "cpe:2.3:*:marc4:security_hardener:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L180",
+      "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L204",
+      "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L107",
+      "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L433",
+      "https://plugins.trac.wordpress.org/changeset/3630896/security-hardener",
+      "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L428",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/64f1a71f-e210-4191-bfb4-56f8568180ed?source=cve",
+      "https://plugins.trac.wordpress.org/browser/security-hardener/tags/2.4.4/security-hardener.php#L439"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16149",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16149"
+    },
+    "item_id": "CVE-2026-16149",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78050",
+    "identity": {
+      "title": "CVE-2026-78050",
+      "published": "2026-08-22 23:15:11",
+      "modified": "2026-08-23 00:16:50",
+      "description": "A vulnerability was found in Comfast CF-N1-S 2.6.0.1. The affected element is the function sub_41AD7C of the file /cgi-bin/mbox-config?method=SET&section=ntp_timezone of the component Web Management. The manipulation of the argument timestr/ntp_client_enabled results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been made public and could be used."
+    },
+    "cvss": {
+      "base_score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/AdminSafe/CVE/issues/9"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Comfast",
+      "products": "CF-N1-S",
+      "cpe_uris": "cpe:2.3:h:comfast:cf-n1-s:2.6.0.1:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/AdminSafe/CVE/issues/9",
+      "https://vuldb.com/submit/881293",
+      "https://vuldb.com/vuln/394291",
+      "https://vuldb.com/vuln/394291/cti",
+      "https://vuldb.com/cve/CVE-2026-78050"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-78050",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-78050"
+    },
+    "item_id": "CVE-2026-78050",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Consumer home router firmware with public exploit but no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-4703",
+    "identity": {
+      "title": "CVE-2026-4703",
+      "published": "2026-08-22 15:27:26",
+      "modified": "2026-08-22 16:16:29",
+      "description": "The WS Form LITE – Drag & Drop Contact Form Builder plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.10.80 via deserialization of untrusted input from form submission meta values. This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/ws-form/trunk/includes/class-ws-form-common.php#L7154"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data"
+      }
+    },
+    "software": {
+      "vendors": "westguard",
+      "products": "WS Form LITE – Drag & Drop Contact Form Builder",
+      "cpe_uris": "cpe:2.3:*:westguard:ws_form_lite_drag_\\&_drop_contact_form_builder:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/ws-form/trunk/includes/class-ws-form-common.php#L7154",
+      "https://plugins.trac.wordpress.org/browser/ws-form/trunk/includes/core/class-ws-form-submit.php#L1061",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/df36eae9-6f2b-432c-a765-57450939b344?source=cve",
+      "https://plugins.trac.wordpress.org/changeset/3489609/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-4703",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-4703"
+    },
+    "item_id": "CVE-2026-4703",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76606",
+    "identity": {
+      "title": "CVE-2026-76606",
+      "published": "2026-08-22 14:23:09",
+      "modified": "2026-08-22 15:16:22",
+      "description": "Joomla Extension - fabrikar.com - Path Traversal via image element in Fabrik < 4.7.3 - ???."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76606",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76606"
+    },
+    "item_id": "CVE-2026-76606",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77027",
+    "identity": {
+      "title": "CVE-2026-77027",
+      "published": "2026-08-22 14:21:49",
+      "modified": "2026-08-22 15:16:23",
+      "description": "Joomla Extension - fabrikar.com - Unauthenticated stored XSS in Fabrik < 4.7.2 - The handling of user supplied input in the jsactions feature leads to an stored XSS vector."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77027",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77027"
+    },
+    "item_id": "CVE-2026-77027",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76602",
+    "identity": {
+      "title": "CVE-2026-76602",
+      "published": "2026-08-22 14:21:28",
+      "modified": "2026-08-22 15:16:22",
+      "description": "Joomla Extension - fabrikar.com - Unauthenticated SQL injection in ORDER BY in Fabrik < 4.7.3 - The order parameter in list models is used in queries without validation, allowing read SQLi vectors."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76602",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76602"
+    },
+    "item_id": "CVE-2026-76602",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76571",
+    "identity": {
+      "title": "CVE-2026-76571",
+      "published": "2026-08-22 14:21:01",
+      "modified": "2026-08-22 15:16:21",
+      "description": "Joomla Extension - fabrikar.com - Unauthenticated SQL injection in list filter condition parameter in Fabrik < 4.7.3 - The condition parameter passed to a list filter is concatenated verbatim into the WHERE clause built by getFilterQuery(). An unauthenticated attacker can supply arbitrary SQL through the filter condition, giving full read of the database."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76571",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76571"
+    },
+    "item_id": "CVE-2026-76571",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76597",
+    "identity": {
+      "title": "CVE-2026-76597",
+      "published": "2026-08-22 14:20:40",
+      "modified": "2026-08-22 15:16:21",
+      "description": "Joomla Extension - fabrikar.com - Unauthenticated arbitrary file upload to web root via list email plugin in Fabrik < 4.7.2 - The list email plugin controller allows to upload non-executable files to the webroot."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "cwe_primary": "CWE-284",
+      "cwe_family": "AuthZ/Access Control",
+      "cwe_names": {
+        "CWE-284": "Improper Access Control"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76597",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76597"
+    },
+    "item_id": "CVE-2026-76597",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76598",
+    "identity": {
+      "title": "CVE-2026-76598",
+      "published": "2026-08-22 14:20:38",
+      "modified": "2026-08-22 15:16:21",
+      "description": "Joomla Extension - fabrikar.com - Unauthenticated arbitrary directory listing via onAjax_getFolders in Fabrik < 4.7.2 - The onAjax_getFolders method of the elements model allows arbitrary directory listings."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-284"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+        "CWE-284": "Improper Access Control"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76598",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76598"
+    },
+    "item_id": "CVE-2026-76598",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension explicitly excluded as consumer-only software with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76605",
+    "identity": {
+      "title": "CVE-2026-76605",
+      "published": "2026-08-22 14:20:27",
+      "modified": "2026-08-22 15:16:22",
+      "description": "Joomla Extension - fabrikar.com - Remote code execution via image element in Fabrik < 4.7.3 - ???."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76605",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76605"
+    },
+    "item_id": "CVE-2026-76605",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension explicitly excluded as consumer-only software with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76596",
+    "identity": {
+      "title": "CVE-2026-76596",
+      "published": "2026-08-22 14:20:22",
+      "modified": "2026-08-22 15:16:21",
+      "description": "Joomla Extension - fabrikar.com - Unauthenticated table truncation via list.doempty in Fabrik < 4.7.2- The list controllers doemtpy endpoints lacks ACL gates, a plain GET empties the target list's table"
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "cwe_primary": "CWE-284",
+      "cwe_family": "AuthZ/Access Control",
+      "cwe_names": {
+        "CWE-284": "Improper Access Control"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76596",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76596"
+    },
+    "item_id": "CVE-2026-76596",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension explicitly excluded as consumer-only software with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77992",
+    "identity": {
+      "title": "CVE-2026-77992",
+      "published": "2026-08-22 14:20:18",
+      "modified": "2026-08-22 15:16:23",
+      "description": "Joomla Extension - fabrikar.com - heredoc terminator breakout in the calc element in Fabrik < 4.7.2 - The onUpdateComment endpoint did not perform any access checks."
+    },
+    "cvss": {
+      "base_score": 9.5,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77992",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77992"
+    },
+    "item_id": "CVE-2026-77992",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension explicitly excluded as consumer-only software with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76604",
+    "identity": {
+      "title": "CVE-2026-76604",
+      "published": "2026-08-22 14:18:07",
+      "modified": "2026-08-22 15:16:22",
+      "description": "Joomla Extension - fabrikar.com - Unauthenticated remote code execution via PHP form element in Fabrik < 4.7.3 - The PHP form element is vulnerable to the execution of user provided codes."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76604",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76604"
+    },
+    "item_id": "CVE-2026-76604",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension explicitly excluded as consumer-only software with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76607",
+    "identity": {
+      "title": "CVE-2026-76607",
+      "published": "2026-08-22 14:15:50",
+      "modified": "2026-08-22 15:16:22",
+      "description": "Joomla Extension - fabrikar.com - Missing ACL check in download element in Fabrik < 4.7.3 - ???."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "cwe_primary": "CWE-284",
+      "cwe_family": "AuthZ/Access Control",
+      "cwe_names": {
+        "CWE-284": "Improper Access Control"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76607",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76607"
+    },
+    "item_id": "CVE-2026-76607",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension explicitly excluded as consumer-only software with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76599",
+    "identity": {
+      "title": "CVE-2026-76599",
+      "published": "2026-08-22 14:14:29",
+      "modified": "2026-08-22 15:16:21",
+      "description": "Joomla Extension - fabrikar.com - Unauthenticated database table list and table-prefix disclosure in Fabrik < 4.7.2 - The ajax_tables method of the elements model allows listings of arbitrary database tables including columns."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.fabrikar.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "cwe_primary": "CWE-284",
+      "cwe_family": "AuthZ/Access Control",
+      "cwe_names": {
+        "CWE-284": "Improper Access Control"
+      }
+    },
+    "software": {
+      "vendors": "fabrikar.com",
+      "products": "Fabrik extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.fabrikar.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76599",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-76599"
+    },
+    "item_id": "CVE-2026-76599",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla extension explicitly excluded as consumer-only software with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-68766",
+    "identity": {
+      "title": "CVE-2026-68766",
+      "published": "2026-08-22 14:12:42",
+      "modified": "2026-08-22 15:16:20",
+      "description": "hashcat fails to restrict command-line options when parsing restore files, allowing attackers to inject output-redirecting options like --outfile and --potfile-path. Attackers can craft restore files with malicious options to append attacker-controlled content to arbitrary files, enabling code execution when targeting shell startup files."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/hashcat/hashcat/commit/fcae69f2438ff8eae0dc8e206b78067a1e465ed4"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-88"
+      ],
+      "cwe_primary": "CWE-88",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-88": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')"
+      }
+    },
+    "software": {
+      "vendors": "hashcat",
+      "products": "hashcat",
+      "cpe_uris": "cpe:2.3:a:hashcat:hashcat:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/hashcat/hashcat/commit/fcae69f2438ff8eae0dc8e206b78067a1e465ed4",
+      "https://github.com/hashcat/hashcat/issues/4738",
+      "https://www.vulncheck.com/advisories/hashcat-through-arbitrary-file-write-via-restore-file-option-injection",
+      "https://github.com/hashcat/hashcat",
+      "https://github.com/hashcat/hashcat/blob/v7.1.2/src/restore.c#L365-L369"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-68766",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-68766"
+    },
+    "item_id": "CVE-2026-68766",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche security utility with no enterprise or DPI infrastructure footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-2996",
+    "identity": {
+      "title": "CVE-2026-2996",
+      "published": "2026-08-22 13:27:14",
+      "modified": "2026-08-22 14:16:32",
+      "description": "The Advanced Product Fields (Product Addons) for WooCommerce plugin for WordPress is vulnerable to Improper Input Validation in all versions up to, and including, 1.6.21. This is due to a logic flaw in the 'validate_cart_data' function. This makes it possible for unauthenticated attackers to bypass required paid addons and complete purchases at the base product price only, effectively stealing products by paying a fraction of the intended total. The vulnerability was partially patched in version 1.6.19."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/changeset/3483410/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "cwe_primary": "CWE-20",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-20": "Improper Input Validation"
+      }
+    },
+    "software": {
+      "vendors": "maartenbelmans",
+      "products": "Advanced Product Fields (Product Addons) for WooCommerce",
+      "cpe_uris": "cpe:2.3:*:maartenbelmans:advanced_product_fields_\\(product_addons\\)_for_woocommerce:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/changeset/3483410/",
+      "https://plugins.trac.wordpress.org/changeset/3477476/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/5d9c1c3d-6882-4425-8d32-bdb57b4f133d?source=cve",
+      "https://plugins.trac.wordpress.org/browser/advanced-product-fields-for-woocommerce/trunk/includes/controllers/class-product-controller.php#L130"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-2996",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-2996"
+    },
+    "item_id": "CVE-2026-2996",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress/WooCommerce plugin with no enterprise or DPI footprint, explicitly excluded by consumer-only software rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-60084",
+    "identity": {
+      "title": "CVE-2026-60084",
+      "published": "2026-08-22 12:26:41",
+      "modified": "2026-08-22 13:16:39",
+      "description": "SiYuan versions before v3.7.4 contain an arbitrary file deletion vulnerability in the /api/search/removeTemplate endpoint that accepts an unvalidated path parameter passed directly to os.RemoveAll. Authenticated admin attackers can supply absolute filesystem paths to recursively delete any file or directory the kernel process has permission to remove, anywhere on the host filesystem."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-w938-w7m4-qrj8"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-w938-w7m4-qrj8",
+      "https://www.vulncheck.com/advisories/siyuan-before-arbitrary-file-deletion-via-removetemplate"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-60084",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-60084"
+    },
+    "item_id": "CVE-2026-60084",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Personal knowledge management application with no enterprise or DPI footprint, requiring authenticated admin access.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59256",
+    "identity": {
+      "title": "CVE-2026-59256",
+      "published": "2026-08-22 12:26:33",
+      "modified": "2026-08-22 13:16:38",
+      "description": "WWBN AVideo through commit 9c39d8c8 contains an authorization bypass vulnerability where getToken() creates tokens without binding to user identity or purpose, and plugin/Gallery/view/sections.php issues valid tokens to unauthenticated visitors. Attackers can retrieve a token from the Gallery endpoint and use it to bypass authorization checks in other subsystems like view/hls.php to access restricted video content."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-wq57-wxcr-rx6v"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "WWBN",
+      "products": "AVideo",
+      "cpe_uris": "cpe:2.3:a:wwbn:avideo:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "wwbn:avideo",
+          "vendor": "WWBN",
+          "product": "AVideo",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/WWBN/AVideo/security/advisories/GHSA-wq57-wxcr-rx6v",
+      "https://www.vulncheck.com/advisories/wwbn-avideo-unbound-token-authorization-bypass-via-gallery"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59256",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59256"
+    },
+    "item_id": "CVE-2026-59256",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer video sharing platform authorization bypass with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59808",
+    "identity": {
+      "title": "CVE-2026-59808",
+      "published": "2026-08-22 12:26:33",
+      "modified": "2026-08-22 13:16:38",
+      "description": "AVideo through commit 9c39d8c8 contains an authentication bypass vulnerability where deduplicateByEncoderQueueId() returns video_id_hash credentials for any video by encoder_queue_id without ownership verification, and useVideoHashOrLogin() converts this hash into passwordless login as the video owner. Attackers with upload permission can retrieve an administrator's video_id_hash by omitting the videos_id parameter, then use that hash in an unauthenticated request to gain administrative session access and modify system configuration."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-q32p-rw3q-8x3r"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": "WWBN",
+      "products": "AVideo",
+      "cpe_uris": "cpe:2.3:a:wwbn:avideo:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "wwbn:avideo",
+          "vendor": "WWBN",
+          "product": "AVideo",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/WWBN/AVideo/security/advisories/GHSA-q32p-rw3q-8x3r",
+      "https://www.vulncheck.com/advisories/avideo-authentication-bypass-via-unkeyed-video-hash-disclosure"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59808",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-59808"
+    },
+    "item_id": "CVE-2026-59808",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer video platform authentication bypass lacking enterprise/DPI footprint or active exploitation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-58003",
+    "identity": {
+      "title": "CVE-2026-58003",
+      "published": "2026-08-22 12:26:32",
+      "modified": "2026-08-22 13:16:38",
+      "description": "WWBN AVideo through commit 9c39d8c8 contains a cross-site request forgery vulnerability in the releaseVideoNow.json.php endpoint that lacks authenticity checks and accepts GET requests. Attackers can craft a malicious cross-site GET request carrying an administrator's session cookie to permanently publish any embargoed video by manipulating the videos_id parameter."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-q8cg-7x7q-c4g2"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-352"
+      ],
+      "cwe_primary": "CWE-352",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-352": "Cross-Site Request Forgery (CSRF)"
+      }
+    },
+    "software": {
+      "vendors": "WWBN",
+      "products": "AVideo",
+      "cpe_uris": "cpe:2.3:a:wwbn:avideo:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "wwbn:avideo",
+          "vendor": "WWBN",
+          "product": "AVideo",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/wwbn-avideo-cross-site-request-forgery-via-releasevideonow-json-php",
+      "https://github.com/WWBN/AVideo/security/advisories/GHSA-q8cg-7x7q-c4g2"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-58003",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-58003"
+    },
+    "item_id": "CVE-2026-58003",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer video platform CSRF with limited impact, no enterprise/DPI nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-58002",
+    "identity": {
+      "title": "CVE-2026-58002",
+      "published": "2026-08-22 12:26:31",
+      "modified": "2026-08-22 13:16:38",
+      "description": "WWBN AVideo through commit 9c39d8c8b4c1f75540788d6b391740852ceb0732 contains an authorization bypass vulnerability in the Users_affiliations add.json.php endpoint that allows authenticated users to forge two-party consent records by supplying the counterparty's agreement timestamp. Attackers can create a forged affiliation with status='a' and then reassign video ownership to arbitrary users through the videoAddNew.json.php endpoint, which trusts the forged affiliation as an authorization term."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-rg7g-cgjq-4wx8"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-345"
+      ],
+      "cwe_primary": "CWE-345",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-345": "Insufficient Verification of Data Authenticity"
+      }
+    },
+    "software": {
+      "vendors": "WWBN",
+      "products": "AVideo",
+      "cpe_uris": "cpe:2.3:a:wwbn:avideo:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "wwbn:avideo",
+          "vendor": "WWBN",
+          "product": "AVideo",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/WWBN/AVideo/security/advisories/GHSA-rg7g-cgjq-4wx8",
+      "https://www.vulncheck.com/advisories/wwbn-avideo-authorization-bypass-via-users-affiliations-add-json-php"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-58002",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-58002"
+    },
+    "item_id": "CVE-2026-58002",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer video platform authorization bypass with no enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-66917",
+    "identity": {
+      "title": "CVE-2026-66917",
+      "published": "2026-08-22 11:12:32",
+      "modified": "2026-08-22 12:16:25",
+      "description": "Joomla Extension - joomgalleryfriends.net - Stored XSS in JoomGallery < 4.4.0 - An authenticated, privileged can store an XSS payload in any image causing JS execution in every visitor's browser."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.joomgalleryfriends.net/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "joomgalleryfriends.net",
+      "products": "JoomGallery extension for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.joomgalleryfriends.net/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66917",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-66917"
+    },
+    "item_id": "CVE-2026-66917",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla CMS extension stored XSS falls under consumer CMS add-on exclusion with no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77946",
+    "identity": {
+      "title": "CVE-2026-77946",
+      "published": "2026-08-22 11:00:09",
+      "modified": "2026-08-22 11:16:54",
+      "description": "A vulnerability was determined in TRENDnet TEW-821DAP 2.2.01b05. Affected by this vulnerability is the function uci_safe_get of the file /cgi-bin/apply_time.cgi of the component NTP Timezone Configuration Handler. Executing a manipulation of the argument system.ntp.server/system.ntp.enable_server/cameo.time.time_zone/cameo.cameo.syslog_server can lead to stack-based buffer overflow. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/TEW-821DAP_ssi_NTP_Timezone_Config_Stack_Overflow.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "TRENDnet",
+      "products": "TEW-821DAP",
+      "cpe_uris": "cpe:2.3:h:trendnet:tew-821dap:2.2.01b05:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/394175/cti",
+      "https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/TEW-821DAP_ssi_NTP_Timezone_Config_Stack_Overflow.md",
+      "https://vuldb.com/cve/CVE-2026-77946",
+      "https://vuldb.com/submit/881252",
+      "https://vuldb.com/vuln/394175"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77946",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77946"
+    },
+    "item_id": "CVE-2026-77946",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Consumer wireless access point buffer overflow with public exploit but lacks enterprise/DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77945",
+    "identity": {
+      "title": "CVE-2026-77945",
+      "published": "2026-08-22 10:45:09",
+      "modified": "2026-08-22 11:16:53",
+      "description": "A vulnerability was found in TRENDnet TEW-821DAP 2.2.01b05. Affected is an unknown function of the file /cgi-bin/upload.cgi of the component ssi. Performing a manipulation of the argument filename results in command injection. The attack may be initiated remotely. The exploit has been made public and could be used."
+    },
+    "cvss": {
+      "base_score": 7.4,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/TEW-821DAP_ssi_Arbitrary_File_Command_Injection.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "TRENDnet",
+      "products": "TEW-821DAP",
+      "cpe_uris": "cpe:2.3:h:trendnet:tew-821dap:2.2.01b05:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/TEW-821DAP_ssi_Arbitrary_File_Command_Injection.md",
+      "https://vuldb.com/submit/881248",
+      "https://vuldb.com/vuln/394174",
+      "https://vuldb.com/cve/CVE-2026-77945",
+      "https://vuldb.com/vuln/394174/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77945",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77945"
+    },
+    "item_id": "CVE-2026-77945",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Consumer wireless access point command injection with public exploit but lacks enterprise/DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78003",
+    "identity": {
+      "title": "CVE-2026-78003",
+      "published": "2026-08-22 08:26:38",
+      "modified": "2026-08-22 09:16:53",
+      "description": "The Mailgun for WordPress plugin for WordPress is vulnerable to Server-Side Request Forgery (SSRF) via path traversal in versions up to and including 2.2.0. This is due to insufficient input validation in the add_list() function, which accepts user-controlled array keys from $_POST['addresses'], passes them through sanitize_text_field(). This makes it possible for unauthenticated attackers to make authenticated POST requests to any Mailgun API endpoint using the WordPress site's API key, including creating inbound email-forwarding routes that can intercept password reset emails, leading to administrator account takeover."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.0053,
+      "percentile": 0.42699,
+      "date": "2026-08-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L259"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cwe_primary": "CWE-918",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-918": "Server-Side Request Forgery (SSRF)"
+      }
+    },
+    "software": {
+      "vendors": "mailgun",
+      "products": "Mailgun for WordPress",
+      "cpe_uris": "cpe:2.3:*:mailgun:mailgun_for_wordpress:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L259",
+      "https://plugins.trac.wordpress.org/browser/mailgun/trunk/mailgun.php#L323",
+      "https://plugins.trac.wordpress.org/browser/mailgun/trunk/mailgun.php#L331",
+      "https://plugins.trac.wordpress.org/browser/mailgun/trunk/mailgun.php#L557",
+      "https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L557",
+      "https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L323",
+      "https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L331",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/110e888d-69fc-4682-b908-2b62288c5227?source=cve",
+      "https://plugins.trac.wordpress.org/browser/mailgun/trunk/mailgun.php#L259"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-78003",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-78003"
+    },
+    "item_id": "CVE-2026-78003",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress plugin SSRF leading to account takeover is explicitly excluded as a consumer CMS add-on per base rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19883",
+    "identity": {
+      "title": "CVE-2026-19883",
+      "published": "2026-08-22 02:26:28",
+      "modified": "2026-08-22 03:16:20",
+      "description": "The WPeMatico RSS Feed Fetcher plugin for WordPress is vulnerable to unauthorized modification of data that can lead to privilege escalation due to a missing capability check on the wpematico_import_settings function in all versions up to, and including, 2.8.24. This makes it possible for authenticated attackers, with subscriber-level access and above, to update arbitrary options on the WordPress site. This can be leveraged to update the default role for registration to administrator and enable user registration for attackers to gain administrative user access."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00369,
+      "percentile": 0.30201,
+      "date": "2026-08-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/etruel/wpematico/commit/e297f41b49c6ec76635b006dff8a964a99a1ed24"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "etruel",
+      "products": "WPeMatico RSS Feed Fetcher",
+      "cpe_uris": "cpe:2.3:a:etruel:wpematico_rss_feed_fetcher:*:*:*:*:*:wordpress:*:*",
+      "software_map": [
+        {
+          "key": "etruel:wpematico rss feed fetcher",
+          "vendor": "etruel",
+          "product": "WPeMatico RSS Feed Fetcher",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/wpematico/tags/2.8.24/app/wpematico_functions.php#L2096",
+      "https://plugins.trac.wordpress.org/browser/wpematico/tags/2.8.24/app/tools_page.php#L224",
+      "https://plugins.trac.wordpress.org/browser/wpematico/tags/2.8.24/app/wpematico_functions.php#L2077",
+      "https://plugins.trac.wordpress.org/browser/wpematico/tags/2.8.23/wpematico_class.php#L59",
+      "https://github.com/etruel/wpematico/commit/e297f41b49c6ec76635b006dff8a964a99a1ed24",
+      "https://plugins.trac.wordpress.org/browser/wpematico/tags/2.8.23/app/wpematico_functions.php#L2096",
+      "https://plugins.trac.wordpress.org/browser/wpematico/tags/2.8.23/app/wpematico_functions.php#L2077",
+      "https://plugins.trac.wordpress.org/browser/wpematico/tags/2.8.23/app/tools_page.php#L224",
+      "https://plugins.trac.wordpress.org/browser/wpematico/tags/2.8.24/wpematico_class.php#L59",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/4e591cb4-058d-4d8e-948e-d65ab01db618?source=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19883",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19883"
+    },
+    "item_id": "CVE-2026-19883",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint and no active exploitation signal; explicitly excluded by overlay.",
+      "fail_open": false
+    }
+  }
+]

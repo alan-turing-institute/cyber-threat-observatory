@@ -1,0 +1,274 @@
+[
+  {
+    "id": "CVE-2026-77806",
+    "published": "2026-08-21 13:37:43",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "SPIP before 4.4.21 allows unauthenticated remote attackers to execute arbitrary code, as exploited in the wild in August 2026. This is related to code injection via an X-Spip-Filtre HTTP request header that is mishandled by analyse_resultat_skel.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "CMS software (SPIP) with RCE via header injection, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77264",
+    "published": "2026-08-21 07:39:24",
+    "cvss": 9.8,
+    "epss": 0.00481,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Automation Web Platform – Notifications and OTP for WooCommerce, Advanced Country Code plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 4.8.6. This is due to the handle_email_otp_return() function returning the secret magic login token in the response to a publicly accessible OTP request, rather than only delivering it to the user's email address. This makes it possible for unauthenticated attackers to log in as any user on the site, including administrators, if they know that user's email address.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress/WooCommerce plugin with authentication bypass, excluded as consumer/hobbyist software per overlay hard excludes.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76157",
+    "published": "2026-08-21 01:47:44",
+    "cvss": 8.8,
+    "epss": 0.00418,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for a critical function in the upload API endpoint of Datiphy Data Management Center from v8.3.0 through v8.5.1 allows an unauthenticated remote attacker to upload arbitrary files to the server's configured upload directory.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Missing authentication in enterprise data management software (Datiphy), weak identity/access infrastructure fit and no clear DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-48050",
+    "published": "2026-08-21 22:40:12",
+    "cvss": 8.8,
+    "epss": 0.0009,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Arc is an open, SQL-native time-series database for telemetry. Versions prior to 26.06.1 register Go's `net/http/pprof` handlers at `/debug/pprof/*` via `app.Use(pprof.New())` in `internal/api/server.go`, and `/debug/pprof` is added to `PublicPrefixes` in `cmd/arc/main.go`. The auth middleware short-circuits before the token check on prefix match, so the endpoints are reachable without any authentication. Version 26.06.1 contains a patch. Some workarounds are available. Block `/debug/pprof*` at a reverse proxy / load balancer in front of Arc, restrict Arc's API port to known-trusted networks via firewall rules, and/or patch the running build: comment out `app.Use(pprof.New())` in `internal/api/server.go` and rebuild.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication on debug endpoints in telemetry database (Arc), no identity/access or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59808",
+    "published": "2026-08-22 12:26:33",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "AVideo through commit 9c39d8c8 contains an authentication bypass vulnerability where deduplicateByEncoderQueueId() returns video_id_hash credentials for any video by encoder_queue_id without ownership verification, and useVideoHashOrLogin() converts this hash into passwordless login as the video owner. Attackers with upload permission can retrieve an administrator's video_id_hash by omitting the videos_id parameter, then use that hash in an unauthenticated request to gain administrative session access and modify system configuration.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in self-hosted video sharing platform (AVideo), excluded as media/consumer software per overlay hard excludes.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-34741",
+    "published": "2026-08-21 21:50:49",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Combodo iTop is a web based IT service management tool. Prior to 3.2.3, authentication bypass allows unauthenticated remote attackers to execute arbitrary PHP files from the env-production directory on a new iTop instance in the production environment. This issue has been fixed in version 3.2.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in IT service management tool (iTop), no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-48106",
+    "published": "2026-08-21 22:49:12",
+    "cvss": 8.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Arc is an open, SQL-native time-series database for telemetry. Prior to version 26.06.1, Arc Enterprise's cluster replication receiver at `internal/cluster/replication/receiver.go` validates only the wire-format envelope (length, opcode) of inbound messages. The `MsgReplicateSync` payload itself is accepted without any application-layer authentication — no HMAC, no signature, no per-message nonce. The replication stream is protected at the transport layer by TLS / mTLS, but there is no protection against application-layer message tampering or replay once a peer is on the cluster network. This is fixed in 2026.06.1. Some workarounds are available. Restrict cluster network access to known-trusted peers via strict firewall rules, audit replication logs for unexpected `MsgReplicateSync` traffic, and/or disable cluster mode until the fix is available.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing application-layer authentication in database replication stream (Arc), not identity/access infrastructure or DPI-relevant.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-30866",
+    "published": "2026-08-21 19:32:00",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Combodo iTop is a web based IT service management tool. Prior to 3.2.3, unauthenticated users can access uploaded sensitive via sniffed url. This issue has been fixed in version 3.2.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated access to uploaded files in ITSM tool (iTop), pure information leak with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71862",
+    "published": "2026-08-21 18:00:32",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. From 3.3.0 until 3.9.2, enabling the global showURL setting causes the unauthenticated GET /api/v1/status-page/:url endpoint to return complete monitor objects from server/src/controllers/statusPageController.ts. The response includes the secret field used by HttpProvider.ts as an HTTP Authorization credential, even though BaseStatusPage.tsx does not display that value, allowing visitors to extract credentials from the JSON response and use them against monitored services. This issue is fixed in version 3.9.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Credential exposure in server monitoring tool (Checkmate), not identity/access infrastructure or DPI-relevant software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15576",
+    "published": "2026-08-21 11:10:00",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper authentication in the agent receiver of Checkmk <2.5.0p10 allows an unauthenticated remote attacker to bypass mutual TLS client certificate verification of relay endpoints by supplying a fixed placeholder identity in the request URL, resulting in limited impact on integrity and availability. Only the Cloud, Ultimate and Ultimate MT editions are affected, as other editions do not expose relay endpoints.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Enterprise IT monitoring software with mTLS bypass, lacks clear DPI sector or identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-34949",
+    "published": "2026-08-21 22:31:49",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Combodo iTop is a web based IT service management tool.Prior to 3.2.3, an unauthenticated user could delete the .readonly file on iTop instances — a file created during the setup process that prevents users from performing write actions. This issue has been fixed in version 3.2.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "IT service management tool with unauthenticated config modification, lacks DPI sector or identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71494",
+    "published": "2026-08-21 17:50:43",
+    "cvss": 5.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Infracost provides cloud cost intelligence for engineers, AI coding agents, and CI/CD. Prior to 0.10.45, internal/hcl/remote_variables_loader.go and related Terraform Cloud, remote-plan, and Terragrunt registry request paths can attach a configured Terraform Cloud or registry token to a destination hostname derived from untrusted Terraform input without confirming that it is the configured trusted host. When a CI run provides a token while scanning attacker-controlled Terraform, including pull_request_target or a same-repository pull request, an attacker can direct the request to an attacker-controlled host and disclose the token. Standard fork pull_request workflows without secrets are not exposed. This issue is fixed in version 0.10.45.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Cloud cost intelligence tool token disclosure via SSRF, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-15671",
+    "published": "2026-08-21 06:00:15",
+    "cvss": 5.4,
+    "epss": 0.00177,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Welcart e-Commerce WordPress plugin before 2.12.1 does not regenerate the session identifier on authentication and sets the session identifier from a user-supplied request parameter, allowing an unauthenticated attacker to fixate a shop member's session and take over their customer account after the victim logs in through an attacker-crafted request.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress e-commerce plugin session fixation, explicitly excluded as consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19441",
+    "published": "2026-08-21 07:55:42",
+    "cvss": 5.3,
+    "epss": 0.00256,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function vulnerability in IKAS Technology Inc. Rush allows Fake the Source of Data.\n\nThis issue affects Rush: through 21082026.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Vague boilerplate description for niche software, no exploitable detail or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-13736",
+    "published": "2026-08-21 06:00:15",
+    "cvss": 5.3,
+    "epss": 0.00132,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The NewPath WildApricotPress Add-on  WordPress plugin through 1.0.0 does not enforce its members-only field privacy on an unauthenticated REST route, allowing anonymous visitors to read member email addresses and phone numbers that are configured to be visible to members only.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin information disclosure, explicitly excluded as consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69228",
+    "published": "2026-08-21 20:48:27",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "There is a missing authentication vulnerability in Esri Portal for ArcGIS versions 12.0 and prior that may allow a remote, unauthenticated attacker to access a specific resource (not user content) that should only be accessible by authenticated users. Users working with ArcGIS Enterprise 11.1, 11.3, 11.5, or 12.0 are encouraged to patch. All users are advised to upgrade to the latest long-term support release.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Enterprise GIS portal missing authentication, lacks explicit government or identity sector cues in description.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76137",
+    "published": "2026-08-21 02:02:54",
+    "cvss": 4.8,
+    "epss": 0.00109,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function vulnerability exists in VOCALOID6. Any process running under the same local user account as a running VOCALOID6 Editor instance may escalate privileges via a local named pipe.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Creative music software local privilege escalation, explicitly excluded as consumer/hobbyist software.",
+      "fail_open": false
+    }
+  }
+]
