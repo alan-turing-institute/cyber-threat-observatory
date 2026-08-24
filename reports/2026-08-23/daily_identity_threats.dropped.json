@@ -1,0 +1,18 @@
+[
+  {
+    "id": "CVE-2026-59808",
+    "published": "2026-08-22 12:26:33",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "AVideo through commit 9c39d8c8 contains an authentication bypass vulnerability where deduplicateByEncoderQueueId() returns video_id_hash credentials for any video by encoder_queue_id without ownership verification, and useVideoHashOrLogin() converts this hash into passwordless login as the video owner. Attackers with upload permission can retrieve an administrator's video_id_hash by omitting the videos_id parameter, then use that hash in an unauthenticated request to gain administrative session access and modify system configuration.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in AVideo, a self-hosted media/video hosting platform, which falls under the hard exclude for media apps and non-identity software with no DPI nexus.",
+      "fail_open": false
+    }
+  }
+]

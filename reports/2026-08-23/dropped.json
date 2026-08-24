@@ -1,0 +1,349 @@
+[
+  {
+    "id": "CVE-2026-77115",
+    "identity": {
+      "title": "CVE-2026-77115",
+      "published": "2026-08-23 06:00:18",
+      "modified": "2026-08-23 16:16:39",
+      "description": "Brave Popup Builder (brave-popup-builder) up to version 0.8.5 reflects UTM query parameters into popup form HTML without escaping them."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00208,
+      "percentile": 0.11195,
+      "date": "2026-08-24"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/d4a760c0-8e71-4261-a08b-9b6a296c631a/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Brave",
+      "cpe_uris": "cpe:2.3:a:brave:brave:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/d4a760c0-8e71-4261-a08b-9b6a296c631a/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77115",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77115"
+    },
+    "item_id": "CVE-2026-77115",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer browser extension/marketing tool with no enterprise or DPI footprint; reflected XSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78063",
+    "identity": {
+      "title": "CVE-2026-78063",
+      "published": "2026-08-23 04:30:10",
+      "modified": "2026-08-23 05:16:53",
+      "description": "A security flaw has been discovered in Tenda CH22 1.0.0.1. The impacted element is the function formeditFileName of the file /goform/editFileName. The manipulation of the argument editNameMit results in command injection. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks."
+    },
+    "cvss": {
+      "base_score": 7.4,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.02747,
+      "percentile": 0.85014,
+      "date": "2026-08-24"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://vuldb.com/submit/881838"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Tenda",
+      "products": "CH22",
+      "cpe_uris": "cpe:2.3:h:tenda:ch22:1.0.0.1:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "tenda:ch22",
+          "vendor": "Tenda",
+          "product": "CH22",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/submit/881838",
+      "https://vuldb.com/cve/CVE-2026-78063",
+      "https://www.tenda.com.cn/",
+      "https://vuldb.com/vuln/394303",
+      "https://candle-throne-f75.notion.site/Tenda-CH22-formeditFileName-396df0aa1185804c9dcff01778515d32",
+      "https://vuldb.com/vuln/394303/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-78063",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-78063"
+    },
+    "item_id": "CVE-2026-78063",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Consumer Wi-Fi router with public exploit code; explicitly excluded as consumer-only hardware with no DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78062",
+    "identity": {
+      "title": "CVE-2026-78062",
+      "published": "2026-08-23 04:15:10",
+      "modified": "2026-08-23 05:16:52",
+      "description": "A vulnerability was identified in vas3k TaxHacker up to 0.8.2. The affected element is the function envSchema.parse of the file lib/config.ts of the component JWT Secret Handler. The manipulation of the argument BETTER_AUTH_SECRET leads to hard-coded credentials. The attack can be initiated remotely. The project was informed of the problem early through an issue report but has not responded yet."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00495,
+      "percentile": 0.40457,
+      "date": "2026-08-24"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/vas3k/TaxHacker/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-259",
+        "CWE-798"
+      ],
+      "cwe_primary": "CWE-259",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-259": "Use of Hard-coded Password",
+        "CWE-798": "Use of Hard-coded Credentials"
+      }
+    },
+    "software": {
+      "vendors": "vas3k",
+      "products": "TaxHacker",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/vas3k/TaxHacker/",
+      "https://github.com/vas3k/TaxHacker/issues/147",
+      "https://vuldb.com/vuln/394302",
+      "https://vuldb.com/vuln/394302/cti",
+      "https://vuldb.com/submit/881826",
+      "https://vuldb.com/cve/CVE-2026-78062"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-78062",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-78062"
+    },
+    "item_id": "CVE-2026-78062",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche personal project with hard-coded credentials; no enterprise or DPI sector footprint despite JWT component name.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78136",
+    "identity": {
+      "title": "CVE-2026-78136",
+      "published": "2026-08-23 00:48:57",
+      "modified": "2026-08-23 01:17:20",
+      "description": "chirpmyradio CHIRP before 39178db allows eval injection via crafted CSV data. This occurs in _clean_tmode in drivers/kenwood_itm.py."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00213,
+      "percentile": 0.11861,
+      "date": "2026-08-24"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/cduram/CHIRP-CodeExecution_via_Malicious_ImageFile"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-95"
+      ],
+      "cwe_primary": "CWE-95",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-95": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+      }
+    },
+    "software": {
+      "vendors": "chirpmyradio",
+      "products": "CHIRP",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/cduram/CHIRP-CodeExecution_via_Malicious_ImageFile",
+      "https://github.com/kk7ds/chirp/commit/39178dbfc4fece083ab9ed20286d6ae3a91a718e"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-78136",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-78136"
+    },
+    "item_id": "CVE-2026-78136",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer/hobbyist amateur radio programming software with no enterprise, DPI-sector, or identity footprint, and no exploitation signal.",
+      "fail_open": false
+    }
+  }
+]
