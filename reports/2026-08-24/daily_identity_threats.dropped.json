@@ -1,0 +1,114 @@
+[
+  {
+    "id": "CVE-2026-78167",
+    "published": "2026-08-24 01:15:12",
+    "cvss": 10.0,
+    "epss": 0.0103,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in EFM ipTIME T16000M 14.20.2. The impacted element is the function httpcon_check_session_url of the component Session Validation Handler. This manipulation causes improper authentication. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer router firmware with session validation flaw; excluded by consumer IoT/router hard rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78168",
+    "published": "2026-08-24 01:30:10",
+    "cvss": 9.8,
+    "epss": 0.00929,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security vulnerability has been detected in EFM ipTIME T24000M up to 14.20.0. This affects the function httpcon_check_session_url of the component Session Validation Handler. Such manipulation leads to improper authentication. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer router firmware with session validation flaw; excluded by consumer IoT/router hard rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78255",
+    "published": "2026-08-24 07:25:24",
+    "cvss": 8.7,
+    "epss": 0.00239,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The HTTP media server running on DJI drones serves stored photos and videos through the `/v2` endpoint without authenticating the requesting client. Filenames follow a predictable pattern, allowing an attacker who joins the drone's internal network to enumerate valid filenames and exfiltrate stored photos and videos. The exposed media may reveal sensitive information, including private locations, property, travel history, identifiable individuals, and the operator's routines.\n\nAffected models are DJI Neo until 01.00.0400, DJI Neo 2 until 01.00.0500, DJI Flip until 01.00.1200, DJI Air 3 until 01.00.1600, DJI Air 3S until 01.00.1400, DJI Avata 2 until 01.00.0400, DJI Avata 360 until 01.00.0300, DJI Mavic 3 until 01.00.1400, DJI Mavic 3 Classic until 01.00.0800, DJI Mavic 3 Pro until 01.01.0700, DJI Mavic 4 Pro until 01.00.0500, DJI Mini 2 until 01.07.0200, DJI Mini 3 until 01.00.0500, DJI Mini 3 Pro until 01.00.0900, DJI Mini 4 Pro until 01.00.1100, and DJI Mini 5 Pro until 01.00.0600.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer drone firmware missing authentication on media endpoint; excluded by consumer IoT hard rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-32477",
+    "published": "2026-08-24 11:54:52",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Unauthenticated Arbitrary File Deletion in ShopBuilder Pro – Elementor WooCommerce Builder Addons <= 2.2.0 versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress/Elementor plugin vulnerability; excluded by consumer/hobbyist software hard rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78306",
+    "published": "2026-08-24 08:08:00",
+    "cvss": 8.5,
+    "epss": 0.00149,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "DJI drones expose an unauthenticated DUML command interface over Bluetooth that allows an attacker within Bluetooth range to modify Wi-Fi configuration parameters, including the SSID, PSK, MAC address, regulatory country code, and wireless channel. An attacker can overwrite the Wi-Fi PSK with a known value and connect to the drone's internal Wi-Fi network, potentially gaining access to the flight control interface and issuing flight commands. Crafted DUML commands can also disable or restart the Wi-Fi and Bluetooth interfaces, disconnect Wi-Fi clients, or reset wireless configuration, resulting in a denial-of-service condition that can disrupt the operator's wireless control, video, and telemetry connections during flight.\n\nAffected models are DJI Neo until 01.00.0400, DJI Neo 2 until 01.00.0500, DJI Flip until 01.00.1200, DJI Air 3 until 01.00.1600, DJI Air 3S until 01.00.1400, DJI Avata 2 until 01.00.0400, DJI Avata 360 until 01.00.0300, DJI Mavic 3 until 01.00.1400, DJI Mavic 3 Classic until 01.00.0800, DJI Mavic 3 Pro until 01.01.0700, DJI Mavic 4 Pro until 01.00.0500, DJI Mini 2 until 01.07.0200, DJI Mini 3 until 01.00.0500, DJI Mini 3 Pro until 01.00.0900, DJI Mini 4 Pro until 01.00.1100, and DJI Mini 5 Pro until 01.00.0600.\n\n\nRemediation requires a firmware update from the vendor.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer drone Bluetooth interface vulnerability; excluded by consumer IoT hard rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-6017",
+    "published": "2026-08-24 11:11:14",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Firmware in KAON PG5298A and PG5298B routers allow an unauthenticated user to query a specific endpoint and acquire sensitive information such as a password to the administrative portal.   \nThis vulnerability has been fixed in firmware version: 3.0.82 for PG5298A and 4.0.82 for PG5298B.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer router firmware credential exposure; excluded by consumer IoT/router hard rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19853",
+    "published": "2026-08-24 03:30:35",
+    "cvss": 6.9,
+    "epss": 0.00335,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NewSiteServer (NSS) developed by CyberTutor has a Missing Authentication vulnerability. Unauthenticated remote attackers can exploit a specific functionality to send emails to anyone on behalf of the school.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Education LMS/web server missing authentication; excluded by education/LMS hard rule.",
+      "fail_open": false
+    }
+  }
+]
