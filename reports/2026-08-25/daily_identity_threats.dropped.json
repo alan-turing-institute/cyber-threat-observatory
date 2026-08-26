@@ -1,0 +1,338 @@
+[
+  {
+    "id": "CVE-2026-77136",
+    "published": "2026-08-25 09:00:39",
+    "cvss": 9.5,
+    "epss": 0.00554,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The extension passes the raw value of a form field configured as \"This field contains the name of the sender\" directly into a Fluid View as template source, without any sanitization, and renders it. An anonymous, unauthenticated user can submit Fluid template syntax in that field to execute arbitrary Fluid ViewHelpers leading to disclosure of server configuration, environment variables and application source, and potentially remote code execution. Exploitation requires only that a form field is configured as the sender_name field, a common and default-adjacent Powermail configuration. No authentication or user interaction beyond a normal form submission is required. This vulnerability is reported to be actively exploited in the wild.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Generic web application template injection in a form extension, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78167",
+    "published": "2026-08-24 01:15:12",
+    "cvss": 10.0,
+    "epss": 0.0103,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in EFM ipTIME T16000M 14.20.2. The impacted element is the function httpcon_check_session_url of the component Session Validation Handler. This manipulation causes improper authentication. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home router hardware, explicitly excluded by base Digital Identity and overlay consumer software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78168",
+    "published": "2026-08-24 01:30:10",
+    "cvss": 9.8,
+    "epss": 0.00929,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security vulnerability has been detected in EFM ipTIME T24000M up to 14.20.0. This affects the function httpcon_check_session_url of the component Session Validation Handler. Such manipulation leads to improper authentication. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home router hardware, explicitly excluded by base Digital Identity and overlay consumer software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-79787",
+    "published": "2026-08-25 18:23:15",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Alluxio's S3 REST proxy fails to verify AWS Signature Version 4 signatures in its default configuration, allowing unauthenticated attackers to spoof user identity. Attackers can extract usernames from unsigned Authorization headers and impersonate any user, including service accounts, to read, write, and delete arbitrary data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in distributed storage proxy, but software lacks direct identity/access infrastructure role per overlay criteria.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57909",
+    "published": "2026-08-25 11:47:03",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A path traversal vulnerability in WatchGuard Agent allows a remote, unauthenticated attacker on an adjacent network to execute arbitrary code on an affected system.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Path traversal leading to RCE in endpoint agent software, no authentication or identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57910",
+    "published": "2026-08-25 11:47:49",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper authentication in the WatchGuard Agent allows an unauthenticated attacker with network access to cause the agent to execute arbitrary code with elevated privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Improper authentication in endpoint management agent, not identity/access infrastructure or DPI-relevant sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-24170",
+    "published": "2026-08-25 16:17:41",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NVIDIA UFM Enterprise contains a vulnerability in the web interface authorization component, where an authenticated user could cause improper authentication by sending specially crafted HTTP requests. A successful exploit of this vulnerability might lead to code execution and escalation of privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Improper authentication in data center network management software, not identity/access infrastructure or DPI-relevant sector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-67578",
+    "published": "2026-08-25 07:42:26",
+    "cvss": 8.7,
+    "epss": 0.00301,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "FA-50 all versions miss authentication for some configuration.\r\nAn attacker with access to the vessel's internal network can manipulate the product's settings screen to alter some configuration parameters.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in maritime vessel hardware, excluded by industrial/IoT and non-DPI sector rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76839",
+    "published": "2026-08-25 01:30:31",
+    "cvss": 8.7,
+    "epss": 0.00272,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Grav before 2.0.16 allows sandboxed Twig templates to access sensitive User fields through allow-listed offsetGet() and offsetexists() methods that lack field filtering. Attackers with page-edit permissions can call offsetGet() on User objects to extract hashed passwords and 2FA secrets, enabling offline password cracking and authentication bypass.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Grav is a flat-file CMS/blog platform excluded under generic web software rules, despite credential exposure wording.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76846",
+    "published": "2026-08-25 01:30:31",
+    "cvss": 8.7,
+    "epss": 0.00241,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Grav before 2.0.16 contains an incomplete default denylist in the Twig sandbox configuration that fails to block access to system configuration secrets. Attackers with page-edit permission can use config.get() or config.toArray() in Twig templates to retrieve sensitive values like system.cache.redis.password when config_access is enabled.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Grav CMS configuration secret leak lacks identity/access infrastructure nexus and falls under generic web software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78255",
+    "published": "2026-08-24 07:25:24",
+    "cvss": 8.7,
+    "epss": 0.00239,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The HTTP media server running on DJI drones serves stored photos and videos through the `/v2` endpoint without authenticating the requesting client. Filenames follow a predictable pattern, allowing an attacker who joins the drone's internal network to enumerate valid filenames and exfiltrate stored photos and videos. The exposed media may reveal sensitive information, including private locations, property, travel history, identifiable individuals, and the operator's routines.\n\nAffected models are DJI Neo until 01.00.0400, DJI Neo 2 until 01.00.0500, DJI Flip until 01.00.1200, DJI Air 3 until 01.00.1600, DJI Air 3S until 01.00.1400, DJI Avata 2 until 01.00.0400, DJI Avata 360 until 01.00.0300, DJI Mavic 3 until 01.00.1400, DJI Mavic 3 Classic until 01.00.0800, DJI Mavic 3 Pro until 01.01.0700, DJI Mavic 4 Pro until 01.00.0500, DJI Mini 2 until 01.07.0200, DJI Mini 3 until 01.00.0500, DJI Mini 3 Pro until 01.00.0900, DJI Mini 4 Pro until 01.00.1100, and DJI Mini 5 Pro until 01.00.0600.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Consumer drone/IoT software with missing authentication on media endpoint, explicitly excluded under consumer IoT rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-80196",
+    "published": "2026-08-25 23:19:03",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Kimai before 2.58.0 contains an authentication bypass vulnerability where password reset links remain valid after password changes because the LoginLink signature covers only the user id, not the password hash. Attackers who intercept or cache a password reset link can use it up to 2 additional times within a 1-hour window to log in as the user even after the legitimate user has changed their password.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Niche time-tracking application with password reset flaw lacks enterprise identity/access infrastructure role required for DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-32477",
+    "published": "2026-08-24 11:54:52",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Unauthenticated Arbitrary File Deletion in ShopBuilder Pro – Elementor WooCommerce Builder Addons <= 2.2.0 versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "WordPress/Elementor plugin with arbitrary file deletion, explicitly excluded under consumer web software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55539",
+    "published": "2026-08-25 15:14:07",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.51, the Jobs API create_app function mounts /api/v1/runs without authentication. Any reachable caller can submit jobs, read results, cancel runs, or delete jobs using operator credentials. The fix adds PRAISONAI_JOBS_API_KEY middleware for Authorization or X-API-Key. This issue is fixed in version 4.6.58.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI agent framework API missing authentication lacks identity/access infrastructure nexus and falls under LLM/tooling exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55534",
+    "published": "2026-08-25 14:41:13",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. From praisonai 4.6.34 until 4.6.58, praisonai serve agents accepts --api-key but _create_agents_app() does not authenticate POST /agents or POST /agents/{agent_name}. A network caller can invoke configured agents without credentials even when an API key was supplied. This issue is fixed in version 4.6.58.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI agent framework endpoint missing authentication lacks identity/access infrastructure nexus and falls under LLM/tooling exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78306",
+    "published": "2026-08-24 08:08:00",
+    "cvss": 8.5,
+    "epss": 0.00149,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "DJI drones expose an unauthenticated DUML command interface over Bluetooth that allows an attacker within Bluetooth range to modify Wi-Fi configuration parameters, including the SSID, PSK, MAC address, regulatory country code, and wireless channel. An attacker can overwrite the Wi-Fi PSK with a known value and connect to the drone's internal Wi-Fi network, potentially gaining access to the flight control interface and issuing flight commands. Crafted DUML commands can also disable or restart the Wi-Fi and Bluetooth interfaces, disconnect Wi-Fi clients, or reset wireless configuration, resulting in a denial-of-service condition that can disrupt the operator's wireless control, video, and telemetry connections during flight.\n\nAffected models are DJI Neo until 01.00.0400, DJI Neo 2 until 01.00.0500, DJI Flip until 01.00.1200, DJI Air 3 until 01.00.1600, DJI Air 3S until 01.00.1400, DJI Avata 2 until 01.00.0400, DJI Avata 360 until 01.00.0300, DJI Mavic 3 until 01.00.1400, DJI Mavic 3 Classic until 01.00.0800, DJI Mavic 3 Pro until 01.01.0700, DJI Mavic 4 Pro until 01.00.0500, DJI Mini 2 until 01.07.0200, DJI Mini 3 until 01.00.0500, DJI Mini 3 Pro until 01.00.0900, DJI Mini 4 Pro until 01.00.1100, and DJI Mini 5 Pro until 01.00.0600.\n\n\nRemediation requires a firmware update from the vendor.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Consumer drone/IoT Bluetooth interface vulnerability explicitly excluded under consumer IoT rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55571",
+    "published": "2026-08-25 16:05:49",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "djust provides Phoenix LiveView-style reactive server-side rendering for Django with Rust-powered performance. Prior to 1.0.4, LiveViewConsumer.handle_mount sends a `{\"type\":\"navigate\",\"to\":...}` frame when login_required, permission_required, or a redirecting on_mount hook denies a LiveView mount, but returns without closing the WebSocket or clearing self.view_instance. A browser follows the redirect, but a raw WebSocket client can ignore it and retain the mounted socket. Because LiveViewConsumer.handle_event does not recheck authentication or authorization, the client can send `{\"type\":\"event\",...}` frames that invoke @event_handler methods without an authenticated session, including through handle_live_redirect_mount, enabling unauthorized sensitive reads or mutations. This issue is fixed in version 1.0.4.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Django web framework WebSocket authentication bypass lacks dedicated identity/access infrastructure role required for DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55533",
+    "published": "2026-08-25 15:15:34",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, create_auth_middleware() allows requests when auth=api-key lacks PRAISONAI_API_KEY or JWT authentication lacks PRAISONAI_JWT_SECRET. An externally bound Recipe server can therefore accept unauthenticated POST /v1/recipes/run requests despite authentication being enabled. This issue is fixed in version 4.6.58.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in PraisonAI, an AI agent framework excluded by the base LLM/tooling rule and overlay non-identity software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55528",
+    "published": "2026-08-25 14:32:05",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, AgentServer exposes ServerConfig.auth_token but AgentServer._create_app does not check it on any route. A remote caller can subscribe, publish, and perform other actions without a valid bearer token or X-Auth-Token even when authentication is configured. This issue is fixed in version 1.6.58.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing bearer token validation in PraisonAI AgentServer, excluded as AI/LLM tooling with no DPI identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-65098",
+    "published": "2026-08-25 20:15:22",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NVIDIA NemoClaw for Linux contains a vulnerability in its remote-access helper workflow, where an attacker could cause weak authentication. A successful exploit of this vulnerability might lead to code execution, information disclosure, and data tampering.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Weak authentication in NVIDIA NemoClaw Linux utility, lacks a DPI-relevant identity or access-control infrastructure context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-65105",
+    "published": "2026-08-25 20:15:33",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NVIDIA NemoClaw for Linux contains a vulnerability in its inference server setup, where a remote attacker may access the inference service without authentication. A successful exploit of this vulnerability may lead to information disclosure and denial of service.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication on an AI inference server (NemoClaw), excluded as non-DPI AI/ML tooling.",
+      "fail_open": false
+    }
+  }
+]
