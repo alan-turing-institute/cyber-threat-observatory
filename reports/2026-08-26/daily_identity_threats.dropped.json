@@ -1,0 +1,370 @@
+[
+  {
+    "id": "CVE-2026-60004",
+    "published": "2026-08-26 19:45:00",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Gitea before 1.27.1 allows remote code execution via the diffpatch API through Git hook installation.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Developer code-hosting platform RCE via Git hooks, no identity or access-control nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77136",
+    "published": "2026-08-25 09:00:39",
+    "cvss": 9.5,
+    "epss": 0.00554,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The extension passes the raw value of a form field configured as \"This field contains the name of the sender\" directly into a Fluid View as template source, without any sanitization, and renders it. An anonymous, unauthenticated user can submit Fluid template syntax in that field to execute arbitrary Fluid ViewHelpers leading to disclosure of server configuration, environment variables and application source, and potentially remote code execution. Exploitation requires only that a form field is configured as the sender_name field, a common and default-adjacent Powermail configuration. No authentication or user interaction beyond a normal form submission is required. This vulnerability is reported to be actively exploited in the wild.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "CMS form extension template injection, excluded as consumer web-CMS software with no identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77998",
+    "published": "2026-08-25 12:50:46",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Joomla Extension - miniorange.com - Unauthenticated Authentication Bypass via SAMLResponse Parameter in miniOrange SAML SSO < 11.0.2, SAML SP Single Sign On – Login with ADFS < 6.4,  SAML SP Single Sign On – SAML SSO login with Google Apps < 6.4 - This is due to the mo_saml_validate_signature() function performing a loose boolean check on the raw tri-state integer returned by PHP's openssl_verify(), causing an error return value of -1 to be evaluated as truthy and therefore treated as a successful signature verification. This makes it possible for unauthenticated attackers to log in as any existing Joomla user, including administrators, by submitting a crafted SAMLResponse containing an attacker-controlled NameID and a deliberately malformed signature value that triggers an OpenSSL processing error — bypassing verification entirely and resulting in wp_set_auth_cookie() being called for the targeted account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "SAML signature bypass in a Joomla CMS extension, excluded as consumer/web-CMS software lacking a public-sector or enterprise DPI identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19632",
+    "published": "2026-08-26 03:39:22",
+    "cvss": 9.8,
+    "epss": 0.00787,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The TranslatePress – Translate Multilingual sites with AI Translation plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 3.3.1 via the 'trp_get_translations_regular' AJAX action. This makes it possible for unauthenticated attackers to extract the raw administrator password-reset URL — including the plaintext reset key and login parameters stored in the translation dictionary table — enabling full administrator account takeover. This vulnerability is only exploitable when automatic string saving is enabled (the default setting) and the target administrator's profile locale is set to a published secondary language, as these conditions cause the password-reset URL to be persisted as a translatable string in the secondary-language dictionary table.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin credential exposure vulnerability, explicitly excluded as consumer CMS software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81032",
+    "published": "2026-08-26 15:45:00",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NebulaGraph exposes its runtime configuration over an unauthenticated HTTP service. Each daemon starts the web service defined in src/webservice/WebService.cpp, whose bind address defaults to all interfaces, and registers routes for reading and writing gflags alongside status and statistics. Neither the service nor its router carries any authentication, token check or address restriction. The read route returns the daemon's full set of runtime flag values, which includes the configured certificate, key and certificate-authority paths, the password file path, data directories and the transport-security enable flags. The write route parses a supplied map and applies each entry through the gflags runtime setter, so a caller able to reach the port can change the daemon's behaviour without restarting it, including disabling the transport-security flags, redirecting log files and altering flags such as failed_login_attempts and password_lock_time_in_secs. Public reports of this endpoint describe a single name, enable_authorize, being refused by the handler; at release 3.8.0 that refusal is not present and the handler applies every name it is given.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated configuration exposure in a graph database, lacks authentication or access-control impact required for identity relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-79787",
+    "published": "2026-08-25 18:23:15",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Alluxio's S3 REST proxy fails to verify AWS Signature Version 4 signatures in its default configuration, allowing unauthenticated attackers to spoof user identity. Attackers can extract usernames from unsigned Authorization headers and impersonate any user, including service accounts, to read, write, and delete arbitrary data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "AWS signature verification failure in a distributed storage proxy, lacks core identity or access-management infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57909",
+    "published": "2026-08-25 11:47:03",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A path traversal vulnerability in WatchGuard Agent allows a remote, unauthenticated attacker on an adjacent network to execute arbitrary code on an affected system.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Path traversal RCE in a network security agent, no authentication or identity management nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57910",
+    "published": "2026-08-25 11:47:49",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper authentication in the WatchGuard Agent allows an unauthenticated attacker with network access to cause the agent to execute arbitrary code with elevated privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Improper authentication in a network security agent, excluded as non-identity infrastructure software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55640",
+    "published": "2026-08-25 16:03:28",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Nextcloud MCP Server is a production-ready MCP server that connects AI assistants to a Nextcloud instance. Prior to 0.117.2, the POST /webhooks/nextcloud endpoint in nextcloud_mcp_server/vector/webhook_receiver.py has no authentication by default because WEBHOOK_SECRET defaults to None and startup validation does not require it. When WEBHOOK_SECRET is unset, handle_nextcloud_webhook() accepts unauthenticated requests. The payload[\"user\"][\"uid\"] field parsed in nextcloud_mcp_server/vector/webhook_parser.py is attacker-controlled and is used without an authenticated-session cross-check for Qdrant operations, allowing a network attacker to delete or trigger re-indexing of vector embeddings for any user and to destroy the semantic search index by sending forged deletion events. This issue is fixed in version 0.117.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication on an AI webhook endpoint in a collaboration platform, lacks core identity or access-management infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78236",
+    "published": "2026-08-26 07:20:58",
+    "cvss": 8.8,
+    "epss": 0.00146,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An insecure PIN derivation mechanism in ABR allows a low-privileged user to escalate privileges to administrator by communicating over Cross-Process Communication (XPC) while masquerading as an Apple-signed process.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "OS-level privilege escalation via PIN mechanism in Apple software lacks DPI identity or public-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-24170",
+    "published": "2026-08-25 16:17:41",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NVIDIA UFM Enterprise contains a vulnerability in the web interface authorization component, where an authenticated user could cause improper authentication by sending specially crafted HTTP requests. A successful exploit of this vulnerability might lead to code execution and escalation of privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Enterprise network management web interface auth bypass lacks clear DPI identity infrastructure or sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-67578",
+    "published": "2026-08-25 07:42:26",
+    "cvss": 8.7,
+    "epss": 0.00301,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "FA-50 all versions miss authentication for some configuration.\r\nAn attacker with access to the vessel's internal network can manipulate the product's settings screen to alter some configuration parameters.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Marine vessel IoT configuration lacks authentication, explicitly excluded as industrial/IoT software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76839",
+    "published": "2026-08-25 01:30:31",
+    "cvss": 8.7,
+    "epss": 0.00272,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Grav before 2.0.16 allows sandboxed Twig templates to access sensitive User fields through allow-listed offsetGet() and offsetexists() methods that lack field filtering. Attackers with page-edit permissions can call offsetGet() on User objects to extract hashed passwords and 2FA secrets, enabling offline password cracking and authentication bypass.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Credential exposure and auth bypass in Grav CMS excluded as generic blog/CMS software per base rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76846",
+    "published": "2026-08-25 01:30:31",
+    "cvss": 8.7,
+    "epss": 0.00241,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Grav before 2.0.16 contains an incomplete default denylist in the Twig sandbox configuration that fails to block access to system configuration secrets. Attackers with page-edit permission can use config.get() or config.toArray() in Twig templates to retrieve sensitive values like system.cache.redis.password when config_access is enabled.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Secret exposure in Grav CMS configuration excluded as generic blog/CMS software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75960",
+    "published": "2026-08-26 13:20:19",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Rently Smart Home versions 20.1.0 and prior are vulnerable to an Insufficiently Protected Credentials vulnerability. This could allow an attacker to retrieve pins including the Master Pin, overriding standard user permissions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Smart home IoT credential exposure explicitly excluded as consumer IoT software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-80196",
+    "published": "2026-08-25 23:19:03",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Kimai before 2.58.0 contains an authentication bypass vulnerability where password reset links remain valid after password changes because the LoginLink signature covers only the user id, not the password hash. Attackers who intercept or cache a password reset link can use it up to 2 additional times within a 1-hour window to log in as the user even after the legitimate user has changed their password.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Password reset link auth bypass in time-tracking utility lacks DPI identity infrastructure or sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55534",
+    "published": "2026-08-25 14:41:13",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. From praisonai 4.6.34 until 4.6.58, praisonai serve agents accepts --api-key but _create_agents_app() does not authenticate POST /agents or POST /agents/{agent_name}. A network caller can invoke configured agents without credentials even when an API key was supplied. This issue is fixed in version 4.6.58.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication on AI agent framework endpoints excluded as LLM/tooling software with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55539",
+    "published": "2026-08-25 15:14:07",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.51, the Jobs API create_app function mounts /api/v1/runs without authentication. Any reachable caller can submit jobs, read results, cancel runs, or delete jobs using operator credentials. The fix adds PRAISONAI_JOBS_API_KEY middleware for Authorization or X-API-Key. This issue is fixed in version 4.6.58.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Unauthenticated API access in AI agent framework excluded as LLM/tooling software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-64632",
+    "published": "2026-08-26 21:21:41",
+    "cvss": 8.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability allowing a low-privileged user to capture the NTLM credentials of the Reporter service account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "NTLM credential capture mechanism present, but lacks named product or DPI sector context, making relevance unclear.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55533",
+    "published": "2026-08-25 15:15:34",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.58, create_auth_middleware() allows requests when auth=api-key lacks PRAISONAI_API_KEY or JWT authentication lacks PRAISONAI_JWT_SECRET. An externally bound Recipe server can therefore accept unauthenticated POST /v1/recipes/run requests despite authentication being enabled. This issue is fixed in version 4.6.58.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in AI agent framework (PraisonAI), excluded as non-DPI identity infrastructure per LLM/tooling exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55528",
+    "published": "2026-08-25 14:32:05",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.58, AgentServer exposes ServerConfig.auth_token but AgentServer._create_app does not check it on any route. A remote caller can subscribe, publish, and perform other actions without a valid bearer token or X-Auth-Token even when authentication is configured. This issue is fixed in version 1.6.58.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication check in AI agent framework (PraisonAI), excluded as non-DPI identity infrastructure per LLM/tooling exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55571",
+    "published": "2026-08-25 16:05:49",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "djust provides Phoenix LiveView-style reactive server-side rendering for Django with Rust-powered performance. Prior to 1.0.4, LiveViewConsumer.handle_mount sends a `{\"type\":\"navigate\",\"to\":...}` frame when login_required, permission_required, or a redirecting on_mount hook denies a LiveView mount, but returns without closing the WebSocket or clearing self.view_instance. A browser follows the redirect, but a raw WebSocket client can ignore it and retain the mounted socket. Because LiveViewConsumer.handle_event does not recheck authentication or authorization, the client can send `{\"type\":\"event\",...}` frames that invoke @event_handler methods without an authenticated session, including through handle_live_redirect_mount, enabling unauthorized sensitive reads or mutations. This issue is fixed in version 1.0.4.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in Django web framework library (djust), excluded as non-DPI identity infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19718",
+    "published": "2026-08-26 06:00:19",
+    "cvss": 8.1,
+    "epss": 0.00166,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The BlogVault Backup & Staging WordPress plugin before 6.65, MalCare WordPress Security Plugin  WordPress plugin before 6.65, The WP Remote WordPress Plugin WordPress plugin before 6.65 do not prevent unauthenticated users from obtaining data derived from the secret that binds a site to its remote management service, and generate that secret with a weak pseudo-random number generator, allowing attackers to recover it and gain administrative access to the site.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability with weak secret generation and auth bypass, explicitly excluded as consumer/hobbyist software per overlay hard excludes.",
+      "fail_open": false
+    }
+  }
+]
