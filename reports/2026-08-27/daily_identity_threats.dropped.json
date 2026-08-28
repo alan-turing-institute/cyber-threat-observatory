@@ -1,0 +1,354 @@
+[
+  {
+    "id": "CVE-2026-60004",
+    "published": "2026-08-26 19:45:00",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Gitea before 1.27.1 allows remote code execution via the diffpatch API through Git hook installation.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Developer code-hosting platform RCE with no authentication or identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-74233",
+    "published": "2026-08-27 10:40:11",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Zbtlink WE1326, WE357, WE5926, WE5926-WD, WE826-Q, WE826-T2, WE826-WD, WG108, and WG3526 firmware 19.1101, Zbtlink WE2426-C firmware 19.1112, Zbtlink WE5926-EC_QP firmware 20.0516, Zbtlink WF3526-P firmware 19.051, CTN720-W1, LF-1541, and MT7620N firmware 19.1101, and WRC1 firmware 20.0622 contain an unauthenticated command injection in the infosrvd service (UDP/9992). A remote unauthenticated attacker can send a crafted UDP packet to execute arbitrary commands as root. The service's authentication uses a hardcoded salt and an all-zero wildcard MAC bypass, rendering it ineffective.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer/home router firmware with unauthenticated command injection, explicitly excluded as non-DPI IoT.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81735",
+    "published": "2026-08-27 14:51:20",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "startServer.ts in the mcp-http-server package of UI-TARS-desktop defaulted its listen address to '::' when no host was given, so startSseAndStreamableHttpMcpServer bound the Streamable HTTP and SSE MCP transports to every interface, and its authentication middleware was optional: middlewares are applied only when a caller supplies them. The @agent-infra/mcp-server-commands and @agent-infra/mcp-server-filesystem entry points call startSseAndStreamableHttpMcpServer with a host and port alone and pass no middleware, so neither server required a credential. The commands server exposes a run_command tool that hands its caller-supplied command string to promisify(child_process.exec), so any unauthenticated client able to reach the port could run arbitrary commands as the user running the server, and the filesystem server exposed its file read and write tools on the same terms. The listen default became 127.0.0.1 in commit c2ad42e3eb9b27830db41a3e6f51ca7179d9b168; the package version stayed at 1.2.4 across that change, so the boundary is the commit rather than a release.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI desktop agent MCP server with optional authentication middleware lacks DPI identity or access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19632",
+    "published": "2026-08-26 03:39:22",
+    "cvss": 9.8,
+    "epss": 0.00787,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The TranslatePress – Translate Multilingual sites with AI Translation plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 3.3.1 via the 'trp_get_translations_regular' AJAX action. This makes it possible for unauthenticated attackers to extract the raw administrator password-reset URL — including the plaintext reset key and login parameters stored in the translation dictionary table — enabling full administrator account takeover. This vulnerability is only exploitable when automatic string saving is enabled (the default setting) and the target administrator's profile locale is set to a published secondary language, as these conditions cause the password-reset URL to be persisted as a translatable string in the secondary-language dictionary table.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability exposing password-reset URLs, explicitly excluded as consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81032",
+    "published": "2026-08-26 15:45:00",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NebulaGraph exposes its runtime configuration over an unauthenticated HTTP service. Each daemon starts the web service defined in src/webservice/WebService.cpp, whose bind address defaults to all interfaces, and registers routes for reading and writing gflags alongside status and statistics. Neither the service nor its router carries any authentication, token check or address restriction. The read route returns the daemon's full set of runtime flag values, which includes the configured certificate, key and certificate-authority paths, the password file path, data directories and the transport-security enable flags. The write route parses a supplied map and applies each entry through the gflags runtime setter, so a caller able to reach the port can change the daemon's behaviour without restarting it, including disabling the transport-security flags, redirecting log files and altering flags such as failed_login_attempts and password_lock_time_in_secs. Public reports of this endpoint describe a single name, enable_authorize, being refused by the handler; at release 3.8.0 that refusal is not present and the handler applies every name it is given.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Graph database unauthenticated configuration exposure lacks direct authentication or identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-73125",
+    "published": "2026-08-27 21:13:10",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Ebyte device web management interface does not consistently enforce \nauthentication before granting access to administrative functionality. \nAn unauthenticated remote attacker could access sensitive configuration \ninformation, modify device settings, or disrupt availability.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic IoT/hardware device web interface authentication bypass with no DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78239",
+    "published": "2026-08-27 21:48:30",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Xiiaozet LK100W exposes a critical management function that can be \ninvoked without authentication, allowing a remote attacker to enable \nadministrative services that should be restricted. Successful \nexploitation may permit unauthorized access to the device.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer/IoT device unauthenticated management function with no identity or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81094",
+    "published": "2026-08-27 14:50:34",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The mcp-router CLI served its MCP aggregator on every interface and enforced authentication only when the operator asked for it. The serve command in apps/cli/src/commands/serve.ts defaulted its host to the all-interfaces address on a fixed port, and required a token only when the corresponding flag was supplied, so a default invocation exposed the aggregator, and every MCP server it fronted, to anyone able to reach the port. Release 0.6.3 defaults the host to the loopback address and refuses to start without a token whenever the host it is given is not a loopback address; no earlier release carries either check.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI developer tooling CLI with optional authentication lacks DPI identity or access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81098",
+    "published": "2026-08-27 14:50:38",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Telnyx MCP server exposed its HTTP transport on every interface and did not require a caller credential. packages/mcp-server/src/http.ts served MCP on the root path with a listener bound to all interfaces and parsed the caller's authentication headers in a mode that did not fail when they were absent, so a request without any credential completed initialisation and dispatched tools. Dispatch forwarded the server's own stored credentials, the Telnyx API key and client secret together with the code-execution key, to the upstream endpoint, so an unauthenticated caller able to reach the port acted with them. The current code defaults the host to loopback, requires a server API key, and enforces it in middleware.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "AI/MCP server missing authentication, not core identity/access infrastructure or DPI sector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-68929",
+    "published": "2026-08-27 20:21:30",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "FastGPT is an open-source LLM platform for building AI applications on a knowledge base. In versions prior to 4.15.2, the WeChat (iLink) share-channel endpoints authorize requests using only the public shareId, with no authenticated identity or team-ownership check. As a result, an unauthenticated attacker who knows a victim team's shareId can take that team's WeChat bot offline or hijack the channel to their own bot: the logout endpoint is gated only by an existence check yet wipes the outLink's stored WeChat token, and the QR-code status endpoint performs no authorization at all and writes attacker-supplied bot credentials into the outLink identified by shareId. By generating a QR for a victim shareId, scanning it with their own WeChat, and calling the status endpoint, an attacker binds the victim team's app to the attacker's bot, exposing the app's private responses, displacing the legitimate binding, and consuming the victim's resources. The shareId is exposed in every shared chat URL, iframe, and embed, so it is not a secret. This issue is fixed in version 4.15.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "LLM platform (FastGPT) explicitly excluded from DPI identity scope despite missing authorization.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81826",
+    "published": "2026-08-27 13:32:48",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Affected versions of Flowintel do not revoke existing authenticated sessions when a user’s password is changed.\n\n\nThis means that if an attacker already possesses a valid session—for example, from prior access or a stolen session token—the victim changing their password does not terminate that attacker’s access. The session remains usable until it expires naturally. The upstream commit describes this directly as:\n\n\n“session keeps working until it expires.”\n\nThe fix detects password changes and explicitly invokes _invalidate_user_sessions(user.id) after the database update. This is applied in both edit_user_core() and admin_edit_user_core().\n\nVersion impacted >=3.3.0",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Session revocation flaw in niche threat intelligence platform, not core identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78236",
+    "published": "2026-08-26 07:20:58",
+    "cvss": 8.8,
+    "epss": 0.00146,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An insecure PIN derivation mechanism in ABR allows a low-privileged user to escalate privileges to administrator by communicating over Cross-Process Communication (XPC) while masquerading as an Apple-signed process.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in Apple OS component, no identity/access infrastructure or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-80208",
+    "published": "2026-08-27 14:50:29",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "APITable through 1.13.0-beta.1 annotates both getUserHistories and closePausedUserAccount in InternalUserController with requiredLogin = false. ResourceInterceptor honours that annotation by returning before any session or API key is validated, and the nginx gateway shipped with the product proxies every /api request to the backend server, so both endpoints are reachable by any unauthenticated client that can reach the gateway. An attacker can POST to /api/v1/internal/getUserHistories to enumerate the accounts sitting in the 30-day cooling-off period that follows a deletion request, then POST to /api/v1/internal/users/{userId}/close for each one. The closure path clears the account's email address, phone number and nickname, cancels its space subscriptions, removes its space memberships and deletes its OAuth bindings, so the cooling-off window that exists to let a user reverse a deletion request is bypassed and the account cannot be recovered.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Missing authentication on internal endpoints in low-code database platform, not core identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76639",
+    "published": "2026-08-27 17:51:46",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Unitree G1 EDU firmware through 1.5.2 contains an unauthenticated remote code execution vulnerability that allows network-adjacent attackers to execute arbitrary commands as root by chaining three weaknesses: an unauthenticated WebRTC-to-DDS bridge on TCP port 9991, a static AES-128 key stored with world-readable permissions, and a path traversal flaw in the chat_go knowledge upload API. Attackers can publish DDS control messages to restart the bashrunner service, plant a malicious payload in its script execution directory via path traversal, and trigger execution of that payload as uid 0 through the bashrunner shell subprocess.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "IIoT/robotics firmware RCE, explicitly excluded from DPI scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75960",
+    "published": "2026-08-26 13:20:19",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Rently Smart Home versions 20.1.0 and prior are vulnerable to an Insufficiently Protected Credentials vulnerability. This could allow an attacker to retrieve pins including the Master Pin, overriding standard user permissions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer smart home IoT credential exposure, explicitly excluded from DPI scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81703",
+    "published": "2026-08-27 14:51:06",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "openssl_encrypt versions before 1.4.9 fail to validate encryption status of embedded post-quantum private keys in file metadata. Attackers can craft files with unencrypted embedded PQC keys that decrypt under any password, bypassing authentication and producing attacker-chosen plaintext with false integrity verification.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Cryptographic validation flaw in general-purpose PHP encryption function, not identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19718",
+    "published": "2026-08-26 06:00:19",
+    "cvss": 8.1,
+    "epss": 0.00166,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The BlogVault Backup & Staging WordPress plugin before 6.65, MalCare WordPress Security Plugin  WordPress plugin before 6.65, The WP Remote WordPress Plugin WordPress plugin before 6.65 do not prevent unauthenticated users from obtaining data derived from the secret that binds a site to its remote management service, and generate that secret with a weak pseudo-random number generator, allowing attackers to recover it and gain administrative access to the site.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugins explicitly excluded from DPI identity scope despite authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15985",
+    "published": "2026-08-26 11:36:39",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Classified Listing - Mobile Number Verification plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.6.0. This is due to missing server-side Firebase OTP validation in the process_otp_login() function. This makes it possible for unauthenticated attackers to authenticate as any user with a phone number registered in the plugin's phone table by submitting an arbitrary OTP code and UID through the Firebase OTP login flow. Successful exploitation requires OTP login to be enabled with Firebase selected as the verification gateway, and requires the attacker to know or guess the target account's registered phone number. Administrator account takeover is possible if an administrator account has a phone number registered in the plugin.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite authentication bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77977",
+    "published": "2026-08-27 21:56:10",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Ebyte gateway product's vendor configuration utility does not require authentication before \nallowing certain disruptive administrative actions when default \ncredentials remain configured. An unauthenticated attacker on the \nadjacent network could reboot the device or restore factory settings, \nresulting in a loss of configuration and service availability.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Gateway configuration utility with default credential bypass leading to DoS, not identity/access infrastructure or DPI-relevant sector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76640",
+    "published": "2026-08-27 17:52:11",
+    "cvss": 7.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Unitree G1 EDU firmware through 1.5.2 contains multiple chained vulnerabilities in the BLE GATT server and WiFi provisioning stack that allow unauthenticated proximate attackers to achieve root code execution without pairing or credentials by exploiting an unquoted heredoc variable in the WiFi provisioning script and a buffer overflow in the SSID chunk accumulator. Attackers can send crafted BLE writes to overflow a fixed BSS buffer across BLE connections, corrupting an adjacent mainloop function pointer dispatch entry that is subsequently invoked by the cleanup path passing attacker-controlled data to system() as uid 0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Educational robot firmware RCE via BLE/WiFi stack, no identity or access-control nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-79938",
+    "published": "2026-08-26 19:37:36",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell PowerProtect Cyber Recovery, versions prior to 20.3, contain an Improper Authentication vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise backup software with improper authentication, lacks clear identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19715",
+    "published": "2026-08-27 06:00:18",
+    "cvss": 7.5,
+    "epss": 0.00145,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WP OAuth Server ( Login with WordPress ) WordPress plugin before 6.3.1 does not restrict access to the debug log it writes, which is stored at a fixed and publicly reachable location, allowing unauthenticated users to read the OAuth tokens and authorisation codes it has issued as well as user records including password hashes when debug logging is enabled.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite OAuth token and credential exposure.",
+      "fail_open": false
+    }
+  }
+]
