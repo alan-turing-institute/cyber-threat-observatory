@@ -1,0 +1,370 @@
+[
+  {
+    "id": "CVE-2026-76581",
+    "published": "2026-08-28 06:39:49",
+    "cvss": 9.8,
+    "epss": 0.00339,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The WPMU DEV Dashboard plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 5.0.1. This is due to inconsistent and ambiguous HMAC message construction between the unauthenticated `wdpsso_step1` and `wdpsso_step2` AJAX actions, where step 1 signs and discloses an unseparated concatenation of the token, state, redirect, and domain values, while step 2 verifies an unseparated concatenation that omits the domain field. This makes it possible for unauthenticated attackers, on sites connected to WPMU DEV with Hub SSO enabled and mapped to an administrator, to obtain a valid HMAC from step 1 and replay it to step 2 by moving the domain value into the redirect field, resulting in an authenticated administrator session.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin authentication bypass, explicitly excluded by overlay hard exclude for consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82078",
+    "published": "2026-08-28 11:45:25",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an attacker can manipulate system configuration parameters, this enables the execution of arbitrary Java bytecode residing on the application classpath under the security context of the PaperCut server process.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Print management software RCE via class loading, lacks identity/access infrastructure nexus or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81578",
+    "published": "2026-08-28 11:39:45",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "An improper access control vulnerability exists in the web management interface of PaperCut MF and PaperCut NG. Under specific conditions, unauthenticated remote requests targeting administrative functions can trigger backend actions prior to the  completion of access validation checks. This allows an unauthenticated remote attacker to modify certain system configurations.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Print management software access control flaw, lacks identity/access infrastructure nexus or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16759",
+    "published": "2026-08-28 03:39:35",
+    "cvss": 6.5,
+    "epss": 0.00431,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to Remote Code Execution limited to zero-argument function invocation in all versions up to, and including, 4.0.5 via the tutor_course_filter_ajax AJAX action. This is due to missing authorization on the handler combined with unsanitized array keys being passed to extract() inside tutor_load_template(), allowing attacker-controlled POST data to overwrite the local $template variable and, in the resulting templates/single-content-loader.php template, the $method_map and $context variables invoked at $method_map[$context](). This makes it possible for unauthenticated attackers to call an arbitrary zero-argument PHP function server-side and, via WordPress core edit_user(), to create a persistent subscriber-level account from request parameters.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress LMS plugin missing authorization, explicitly excluded by overlay hard exclude for consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18527",
+    "published": "2026-08-28 20:48:33",
+    "cvss": 9.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Administration Runtime Expert for i 1R1M0 IBM Application Runtime Expert (ARE) for i could allow a remote attacker to gain elevated privileges, caused by ARE GUI component processing. An unauthenticated attacker can exploit this vulnerability to execute actions under another user's authenticated profile gaining elevated privileges on the IBM i system.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Enterprise admin tool privilege escalation, lacks core identity/access infrastructure nexus or explicit DPI sector alignment.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82277",
+    "published": "2026-08-28 16:18:58",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Argo Rollouts dashboard through 1.10.0 binds to all interfaces and exposes mutating Rollout operations without authentication, authorization, or CSRF protection. Attackers on the same network can invoke PromoteRollout, AbortRollout, RestartRollout, SetRolloutImage, UndoRollout, and RetryRollout operations across all namespaces accessible to the operator's kubeconfig.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Kubernetes deployment tool dashboard missing authentication, lacks identity/access infrastructure nexus or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82329",
+    "published": "2026-08-28 18:27:43",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "JFrog Artifactory contains an authentication weakness that, under default configuration, may allow an unauthenticated attacker with network access to obtain administrative privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Software artifact repository with default authentication weakness, lacks identity/access infrastructure nexus; lean drop per overlay guidance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82266",
+    "published": "2026-08-28 16:18:50",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Redpanda through 26.2.2 binds the Admin API to 0.0.0.0:9644 with admin_api_require_auth defaulting to false, treating unauthenticated requests as superusers. Attackers can reach port 9644 without credentials to create and delete broker accounts, modify cluster configuration, and disrupt partition replication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Streaming data platform admin API missing authentication by default, lacks identity/access infrastructure nexus; lean drop per overlay guidance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82452",
+    "published": "2026-08-29 13:47:54",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "rust-iot-platform through commit 5df942ab contains an authentication bypass vulnerability where most REST API routes lack authentication guards in their handler signatures. Unauthenticated attackers can create, update, list, retrieve, and delete user accounts by directly accessing unprotected endpoints without providing valid credentials.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "IoT platform with missing API authentication, explicitly excluded by overlay hard exclude for consumer/IoT software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82473",
+    "published": "2026-08-29 16:35:33",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "KubeEdge CloudCore through 1.23.1 accepts node task status reports on its HTTPS server without authentication verification. Attackers can reach CloudCore on port 10002 to mark upgrade jobs as succeeded or failed, deceiving the control plane about node upgrade status and blocking further upgrade scheduling.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing authentication in Kubernetes edge infrastructure (KubeEdge), not identity/access management or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82282",
+    "published": "2026-08-28 16:19:01",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Atlantis through 0.47.1 fails to authenticate the /github-app/setup endpoint, allowing unauthenticated attackers to access GitHub App credentials. Attackers can observe or intercept the GitHub redirect during setup to obtain the RSA private key and webhook secret, enabling installation token minting and webhook payload forgery.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Credential exposure in niche DevOps automation tool (Atlantis), not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82288",
+    "published": "2026-08-28 16:19:05",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Stable Diffusion WebUI through 1.10.1 contains a credential disclosure vulnerability in the /sdapi/v1/cmd-flags endpoint that returns parsed command-line arguments including gradio_auth and api_auth values in cleartext. Unauthenticated attackers can access this endpoint to retrieve configured usernames and passwords, then use them to authenticate to the interface and access the application.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Credential disclosure in consumer AI/ML hobbyist software (Stable Diffusion WebUI), explicitly excluded by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82247",
+    "published": "2026-08-28 10:49:33",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "gitoxide's gix-url crate (<= 0.32.0, fixed in 0.37.1) uses a hand-rolled URL parser that does not treat '?' or '#' as terminating the authority component, contrary to RFC 3986. As a consequence, gix-transport's HTTP redirect identity guard (can_reuse_identity) compares the wrong host and fails open. An attacker controlling a redirect response can craft a Location header of the form <attacker-authority>?@<original-authority> so that gitoxide sends the caller's HTTP Basic Authorization credentials to an unintended host. gix-transport is affected in versions <= 0.49.0 (fixed in 0.58.1).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Credential leak via HTTP redirect in Git protocol library (gitoxide), developer tooling with no identity/access or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82472",
+    "published": "2026-08-29 16:35:32",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Documenso before 2.13.0 accepts PDF file uploads on the /api/files/upload-pdf endpoint without requiring authentication, session tokens, or API credentials. Unauthenticated attackers can upload arbitrary PDF files indefinitely to exhaust storage resources or fill the database with unlinked document records.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication on upload endpoint leading to storage exhaustion in document signing software, classified as DoS rather than identity/access impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18891",
+    "published": "2026-08-28 20:51:27",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Langflow OSS 1.0.0 through 1.11.1 could allow a remote attacker to execute arbitrary flows and access sensitive information due to improper authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Improper authentication in LLM application builder (Langflow), explicitly excluded as LLM/Hugging Face-style tooling.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82255",
+    "published": "2026-08-28 10:49:38",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "gitoxide versions from 0.25.4 contain an HTTP credential leak vulnerability in the curl-based transport backend where credentials are sent to attacker-controlled servers after HTTP redirects. The vulnerability occurs because credential validation checks the original URL instead of the effective URL after redirect, allowing attackers to steal authentication tokens through cross-domain redirects or HTTPS-to-HTTP downgrades.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "HTTP credential leak in Git protocol library (gitoxide) via redirect handling, developer tooling with no identity/access or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75807",
+    "published": "2026-08-29 17:25:48",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The SAML Single Sign On – SSO Login plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 5.4.6. This is due to the mo_saml_login_validate() ACS handler persisting the X.509 certificate extracted from an incoming SAMLResponse into the mo_saml_required_certificate option before the signature-validation verdict is enforced, because mo_saml_find_certificate() returns false on a fingerprint mismatch rather than halting execution. This makes it possible for unauthenticated attackers to overwrite the plugin's stored IdP signing certificate with an attacker-controlled value, and subsequently forge SAML assertions for any WordPress account — including administrators — to obtain a fully privileged session. Note: The exploit requires the administrator to perform a repair after receiving the test_config_error_wpsamlerr004 error message during the test configuration.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "SAML authentication bypass in a WordPress plugin, explicitly excluded by base DPI and overlay rules for WordPress/blog software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17203",
+    "published": "2026-08-28 20:43:25",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Administration Runtime Expert for i 1R1M0 could allow a remote authenticated attacker to obtain sensitive information due to improper authentication enforcement.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Improper authentication enforcement leading to information disclosure in IBM i administration tool, lacks identity/access control impact required for DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55215",
+    "published": "2026-08-28 19:02:49",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MariaDB Connector/Node.js is used to connect applications developed on Node.js to MariaDB and MySQL databases. Prior to versions 3.3.3, 3.4.6, and 3.5.3, when ssl is enabled without a pinned CA or server certificate, MariaDB Connector/Node.js sends credentials before completing certificate fingerprint validation. In lib/cmd/handshake/auth/handshake.js, a server that selects mysql_clear_password as the initial authentication plugin can receive the password before the post-TLS identity check. In lib/cmd/handshake/authentication.js, an authentication switch can evaluate the previous plugin instead of the requested target plugin, allowing mysql_clear_password to send the credential first. An active man-in-the-middle can present a self-signed certificate, capture the database password, and use it to authenticate directly even though the connector later rejects the server and closes the connection. This issue is fixed in versions 3.3.3, 3.4.6, and 3.5.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Credential exposure during TLS handshake in database connector library (MariaDB Connector/Node.js), not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82265",
+    "published": "2026-08-28 16:18:50",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Zipkin through 3.6.1 exposes Spring Boot Actuator endpoints on the tracing API port without authentication, allowing unauthenticated attackers to access sensitive information. Attackers can read environment variables, bean configurations, and storage credentials via actuator endpoints, or modify log levels to suppress logging.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication on observability framework endpoints lacks a DPI identity or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55678",
+    "published": "2026-08-28 20:32:23",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Arc is an open, SQL-native time-series database for telemetry. From 26.02.1 until 26.06.2, Arc Enterprise clustering accepts cluster join requests without authentication when cluster.enabled is true but cluster.shared_secret is not configured. The defaults in internal/config/config.go set cluster.enabled to false, cluster.cluster_name to arc-cluster, cluster.coordinator_addr to :9100, cluster.shared_secret to an empty value, and cluster.tls_enabled to false, while cmd/arc/main.go requires cluster.shared_secret only when cluster.replication_enabled is true. JoinRequest in internal/cluster/protocol/messages.go accepts attacker-controlled node_id, role, raft_addr, api_addr, and coord_addr values, plus optional auth_nonce, auth_timestamp, and auth_hmac fields. The join path in internal/cluster/coordinator.go validates HMAC authentication only when the configured shared secret is non-empty and otherwise proceeds after only the cluster-name check. An accepted node is marked healthy, added as a Raft voter or registered locally, and becomes available through internal/cluster/registry.go to the routing logic in internal/cluster/router.go. The forwardRequest path in internal/cluster/router.go builds its target from node.APIAddress and copies Authorization and x-api-key headers with the request, so a rogue node selected for a forwarded query or write can receive authentication headers, request bodies, database and measurement names, and operational metadata. Heartbeat in internal/cluster/protocol/messages.go also lacks HMAC fields, and internal/cluster/coordinator.go updates node state from supplied node_id and state values without authentication. An unauthenticated network attacker who can reach the coordinator port and knows the cluster name can therefore become a trusted cluster node, mutate cluster membership, be submitted as a Raft voter, intercept topology-dependent forwarded requests, divert or forge operations, and blackhole or delay traffic. The default standalone configuration is not reachable because cluster.enabled is false, but Enterprise cluster deployments with clustering enabled and no shared secret are affected. This issue is fixed in version 26.06.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Cluster join authentication bypass in a telemetry database lacks a DPI identity infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55857",
+    "published": "2026-08-28 22:44:24",
+    "cvss": 5.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MariaDB Connector/J is used to connect applications developed in Java to MariaDB and MySQL databases. Prior to 2.7.14, 3.3.5, 3.4.3, and 3.5.9, PAM dialog authentication can be coerced into transmitting the account password over an insecure connection. The mysql_clear_password plugin is gated behind a secure transport, but the sibling PAM handler SendPamAuthPacketFactory, named dialog by the server, does not declare that requirement and inherits the default secure-required value false; older branches implement the same affected behavior in SendPamAuthPacket. A hostile or man-in-the-middle server can send an Authentication Switch Request for dialog over plain TCP, causing the driver to return the user's password in cleartext when sslMode=DISABLE and restrictedAuth=null, which is the default configuration. Properly verified TLS and local Unix sockets are not exposed to this transport vector. This issue is fixed in versions 2.7.14, 3.3.5, 3.4.3, and 3.5.9.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Database connector authentication plugin flaw exposing cleartext passwords lacks a DPI identity infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55860",
+    "published": "2026-08-28 22:50:30",
+    "cvss": 5.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MariaDB Connector/R2DBC is a non-blocking MariaDB and MySQL client implemented in Java. Prior to 1.4.1, org.mariadb:r2dbc-mariadb does not gate clear-text password authentication plugins on transport encryption because the AuthenticationPlugin interface has no capability for a plugin to require a secure connection. A hostile or man-in-the-middle MariaDB server can send an AuthSwitchRequest naming mysql_clear_password or dialog (PAM) over a plain-TCP unencrypted connection, and AuthenticationFlow permits ClearPasswordPluginFlow or PamPluginFlow to return the user's password as cleartext bytes on the wire. The disclosed credentials can subsequently be used to authenticate directly to the database server. This issue is fixed in version 1.4.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Database client driver authentication flaw exposing cleartext passwords lacks a DPI identity infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  }
+]
