@@ -1,0 +1,1101 @@
+[
+  {
+    "id": "CVE-2026-82595",
+    "identity": {
+      "title": "CVE-2026-82595",
+      "published": "2026-08-30 23:45:08",
+      "modified": "2026-08-31 00:16:41",
+      "description": "A vulnerability was found in D-Link DIR-825M 1.1.8. Affected by this vulnerability is the function sub_456CF4 of the file /boafrm/formSysCmd of the component System Command Execution. Performing a manipulation of the argument sysCmd results in command injection. It is possible to initiate the attack remotely. The exploit has been made public and could be used."
+    },
+    "cvss": {
+      "base_score": 7.4,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formSysCmd/formSysCmd.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "D-Link",
+      "products": "DIR-825M",
+      "cpe_uris": "cpe:2.3:h:dlink:dir-825m:1.1.8:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "d-link:dir-825m",
+          "vendor": "D-Link",
+          "product": "DIR-825M",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/vuln/397090/cti",
+      "https://vuldb.com/vuln/397090",
+      "https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formSysCmd/formSysCmd.md",
+      "https://www.dlink.com/",
+      "https://vuldb.com/submit/892630",
+      "https://vuldb.com/cve/CVE-2026-82595"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82595",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82595"
+    },
+    "item_id": "CVE-2026-82595",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router (D-Link DIR-825M) with no enterprise or DPI footprint, despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82593",
+    "identity": {
+      "title": "CVE-2026-82593",
+      "published": "2026-08-30 23:15:11",
+      "modified": "2026-08-31 00:16:41",
+      "description": "A flaw has been found in D-Link DIR-825M 1.1.8. This impacts the function sub_41802C of the file /boafrm/formLtefotaUpgradeFibocom of the component LTE Module Firmware Upgrade. This manipulation of the argument fota_url causes stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been published and may be used."
+    },
+    "cvss": {
+      "base_score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formLtefotaUpgradeFibocom/formLtefotaUpgradeFibocom.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "D-Link",
+      "products": "DIR-825M",
+      "cpe_uris": "cpe:2.3:h:dlink:dir-825m:1.1.8:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "d-link:dir-825m",
+          "vendor": "D-Link",
+          "product": "DIR-825M",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formLtefotaUpgradeFibocom/formLtefotaUpgradeFibocom.md",
+      "https://vuldb.com/vuln/397088",
+      "https://vuldb.com/vuln/397088/cti",
+      "https://vuldb.com/cve/CVE-2026-82593",
+      "https://www.dlink.com/",
+      "https://vuldb.com/submit/892516"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82593",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82593"
+    },
+    "item_id": "CVE-2026-82593",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router (D-Link DIR-825M) with no enterprise or DPI footprint, despite high CVSS and public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82592",
+    "identity": {
+      "title": "CVE-2026-82592",
+      "published": "2026-08-30 23:00:13",
+      "modified": "2026-08-30 23:17:08",
+      "description": "A vulnerability was detected in D-Link DIR-825M 1.1.8. This affects the function sub_46725C of the file /boafrm/formDiskFormat of the component Disk Formatting Handler Endpoint. The manipulation of the argument partition results in stack-based buffer overflow. The attack can be executed remotely. The exploit is now public and may be used."
+    },
+    "cvss": {
+      "base_score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formDiskFormat/formDiskFormat.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "D-Link",
+      "products": "DIR-825M",
+      "cpe_uris": "cpe:2.3:h:dlink:dir-825m:1.1.8:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "d-link:dir-825m",
+          "vendor": "D-Link",
+          "product": "DIR-825M",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/vuln/397087/cti",
+      "https://vuldb.com/vuln/397087",
+      "https://vuldb.com/submit/892514",
+      "https://vuldb.com/cve/CVE-2026-82592",
+      "https://www.dlink.com/",
+      "https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formDiskFormat/formDiskFormat.md"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82592",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82592"
+    },
+    "item_id": "CVE-2026-82592",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router (D-Link DIR-825M) with no enterprise or DPI footprint, despite high CVSS and public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-56718",
+    "identity": {
+      "title": "CVE-2026-56718",
+      "published": "2026-08-30 20:13:01",
+      "modified": "2026-08-30 21:16:34",
+      "description": "AJCloud AJY IPC firmware prior to version 01.10715.11.37 contains a path traversal vulnerability in the jdbhttpd web service that allows unauthenticated remote attackers to read arbitrary files with root privileges by supplying path traversal sequences in the HTTP request URI. Attackers can send crafted HTTP requests to port 80 without authentication to access sensitive files including cleartext RTSP credentials, Wi-Fi SSID and pre-shared key, device serial number, and cloud binding parameters."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.vulncheck.com/advisories/ajcloud-ajy-ipc-firmware-path-traversal-via-jdbhttpd"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "AJCloud",
+      "products": "AJY IPC Firmware",
+      "cpe_uris": "cpe:2.3:a:ajcloud:ajy_ipc_firmware:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/ajcloud-ajy-ipc-firmware-path-traversal-via-jdbhttpd",
+      "https://www.ajcloud.net/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-56718",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-56718"
+    },
+    "item_id": "CVE-2026-56718",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer IP camera firmware (AJCloud AJY IPC) with no enterprise or DPI footprint, despite unauthenticated remote access.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82657",
+    "identity": {
+      "title": "CVE-2026-82657",
+      "published": "2026-08-30 14:33:37",
+      "modified": "2026-08-30 15:16:46",
+      "description": "Admidio before 5.0.12 fails to enforce login-only module restrictions in RSS feed endpoints for forum and announcements modules. Unauthenticated attackers can retrieve forum topics and announcements by sending GET requests to rss/forum.php or rss/announcements.php, disclosing titles, full post text, author names, and timestamps."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Admidio/admidio/security/advisories/GHSA-mg9h-42f8-2pmm"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "Admidio",
+      "products": "admidio",
+      "cpe_uris": "cpe:2.3:a:admidio:admidio:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "admidio:admidio",
+          "vendor": "Admidio",
+          "product": "admidio",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/Admidio/admidio/security/advisories/GHSA-mg9h-42f8-2pmm",
+      "https://www.vulncheck.com/advisories/admidio-before-5.0.12-authentication-bypass-via-rss-feeds"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82657",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82657"
+    },
+    "item_id": "CVE-2026-82657",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Membership management CMS (Admidio) with no evident enterprise or DPI footprint, despite unauthenticated information disclosure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82654",
+    "identity": {
+      "title": "CVE-2026-82654",
+      "published": "2026-08-30 14:33:35",
+      "modified": "2026-08-30 15:16:46",
+      "description": "SiYuan before v3.8.1 fails to properly escape block name, alias, and memo fields in hint, backlink, and breadcrumb rendering functions. Attackers can set a block's name to contain HTML/script tags that execute when another user views documents referencing or displaying that block."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-hf87-qh3j-3p88"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/siyuan-before-3.8.1-stored-xss-via-block-name",
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-hf87-qh3j-3p88"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82654",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82654"
+    },
+    "item_id": "CVE-2026-82654",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal knowledge management application (SiYuan) with no enterprise or DPI footprint, despite high CVSS stored XSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82653",
+    "identity": {
+      "title": "CVE-2026-82653",
+      "published": "2026-08-30 14:33:34",
+      "modified": "2026-08-30 15:16:46",
+      "description": "SiYuan before v3.8.1 contains a stored cross-site scripting vulnerability in confirmDialog() where unescaped package names and notebook names are interpolated directly into innerHTML assignments. Attackers can submit malicious bazaar packages with HTML/script payloads in the name field that execute in users' browsers when uninstalling packages or unlocking encrypted notebooks."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-hvwp-43j9-4xgf"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/siyuan-before-3.8.1-stored-xss-via-confirmdialog",
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-hvwp-43j9-4xgf"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82653",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82653"
+    },
+    "item_id": "CVE-2026-82653",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal note-taking application with stored XSS, consumer-only footprint with no enterprise or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82649",
+    "identity": {
+      "title": "CVE-2026-82649",
+      "published": "2026-08-30 14:33:31",
+      "modified": "2026-08-30 15:16:45",
+      "description": "SiYuan Windows installer before version 3.8.1 (affected versions >= 2.0.14) contains an uncontrolled search path element vulnerability in its NSIS installer, which invokes system executables such as TASKKILL by name rather than by absolute path. Because NSIS nsExec::Exec resolves these calls using a search path that includes the installer's own launch directory ahead of System32, an attacker who plants a malicious executable (e.g., a renamed TASKKILL.exe) in that directory can have it executed when the installer runs. These calls occur in electron-builder's preInit hook before the license page is displayed, and with an all-users (elevated) install the planted binary executes with an elevated token, resulting in local privilege escalation."
+    },
+    "cvss": {
+      "base_score": 7.0,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/commit/251596fc0de2f9528c00c224252fd073a99973f4"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-427"
+      ],
+      "cwe_primary": "CWE-427",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-427": "Uncontrolled Search Path Element"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:siyuan-note:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/siyuan-before-3.8.1-local-privilege-escalation-via-uncontrolled-search-path",
+      "https://github.com/siyuan-note/siyuan/commit/251596fc0de2f9528c00c224252fd073a99973f4",
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-9j65-967f-5rv3"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82649",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82649"
+    },
+    "item_id": "CVE-2026-82649",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal productivity application installer vulnerability requiring local execution, consumer-only footprint with no enterprise or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82642",
+    "identity": {
+      "title": "CVE-2026-82642",
+      "published": "2026-08-30 13:44:34",
+      "modified": "2026-08-30 14:17:04",
+      "description": "Readest is an open-source e-book reader built on Tauri. In versions prior to 0.11.16, EPUB chapter HTML is sanitized with DOMPurify using a configuration that forbade only the <script> tag (FORBID_TAGS: ['script']) in apps/readest-app/src/services/transformers/sanitizer.ts. DOMPurify does not parse the contents of the srcdoc attribute on <iframe> elements, treating it as an opaque string attribute, so an attacker who can get an <iframe> element to survive sanitization can embed a complete HTML document containing a <script> tag inside srcdoc and have it execute when the browser renders the iframe. The content iframe is configured with sandbox=\"allow-same-origin allow-scripts\", so script executing inside it shares the parent origin and can reach parent.parent.__TAURI_INTERNALS__.invoke(...), giving access to every Tauri IPC command the application is permitted to use, which escalates to arbitrary code execution. The payload can be made invisible (zero-size, transparent iframe) so the reader sees only normal book text. Version 0.11.16 hardened the sanitizer configuration by adding 'iframe', 'object' and 'embed' to FORBID_TAGS and adding 'srcdoc' to FORBID_ATTR."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/readest/readest/security/advisories/GHSA-p4x7-pf2c-xrvj"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "readest",
+      "products": "readest",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/readest/readest/security/advisories/GHSA-p4x7-pf2c-xrvj",
+      "https://github.com/readest/readest/releases/tag/v0.11.16",
+      "https://github.com/readest/readest/commit/005aa2d6157a34049bf45641c06861d606a85edb",
+      "https://github.com/readest/readest/pull/4762"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82642",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82642"
+    },
+    "item_id": "CVE-2026-82642",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal e-book reader desktop application with DOM sanitization bypass, consumer-only footprint with no enterprise or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82542",
+    "identity": {
+      "title": "CVE-2026-82542",
+      "published": "2026-08-30 12:30:09",
+      "modified": "2026-08-30 13:16:56",
+      "description": "A weakness has been identified in Tenda HG10 300001138. Affected by this issue is the function formIPv6Routing of the file /boaform/admin/formIPv6Routing of the component Boa Web Server. This manipulation of the argument destNet causes buffer overflow. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/Tenda/HG10/bof-formIPv6Route-destNt.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-120"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-120": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      }
+    },
+    "software": {
+      "vendors": "Tenda",
+      "products": "HG10",
+      "cpe_uris": "cpe:2.3:h:tenda:hg10:300001138:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/Tenda/HG10/bof-formIPv6Route-destNt.md",
+      "https://vuldb.com/vuln/397058",
+      "https://vuldb.com/vuln/397058/cti",
+      "https://vuldb.com/cve/CVE-2026-82542",
+      "https://www.tenda.com.cn/",
+      "https://vuldb.com/submit/888876"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82542",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82542"
+    },
+    "item_id": "CVE-2026-82542",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router with no enterprise or DPI footprint, explicitly excluded despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82539",
+    "identity": {
+      "title": "CVE-2026-82539",
+      "published": "2026-08-30 10:15:09",
+      "modified": "2026-08-30 11:17:35",
+      "description": "A vulnerability was determined in TOTOLINK A720R 4.1.5cu.630_B20250509. This impacts the function setMacFilterRules of the file cstecgi.cgi of the component MAC Filtering. Executing a manipulation of the argument desc can lead to memory corruption. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/Xernary/CVE-2026-82539"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer"
+      }
+    },
+    "software": {
+      "vendors": "TOTOLINK",
+      "products": "A720R",
+      "cpe_uris": "cpe:2.3:h:totolink:a720r:4.1.5cu.630_b20250509:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "totolink:a720r",
+          "vendor": "TOTOLINK",
+          "product": "A720R",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/submit/888696",
+      "https://github.com/Xernary/CVE-2026-82539",
+      "https://www.totolink.net/",
+      "https://vuldb.com/vuln/397055/cti",
+      "https://vuldb.com/vuln/397055",
+      "https://vuldb.com/cve/CVE-2026-82539"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82539",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82539"
+    },
+    "item_id": "CVE-2026-82539",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer wireless router with no enterprise or DPI footprint, explicitly excluded despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15980",
+    "identity": {
+      "title": "CVE-2026-15980",
+      "published": "2026-08-30 04:25:48",
+      "modified": "2026-08-30 05:16:58",
+      "description": "The MyHome Core plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 4.4.5. This is due to missing authorization in the send_link() AJAX handler and improper token validation in the activate() function. This makes it possible for unauthenticated attackers to generate an activation token for an unconfirmed user account and obtain a valid authentication cookie for that account, including administrators. Successful exploitation requires the MyHome theme to be configured in legacy/WPBakery mode with frontend registration and confirmation email enabled, and the target account must not already have the myhome_agent_confirmed user meta set."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00454,
+      "percentile": 0.37723,
+      "date": "2026-08-31"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://themeforest.net/item/myhome-real-estate-wordpress-theme/19508653"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-289"
+      ],
+      "cwe_primary": "CWE-289",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-289": "Authentication Bypass by Alternate Name"
+      }
+    },
+    "software": {
+      "vendors": "TangibleWP",
+      "products": "MyHome Core",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://themeforest.net/item/myhome-real-estate-wordpress-theme/19508653",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/c458e018-5901-4917-9847-35f07646e068?source=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15980",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15980"
+    },
+    "item_id": "CVE-2026-15980",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint, explicitly excluded despite high CVSS and authentication bypass.",
+      "fail_open": false
+    }
+  }
+]

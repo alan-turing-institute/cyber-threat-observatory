@@ -1,0 +1,114 @@
+[
+  {
+    "id": "CVE-2026-82452",
+    "published": "2026-08-29 13:47:54",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "rust-iot-platform through commit 5df942ab contains an authentication bypass vulnerability where most REST API routes lack authentication guards in their handler signatures. Unauthenticated attackers can create, update, list, retrieve, and delete user accounts by directly accessing unprotected endpoints without providing valid credentials.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer IoT platform context triggers hard exclusion despite authentication bypass on REST API routes.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82641",
+    "published": "2026-08-30 13:23:40",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "keploy versions 3.1.0 through 3.6.25 bind the agent control-plane HTTP server to all interfaces without authentication, exposing endpoints that stream TLS session keys and traffic data. Attackers can access the /agent/pcap/keylog endpoint to retrieve NSS keylog lines and decrypt recorded TLS traffic, or invoke /agent/stop and /agent/storemocks to manipulate recording sessions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Developer testing tool lacks DPI sector or identity infrastructure nexus despite missing authentication on control plane.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82473",
+    "published": "2026-08-29 16:35:33",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "KubeEdge CloudCore through 1.23.1 accepts node task status reports on its HTTPS server without authentication verification. Attackers can reach CloudCore on port 10002 to mark upgrade jobs as succeeded or failed, deceiving the control plane about node upgrade status and blocking further upgrade scheduling.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Edge computing control plane lacks identity/access or DPI sector nexus despite missing authentication verification.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82472",
+    "published": "2026-08-29 16:35:32",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Documenso before 2.13.0 accepts PDF file uploads on the /api/files/upload-pdf endpoint without requiring authentication, session tokens, or API credentials. Unauthenticated attackers can upload arbitrary PDF files indefinitely to exhaust storage resources or fill the database with unlinked document records.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Unauthenticated file upload causes storage exhaustion with no identity, authentication, or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75807",
+    "published": "2026-08-29 17:25:48",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The SAML Single Sign On – SSO Login plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 5.4.6. This is due to the mo_saml_login_validate() ACS handler persisting the X.509 certificate extracted from an incoming SAMLResponse into the mo_saml_required_certificate option before the signature-validation verdict is enforced, because mo_saml_find_certificate() returns false on a fingerprint mismatch rather than halting execution. This makes it possible for unauthenticated attackers to overwrite the plugin's stored IdP signing certificate with an attacker-controlled value, and subsequently forge SAML assertions for any WordPress account — including administrators — to obtain a fully privileged session. Note: The exploit requires the administrator to perform a repair after receiving the test_config_error_wpsamlerr004 error message during the test configuration.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin context triggers hard exclusion despite SAML authentication bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82547",
+    "published": "2026-08-30 14:45:08",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was found in Linux Foundation Magma 1.9.0. The affected element is an unknown function of the file tasks/amf/amf_fsm.cpp of the component Registration Complete Message Handler. The manipulation results in improper authentication. The attack can be launched remotely. The exploit has been made public and could be used.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with vague improper authentication in telecom software lacks concrete DPI sector or identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82487",
+    "published": "2026-08-30 09:45:09",
+    "cvss": 6.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in Beetel 450TC3 01.00.00_01. This affects an unknown part. Executing a manipulation can lead to weak password recovery. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer router context triggers hard exclusion despite weak password recovery claim.",
+      "fail_open": false
+    }
+  }
+]

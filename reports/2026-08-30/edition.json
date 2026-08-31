@@ -1,0 +1,201 @@
+{
+  "alert_id": "333155b8",
+  "report_date": "2026-08-30",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-08-31 03:52:10",
+  "items": [
+    {
+      "item_id": "CVE-2026-75759",
+      "item_type": "cve",
+      "title": "CVE-2026-75759 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75759",
+      "source": "WAVE",
+      "published": "2026-08-30",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Compromises OpenID Connect token validation in the oidcc library, enabling account takeover and directly impacting Digital Identity federation infrastructure.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 5,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-75759.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-2b6671e1c0",
+      "item_type": "campaign",
+      "title": "Device Code Phishing is an Evolution in Identity Takeover",
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/device-code-phishing-evolution-identity-takeover",
+      "source": "ketch",
+      "published": "2026-08-30",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "Device code phishing is rapidly evolving as a primary vector for identity compromise, driven by publicly available toolkits and phishing-as-a-service models. Attackers manipulate Microsoft’s Device Authorization Grant flow to trick users into approving malicious OAuth tokens. This technique bypasses password theft and traditional MFA. Infrastructure teams should monitor for unusual device code approvals, restrict OAuth app consent policies, and educate users on recognizing device code prompts.",
+      "signals": {
+        "dpi_fit": 94.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-7a370f49b4",
+      "item_type": "campaign",
+      "title": "Mirage2FA Phishing Kit Bypasses MFA to Hijack Microsoft 365 Sessions, Targeting 3,500+ Organizations - Cyber Accord",
+      "url": "https://www.cyberaccord.com/mirage2fa-phishing-kit-bypasses-mfa-to-hijack-microsoft-365-sessions-targeting-3500-organizations/",
+      "source": "ketch",
+      "published": "2026-08-30",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "The Mirage2FA kit exploits Microsoft 365 authentication flows to bypass multi-factor authentication and steal active user sessions. Targeting over 3,500 organizations, the campaign uses real-time proxying to capture MFA tokens and session cookies. Infrastructure defenders must prioritize MFA fatigue detection, enforce phishing-resistant authentication methods like FIDO2, and monitor for impossible travel or concurrent session anomalies in Azure AD logs.",
+      "signals": {
+        "dpi_fit": 92.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-c4669ac6ee",
+      "item_type": "campaign",
+      "title": "Inside an AI‑enabled device code phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+      "source": "ketch",
+      "published": "2026-08-30",
+      "category": "threats",
+      "pir": [
+        "1.h"
+      ],
+      "excerpt": "Microsoft researchers detail a campaign combining AI-generated lures with automated device code phishing to scale account compromises. Threat actors use end-to-end automation to generate live authentication codes on demand, significantly increasing success rates and maintaining persistent access. Defenders should leverage Microsoft Graph security APIs to detect anomalous consent grants, enforce just-in-time access, and deploy AI-driven email filtering to block synthetic phishing content.",
+      "signals": {
+        "dpi_fit": 91.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-fade5ff58d",
+      "item_type": "campaign",
+      "title": "Chained Account Takeovers: AiTM Phishing Campaign Propagating Across Healthcare and Academic Medical Institutions - Security Risk Advisors",
+      "url": "https://sra.io/blog/chained-account-takeovers-aitm-phishing-campaign-propagating-across-healthcare-and-academic-medical-institutions/",
+      "source": "ketch",
+      "published": "2026-08-30",
+      "category": "threats",
+      "pir": [
+        "1.d"
+      ],
+      "excerpt": "A sophisticated Adversary-in-the-Middle (AiTM) campaign is chaining account takeovers across healthcare and academic medical networks. Attackers use live proxying to capture credentials and MFA tokens, then pivot laterally using compromised Outlook accounts. Defenders should implement email authentication hardening, deploy AI-driven anomaly detection for login patterns, and restrict cross-tenant sharing to contain lateral movement.",
+      "signals": {
+        "dpi_fit": 90.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-479dc30a93",
+      "item_type": "campaign",
+      "title": "Microsoft 365 Device Code Phishing Campaign Bypasses Password Theft ...",
+      "url": "https://cybersecuritynews.com/microsoft-365-device-code-phishing-campaign/",
+      "source": "ketch",
+      "published": "2026-08-30",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "ReversingLabs analysts document an active campaign abusing Microsoft’s Device Authorization Grant flow to execute near-invisible account takeovers. The attack combines realistic business-themed lures with a polished phishing kit, tricking users into authorizing malicious OAuth tokens. This bypasses traditional credential harvesting. Infrastructure teams must audit registered OAuth applications, enforce user consent restrictions, and monitor for high-privilege token issuance in identity logs.",
+      "signals": {
+        "dpi_fit": 89.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-95f49be77f",
+      "item_type": "campaign",
+      "title": "NovaCookies at scale: Inside the $320 Phishing Service Targeting Hundreds of Organizations",
+      "url": "https://www.island.io/blog/novacookies-at-scale-inside-the-320-phishing-service-targeting-hundreds-of-organizations",
+      "source": "ketch",
+      "published": "2026-08-30",
+      "category": "threats",
+      "pir": [
+        "1.g"
+      ],
+      "excerpt": "Threat actors are leveraging the NovaCookies phishing-as-a-service platform to conduct large-scale credential harvesting campaigns. Priced at just $320, this service enables low-skill attackers to target hundreds of organizations simultaneously. The infrastructure relies on automated proxying and real-time session interception, bypassing traditional email filters. Defenders should monitor for anomalous OAuth consent requests and implement strict conditional access policies to mitigate session hi",
+      "signals": {
+        "dpi_fit": 88.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-0e95517dba",
+      "item_type": "campaign",
+      "title": "Procurement-Themed AiTM Campaign Hijacks Microsoft 365 Sessions via Compromised Outlook Accounts | Mallory",
+      "url": "https://mallory.ai/stories/019f864d-cd13-7094-9964-55c354477637",
+      "source": "ketch",
+      "published": "2026-08-30",
+      "category": "threats",
+      "pir": [
+        "1.i"
+      ],
+      "excerpt": "Attackers are deploying procurement-themed Adversary-in-the-Middle phishing kits to hijack Microsoft 365 sessions. By compromising initial Outlook accounts, threat actors send highly convincing vendor invoice lures that proxy real login portals. This enables seamless MFA bypass and session theft. IT defenders should implement strict email routing rules for procurement domains, monitor for session token reuse, and enforce phishing-resistant MFA for finance workflows.",
+      "signals": {
+        "dpi_fit": 87.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-2adcfb4bbb",
+      "item_type": "campaign",
+      "title": "TIDALGUEST: A Self-Replicating Invitation Phishing Cluster | AegisAI",
+      "url": "https://www.aegisai.ai/blog/tidalguest-invitation-phishing-cluster",
+      "source": "ketch",
+      "published": "2026-08-30",
+      "category": "threats",
+      "pir": [
+        "1.a"
+      ],
+      "excerpt": "The TIDALGUEST cluster utilizes self-replicating invitation phishing to infiltrate corporate networks. Compromised accounts automatically generate and distribute malicious calendar and meeting invites, propagating the campaign across domains. This technique exploits trust in internal communication channels. Defenders should monitor for anomalous calendar creation patterns, restrict external meeting invites, and deploy behavioral analytics to detect automated invitation generation.",
+      "signals": {
+        "dpi_fit": 85.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-82466",
+      "item_type": "cve",
+      "title": "CVE-2026-82466",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82466",
+      "source": "vulners/duckdb",
+      "published": "2026-08-29",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Rodauth before 2.46.0 contains an authentication bypass vulnerability in the webauthn_login route that allows logged-in users to authenticate as any other account. Attackers can exploit improper account resolution logic that falls back to session account identifiers instead of validating the credential binding to complete authentication as arbitrary users.",
+      "signals": {
+        "cvss": 9.4,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 1,
+      "daily_phishing_campaigns": 8,
+      "daily_identity_threats": 1
+    }
+  }
+}
