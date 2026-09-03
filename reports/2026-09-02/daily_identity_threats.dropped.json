@@ -1,0 +1,274 @@
+[
+  {
+    "id": "CVE-2026-9055",
+    "published": "2026-09-02 04:26:46",
+    "cvss": 9.8,
+    "epss": 0.00291,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Booking for Appointments and Events Calendar – Amelia (Premium) plugin for WordPress is vulnerable to Privilege Escalation in versions 8.0 - 9.6.2. This is due to insufficient validation of the attacker-controlled 'type' parameter in the customer update endpoint, which allows customers to set their role to 'manager' and trigger creation of a WordPress user with the wpamelia-manager role when the 'externalId' parameter is set to 0. This makes it possible for unauthenticated attackers to escalate their privileges to administrator by first elevating to the manager role, then creating a provider entity linked to an administrator user ID and overwriting that administrator's password.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by consumer/hobbyist software rule despite privilege escalation vulnerability.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76658",
+    "published": "2026-09-01 19:47:55",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been identified in the SSH daemon of HPE Networking Fabric Composer that could allow an unauthenticated remote attacker to gain administrative access to vulnerable AFC hosts. Successful exploitation could allow an attacker to execute arbitrary commands as a privileged user on the underlying operating system leading to complete system compromise.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise network management SSH vulnerability lacks explicit DPI sector or identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76657",
+    "published": "2026-09-01 19:47:53",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerabilities have been identified in the API of HPE Networking Fabric Composer that could potentially allow an unauthenticated remote attacker to circumvent existing authentication controls. Successful exploitation could allow an attacker to gain administrative privileges leading to complete compromise of the HPE Networking Fabric Composer host.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise network management API authentication bypass lacks explicit DPI sector or identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-53649",
+    "published": "2026-09-02 17:21:39",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Joro is a web exploitation framework. Prior to version 1.1.1, Joro's default proxy mode exposes a local API on 127.0.0.1:9090 that performs no authentication and applies a wildcard CORS policy. Because plugin uploads use the CORS-safelisted multipart/form-data content type, cross-origin JavaScript on any page the operator visits can reach privileged endpoints - including uploading a native plugin and triggering a restart - directly through the operator's browser, with no preflight or credentials. Since plugins execute on load, this yields unauthenticated remote code execution as the operator's user from a single page visit. This issue has been patched in version 1.1.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Security exploitation framework explicitly excluded as hobbyist/consumer tool despite missing authentication.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84696",
+    "published": "2026-09-02 00:37:52",
+    "cvss": 9.3,
+    "epss": 0.00149,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Phison PS3111-S11 controller firmware versions through SBFQT1.3 expose privileged vendor unique commands over the ATA interface with absent or defeatable authentication mechanisms. Attackers can bypass the weak CRC-16 based unlock handshake or exploit builds with no VUC lock to read and write controller memory and raw flash, persisting implants across power cycles.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "SSD controller firmware vulnerability lacks identity/access or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-79687",
+    "published": "2026-09-01 15:58:08",
+    "cvss": 9.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell PowerStore SDNAS contains a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Filesystem access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise storage system missing authentication lacks explicit identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19806",
+    "published": "2026-09-01 04:27:49",
+    "cvss": 8.8,
+    "epss": 0.00396,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Support Genix – Helpdesk, AI Chatbot, Knowledge Base & Customer Support Ticketing System plugin for WordPress is vulnerable to Authentication Bypass leading to Administrator Account Takeover in all versions up to, and including, 1.4.52 via the `guest_ticket_login()` function and its `p` parameter. This is due to the site-wide AES-256-CBC encryption key being derived from only three two-digit `wp_rand(10, 99)` values and a Unix timestamp via `md5()` — yielding approximately 19.5 bits of entropy — combined with a deterministic IV derived from the password, no authentication tag on the ciphertext, and no capability check, nonce, or session validation on the publicly reachable `/sgnix/?p=<token>` endpoint. This makes it possible for authenticated attackers, with subscriber-level access and above, who can obtain a single legitimate guest ticket token as a known-plaintext oracle and bound the plugin activation timestamp, to exhaust the ~729,000-candidate keyspace entirely offline, recover the site-wide encryption key, and forge a self-consistent `{ticket_id, ticket_user}` token targeting any administrator-owned ticket. Submitting the forged token to the unprotected endpoint causes `wp_set_auth_cookie()` to be called for that administrator, granting the attacker full administrative access to the WordPress site.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by consumer/hobbyist software rule despite authentication bypass vulnerability.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84700",
+    "published": "2026-09-02 00:37:55",
+    "cvss": 8.8,
+    "epss": 0.00354,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PikiwiDB (Pika) v3.5.7 exposes an internal protobuf replication server on a port derived from the client port plus 2000 (e.g. 11221 when the default client port 9221 is used) that does not authenticate incoming requests. Although requirepass is intended to gate replication — a slave presents it as masterauth inside its MetaSync request — only the MetaSync handler (HandleMetaSyncRequest) validates it; the frame dispatcher (DealMessage) does not require a completed or attempted MetaSync before routing other message types to their handlers. As a result, an unauthenticated remote attacker can connect directly to the replication port and issue TrySync, DBSync, BinlogSync, and RemoveSlaveNode requests, obtaining the full-sync snapshot and live write stream and removing replica nodes, even when requirepass is configured.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Database replication authentication bypass lacks explicit identity/access or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84485",
+    "published": "2026-09-02 01:18:15",
+    "cvss": 8.7,
+    "epss": 0.00347,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "APITable through 1.13.0-beta.1 exposes the internal organization loadOrSearch endpoint without authentication, allowing unauthenticated attackers to retrieve member names, email addresses, and team hierarchy. Attackers can query the endpoint with space identifiers obtained from shared links or public templates to enumerate the complete member directory of any workspace.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing authentication on a productivity/database tool endpoint exposing directory info - no core identity infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2024-35585",
+    "published": "2026-09-02 00:00:00",
+    "cvss": 8.6,
+    "epss": 0.00284,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Oxford Nanopore MinKNOW before 24.06 relies on a client's source IP address for authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Weak authentication in DNA sequencing lab equipment software - falls under specialized scientific/industrial exclusion, not DPI identity infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84452",
+    "published": "2026-09-02 19:22:55",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Windows ML CLI is a command line tool for building portable, performant, and high-quality AI models for Windows ML. Prior to 0.4.0, the src/winml/modelkit/serve/cli_api.py component exposes WinML CLI commands through a localhost HTTP API without authentication and configures the allow_origins setting as a wildcard in both src/winml/modelkit/serve/cli_api.py and src/winml/modelkit/serve/app.py. A malicious website loaded by a user can send cross-origin requests to /v1/cli/build or /v1/cli/config and set the trust_remote_code parameter to true, which is converted to the --trust-remote-code command-line flag without validation. This reaches AutoConfig.from_pretrained with trust_remote_code=True in src/winml/modelkit/loader/_autoconfig.py and imports Python code from an attacker-controlled model repository, resulting in arbitrary code execution as the server user. This issue is fixed in version 0.4.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a local AI/ML developer CLI tool - falls under LLM/tooling exclusion with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82183",
+    "published": "2026-09-02 06:00:24",
+    "cvss": 8.1,
+    "epss": 0.00149,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The OAuth Single Sign On  WordPress plugin before 7.0.1 does not verify the identity assertion returned by its Steam single sign-on flow, allowing unauthenticated attackers to log in as an arbitrary non-administrator user, and to create new accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "OAuth SSO flaw in a WordPress plugin - explicitly excluded as consumer/hobbyist software per overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-12526",
+    "published": "2026-09-02 06:00:16",
+    "cvss": 8.1,
+    "epss": 0.00145,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Advanced Custom Fields: Extended WordPress plugin before 0.9.2.7 does not verify that the requester is authorized to edit the targeted user account in the update-user action of its front-end Forms module; it only checks a capability when the submitted role is administrator or super_admin. On a site that exposes a publicly reachable front-end form whose user-update action targets an existing administrator (a fixed target, or one mapped to a visitor-submitted field) and maps the password to a visitor-submitted field, an unauthenticated visitor can overwrite that administrator's password and take over the account. The default target is the submitting user, so exploitation depends on the form being configured to target another account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authorization bypass in a WordPress plugin - explicitly excluded as consumer/hobbyist software per overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2024-7956",
+    "published": "2026-09-02 14:47:25",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability exists in the affected products that allows a threat actor to gain access to user’s projects. To exploit this vulnerability the threat actor must have basic user privileges. If exploited, the threat actor can modify and delete the project.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no named product, sector cues, or identity mechanism - insufficient evidence for DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18771",
+    "published": "2026-09-01 14:59:54",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function vulnerability in TMT Machine Industry and Trade Ltd. Co. Talassoft Industrial Management Software allows Authentication Bypass.\n\nThis issue affects Talassoft Industrial Management Software: from V4 before V.16.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in industrial management software - falls under industrial/SCADA exclusion, not DPI identity infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-12663",
+    "published": "2026-09-01 13:30:42",
+    "cvss": 7.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security issue exists within ControlFLASH™, where the installer grants write permissions to the \"Everyone\" group on a product installation directory. This could allow arbitrary code execution, resulting in an attacker being given the ability to run any commands or code of the attacker's choice on a target machine at the logged-in user's permission level.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Generic installer permission flaw with no identity, authentication, or DPI-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84840",
+    "published": "2026-09-02 18:30:10",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in tsi-coop tsi-dpdp-cms up to 0.5.0. This affects an unknown part of the file InterceptingFilter.java of the component Bootstrap Setup Endpoint. The manipulation leads to missing authentication. The attack can be initiated remotely. The exploit is publicly available and might be used. Upgrading to version 0.5.1 is able to mitigate this issue. Upgrading the affected component is recommended.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Missing authentication on an obscure CMS setup endpoint with no clear DPI sector or identity infrastructure context.",
+      "fail_open": false
+    }
+  }
+]
