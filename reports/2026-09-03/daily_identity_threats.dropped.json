@@ -1,0 +1,258 @@
+[
+  {
+    "id": "CVE-2026-9055",
+    "published": "2026-09-02 04:26:46",
+    "cvss": 9.8,
+    "epss": 0.00291,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Booking for Appointments and Events Calendar – Amelia (Premium) plugin for WordPress is vulnerable to Privilege Escalation in versions 8.0 - 9.6.2. This is due to insufficient validation of the attacker-controlled 'type' parameter in the customer update endpoint, which allows customers to set their role to 'manager' and trigger creation of a WordPress user with the wpamelia-manager role when the 'externalId' parameter is set to 0. This makes it possible for unauthenticated attackers to escalate their privileges to administrator by first elevating to the manager role, then creating a provider entity linked to an administrator user ID and overwriting that administrator's password.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by base and overlay rules despite privilege escalation vulnerability.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85046",
+    "published": "2026-09-03 19:26:12",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Browser RCE vulnerability with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70352",
+    "published": "2026-09-03 22:59:12",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function in Azure AI Language allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing authentication in Azure AI Language service lacks identity/access infrastructure role or explicit DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85424",
+    "published": "2026-09-03 22:38:20",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MOOS core-moos through 10.4.0 lacks authentication in the wire protocol, allowing unauthenticated clients to connect with full publish, subscribe, and database clear privileges. Attackers can bypass the compile-time protocol string check and connect with arbitrary client names to execute privileged operations including DB_CLEAR which resets all variables and clears client mail queues.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Robotics middleware explicitly excluded by base industrial/vehicle exclusion and lacks identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85428",
+    "published": "2026-09-03 22:38:23",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MOOS core-moos through 10.4.0 contains an authentication bypass vulnerability in the optional MOOSDB HTTP server that allows unauthenticated clients to write variables. Attackers can send HTTP requests with variable names and values to the MOOSDB HTTP server port to modify MOOS variables including actuator and override commands without authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Robotics middleware explicitly excluded by base industrial/vehicle exclusion and lacks identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-53649",
+    "published": "2026-09-02 17:21:39",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Joro is a web exploitation framework. Prior to version 1.1.1, Joro's default proxy mode exposes a local API on 127.0.0.1:9090 that performs no authentication and applies a wildcard CORS policy. Because plugin uploads use the CORS-safelisted multipart/form-data content type, cross-origin JavaScript on any page the operator visits can reach privileged endpoints - including uploading a native plugin and triggering a restart - directly through the operator's browser, with no preflight or credentials. Since plugins execute on load, this yields unauthenticated remote code execution as the operator's user from a single page visit. This issue has been patched in version 1.1.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Security exploitation framework lacks identity/access infrastructure role or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84696",
+    "published": "2026-09-02 00:37:52",
+    "cvss": 9.3,
+    "epss": 0.00149,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Phison PS3111-S11 controller firmware versions through SBFQT1.3 expose privileged vendor unique commands over the ATA interface with absent or defeatable authentication mechanisms. Attackers can bypass the weak CRC-16 based unlock handshake or exploit builds with no VUC lock to read and write controller memory and raw flash, persisting implants across power cycles.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "SSD controller firmware lacks identity/access infrastructure role or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84700",
+    "published": "2026-09-02 00:37:55",
+    "cvss": 8.8,
+    "epss": 0.00354,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PikiwiDB (Pika) v3.5.7 exposes an internal protobuf replication server on a port derived from the client port plus 2000 (e.g. 11221 when the default client port 9221 is used) that does not authenticate incoming requests. Although requirepass is intended to gate replication — a slave presents it as masterauth inside its MetaSync request — only the MetaSync handler (HandleMetaSyncRequest) validates it; the frame dispatcher (DealMessage) does not require a completed or attempted MetaSync before routing other message types to their handlers. As a result, an unauthenticated remote attacker can connect directly to the replication port and issue TrySync, DBSync, BinlogSync, and RemoveSlaveNode requests, obtaining the full-sync snapshot and live write stream and removing replica nodes, even when requirepass is configured.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a generic in-memory database (Pika) with no evidence of identity, access, or public-sector DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84485",
+    "published": "2026-09-02 01:18:15",
+    "cvss": 8.7,
+    "epss": 0.00347,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "APITable through 1.13.0-beta.1 exposes the internal organization loadOrSearch endpoint without authentication, allowing unauthenticated attackers to retrieve member names, email addresses, and team hierarchy. Attackers can query the endpoint with space identifiers obtained from shared links or public templates to enumerate the complete member directory of any workspace.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Unauthenticated information disclosure in a no-code database platform with no identity, access-control, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2024-35585",
+    "published": "2026-09-02 00:00:00",
+    "cvss": 8.6,
+    "epss": 0.00284,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Oxford Nanopore MinKNOW before 24.06 relies on a client's source IP address for authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Weak authentication in scientific sequencing software (MinKNOW) lacks clinical, identity, or public-sector DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84452",
+    "published": "2026-09-02 19:22:55",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Windows ML CLI is a command line tool for building portable, performant, and high-quality AI models for Windows ML. Prior to 0.4.0, the src/winml/modelkit/serve/cli_api.py component exposes WinML CLI commands through a localhost HTTP API without authentication and configures the allow_origins setting as a wildcard in both src/winml/modelkit/serve/cli_api.py and src/winml/modelkit/serve/app.py. A malicious website loaded by a user can send cross-origin requests to /v1/cli/build or /v1/cli/config and set the trust_remote_code parameter to true, which is converted to the --trust-remote-code command-line flag without validation. This reaches AutoConfig.from_pretrained with trust_remote_code=True in src/winml/modelkit/loader/_autoconfig.py and imports Python code from an attacker-controlled model repository, resulting in arbitrary code execution as the server user. This issue is fixed in version 0.4.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a local AI/ML developer CLI tool with no identity, access, or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82183",
+    "published": "2026-09-02 06:00:24",
+    "cvss": 8.1,
+    "epss": 0.00149,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The OAuth Single Sign On  WordPress plugin before 7.0.1 does not verify the identity assertion returned by its Steam single sign-on flow, allowing unauthenticated attackers to log in as an arbitrary non-administrator user, and to create new accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "OAuth SSO flaw in a WordPress plugin is explicitly excluded as consumer/hobbyist software with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-12526",
+    "published": "2026-09-02 06:00:16",
+    "cvss": 8.1,
+    "epss": 0.00145,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Advanced Custom Fields: Extended WordPress plugin before 0.9.2.7 does not verify that the requester is authorized to edit the targeted user account in the update-user action of its front-end Forms module; it only checks a capability when the submitted role is administrator or super_admin. On a site that exposes a publicly reachable front-end form whose user-update action targets an existing administrator (a fixed target, or one mapped to a visitor-submitted field) and maps the password to a visitor-submitted field, an unauthenticated visitor can overwrite that administrator's password and take over the account. The default target is the submitting user, so exploitation depends on the form being configured to target another account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Privilege escalation in a WordPress plugin is explicitly excluded as consumer/hobbyist software with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2024-7956",
+    "published": "2026-09-02 14:47:25",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability exists in the affected products that allows a threat actor to gain access to user’s projects. To exploit this vulnerability the threat actor must have basic user privileges. If exploited, the threat actor can modify and delete the project.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Generic privilege escalation in unspecified software with no authentication, session, or identity mechanism; lacks DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-8862",
+    "published": "2026-09-03 20:42:59",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Netezza Software 11.3.0.3 through Interim Fix 002 has credentials that are hardcoded in the application source code, allowing unauthorized access to the container registry. The exposed secret enables attackers to pull private container images, potentially revealing proprietary code, configuration details, and other sensitive information.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Hardcoded credentials in IBM Netezza data warehousing software lacks identity/access infrastructure role; enterprise data platform outside DPI scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83961",
+    "published": "2026-09-03 15:27:59",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "ColdFusion is affected by an Improper Authentication vulnerability that could result in privilege escalation. An attacker could leverage this vulnerability to gain limited read and write access. The vulnerable component is restricted to an administrative network zone by default. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Improper authentication in Adobe ColdFusion web server lacks identity/access infrastructure role; general-purpose application server outside DPI scope.",
+      "fail_open": false
+    }
+  }
+]
