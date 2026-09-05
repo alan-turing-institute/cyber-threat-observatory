@@ -1,0 +1,242 @@
+[
+  {
+    "id": "CVE-2026-85046",
+    "published": "2026-09-03 19:26:12",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Browser engine type confusion in Chrome/V8 with no identity, authentication, or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75754",
+    "published": "2026-09-04 02:08:54",
+    "cvss": 10.0,
+    "epss": 0.00215,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing Authentication for Critical Function, Server-Side Request Forgery (SSRF), and Use of Hard-coded Credentials in ASUS Control Center allow an unauthorized user to obtain the encryption key via an HTTP request, causing a local service to enable SSH on port 2222. The attacker can then log in with the hardcode credentials to obtain a root shell, enabling direct reading, writing, and deletion of data on ASUS Control Center, as well as remote control of all servers, PCs, and workstations within the company.\nRefer to the 'Security Update for ASUS Control Center' section on the ASUS Security Advisory for more information.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Enterprise IT management software with hardcoded credentials and missing auth, but lacks direct identity/access infrastructure or public-sector DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70352",
+    "published": "2026-09-03 22:59:12",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function in Azure AI Language allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Missing authentication in Azure AI Language service, which lacks a direct identity, access, or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85424",
+    "published": "2026-09-03 22:38:20",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MOOS core-moos through 10.4.0 lacks authentication in the wire protocol, allowing unauthenticated clients to connect with full publish, subscribe, and database clear privileges. Attackers can bypass the compile-time protocol string check and connect with arbitrary client names to execute privileged operations including DB_CLEAR which resets all variables and clears client mail queues.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in MOOS robotics simulation framework, which has no identity, access, or DPI infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85663",
+    "published": "2026-09-04 14:32:20",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Aim 3.29.1 remote tracking server fails to authenticate requests and dispatches arbitrary methods through getattr without allowlist validation. Unauthenticated attackers can register clients, instantiate Repo resources, and invoke arbitrary methods to read experiments or delete runs.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authentication failure in Aim ML experiment tracking server, a niche developer tool with no identity or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85688",
+    "published": "2026-09-04 14:32:33",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "TEN Framework 0.11.71 contains unauthenticated arbitrary file read and write vulnerabilities in the TMAN Designer file-content API endpoints. Attackers can submit POST and PUT requests to the /api/designer/v1/file-content endpoints to read arbitrary files or write malicious content to system paths, enabling code execution through authorized_keys, cron files, or executable graph files.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated file read/write in TEN Framework workflow platform, lacking identity, authentication, or DPI infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75430",
+    "published": "2026-09-04 00:00:00",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PowerJob Worker version 5.1.2 (and likely earlier versions) exposes the /worker/deployContainer HTTP endpoint without authentication on the default transport port. This allows a remote attacker to execute arbitrary code.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication on PowerJob distributed task scheduler endpoint, with no identity, access, or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85428",
+    "published": "2026-09-03 22:38:23",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MOOS core-moos through 10.4.0 contains an authentication bypass vulnerability in the optional MOOSDB HTTP server that allows unauthenticated clients to write variables. Attackers can send HTTP requests with variable names and values to the MOOSDB HTTP server port to modify MOOS variables including actuator and override commands without authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in MOOS robotics simulation framework HTTP server, lacking identity or DPI infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85695",
+    "published": "2026-09-04 14:32:38",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "FastChat contains an authentication bypass vulnerability in the /register_worker endpoint that allows unauthenticated attackers to register arbitrary worker addresses and perform server-side request forgery. Attackers can register malicious workers under victim model names to intercept user prompts, images, and responses, or probe internal network ports across the worker mesh.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in FastChat LLM inference framework, which falls under the LLM/tooling exclusion and lacks identity or DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85667",
+    "published": "2026-09-04 14:32:23",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "xiaobei through 5.5.2 fails to implement authentication or signature validation on webhook endpoints, allowing unauthenticated attackers to inject arbitrary messages into the agent pipeline. Attackers can publish malicious messages via the /webhook_worktool handler and exploit unvalidated media URL fetching to perform server-side request forgery against internal services.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in niche AI agent tool with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-9317",
+    "published": "2026-09-04 17:56:20",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Nango before 0.71.6 contains a missing authentication vulnerability in the runner tRPC server that allows unauthenticated attackers to execute arbitrary JavaScript code by invoking the exposed start procedure without credentials. Attackers with network access to the runner port can send requests to the unauthenticated start procedure, bypassing the unenforced RUNNER_SECRET_KEY environment variable, to achieve remote code execution within the runner process.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Missing authentication in Nango integration runner, developer tooling with weak DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85671",
+    "published": "2026-09-04 14:32:26",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "QAnything 2.0.0 contains an authentication bypass vulnerability in the /api/local_doc_qa/get_file_base64 and /api/local_doc_qa/get_doc endpoints that allows unauthenticated attackers to access any uploaded file or document. Attackers can enumerate file identifiers through unauthenticated endpoints and retrieve base64-encoded files or parsed document chunks without ownership verification to disclose cross-tenant knowledge base content.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in AI document QA tool with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-53761",
+    "published": "2026-09-04 18:00:42",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Frappe CRM is an open-source customer relationship management tool. Prior to version 1.73.0, there is an authentication bypass vulnerability via logged invitation keys in crm/api. This issue has been patched in version 1.73.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in open-source CRM application with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18221",
+    "published": "2026-09-04 16:25:59",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to gain unauthorized access due to improper validation of client-supplied authentication parameters.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Improper authentication parameter validation in IBM i OS, generic enterprise OS flaw without specific identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85702",
+    "published": "2026-09-04 20:30:08",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security vulnerability has been detected in ramon-victor freegpt-webui up to 098db3dfeb41555c2ca9269df0f13e10ec1c35dc. Affected is the function _conversation of the file server/backend.py of the component Backend Conversation API. Such manipulation of the argument model leads to missing authentication. The attack may be launched remotely. The exploit has been disclosed publicly and may be used. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Hobbyist LLM web UI with missing authentication, explicitly excluded by the base Digital Identity and overlay consumer/hobbyist rules.",
+      "fail_open": false
+    }
+  }
+]
