@@ -1,0 +1,290 @@
+[
+  {
+    "id": "CVE-2026-86218",
+    "published": "2026-09-06 02:15:28",
+    "cvss": 10.0,
+    "epss": 0.00411,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "N-central is vulnerable to a pre-auth remote code execution This issue affects N-central: before 2026.3.1.14.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise IT management platform with pre-auth RCE, but lacks explicit identity/access or authentication bypass nexus required by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75816",
+    "published": "2026-09-06 02:26:52",
+    "cvss": 9.8,
+    "epss": 0.005,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to Authentication Bypass to Account Takeover in all versions up to, and including, 3.29.12. This is due to the pre_update_value function lacking any capability or ownership check, and ActionPost::conditions_logic() short-circuiting its current_user_can('edit_post') authorization gate whenever the post ID is non-numeric — such as the string user_1 — allowing unauthenticated form submissions to be routed to arbitrary user records without restriction. This makes it possible for unauthenticated attackers to overwrite any user's registered email address, including an administrator's, and then leverage WordPress's native password-reset flow to fully take over the targeted account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules for consumer/hobbyist software despite authentication bypass wording.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86543",
+    "published": "2026-09-07 23:03:20",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "knowns versions before 0.30.0 serve the management API without authentication on all network interfaces by default, with no password required on fresh installations. Attackers can access the unauthenticated /api/tunnel/start endpoint to provision a public tunnel and republish the API at a publicly accessible address.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Developer tunneling tool with missing authentication on management API, but lacks DPI or identity/access infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86480",
+    "published": "2026-09-07 16:26:41",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In JetBrains Hub before 2026.2.52442 an unauthenticated attacker could register a trusted service and gain superuser privileges",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Developer collaboration platform with unauthenticated privilege escalation, but lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76969",
+    "published": "2026-09-08 00:12:55",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "@sap/cds-mtxs NPM library does not perform sufficient checks on certain functionality used in multitenant CAP applications with extensibility enabled. An unauthenticated attacker could send specially crafted requests to obtain sensitive credentials and abuse them to replace or delete tenant data. Successful exploitation can result in a high impact on availability and integrity of the application. There may also be partial impact to the confidentiality of business data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "SAP developer framework library with credential exposure in multitenant apps, but lacks direct identity/access infrastructure or public-sector DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16876",
+    "published": "2026-09-07 00:48:01",
+    "cvss": 9.3,
+    "epss": 0.00331,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An authentication bypass vulnerability exists in the WebGUI of Series UNIVERGE IX-R/IX-V. A user could bypass authentication and execute arbitrary CLI commands by tampering with WebGUI messages and sending them to the device via internet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Enterprise IP PBX telephony hardware with WebGUI authentication bypass, but lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86426",
+    "published": "2026-09-07 12:53:47",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LibreNMS before 26.8.0 contains an authentication bypass vulnerability in the REST API that allows unauthenticated attackers to access protected endpoints by sending numeric values instead of string tokens. Attackers can exploit MySQL type coercion by sending small integers like 0 through 9 to match token hashes, gaining access to API functionality including device credentials and administrative features that enable remote code execution through alert templates.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Open-source network monitoring platform with REST API authentication bypass, but lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86259",
+    "published": "2026-09-06 12:37:50",
+    "cvss": 9.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenMAIC before 1.0.1 skips server-side request forgery validation in non-production builds, allowing unauthenticated attackers to reach cloud instance metadata services. Attackers can supply arbitrary provider URLs via the x-base-url header or baseUrl parameter to access sensitive cloud credentials and metadata.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Developer framework with SSRF to cloud metadata, but lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84732",
+    "published": "2026-09-07 08:16:40",
+    "cvss": 8.7,
+    "epss": 0.00544,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Retransmissions of ACK packet ID in OpenVPN through 2.6.22 and 2.7.6 allow remote unauthenticated attackers to cause a denial of service via crafted inputs that trigger a timeout integer overflow",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Pure denial-of-service in OpenVPN with no authentication or access-control impact, excluded by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84226",
+    "published": "2026-09-07 07:47:04",
+    "cvss": 8.5,
+    "epss": 0.00142,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenVPN version 2.5.0 through 2.6.22 and 2.7_alpha1 through 2.7.6 on Windows allows local authenticated users to perform a binary planting attack during network configuration steps",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Local binary planting in OpenVPN requires prior authentication and lacks a direct authentication bypass or credential exposure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86502",
+    "published": "2026-09-07 16:26:49",
+    "cvss": 8.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In JetBrains IntelliJ IDEA before 2026.2.2 missing TLS and authentication on the IJent gRPC server allowed local code execution on Remote Development hosts",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in JetBrains IntelliJ IDEA developer tooling, excluded as non-identity software with no DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82753",
+    "published": "2026-09-07 22:23:08",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Allocation of Resources Without Limits or Throttling vulnerability in ash-project ash_authentication_oauth2_server allows an unauthenticated attacker to exhaust database storage and memory.\n\nThe /authorize endpoint is unauthenticated by design. With Client ID Metadata Documents enabled, resolve_client/3 in AshAuthentication.Oauth2Server.CIMD fetches the document for each new URL-shaped client_id and upserts a client row, with no cap on the number of rows, no expiry or garbage collection, and no length bound on the fetched fields; the document was also placed in CIMD.Cache before validation, so even rejected documents held cache memory until their TTL. An attacker serving valid documents at many distinct URLs creates one permanent client row per URL, each able to carry multi-megabyte strings, growing storage and memory without bound.\n\nThis issue affects ash_authentication_oauth2_server: from 0.3.0 before 0.3.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Resource exhaustion denial-of-service in an OAuth2 server lacks direct authentication bypass or credential exposure impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18056",
+    "published": "2026-09-06 02:26:51",
+    "cvss": 7.5,
+    "epss": 0.00342,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The HivePress Authentication plugin for WordPress is vulnerable to Authentication Bypass via the access_token parameter in all versions up to, and including, 1.1.4. This is due to the authenticate_user function's Facebook authenticator resolving third-party identity by forwarding the attacker-supplied access_token to the Facebook Graph API and trusting the returned email and ID verbatim, without performing any application ID or audience validation — specifically, no /debug_token verification and no comparison of the token's app_id against the configured hp_facebook_app_id. This makes it possible for unauthenticated attackers to authenticate as any existing WordPress user, including administrators, whose email address is associated with a Facebook account for which the attacker can obtain any valid access token. Important Note: To exploit the vulnerability, the attacker must obtain the victim's access token.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in a WordPress plugin, explicitly excluded as consumer software per overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86292",
+    "published": "2026-09-07 09:30:09",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in SourceCodester Simple Traffic Offense System 1.0. Affected is an unknown function of the file saveuser.php of the component User Creation. Performing a manipulation of the argument position results in missing authentication. The attack may be initiated remotely. The exploit is now public and may be used.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche hobbyist PHP script with missing authentication, no DPI-relevant identity infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86214",
+    "published": "2026-09-06 13:00:07",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in Mstfakts College-Management-System. Impacted is an unknown function of the file Front-end/login.php. This manipulation of the argument email causes improper authentication. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Education-sector college management system with improper authentication, explicitly excluded from DPI identity scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86300",
+    "published": "2026-09-07 11:30:09",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw has been found in Tenda AC9 15.03.05.14. This impacts the function R7WebsSecurityHandler of the component Web Management. This manipulation causes improper authentication. The attack may be initiated remotely. The exploit has been published and may be used.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home router with improper authentication, explicitly excluded from DPI identity scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86306",
+    "published": "2026-09-07 13:00:07",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in light0011 cms c774dce31c6df0055568a8d5c53d964d99be199d/f72cf46f601efb2a0618c3814cc2f61380b38930. This affects an unknown part of the file App/Home/Model/UserModel.class.php of the component Cookie Helper. Executing a manipulation of the argument Username can lead to improper authentication. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche content management system with improper authentication, no DPI-relevant identity infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82325",
+    "published": "2026-09-07 11:03:14",
+    "cvss": 6.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A use-after-free vulnerability in the OpenVPN ovpn-dco-win driver version 2.5.0 through 2.8.6 allows local authenticated users to cause a system crash via crafted control messages",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local authenticated DoS in OpenVPN driver lacks the authentication or access-control impact required for an identity nexus.",
+      "fail_open": false
+    }
+  }
+]
