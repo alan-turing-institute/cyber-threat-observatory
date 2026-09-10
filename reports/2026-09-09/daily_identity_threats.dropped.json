@@ -1,0 +1,322 @@
+[
+  {
+    "id": "CVE-2026-87827",
+    "published": "2026-09-09 10:54:15",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Certain KGUARD DVR devices running vulnerable firmware expose a system command execution service on all network interfaces without requiring authentication. A remote unauthenticated attacker with network access to the affected service can execute arbitrary system commands on the device, potentially resulting in complete compromise of the DVR.\n\nThe vulnerability is known to have been exploited in the wild by the Mirai_ptea (Rimasuta) and Mirai_aurora botnets for malware propagation and subsequent DDoS activity. The vulnerability was reported to affect firmware dating from 2016, while firmware released after 2017 appears to mitigate the issue by restricting the affected service to the localhost interface (127.0.0.1) instead of exposing it on all interfaces (0.0.0.0).\n\nThe affected-device list reported by Netlab includes many D1004NR, D1008NR, D1016NR, D1104, D1104NR, D1108NR, D1116NR, D1132NR, D2116NR, D97xx, D98xx, and D99xx variants and several associated hardware revisions\n\n\nThe exploit is included in some version of rapperbot and exploited in 2026. This assignment has been made to document the active exploitation and lack of documentation from the vendor.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT DVR device, explicitly excluded from DPI scope despite unauthenticated RCE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-80099",
+    "published": "2026-09-09 08:28:22",
+    "cvss": 8.8,
+    "epss": 0.00508,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "Several Newfold plugins are vulnerable to Authentication Bypass. The vulnerability exists because the plugins bundle the wp-module-data module. In the module, the `authenticate()` method — registered on the `rest_authentication_errors` filter and therefore evaluated for every unauthenticated REST API request — performs an HMAC-style Bearer token comparison that degenerates when `HiiveConnection::get_auth_token()` returns `false`: PHP coerces `strrev(false)` to `strrev('')`, collapsing the secret salt to the publicly known constant `hash('sha256', '') = e3b0c44...`, while all remaining hash inputs (HTTP method, request URL, raw request body, and the `X-Timestamp` header) remain fully attacker-controlled. This makes it possible for unauthenticated attackers to compute a valid Bearer token entirely offline, pass the token equality check, and have `wp_set_current_user()` invoked against the first administrator returned by `get_users(['role' => 'administrator'])`, granting full administrator-level access and enabling arbitrary REST API operations such as creating new administrator accounts and achieving complete site takeover. Vulnerable versions are WP Plugin Crazy Domains (<= 2.5.2), WP Plugin Web (<= 2.3.4), WP Plugin Hostgator (<= 3.1.0), WP Plugin Bluehost (<= 4.17.1). The affected module is vulnerable in versions up to, and including, 2.9.4.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability, explicitly excluded from DPI scope despite authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87491",
+    "published": "2026-09-09 00:09:38",
+    "cvss": 8.8,
+    "epss": 0.00291,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Out of bounds write in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Browser engine vulnerability with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14359",
+    "published": "2026-09-09 08:28:22",
+    "cvss": 8.8,
+    "epss": 0.00246,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The YITH WooCommerce Waitlist Premium plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 3.35.0. This is due to the add_user_in_waiting_list() function registered on the wp_ajax_yith_wcwtl_add_user action being missing both a capability check and a nonce verification, and using parse_str() + extract() to import attacker-controlled variables from $_POST['params'] that are then passed to wp_create_user() and $user->set_role(). This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to that of an administrator by creating a new user account and assigning it the administrator role.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress e-commerce plugin, explicitly excluded from DPI scope despite privilege escalation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81963",
+    "published": "2026-09-08 17:19:13",
+    "cvss": 7.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Improper link resolution before file access ('link following') in Windows Update Stack allows an authorized attacker to elevate privileges locally.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "OS component vulnerability with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85880",
+    "published": "2026-09-08 17:14:21",
+    "cvss": 7.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Heap-based buffer overflow in Windows ALPC allows an authorized attacker to elevate privileges locally.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "OS component vulnerability with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-62645",
+    "published": "2026-09-08 08:11:22",
+    "cvss": 9.8,
+    "epss": 0.00348,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been identified in Reyrolle 7SR5 (All versions < V2.70). Information is exposed through the web interface that can be used to calculate the current and past session ID numbers. This could allow an attacker to bypass the authentication and gain unauthorized access to the device.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Industrial energy relay device, explicitly excluded from DPI scope despite authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61516",
+    "published": "2026-09-08 14:23:57",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Netis NX10 firmware V4.0.1.5808 and V3.0.0.4142 contain an information disclosure vulnerability that allows unauthenticated attackers to retrieve the administrator password by sending a request to the sysinfo action in the web management interface without a valid session. Attackers can replay the exposed credential against the login handler to establish a fully authenticated administrator session on the device.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home router firmware explicitly excluded from DPI scope despite authentication bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-73025",
+    "published": "2026-09-08 17:18:08",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Weak authentication in Windows iSCSI allows an unauthorized attacker to bypass a security feature over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Windows iSCSI storage protocol component lacks identity/access infrastructure role; authentication weakness in non-identity software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76969",
+    "published": "2026-09-08 00:12:55",
+    "cvss": 9.4,
+    "epss": 0.00294,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "@sap/cds-mtxs NPM library does not perform sufficient checks on certain functionality used in multitenant CAP applications with extensibility enabled. An unauthenticated attacker could send specially crafted requests to obtain sensitive credentials and abuse them to replace or delete tenant data. Successful exploitation can result in a high impact on availability and integrity of the application. There may also be partial impact to the confidentiality of business data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise development framework (SAP CAP) with credential exposure lacks core identity/access infrastructure role or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69356",
+    "published": "2026-09-08 17:12:45",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Exchange Server allows an unauthorized attacker to perform spoofing over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Cross-site scripting in enterprise email server (Exchange) with spoofing impact lacks authentication or access-control mechanism flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-47156",
+    "published": "2026-09-09 16:06:40",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MantisBT is an open source bug tracker. Versions 2.28.3 and earlier contain a critical authentication bypass in the SOAP API's mci_check_login() function. Any user knowing any valid cookie_string can authenticate as any other user (knowing their username), including the administrator, without knowing the target's password. The vulnerability is exploitable with zero prior access on default MantisBT installations because self-registration is enabled by default ($g_allow_signup = ON). A self-registered user can use their own cookie_string (readable from their browser's MANTIS_STRING_COOKIE cookie after login) to impersonate the administrator via the SOAP API. The REST API is NOT affected. The REST API's AuthMiddleware derives the username server-side from the API token or session cookie, so the username cannot be spoofed. The Web UI is NOT affected. The Web UI authenticates via PHP session cookies (PHPSESSID) and validates the MANTIS_STRING_COOKIE against the logged-in user through auth_is_cookie_valid(). The username is derived server-side from the cookie, not supplied by the client. Version 2.28.4 contains a patch. No known workarounds are available.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Open-source bug tracker (MantisBT) is niche dev tooling without identity/access infrastructure role; authentication bypass lacks DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69641",
+    "published": "2026-09-08 17:12:56",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authorization in Microsoft Exchange Server allows an authorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Privilege escalation in enterprise email server (Exchange) lacks identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69854",
+    "published": "2026-09-08 17:18:18",
+    "cvss": 9.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper authentication in Spring Cloud Azure allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Thin description of improper authentication in cloud integration framework (Spring Cloud Azure) without clear identity/access infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85982",
+    "published": "2026-09-08 20:17:40",
+    "cvss": 9.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Auth0 AD/LDAP Connector is vulnerable to stored Cross-Site Scripting (XSS) issues due to improper HTML encoding of data in search results and updater log content displayed in the admin panel. An authenticated user with privileges to modify directory attributes, or a low-privileged local user on the host where the connector is installed, could insert script content. This script content could then execute in an administrator's browser when they view the affected search results or update logs.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Stored XSS in Auth0 connector admin panel lacks direct authentication or token mechanism impact despite IdP product context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69355",
+    "published": "2026-09-08 17:12:44",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "External control of file name or path in Microsoft Exchange Server allows an authorized attacker to execute code over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Path traversal/RCE in Microsoft Exchange Server with no authentication, credential, or session nexus; falls outside identity/access infrastructure scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77097",
+    "published": "2026-09-08 12:12:53",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Private Metrics Server contained a missing authentication condition affecting metrics upload functionality and service availability. Software customers upgrade to resolved maintenance release. Update Private Metrics Server.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a generic metrics server with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77483",
+    "published": "2026-09-08 17:18:12",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Weak authentication in SQL Server allows an authorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Weak authentication in SQL Server database software, which is not identity/access infrastructure or DPI-relevant sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-62895",
+    "published": "2026-09-08 17:10:31",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Permissive cross-domain policy with untrusted domains in Azure Arc allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Cross-domain policy flaw in Azure Arc hybrid management service with no authentication, credential, or session nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86721",
+    "published": "2026-09-08 15:13:54",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "AVideo through commit c3edcc274c contains an authorization bypass vulnerability where a session cookie named 'key' with value 'value' overrides the $_REQUEST['key'] parameter in saveLive.php and related endpoints. Attackers can publish to any user's RTMP stream without authentication by using the known constant stream key value to hijack live broadcasts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authorization bypass in AVideo media streaming software, which is a consumer/hobbyist application excluded from DPI identity scope.",
+      "fail_open": false
+    }
+  }
+]
