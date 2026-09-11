@@ -1,0 +1,322 @@
+[
+  {
+    "id": "CVE-2026-87827",
+    "published": "2026-09-09 10:54:15",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Certain KGUARD DVR devices running vulnerable firmware expose a system command execution service on all network interfaces without requiring authentication. A remote unauthenticated attacker with network access to the affected service can execute arbitrary system commands on the device, potentially resulting in complete compromise of the DVR.\n\nThe vulnerability is known to have been exploited in the wild by the Mirai_ptea (Rimasuta) and Mirai_aurora botnets for malware propagation and subsequent DDoS activity. The vulnerability was reported to affect firmware dating from 2016, while firmware released after 2017 appears to mitigate the issue by restricting the affected service to the localhost interface (127.0.0.1) instead of exposing it on all interfaces (0.0.0.0).\n\nThe affected-device list reported by Netlab includes many D1004NR, D1008NR, D1016NR, D1104, D1104NR, D1108NR, D1116NR, D1132NR, D2116NR, D97xx, D98xx, and D99xx variants and several associated hardware revisions\n\n\nThe exploit is included in some version of rapperbot and exploited in 2026. This assignment has been made to document the active exploitation and lack of documentation from the vendor.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT DVR device with unauthenticated command execution; explicitly excluded by consumer/IoT hard rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-80099",
+    "published": "2026-09-09 08:28:22",
+    "cvss": 8.8,
+    "epss": 0.00508,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "Several Newfold plugins are vulnerable to Authentication Bypass. The vulnerability exists because the plugins bundle the wp-module-data module. In the module, the `authenticate()` method — registered on the `rest_authentication_errors` filter and therefore evaluated for every unauthenticated REST API request — performs an HMAC-style Bearer token comparison that degenerates when `HiiveConnection::get_auth_token()` returns `false`: PHP coerces `strrev(false)` to `strrev('')`, collapsing the secret salt to the publicly known constant `hash('sha256', '') = e3b0c44...`, while all remaining hash inputs (HTTP method, request URL, raw request body, and the `X-Timestamp` header) remain fully attacker-controlled. This makes it possible for unauthenticated attackers to compute a valid Bearer token entirely offline, pass the token equality check, and have `wp_set_current_user()` invoked against the first administrator returned by `get_users(['role' => 'administrator'])`, granting full administrator-level access and enabling arbitrary REST API operations such as creating new administrator accounts and achieving complete site takeover. Vulnerable versions are WP Plugin Crazy Domains (<= 2.5.2), WP Plugin Web (<= 2.3.4), WP Plugin Hostgator (<= 3.1.0), WP Plugin Bluehost (<= 4.17.1). The affected module is vulnerable in versions up to, and including, 2.9.4.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin authentication bypass; explicitly excluded by consumer/WordPress hard rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87491",
+    "published": "2026-09-09 00:09:38",
+    "cvss": 8.8,
+    "epss": 0.00291,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Out of bounds write in V8 in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Browser sandbox escape via out-of-bounds write in V8; no identity or access-control nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14359",
+    "published": "2026-09-09 08:28:22",
+    "cvss": 8.8,
+    "epss": 0.00246,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The YITH WooCommerce Waitlist Premium plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 3.35.0. This is due to the add_user_in_waiting_list() function registered on the wp_ajax_yith_wcwtl_add_user action being missing both a capability check and a nonce verification, and using parse_str() + extract() to import attacker-controlled variables from $_POST['params'] that are then passed to wp_create_user() and $user->set_role(). This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to that of an administrator by creating a new user account and assigning it the administrator role.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress/WooCommerce plugin privilege escalation; explicitly excluded by consumer/WordPress hard rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57967",
+    "published": "2026-09-10 04:43:10",
+    "cvss": 9.8,
+    "epss": 0.00279,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated remote attacker can craft a CORE protocol SESSION_REATTACH packet to steal an existing session and assume ongoing execution of the previously authenticated session.\n\n\n\nThis issue affects Apache Artemis: from 2.50.0 through 2.56.0; Apache ActiveMQ Artemis: from 1.0.0 through 2.44.0.\n\n\n\nUsers are recommended to upgrade to version 2.57.0, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Session hijacking in Apache Artemis message broker; lacks clear identity infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88018",
+    "published": "2026-09-10 16:03:25",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.75.1, rclone serve s3 configured with --auth-proxy but without --auth-key allows authPairMiddleware to register any client-chosen accessKeyID with an empty ws.s3Secret. gofakes3 then verifies the request’s SigV4 signature against that same empty secret, while Server.auth passes the access key identifier as both the user and authentication value to the proxy without an independent per-identity secret. An unauthenticated network attacker can therefore choose an arbitrary access key, sign with an empty secret, and reach whatever backend the auth-proxy script resolves for that identity. This issue is fixed in version 1.75.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Cloud storage sync utility authentication bypass; non-identity software with no DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82107",
+    "published": "2026-09-10 21:25:36",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to obtain sensitive information and bypass security restrictions due to improper authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Enterprise data integration platform with improper authentication; lacks explicit identity infrastructure or DPI sector context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88062",
+    "published": "2026-09-10 19:14:17",
+    "cvss": 9.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OmniRoute is an open-source AI gateway providing a single endpoint for multiple model providers. In 3.8.49 and earlier, the OmniRoute POST /api/acp/agents custom ACP agent endpoint accepted attacker-controlled binary and versionCommand values and used only a self-consistency check before execFileSync executed the selected interpreter and arguments. The same request called refreshAgentCache, and resolveVersionProbe accepted the matched command before the execFileSync sink ran it. The tokenizeVersionCommand function and DISALLOWED_VERSION_COMMAND_CHARS filter rejected a limited set of shell metacharacters but still allowed interpreter evaluation arguments. The isAuthenticated function relied on isAuthRequired, which accepted anonymous requests when requireLogin was false, while api/acp/ was absent from LOCAL_ONLY_API_PREFIXES and SPAWN_CAPABLE_PREFIXES. With requireLogin=false or during a fresh-instance bootstrap window, a remote anonymous request could supply an interpreter evaluation argument and execute arbitrary code in the server container. With requireLogin=true and a configured management password, exploitation instead required a management session or management-scoped API key. No fixed version is available as of this review.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI model gateway command injection and authentication bypass; non-identity software with no DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88285",
+    "published": "2026-09-10 08:24:15",
+    "cvss": 9.4,
+    "epss": 0.00274,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "GeoVision GV-LPC2211 V1.13 exposes a network-accessible PTZ control service without authentication, allowing remote clients to retrieve PTZ information and issue PTZ or raw serial commands.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "IP camera PTZ control service without authentication; explicitly excluded by consumer/IoT hard rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-47156",
+    "published": "2026-09-09 16:06:40",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MantisBT is an open source bug tracker. Versions 2.28.3 and earlier contain a critical authentication bypass in the SOAP API's mci_check_login() function. Any user knowing any valid cookie_string can authenticate as any other user (knowing their username), including the administrator, without knowing the target's password. The vulnerability is exploitable with zero prior access on default MantisBT installations because self-registration is enabled by default ($g_allow_signup = ON). A self-registered user can use their own cookie_string (readable from their browser's MANTIS_STRING_COOKIE cookie after login) to impersonate the administrator via the SOAP API. The REST API is NOT affected. The REST API's AuthMiddleware derives the username server-side from the API token or session cookie, so the username cannot be spoofed. The Web UI is NOT affected. The Web UI authenticates via PHP session cookies (PHPSESSID) and validates the MANTIS_STRING_COOKIE against the logged-in user through auth_is_cookie_valid(). The username is derived server-side from the cookie, not supplied by the client. Version 2.28.4 contains a patch. No known workarounds are available.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Bug tracker web application with authentication bypass, not identity/access infrastructure or DPI-relevant sector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-0310",
+    "published": "2026-09-10 05:21:28",
+    "cvss": 9.2,
+    "epss": 0.00337,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A buffer overflow vulnerability in the XML processing functionality of Palo Alto Networks PAN-OS® software enables an unauthenticated attacker with network access to the management web or dataplane interface to cause a denial of service (DoS) condition on VM-Series firewalls or execute arbitrary code with root privileges on the PA-Series firewalls.\n\nThe security risk posed by this issue is minimized when the management interface is restricted to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 . \n\nPanorama is impacted by this vulnerability.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Network firewall buffer overflow causing denial of service and remote code execution, with no authentication or identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-67593",
+    "published": "2026-09-10 04:40:29",
+    "cvss": 9.1,
+    "epss": 0.00288,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A remote attacker can craft an Openwire RemoveSubscriptionInfo command to cause the deletion of a queue on the Artemis broker before the connection authentication and authorization stage or at any time thereafter. \n\n\n\nThis issue affects Apache Artemis: from 2.50.0 through 2.56.0; Apache ActiveMQ Artemis: from 1.0.0 through 2.44.0.\n\n\n\nUsers are recommended to upgrade to version 2.57.0, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Message broker pre-authentication queue deletion vulnerability, lacking authentication bypass or identity infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-49364",
+    "published": "2026-09-10 04:49:27",
+    "cvss": 9.1,
+    "epss": 0.00162,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated network-adjacent attacker can leverage discovery to capture cluster administrative credentials during the initial cluster connection handshake.\n\nThis issue affects Apache Artemis: from 2.50.0 through 2.56.0; Apache ActiveMQ Artemis: from 1.0.0 through 2.44.0.\n\n\n\nUsers are recommended to upgrade to version 2.57.0, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Administrative credential capture during message broker handshake, not core identity/access infrastructure or DPI-relevant sector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88895",
+    "published": "2026-09-10 13:05:42",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CyberPanel before 3.0.5 fails to enforce two-factor authentication on API endpoints, allowing attackers to bypass TOTP requirements using password-derived tokens. Attackers who obtain an administrator's password can derive API tokens and perform administrative operations or create authenticated sessions without the second factor.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Multi-factor authentication bypass in web hosting control panel, not core identity/access infrastructure or DPI-relevant sector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-0307",
+    "published": "2026-09-10 05:51:53",
+    "cvss": 8.5,
+    "epss": 0.00105,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Multiple local privilege escalation vulnerabilities in the Palo Alto Networks GlobalProtect™ app allows a local user to escalate their privileges to NT AUTHORITY\\SYSTEM on Windows and root on macOS and Linux. This enables a non-administrative user to execute arbitrary commands with administrative privileges.\n\n\n\nThis GlobalProtect app on iOS, Android and ChromeOS is not impacted.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in VPN client application, with no authentication bypass or identity/access mechanism impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77974",
+    "published": "2026-09-09 15:41:54",
+    "cvss": 8.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "After spoofing the device and obtaining one user confirmation, an attacker may be able to cause the application to transmit firmware through an unauthenticated and unsigned update channel.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Vague firmware update vulnerability with no product identification, sector cues, or identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76009",
+    "published": "2026-09-09 05:31:04",
+    "cvss": 8.1,
+    "epss": 0.00515,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Next-Cart Store to WooCommerce Migration plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 3.9.8 via the `NCWM_Kitconnect::run()` function. This is due to the plugin registering the `/wp-json/next_cart/v1/migration` REST route with `permission_callback` set to `__return_true` and relying on a hardcoded fallback value of `__token__` in `get_option('nextcart_token', '__token__')` when the `nextcart_token` option has not yet been written to the database. This makes it possible for unauthenticated attackers to bypass authentication to the migration endpoint by supplying the literal string `__token__` as the token, gaining access to privileged handlers that pass attacker-controlled SQL directly to `$wpdb->query()` and `$wpdb->get_results()` — enabling arbitrary SQL execution including administrator account creation — and pass an attacker-controlled path to `unlink()`, enabling arbitrary file deletion and full site takeover. The hardcoded fallback is reachable whenever the `nextcart_token` option has not yet been populated, which occurs after WP-CLI, network, or programmatic plugin activation without a subsequent authenticated `wp-admin` visit, as token generation is deferred to `admin_init` via `register_settings()`.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by base and overlay hard excludes despite authentication bypass CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-49363",
+    "published": "2026-09-10 04:51:56",
+    "cvss": 7.5,
+    "epss": 0.00286,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated remote attacker connecting with the CORE protocol can discover cluster node details by sending a SUBSCRIBE_TOPOLOGY request prior to authentication.\n\n\n\nThis issue affects Apache Artemis: from 2.50.0 through 2.56.0; Apache ActiveMQ Artemis: from 1.0.0 through 2.44.0.\n\n\n\nUsers are recommended to upgrade to version 2.57.0, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Pre-authentication information disclosure of cluster topology with no authentication bypass or access-control impact, excluded by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-49362",
+    "published": "2026-09-10 04:56:19",
+    "cvss": 7.5,
+    "epss": 0.00227,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated remote attacker can create arbitrary durable queues via the CORE protocol, leading to unauthorized broker state manipulation and potential denial of service.\n\nThis issue affects Apache Artemis: from 2.50.0 through 2.56.0; Apache ActiveMQ Artemis: from 1.0.0 through 2.44.0.\n\n\n\nUsers are recommended to upgrade to version 2.57.0, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated broker state manipulation and DoS with no identity, authentication, or access-control nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77771",
+    "published": "2026-09-10 06:00:06",
+    "cvss": 7.5,
+    "epss": 0.00132,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The miniOrange 2FA  WordPress plugin before 6.3.1, miniOrange 2FA  WordPress plugin before 19.3 does not scope its second-factor attempt limit to the account being attacked, keying it instead to an identifier the client supplies and can change at will, allowing an attacker who already knows a victim's password to make unlimited one-time-passcode guesses and defeat the second factor. A second validation endpoint applies no attempt limit at all.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by base and overlay hard excludes despite MFA bypass vulnerability.",
+      "fail_open": false
+    }
+  }
+]
