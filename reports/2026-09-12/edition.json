@@ -1,0 +1,243 @@
+{
+  "alert_id": "0dcd612b",
+  "report_date": "2026-09-12",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-09-13 02:51:30",
+  "items": [
+    {
+      "item_id": "CVE-2026-75800",
+      "item_type": "cve",
+      "title": "CVE-2026-75800 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75800",
+      "source": "WAVE",
+      "published": "2026-09-12",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Critical unauthenticated SAML/SSO bypass in a WordPress identity plugin, directly compromising digital identity infrastructure and administrative access controls.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 5,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-75800.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-5c9308e1e8",
+      "item_type": "campaign",
+      "title": "The AI Phishing Revolution: From Spray-and-Pray to Autonomous Operations",
+      "url": "https://itsecurityguru.org/2026/05/27/the-ai-phishing-revolution-from-spray-and-pray-to-autonomous-operations",
+      "source": "ketch",
+      "published": "2026-09-12",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "Generative AI is transforming phishing from broad, low-success campaigns into highly targeted, autonomous operations. AI models now craft context-aware emails, generate realistic voice clones, and dynamically adapt landing pages based on victim behavior. Defenders should prioritize AI-driven email security, implement behavioral analytics, and train staff to recognize subtle linguistic and contextual anomalies in automated communications.",
+      "signals": {
+        "dpi_fit": 9.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-0713036025",
+      "item_type": "campaign",
+      "title": "Device Code Phishing Surge — Threat Analysis",
+      "url": "https://intel.threadlinqs.com/threat/TL-2026-2468",
+      "source": "ketch",
+      "published": "2026-09-12",
+      "category": "threats",
+      "pir": [
+        "1.i"
+      ],
+      "excerpt": "A significant surge in device code phishing campaigns is exploiting OAuth 2.0 device authorization flows to bypass traditional MFA. Attackers trick users into entering short alphanumeric codes on malicious sites, granting them direct access to corporate accounts without passwords. Infrastructure teams must restrict device code flows to approved applications, monitor for anomalous token issuance, and educate users on recognizing these prompts.",
+      "signals": {
+        "dpi_fit": 9.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-93d56aae34",
+      "item_type": "campaign",
+      "title": "When checking the URL isn’t enough: phishing via the Microsoft identity platform | Securelist",
+      "url": "https://securelist.com/microsoft-device-code-phishing-attack/120350/",
+      "source": "ketch",
+      "published": "2026-09-12",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "Attackers are exploiting the Microsoft identity platform to host phishing pages that appear legitimate, rendering traditional URL inspection ineffective. By leveraging trusted Microsoft domains and OAuth flows, threat actors deceive users into surrendering credentials or device codes. Defenders should implement strict conditional access rules, monitor for anomalous sign-in patterns, and deploy identity-aware proxy solutions to block platform-abuse attacks.",
+      "signals": {
+        "dpi_fit": 9.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-c4669ac6ee",
+      "item_type": "campaign",
+      "title": "Inside an AI‑enabled device code phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+      "source": "ketch",
+      "published": "2026-09-12",
+      "category": "threats",
+      "pir": [
+        "1.i"
+      ],
+      "excerpt": "This analysis details a sophisticated campaign combining AI-generated lures with device code phishing to compromise Microsoft 365 accounts. Attackers use AI to personalize outreach and automate the collection of device codes, enabling rapid account takeover. Defenders should enforce conditional access policies, disable unnecessary device code grants, and deploy real-time alerting for suspicious OAuth consent requests.",
+      "signals": {
+        "dpi_fit": 9.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-0e727ca6d4",
+      "item_type": "campaign",
+      "title": "Laundry Bear Zero-Click Zimbra Phishing Campaign Warned by CISA",
+      "url": "https://tempmail.ninja/blog/laundry-bear-zimbra-phishing",
+      "source": "ketch",
+      "published": "2026-09-12",
+      "category": "threats",
+      "pir": [
+        "1.g"
+      ],
+      "excerpt": "CISA has issued a warning regarding Laundry Bear’s exploitation of a zero-click vulnerability in Zimbra email servers to deliver phishing payloads. This attack requires no user interaction, automatically compromising accounts and deploying malicious content. Infrastructure defenders must prioritize patching Zimbra instances, implement network segmentation for email servers, and deploy endpoint detection to catch post-exploitation activity.",
+      "signals": {
+        "dpi_fit": 8.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-2b6671e1c0",
+      "item_type": "campaign",
+      "title": "Device Code Phishing is an Evolution in Identity Takeover",
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/device-code-phishing-evolution-identity-takeover",
+      "source": "ketch",
+      "published": "2026-09-12",
+      "category": "threats",
+      "pir": [
+        "1.j"
+      ],
+      "excerpt": "Device code phishing represents a critical evolution in identity takeover tactics, shifting focus from credential theft to direct token acquisition. By exploiting legitimate authentication flows, attackers bypass password resets and MFA prompts. IT infrastructure defenders must audit OAuth application permissions, implement token lifecycle monitoring, and adopt zero-trust identity frameworks to mitigate these sophisticated account compromise vectors.",
+      "signals": {
+        "dpi_fit": 8.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-8e88bba304",
+      "item_type": "campaign",
+      "title": "Microsoft 365 device code phishing campaign bypasses password stealing | RL Blog",
+      "url": "https://www.reversinglabs.com/blog/device-code-phishing-campaign",
+      "source": "ketch",
+      "published": "2026-09-12",
+      "category": "threats",
+      "pir": [
+        "1.d"
+      ],
+      "excerpt": "This campaign demonstrates how device code phishing effectively circumvents traditional password-stealing techniques and MFA protections. Attackers leverage legitimate Microsoft authentication endpoints to harvest valid access tokens directly from users. Infrastructure teams must prioritize token-based threat detection, restrict device code usage to essential applications, and enforce multi-factor authentication with phishing-resistant methods like FIDO2.",
+      "signals": {
+        "dpi_fit": 8.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-506f3932de",
+      "item_type": "campaign",
+      "title": "Abuse of Cloud-Native Infrastructure in Modern Phishing Campaigns - CYFIRMA",
+      "url": "https://cyfirma.com/research/abuse-of-cloud-native-infrastructure-in-modern-phishing-campaigns",
+      "source": "ketch",
+      "published": "2026-09-12",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "Attackers are increasingly leveraging cloud-native services like serverless functions, object storage, and CDN networks to host phishing infrastructure. This approach bypasses traditional domain reputation filters and complicates takedown efforts. Infrastructure defenders must monitor cloud provider abuse reports, implement egress filtering, and adopt cloud-native security posture management to detect and mitigate these ephemeral phishing deployments.",
+      "signals": {
+        "dpi_fit": 8.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-90474",
+      "item_type": "cve",
+      "title": "CVE-2026-90474",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90474",
+      "source": "vulners/duckdb",
+      "published": "2026-09-12",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "MCPHub before 1.0.32 contains an authentication bypass vulnerability in its embedded OAuth 2.0 authorization server where client authentication is disabled by default and PKCE enforcement is optional. Attackers who obtain an authorization code through interception can redeem it for access tokens without providing a client secret or PKCE verifier, gaining access to victim accounts and their privileges.",
+      "signals": {
+        "cvss": 7.6,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-90449",
+      "item_type": "cve",
+      "title": "CVE-2026-90449",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90449",
+      "source": "vulners/duckdb",
+      "published": "2026-09-11",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "When a particular authentication mode is configured, the reverse proxy forwards requests for a bundled third-party administrative interface directly to that interface without applying the gateway's own authentication requirement first. All access control for this administrative interface, which manages the credential store used to gate every other service in the deployment, is delegated entirely to that third-party interface's own login mechanism. Any authentication weakness in that bundled inte",
+      "signals": {
+        "cvss": 6.9,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-89298",
+      "item_type": "cve",
+      "title": "CVE-2026-89298",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89298",
+      "source": "vulners/duckdb",
+      "published": "2026-09-11",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the Dynamic Client Registration service of Keycloak, an open-source identity and access management solution. The issue occurs when a user with the view-clients role accesses the client registration endpoint to retrieve client details. Due to a failure to mask sensitive information, the service returns the client's confidential secret in cleartext. This could allow a read-only administrator to obtain full access to the affected client's account and potentially escalate their p",
+      "signals": {
+        "cvss": 4.9,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 1,
+      "daily_phishing_campaigns": 8,
+      "daily_identity_threats": 3
+    }
+  }
+}

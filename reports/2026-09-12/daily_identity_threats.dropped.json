@@ -1,0 +1,274 @@
+[
+  {
+    "id": "CVE-2026-85706",
+    "published": "2026-09-12 02:46:31",
+    "cvss": 10.0,
+    "epss": 0.01148,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.7 before 19.1.8, 19.2 before 19.2.6, and 19.3 before 19.3.2 that, under certain conditions, an unauthenticated user could have read arbitrary files from the GitLab server due to improper path confinement and missing authentication enforcement in the repository commits API.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise DevOps platform with missing API authentication, not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-80462",
+    "published": "2026-09-11 12:28:49",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability in the Chef Automate API gateway and identity validation path may allow an unauthenticated actor to gain elevated access to protected Chef Automate functionality under specific conditions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Configuration management platform with identity validation flaw, not core identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75800",
+    "published": "2026-09-12 06:00:07",
+    "cvss": 9.8,
+    "epss": 0.00187,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Frontegg SAML SSO WordPress plugin through 1.0.1 does not verify the signature or issuer of SAML authentication responses before establishing a session, allowing unauthenticated attackers to log in as any user, including administrators, as well as to create arbitrary accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite SAML authentication bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-79395",
+    "published": "2026-09-11 00:00:00",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An improper authentication vulnerability in the WS-Security (wsse:UsernameToken) verification routine within the Sofia IPC daemon in Xiongmai IP Camera XM530 firmware HMT.CM2005-v220608.1837 and earlier allows remote attackers to bypass authentication and execute privileged ONVIF actions (including PTZ control, stream URL retrieval, and system reboot) via a crafted SOAP request supplying the admin username with any arbitrary password when the account's stored password is empty.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "IP camera firmware (consumer IoT) explicitly excluded by overlay hard rules despite authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14563",
+    "published": "2026-09-11 06:00:06",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The advanced-customized-prompts WordPress plugin through 1.0.1 does not verify the password before issuing an authenticated session for a supplied email address in an unauthenticated action, allowing unauthenticated attackers to log in as any registered user, including administrators, or to create arbitrary new accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite session authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-53952",
+    "published": "2026-09-11 19:23:30",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "GetSimple CMS is a content management system (CMS), and GetSimple CMS CE is the community edition of that CMS. A logic flaw in GetSimple CMS (v3.4.0a and below) and GetSimpleCMS-CE (v3.3.22 and below) allows unauthenticated attackers to create a new administrator account. The application features an automated security control designed to delete the sensitive `admin/setup.php` file post-installation. However, this control is neutralized by a self-exclusion bug within the deletion logic, leaving the setup script accessible for unauthorized account creation even after a legitimate installation is completed. As of time of publication, no known patched versions are available.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Generic content management system with account creation flaw, not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14559",
+    "published": "2026-09-11 06:00:06",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The teddy-bear-customize-addon WordPress plugin through 1.0.5 does not verify a user's password before authenticating them, allowing unauthenticated attackers to log in as any registered user, including administrators, by supplying only that user's email address.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite password verification bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-54047",
+    "published": "2026-09-11 16:23:48",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Laci Synchroni is a decentralized mod and appearance sync server and plugin for Dalamud. Versions of the backend prior to 1.2.3 have an improper authentication vulnerability in the application's OAuth2 login flow. The application relies on client-side state by trusting the `UID` field inside the `Authentications` object of a user's local `config.json` file. By manually editing this local file on their PC prior to logging in, a user can supply an arbitrary UID. Because the server fails to validate that the authenticated OAuth2 identity matches the requested UID, an attacker can fully impersonate any target user and perform actions on their behalf. This issue has been resolved in version 1.2.3. The patch modifies `AuthorizeOauthAsync` inside the `SecretKeyAuthenticatorService` to strictly bind the lookup of the requested User ID (`requestedUid`) to the record of the successfully authenticated identity (`primaryUid`). The server will no longer load or return session tokens for a requested UID unless it matches the verified, authenticated database record. No known workarounds are available.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Gaming mod synchronization server explicitly excluded by overlay hard rules despite OAuth2 impersonation flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71416",
+    "published": "2026-09-11 13:34:38",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Headroom compresses data before the data reaches a large language model. Prior to version 0.35.0, the Headroom WebSocket server does not validate the `Origin` header of incoming client WebSocket requests before forwarding the request to the upstream server, allowing malicious WebSocket clients to perform arbitrary LLM requests without authentication. This can be exploited by a malicious WebSocket client executed in a traditional or headless browser such as lightpanda, if the browser has access to the Headroom proxy and the OpenAI API key is stored in the `OPENAI_API_KEY` environment variable. Version 0.35.0 fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "LLM proxy tooling explicitly excluded by overlay hard rules despite missing WebSocket authentication.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89176",
+    "published": "2026-09-11 07:34:56",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "WeenyGenius, a computer lab management system developed by Howyar Technologies, has a Missing Authentication vulnerability. Unauthenticated attackers on the same network can easily spoof student or teacher endpoints. Impersonating a student can disrupt normal classroom operations, whereas impersonating a teacher can induce student computers to initiate connections, thereby gaining remote control over the student endpoints.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Education sector lab management software explicitly excluded by overlay hard rules despite missing authentication.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89250",
+    "published": "2026-09-11 11:15:28",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "WWBN AVideo through commit c3edcc274c389816d434acadac07ee78eaf330c1 contains an unauthenticated file read vulnerability in the getRecordedFile.php endpoint that streams recorded FLV files from the temporary directory. Attackers can request the endpoint with a known or guessed stream key to download recorded live video files without authentication or authorization checks.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Self-hosted video streaming platform with unauthenticated file read; no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89261",
+    "published": "2026-09-11 15:25:16",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MoguBlog through 6.2 exposes Elasticsearch index management endpoints in the mogu_search service without authentication, allowing remote attackers to delete, recreate, or alter the blog search index. Attackers can invoke POST endpoints to wipe the entire search index, delete specific documents, or inject malicious index entries, causing search functionality to return incorrect or no results.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Unauthenticated Elasticsearch endpoint in a consumer blog platform; no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-90543",
+    "published": "2026-09-12 12:08:49",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "WWBN AVideo at commit c3edcc274c389816d434acadac07ee78eaf330c1 and earlier, with the Live plugin enabled, contains a missing authentication vulnerability in plugin/Live/socketMessageLiveOwner.json.php. The script reads the `key` and `msg` parameters from $_REQUEST, resolves the stream owner via LiveTransmition::keyExists, and verifies that the stream owner (not the caller) is an administrator; it performs no User::isLogged() check and enforces no CSRF token. As a result, an unauthenticated remote attacker who knows an administrator's Live stream key can call sendSocketSuccessMessageToUsers_id and deliver arbitrary in-app/socket notification messages to that administrator. The issue was unpatched at the time of publication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication and CSRF in a self-hosted video streaming plugin; consumer media software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89263",
+    "published": "2026-09-11 15:25:17",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MoguBlog through 6.2 fails to authenticate requests to the /web/comment/closeEmailNotification endpoint, allowing unauthenticated attackers to disable email notifications for arbitrary users. Remote callers can modify the startEmailNotification flag in Redis cache for any user identifier to suppress reply notifications without authorization.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated user preference modification in a consumer blog platform; no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-50025",
+    "published": "2026-09-11 20:42:00",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Mousehole is a background service to update a seedbox IP for MAM and web app to manage it. Prior to version 0.4.05, Mousehole's HTTP/WebSocket management boundary is reachable without application-layer authentication or browser/LAN provenance checks. The service stores a MyAnonamouse (MAM) session cookie in state and reuses the same cookie-bearing serialization for persisted state, public API responses, and WebSocket state updates. Any client that can reach the published Mousehole port can read cookie-bearing state, connect to WebSocket state updates, replace the stored cookie, or force MAM update side effects. The deployment examples publish port 5010 broadly with Docker's `5010:5010` syntax, which can make the issue reachable on mixed-trust LAN/VPN interfaces. Version 0.4.0 patches the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated management interface for a BitTorrent seedbox tracker tool; hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81861",
+    "published": "2026-09-11 15:07:48",
+    "cvss": 5.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CWE-522: Insufficiently Protected Credentials vulnerability that could result in exposure of authentication information and unauthorized access to RTU functionality.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Generic credential exposure description targeting RTU/SCADA functionality; excluded by industrial/IIoT sector rule and boilerplate text.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86781",
+    "published": "2026-09-11 06:00:09",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The SSL Zen — SSL Certificate Installer & HTTPS Redirects WordPress plugin before 4.7.40 does not perform capability or nonce checks on a certificate-file download routine that runs early in the WordPress admin request lifecycle, allowing any authenticated user, including Subscribers, to download the site's TLS private key, certificates, and diagnostic logs.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Privilege escalation in a WordPress plugin exposing TLS keys; excluded by consumer/WordPress sector rule.",
+      "fail_open": false
+    }
+  }
+]
