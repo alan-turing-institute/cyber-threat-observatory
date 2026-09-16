@@ -1,0 +1,322 @@
+[
+  {
+    "id": "CVE-2026-82434",
+    "published": "2026-09-14 14:10:15",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Description\n\nWhen ZooKeeper authentication is configured, Storm deliberately retains\n`storm.zookeeper.topology.auth.payload` in the topology configuration, because workers need it. Nimbus then\nserved that configuration verbatim to any caller holding read-only topology permissions, so a user whose\nonly grant was the ability to view a topology received its ZooKeeper credential.\n\nThat credential is not read-only. The cluster state implementation uses write-capable ACLs for worker\nheartbeats, backpressure and error state, so a recipient can forge or remove that state for the topology\nconcerned. It is not a write credential on assignments.\n\nThe same advisory covers the submission client, which logged the generated payload at INFO on every\nsubmission that generated one, and the SASL handlers, which logged it at DEBUG. The credential therefore\nalso reached any log aggregation or support bundle collected from the cluster.\n\nMitigation\n\nUpgrade to 3.1.0, where the payload is removed from the configuration served to read-only callers and is no\nlonger written to logs.\n\nUsers who cannot upgrade immediately should rotate `storm.zookeeper.topology.auth.payload` for existing\ntopologies, review retained logs and support bundles for the value, and restrict read-only topology\npermissions to trusted principals.\n\nCredit\n\nThe ASF -- found using Claude agents to study the security of open-source projects, validated and reported by Apache Storm.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Credential exposure in Apache Storm/ZooKeeper coordination service lacks explicit DPI identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82787",
+    "published": "2026-09-14 06:44:21",
+    "cvss": 9.8,
+    "epss": 0.0036,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function vulnerability exists in CPSL-08P1EN. If this vulnerability is exploited, an affected product may be operated by a remote attacker without authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no exploitable detail or identifiable software context, triggering hard exclude.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57123",
+    "published": "2026-09-14 14:46:12",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.59, ToolsMCPServer.run_sse and launch_tools_mcp_server bind to 0.0.0.0 and create /sse and /messages/ routes without invoking the available SecurityConfig authentication, origin-validation, or DNS-rebinding controls. Any reachable client can list and invoke registered tools, and a browser can target a local instance through DNS rebinding, with impact determined by the registered file, shell, and code-execution tools. This vulnerability is fixed in praisonaiagents 1.6.59.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI/LLM agent framework (PraisonAI) falls under base Digital Identity exclusion for LLM tooling, with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59178",
+    "published": "2026-09-14 18:11:02",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "ESPHome Device Builder Dashboard is a dashboard for the ESPHome home management software. Prior to version 1.0.12, the dashboard reads its authentication credentials from `$ESPHOME_USERNAME` and `$ESPHOME_PASSWORD`. Earlier versions, and the legacy `esphome` dashboard, read the bare `$USERNAME` and `$PASSWORD` instead. When the env vars were renamed the bare names were dropped with no fallback, so an operator who had protected their dashboard with `USERNAME` / `PASSWORD` (as the older getting started guide documented) loses authentication on upgrade and the dashboard starts open to anyone who can reach its port. The issue is fixed in 1.0.12. The bare `$USERNAME` / `$PASSWORD` are accepted again as a deprecated fallback so previously protected instances stay protected across the upgrade without operator intervention, with a loud deprecation warning at startup directing operators to rename them to `$ESPHOME_USERNAME` / `$ESPHOME_PASSWORD`. The fallback is gated on `$PASSWORD` being set and is only adopted as a pair, so the OS provided `$USERNAME` is never read on its own and the original collision footgun stays closed. A lone bare `$PASSWORD` with no username still fails loud as a credential mismatch rather than starting unauthenticated. This restores compatibility rather than failing closed on the legacy names, because the priority is that an instance which was protected before the upgrade stays protected without the operator having to act; the deprecation warning plus a future removal handles the migration. Operators should migrate to the `$ESPHOME_*` names. The esphome container delivers the fix in the 2026.6.2 release, which bumps its pinned `esphome-device-builder` version to 1.0.12. Without upgrading, restore authentication immediately by setting the new env vars to the same values, on any affected version. Alternatively, do not expose the dashboard port to untrusted networks, and check the startup logs for the `WITHOUT AUTHENTICATION` banner to confirm whether a given instance is currently open.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Home automation/IoT dashboard (ESPHome) triggers consumer IoT hard exclude despite authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57124",
+    "published": "2026-09-14 15:04:54",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to 4.6.59, the default UI host applications expose POST /api/mcp/connect without mandatory authentication and accept caller-controlled command and args values that PraisonAIUI passes to StdioMCPClient to start a local process. Because the UI commands bind to 0.0.0.0 by default, a reachable unauthenticated client can execute commands as the UI service account even when the MCP handshake later fails. This vulnerability is fixed in 4.6.59.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI/LLM agent framework (PraisonAI) falls under base Digital Identity exclusion for LLM tooling, with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57127",
+    "published": "2026-09-14 15:01:48",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to 4.6.58, recipe serve installs APIKeyAuthMiddleware or JWTAuthMiddleware when an operator selects api-key or JWT authentication, but each middleware forwards requests when PRAISONAI_API_KEY or PRAISONAI_JWT_SECRET and the corresponding recipe value are absent. Unauthenticated clients can then reach recipe execution, input, and output surfaces and may trigger connected tools despite the operator explicitly enabling authentication. This issue is fixed in 4.6.58.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI/LLM agent framework (PraisonAI) falls under base Digital Identity exclusion for LLM tooling, with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57125",
+    "published": "2026-09-14 14:19:42",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to praisonai 4.6.59 and praisonaiagents 1.6.59, the unauthenticated POST /api/v1/runs Jobs API accepts attacker-controlled agent_yaml, and the approve field can mark execute_command as YAML-approved before @require_approval checks critical tools. This chain allows a remote caller to cause a configured language model agent to invoke arbitrary operating-system commands without credentials or operator interaction. This vulnerability is fixed in praisonai 4.6.59 and praisonaiagents 1.6.59 as fixed versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI/LLM agent framework (PraisonAI) falls under base Digital Identity exclusion for LLM tooling, with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-90898",
+    "published": "2026-09-14 10:18:53",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Bifrost registers MCP clients through its management API. A stdio client is a command plus args. Bifrost starts that program in the gateway the moment the client is added. No MCP handshake required.\n\n\n\nThe default is governance.auth_config.is_enabled=false. Auth off means every caller is a local admin. One unauthenticated POST /api/mcp/client is enough to run a program as the Bifrost process user (appuser on the official image).\n\n\n\n transports/v2.1.0 refuses an unauthenticated stdio registration with 403. transports/v2.0.0 still allows it.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "MCP gateway (Bifrost) aligns with AI/LLM tooling ecosystem, triggering base Digital Identity exclusion for non-DPI contexts.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57131",
+    "published": "2026-09-14 15:06:20",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to 4.6.58, praisonai.jobs.server.create_app mounts praisonai.jobs.router.create_router under /api/v1/runs without authentication or per-job authorization. Network clients can submit attacker-controlled prompts and agent configuration, list and read jobs, stream results, and cancel or delete other jobs, exposing service credentials and connected tool capabilities to unauthorized agent execution. This vulnerability is fixed in 4.6.58.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI/LLM agent framework (PraisonAI) falls under base Digital Identity exclusion for LLM tooling, with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-90938",
+    "published": "2026-09-14 12:48:32",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LangBot's plugin runtime (pip package langbot_plugin) through 0.4.17 starts a debug WebSocket server on 0.0.0.0:5401 (/plugin/ws) whose authentication is gated on plugin_debug_key, which defaults to an empty string and is never set by the upstream repository, Docker image, or docker-compose (which additionally publishes port 5401 to the host); the key check is therefore skipped entirely. Any remote attacker able to reach the port can register an arbitrary \"debug plugin\" without credentials. Because events are broadcast to all initialized plugins without filtering, the attacker's plugin receives the full context of every IM message event (including private chats, message chains, and user/sender IDs in plaintext) and can inject forged replies, send messages as any configured bot, enumerate bot UUIDs, invoke configured LLM models, read knowledge-base contents, and register malicious tools that feed every user's LLM pipeline. Registering with \"prod_mode\": true causes later legitimate installations of a plugin with the same author/name to be rejected, resulting in persistent denial of service. No patched version was available at the time of publication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in a hobbyist chatbot plugin runtime lacks DPI-relevant identity infrastructure nexus and hits consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-90944",
+    "published": "2026-09-14 17:52:05",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Krayin CRM through 2.2.6 exposes the POST /admin/mail/inbound-parse endpoint without authentication, allowing unauthenticated attackers to inject arbitrary emails into the CRM inbox. Attackers can supply crafted RFC 2822 messages with forged sender information and headers to insert emails with any subject and body, including replies to existing conversation threads.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated email injection in a commercial CRM lacks identity/access infrastructure nexus and hits non-DPI software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-20773",
+    "published": "2026-09-14 10:43:20",
+    "cvss": 8.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A role-based access control issue was identified in the administrative expression evaluation functionality. This could allow users with certain administrative roles to access expression testing capabilities beyond their intended permissions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Generic RBAC description lacks product name, sector cues, or specific identity mechanism to establish DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82786",
+    "published": "2026-09-14 06:43:58",
+    "cvss": 8.2,
+    "epss": 0.00189,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Insufficiently protected credentials issue exists in Remote I/O Coupler Unit (Server Type) CPSN-MCB271-*. If this vulnerability is exploited, sensitive information may be restored from a backup file.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Credential exposure in industrial SCADA/IIoT hardware hits the explicit industrial sector exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-90896",
+    "published": "2026-09-14 20:58:39",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing Authentication for Critical Function (CWE-306) in the checkout session lookup handler (src/app/api/stripe/checkout_sessions/route.ts), exposed at GET /api/stripe/checkout_sessions, in MarcosCamara01 Ecommerce Template before commit 91e273c allows a remote, unauthenticated attacker holding a valid Stripe Checkout Session id (cs_...) to retrieve the full session object, including the buyer's name, email, phone, billing address, amount paid and internal userId, because the GET handler calls stripe.checkout.sessions.retrieve() and returns the result without checking for an authenticated session or session ownership. Sibling endpoints such as POST /api/stripe/payment already enforced authentication via auth.api.getSession(); this endpoint had no access control whatsoever. The session_id is exposed in the buyer's own browser URL after payment (success_url = /result?session_id={CHECKOUT_SESSION_ID}), so it leaks through Referer headers, analytics tools, server access logs and shared-machine browser history, resulting in disclosure of the buyer's personal data to an unauthenticated actor.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a commercial ecommerce template lacks DPI-relevant identity nexus and hits consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57132",
+    "published": "2026-09-14 15:09:19",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to 4.6.62, setting PRAISONAI_CALL_AUTH to disabled makes verify_token accept requests to /api/v1/agents/{id}/invoke without CALL_SERVER_TOKEN authentication. Deployments that use the application's advertised opt-out can expose registered agents and their connected tools or private context to unauthenticated invocation. The vulnerability is fixed in 4.6.62.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in an AI agent framework hits the LLM/tooling exclusion and lacks DPI identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-54175",
+    "published": "2026-09-14 17:46:41",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "backpack/crud provides Create, Read, Update & Delete (CRUD) functions for Backpack, a collection of Laravel packages that help users build custom administration panels. Prior to 6.8.11 and 7.0.34, MyAccountController::postAccountInfoForm in src/app/Http/Controllers/MyAccountController.php at POST /admin/edit-account-info passes request data from $request->except(['_token']) to the user model instead of restricting updates to fields accepted by AccountInfoRequest::validationData(). An attacker with an authenticated Backpack session can therefore mass-assign password, the authentication column, or other deployment-specific fillable attributes. With the default Laravel 11 user model, a submitted plaintext password is automatically hashed and persisted, converting temporary session access into persistent account takeover without the old_password check enforced by the separate password-change route. Changing the authentication email can also enable later password-reset takeover, while additional fillable security attributes can permit deployment-specific privilege escalation or security-control changes. This issue is fixed in versions 6.8.11 and 7.0.34.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Mass assignment vulnerability in a generic Laravel admin panel package lacks DPI-relevant identity infrastructure nexus and hits generic web framework exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89080",
+    "published": "2026-09-13 06:00:09",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Really Simple Security  WordPress plugin before 9.8.1 does not prevent an unauthenticated request from resetting an account's completed email two-factor enrolment, allowing an attacker who already knows the account's password to bypass the second factor and obtain that user's session, up to administrator.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite MFA bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-90620",
+    "published": "2026-09-14 03:00:11",
+    "cvss": 7.3,
+    "epss": 0.00391,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in 0x4m4 HexStrike AI up to d689933ff579d839c676c82b231f8e98326c5f04. The impacted element is an unknown function of the file hexstrike_server.py of the component API Command Endpoint. This manipulation causes missing authentication. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche AI tool with missing authentication but no DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-90579",
+    "published": "2026-09-13 19:00:09",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been found in cheshire-cat-ai Cheshire Cat AI up to 1.9.2. This affects the function _authorize_http_key of the file core/cat/factory/custom_auth_handler.py. The manipulation of the argument user_id leads to missing authentication. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "LLM agent framework explicitly excluded by base rules despite missing authentication in auth handler.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-90522",
+    "published": "2026-09-13 13:00:16",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in jaychouchannel Tourism-Management-System up to d984d172dceca907f8b447efbdb06dc233f7938d. Impacted is the function resetPass of the file UsersController.java of the component Password Recovery. This manipulation causes weak password recovery. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. Patch name: 9cb6215ac871f99a90cde763cf003e95ff282283. It is recommended to apply a patch to fix this issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Tourism management system falls under travel and hospitality exclusion despite weak password recovery mechanism.",
+      "fail_open": false
+    }
+  }
+]
