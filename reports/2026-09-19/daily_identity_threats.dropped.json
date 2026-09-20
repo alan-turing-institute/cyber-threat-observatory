@@ -1,0 +1,370 @@
+[
+  {
+    "id": "CVE-2026-84434",
+    "published": "2026-09-19 02:27:09",
+    "cvss": 9.8,
+    "epss": 0.00697,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Gravity Forms plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 3.1.0.4 via the upload_file function. This is due to a mismatch between the field validation pipeline and the file persistence pipeline, where hidden file upload fields bypass extension validation and a rejected file's intact upload state is later passed to upload_file() without re-validation. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. Exploitation requires the targeted form to contain a File Upload field with its Visibility set to 'Hidden'; the vulnerability is reachable by unauthenticated attackers on any publicly accessible form meeting this condition.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin, explicitly excluded by overlay despite wild exploitation and high CVSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84075",
+    "published": "2026-09-18 19:46:59",
+    "cvss": 9.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Guardium Data Protection 12.2 could allow a remote attacker to bypass security restrictions due to missing authentication for the ChangeTrackerServlet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Enterprise data protection software, lacks core identity/access infrastructure nexus per overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84078",
+    "published": "2026-09-18 19:48:42",
+    "cvss": 9.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Guardium Data Protection 12.2 is vulnerable to a missing authentication vulnerability in the LoadBalancerServlet. An unauthenticated user can access privileged load-balancer operations, potentially resulting in unauthorized actions and impact to the integrity and availability of the affected system.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Enterprise data protection component, missing authentication but software fit weak for identity/access stream.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93839",
+    "published": "2026-09-18 19:06:05",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LightLLM through 1.2.0 contains an authentication bypass vulnerability in the /pd_register WebSocket endpoint that allows unauthenticated attackers to register arbitrary nodes by supplying crafted JSON without peer address validation. Attackers can disclose full user prompts routed to their socket, trigger denial of service by replacing legitimate nodes, or make the PD Master issue requests to internal network addresses.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "LLM inference framework, explicitly excluded by base and overlay as non-DPI tooling.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82967",
+    "published": "2026-09-18 19:33:53",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Guardium Data Protection 12.2 is vulnerable to an authentication bypass that allows an unauthenticated remote attacker to bypass IP-based access controls and access the Guardium management interface.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Enterprise security management interface bypass, lacks identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63647",
+    "published": "2026-09-18 19:53:51",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CordysCRM is an open source AI-powered customer relationship management system that supports private deployment. Prior to 1.7.2, SseController exposes the anonymous /sse/subscribe, /sse/broadcast, and /sse/close endpoints because ShiroFilter.addPublicPathFilters permits the SSE paths, and the endpoints trust the caller-controlled userId instead of deriving an identity from an authenticated principal. An unauthenticated caller can use /sse/subscribe to read another user's workflow events, approval requests, mentions, and alerts, use /sse/broadcast to inject SYSTEM_HEARTBEAT messages into another user's stream, or use /sse/close to terminate another user's channel. This vulnerability is fixed in 1.7.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Open-source CRM application, lacks identity/access infrastructure nexus per overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-58197",
+    "published": "2026-09-18 16:34:55",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "ToolHive is a utility designed to simplify the deployment and management of Model Context Protocol servers. Prior to ToolHive CLI 0.30.1 and ToolHive Studio 0.38.0, locally run MCP server containers use the default network permission profile without network isolation, permitting access to host.docker.internal while ToolHive API and MCP proxy endpoints are reachable without authentication. A malicious or compromised MCP server can use the Docker gateway to contact host-local services, other ToolHive-managed MCP proxies, or the ToolHive control plane without escaping the container. This access can expose data and logs, invoke sibling MCP tools, alter process or workload state, and disrupt services. ToolHive Studio additionally sends network_isolation as false and overrides the backend's secure isolation default. This issue is fixed in ToolHive CLI 0.30.1 and ToolHive Studio 0.38.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "LLM/MCP deployment utility, explicitly excluded by base and overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-79954",
+    "published": "2026-09-18 00:26:28",
+    "cvss": 8.7,
+    "epss": 0.00323,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NASA CryptoLib 1.5.0 contains an authentication downgrade vulnerability in the Telecommand (TC) receive path. The receiver selects the Security Association used for SDLS processing solely from the SPI field inside the incoming frame, but it does not verify that the selected SA is authorized for the frame's GVCID.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Space telecommand crypto library, falls under industrial/SCADA exclusion and lacks public-sector DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88259",
+    "published": "2026-09-18 16:05:06",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CareCam CM2507 IP cameras do not require authentication for access to its network video streaming service. An unauthenticated attacker with network access to the affected device could retrieve live camera video.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IP camera, explicitly excluded by base and overlay despite missing authentication.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93569",
+    "published": "2026-09-18 14:27:54",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Netty. A remote unauthenticated attacker can exploit a vulnerability in Netty's HTTP/1 to HTTP/2 conversion process. When an HTTP/1 request includes both an absolute-form request-target and a conflicting Host header, Netty incorrectly prioritizes the Host header for the HTTP/2 :authority field, discarding the original request-target authority. This inconsistency can allow an attacker to bypass security controls in Netty-based proxies or gateways, potentially leading to unauthorized access, cache poisoning, or misrouting of requests.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Security control bypass in a generic Java networking library (Netty), lacking specific identity or access infrastructure context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89059",
+    "published": "2026-09-18 07:13:39",
+    "cvss": 7.5,
+    "epss": 0.00556,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in RESTEasy's IIOImageProvider, which decodes attacker-supplied image request bodies without enforcing any limit on the declared image dimensions or pixel count. A remote, unauthenticated attacker can send a small crafted image declaring enormous dimensions to trigger a very large memory allocation, exhausting the JVM heap and resulting in a denial of service.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure denial-of-service via memory exhaustion in a generic web framework, with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87743",
+    "published": "2026-09-18 09:38:27",
+    "cvss": 7.5,
+    "epss": 0.00429,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Quarkus HTTP security. An unauthenticated attacker can exploit a discrepancy in how paths are normalized between the security matcher and HTTP request dispatchers. This allows the attacker to craft a URL that the security matcher considers public, but which is then routed to a protected endpoint, leading to an authorization bypass and potential unauthorized access to sensitive information.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Authorization bypass in a general-purpose Java application framework (Quarkus), not dedicated identity or access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93565",
+    "published": "2026-09-18 14:18:11",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Netty RtspDecoder. The `RtspMethods.valueOf()` function incorrectly strips trailing control bytes from method tokens in Real-Time Streaming Protocol (RTSP) requests. A remote attacker can exploit this by sending a specially crafted RTSP request, leading to method-token smuggling. This vulnerability allows an attacker to bypass method-based access controls and can also be used to launder malicious requests through Netty-based RTSP proxies, making them appear legitimate to backend systems.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Method-token smuggling in a generic streaming protocol decoder (RTSP/Netty), with no identity or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93568",
+    "published": "2026-09-18 14:34:04",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Netty. A remote attacker could exploit this vulnerability by sending specially crafted HTTP/2 or HTTP/3 Extended CONNECT requests. Netty's HTTP-object conversion path incorrectly processes these requests as regular HTTP/1.1 CONNECT requests, leading to a loss of critical protocol and path information. This misinterpretation can allow attackers to bypass security policies, such as routing or authorization logic, in applications that rely on Netty for HTTP/2 or HTTP/3 communication, resulting in integrity loss.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Security policy bypass in a generic Java networking library (Netty), lacking specific identity or access infrastructure context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93564",
+    "published": "2026-09-18 14:13:32",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Netty. A reference-count leak in the HAProxy PROXY-v2 message decoder allows a remote, unauthenticated attacker to send specially crafted PROXY-protocol v2 headers. This can lead to memory exhaustion, resulting in a Denial of Service (DoS) for the affected system.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure denial-of-service via memory leak in a proxy protocol decoder, with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93558",
+    "published": "2026-09-18 14:09:01",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Netty's WebSocketServerExtensionHandler. A remote, unauthenticated attacker can exploit this vulnerability by using HTTP/1.1 pipelining to send requests faster than the application can respond. This leads to an unbounded growth of a per-connection queue, consuming excessive memory. Eventually, this can cause the Java Virtual Machine (JVM) to exhaust its heap, resulting in a Denial of Service (DoS) for the affected server.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure denial-of-service via unbounded memory growth in a WebSocket handler, with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93567",
+    "published": "2026-09-18 14:23:27",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Netty's HTTP/2 codec. When converting HTTP/1 CONNECT requests to HTTP/2, the component incorrectly uses the Host header instead of the CONNECT authority-form request-target for the tunnel authority. A remote attacker can exploit this by supplying a different Host header, leading to a malformed HTTP/2 CONNECT request. This can bypass security controls such as tunnel allow-lists or egress policies, resulting in integrity loss.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Tunnel policy bypass in a generic Java networking library (Netty), lacking dedicated identity or access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93488",
+    "published": "2026-09-18 11:47:52",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Netty. SpdySessionHandler accepts an unlimited number of concurrent remote-initiated streams because localConcurrentStreams defaults to Integer.MAX_VALUE and the handler provides no API to change it. A remote peer can open a SPDY connection and send a large number of SYN_STREAM frames with FLAG_FIN=0, causing unbounded heap and direct memory allocation that can lead to JVM OutOfMemoryError and a denial of service.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure denial-of-service via unbounded stream allocation in a legacy protocol handler, with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93491",
+    "published": "2026-09-18 12:43:26",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Netty's HttpServerCodec. A remote, unauthenticated attacker can exploit this vulnerability by pipelining HTTP/1.1 requests on a single connection and withholding reads. This action causes the methodOverflowQueue to grow without limit, leading to unbounded heap memory consumption and a denial of service due to memory exhaustion.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure denial-of-service via request pipelining memory exhaustion, with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89058",
+    "published": "2026-09-18 07:20:29",
+    "cvss": 7.4,
+    "epss": 0.00332,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in RESTEasy's CorsFilter, which, when configured to allow all origins (\"*\"), reflects the request's Origin header back in the Access-Control-Allow-Origin response together with Access-Control-Allow-Credentials: true. This permissive cross-origin policy allows a malicious website to make credentialed cross-origin requests and read authenticated responses from a victim's session, resulting in a loss of confidentiality.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Web framework CORS misconfiguration affecting session confidentiality, lacks core identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93559",
+    "published": "2026-09-18 16:45:08",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in Forget-C Jellyfish AI Short Drama Studio 0.1.0-alpha/0.2.0/0.3.0/0.3.1/0.3.2. This affects an unknown function of the file backend/app/dependencies.py of the component FastAPI. The manipulation leads to missing authentication. It is possible to initiate the attack remotely. The reported GitHub issue was closed automatically due to inactivity.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Niche consumer AI video tool with missing authentication, explicitly excluded as non-DPI hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93984",
+    "published": "2026-09-19 11:53:36",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenPanel tracking API through commit bad75bddc74d12d36cfb843f4531d3b830a8d994 fails to verify client secret cryptographic hash before authorizing revenue events and bot filtering. Attackers with only a public client ID can supply arbitrary dummy secrets to inject forged revenue metrics and bypass bot detection filters.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Analytics tracking API client secret bypass for revenue metrics, lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93573",
+    "published": "2026-09-18 14:44:00",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Netty's HTTP/1.1 decoder. This vulnerability allows a remote attacker to bypass `Transfer-Encoding` header validation by splitting the `Transfer-Encoding` field across multiple headers, with the last field containing a non-final transfer coding like `gzip` or `deflate`. This bypass can lead to HTTP request smuggling, enabling attackers to bypass security controls, desynchronize request processing, or cause requests to be processed in an unintended context.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "HTTP request smuggling in general-purpose network framework, lacks direct identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  }
+]
