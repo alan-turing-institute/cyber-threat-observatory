@@ -1,0 +1,290 @@
+[
+  {
+    "id": "CVE-2026-84434",
+    "published": "2026-09-19 02:27:09",
+    "cvss": 9.8,
+    "epss": 0.00697,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Gravity Forms plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 3.1.0.4 via the upload_file function. This is due to a mismatch between the field validation pipeline and the file persistence pipeline, where hidden file upload fields bypass extension validation and a rejected file's intact upload state is later passed to upload_file() without re-validation. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. Exploitation requires the targeted form to contain a File Upload field with its Visibility set to 'Hidden'; the vulnerability is reachable by unauthenticated attackers on any publicly accessible form meeting this condition.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin (Gravity Forms) falls under hard consumer/hobbyist exclusion despite high CVSS and wild exploitation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87886",
+    "published": "2026-09-17 22:57:18",
+    "cvss": 7.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Local privilege escalation due to insecure file permissions. The following products are affected: Acronis Backup plugin for cPanel & WHM (Linux) before build 1.9.3.1021, Acronis Backup extension for Plesk (Linux) before build 1.8.11.638, Acronis Backup plugin for DirectAdmin (Linux) before build 1.2.3.238.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in backup plugins for web hosting panels lacks an authentication or identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82434",
+    "published": "2026-09-14 14:10:15",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Description\n\nWhen ZooKeeper authentication is configured, Storm deliberately retains\n`storm.zookeeper.topology.auth.payload` in the topology configuration, because workers need it. Nimbus then\nserved that configuration verbatim to any caller holding read-only topology permissions, so a user whose\nonly grant was the ability to view a topology received its ZooKeeper credential.\n\nThat credential is not read-only. The cluster state implementation uses write-capable ACLs for worker\nheartbeats, backpressure and error state, so a recipient can forge or remove that state for the topology\nconcerned. It is not a write credential on assignments.\n\nThe same advisory covers the submission client, which logged the generated payload at INFO on every\nsubmission that generated one, and the SASL handlers, which logged it at DEBUG. The credential therefore\nalso reached any log aggregation or support bundle collected from the cluster.\n\nMitigation\n\nUpgrade to 3.1.0, where the payload is removed from the configuration served to read-only callers and is no\nlonger written to logs.\n\nUsers who cannot upgrade immediately should rotate `storm.zookeeper.topology.auth.payload` for existing\ntopologies, review retained logs and support bundles for the value, and restrict read-only topology\npermissions to trusted principals.\n\nCredit\n\nThe ASF -- found using Claude agents to study the security of open-source projects, validated and reported by Apache Storm.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Credential exposure in Apache Storm/ZooKeeper lacks a direct identity or access-control infrastructure nexus per overlay criteria.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83099",
+    "published": "2026-09-15 20:03:21",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle Forms product of Oracle Fusion Middleware (component: Forms Services, C/S, Charmode).  Supported versions that are affected are 12.2.1.19.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Forms.  While the vulnerability is in Oracle Forms, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Forms. CVSS 3.1 Base Score 10.0 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Oracle Forms is a legacy application development tool with no identity or access-control nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85889",
+    "published": "2026-09-17 22:55:58",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function in Azure AI Foundry allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Missing authentication in Azure AI Foundry lacks a clear identity or access-control infrastructure nexus per overlay software-fit guidance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59971",
+    "published": "2026-09-15 14:10:28",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MySQL MCP Server is a Model Context Protocol server that enables secure interaction with MySQL databases. Prior to 0.4.2, setting MCP_TRANSPORT=sse causes src/mysql_mcp_server/server.py to construct SseServerTransport without security_settings or enable_dns_rebinding_protection, while the Starlette routes /, /sse, and /messages/ have no authentication and the service binds to 0.0.0.0 by default. A network attacker can directly reach execute_sql, or can use DNS rebinding to make a victim's browser relay same-origin requests to a locally bound service, and supply a query that reaches cursor.execute(query). This allows unauthenticated disclosure and modification of the configured database; when the MySQL account has FILE privileges, the same access can read or write server files and may enable code execution. The default stdio transport is not affected. This issue is fixed in 0.4.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "MySQL MCP Server is a developer/AI bridge tool with no identity or access-control infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83021",
+    "published": "2026-09-15 20:02:57",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: Web Container).  Supported versions that are affected are 12.2.1.4.0, 14.1.1.0.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebLogic Server.  While the vulnerability is in Oracle WebLogic Server, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle WebLogic Server. CVSS 3.1 Base Score 10.0 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Oracle WebLogic Server is an application server with no identity or access-control nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83020",
+    "published": "2026-09-15 20:02:56",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle Platform Security for Java product of Oracle Fusion Middleware (component: Centralized Thirdparty Jars).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Platform Security for Java.  While the vulnerability is in Oracle Platform Security for Java, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Platform Security for Java. CVSS 3.1 Base Score 10.0 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Generic enterprise middleware security component without explicit identity, directory, or access management nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84075",
+    "published": "2026-09-18 19:46:59",
+    "cvss": 9.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Guardium Data Protection 12.2 could allow a remote attacker to bypass security restrictions due to missing authentication for the ChangeTrackerServlet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise data protection and monitoring tool lacks explicit identity/access management or directory service nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84078",
+    "published": "2026-09-18 19:48:42",
+    "cvss": 9.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Guardium Data Protection 12.2 is vulnerable to a missing authentication vulnerability in the LoadBalancerServlet. An unauthenticated user can access privileged load-balancer operations, potentially resulting in unauthorized actions and impact to the integrity and availability of the affected system.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise data protection software with missing authentication on a load-balancer component lacks an identity/access management nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57139",
+    "published": "2026-09-15 10:25:26",
+    "cvss": 9.8,
+    "epss": 0.00642,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. From 1.5.0 until 1.7.2, MCPServer.startHttp() in src/praisonai-ts/src/mcp/server.ts binds without a host restriction and forwards every HTTP POST request to handleRequest() without authentication or authorization. Any network client that can reach the port can call tools/list, tools/call, resources/read, or prompts/get, causing registered handlers to run with server-side credentials and process privileges or disclose registered data. An initial remediation was released in version 1.7.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI/LLM agent framework with missing authentication falls under the LLM tooling hard exclusion and lacks enterprise identity infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57148",
+    "published": "2026-09-15 10:32:22",
+    "cvss": 9.8,
+    "epss": 0.00528,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to 0.1.6, praisonai_platform/services/auth_service.py falls back to the public dev-secret-change-me HS256 signing key when PLATFORM_JWT_SECRET is unset, while the startup and token-issuance guards are disabled because PLATFORM_ENV also defaults to dev. An unauthenticated attacker can sign a JWT containing an attacker-chosen sub value, and AuthService._verify_token() accepts it as an authenticated identity, enabling user or workspace-owner impersonation when a target identifier is known. This vulnerability is fixed in praisonai-platform 0.1.6.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "JWT signing weakness in an AI/LLM agent framework triggers the LLM tooling hard exclusion and lacks DPI identity infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82787",
+    "published": "2026-09-14 06:44:21",
+    "cvss": 9.8,
+    "epss": 0.0036,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function vulnerability exists in CPSL-08P1EN. If this vulnerability is exploited, an affected product may be operated by a remote attacker without authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Generic boilerplate description for an unspecified hardware device lacks any identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86709",
+    "published": "2026-09-17 06:00:10",
+    "cvss": 9.8,
+    "epss": 0.00177,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Pressengine WordPress plugin through 1.0 does not stop its login handler from issuing a session when authentication fails, allowing unauthenticated attackers to log in as any user, including administrators.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Explicit exclusion for WordPress plugin despite authentication bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86710",
+    "published": "2026-09-17 06:00:10",
+    "cvss": 9.8,
+    "epss": 0.00136,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Login with QR WordPress plugin through 1.0.0 does not verify that the code used to log a user in is one it issued, matching any stored user metadata value instead, which allows unauthenticated attackers to log in as any user, including administrators.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Explicit exclusion for WordPress plugin despite authentication bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86707",
+    "published": "2026-09-17 06:00:10",
+    "cvss": 9.8,
+    "epss": 0.00136,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Private Feed Key WordPress plugin through 0.1 does not verify that the key used to authenticate a feed request is one it issued, matching any stored user metadata value instead, which allows unauthenticated attackers to log in as any user, including administrators.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Explicit exclusion for WordPress plugin despite authentication bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83108",
+    "published": "2026-09-15 20:03:24",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle Forms product of Oracle Fusion Middleware (component: Forms Services, C/S, Charmode).  Supported versions that are affected are 12.2.1.19.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Forms.  Successful attacks of this vulnerability can result in takeover of Oracle Forms. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise middleware compromise with no explicit identity/access or DPI-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83098",
+    "published": "2026-09-15 20:03:21",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle Forms product of Oracle Fusion Middleware (component: Forms Services, C/S, Charmode).  Supported versions that are affected are 12.2.1.19.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Forms.  Successful attacks of this vulnerability can result in takeover of Oracle Forms. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise middleware compromise with no explicit identity/access or DPI-sector nexus.",
+      "fail_open": false
+    }
+  }
+]
