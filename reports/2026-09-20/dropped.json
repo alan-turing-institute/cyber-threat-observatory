@@ -1,0 +1,2919 @@
+[
+  {
+    "id": "CVE-2026-94097",
+    "identity": {
+      "title": "CVE-2026-94097",
+      "published": "2026-09-20 23:45:10",
+      "modified": "2026-09-21 00:16:59",
+      "description": "A vulnerability was determined in Netcore NBR200V2 1.3.241127.071246. This affects an unknown part of the file /www/cgi-bin/network_tools of the component CGI Diagnostic Endpoint. This manipulation of the argument param/key/val causes command injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://vuldb.com/submit/892990"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Netcore",
+      "products": "NBR200V2",
+      "cpe_uris": "cpe:2.3:h:netcore:nbr200v2:1.3.241127.071246:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "netcore:nbr200v2",
+          "vendor": "Netcore",
+          "product": "NBR200V2",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/submit/892990",
+      "https://app.notion.com/p/Netcore-NBR200V2-Vul-5-39f797159f15809dbc06d2d3ae6b1f04",
+      "https://vuldb.com/vuln/408026/cti",
+      "https://vuldb.com/vuln/408026",
+      "https://vuldb.com/cve/CVE-2026-94097"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94097",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94097"
+    },
+    "item_id": "CVE-2026-94097",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router with public exploit disclosure but no enterprise/DPI footprint or confirmed wild exploitation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94096",
+    "identity": {
+      "title": "CVE-2026-94096",
+      "published": "2026-09-20 23:30:12",
+      "modified": "2026-09-21 00:16:59",
+      "description": "A vulnerability was found in Netcore NBR200V2 1.3.241127.071246. Affected by this issue is some unknown functionality of the file /usr/bin/network_tools of the component LAN IP Configuration Handler. The manipulation of the argument ipv4 results in command injection. The attack may be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://app.notion.com/p/Netcore-NBR200V2-Vul-4-39f797159f158004b8baf1bbf3b956ca"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Netcore",
+      "products": "NBR200V2",
+      "cpe_uris": "cpe:2.3:h:netcore:nbr200v2:1.3.241127.071246:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "netcore:nbr200v2",
+          "vendor": "Netcore",
+          "product": "NBR200V2",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://app.notion.com/p/Netcore-NBR200V2-Vul-4-39f797159f158004b8baf1bbf3b956ca",
+      "https://vuldb.com/vuln/408025/cti",
+      "https://vuldb.com/cve/CVE-2026-94096",
+      "https://vuldb.com/submit/892988",
+      "https://vuldb.com/vuln/408025"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94096",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94096"
+    },
+    "item_id": "CVE-2026-94096",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router with public exploit disclosure but no enterprise/DPI footprint or confirmed wild exploitation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94095",
+    "identity": {
+      "title": "CVE-2026-94095",
+      "published": "2026-09-20 23:15:14",
+      "modified": "2026-09-21 00:16:59",
+      "description": "A vulnerability has been found in Netcore NBR200V2 1.3.241127.071246. Affected by this vulnerability is an unknown functionality of the file /usr/bin/network_tools of the component Traceroute Diagnostic Feature. The manipulation of the argument url leads to command injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://vuldb.com/vuln/408024/cti"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Netcore",
+      "products": "NBR200V2",
+      "cpe_uris": "cpe:2.3:h:netcore:nbr200v2:1.3.241127.071246:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "netcore:nbr200v2",
+          "vendor": "Netcore",
+          "product": "NBR200V2",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/vuln/408024/cti",
+      "https://vuldb.com/cve/CVE-2026-94095",
+      "https://app.notion.com/p/Netcore-NBR200V2-Vul-3-39f797159f15802296c7f6e110363435",
+      "https://vuldb.com/vuln/408024",
+      "https://vuldb.com/submit/892986"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94095",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94095"
+    },
+    "item_id": "CVE-2026-94095",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router with public exploit disclosure but no enterprise/DPI footprint or confirmed wild exploitation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94089",
+    "identity": {
+      "title": "CVE-2026-94089",
+      "published": "2026-09-20 20:45:10",
+      "modified": "2026-09-20 21:16:55",
+      "description": "A vulnerability was determined in D-Link DIR-868L 2.01b05. This issue affects the function strcpy of the file /webfa_authentication.cgi of the component Authentication Handler. Executing a manipulation of the argument id/password can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Walnut1337/CVE/blob/main/poc/poc_crash.py"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "D-Link",
+      "products": "DIR-868L",
+      "cpe_uris": "cpe:2.3:h:dlink:dir-868l:2.01b05:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/951681",
+      "https://www.dlink.com/",
+      "https://vuldb.com/vuln/408017/cti",
+      "https://github.com/Walnut1337/CVE/blob/main/poc/poc_crash.py",
+      "https://vuldb.com/vuln/408017",
+      "https://vuldb.com/cve/CVE-2026-94089"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94089",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94089"
+    },
+    "item_id": "CVE-2026-94089",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router (D-Link DIR-868L) explicitly in the drop class with no enterprise/DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94044",
+    "identity": {
+      "title": "CVE-2026-94044",
+      "published": "2026-09-20 18:15:11",
+      "modified": "2026-09-20 19:17:12",
+      "description": "A vulnerability was identified in 03-lovepreetSingh MCP up to f95d035c5317fad81af9828286631053ccb23546. This issue affects the function create_file of the file app/api/mcp/route.ts. Such manipulation of the argument filePath/content leads to path traversal. The attack can be launched remotely. The exploit is publicly available and might be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/03-lovepreetSingh/MCP/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "03-lovepreetSingh",
+      "products": "MCP",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/407973/cti",
+      "https://vuldb.com/submit/949284",
+      "https://github.com/03-lovepreetSingh/MCP/",
+      "https://github.com/03-lovepreetSingh/MCP/issues/3",
+      "https://vuldb.com/vuln/407973",
+      "https://vuldb.com/cve/CVE-2026-94044"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94044",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94044"
+    },
+    "item_id": "CVE-2026-94044",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche AI/LLM developer tool with no enterprise or DPI infrastructure footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88857",
+    "identity": {
+      "title": "CVE-2026-88857",
+      "published": "2026-09-20 17:54:20",
+      "modified": "2026-09-20 19:25:30",
+      "description": "Joomla Extension - OrdaSoft.com - Authenticated, Privileged Remote Code Execution in OrdaSoft Joomla Gallery extension for Joomla < 6.2.7 - The extensions saveWatermark() copied an uploaded file into a web-accessible directory using the client-supplied filename exactly as sent, with no extension check, no content check, and no filename sanitisation of any kind. An authenticated core.manage user could upload a .php file disguised with an image Content-Type header and execute it directly by requesting the resulting path."
+    },
+    "cvss": {
+      "base_score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.OrdaSoft.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-434"
+      ],
+      "cwe_primary": "CWE-434",
+      "cwe_family": "File Upload",
+      "cwe_names": {
+        "CWE-434": "Unrestricted Upload of File with Dangerous Type"
+      }
+    },
+    "software": {
+      "vendors": "OrdaSoft.com,OrdaSoft.com",
+      "products": "OrdaSoft Joomla Gallery free extension for Joomla,OrdaSoft Joomla Gallery extension for Joomla",
+      "cpe_uris": "cpe:2.3:a:ordasoft:joomla_gallery_extension:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.OrdaSoft.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-88857",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-88857"
+    },
+    "item_id": "CVE-2026-88857",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla CMS extension explicitly in the consumer-only drop class with no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88854",
+    "identity": {
+      "title": "CVE-2026-88854",
+      "published": "2026-09-20 17:53:02",
+      "modified": "2026-09-20 19:24:12",
+      "description": "Joomla Extension - OrdaSoft.com - Unauthenticated SQL Injection in OrdaSoft Joomla Gallery extension for Joomla < 6.2.7 - The extensions showSearchResult() and showSearchResultAjax() read the textsearch/searchText request parameter with $input->getVar(), which is not a real Joomla filter method and falls through to a filter that strips HTML tags but does not touch quotes or SQL syntax. The value is concatenated directly into a LIKE clause with no escaping. The endpoint requires no login of any kind: mod_osgallery_search is a public, commonly-published search box. Any anonymous site visitor can inject a UNION SELECT and read arbitrary database content."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://www.OrdaSoft.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "OrdaSoft.com,OrdaSoft.com",
+      "products": "OrdaSoft Joomla Gallery free extension for Joomla,OrdaSoft Joomla Gallery extension for Joomla",
+      "cpe_uris": "cpe:2.3:a:ordasoft:joomla_gallery_extension:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.OrdaSoft.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-88854",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-88854"
+    },
+    "item_id": "CVE-2026-88854",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla CMS extension explicitly in the consumer-only drop class with no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88855",
+    "identity": {
+      "title": "CVE-2026-88855",
+      "published": "2026-09-20 17:50:17",
+      "modified": "2026-09-20 19:21:25",
+      "description": "Joomla Extension - OrdaSoft.com - Authenticated, Privileged SQL Injection in OrdaSoft Joomla Gallery extension for Joomla < 6.2.7 - The extensions saveGallery() passes form data through a hand-rolled parser into Joomla’s Input object, then reads it back with the ARRAY/ STRING filter types, neither of which sanitises SQL content. Values from category_names[], catOrderIds, and image-ordering fields were concatenated directly into SQL with no quoting or integer cast, giving an authenticated core.manage user (a permission scoped to managing one gallery component, not administrator-wide trust) full read/write access to the database, including UNION-based extraction of #__users password hashes."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.OrdaSoft.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "OrdaSoft.com,OrdaSoft.com",
+      "products": "OrdaSoft Joomla Gallery free extension for Joomla,OrdaSoft Joomla Gallery extension for Joomla",
+      "cpe_uris": "cpe:2.3:a:ordasoft:joomla_gallery_extension:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.OrdaSoft.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-88855",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-88855"
+    },
+    "item_id": "CVE-2026-88855",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla CMS extension explicitly in the consumer-only drop class with no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88856",
+    "identity": {
+      "title": "CVE-2026-88856",
+      "published": "2026-09-20 17:50:04",
+      "modified": "2026-09-20 19:21:10",
+      "description": "Joomla Extension - OrdaSoft.com - Authenticated, Privileged Remote Code Execution in OrdaSoft Joomla Gallery extension for Joomla < 6.2.7 - The extensions updateOSGallery(), reached via task=update_osgallery, read a JSON request body and called the value of a method field as a live PHP function, passing the value of a package field as its single argument, with no allow-list or is_callable() check of any kind. Any function name compatible with a single argument was directly reachable, including system, exec, shell_exec, and passthru."
+    },
+    "cvss": {
+      "base_score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.OrdaSoft.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "OrdaSoft.com,OrdaSoft.com",
+      "products": "OrdaSoft Joomla Gallery free extension for Joomla,OrdaSoft Joomla Gallery extension for Joomla",
+      "cpe_uris": "cpe:2.3:a:ordasoft:joomla_gallery_extension:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.OrdaSoft.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-88856",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-88856"
+    },
+    "item_id": "CVE-2026-88856",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla CMS extension explicitly in the consumer-only drop class with no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94039",
+    "identity": {
+      "title": "CVE-2026-94039",
+      "published": "2026-09-20 16:45:13",
+      "modified": "2026-09-20 17:16:52",
+      "description": "A vulnerability was detected in vas3k TaxHacker up to 0.8.5. Affected is the function generateInvoicePDF of the file /apps/invoices/actions.ts of the component Invoice PDF Renderer. Performing a manipulation of the argument businessLogo results in server-side request forgery. The attack is possible to be carried out remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/vas3k/TaxHacker/issues/186"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cwe_primary": "CWE-918",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-918": "Server-Side Request Forgery (SSRF)"
+      }
+    },
+    "software": {
+      "vendors": "vas3k",
+      "products": "TaxHacker",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/407968",
+      "https://vuldb.com/vuln/407968/cti",
+      "https://github.com/vas3k/TaxHacker/issues/186",
+      "https://vuldb.com/submit/947878",
+      "https://github.com/vas3k/TaxHacker/",
+      "https://vuldb.com/cve/CVE-2026-94039"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94039",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94039"
+    },
+    "item_id": "CVE-2026-94039",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Indie personal finance application with no enterprise or DPI infrastructure footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94038",
+    "identity": {
+      "title": "CVE-2026-94038",
+      "published": "2026-09-20 16:30:15",
+      "modified": "2026-09-20 17:16:52",
+      "description": "A security vulnerability has been detected in NonceGeek dim-sum-app. This impacts the function textSearchV2Handler of the file deno/main.tsx of the component Deno Backend. Such manipulation of the argument supabase_url leads to server-side request forgery. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The name of the patch is 8389032e5d52c28c4855c6126ca7d0eae8af346a. It is best practice to apply a patch to resolve this issue."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/NonceGeek/dim-sum-app/commit/8389032e5d52c28c4855c6126ca7d0eae8af346a"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cwe_primary": "CWE-918",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-918": "Server-Side Request Forgery (SSRF)"
+      }
+    },
+    "software": {
+      "vendors": "NonceGeek",
+      "products": "dim-sum-app",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/cve/CVE-2026-94038",
+      "https://github.com/NonceGeek/dim-sum-app/commit/8389032e5d52c28c4855c6126ca7d0eae8af346a",
+      "https://vuldb.com/submit/947732",
+      "https://github.com/NonceGeek/dim-sum-app/pull/367",
+      "https://vuldb.com/vuln/407967",
+      "https://github.com/NonceGeek/dim-sum-app/issues/366",
+      "https://vuldb.com/vuln/407967/cti",
+      "https://github.com/NonceGeek/dim-sum-app/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94038",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94038"
+    },
+    "item_id": "CVE-2026-94038",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Generic web backend application with no enterprise or DPI sector footprint; consumer-only context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94036",
+    "identity": {
+      "title": "CVE-2026-94036",
+      "published": "2026-09-20 15:45:09",
+      "modified": "2026-09-20 16:16:55",
+      "description": "A security flaw has been discovered in D-Link DIR-X1860 and DIR-X1860Z up to 1.0.2.220120.165402. The impacted element is an unknown function of the file /ubus of the component routerd. The manipulation of the argument passwd_set results in improper access controls. The attack must originate from the local network. The exploit has been released to the public and may be used for attacks."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10513"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-266",
+        "CWE-284"
+      ],
+      "cwe_primary": "CWE-266",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-266": "Incorrect Privilege Assignment",
+        "CWE-284": "Improper Access Control"
+      }
+    },
+    "software": {
+      "vendors": "D-Link,D-Link",
+      "products": "DIR-X1860,DIR-X1860Z",
+      "cpe_uris": "cpe:2.3:h:dlink:dir-x1860:1.0.2.220120.165402:*:*:*:*:*:*:*,cpe:2.3:h:dlink:dir-x1860z:1.0.2.220120.165402:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10513",
+      "https://vuldb.com/vuln/407965",
+      "https://vuldb.com/vuln/407965/cti",
+      "https://vuldb.com/cve/CVE-2026-94036",
+      "https://www.dlink.com/",
+      "https://vuldb.com/submit/947565",
+      "https://pastebin.com/gzKNCCPV"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94036",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94036"
+    },
+    "item_id": "CVE-2026-94036",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router with no enterprise or DPI footprint; explicit exclusion class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92252",
+    "identity": {
+      "title": "CVE-2026-92252",
+      "published": "2026-09-20 12:16:45",
+      "modified": "2026-09-20 13:17:46",
+      "description": "Incorrect default permissions in the installation directory of WatchDog Anti-Virus on Windows allow local, low-privileged users to modify, replace, or delete antivirus binaries and configuration files, because the installer grants the Users group Full Control over C:\\Program Files (x86)\\Watchdog Anti-Virus. This may disable antivirus protection or enable privileged code execution if modified binaries are loaded by an elevated WatchDog process."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://watchdog.com/vulnerability-disclosure-policy/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-276"
+      ],
+      "cwe_primary": "CWE-276",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-276": "Incorrect Default Permissions"
+      }
+    },
+    "software": {
+      "vendors": "WatchDog",
+      "products": "Anti-Virus",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://watchdog.com/vulnerability-disclosure-policy/",
+      "https://watchdog.com/anti-virus-release-notes/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-92252",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-92252"
+    },
+    "item_id": "CVE-2026-92252",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in endpoint AV software requiring local access; no DPI sector or enterprise footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94015",
+    "identity": {
+      "title": "CVE-2026-94015",
+      "published": "2026-09-20 12:00:12",
+      "modified": "2026-09-20 13:17:46",
+      "description": "A vulnerability was identified in SourceCodester Drug Recommendation System 1.0. This affects an unknown function of the file /drug_recommender/Admin/edit_user.php. Such manipulation of the argument ID leads to sql injection. The attack may be launched remotely. The exploit is publicly available and might be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/KaranParelkar/Drug_recommendation_system/blob/main/sqli/edit_user/Readme.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Drug Recommendation System",
+      "cpe_uris": "cpe:2.3:a:sourcecodester:drug_recommendation_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/944860",
+      "https://vuldb.com/vuln/407955/cti",
+      "https://vuldb.com/vuln/407955",
+      "https://github.com/KaranParelkar/Drug_recommendation_system/blob/main/sqli/edit_user/Readme.md",
+      "https://vuldb.com/cve/CVE-2026-94015",
+      "https://www.sourcecodester.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94015",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94015"
+    },
+    "item_id": "CVE-2026-94015",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche demo script with no enterprise or healthcare system footprint; consumer-only context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94004",
+    "identity": {
+      "title": "CVE-2026-94004",
+      "published": "2026-09-20 11:45:04",
+      "modified": "2026-09-20 12:17:05",
+      "description": "A vulnerability was found in DedeCMS up to 5.7.118. The affected element is an unknown function of the file plus/mytag_js.php. The manipulation of the argument aid results in code injection. The attack can be launched remotely. The exploit has been made public and could be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://vuldb.com/vuln/407953/cti"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "n/a",
+      "products": "DedeCMS",
+      "cpe_uris": "cpe:2.3:a:dedecms:dedecms:5.7.118:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "n/a:dedecms",
+          "vendor": "n/a",
+          "product": "DedeCMS",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/vuln/407953/cti",
+      "https://vuldb.com/cve/CVE-2026-94004",
+      "https://vuldb.com/submit/944743",
+      "https://vuldb.com/vuln/407953"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94004",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94004"
+    },
+    "item_id": "CVE-2026-94004",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer CMS (DedeCMS) with no enterprise or DPI footprint; explicit exclusion class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94003",
+    "identity": {
+      "title": "CVE-2026-94003",
+      "published": "2026-09-20 11:30:08",
+      "modified": "2026-09-20 12:17:05",
+      "description": "A vulnerability has been found in Comfast CF-N1-S 2.6.0.1. Impacted is the function get_css_path_from_uri of the file /cgi-bin/mbox-config of the component Web Management Interface. The manipulation leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/AdminSafe/CVE/issues/12"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Comfast",
+      "products": "CF-N1-S",
+      "cpe_uris": "cpe:2.3:h:comfast:cf-n1-s:2.6.0.1:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/AdminSafe/CVE/issues/12",
+      "https://vuldb.com/cve/CVE-2026-94003",
+      "https://vuldb.com/vuln/407952",
+      "https://vuldb.com/vuln/407952/cti",
+      "https://vuldb.com/submit/944859"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94003",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94003"
+    },
+    "item_id": "CVE-2026-94003",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer wireless networking hardware with no enterprise or DPI footprint; explicit exclusion class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93997",
+    "identity": {
+      "title": "CVE-2026-93997",
+      "published": "2026-09-20 11:15:10",
+      "modified": "2026-09-20 12:17:05",
+      "description": "A weakness has been identified in SourceCodester Drug Recommendation System 1.0. Affected by this issue is some unknown functionality of the file /Admin/edit_symptom.php. This manipulation of the argument ID causes sql injection. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/KaranParelkar/Drug_recommendation_system/blob/main/sqli/edit_symptom_id_parameter/Readme.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Drug Recommendation System",
+      "cpe_uris": "cpe:2.3:a:sourcecodester:drug_recommendation_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/944843",
+      "https://vuldb.com/vuln/407948/cti",
+      "https://github.com/KaranParelkar/Drug_recommendation_system/blob/main/sqli/edit_symptom_id_parameter/Readme.md",
+      "https://www.sourcecodester.com/",
+      "https://vuldb.com/cve/CVE-2026-93997",
+      "https://vuldb.com/vuln/407948"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93997",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93997"
+    },
+    "item_id": "CVE-2026-93997",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Academic/consumer PHP script with no enterprise or DPI footprint; SQLi in niche drug recommendation system.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93980",
+    "identity": {
+      "title": "CVE-2026-93980",
+      "published": "2026-09-20 11:00:10",
+      "modified": "2026-09-20 11:16:58",
+      "description": "A weakness has been identified in code-projects Internship Management System 1.0. This vulnerability affects unknown code of the file /admin/login.php of the component Admin Login Form. Executing a manipulation of the argument Password can lead to sql injection. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/zzzxc643/CVE1/blob/main/2026-8-24/vul9.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "code-projects",
+      "products": "Internship Management System",
+      "cpe_uris": "cpe:2.3:a:code-projects:internship_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/cve/CVE-2026-93980",
+      "https://vuldb.com/submit/944594",
+      "https://github.com/zzzxc643/CVE1/blob/main/2026-8-24/vul9.md",
+      "https://vuldb.com/vuln/407939",
+      "https://vuldb.com/vuln/407939/cti",
+      "https://code-projects.org/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93980",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93980"
+    },
+    "item_id": "CVE-2026-93980",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Academic/student PHP project with no enterprise or DPI footprint; SQLi in internship management system.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93979",
+    "identity": {
+      "title": "CVE-2026-93979",
+      "published": "2026-09-20 10:45:08",
+      "modified": "2026-09-20 11:16:58",
+      "description": "A security flaw has been discovered in code-projects Internship Management System 1.0. This affects an unknown part of the file /employer/login.php. Performing a manipulation of the argument Password results in sql injection. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/zzzxc643/CVE1/blob/main/2026-8-24/vul7.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "code-projects",
+      "products": "Internship Management System",
+      "cpe_uris": "cpe:2.3:a:code-projects:internship_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/944592",
+      "https://vuldb.com/cve/CVE-2026-93979",
+      "https://vuldb.com/vuln/407938",
+      "https://github.com/zzzxc643/CVE1/blob/main/2026-8-24/vul7.md",
+      "https://vuldb.com/vuln/407938/cti",
+      "https://code-projects.org/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93979",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93979"
+    },
+    "item_id": "CVE-2026-93979",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Academic/student PHP project with no enterprise or DPI footprint; SQLi in employer login module.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93978",
+    "identity": {
+      "title": "CVE-2026-93978",
+      "published": "2026-09-20 10:30:09",
+      "modified": "2026-09-20 11:16:57",
+      "description": "A vulnerability was identified in code-projects Internship Management System 1.0. Affected by this issue is some unknown functionality of the file /login.php. Such manipulation of the argument Password leads to sql injection. The attack can be executed remotely. The exploit is publicly available and might be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/zzzxc643/CVE1/blob/main/2026-8-24/vul6.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "code-projects",
+      "products": "Internship Management System",
+      "cpe_uris": "cpe:2.3:a:code-projects:internship_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/zzzxc643/CVE1/blob/main/2026-8-24/vul6.md",
+      "https://code-projects.org/",
+      "https://vuldb.com/vuln/407937",
+      "https://vuldb.com/cve/CVE-2026-93978",
+      "https://vuldb.com/vuln/407937/cti",
+      "https://vuldb.com/submit/944591"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93978",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93978"
+    },
+    "item_id": "CVE-2026-93978",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Academic/student PHP project with no enterprise or DPI footprint; SQLi in main login form.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93974",
+    "identity": {
+      "title": "CVE-2026-93974",
+      "published": "2026-09-20 09:00:10",
+      "modified": "2026-09-20 09:16:39",
+      "description": "A flaw has been found in SourceCodester Online Reviewer Management System 1.0. This affects an unknown function of the file /reviewer_0/admins/assessments/databank/btn_functions.php?action=remove. Executing a manipulation of the argument ID can lead to sql injection. The attack can be launched remotely. The exploit has been published and may be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00328,
+      "percentile": 0.2617,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/orzl1/cve/issues/3"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Online Reviewer Management System",
+      "cpe_uris": "cpe:2.3:a:online_reviewer_management_system_project:online_reviewer_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/orzl1/cve/issues/3",
+      "https://vuldb.com/vuln/407933",
+      "https://vuldb.com/vuln/407933/cti",
+      "https://vuldb.com/submit/944537",
+      "https://www.sourcecodester.com/",
+      "https://vuldb.com/cve/CVE-2026-93974"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93974",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93974"
+    },
+    "item_id": "CVE-2026-93974",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche academic/business PHP script with no enterprise or DPI footprint; SQLi in reviewer management system.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93973",
+    "identity": {
+      "title": "CVE-2026-93973",
+      "published": "2026-09-20 08:45:12",
+      "modified": "2026-09-20 09:16:39",
+      "description": "A vulnerability was detected in SourceCodester Online Reviewer Management System 1.0. The impacted element is an unknown function of the file /reviewer_0/admins/assessments/subject/btn_functions.php?action=remove. Performing a manipulation of the argument ID results in sql injection. The attack can be initiated remotely. The exploit is now public and may be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00263,
+      "percentile": 0.18472,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/orzl1/cve/issues/2"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Online Reviewer Management System",
+      "cpe_uris": "cpe:2.3:a:online_reviewer_management_system_project:online_reviewer_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/orzl1/cve/issues/2",
+      "https://vuldb.com/submit/944535",
+      "https://www.sourcecodester.com/",
+      "https://vuldb.com/vuln/407932",
+      "https://vuldb.com/cve/CVE-2026-93973",
+      "https://vuldb.com/vuln/407932/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93973",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93973"
+    },
+    "item_id": "CVE-2026-93973",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche academic/business PHP script with no enterprise or DPI footprint; SQLi in subject assessment module.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93972",
+    "identity": {
+      "title": "CVE-2026-93972",
+      "published": "2026-09-20 07:45:07",
+      "modified": "2026-09-20 08:16:51",
+      "description": "A security vulnerability has been detected in SourceCodester Online Reviewer Management System 1.0. The affected element is an unknown function of the file /reviewer_0/admins/assessments/course/btn_functions.php. Such manipulation of the argument courseID leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00266,
+      "percentile": 0.18762,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/orzl1/cve/issues/1"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Online Reviewer Management System",
+      "cpe_uris": "cpe:2.3:a:online_reviewer_management_system_project:online_reviewer_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/944506",
+      "https://vuldb.com/vuln/407931",
+      "https://vuldb.com/submit/944534",
+      "https://vuldb.com/cve/CVE-2026-93972",
+      "https://www.sourcecodester.com/",
+      "https://github.com/orzl1/cve/issues/1",
+      "https://vuldb.com/vuln/407931/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93972",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93972"
+    },
+    "item_id": "CVE-2026-93972",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche academic management system with no enterprise or DPI footprint; public exploit does not override consumer-only exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93970",
+    "identity": {
+      "title": "CVE-2026-93970",
+      "published": "2026-09-20 07:15:10",
+      "modified": "2026-09-20 08:16:51",
+      "description": "A security flaw has been discovered in aiyiyi121 SxDevOps 1.0/1.1. This issue affects some unknown processing of the file backend/sxdevops/settings.py of the component Settings Handler. The manipulation results in hard-coded credentials. The attack may be performed from remote. The patch is identified as 2b4bf8585c3e731e7a8af30801ea46680bc783f9. Applying a patch is advised to resolve this issue. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00291,
+      "percentile": 0.21902,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/aiyiyi121/sxdevops/issues/16"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-259",
+        "CWE-798"
+      ],
+      "cwe_primary": "CWE-259",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-259": "Use of Hard-coded Password",
+        "CWE-798": "Use of Hard-coded Credentials"
+      }
+    },
+    "software": {
+      "vendors": "aiyiyi121",
+      "products": "SxDevOps",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/aiyiyi121/sxdevops/issues/16",
+      "https://vuldb.com/vuln/407929",
+      "https://github.com/aiyiyi121/sxdevops/",
+      "https://vuldb.com/cve/CVE-2026-93970",
+      "https://vuldb.com/vuln/407929/cti",
+      "https://vuldb.com/submit/944385",
+      "https://github.com/aiyiyi121/sxdevops/commit/2b4bf8585c3e731e7a8af30801ea46680bc783f9"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93970",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93970"
+    },
+    "item_id": "CVE-2026-93970",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Personal/niche DevOps project with hard-coded credentials and no enterprise or DPI deployment footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93969",
+    "identity": {
+      "title": "CVE-2026-93969",
+      "published": "2026-09-20 06:45:09",
+      "modified": "2026-09-20 07:16:52",
+      "description": "A vulnerability was identified in aiyiyi121 SxDevOps 1.0/1.1. This vulnerability affects the function ensure_default_superuser of the file rbac/services.py. The manipulation leads to hard-coded credentials. The attack is possible to be carried out remotely. The identifier of the patch is 2b4bf8585c3e731e7a8af30801ea46680bc783f9. It is recommended to apply a patch to fix this issue. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00291,
+      "percentile": 0.21902,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/aiyiyi121/sxdevops/commit/2b4bf8585c3e731e7a8af30801ea46680bc783f9"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-259",
+        "CWE-798"
+      ],
+      "cwe_primary": "CWE-259",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-259": "Use of Hard-coded Password",
+        "CWE-798": "Use of Hard-coded Credentials"
+      }
+    },
+    "software": {
+      "vendors": "aiyiyi121",
+      "products": "SxDevOps",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/944384",
+      "https://vuldb.com/cve/CVE-2026-93969",
+      "https://vuldb.com/vuln/407928",
+      "https://github.com/aiyiyi121/sxdevops/commit/2b4bf8585c3e731e7a8af30801ea46680bc783f9",
+      "https://github.com/aiyiyi121/sxdevops/",
+      "https://github.com/aiyiyi121/sxdevops/issues/16",
+      "https://vuldb.com/vuln/407928/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93969",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93969"
+    },
+    "item_id": "CVE-2026-93969",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Personal/niche DevOps project with hard-coded credentials and no enterprise or DPI deployment footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92540",
+    "identity": {
+      "title": "CVE-2026-92540",
+      "published": "2026-09-20 06:00:18",
+      "modified": "2026-09-20 14:17:00",
+      "description": "The Import and export users and customers WordPress plugin before 2.5.2 does not correctly enforce the promote_users capability when assigning roles during a CSV import, allowing users with only the create_users capability to create new administrator accounts or promote existing users to administrator."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00132,
+      "percentile": 0.03153,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/3a112d4b-9824-4128-ad6a-25b928e6fbdd/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Import and export users and customers",
+      "cpe_uris": "cpe:2.3:a:codection:import_and_export_users_and_customers:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/3a112d4b-9824-4128-ad6a-25b928e6fbdd/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-92540",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-92540"
+    },
+    "item_id": "CVE-2026-92540",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with privilege escalation flaw; falls under consumer-only software exclusion with no active exploitation or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92541",
+    "identity": {
+      "title": "CVE-2026-92541",
+      "published": "2026-09-20 06:00:18",
+      "modified": "2026-09-20 14:17:00",
+      "description": "The Import and export users and customers WordPress plugin before 2.5.2 does not enforce the promote_users capability in its front-end import functionality, allowing users with only the create_users capability to change the role of existing users, including promoting them to administrator."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00132,
+      "percentile": 0.03154,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/b31fb9ee-9f65-43d0-88fa-da99513f8a3b/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Import and export users and customers",
+      "cpe_uris": "cpe:2.3:a:codection:import_and_export_users_and_customers:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/b31fb9ee-9f65-43d0-88fa-da99513f8a3b/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-92541",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-92541"
+    },
+    "item_id": "CVE-2026-92541",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with privilege escalation flaw; falls under consumer-only software exclusion with no active exploitation or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87067",
+    "identity": {
+      "title": "CVE-2026-87067",
+      "published": "2026-09-20 06:00:17",
+      "modified": "2026-09-20 14:16:58",
+      "description": "The Forminator Forms  WordPress plugin before 1.57.2.1 does not restrict which classes may be instantiated when it deserialises a value taken from an XML-RPC request, allowing users who hold its forms-management permission to write a file of their choosing and execute arbitrary code. That permission belongs to an administrator by default, and to any role the site has granted it through the Forminator Forms  WordPress plugin before 1.57.2.1's own settings, so the issue is reachable well below administrator on sites that use that feature."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00169,
+      "percentile": 0.06669,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/9f5da02e-55af-463f-8b1a-9fe792d589c4/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Forminator Forms",
+      "cpe_uris": "cpe:2.3:a:wpmudev:forminator_forms:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/9f5da02e-55af-463f-8b1a-9fe792d589c4/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-87067",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-87067"
+    },
+    "item_id": "CVE-2026-87067",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with deserialization flaw; falls under consumer-only software exclusion with no active exploitation or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87839",
+    "identity": {
+      "title": "CVE-2026-87839",
+      "published": "2026-09-20 06:00:17",
+      "modified": "2026-09-20 14:16:59",
+      "description": "The Tripzzy  WordPress plugin before 1.5.1 does not have authorisation checks, and does not validate the identifier of the object being removed, in an AJAX action available to unauthenticated users, allowing them to permanently delete arbitrary comments on the site."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00136,
+      "percentile": 0.03431,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/e5145602-cb5e-4ef9-a51b-8f161200d014/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "cwe_primary": "CWE-284",
+      "cwe_family": "AuthZ/Access Control",
+      "cwe_names": {
+        "CWE-284": "Improper Access Control"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Tripzzy",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/e5145602-cb5e-4ef9-a51b-8f161200d014/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-87839",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-87839"
+    },
+    "item_id": "CVE-2026-87839",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with missing authorization checks; falls under consumer-only software exclusion with no active exploitation or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85017",
+    "identity": {
+      "title": "CVE-2026-85017",
+      "published": "2026-09-20 06:00:16",
+      "modified": "2026-09-20 14:16:58",
+      "description": "The Unlimited Elements For Elementor WordPress plugin before 2.0.20 does not perform a capability check on an AJAX action and deserializes attacker-controlled stored data through it, which makes it possible for authenticated attackers with subscriber-level access to inject arbitrary PHP objects. A partial fix in the 2.0.18 to 2.0.19 releases raised the privilege required to reach the vulnerable action to editor-level, and the issue was fully resolved in 2.0.20."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0015,
+      "percentile": 0.04573,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/459a7479-ebd8-4e46-a709-cb86d0386f9b/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Unlimited Elements For Elementor",
+      "cpe_uris": "cpe:2.3:a:unlimited-elements:unlimited_elements_for_elementor:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/459a7479-ebd8-4e46-a709-cb86d0386f9b/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-85017",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-85017"
+    },
+    "item_id": "CVE-2026-85017",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with deserialization flaw; falls under consumer-only software exclusion with no active exploitation or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81650",
+    "identity": {
+      "title": "CVE-2026-81650",
+      "published": "2026-09-20 06:00:15",
+      "modified": "2026-09-20 14:16:55",
+      "description": "The Photo Gallery, Sliders, Proofing and   WordPress plugin before 4.5.0 does not correctly validate the extensions of files extracted from an uploaded archive, due to a variable being reused as a loop counter so that the check always passes, allowing users granted its gallery-management capability by an administrator to write arbitrary files into a web-accessible directory and, on hosts that execute them, run arbitrary code."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00139,
+      "percentile": 0.03675,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/7c1443ae-14b4-43ca-bb1a-b6a3f9b27c57/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-434"
+      ],
+      "cwe_primary": "CWE-434",
+      "cwe_family": "File Upload",
+      "cwe_names": {
+        "CWE-434": "Unrestricted Upload of File with Dangerous Type"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Photo Gallery, Sliders, Proofing and Themes",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/7c1443ae-14b4-43ca-bb1a-b6a3f9b27c57/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-81650",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-81650"
+    },
+    "item_id": "CVE-2026-81650",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with archive extraction bypass; falls under consumer-only software exclusion with no active exploitation or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86553",
+    "identity": {
+      "title": "CVE-2026-86553",
+      "published": "2026-09-20 03:17:20",
+      "modified": "2026-09-20 10:16:52",
+      "description": "SmartLife app dynamically generates fresh SmartLife application authentication parameters inside its runtime process. Using the acquired SmartLife application authentication parameters, an attacker can directly call the backend interface /account/verify.serv to obtain the real account ID corresponding to a registered email address. By spoofing the application authentication information together with the target account ID, the attacker can reset the password of the target account."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00446,
+      "percentile": 0.38144,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://support.zte.com.cn/zte-iccp-isupport-webui/bulletin/detail/2171542593031840100"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "ZTE",
+      "products": "SmartLife",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://support.zte.com.cn/zte-iccp-isupport-webui/bulletin/detail/2171542593031840100"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-86553",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-86553"
+    },
+    "item_id": "CVE-2026-86553",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer smart-home/IoT application (SmartLife) with account takeover flaw, lacking enterprise or DPI footprint and exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93959",
+    "identity": {
+      "title": "CVE-2026-93959",
+      "published": "2026-09-20 02:30:14",
+      "modified": "2026-09-20 03:16:31",
+      "description": "A vulnerability was determined in SourceCodester Online Reviewer Management System 1.0. This issue affects some unknown processing of the file /reviewer_0/admins/assessments/course/btn_functions.php. This manipulation of the argument Course causes sql injection. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00356,
+      "percentile": 0.29347,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/zliang512/cve/issues/1"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Online Reviewer Management System",
+      "cpe_uris": "cpe:2.3:a:online_reviewer_management_system_project:online_reviewer_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/407918",
+      "https://vuldb.com/vuln/407918/cti",
+      "https://www.sourcecodester.com/",
+      "https://vuldb.com/cve/CVE-2026-93959",
+      "https://vuldb.com/submit/944169",
+      "https://github.com/zliang512/cve/issues/1"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93959",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93959"
+    },
+    "item_id": "CVE-2026-93959",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Generic academic PHP script with SQL injection, lacking enterprise or DPI footprint despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93958",
+    "identity": {
+      "title": "CVE-2026-93958",
+      "published": "2026-09-20 01:15:12",
+      "modified": "2026-09-20 02:16:53",
+      "description": "A vulnerability was found in D-Link R95 BE9500_1.00.16. This vulnerability affects the function system of the file /bin/ssi of the component DHMAPI. The manipulation of the argument NTPServer results in os command injection. The attack can be executed remotely. The exploit has been made public and could be used."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.02175,
+      "percentile": 0.81518,
+      "date": "2026-09-20"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/FoundTL/D-Link-R95-BE9500"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-77",
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-77",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "D-Link",
+      "products": "R95",
+      "cpe_uris": "cpe:2.3:h:d-link:r95:be9500_1.00.16:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/944149",
+      "https://vuldb.com/vuln/407917/cti",
+      "https://vuldb.com/cve/CVE-2026-93958",
+      "https://github.com/FoundTL/D-Link-R95-BE9500",
+      "https://vuldb.com/vuln/407917",
+      "https://www.dlink.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93958",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93958"
+    },
+    "item_id": "CVE-2026-93958",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer home router (D-Link R95) with remote command injection, lacking enterprise or DPI footprint despite public exploit.",
+      "fail_open": false
+    }
+  }
+]

@@ -1,0 +1,283 @@
+{
+  "alert_id": "dea49a0b",
+  "report_date": "2026-09-20",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-09-21 04:32:16",
+  "items": [
+    {
+      "item_id": "CVE-2026-90817",
+      "item_type": "cve",
+      "title": "CVE-2026-90817 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817",
+      "source": "WAVE",
+      "published": "2026-09-20",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Unauthenticated RCE in REDCap directly threatens Healthcare and Government research infrastructure by exposing clinical trial data and patient records on internet-facing deployments.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 5,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-90817.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94083",
+      "item_type": "cve",
+      "title": "CVE-2026-94083 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94083",
+      "source": "WAVE",
+      "published": "2026-09-20",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Foundational IDS/IPS infrastructure securing network fabric for critical sectors and DPI services; default-enabled DoH2 parser crash poses high availability risk.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 3,
+        "dpi_fit": 0.3
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-94083.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94109",
+      "item_type": "cve",
+      "title": "CVE-2026-94109 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94109",
+      "source": "WAVE",
+      "published": "2026-09-20",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Government sector: Authenticated RCE in openEQUELLA threatens public research institutions and national libraries managing critical digital assets and research outputs.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 3,
+        "dpi_fit": 0.3
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-94109.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-c92325375b",
+      "item_type": "campaign",
+      "title": "Microsoft 365: Block Device Code Flow Against GhostCode",
+      "url": "https://windowsforum.com/news/microsoft-365-block-device-code-flow-against-ghostcode.444973",
+      "source": "ketch",
+      "published": "2026-09-20",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "GhostCode operators exploit the OAuth 2.0 Device Code Flow to authenticate on behalf of users without requiring interactive MFA prompts. This guide provides step-by-step PowerShell and Entra ID Conditional Access policies to restrict device code grants, enforce risk-based authentication, and audit legacy application permissions. Critical for M365 administrators seeking to close authentication bypass vectors.",
+      "signals": {
+        "dpi_fit": 96.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-1f2a41fec2",
+      "item_type": "campaign",
+      "title": "GhostCode Abuses Microsoft Entra Device Enrollment to Maintain Access After Token Revocation",
+      "url": "https://gbhackers.com/ghostcode-abuses-microsoft-entra",
+      "source": "ketch",
+      "published": "2026-09-20",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "Researchers detail how GhostCode registers rogue devices via Entra ID enrollment endpoints, creating persistent backdoors that survive password resets and token revocations. The technique abuses legitimate device management APIs to bypass conditional access restrictions. IT infrastructure defenders must audit device compliance policies, restrict enrollment permissions to approved administrators, and monitor for unauthorized device registration events.",
+      "signals": {
+        "dpi_fit": 95.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-506f3932de",
+      "item_type": "campaign",
+      "title": "Abuse of Cloud-Native Infrastructure in Modern Phishing Campaigns - CYFIRMA",
+      "url": "https://cyfirma.com/research/abuse-of-cloud-native-infrastructure-in-modern-phishing-campaigns",
+      "source": "ketch",
+      "published": "2026-09-20",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "Threat actors increasingly leverage cloud-native services like serverless functions, object storage, and CDN networks to host phishing infrastructure. This report details how defenders can detect anomalous cloud resource provisioning, monitor for misconfigured IAM roles, and implement egress filtering to disrupt these ephemeral attack surfaces. Essential reading for cloud security architects managing hybrid environments.",
+      "signals": {
+        "dpi_fit": 94.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-1dd839d93b",
+      "item_type": "campaign",
+      "title": "GhostCode Phishing Kit Bypasses Microsoft 365 MFA to Hijack Accounts in 78 Seconds",
+      "url": "https://cybersecuritynews.com/ghostcode-phishing-kit/amp",
+      "source": "ketch",
+      "published": "2026-09-20",
+      "category": "threats",
+      "pir": [
+        "1.d"
+      ],
+      "excerpt": "Analysis reveals how the GhostCode phishing kit intercepts valid MFA tokens during the authentication handshake, granting attackers immediate account access. The kit utilizes real-time proxying to mirror legitimate Microsoft login pages while silently capturing session cookies. Defenders should prioritize phishing-resistant MFA methods like FIDO2 security keys and deploy token-binding policies to neutralize this rapid takeover technique.",
+      "signals": {
+        "dpi_fit": 93.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-8fb8072894",
+      "item_type": "campaign",
+      "title": "Fast Flux Phishing Turns the Internet Into a Moving Target as Silent Push Uncovers a Massive Canada-First Banking Operation + Video - UNDERCODE NEWS",
+      "url": "https://undercodenews.com/fast-flux-phishing-turns-the-internet-into-a-moving-target-as-silent-push-uncovers-a-massive-canada-first-banking-operation-video",
+      "source": "ketch",
+      "published": "2026-09-20",
+      "category": "threats",
+      "pir": [
+        "1.g"
+      ],
+      "excerpt": "Silent Push researchers expose a sophisticated fast-flux network used to host credential-harvesting pages targeting Canadian banking customers. By rapidly rotating IP addresses and DNS records, attackers evade traditional blocklists and takedown requests. Infrastructure defenders are advised to deploy DNS sinkholing, monitor for high-entropy domain registrations, and integrate threat intelligence feeds that track flux network patterns.",
+      "signals": {
+        "dpi_fit": 91.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-409471f886",
+      "item_type": "campaign",
+      "title": "The Shadow Campaigns: Uncovering Global Espionage",
+      "url": "https://unit42.paloaltonetworks.com/shadow-campaigns-uncovering-global-espionage/",
+      "source": "ketch",
+      "published": "2026-09-20",
+      "category": "threats",
+      "pir": [
+        "1.j.3"
+      ],
+      "excerpt": "Palo Alto Networks Unit 42 tracks a coordinated espionage operation utilizing multi-stage phishing campaigns to infiltrate critical infrastructure sectors. Attackers combine initial access brokers, custom malware loaders, and living-off-the-land techniques to establish long-term persistence. Network defenders should focus on endpoint detection tuning, lateral movement monitoring, and threat hunting for known APT infrastructure indicators.",
+      "signals": {
+        "dpi_fit": 89.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-662567deef",
+      "item_type": "campaign",
+      "title": "Operation HookedWing: 4-Year Phishing Campaign Hits 500+",
+      "url": "https://cipherssecurity.com/operation-hookedwing-phishing-500/",
+      "source": "ketch",
+      "published": "2026-09-20",
+      "category": "threats",
+      "pir": [
+        "1.a"
+      ],
+      "excerpt": "A four-year spear-phishing operation compromised over 500 organizations by exploiting trusted vendor relationships and compromised email accounts. Attackers used highly customized lures and legitimate-looking document attachments to deploy credential stealers. Infrastructure teams must review email gateway rules, enforce strict DMARC/DKIM/SPF alignment, and monitor for anomalous outbound authentication attempts from compromised mailboxes.",
+      "signals": {
+        "dpi_fit": 88.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-13a2e12d2a",
+      "item_type": "campaign",
+      "title": "Government Leaders Face Evolving Phishing Attacks",
+      "url": "https://statetechmagazine.com/article/2025/09/when-trust-becomes-weapon-government-leaders-face-evolving-phishing-attacks",
+      "source": "ketch",
+      "published": "2026-09-20",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "State and local government executives are increasingly targeted by whaling campaigns that exploit public schedules and official correspondence. Attackers craft highly personalized messages mimicking inter-agency communications to extract sensitive policy documents and credentials. Defenders should implement executive protection programs, deploy AI-driven email classification, and enforce strict data loss prevention controls on high-privilege accounts.",
+      "signals": {
+        "dpi_fit": 85.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94000",
+      "item_type": "cve",
+      "title": "CVE-2026-94000",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94000",
+      "source": "vulners/duckdb",
+      "published": "2026-09-19",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the Admin REST API of Keycloak, an open-source identity and access management solution. The issue occurs in the group-membership endpoints where the system fails to check if a group grants administrative privileges before allowing a user to be added. This allows a delegated administrator with limited permissions to add themselves to a high-privilege group, potentially gaining full control over the entire realm.",
+      "signals": {
+        "cvss": 6.6,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94001",
+      "item_type": "cve",
+      "title": "CVE-2026-94001",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94001",
+      "source": "vulners/duckdb",
+      "published": "2026-09-19",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the Admin REST API of Keycloak, an open-source identity and access management solution. The endpoint used for deleting user credentials does not correctly check for fine-grained reset-password permissions. This allows a delegated administrator, who should be restricted from resetting passwords, to delete a user's password credentials, resulting in the user being unable to log in.",
+      "signals": {
+        "cvss": 6.5,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-93999",
+      "item_type": "cve",
+      "title": "CVE-2026-93999",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93999",
+      "source": "vulners/duckdb",
+      "published": "2026-09-19",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the OIDC protocol implementation of Keycloak, an open-source identity and access management solution. The issue occurs during the token refresh process when the server restores requested audiences from stored client IDs. Keycloak fails to verify if the target audience client is still enabled before issuing a new access token. This allows an application with an existing refresh token to continue obtaining valid access tokens for a disabled client, potentially bypassing adminis",
+      "signals": {
+        "cvss": 4.2,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 3,
+      "daily_phishing_campaigns": 8,
+      "daily_identity_threats": 3
+    }
+  }
+}
