@@ -1,0 +1,210 @@
+[
+  {
+    "id": "CVE-2026-82842",
+    "published": "2026-09-20 06:00:16",
+    "cvss": 8.1,
+    "epss": 0.00132,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The SAML Single Sign On  WordPress plugin before 6.0.0 does not honour the configured criterion for linking an incoming single sign-on identity to a WordPress account, always resolving the identity by login name whatever the site has chosen, which allows an attacker who can have the site's identity provider assert a login name of their choosing to authenticate as any account, including an administrator, without proving ownership of that account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin exclusion applies despite SAML authentication bypass mechanism; consumer/hobbyist context lacks DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-48976",
+    "published": "2026-09-21 17:41:16",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "HomeBox is a home inventory and organization system. Prior to 0.26.0, NotifierRepository.Update in backend/internal/data/repo/repo_notifier.go updates a notifier through UpdateOneID(id) without requiring the record's user ID to match the authenticated user. An authenticated user who supplies another tenant's notifier UUID to PUT /v1/notifiers/{id} can read the returned stored url, which may contain plaintext Shoutrrr credentials for Slack, SMTP, Telegram, Pushover, or Discord, and can replace the URL to redirect the victim's notifications to an attacker-controlled webhook. This issue is fixed in version 0.26.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home inventory application lacks DPI sector relevance despite credential exposure and authorization flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94540",
+    "published": "2026-09-21 21:47:03",
+    "cvss": 7.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "DesktopSMS 1.11.0 by MrPear contains an unauthorized access vulnerability that allows local attackers to transmit SMS, retrieve SMS-derived content, and persist an attacker-selected paired identity by interacting with the application's local service without any pairing confirmation or user interaction. Attackers can exploit the unauthenticated local service through same-device loopback to perform privileged SMS operations using the victim application's permissions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer desktop SMS application lacks DPI sector relevance despite local unauthorized access and identity persistence flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93340",
+    "published": "2026-09-21 21:21:58",
+    "cvss": 7.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Gladys Assistant before 5.1.0 contains a password reset link poisoning vulnerability that allows unauthenticated remote attackers to obtain valid password reset tokens for any account by exploiting the client-supplied origin parameter in the forgot_password endpoint without server-side validation. Attackers can send a crafted request specifying an attacker-controlled origin, causing the victim to receive a poisoned reset link that discloses the session token to the attacker, enabling full account takeover including administrator accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Smart home assistant application falls under consumer/IoT exclusion despite password reset poisoning and account takeover impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61687",
+    "published": "2026-09-21 15:45:27",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Hatchet is a platform for orchestrating background tasks, AI agents, and durable workflows at scale. Prior to 0.91.1, ValidateOAuthState clears the oauth_state_ session value to an empty string after a successful OAuth callback and later accepts an empty state parameter as equal, allowing an unauthenticated attacker to bind a victim's Hatchet session to an attacker-controlled OAuth identity. Exploitation requires the victim to have completed an OAuth flow in the current session and the deployment to enable auth.google.enabled, auth.github.enabled, or the Slack integration. This issue is fixed in version 0.91.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Workflow orchestration platform lacks clear DPI sector nexus despite OAuth session binding flaw; software fit is weak for identity infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92254",
+    "published": "2026-09-20 12:02:34",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing Authorization in the IOCTL handlers of the wsdkd.sys kernel drivers in Watchdog WatchDog Antivirus 1.8.640 (driver versions 1.3.0.0 and earlier) on Microsoft Windows allows local, low-privileged attackers to delete arbitrary files with SYSTEM privileges, bypassing NTFS access controls and potentially disabling security products or destabilizing the operating system, via crafted IOCTL requests sent to the \\Device\\wsdk device.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer/enterprise antivirus kernel driver lacks DPI identity or sector relevance despite missing authorization and privilege escalation impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94151",
+    "published": "2026-09-21 08:15:08",
+    "cvss": 5.3,
+    "epss": 0.00394,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in Omega Solution HRM OS up to 20260717. This affects an unknown function of the file /role-permission/permission of the component Role Permission API. Executing a manipulation of the argument roleId can lead to missing authentication. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Vague boilerplate description for HRM software lacks clear DPI sector nexus or specific identity mechanism detail.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93964",
+    "published": "2026-09-20 05:30:17",
+    "cvss": 5.3,
+    "epss": 0.00273,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in NginxProxyManager nginx-proxy-manager up to 2.15.1. This impacts the function internalCertificate.validate of the file backend/internal/certificate.js of the component Validate Route. The manipulation results in missing authentication. The attack can be launched remotely. The exploit is now public and may be used. Endpoint only processes and echoes back the certificate the caller submits (no stored data leaked); the real risk is unauthenticated openssl processing of attacker input. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Reverse proxy tool lacks DPI identity nexus and impact is limited to unauthenticated certificate processing without access-control or credential exposure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93960",
+    "published": "2026-09-20 03:00:19",
+    "cvss": 4.3,
+    "epss": 0.00366,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in Pixelfed up to 0.12.11. Impacted is the function instancePeers of the file app/Http/Controllers/Api/ApiV1Controller.php of the component OAuth Scope Handler. Such manipulation of the argument ID leads to missing authentication. The attack may be performed from remote. The exploit is publicly available and might be used. Upgrading to version 0.12.10 is recommended to address this issue. The name of the patch is 68dca5097305fa0065d029587b2233524636025a. Upgrading the affected component is advised.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer social media platform (Pixelfed) with OAuth scope handler flaw, excluded by base Digital Identity and overlay consumer software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82355",
+    "published": "2026-09-21 14:32:04",
+    "cvss": 4.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "When a request to the Airflow core API carries both a session cookie and an explicit `Authorization: Bearer` token, Airflow resolves the caller from the cookie and ignores the bearer token, inverting the intended precedence of bearer over cookie. The request then executes -- and is recorded in the audit log -- as the cookie's principal rather than the identity the client explicitly presented.\n\nOnly Apache Airflow 3.3.0 and 3.3.1 are affected. Earlier releases do not contain the code path that caches the cookie-derived user, and are not vulnerable.\n\nExploiting this requires an attacker to first place a valid session cookie of their own into the victim's browser or client: for example by cookie tossing from a sibling subdomain, through cross-site scripting in a separate application sharing a parent domain, or via a shared workstation. Deployments that host the Airflow UI on a domain shared with other applications are therefore the most exposed; a deployment on a dedicated domain with no co-hosted applications is not reachable this way. The consequence is principal confusion and misattributed audit records rather than a direct privilege escalation.\n\nUsers of 3.3.0 or 3.3.1 should upgrade to Apache Airflow 3.3.2 or later, which resolves the caller from the explicitly supplied credential whenever one is present.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Data orchestration tool (Apache Airflow) with session precedence inversion, lacks identity infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61630",
+    "published": "2026-09-21 14:17:11",
+    "cvss": 4.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "nginx ignition is a user interface for the nginx web server. In versions 2.33.0 through 2.35.0, any user that has enabled the OTP 2FA can have their TOTP reused during the standard 30 second validity window. Version 2.35.1 patches the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Web server UI (nginx ignition) with TOTP reuse flaw, not a dedicated identity or MFA provider per overlay criteria.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-49449",
+    "published": "2026-09-21 20:52:11",
+    "cvss": 2.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. From 1.4.0 until 3.7.2, packages/renderer/MdToHtml/rules/katex.ts enables KaTeX's trust option for note content, allowing a note author to place a \\href URL into rendered output without passing Joplin's normal URL allowlist. On Windows, clicking a link whose target is an attacker-controlled UNC path causes pathExists() to initiate SMB authentication and disclose the current user's NTLMv2 challenge-response without a warning. The unfiltered URL can also invoke other registered URL handlers, but the credential disclosure through KaTeX \\href is the distinguishing demonstrated impact. This issue is fixed in version 3.7.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer note-taking application (Joplin) with NTLM credential disclosure via UNC paths, excluded by consumer software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55870",
+    "published": "2026-09-21 15:00:48",
+    "cvss": 2.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "GoCD is a continuous deliver server. Prior to 26.1.0, GoCD can return unmasked credentials that administrators stored in the userinfo portion of source control material URLs through several read-only APIs available to regular authenticated users. Although GoCD recommends dedicated username and password fields or secret-management plugins, legacy configuration permits credentials in material URLs, and not every mixed-use API consistently applies URL masking for every material type. An authenticated user with access to an affected pipeline can obtain credentials embedded in its material URL, while dedicated password fields remain encrypted and are not exposed by this issue. This issue is fixed in version 26.1.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "CI/CD server (GoCD) credential exposure in material URLs, lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  }
+]

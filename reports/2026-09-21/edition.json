@@ -1,0 +1,306 @@
+{
+  "alert_id": "8af9db70",
+  "report_date": "2026-09-21",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-09-22 15:02:46",
+  "items": [
+    {
+      "item_id": "CVE-2026-77560",
+      "item_type": "cve",
+      "title": "CVE-2026-77560 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77560",
+      "source": "WAVE",
+      "published": "2026-09-21",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "TIER 2 authorization bypass in Tinyauth forward-auth middleware directly impacts Digital Identity infrastructure by allowing authenticated users to bypass per-app access controls via Host header case manipulation.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 5,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-77560.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-85751",
+      "item_type": "cve",
+      "title": "CVE-2026-85751 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85751",
+      "source": "WAVE",
+      "published": "2026-09-21",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Authentication bypass in internet-facing mail servers impacts foundational communications infrastructure across Government, Finance, Healthcare, and Digital Identity sectors.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-85751.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-73547",
+      "item_type": "cve",
+      "title": "CVE-2026-73547 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73547",
+      "source": "WAVE",
+      "published": "2026-09-21",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Foundational cloud-native edge proxy and service mesh component underpinning regulated and public digital service architectures, though exploitation requires non-default configurations.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 3,
+        "dpi_fit": 0.3
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-73547.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94412",
+      "item_type": "cve",
+      "title": "CVE-2026-94412 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94412",
+      "source": "WAVE",
+      "published": "2026-09-21",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Finance sector relevance due to ERP system handling SME financial operations and procurement data.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 3,
+        "dpi_fit": 0.3
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-94412.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-c4669ac6ee",
+      "item_type": "campaign",
+      "title": "Inside an AI‑enabled device code phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+      "source": "ketch",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "Threat actors leverage AI to automate device code phishing at scale, generating live authentication prompts on demand. This campaign bypasses traditional email filters by targeting users directly with dynamic codes, enabling rapid account takeover and persistent access. Defenders should monitor for anomalous device code requests and restrict OAuth consent flows.",
+      "signals": {
+        "dpi_fit": 95.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-1dd839d93b",
+      "item_type": "campaign",
+      "title": "GhostCode Phishing Kit Bypasses Microsoft 365 MFA to Hijack Accounts in 78 Seconds",
+      "url": "https://cybersecuritynews.com/ghostcode-phishing-kit/amp",
+      "source": "ketch",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A newly discovered GhostCode phishing kit bypasses Microsoft 365 MFA in under two minutes. The kit automates device code interception and token theft, enabling rapid account hijacking. Security operations should deploy MFA fatigue defenses, restrict interactive login flows, and implement behavioral analytics to detect automated credential harvesting campaigns.",
+      "signals": {
+        "dpi_fit": 93.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-90c187c1bf",
+      "item_type": "campaign",
+      "title": "GhostCode Abuses Microsoft Device Codes to Steal M365 Tokens and Register Rogue Devices",
+      "url": "https://cyberpress.org/ghostcode-m365-device-code",
+      "source": "ketch",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "The GhostCode toolkit abuses Microsoft device codes to extract valid M365 access tokens and register unauthorized devices. This technique allows attackers to maintain persistence even after password resets. Defenders should monitor Entra ID sign-in logs for token theft indicators, restrict app registrations, and implement token lifetime policies.",
+      "signals": {
+        "dpi_fit": 91.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-1f2a41fec2",
+      "item_type": "campaign",
+      "title": "GhostCode Abuses Microsoft Entra Device Enrollment to Maintain Access After Token Revocation",
+      "url": "https://gbhackers.com/ghostcode-abuses-microsoft-entra",
+      "source": "ketch",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "Attackers leverage Microsoft Entra device enrollment to retain access after token revocation. By registering rogue devices during the initial compromise, GhostCode operators create persistent backdoors. IT teams must enforce device compliance policies, audit enrollment approvals, and monitor for unauthorized device additions in Entra ID.",
+      "signals": {
+        "dpi_fit": 89.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-c92325375b",
+      "item_type": "campaign",
+      "title": "Microsoft 365: Block Device Code Flow Against GhostCode",
+      "url": "https://windowsforum.com/news/microsoft-365-block-device-code-flow-against-ghostcode.444973",
+      "source": "ketch",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "Administrators can mitigate GhostCode attacks by disabling the device code flow in Microsoft 365. This configuration change prevents threat actors from exploiting the interactive authentication mechanism to steal tokens. Implementing conditional access policies and restricting device enrollment scopes further reduces exposure to automated credential harvesting.",
+      "signals": {
+        "dpi_fit": 88.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-18812f2095",
+      "item_type": "campaign",
+      "title": "GhostCode attackers abuse device codes to take over Microsoft 365 accounts",
+      "url": "https://computerworld.com/article/4223889/ghostcode-attackers-abuse-device-codes-to-take-over-microsoft-365-accounts.html",
+      "source": "ketch",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "GhostCode operators exploit Microsoft’s device code authentication to hijack M365 accounts. By tricking users into entering codes on malicious portals, attackers bypass standard MFA controls. Infrastructure teams must audit active device code sessions, enforce strict conditional access rules, and deploy real-time alerting for suspicious authentication patterns.",
+      "signals": {
+        "dpi_fit": 82.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-662567deef",
+      "item_type": "campaign",
+      "title": "Operation HookedWing: 4-Year Phishing Campaign Hits 500+",
+      "url": "https://cipherssecurity.com/operation-hookedwing-phishing-500/",
+      "source": "ketch",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.c"
+      ],
+      "excerpt": "Operation HookedWing represents a sustained, four-year spear phishing campaign targeting over 500 organizations. Attackers use highly tailored lures to harvest credentials and deploy persistent access tools. Defenders should review historical email logs, enforce least-privilege access, and implement advanced phishing simulation and detection controls.",
+      "signals": {
+        "dpi_fit": 78.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94215",
+      "item_type": "cve",
+      "title": "CVE-2026-94215",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94215",
+      "source": "vulners/duckdb",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the Admin REST API of Keycloak, an open-source identity and access management solution. The issue occurs because the API uses a per-request in-memory cache to resolve clients by their unique identifier without verifying if the client belongs to the realm specified in the request path. This allows an administrator with limited privileges to read or modify sensitive client configurations in the master realm by accessing them through a realm they control. Successful exploitation",
+      "signals": {
+        "cvss": 5.5,
+        "epss": 0.00184,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94213",
+      "item_type": "cve",
+      "title": "CVE-2026-94213",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94213",
+      "source": "vulners/duckdb",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the Authorization Services component of Keycloak, an open-source identity and access management solution. The issue occurs in the policy evaluation endpoint, which is used by administrators to test how access policies apply to specific users. Due to missing authorization checks, a delegated administrator with limited viewing privileges can access the full profile and role information of any user in the realm, even if they are not permitted to view user details. This could lea",
+      "signals": {
+        "cvss": 4.9,
+        "epss": 0.00231,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94217",
+      "item_type": "cve",
+      "title": "CVE-2026-94217",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94217",
+      "source": "vulners/duckdb",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the User-Managed Access (UMA) implementation of Keycloak. The issue occurs in the authorization token endpoint when processing permission tickets. If two different users own resources with the same name, the system incorrectly merges the permissions from both resources when one user requests an authorization token. This allows an attacker to gain access scopes on a victim's resource that were never intended to be shared.",
+      "signals": {
+        "cvss": 3.5,
+        "epss": 0.0014,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94218",
+      "item_type": "cve",
+      "title": "CVE-2026-94218",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94218",
+      "source": "vulners/duckdb",
+      "published": "2026-09-21",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the authentication session management of Keycloak, an identity and access management solution. The issue occurs when an administrator enforces a stronger authentication flow, such as mandatory two-factor authentication (2FA) setup, through a client policy. A user can bypass this requirement by manually visiting a specific session restart web link during the login process. This action clears the internal markers that track the required security steps, allowing the user to log ",
+      "signals": {
+        "cvss": 3.1,
+        "epss": 0.00202,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 4,
+      "daily_phishing_campaigns": 7,
+      "daily_identity_threats": 4
+    }
+  }
+}
