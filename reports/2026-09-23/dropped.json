@@ -1,0 +1,3085 @@
+[
+  {
+    "id": "CVE-2026-5695",
+    "identity": {
+      "title": "CVE-2026-5695",
+      "published": "2026-09-23 10:20:51",
+      "modified": "2026-09-23 14:17:08",
+      "description": "Arbitrary file upload vulnerability due to a lack of proper validation in upload forms. This allows authenticated users to upload files to the server without restrictions. An attacker could exploit this flaw to execute malicious code remotely (demonstrated by uploading the EICAR test file), which could result in the system being completely compromised."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-microweber-administration-panel"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-434"
+      ],
+      "cwe_primary": "CWE-434",
+      "cwe_family": "File Upload",
+      "cwe_names": {
+        "CWE-434": "Unrestricted Upload of File with Dangerous Type"
+      }
+    },
+    "software": {
+      "vendors": "Microweber",
+      "products": "Administration panel",
+      "cpe_uris": "cpe:2.3:a:microweber:administration_panel:2.0.19:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-microweber-administration-panel"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-5695",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-5695"
+    },
+    "item_id": "CVE-2026-5695",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic description with no recognisable vendor or product and no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-96442",
+    "identity": {
+      "title": "CVE-2026-96442",
+      "published": "2026-09-23 10:10:36",
+      "modified": "2026-09-23 19:40:10",
+      "description": "A code execution flaw was found in Emacs, affecting versions prior to 31.2. The Flymake mode using language backends other than Lisp would execute arbitrary code from the edited file while performing syntax checking. Viewing or editing untrusted files using Emacs could lead to arbitrary code execution with the privileges of the user running Emacs."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/emacs-mirror/emacs/commit/135e6f63f08fee3d374fa1a5187bce941a2d3e3c"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Red Hat,Red Hat,Red Hat,Red Hat,Red Hat",
+      "products": "Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 6,Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 9",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "red hat:red hat enterprise linux 10",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 10",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 6",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 6",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 7",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 7",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 8",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 8",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 9",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 9",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-96442",
+      "https://github.com/emacs-mirror/emacs/commit/135e6f63f08fee3d374fa1a5187bce941a2d3e3c",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2537347",
+      "https://github.com/emacs-mirror/emacs/commit/abc802ee2eb0b1663349ddf22a461f8e54a383fb",
+      "https://www.openwall.com/lists/oss-security/2026/09/14/1"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-96442",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-96442"
+    },
+    "item_id": "CVE-2026-96442",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Developer text editor with local file execution flaw, lacking enterprise/DPI sector nexus or active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-96455",
+    "identity": {
+      "title": "CVE-2026-96455",
+      "published": "2026-09-23 10:01:15",
+      "modified": "2026-09-23 19:42:02",
+      "description": "The Reachy Mini daemon exposes an HTTP API for managing the robot. Its app installation endpoint, POST /apps/install in src/reachy_mini/daemon/app/routers/apps.py, has no authentication. The handler's only dependency is Depends(get_app_manager), which just hands back the manager object from application state, so nothing in the chain ever checks a credential.\n\n\n\nThe endpoint takes an AppInfo body naming a Hugging Face Space. The daemon downloads that Space and installs it as a Python package through install_package in src/reachy_mini/apps/sources/local_common_venv.py, using uv or pip. Installing a Python package runs the package's own build and setup code, so whoever chooses the Space chooses what code the robot runs. Anyone can publish a public Hugging Face Space, so this is not a meaningful restriction on the attacker.\n\n\n\nHow far this reaches depends on the model. In _resolve_bind_host in src/reachy_mini/daemon/app/main.py the daemon binds 0.0.0.0 when it runs as the wireless version and 127.0.0.1 otherwise, with the vendor's own comment explaining that the robot has to be reachable on the LAN. On a wireless unit, then, any host on the same network can install and run code on the robot without credentials.\n\n\n\nOne related change has already shipped but does not fix this. Version 1.8.2 replaced the wildcard CORS policy with an allow list of localhost and Tauri origins. That closes the browser drive-by route, where a web page the victim visits silently calls the endpoint in the background. It has no effect on this issue: CORS is enforced by browsers and governs whether script may read a response, while a direct HTTP request from another machine on the network involves no browser, no preflight and no CORS check at all."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/pollen-robotics/reachy_mini"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306",
+        "CWE-494"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function",
+        "CWE-494": "Download of Code Without Integrity Check"
+      }
+    },
+    "software": {
+      "vendors": "Pollen Robotics",
+      "products": "Reachy Mini",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/pollen-robotics/reachy_mini",
+      "https://github.com/pollen-robotics/reachy_mini/releases/tag/v1.11.0",
+      "https://github.com/pollen-robotics/reachy_mini/pull/1207",
+      "https://github.com/pollen-robotics/reachy_mini/blob/main/src/reachy_mini/daemon/app/main.py",
+      "https://github.com/pollen-robotics/reachy_mini/blob/main/src/reachy_mini/daemon/app/routers/apps.py"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-96455",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-96455"
+    },
+    "item_id": "CVE-2026-96455",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Niche robotics daemon with unauthenticated RCE but lacks broad enterprise or DPI infrastructure footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-42801",
+    "identity": {
+      "title": "CVE-2026-42801",
+      "published": "2026-09-23 09:03:56",
+      "modified": "2026-09-23 17:58:00",
+      "description": "NULL pointer dereference vulnerability in ASR Crane，Falcon on Linux (as_rrc module) allows Pointer Manipulation.\n\nThis vulnerability is associated with program file 3g.mod/lib/src/urrsir.c."
+    },
+    "cvss": {
+      "base_score": 7.4,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00284,
+      "percentile": 0.21139,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.asrmicro.com/en/goods/psirt?cid=45"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "cwe_primary": "CWE-476",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-476": "NULL Pointer Dereference"
+      }
+    },
+    "software": {
+      "vendors": "ASR",
+      "products": "Crane，Falcon",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.asrmicro.com/en/goods/psirt?cid=45"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42801",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42801"
+    },
+    "item_id": "CVE-2026-42801",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Thin description of a null pointer dereference in telecom base station software with no active exploitation or clear DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93368",
+    "identity": {
+      "title": "CVE-2026-93368",
+      "published": "2026-09-23 08:28:05",
+      "modified": "2026-09-23 19:19:45",
+      "description": "The Rename wp-login.php to anything you want plugin for WordPress is vulnerable to time-based SQL Injection via 'log' (Username) Parameter in all versions up to, and including, 2.0.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. WordPress core applies wp_unslash() to the 'log' POST value before dispatching the wp_login_failed action, stripping magic-quotes backslash escaping and allowing a raw single quote to reach the plugin's handler unimpeded."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/89a07c47-b57c-49de-9f7c-a2bb29e3fecc?source=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "travispluse",
+      "products": "Rename wp-login.php to anything you want",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/89a07c47-b57c-49de-9f7c-a2bb29e3fecc?source=cve",
+      "https://plugins.trac.wordpress.org/browser/rename-wp-loginphp-to-anything-you-want/tags/2.0.1/init.php#L388",
+      "https://plugins.trac.wordpress.org/browser/rename-wp-loginphp-to-anything-you-want/tags/2.0.1/init.php#L421",
+      "https://plugins.trac.wordpress.org/browser/rename-wp-loginphp-to-anything-you-want/tags/2.0.1/init.php#L217",
+      "https://plugins.trac.wordpress.org/browser/rename-wp-loginphp-to-anything-you-want/tags/2.0.1/init.php#L398"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93368",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93368"
+    },
+    "item_id": "CVE-2026-93368",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin SQL injection with no enterprise or DPI footprint, matching explicit consumer CMS drop criteria.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91790",
+    "identity": {
+      "title": "CVE-2026-91790",
+      "published": "2026-09-23 07:51:28",
+      "modified": "2026-09-23 08:17:10",
+      "description": "When rendering the page image, Foxit PDF Editor/Reader fails to perform validation on image objects whose optional content attributes are malformed. As a result, the program may access an already-freed internal data structure, triggering a crash due to UAF."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0017,
+      "percentile": 0.0676,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "cwe_primary": "CWE-416",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-416": "Use After Free"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91790",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91790"
+    },
+    "item_id": "CVE-2026-91790",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "PDF reader use-after-free crash with no active exploitation or explicit enterprise/DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91802",
+    "identity": {
+      "title": "CVE-2026-91802",
+      "published": "2026-09-23 07:50:37",
+      "modified": "2026-09-23 08:17:12",
+      "description": "A heap-based out-of-bounds write vulnerability exists in Foxit PDF Editor/Reader’s WebP image decoding due to improper handling of bitmap stride and target buffer formats. Successful exploitation could result in an application crash."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0017,
+      "percentile": 0.06759,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-787",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91802",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91802"
+    },
+    "item_id": "CVE-2026-91802",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop PDF reader/editor vulnerability with no DPI sector nexus, identity mechanism, or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91804",
+    "identity": {
+      "title": "CVE-2026-91804",
+      "published": "2026-09-23 07:50:34",
+      "modified": "2026-09-23 08:17:12",
+      "description": "A heap-based out-of-bounds write vulnerability exists in Foxit PDF Editor/Reader’s rendering of Circle annotations with malformed Cloudy appearance streams in specially crafted PDF files. Insufficient validation of the appearance geometry can result in memory corruption and application crashes."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0017,
+      "percentile": 0.0676,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-787",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91804",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91804"
+    },
+    "item_id": "CVE-2026-91804",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop PDF reader/editor vulnerability with no DPI sector nexus, identity mechanism, or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91806",
+    "identity": {
+      "title": "CVE-2026-91806",
+      "published": "2026-09-23 07:50:29",
+      "modified": "2026-09-23 08:17:12",
+      "description": "A use-after-free vulnerability exists in Foxit PDF Editor/Reader’s handling of PDF form fields. Embedded JavaScript may access form-field references after the corresponding fields have been released, resulting in an application crash."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0017,
+      "percentile": 0.06755,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "cwe_primary": "CWE-416",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-416": "Use After Free"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91806",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91806"
+    },
+    "item_id": "CVE-2026-91806",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop PDF reader/editor vulnerability with no DPI sector nexus, identity mechanism, or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91798",
+    "identity": {
+      "title": "CVE-2026-91798",
+      "published": "2026-09-23 07:50:17",
+      "modified": "2026-09-23 08:17:11",
+      "description": "A local privilege escalation vulnerability exists in the update daemon of Foxit PDF Editor/Reader due to an insecure permission configuration that allows the configuration file to be modified by regular users, which may lead to arbitrary script execution with higher privileges."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00149,
+      "percentile": 0.04496,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-732"
+      ],
+      "cwe_primary": "CWE-732",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-732": "Incorrect Permission Assignment for Critical Resource"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91798",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91798"
+    },
+    "item_id": "CVE-2026-91798",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop PDF reader/editor vulnerability with no DPI sector nexus, identity mechanism, or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91803",
+    "identity": {
+      "title": "CVE-2026-91803",
+      "published": "2026-09-23 07:50:13",
+      "modified": "2026-09-23 08:17:12",
+      "description": "A local privilege escalation vulnerability exists in the updater of Foxit PDF Editor/Reader due to unsafe loading of dynamic-link libraries from a user-writable directory during high-privilege operations. A local attacker could exploit this issue to execute code with elevated privileges."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00167,
+      "percentile": 0.06403,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-427"
+      ],
+      "cwe_primary": "CWE-427",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-427": "Uncontrolled Search Path Element"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91803",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91803"
+    },
+    "item_id": "CVE-2026-91803",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop PDF reader/editor vulnerability with no DPI sector nexus, identity mechanism, or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91811",
+    "identity": {
+      "title": "CVE-2026-91811",
+      "published": "2026-09-23 07:49:58",
+      "modified": "2026-09-23 08:17:13",
+      "description": "A heap-based out-of-bounds write vulnerability exists in Foxit PDF Editor/Reader’s PRC parser due to insufficient validation of vertex indices in triangular fan texture meshes. Successful exploitation could result in memory corruption and an application crash."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0017,
+      "percentile": 0.06755,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-787",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91811",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91811"
+    },
+    "item_id": "CVE-2026-91811",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop PDF reader/editor vulnerability with no DPI sector nexus, identity mechanism, or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91812",
+    "identity": {
+      "title": "CVE-2026-91812",
+      "published": "2026-09-23 07:49:51",
+      "modified": "2026-09-23 08:17:13",
+      "description": "A vulnerability in Foxit PDF Editor/Reader’s update mechanism allows man-in-the-middle attackers to bypass certificate validation and package integrity checks, potentially enabling arbitrary code execution with system privileges."
+    },
+    "cvss": {
+      "base_score": 7.9,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00127,
+      "percentile": 0.02704,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-295"
+      ],
+      "cwe_primary": "CWE-295",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-295": "Improper Certificate Validation"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91812",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91812"
+    },
+    "item_id": "CVE-2026-91812",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop PDF reader/editor vulnerability with no DPI sector nexus, identity mechanism, or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91813",
+    "identity": {
+      "title": "CVE-2026-91813",
+      "published": "2026-09-23 07:49:37",
+      "modified": "2026-09-23 08:17:13",
+      "description": "A vulnerability in Foxit PDF Editor/Reader’s update mechanism allows an update package to be replaced between download and high-privilege extraction due to insufficient file locking and integrity validation. This could enable local attackers to execute arbitrary code with elevated privileges."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00129,
+      "percentile": 0.0295,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-367"
+      ],
+      "cwe_primary": "CWE-367",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-367": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91813",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91813"
+    },
+    "item_id": "CVE-2026-91813",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop PDF reader/editor vulnerability with no DPI sector nexus, identity mechanism, or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91815",
+    "identity": {
+      "title": "CVE-2026-91815",
+      "published": "2026-09-23 07:49:31",
+      "modified": "2026-09-23 08:17:13",
+      "description": "Foxit PDF Editor/Reader does not perform sufficient verification of the JPEG2000 image metadata in the PDF file, which leads to out-of-bounds write in the heap buffer during decoding, potentially causing the program to crash and introducing the risk of arbitrary code execution."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00185,
+      "percentile": 0.08357,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-787",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91815",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91815"
+    },
+    "item_id": "CVE-2026-91815",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop PDF reader/editor vulnerability with no DPI sector nexus, identity mechanism, or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91816",
+    "identity": {
+      "title": "CVE-2026-91816",
+      "published": "2026-09-23 07:49:18",
+      "modified": "2026-09-23 08:17:13",
+      "description": "A use-after-free vulnerability exists in Foxit PDF Editor/Reader’s handling of PDF annotations. Reentrant annotation deletion triggered by embedded JavaScript can cause the application to access an annotation object after it has been released, resulting in a use-after-free condition and application crash."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0017,
+      "percentile": 0.06759,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "cwe_primary": "CWE-416",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-416": "Use After Free"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91816",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91816"
+    },
+    "item_id": "CVE-2026-91816",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop PDF reader/editor vulnerability with no DPI sector nexus, identity mechanism, or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91818",
+    "identity": {
+      "title": "CVE-2026-91818",
+      "published": "2026-09-23 07:49:11",
+      "modified": "2026-09-23 08:17:14",
+      "description": "A use-after-free vulnerability exists in Foxit PDF Editor/Reader’s JavaScript handling of PDF annotations. Reentrant page-event processing during annotation enumeration may release the associated page object, which is subsequently accessed, resulting in an application crash."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0017,
+      "percentile": 0.06758,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "cwe_primary": "CWE-416",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-416": "Use After Free"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91818",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91818"
+    },
+    "item_id": "CVE-2026-91818",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer PDF reader vulnerability with no active exploitation or DPI-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91789",
+    "identity": {
+      "title": "CVE-2026-91789",
+      "published": "2026-09-23 07:49:08",
+      "modified": "2026-09-23 08:17:10",
+      "description": "Foxit PDF Editor/Reader’s U3D/GIF texture decoding path contained insufficient validation of image dimensions and related size information. Under certain conditions, this could lead to an incorrectly sized memory allocation and a subsequent out-of-bounds write during pixel processing, potentially resulting in remote code execution."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00224,
+      "percentile": 0.13295,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-787",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91789",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91789"
+    },
+    "item_id": "CVE-2026-91789",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer PDF reader vulnerability with no active exploitation or DPI-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91809",
+    "identity": {
+      "title": "CVE-2026-91809",
+      "published": "2026-09-23 07:49:06",
+      "modified": "2026-09-23 08:17:13",
+      "description": "A use-after-free vulnerability exists in Foxit PDF Editor/Reader’s handling of malformed PDF form fields. Improper validation during field-name traversal may cause the application to access a released object, resulting in an application crash."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0017,
+      "percentile": 0.06759,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.foxit.com/support/security-bulletins.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "cwe_primary": "CWE-416",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-416": "Use After Free"
+      }
+    },
+    "software": {
+      "vendors": "Foxit Software Inc.,Foxit Software Inc.",
+      "products": "Foxit PDF Editor,Foxit PDF Reader",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "foxit software inc.:foxit pdf editor",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Editor",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "foxit software inc.:foxit pdf reader",
+          "vendor": "Foxit Software Inc.",
+          "product": "Foxit PDF Reader",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.foxit.com/support/security-bulletins.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91809",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91809"
+    },
+    "item_id": "CVE-2026-91809",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer PDF reader vulnerability with no active exploitation or DPI-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-50228",
+    "identity": {
+      "title": "CVE-2026-50228",
+      "published": "2026-09-23 07:20:41",
+      "modified": "2026-09-23 08:17:10",
+      "description": "An unauthenticated local attacker can connect to the Electron DevTools endpoint exposed by Acer NitroSense software (versions up to and including 5.2.63) on localhost TCP port 9993. Because Chromium remote debugging is enabled in the production application, the attacker can execute JavaScript in the privileged application context and achieve arbitrary code execution."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00179,
+      "percentile": 0.07689,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://community.acer.com/en/kb/articles/20051"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-489"
+      ],
+      "cwe_primary": "CWE-489",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-489": "Active Debug Code"
+      }
+    },
+    "software": {
+      "vendors": "Acer",
+      "products": "NitroSense V5",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://community.acer.com/en/kb/articles/20051"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-50228",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-50228"
+    },
+    "item_id": "CVE-2026-50228",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer laptop utility requiring local access with no active exploitation or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-50227",
+    "identity": {
+      "title": "CVE-2026-50227",
+      "published": "2026-09-23 07:15:36",
+      "modified": "2026-09-23 08:17:09",
+      "description": "An unauthenticated local attacker can connect to the MQTT broker over its localhost WebSocket endpoint in Acer NitroSense software (versions up to and including 5.2.62). This allows the attacker to invoke exposed ddsc RPC functions, including child_process.execSync(), resulting in arbitrary command execution in the application context."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00263,
+      "percentile": 0.18429,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://community.acer.com/en/kb/articles/20052"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306",
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function",
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Acer",
+      "products": "NitroSense V5",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://community.acer.com/en/kb/articles/20052"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-50227",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-50227"
+    },
+    "item_id": "CVE-2026-50227",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer laptop utility requiring local access with no active exploitation or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93508",
+    "identity": {
+      "title": "CVE-2026-93508",
+      "published": "2026-09-23 06:00:23",
+      "modified": "2026-09-23 11:17:17",
+      "description": "The WC Fields Factory WordPress plugin before 4.1.11 does not properly restrict access to its field-management AJAX action, allowing authenticated users with Subscriber-level access and above to create, modify and delete arbitrary post meta on any post, including WooCommerce products, regardless of ownership, and to manipulate stored pricing rules on a product to reduce its checkout price."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0018,
+      "percentile": 0.07861,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/a927f6d6-90d8-4b91-aed4-f5f53d2b5c64/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "WC Fields Factory",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/a927f6d6-90d8-4b91-aed4-f5f53d2b5c64/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93508",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93508"
+    },
+    "item_id": "CVE-2026-93508",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no active exploitation or enterprise/DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86608",
+    "identity": {
+      "title": "CVE-2026-86608",
+      "published": "2026-09-23 06:00:19",
+      "modified": "2026-09-23 18:13:31",
+      "description": "The WP Recipe Maker WordPress plugin before 10.8.2 does not have any authorisation check in one of its REST routes, nor does it bound what that route stores, allowing unauthenticated users to write unlimited data into any user's metadata and to permanently prevent that account, including an administrator's, from loading."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00199,
+      "percentile": 0.09967,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/d7f0f9dd-4180-4210-9c48-dae67e8f5d8e/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "cwe_primary": "CWE-400",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-400": "Uncontrolled Resource Consumption"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "WP Recipe Maker",
+      "cpe_uris": "cpe:2.3:a:bootstrapped:wp_recipe_maker:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/d7f0f9dd-4180-4210-9c48-dae67e8f5d8e/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-86608",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-86608"
+    },
+    "item_id": "CVE-2026-86608",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no active exploitation or enterprise/DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82843",
+    "identity": {
+      "title": "CVE-2026-82843",
+      "published": "2026-09-23 06:00:16",
+      "modified": "2026-09-23 11:17:12",
+      "description": "The WP OAuth Server ( Login with WordPress ) WordPress plugin before 6.4.0 does not bind the OpenID Connect identity assertion it issues to the authorization grant being exchanged, returning instead the assertion belonging to whichever user authenticated most recently, which allows users with the Subscriber role and above to obtain a validly signed identity assertion for another user, including an administrator, and authenticate as them at any application that uses the site for single sign-on."
+    },
+    "cvss": {
+      "base_score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.0018,
+      "percentile": 0.07859,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/45bc7096-5d04-4fe6-a332-31aed507a3a0/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-287"
+      ],
+      "cwe_primary": "CWE-287",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-287": "Improper Authentication"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "WP OAuth Server ( Login with WordPress )",
+      "cpe_uris": "cpe:2.3:a:wp-oauth:wp_oauth_server:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/45bc7096-5d04-4fe6-a332-31aed507a3a0/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82843",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82843"
+    },
+    "item_id": "CVE-2026-82843",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress SSO plugin excluded by base Digital Identity rules and lacking active exploitation or enterprise IdAM footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75799",
+    "identity": {
+      "title": "CVE-2026-75799",
+      "published": "2026-09-23 06:00:15",
+      "modified": "2026-09-23 11:17:11",
+      "description": "The YAHMAN Add-ons WordPress plugin before 0.9.31 does not validate the type of the remote files it caches in a publicly accessible directory, allowing unauthenticated attackers to write arbitrary PHP files on the server and achieve RCE when the relevant feature is enabled."
+    },
+    "cvss": {
+      "base_score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00235,
+      "percentile": 0.14799,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/b12397e7-5d9b-42bf-bd31-5d3401bc4600/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "YAHMAN Add-ons",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/b12397e7-5d9b-42bf-bd31-5d3401bc4600/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-75799",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-75799"
+    },
+    "item_id": "CVE-2026-75799",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no active exploitation or enterprise/DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2022-4997",
+    "identity": {
+      "title": "CVE-2022-4997",
+      "published": "2026-09-23 06:00:14",
+      "modified": "2026-09-23 18:13:31",
+      "description": "The jet-form-builder-stripe-gateway WordPress plugin before 1.1.0 does not sanitise and escape a payment token before using it in a SQL statement, allowing unauthenticated users to extract arbitrary data from the database, including password hashes."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00235,
+      "percentile": 0.14799,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/368c38af-66c3-4500-ad50-87ada3abecd1/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "jet-form-builder-stripe-gateway",
+      "cpe_uris": "cpe:2.3:a:crocoblock:jetformbuilder_stripe_gateway:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/368c38af-66c3-4500-ad50-87ada3abecd1/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-4997",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2022-4997"
+    },
+    "item_id": "CVE-2022-4997",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no active exploitation or enterprise/DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14321",
+    "identity": {
+      "title": "CVE-2026-14321",
+      "published": "2026-09-23 06:00:14",
+      "modified": "2026-09-23 18:13:31",
+      "description": "The divi-dash WordPress plugin before 1.0.7 does not validate the source of the client IP address it uses for rate limiting and banning, allowing unauthenticated attackers to spoof arbitrary IP addresses in order to bypass rate limiting, ban chosen addresses from the feature, and grow a stored option without bound, resulting in denial of service."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00211,
+      "percentile": 0.1166,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/6f56b800-c8f6-4cd9-a137-c05b718db201/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "cwe_primary": "CWE-400",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-400": "Uncontrolled Resource Consumption"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "divi-dash",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/6f56b800-c8f6-4cd9-a137-c05b718db201/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-14321",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-14321"
+    },
+    "item_id": "CVE-2026-14321",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-95927",
+    "identity": {
+      "title": "CVE-2026-95927",
+      "published": "2026-09-23 01:30:14",
+      "modified": "2026-09-23 02:16:55",
+      "description": "A vulnerability was identified in SourceCodester Online Reviewer Management System 1.0. This affects an unknown function of the file /reviewer_0/admins/assessments/pretest/exam-delete.php. Such manipulation of the argument test_id leads to sql injection. The attack may be performed from remote. The exploit is publicly available and might be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00431,
+      "percentile": 0.36896,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/huliangjia/cve/issues/8"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Online Reviewer Management System",
+      "cpe_uris": "cpe:2.3:a:online_reviewer_management_system_project:online_reviewer_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/953309",
+      "https://vuldb.com/cve/CVE-2026-95927",
+      "https://github.com/huliangjia/cve/issues/8",
+      "https://www.sourcecodester.com/",
+      "https://vuldb.com/vuln/408549",
+      "https://vuldb.com/vuln/408549/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95927",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95927"
+    },
+    "item_id": "CVE-2026-95927",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Public exploit in niche educational PHP script lacks enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-95926",
+    "identity": {
+      "title": "CVE-2026-95926",
+      "published": "2026-09-23 01:15:15",
+      "modified": "2026-09-23 02:16:54",
+      "description": "A vulnerability was determined in SourceCodester Online Reviewer Management System 1.0. The impacted element is an unknown function of the file /reviewer_0/admins/assessments/pretest/btn_functions.php?action=update. This manipulation of the argument test_id causes sql injection. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00431,
+      "percentile": 0.36904,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/huliangjia/cve/issues/7"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Online Reviewer Management System",
+      "cpe_uris": "cpe:2.3:a:online_reviewer_management_system_project:online_reviewer_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/huliangjia/cve/issues/7",
+      "https://vuldb.com/vuln/408548/cti",
+      "https://vuldb.com/cve/CVE-2026-95926",
+      "https://vuldb.com/submit/953308",
+      "https://www.sourcecodester.com/",
+      "https://vuldb.com/vuln/408548"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95926",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95926"
+    },
+    "item_id": "CVE-2026-95926",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Public exploit in niche educational PHP script lacks enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-95925",
+    "identity": {
+      "title": "CVE-2026-95925",
+      "published": "2026-09-23 01:00:12",
+      "modified": "2026-09-23 01:16:32",
+      "description": "A vulnerability was found in SourceCodester Online Reviewer Management System 1.0. The affected element is an unknown function of the file /reviewer_0/admins/assessments/databank/btn_functions.php?action=update. The manipulation of the argument difficulty_id results in sql injection. The attack can be executed remotely. The exploit has been made public and could be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00431,
+      "percentile": 0.36904,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/huliangjia/cve/issues/5"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Online Reviewer Management System",
+      "cpe_uris": "cpe:2.3:a:online_reviewer_management_system_project:online_reviewer_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/408547",
+      "https://vuldb.com/vuln/408547/cti",
+      "https://www.sourcecodester.com/",
+      "https://vuldb.com/cve/CVE-2026-95925",
+      "https://vuldb.com/submit/953304",
+      "https://github.com/huliangjia/cve/issues/5"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95925",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95925"
+    },
+    "item_id": "CVE-2026-95925",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Public exploit in niche educational PHP script lacks enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-95924",
+    "identity": {
+      "title": "CVE-2026-95924",
+      "published": "2026-09-23 00:45:13",
+      "modified": "2026-09-23 01:16:32",
+      "description": "A vulnerability has been found in SourceCodester Online Reviewer Management System 1.0. Impacted is an unknown function of the file /reviewer_0/admins/assessments/databank/btn_functions.php?action=add. The manipulation of the argument difficulty_id leads to sql injection. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00431,
+      "percentile": 0.36905,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/huliangjia/cve/issues/4"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Online Reviewer Management System",
+      "cpe_uris": "cpe:2.3:a:online_reviewer_management_system_project:online_reviewer_management_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/408546/cti",
+      "https://vuldb.com/vuln/408546",
+      "https://github.com/huliangjia/cve/issues/4",
+      "https://vuldb.com/submit/953303",
+      "https://www.sourcecodester.com/",
+      "https://vuldb.com/cve/CVE-2026-95924"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95924",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95924"
+    },
+    "item_id": "CVE-2026-95924",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Public exploit in niche educational PHP script lacks enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-96272",
+    "identity": {
+      "title": "CVE-2026-96272",
+      "published": "2026-09-23 00:29:50",
+      "modified": "2026-09-23 01:16:32",
+      "description": "ClipBucket v5 before 5.5.3-#182 contains a blind SQL injection vulnerability in the photo search endpoint where the query parameter is passed unsanitized into SQL WHERE and ORDER BY clauses. Unauthenticated attackers can exploit time-based blind SQL injection techniques to extract user credentials, email addresses, and administrator password hashes for account takeover."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00541,
+      "percentile": 0.44446,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/MacWarrior/clipbucket-v5"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "MacWarrior",
+      "products": "clipbucket-v5",
+      "cpe_uris": "cpe:2.3:a:macwarrior:clipbucket-v5:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "macwarrior:clipbucket-v5",
+          "vendor": "MacWarrior",
+          "product": "clipbucket-v5",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/MacWarrior/clipbucket-v5",
+      "https://www.vulncheck.com/advisories/clipbucket-v5-before-5.5.3-182-sql-injection-via-search-result-php",
+      "https://github.com/MacWarrior/clipbucket-v5/blob/57b0235f2eae390f4946c042bf81c182a9f82782/upload/includes/classes/photos.class.php#L408-L413",
+      "https://github.com/MacWarrior/clipbucket-v5/commit/7fd0af6f8b5826c2d6ef0976dbb1867f5c36b707",
+      "https://github.com/MacWarrior/clipbucket-v5/pull/874",
+      "https://hackmd.io/@leediay/sqli-photo-seach-clipbucketv5"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-96272",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-96272"
+    },
+    "item_id": "CVE-2026-96272",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer self-hosted media CMS with no enterprise or DPI footprint and no exploitation signal; high CVSS does not override the consumer-only exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-96271",
+    "identity": {
+      "title": "CVE-2026-96271",
+      "published": "2026-09-23 00:29:49",
+      "modified": "2026-09-23 01:16:32",
+      "description": "Photoview through 2.4.0 contains an authorization bypass vulnerability in the shareAlbum GraphQL mutation that allows authenticated users to create share links for albums owned by other users. Attackers can supply arbitrary album IDs to generate working share tokens for victim albums, exposing photos and sub-albums to anyone with the link while retaining indefinite control over token settings."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": null,
+      "attack_complexity": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "scope": null,
+      "confidentiality_impact": null,
+      "integrity_impact": null,
+      "availability_impact": null,
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00387,
+      "percentile": 0.32699,
+      "date": "2026-09-23"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_by_cisa_kev": false,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/photoview/photoview"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": null,
+      "privileges_required": null,
+      "user_interaction": null,
+      "summary": "Unknown"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "cwe_primary": "CWE-639",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-639": "Authorization Bypass Through User-Controlled Key"
+      }
+    },
+    "software": {
+      "vendors": "photoview",
+      "products": "photoview",
+      "cpe_uris": "cpe:2.3:a:photoview:photoview:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/photoview/photoview",
+      "https://github.com/photoview/photoview/blob/81affea602401c2f0207d955919ddcc0670a9222/api/graphql/models/actions/share_token_actions.go#L64-L82",
+      "https://www.vulncheck.com/advisories/photoview-through-2.4.0-authorization-bypass-via-sharealbum",
+      "https://github.com/photoview/photoview/issues/1494",
+      "https://github.com/photoview/photoview/commit/20541762fe6d9e0ce363c3d4c55556e4ccdc57a2"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-96271",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-96271"
+    },
+    "item_id": "CVE-2026-96271",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer self-hosted photo gallery software with no enterprise or DPI footprint and no exploitation signal; lacks a public-sector or identity nexus.",
+      "fail_open": false
+    }
+  }
+]

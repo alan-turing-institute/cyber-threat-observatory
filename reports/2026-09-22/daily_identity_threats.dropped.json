@@ -1,0 +1,338 @@
+[
+  {
+    "id": "CVE-2026-93952",
+    "published": "2026-09-22 07:37:24",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\nHosted, including Dedicated, versions of VCO were impacted and have already been patched.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Enterprise SD-WAN orchestrator vulnerability, lacks identity/access nexus required by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93616",
+    "published": "2026-09-22 12:59:01",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "A directory traversal and file upload vulnerability allows an unauthenticated attacker to upload and execute arbitrary scripts on Check Point Management Server.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Security management server directory traversal, no identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77244",
+    "published": "2026-09-22 17:49:38",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MCP Atlassian is a Model Context Protocol (MCP) server for Atlassian products (Confluence and Jira). Prior to 0.22.0, the HTTP transport accepts requests without a verified user identity and downstream fetcher construction falls back to the operator's globally configured Jira or Confluence credentials. A network client that can reach the MCP endpoint can invoke Atlassian tools as the operator, including read and write operations available to that account. The advisory traces the vulnerable input and processing flow through UserTokenMiddleware, AtlassianOpaqueTokenVerifier, _get_fetcher, and streamable-http, which identify the affected entry points, controls, and code paths. This issue is fixed in version 0.22.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Developer tool integration (MCP server) with missing identity verification, not core DPI identity software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94493",
+    "published": "2026-09-22 01:00:18",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in Gigatech PDV5701 1.0.31_240305_112640. This issue affects some unknown processing of the file /index.html of the component WebSocket Service. The manipulation results in missing authentication. The attack can be launched remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer router/IoT device with missing authentication, explicitly excluded by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77254",
+    "published": "2026-09-22 18:11:44",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MCP Atlassian is a Model Context Protocol (MCP) server for Atlassian products (Confluence and Jira). Prior to 0.22.0, requests to the HTTP MCP endpoint without a per-user identity are allowed to reach tool handlers, which then use globally configured Jira or Confluence credentials. A network caller can perform operations with the operator account's permissions unless the deployment has an independent authentication boundary. The advisory traces the vulnerable input and processing flow through streamable-http, UserTokenMiddleware, _get_fetcher, and global credentials, which identify the affected entry points, controls, and code paths. This issue is fixed in version 0.22.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Duplicate developer tool integration flaw lacking identity verification, not core DPI identity software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17635",
+    "published": "2026-09-22 21:30:00",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to perform unauthorized actions due to improper configuration of HTTP method-based security constraints.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Financial transaction software with HTTP method constraint flaw, lacks identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82843",
+    "published": "2026-09-23 06:00:16",
+    "cvss": 9.0,
+    "epss": 0.0018,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WP OAuth Server ( Login with WordPress ) WordPress plugin before 6.4.0 does not bind the OpenID Connect identity assertion it issues to the authorization grant being exchanged, returning instead the assertion belonging to whichever user authenticated most recently, which allows users with the Subscriber role and above to obtain a validly signed identity assertion for another user, including an administrator, and authenticate as them at any application that uses the site for single sign-on.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with OIDC assertion binding flaw, explicitly excluded as consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-96455",
+    "published": "2026-09-23 10:01:15",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Reachy Mini daemon exposes an HTTP API for managing the robot. Its app installation endpoint, POST /apps/install in src/reachy_mini/daemon/app/routers/apps.py, has no authentication. The handler's only dependency is Depends(get_app_manager), which just hands back the manager object from application state, so nothing in the chain ever checks a credential.\n\n\n\nThe endpoint takes an AppInfo body naming a Hugging Face Space. The daemon downloads that Space and installs it as a Python package through install_package in src/reachy_mini/apps/sources/local_common_venv.py, using uv or pip. Installing a Python package runs the package's own build and setup code, so whoever chooses the Space chooses what code the robot runs. Anyone can publish a public Hugging Face Space, so this is not a meaningful restriction on the attacker.\n\n\n\nHow far this reaches depends on the model. In _resolve_bind_host in src/reachy_mini/daemon/app/main.py the daemon binds 0.0.0.0 when it runs as the wireless version and 127.0.0.1 otherwise, with the vendor's own comment explaining that the robot has to be reachable on the LAN. On a wireless unit, then, any host on the same network can install and run code on the robot without credentials.\n\n\n\nOne related change has already shipped but does not fix this. Version 1.8.2 replaced the wildcard CORS policy with an allow list of localhost and Tauri origins. That closes the browser drive-by route, where a web page the victim visits silently calls the endpoint in the background. It has no effect on this issue: CORS is enforced by browsers and governs whether script may read a response, while a direct HTTP request from another machine on the network involves no browser, no preflight and no CORS check at all.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Hobbyist robot daemon with unauthenticated API and Hugging Face integration, explicitly excluded.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75825",
+    "published": "2026-09-23 12:35:00",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "ZohoCorp ManageEngine OpManager versions 12.8.710 and below with the Application Manager Plugin enabled were vulnerable to an Authentication Bypass vulnerability.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "IT infrastructure monitoring software with authentication bypass, lacks core identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-50227",
+    "published": "2026-09-23 07:15:36",
+    "cvss": 8.6,
+    "epss": 0.00263,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated local attacker can connect to the MQTT broker over its localhost WebSocket endpoint in Acer NitroSense software (versions up to and including 5.2.62). This allows the attacker to invoke exposed ddsc RPC functions, including child_process.execSync(), resulting in arbitrary command execution in the application context.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer laptop utility software with no DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77248",
+    "published": "2026-09-22 18:49:57",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MCP Atlassian is a Model Context Protocol (MCP) server for Atlassian products (Confluence and Jira). Prior to 0.22.0, the streamable HTTP transport accepts requests without a user identity and falls back to operator credentials, while upload_attachment accepts an unrestricted file_path. An unauthenticated network caller can read files available to the MCP process, upload them to an attacker-selected Jira issue or Confluence page, and retrieve the contents. The advisory traces the vulnerable input and processing flow through streamable-http, UserTokenMiddleware, upload_attachment, file_path, and _get_fetcher, which identify the affected entry points, controls, and code paths. This issue is fixed in version 0.22.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Enterprise collaboration tool with identity fallback flaw, but lacks core DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-65114",
+    "published": "2026-09-22 14:10:31",
+    "cvss": 8.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NVIDIA Infrastructure Controller for Linux contains a vulnerability where an attacker could cause missing authentication for a critical function. A successful exploit of this vulnerability might lead to data tampering, denial of service, and information disclosure.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Hardware infrastructure controller with missing authentication, but lacks explicit DPI sector or core identity/access infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-65121",
+    "published": "2026-09-22 14:10:22",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NVIDIA Infrastructure Controller for Linux contains a vulnerability where an  attacker could cause an improper authentication issue. A successful exploit of this vulnerability might lead to escalation of privileges, information disclosure, and data tampering.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Hardware infrastructure controller with improper authentication, but lacks explicit DPI sector or core identity/access infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-48976",
+    "published": "2026-09-21 17:41:16",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "HomeBox is a home inventory and organization system. Prior to 0.26.0, NotifierRepository.Update in backend/internal/data/repo/repo_notifier.go updates a notifier through UpdateOneID(id) without requiring the record's user ID to match the authenticated user. An authenticated user who supplies another tenant's notifier UUID to PUT /v1/notifiers/{id} can read the returned stored url, which may contain plaintext Shoutrrr credentials for Slack, SMTP, Telegram, Pushover, or Discord, and can replace the URL to redirect the victim's notifications to an attacker-controlled webhook. This issue is fixed in version 0.26.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home inventory application with credential exposure, explicitly excluded as non-DPI hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94540",
+    "published": "2026-09-21 21:47:03",
+    "cvss": 7.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "DesktopSMS 1.11.0 by MrPear contains an unauthorized access vulnerability that allows local attackers to transmit SMS, retrieve SMS-derived content, and persist an attacker-selected paired identity by interacting with the application's local service without any pairing confirmation or user interaction. Attackers can exploit the unauthenticated local service through same-device loopback to perform privileged SMS operations using the victim application's permissions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer desktop SMS utility with unauthorized access, explicitly excluded as non-DPI hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-31377",
+    "published": "2026-09-23 09:04:56",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An Improper Authentication vulnerability in the Apache Doris Frontend (FE) meta service allows an unauthenticated remote attacker to access internal metadata service endpoints.\n\n\n\nThe affected endpoints relied on client-supplied node information for authentication without providing sufficient authentication of the requesting party. Under certain network configurations, a remote attacker may be able to bypass the intended access control and access internal FE metadata interfaces, potentially exposing sensitive cluster information.\n\n\n\nThis issue affects Apache Doris: from 2.0.0 through 2.0.*, from 2.1.0 through 2.1.*, from 3.0.0 through 3.0.*, from 3.1.0 through 3.1.*, from 4.0.0 before 4.0.8, and from 4.1.0 before 4.1.4. Versions 1.2.x and earlier are not affected by this header-trust vulnerability.\n\n\n\n\nUsers are recommended to upgrade to a fixed release (4.0.8 or 4.1.4), which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Enterprise data analytics platform with improper authentication, but lacks core DPI sector or identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93340",
+    "published": "2026-09-21 21:21:58",
+    "cvss": 7.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Gladys Assistant before 5.1.0 contains a password reset link poisoning vulnerability that allows unauthenticated remote attackers to obtain valid password reset tokens for any account by exploiting the client-supplied origin parameter in the forgot_password endpoint without server-side validation. Attackers can send a crafted request specifying an attacker-controlled origin, causing the victim to receive a poisoned reset link that discloses the session token to the attacker, enabling full account takeover including administrator accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer smart home platform (Gladys Assistant) with password reset poisoning, excluded by base/overlay consumer software rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-95271",
+    "published": "2026-09-22 12:00:10",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been found in dgtlmoon changedetection.io up to 0.60.7. The impacted element is the function check_authentication of the file changedetectionio/flask_app.py of the component Authentication Hook. Such manipulation leads to improper authentication. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche web monitoring utility (changedetection.io) with improper authentication, lacks DPI-relevant identity/access infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75973",
+    "published": "2026-09-23 11:14:07",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper Authentication vulnerability in Apache Tomcat. When Jakarta Authentication was configured with SimpleAuthConfigProvider as the default provider and multiple web application used that provider, the realm for the first web application to authenticate a request would be used for all web applications.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.25, from 10.1.0-M1 through 10.1.59, from 9.0.0.M4 through 9.0.121.\n\n\n\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: from 8.5.0 through 8.5.100. Other unsupported versions may also be affected.\n\n\n\n\nUsers are recommended to upgrade to version 11.0.26, 10.1.60, 9.0.122, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "General-purpose web server (Apache Tomcat) with realm confusion in Jakarta Authentication, lacks specific DPI identity/access infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61687",
+    "published": "2026-09-21 15:45:27",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Hatchet is a platform for orchestrating background tasks, AI agents, and durable workflows at scale. Prior to 0.91.1, ValidateOAuthState clears the oauth_state_ session value to an empty string after a successful OAuth callback and later accepts an empty state parameter as equal, allowing an unauthenticated attacker to bind a victim's Hatchet session to an attacker-controlled OAuth identity. Exploitation requires the victim to have completed an OAuth flow in the current session and the deployment to enable auth.google.enabled, auth.github.enabled, or the Slack integration. This issue is fixed in version 0.91.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Workflow orchestration platform (Hatchet) with OAuth state validation flaw, lacks DPI-relevant identity/access infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94455",
+    "published": "2026-09-22 16:17:00",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An HTTP endpoint intended for provisioning enterprise and reseller organisations is reachable without any session. The authentication middleware is bound only to an explicit list of controllers, and the enterprise controller is not on that list, so no authentication runs for these routes.\n\nThe endpoint's only check is that the request body carries a token bearing a valid signature from the instance secret. It does not check what that token was issued for. Login tokens are signed with the same secret and carry no purpose, audience or expiry claim, so an ordinary user's own session token satisfies the check.\n\nPresented with such a token, the endpoint creates a new organisation holding the highest subscription tier, flagged as lifetime and with a channel allowance far above any sold plan, creates an organisation-owner account alongside it, and returns the new organisation's API key in the response body. That key is immediately valid against the public API.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Generic enterprise SaaS provisioning endpoint with missing authentication, lacks DPI-relevant identity/access infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  }
+]
