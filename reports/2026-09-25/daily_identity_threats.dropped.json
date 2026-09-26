@@ -1,0 +1,226 @@
+[
+  {
+    "id": "CVE-2026-78308",
+    "published": "2026-09-24 08:35:58",
+    "cvss": 9.8,
+    "epss": 0.00346,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper Authentication vulnerability in DIAEnergie allows Authentication Bypass.\n\nThis issue affects DIAEnergie: before 1.11.00.022.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Auth bypass in DIAEnergie (energy/utility software) lacks identity/access infrastructure nexus and hits industrial/energy exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92609",
+    "published": "2026-09-25 07:44:10",
+    "cvss": 9.8,
+    "epss": 0.00195,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Session fixation in HTTP management authentication allows remote attackers to gain unauthorized access to an authenticated management session via reuse of a session identifier retained across successful authentication.\n\nThis issue affects Apache Qpid Broker-J: through 10.1.0.\n\nUsers are recommended to upgrade to version 10.1.1, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Session fixation in Apache Qpid message broker management interface lacks identity/access infrastructure role and DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-13249",
+    "published": "2026-09-24 18:24:36",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated Remote Code Execution via Arbitrary File Upload vulnerability in the web management interface in Honeywell PD45 Industrial Printer version F10.19.010040, allows upload of attacker controlled files without requiring authentication.\n\n\nAn attacker could potentially exploit this vulnerability, leading to the execution of malicious files and commands. Honeywell also recommends updating to the most recent firmware version, Honeywell PD45 Industrial Printer firmware F10.22.030745, which includes a fix for this vulnerability.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "RCE in Honeywell industrial printer hits explicit industrial/IoT exclusion and lacks identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61742",
+    "published": "2026-09-24 17:30:11",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "DBHub is a database MCP server for Postgres, MySQL, SQL Server, Oracle, MariaDB, SQLite. Versions prior to 0.22.5 expose an unauthenticated HTTP MCP endpoint when started with the documented HTTP transport mode, for example `--transport http --port 8080`. The HTTP server attempts to protect browser-origin access by checking whether the `Origin` hostname equals the `Host` hostname, then reflecting the validated `Origin` into `Access-Control-Allow-Origin`. This does not stop DNS rebinding. After an attacker-controlled hostname rebinds to a victim-accessible DBHub HTTP server, both `Origin` and `Host` can contain the attacker-controlled hostname, so DBHub accepts the request and dispatches MCP tool calls. As a result, a malicious website can deterministically invoke DBHub MCP tools from the victim's browser without prompt injection or model involvement. With the default demo configuration this can read and write the demo SQLite database; with a real configured database, the same primitive can read, enumerate, and potentially write database contents depending on DBHub's configured tool permissions and database credentials. Version 0.22.5 fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Unauthenticated MCP endpoint in database tool lacks identity/access infrastructure role and DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81455",
+    "published": "2026-09-24 18:43:51",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell ThinOS 10, versions prior to SecurityAddon_2605.10.2766_T10, contain a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Missing authentication in Dell ThinOS thin client OS lacks identity/access infrastructure role and DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81473",
+    "published": "2026-09-24 18:53:18",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell Rugged Control Center (RCC), versions prior to 5.2.206, contain an Improper Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in Dell rugged device management software lacks identity/access infrastructure role and DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-56737",
+    "published": "2026-09-24 14:59:35",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "phpMyFAQ is an open source FAQ web application. Versions 3.2.0 through 4.1.5 contain an authentication bypass in its public two-factor authentication verification flow: an unauthenticated attacker can submit an account’s numeric user ID and a valid or brute-forced six-digit TOTP code without first authenticating with the account password, allowing takeover of any 2FA-enabled account, including administrator accounts. Version 4.1.6 is patched by binding TOTP verification to a session established after successful password authentication and limiting failed TOTP attempts. No official workaround is documented; affected installations should upgrade to 4.1.6 or later.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Auth bypass in phpMyFAQ FAQ web application hits generic web app exclusion and lacks identity/access infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94613",
+    "published": "2026-09-24 16:13:17",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "authentik is an open-source identity provider. Prior to 2026.2.7, 2026.5.7, and 2026.8.2, an unauthenticated attacker can submit a malformed SAML message to an authentik deployment using SAML in either the identity-provider or SAML source role. The message can stop the worker handling /application/saml/* or /source/saml/*, causing the requests assigned to that worker to fail. Worker process termination and automatic restart do not destroy database-backed sessions, but continued malicious messages can cause a sustained share of legitimate traffic to fail. Other protocol implementations are not affected. This issue is fixed in versions 2026.2.7, 2026.5.7, and 2026.8.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Denial-of-service via malformed SAML messages in authentik IdP lacks direct authentication or access-control impact per overlay exclusions.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97231",
+    "published": "2026-09-24 16:45:15",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was found in volotat Anagnorisis up to 0.3.1/0.4.0. Affected is an unknown function of the file app.py of the component Socket.IO Connect Interface. The manipulation results in missing authentication. It is possible to launch the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no clear identity or DPI nexus and vague technical details.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88956",
+    "published": "2026-09-24 19:59:50",
+    "cvss": 7.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Botslab G980H dash camera firmware contains an authentication vulnerability in the root account exposed through the device's UART interface. The affected account does not require a password before granting access to a privileged system interface, and the interface also displays the device's WiFi password during startup. An unauthenticated attacker with physical access to the device could connect to the UART interface, obtain root privileges, and recover the WiFi password.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT dash camera firmware with physical UART access requirement falls under consumer/IoT exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84403",
+    "published": "2026-09-24 20:07:30",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Botslab G980H dash camera firmware does not require authenticated pairing or client binding before permitting access to Bluetooth Low Energy communications and GATT characteristics. An unauthenticated attacker within Bluetooth range could intercept or directly retrieve sensitive device information, including device identifiers, firmware information, and protected WiFi credentials.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT dash camera BLE credential exposure falls under consumer/IoT exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92680",
+    "published": "2026-09-24 15:01:10",
+    "cvss": 6.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Araxis Merge for Windows version 2011.4074 through 2026.0 stores user-configured credentials for remote servers in the Windows registry and does not apply sufficient cryptographic protection. An authenticated, non-administrative attacker could retrieve and unencrypt all credentials the target user has stored in Merge.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Credential storage weakness in niche desktop merge utility lacks identity infrastructure or DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97864",
+    "published": "2026-09-25 13:00:15",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been found in GibbonEdu Gibbon up to 30.0.01. The affected element is the function makeBlock of the file modules/Planner/units_add_blockAjax.php of the component Unit Planner. The manipulation of the argument gibbonUnitBlockID/mode leads to missing authentication. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 31.0.00 is sufficient to fix this issue. The identifier of the patch is 07e719368eae8dfb4e22e19424ceab6074164ebc. It is recommended to upgrade the affected component.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Education/LMS platform (GibbonEdu) missing authentication flaw - excluded by base Digital Identity sector rules for education and LMS software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-56792",
+    "published": "2026-09-24 18:56:52",
+    "cvss": 4.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell Rugged Control Center (RCC), versions prior to 5.2.206, contain an Improper Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial/IIoT device management software (Dell RCC) local privilege escalation - excluded by base Digital Identity sector rules for industrial and SCADA contexts.",
+      "fail_open": false
+    }
+  }
+]

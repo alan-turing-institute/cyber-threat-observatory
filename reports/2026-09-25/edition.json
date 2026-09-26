@@ -1,0 +1,411 @@
+{
+  "alert_id": "51f58eb3",
+  "report_date": "2026-09-25",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-09-26 10:46:02",
+  "items": [
+    {
+      "item_id": "CVE-2026-93641",
+      "item_type": "cve",
+      "title": "CVE-2026-93641 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93641",
+      "source": "WAVE",
+      "published": "2026-09-25",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "General infrastructure flaw in Zimbra webmail widely deployed across public-sector and enterprise environments, enabling session hijacking and email interception.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 3,
+        "dpi_fit": 0.3
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-93641.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-c4669ac6ee",
+      "item_type": "campaign",
+      "title": "Inside an AI‑enabled device code phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+      "source": "ketch",
+      "published": "2026-09-25",
+      "category": "threats",
+      "pir": [
+        "1.j.3"
+      ],
+      "excerpt": "This campaign represents a major escalation in threat actor sophistication, shifting from static scripts to fully AI-driven infrastructure. Attackers automate the entire device code phishing workflow, enabling rapid credential harvesting and token theft at scale. Defenders should monitor for anomalous device code sign-in flows and implement conditional access policies to block suspicious authentications.",
+      "signals": {
+        "dpi_fit": 9.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-c49df31280",
+      "item_type": "campaign",
+      "title": "Microsoft 365: Block Device Code Flow Against GhostCode",
+      "url": "https://windowsforum.com/news/microsoft-365-block-device-code-flow-against-ghostcode.444973?amp=1",
+      "source": "ketch",
+      "published": "2026-09-25",
+      "category": "threats",
+      "pir": [
+        "1.j.3"
+      ],
+      "excerpt": "Guidance on mitigating GhostCode’s abuse of the Microsoft 365 device code authentication flow. The article outlines registry and Intune configuration steps to restrict device code sign-ins, reducing exposure to automated credential theft campaigns. Essential reading for administrators managing hybrid or cloud-only environments.",
+      "signals": {
+        "dpi_fit": 8.8
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-d2a66369ab",
+      "item_type": "campaign",
+      "title": "EvilTokens made phishing-as-a-service look easy. Then it got taken down",
+      "url": "https://securityaffairs.com/199593/cyber-crime/eviltokens-made-phishing-as-a-service-look-easy-then-it-got-taken-down.html",
+      "source": "ketch",
+      "published": "2026-09-25",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "EvilTokens streamlined credential harvesting by offering an AI-powered phishing-as-a-service platform that auto-generated convincing login pages and managed token theft. Following its takedown, threat actors are migrating to decentralized alternatives. Defenders must update detection rules for emerging PaaS variants and enforce multi-factor authentication.",
+      "signals": {
+        "dpi_fit": 8.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-72ab8ea30a",
+      "item_type": "campaign",
+      "title": "Microsoft Warns of EvilTokens AI Phishing Service Hijacking Thousands of Accounts",
+      "url": "https://gbhackers.com/eviltokens-ai-phishing/amp",
+      "source": "ketch",
+      "published": "2026-09-25",
+      "category": "threats",
+      "pir": [
+        "1.k"
+      ],
+      "excerpt": "Microsoft’s advisory details how EvilTokens leveraged generative AI to bypass traditional phishing filters, resulting in widespread account compromises. The report highlights indicators of compromise, affected tenants, and recommended remediation steps including token revocation and conditional access hardening.",
+      "signals": {
+        "dpi_fit": 8.2
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-4dbd15a698",
+      "item_type": "campaign",
+      "title": "AI-Enabled Device Code Phishing Campaign Abuses Device Code Sign-In Flow",
+      "url": "https://captechgroup.com/threat-intelligence-center/ai-enabled-device-code-phishing-campaign-abuses-de-81a334",
+      "source": "ketch",
+      "published": "2026-09-25",
+      "category": "threats",
+      "pir": [
+        "1.j.3"
+      ],
+      "excerpt": "An analysis of how attackers exploit the device code sign-in flow using AI to automate victim targeting and credential capture. The article provides technical breakdowns of the attack chain, detection queries for Sentinel, and mitigation strategies for enterprise identity administrators.",
+      "signals": {
+        "dpi_fit": 8.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-76f379c32a",
+      "item_type": "campaign",
+      "title": "Midnight Blizzard-Linked Actor GTG-20006 Automated Device Code Phishing With AI",
+      "url": "https://aegisai.ai/blog/anthropic-midnight-blizzard-ai-device-code-phishing",
+      "source": "ketch",
+      "published": "2026-09-25",
+      "category": "threats",
+      "pir": [
+        "1.j.3"
+      ],
+      "excerpt": "Threat intelligence linking the GTG-20006 actor to automated device code phishing campaigns powered by AI. The report maps infrastructure overlaps with Midnight Blizzard, details TTPs, and offers IOCs for SOC teams to hunt for similar activity in their environments.",
+      "signals": {
+        "dpi_fit": 7.8
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-7ad2c82441",
+      "item_type": "campaign",
+      "title": "PhantomEnigma: How a Malware Crew Turned Brazilian Government Sites Into Trusted Malware Hubs",
+      "url": "https://securebulletin.com/phantomenigma-how-a-malware-crew-turned-brazilian-government-sites-into-trusted-malware-hubs",
+      "source": "ketch",
+      "published": "2026-09-25",
+      "category": "threats",
+      "pir": [
+        "1.g"
+      ],
+      "excerpt": "PhantomEnigma compromised official Brazilian government websites to host phishing pages and malware payloads, leveraging institutional trust to bypass user skepticism. The article details the supply chain compromise, persistence mechanisms, and defensive measures for web application firewalls and DNS filtering.",
+      "signals": {
+        "dpi_fit": 7.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-0e727ca6d4",
+      "item_type": "campaign",
+      "title": "Laundry Bear Zero-Click Zimbra Phishing Campaign Warned by CISA",
+      "url": "https://tempmail.ninja/blog/laundry-bear-zimbra-phishing",
+      "source": "ketch",
+      "published": "2026-09-25",
+      "category": "threats",
+      "pir": [
+        "1.l"
+      ],
+      "excerpt": "CISA alerts on Laundry Bear’s exploitation of a zero-click vulnerability in Zimbra collaboration servers to deliver phishing payloads. The campaign targets Western government and critical infrastructure sectors. Defenders are urged to patch Zimbra instances immediately and monitor for anomalous email routing or credential exfiltration.",
+      "signals": {
+        "dpi_fit": 7.2
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94606",
+      "item_type": "cve",
+      "title": "CVE-2026-94606",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94606",
+      "source": "vulners/duckdb",
+      "published": "2026-09-24",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "authentik is an open-source identity provider. Prior to 2026.2.7, 2026.5.7, and 2026.8.2, authentik email authenticator enrollment during an authentication or enrollment flow accepts a recipient address supplied in the setup request instead of using the address already established by the flow. An actor who knows a target user's password can substitute an attacker-controlled address, receive the one-time code, and finish enrolling the factor as the target. The target must not have enrolled the em",
+      "signals": {
+        "cvss": 8.9,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94609",
+      "item_type": "cve",
+      "title": "CVE-2026-94609",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94609",
+      "source": "vulners/duckdb",
+      "published": "2026-09-24",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "authentik is an open-source identity provider. Prior to 2026.2.7, 2026.5.7, and 2026.8.2, an account with delegated permission to manage a group, group membership, or a user can grant superuser status to an account or assign an existing role to a group without holding the permissions that gate those privileges. Group hierarchy checks do not consistently account for superuser status inherited from ancestor groups, and role assignment to a group lacks the required authorization check. Only deploym",
+      "signals": {
+        "cvss": 8.8,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-85056",
+      "item_type": "cve",
+      "title": "CVE-2026-85056",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85056",
+      "source": "vulners/duckdb",
+      "published": "2026-09-24",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "ZITADEL is an open source identity management platform. From 4.0.0 until 4.16.1, ZITADEL Login V2 creates a browser session after password verification and can reuse that session for a later authentication request without verifying a user's enrolled TOTP, OTP, or U2F second factor. When the MFA step is abandoned and login starts again, session-validity checks require MFA only when the organization enables Force MFA or Force MFA for local users only, so a voluntarily enrolled factor can be skippe",
+      "signals": {
+        "cvss": 8.2,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94611",
+      "item_type": "cve",
+      "title": "CVE-2026-94611",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94611",
+      "source": "vulners/duckdb",
+      "published": "2026-09-24",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "authentik is an open-source identity provider. Prior to 2026.2.7, 2026.5.7, and 2026.8.2, authentik API serializers return stored credentials when an account has view permission on an affected configuration, even when that account is not authorized to change the configuration or read its secrets. Affected configurations include one-time code delivery by mail or SMS, outbound provisioning targets, device trust integrations, identity sources, the Kubernetes outpost integration, applications using ",
+      "signals": {
+        "cvss": 8.1,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-57178",
+      "item_type": "cve",
+      "title": "CVE-2026-57178",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57178",
+      "source": "vulners/duckdb",
+      "published": "2026-09-24",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Python Social Auth is a social authentication/registration mechanism. Prior to version 5.0.0, the `vk-app` backend accepted VK application callback data without verifying the callback signature when the `auth_key` parameter was omitted. Applications using this backend could treat unsigned attacker-controlled data as a verified VK identity. An attacker could choose callback fields such as `viewer_id`, `access_token`, `api_id`, and `api_result`, potentially allowing authentication as an arbitrary ",
+      "signals": {
+        "cvss": 7.4,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-94612",
+      "item_type": "cve",
+      "title": "CVE-2026-94612",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94612",
+      "source": "vulners/duckdb",
+      "published": "2026-09-24",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "authentik is an open-source identity provider. Prior to 2026.2.7, 2026.5.7, and 2026.8.2, an authentik SAML Source verifies an assertion's signature and validity period but does not ensure that the identity provider issued the assertion for that Source or in response to a login request from that Source. The SAML Source also does not record already accepted assertions, allowing replay. An unauthenticated actor who possesses such a valid assertion can use an assertion intended for another service ",
+      "signals": {
+        "cvss": 7.4,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-97846",
+      "item_type": "cve",
+      "title": "CVE-2026-97846",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97846",
+      "source": "vulners/duckdb",
+      "published": "2026-09-25",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Keycloak provides a feature called mTLS holder-of-key binding which ensures that a token can only be used by the client that originally requested it by binding it to their digital certificate. A flaw was discovered where the new Standard Token Exchange V2 feature does not check for this certificate. This allows an attacker with stolen client credentials to obtain a standard, unrestricted token that bypasses these security protections.",
+      "signals": {
+        "cvss": 6.8,
+        "epss": 0.00135,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-96448",
+      "item_type": "cve",
+      "title": "CVE-2026-96448",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96448",
+      "source": "vulners/duckdb",
+      "published": "2026-09-25",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the Fine-Grained Admin Permissions (FGAP v2) feature of Keycloak, an identity and access management solution. The issue occurs when the system checks if a delegated administrator has permission to assign a specific role to a user. Because the check does not look inside composite roles to see what other permissions they contain, an administrator with limited rights can assign a role that secretly includes full administrative control. This allows the attacker to gain complete m",
+      "signals": {
+        "cvss": 6.6,
+        "epss": 0.00237,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-97177",
+      "item_type": "cve",
+      "title": "CVE-2026-97177",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97177",
+      "source": "vulners/duckdb",
+      "published": "2026-09-24",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the user update mechanism of the Keycloak Admin REST API. When Fine-Grained Admin Permissions are enabled, the system fails to check for specific password reset authorizations during a general user profile update. This allows a delegated administrator, who should be restricted from resetting passwords, to change a user's credentials and take over their account.",
+      "signals": {
+        "cvss": 6.6,
+        "epss": 0.00237,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-57175",
+      "item_type": "cve",
+      "title": "CVE-2026-57175",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57175",
+      "source": "vulners/duckdb",
+      "published": "2026-09-24",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Python Social Auth is a social authentication/registration mechanism. Prior to version 5.0.0, the SAML backend accepted SAML responses on the Assertion Consumer Service endpoint without verifying that they matched a previously issued `AuthnRequest`. Applications using SAML account association could allow an attacker with a valid account on a trusted IdP to link the attacker's SAML identity to a logged-in victim's local account. The attacker could then authenticate through SAML and gain access to",
+      "signals": {
+        "cvss": 6.4,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-97311",
+      "item_type": "cve",
+      "title": "CVE-2026-97311",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97311",
+      "source": "vulners/duckdb",
+      "published": "2026-09-24",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "A flaw was found in the Admin REST API of Keycloak, an identity and access management solution. The endpoints used to retrieve groups associated with a specific role do not properly check for individual group visibility permissions. This allows a delegated administrator with basic search privileges to view detailed information about all groups assigned to a role, bypassing intended security restrictions that should limit their view to specific groups.",
+      "signals": {
+        "cvss": 4.3,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 1,
+      "daily_phishing_campaigns": 8,
+      "daily_identity_threats": 11
+    }
+  }
+}

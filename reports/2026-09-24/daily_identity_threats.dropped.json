@@ -1,0 +1,274 @@
+[
+  {
+    "id": "CVE-2026-78308",
+    "published": "2026-09-24 08:35:58",
+    "cvss": 9.8,
+    "epss": 0.00346,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper Authentication vulnerability in DIAEnergie allows Authentication Bypass.\n\nThis issue affects DIAEnergie: before 1.11.00.022.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic authentication bypass in utility management software with no identity/access infrastructure nexus or DPI sector cues.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92609",
+    "published": "2026-09-25 07:44:10",
+    "cvss": 9.8,
+    "epss": 0.00195,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Session fixation in HTTP management authentication allows remote attackers to gain unauthorized access to an authenticated management session via reuse of a session identifier retained across successful authentication.\n\nThis issue affects Apache Qpid Broker-J: through 10.1.0.\n\nUsers are recommended to upgrade to version 10.1.1, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Session fixation in a messaging broker's management interface lacks the identity/access infrastructure nexus required for DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-13249",
+    "published": "2026-09-24 18:24:36",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated Remote Code Execution via Arbitrary File Upload vulnerability in the web management interface in Honeywell PD45 Industrial Printer version F10.19.010040, allows upload of attacker controlled files without requiring authentication.\n\n\nAn attacker could potentially exploit this vulnerability, leading to the execution of malicious files and commands. Honeywell also recommends updating to the most recent firmware version, Honeywell PD45 Industrial Printer firmware F10.22.030745, which includes a fix for this vulnerability.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial printer firmware vulnerability explicitly excluded by DPI sector rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61742",
+    "published": "2026-09-24 17:30:11",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "DBHub is a database MCP server for Postgres, MySQL, SQL Server, Oracle, MariaDB, SQLite. Versions prior to 0.22.5 expose an unauthenticated HTTP MCP endpoint when started with the documented HTTP transport mode, for example `--transport http --port 8080`. The HTTP server attempts to protect browser-origin access by checking whether the `Origin` hostname equals the `Host` hostname, then reflecting the validated `Origin` into `Access-Control-Allow-Origin`. This does not stop DNS rebinding. After an attacker-controlled hostname rebinds to a victim-accessible DBHub HTTP server, both `Origin` and `Host` can contain the attacker-controlled hostname, so DBHub accepts the request and dispatches MCP tool calls. As a result, a malicious website can deterministically invoke DBHub MCP tools from the victim's browser without prompt injection or model involvement. With the default demo configuration this can read and write the demo SQLite database; with a real configured database, the same primitive can read, enumerate, and potentially write database contents depending on DBHub's configured tool permissions and database credentials. Version 0.22.5 fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Unauthenticated database MCP server endpoint with DNS rebinding lacks identity/access infrastructure nexus or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82843",
+    "published": "2026-09-23 06:00:16",
+    "cvss": 9.0,
+    "epss": 0.0018,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WP OAuth Server ( Login with WordPress ) WordPress plugin before 6.4.0 does not bind the OpenID Connect identity assertion it issues to the authorization grant being exchanged, returning instead the assertion belonging to whichever user authenticated most recently, which allows users with the Subscriber role and above to obtain a validly signed identity assertion for another user, including an administrator, and authenticate as them at any application that uses the site for single sign-on.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability explicitly excluded by DPI sector and overlay rules despite OIDC/SSO mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-96455",
+    "published": "2026-09-23 10:01:15",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Reachy Mini daemon exposes an HTTP API for managing the robot. Its app installation endpoint, POST /apps/install in src/reachy_mini/daemon/app/routers/apps.py, has no authentication. The handler's only dependency is Depends(get_app_manager), which just hands back the manager object from application state, so nothing in the chain ever checks a credential.\n\n\n\nThe endpoint takes an AppInfo body naming a Hugging Face Space. The daemon downloads that Space and installs it as a Python package through install_package in src/reachy_mini/apps/sources/local_common_venv.py, using uv or pip. Installing a Python package runs the package's own build and setup code, so whoever chooses the Space chooses what code the robot runs. Anyone can publish a public Hugging Face Space, so this is not a meaningful restriction on the attacker.\n\n\n\nHow far this reaches depends on the model. In _resolve_bind_host in src/reachy_mini/daemon/app/main.py the daemon binds 0.0.0.0 when it runs as the wireless version and 127.0.0.1 otherwise, with the vendor's own comment explaining that the robot has to be reachable on the LAN. On a wireless unit, then, any host on the same network can install and run code on the robot without credentials.\n\n\n\nOne related change has already shipped but does not fix this. Version 1.8.2 replaced the wildcard CORS policy with an allow list of localhost and Tauri origins. That closes the browser drive-by route, where a web page the victim visits silently calls the endpoint in the background. It has no effect on this issue: CORS is enforced by browsers and governs whether script may read a response, while a direct HTTP request from another machine on the network involves no browser, no preflight and no CORS check at all.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Robot daemon and Hugging Face tooling vulnerability explicitly excluded by DPI sector rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75825",
+    "published": "2026-09-23 12:35:00",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "ZohoCorp ManageEngine OpManager versions 12.8.710 and below with the Application Manager Plugin enabled were vulnerable to an Authentication Bypass vulnerability.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in IT network monitoring software lacks identity/access infrastructure nexus or explicit DPI sector targeting.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-50227",
+    "published": "2026-09-23 07:15:36",
+    "cvss": 8.6,
+    "epss": 0.00263,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated local attacker can connect to the MQTT broker over its localhost WebSocket endpoint in Acer NitroSense software (versions up to and including 5.2.62). This allows the attacker to invoke exposed ddsc RPC functions, including child_process.execSync(), resulting in arbitrary command execution in the application context.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer laptop utility software vulnerability explicitly excluded by DPI sector rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81455",
+    "published": "2026-09-24 18:43:51",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell ThinOS 10, versions prior to SecurityAddon_2605.10.2766_T10, contain a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Dell ThinOS is a VDI client operating system, not core identity/access infrastructure, and lacks a DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81473",
+    "published": "2026-09-24 18:53:18",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell Rugged Control Center (RCC), versions prior to 5.2.206, contain an Improper Authorization vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in rugged device management software lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-56737",
+    "published": "2026-09-24 14:59:35",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "phpMyFAQ is an open source FAQ web application. Versions 3.2.0 through 4.1.5 contain an authentication bypass in its public two-factor authentication verification flow: an unauthenticated attacker can submit an account’s numeric user ID and a valid or brute-forced six-digit TOTP code without first authenticating with the account password, allowing takeover of any 2FA-enabled account, including administrator accounts. Version 4.1.6 is patched by binding TOTP verification to a session established after successful password authentication and limiting failed TOTP attempts. No official workaround is documented; affected installations should upgrade to 4.1.6 or later.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "phpMyFAQ is a niche FAQ web application, not core identity/access infrastructure, and falls under the consumer/hobbyist software exclusion despite the auth bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94613",
+    "published": "2026-09-24 16:13:17",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "authentik is an open-source identity provider. Prior to 2026.2.7, 2026.5.7, and 2026.8.2, an unauthenticated attacker can submit a malformed SAML message to an authentik deployment using SAML in either the identity-provider or SAML source role. The message can stop the worker handling /application/saml/* or /source/saml/*, causing the requests assigned to that worker to fail. Worker process termination and automatic restart do not destroy database-backed sessions, but continued malicious messages can cause a sustained share of legitimate traffic to fail. Other protocol implementations are not affected. This issue is fixed in versions 2026.2.7, 2026.5.7, and 2026.8.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pure DoS via malformed SAML messages in authentik lacks authentication or access-control impact, triggering the overlay hard exclude for non-auth vulnerabilities.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-31377",
+    "published": "2026-09-23 09:04:56",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An Improper Authentication vulnerability in the Apache Doris Frontend (FE) meta service allows an unauthenticated remote attacker to access internal metadata service endpoints.\n\n\n\nThe affected endpoints relied on client-supplied node information for authentication without providing sufficient authentication of the requesting party. Under certain network configurations, a remote attacker may be able to bypass the intended access control and access internal FE metadata interfaces, potentially exposing sensitive cluster information.\n\n\n\nThis issue affects Apache Doris: from 2.0.0 through 2.0.*, from 2.1.0 through 2.1.*, from 3.0.0 through 3.0.*, from 3.1.0 through 3.1.*, from 4.0.0 before 4.0.8, and from 4.1.0 before 4.1.4. Versions 1.2.x and earlier are not affected by this header-trust vulnerability.\n\n\n\n\nUsers are recommended to upgrade to a fixed release (4.0.8 or 4.1.4), which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Improper authentication in the Apache Doris data warehouse lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97231",
+    "published": "2026-09-24 16:45:15",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was found in volotat Anagnorisis up to 0.3.1/0.4.0. Affected is an unknown function of the file app.py of the component Socket.IO Connect Interface. The manipulation results in missing authentication. It is possible to launch the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Vague boilerplate description with an unknown function and no clear identity/access infrastructure nexus triggers the overlay hard exclude for insufficient detail.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75973",
+    "published": "2026-09-23 11:14:07",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper Authentication vulnerability in Apache Tomcat. When Jakarta Authentication was configured with SimpleAuthConfigProvider as the default provider and multiple web application used that provider, the realm for the first web application to authenticate a request would be used for all web applications.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.25, from 10.1.0-M1 through 10.1.59, from 9.0.0.M4 through 9.0.121.\n\n\n\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: from 8.5.0 through 8.5.100. Other unsupported versions may also be affected.\n\n\n\n\nUsers are recommended to upgrade to version 11.0.26, 10.1.60, 9.0.122, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Authentication realm leakage in Apache Tomcat web server, not an IdP or DPI identity/access infrastructure product.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88956",
+    "published": "2026-09-24 19:59:50",
+    "cvss": 7.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Botslab G980H dash camera firmware contains an authentication vulnerability in the root account exposed through the device's UART interface. The affected account does not require a password before granting access to a privileged system interface, and the interface also displays the device's WiFi password during startup. An unauthenticated attacker with physical access to the device could connect to the UART interface, obtain root privileges, and recover the WiFi password.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT dash camera firmware with physical UART auth bypass, explicitly excluded as consumer/IoT hardware.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84403",
+    "published": "2026-09-24 20:07:30",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Botslab G980H dash camera firmware does not require authenticated pairing or client binding before permitting access to Bluetooth Low Energy communications and GATT characteristics. An unauthenticated attacker within Bluetooth range could intercept or directly retrieve sensitive device information, including device identifiers, firmware information, and protected WiFi credentials.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT dash camera BLE authentication/info-leak flaw, explicitly excluded as consumer/IoT hardware.",
+      "fail_open": false
+    }
+  }
+]
