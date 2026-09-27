@@ -1,0 +1,66 @@
+[
+  {
+    "id": "CVE-2026-85984",
+    "published": "2026-09-26 17:28:59",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The miniOrange OTP Login, Verification and SMS Notifications plugin for WordPress is vulnerable to Authentication Bypass via the mo_wp_login_intent parameter in all versions up to, and including, 5.5.5. This is due to a missing password-intent guard in the skip_pass_fallback-enabled configuration branch of the mo_by_pass_login() function, which treats administrator role membership alone as sufficient authentication whenever the unauthenticated, unverified POST parameter mo_wp_login_intent is submitted with the value otp, causing mo_get_user() to skip wp_authenticate_username_password() and resolve a WP_User purely from a username lookup. This makes it possible for unauthenticated attackers to log in as any existing administrator account by supplying only a known username and an empty password alongside mo_wp_login_intent=otp, with no password or OTP verification required. Exploitation is conditional on a site administrator having simultaneously enabled the following plugin options: WP Login OTP, Login with Only OTP, Allow Users to Login with Username and Password, and Admin OTP Bypass.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite authentication bypass CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-100672",
+    "published": "2026-09-26 13:23:36",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Comments plugin (getgrav/grav-plugin-comments) for Grav CMS through version 1.2.10 registers an admin handler that returns comment data as JSON without any authentication check. The handler branches on isAdmin(), which only indicates that the admin service is registered on the current route rather than that the visitor is authenticated, and it echoes the JSON and calls exit() during the plugins stage, before the classic Admin plugin would render its login screen. On a site using the classic Admin plugin with Comments enabled (the default), an unauthenticated remote attacker can request /admin/comments/page:<n> (e.g. page:0.001) and retrieve every comment from the last 7 days, including each commenter's email address and the absolute server filesystem path of the data file. Sites running the Grav 2.0 Admin Next stack (admin2 + api) are not affected via this path. The issue is fixed in 1.2.11, which requires an authenticated user with admin.comments or admin.super and removes the absolute filePath from the response.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "CMS plugin information leak via missing authentication check lacks identity/access infrastructure nexus and falls under pure info-leak exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-100569",
+    "published": "2026-09-26 02:18:58",
+    "cvss": 6.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenClaw is an npm-distributed application. In versions >= 2026.4.25 and < 2026.8.1, the workspace environment-variable filter did not block variables ending in `_ENDPOINT`, so an untrusted workspace `.env` file could set AZURE_SPEECH_ENDPOINT. Azure Speech preferred that value over the configured region, so when a synthesis or voice-list request was made, the attacker-selected endpoint received the operator's Azure Speech key in the request header, allowing the key to be reused against the operator's Azure Speech resource. Exploitation requires an operator to start OpenClaw in attacker-controlled workspace content with Azure Speech configured with a key and region and no trusted endpoint override set. The issue is fixed in 2026.8.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Developer tool environment variable filter bypass causing API key leakage lacks authentication or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97864",
+    "published": "2026-09-25 13:00:15",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been found in GibbonEdu Gibbon up to 30.0.01. The affected element is the function makeBlock of the file modules/Planner/units_add_blockAjax.php of the component Unit Planner. The manipulation of the argument gibbonUnitBlockID/mode leads to missing authentication. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 31.0.00 is sufficient to fix this issue. The identifier of the patch is 07e719368eae8dfb4e22e19424ceab6074164ebc. It is recommended to upgrade the affected component.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Education LMS software (GibbonEdu) excluded by base Digital Identity sector rules; missing authentication in non-DPI context.",
+      "fail_open": false
+    }
+  }
+]
