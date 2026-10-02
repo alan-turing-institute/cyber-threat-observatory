@@ -1,0 +1,428 @@
+{
+  "alert_id": "7c62095a",
+  "report_date": "2026-10-01",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-10-02 10:29:09",
+  "items": [
+    {
+      "item_id": "CVE-2026-76143",
+      "item_type": "cve",
+      "title": "CVE-2026-76143 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76143",
+      "source": "WAVE",
+      "published": "2026-10-01",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "TIER 2 MFA bypass in Genian SSL PNS/ZTNA gateways directly compromises public-facing authentication and identity verification infrastructure.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 5,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-76143.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-103264",
+      "item_type": "cve",
+      "title": "CVE-2026-103264 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103264",
+      "source": "WAVE",
+      "published": "2026-10-01",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Authentication bypass in Fleet MDM exposes device management APIs in Government, Finance, and Healthcare sectors, risking unauthorized device control and data access.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-103264.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-73975",
+      "item_type": "cve",
+      "title": "CVE-2026-73975 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73975",
+      "source": "WAVE",
+      "published": "2026-10-01",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Impacts national and institutional research data repositories (Government/Public Research Infrastructure), threatening metadata integrity and public data trust in critical scientific infrastructure.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-73975.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-76142",
+      "item_type": "cve",
+      "title": "CVE-2026-76142 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76142",
+      "source": "WAVE",
+      "published": "2026-10-01",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Critical zero-trust policy server flaw undermines government and critical infrastructure access controls, though external exploitation requires explicit proxy misconfiguration.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-76142.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-76146",
+      "item_type": "cve",
+      "title": "CVE-2026-76146 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76146",
+      "source": "WAVE",
+      "published": "2026-10-01",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "TIER 2 RCE in Genian SSL PNS VPN/ZTNA gateway, a foundational perimeter access control explicitly tied to government and critical infrastructure deployments.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-76146.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-3113bc46da",
+      "item_type": "campaign",
+      "title": "Inside an AI‑enabled device code phishing campaign | Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+      "source": "ketch",
+      "published": "2026-10-01",
+      "category": "threats",
+      "pir": [
+        "1.j"
+      ],
+      "excerpt": "This campaign combines AI-driven reconnaissance with device code phishing to bypass multi-factor authentication. Attackers generate context-aware prompts that direct users to enter authorization codes on attacker-controlled endpoints. Once validated, threat actors gain persistent access to cloud identities. Defenders should monitor OAuth consent logs, restrict device code flows to approved applications, and implement real-time alerting for suspicious authorization requests.",
+      "signals": {
+        "dpi_fit": 96.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-89ad4a2d52",
+      "item_type": "campaign",
+      "title": "Unmasking EvilTokens: Getting to the root of device code phishing | Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/",
+      "source": "ketch",
+      "published": "2026-10-01",
+      "category": "threats",
+      "pir": [
+        "1.j"
+      ],
+      "excerpt": "EvilTokens represents a sophisticated evolution of device code phishing, enabling attackers to silently harvest valid OAuth tokens without user interaction. By exploiting legitimate authentication flows, these tokens grant persistent access to Microsoft 365 and Azure resources. Infrastructure defenders must audit token issuance patterns, enforce short-lived token policies, and deploy identity threat detection tools to identify anomalous consent grants and token reuse.",
+      "signals": {
+        "dpi_fit": 95.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-3f29b0d1f1",
+      "item_type": "campaign",
+      "title": "AI-Generated Lures Behind Microsoft Cloud Account Takeovers",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-genai-passkey-phishing-msft-20260914-csa-s",
+      "source": "ketch",
+      "published": "2026-10-01",
+      "category": "threats",
+      "pir": [
+        "1.h"
+      ],
+      "excerpt": "Generative AI is being weaponized to create highly personalized phishing lures targeting Microsoft 365 administrators and high-privilege users. These AI-crafted messages bypass traditional spam filters by mimicking internal communication styles and referencing real project contexts. Infrastructure teams must prioritize behavioral analytics, deploy AI-aware email security gateways, and enforce strict least-privilege access to mitigate account takeover risks.",
+      "signals": {
+        "dpi_fit": 94.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-76f379c32a",
+      "item_type": "campaign",
+      "title": "Midnight Blizzard-Linked Actor GTG-20006 Automated Device Code Phishing With AI",
+      "url": "https://aegisai.ai/blog/anthropic-midnight-blizzard-ai-device-code-phishing",
+      "source": "ketch",
+      "published": "2026-10-01",
+      "category": "threats",
+      "pir": [
+        "1.j"
+      ],
+      "excerpt": "A state-linked threat group has automated device code phishing operations using AI to scale targeting and adapt lures in real time. The campaign focuses on government and critical infrastructure accounts, leveraging stolen credentials and AI-generated prompts to bypass MFA. Defenders should implement automated threat hunting for OAuth anomalies, restrict device code authentication to managed devices, and integrate AI detection models into identity protection workflows.",
+      "signals": {
+        "dpi_fit": 93.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-506f3932de",
+      "item_type": "campaign",
+      "title": "Abuse of Cloud-Native Infrastructure in Modern Phishing Campaigns - CYFIRMA",
+      "url": "https://cyfirma.com/research/abuse-of-cloud-native-infrastructure-in-modern-phishing-campaigns",
+      "source": "ketch",
+      "published": "2026-10-01",
+      "category": "threats",
+      "pir": [
+        "1.g"
+      ],
+      "excerpt": "Threat actors increasingly leverage cloud-native services like serverless functions, object storage, and CDN networks to host phishing infrastructure. This approach bypasses traditional IP-based blocklists and complicates takedown efforts. Infrastructure defenders must monitor cloud provider abuse reports, implement DNS sinkholing for dynamic domains, and deploy cloud workload protection platforms to detect anomalous resource provisioning tied to credential harvesting campaigns.",
+      "signals": {
+        "dpi_fit": 92.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-0e727ca6d4",
+      "item_type": "campaign",
+      "title": "Laundry Bear Zero-Click Zimbra Phishing Campaign Warned by CISA",
+      "url": "https://tempmail.ninja/blog/laundry-bear-zimbra-phishing",
+      "source": "ketch",
+      "published": "2026-10-01",
+      "category": "threats",
+      "pir": [
+        "1.i"
+      ],
+      "excerpt": "CISA has issued an alert regarding a zero-click phishing campaign exploiting a critical vulnerability in Zimbra collaboration suites. The attack requires no user interaction, automatically delivering malicious payloads that establish persistent backdoors. Infrastructure teams must immediately patch Zimbra instances, deploy network segmentation for email servers, and monitor for unauthorized outbound connections indicative of command-and-control activity.",
+      "signals": {
+        "dpi_fit": 91.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-5bc794d1d5",
+      "item_type": "campaign",
+      "title": "Access granted: phishing with device code authorization for account takeover | Proofpoint US",
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/access-granted-phishing-device-code-authorization-account-takeover",
+      "source": "ketch",
+      "published": "2026-10-01",
+      "category": "threats",
+      "pir": [
+        "1.j"
+      ],
+      "excerpt": "This analysis details how threat actors abuse device code authorization flows to harvest valid access tokens and bypass traditional MFA controls. By directing users to enter codes on compromised endpoints, attackers gain seamless access to cloud environments. Defenders should enforce strict OAuth consent policies, monitor for high-frequency device code requests, and implement user verification steps for sensitive authorization flows.",
+      "signals": {
+        "dpi_fit": 90.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-863fc0510d",
+      "item_type": "campaign",
+      "title": "Passkey-themed social engineering leads to identity and cloud compromise",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/09/09/passkey-themed-social-engineering-leads-identity-cloud-compromise/",
+      "source": "ketch",
+      "published": "2026-10-01",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "Attackers are deploying sophisticated social engineering tactics that mimic passkey authentication prompts to trick users into granting unauthorized access. These campaigns exploit trust in modern passwordless protocols, leading to rapid identity compromise and lateral movement across cloud environments. Defenders should enforce conditional access policies, monitor for anomalous authentication requests, and educate users on verifying legitimate passkey challenges versus spoofed interfaces.",
+      "signals": {
+        "dpi_fit": 89.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-76504",
+      "item_type": "cve",
+      "title": "CVE-2026-76504",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504",
+      "source": "vulners/duckdb",
+      "published": "2026-09-30",
+      "category": "threats",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "A vulnerability in the API session-based authentication management of Cisco Catalyst SD-WAN Manager could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user.\r\n\r\nThis vulnerability is due to improper handling of URI encoding in an HTTP request, which allows the request to bypass an authentication rule that is intended to restrict access to a specific API endpoint. An attacker could exploit this vulnerability by sending a crafted HTTP request t",
+      "signals": {
+        "cvss": 9.8,
+        "epss": null,
+        "wild_exploited": true,
+        "dpi_fit": 0.7
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-102115",
+      "item_type": "cve",
+      "title": "CVE-2026-102115",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102115",
+      "source": "vulners/duckdb",
+      "published": "2026-09-30",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Kiteworks Core did not correctly validate a parameter submitted to the password reset workflow. An unauthenticated attacker who knew the email address of a user with a locally stored password could potentially reset that account's password without access to the emailed reset link and then authenticate as that user, including where the account holds administrative privileges.",
+      "signals": {
+        "cvss": 9.8,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-88920",
+      "item_type": "cve",
+      "title": "CVE-2026-88920",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88920",
+      "source": "vulners/duckdb",
+      "published": "2026-09-30",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "An authentication bypass in the DOM security processor in Apache WSS4J allows unauthenticated remote attackers to forge authenticated SOAP messages via a crafted unsigned SAML sender-vouches assertion containing an attacker-controlled key.\n\nUsers are recommended to upgrade to versions 4.0.2 or 3.0.6 or 2.4.4, which fix this issue.",
+      "signals": {
+        "cvss": 9.8,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-97274",
+      "item_type": "cve",
+      "title": "CVE-2026-97274",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97274",
+      "source": "vulners/duckdb",
+      "published": "2026-09-30",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Unauthenticated Bypass Vulnerability in OAuth Single Sign On – SSO (OAuth Client) <= 7.1.2 versions.",
+      "signals": {
+        "cvss": 9.8,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-102149",
+      "item_type": "cve",
+      "title": "CVE-2026-102149",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102149",
+      "source": "vulners/duckdb",
+      "published": "2026-09-30",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Kiteworks Email Protection Gateway did not sufficiently restrict which account a certificate could be assigned to. This could allow an attacker to associate a certificate with another user's account, affecting the confidentiality and integrity of that account's encrypted mail and, where certificate-based login is enabled, potentially permitting unauthorized access to the account.",
+      "signals": {
+        "cvss": 9.4,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-102106",
+      "item_type": "cve",
+      "title": "CVE-2026-102106",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102106",
+      "source": "vulners/duckdb",
+      "published": "2026-09-30",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Improper authentication in a Kiteworks Email Protection Gateway administrative service. An administrative service in Kiteworks Email Protection Gateway did not consistently enforce administrator authentication, so the required password check could be bypassed. An attacker who referenced a valid administrator account could potentially create, modify, or delete internal users and managed domains and change their security-feature configuration without authenticating; deleting a managed domain also ",
+      "signals": {
+        "cvss": 9.1,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-103651",
+      "item_type": "cve",
+      "title": "CVE-2026-103651",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103651",
+      "source": "vulners/duckdb",
+      "published": "2026-10-01",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "MISP contains a vulnerability in its one-time password (OTP) authentication flow that allows replay of a consumed HOTP (paper) token and rewinding of the token counter.\n\nThe HOTP verification logic compared the submitted token against a counter value that was cached in the user's session at the time the password was entered, rather than against the authoritative counter stored in the database. Because the session-cached counter is not updated after a token is successfully consumed, an attacker w",
+      "signals": {
+        "cvss": 7.6,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-102128",
+      "item_type": "cve",
+      "title": "CVE-2026-102128",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102128",
+      "source": "vulners/duckdb",
+      "published": "2026-09-30",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "An identity-verification weakness in Kiteworks Email Protection Gateway allowed the gateway to act on the Kiteworks platform on behalf of a user it had not authenticated, and to provision a platform account for an identity it did not already know. A remote, unauthenticated sender could potentially exploit this to obtain control of a platform account.",
+      "signals": {
+        "cvss": 7.5,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 5,
+      "daily_phishing_campaigns": 8,
+      "daily_identity_threats": 9
+    }
+  }
+}
