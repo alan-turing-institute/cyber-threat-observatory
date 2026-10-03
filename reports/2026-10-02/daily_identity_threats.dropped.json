@@ -1,0 +1,354 @@
+[
+  {
+    "id": "CVE-2024-58388",
+    "published": "2026-10-01 14:24:20",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Sharp (and Toshiba Tec rebranded) multifunction printers contain an unauthenticated local file inclusion vulnerability that allows remote attackers to read arbitrary files by manipulating the path parameter in the installed_emanual_down.html endpoint. Attackers can supply directory traversal sequences such as path=/manual/../../../<path> to access files outside the intended manual directory, including /etc/passwd, coredump files containing credentials, and system configuration files. Exploitation evidence was first observed by the Shadowserver Foundation on 2024-07-30.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Office multifunction printer IoT, explicitly excluded by base and overlay consumer/IoT rules despite wild exploitation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97637",
+    "published": "2026-10-02 07:39:29",
+    "cvss": 9.8,
+    "epss": 0.00636,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The JSON API Auth plugin for WordPress is vulnerable to Authentication Bypass via Cached Session Cookie Disclosure in all versions up to, and including, 3.1.2. The vulnerability exists because the required PI-Media/json-api parent plugin caches controller dispatch results in transients keyed solely by URI and query string, ignoring HTTP method and POST body; this causes the `generate_auth_cookie()` endpoint — which embeds a live WordPress `logged_in` cookie produced by `wp_generate_auth_cookie()` directly in its JSON response body — to serve that cached authenticated response to any subsequent unauthenticated GET request to the same URI. This makes it possible for unauthenticated attackers to retrieve a valid Administrator `logged_in` session cookie from the cached response and use it to fully authenticate as the site Administrator, including via the same plugin's `get_currentuserinfo` endpoint and any cookie-authenticated controller action. Exploitation requires the PI-Media/json-api parent plugin to be installed and active with the Auth controller enabled, and a legitimate Administrator must have POSTed to `/api/auth/generate_auth_cookie/` within the preceding 24-hour cache TTL; the nominal HTTPS enforcement gate present in `Auth.php` is trivially bypassed by supplying `insecure=cool` as a request parameter.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin, explicitly excluded by overlay and base Digital Identity exclusion list.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14378",
+    "published": "2026-10-02 03:38:46",
+    "cvss": 9.8,
+    "epss": 0.00479,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The DevKit Pro plugin for WordPress is vulnerable to Authentication Bypass Leading to Administrator Account Takeover in all versions up to, and including, 2.3.0 This is due to the `revert_switch` handler trusting the attacker-controlled `original_user_id` cookie as the privileged identity: `verify_nonce_and_capability()` incorrectly checks the `manage_options` capability on the user identified by the cookie rather than on the actual requester via `current_user_can()`, while the switch-back form and a valid session-bound nonce are emitted publicly via `wp_footer` to any visitor — including unauthenticated users — whenever that cookie is present. This makes it possible for unauthenticated attackers to set the `original_user_id` cookie to any administrator's user ID, collect the rendered nonce, and POST it back to the `revert_switch` handler, causing `wp_set_auth_cookie()` to be called with the administrator's ID and granting the attacker a full administrator-level authenticated session and complete site takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin, explicitly excluded by overlay and base Digital Identity exclusion list.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19660",
+    "published": "2026-10-02 04:27:11",
+    "cvss": 9.8,
+    "epss": 0.00397,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Divi Membership plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 2.3.0. The `process_paypal_callback` function, hooked to the `init` action, accepts a base64-encoded `paypal_param` GET parameter with no IPN validation, no cryptographic signature check, no ownership verification, and no nonce, allowing it to trust an entirely attacker-controlled user ID value that is passed directly to `wp_set_current_user()` and `wp_set_auth_cookie()`. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including administrators — by supplying an arbitrary user ID in the `paypal_param` GET parameter, resulting in full site takeover. The vulnerability is further compounded by the fact that the PayPal gateway class is instantiated unconditionally regardless of whether PayPal is enabled or configured, ensuring the vulnerable hook is always registered on every front-end request.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin, explicitly excluded by overlay and base Digital Identity exclusion list.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75957",
+    "published": "2026-10-01 07:40:23",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Ultimate Multisite – WordPress Multisite SaaS & WaaS Platform plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 2.15.0 via the `checkout_form` parameter of the `login_customer_after_checkout` function. This is due to the publicly accessible `wu_ajax_nopriv_wu_validate_form` AJAX handler accepting a freely obtainable checkout nonce, and the `checkout_form=wu-finish-checkout` parameter causing `get_validation_rules()` to discard all validation rules while `finish_checkout_form_fields()` returns an empty step list — forcing `is_last_step()` to return true and routing the request directly into full order processing — after which `maybe_create_customer()` resolves the attacker-supplied `email_address` to an existing WordPress user ID without any authentication or ownership verification, and `login_customer_after_checkout()` calls `wp_set_auth_cookie()` for that user ID via a passwordless code path. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including a Network Super Admin — simply by knowing their email address. Exploitation requires that the targeted user account has no pre-existing Ultimate Multisite customer record; accounts such as a Network Super Admin on a fresh Multisite install, or any administrator or editor added before Ultimate Multisite was configured, satisfy this condition and are therefore exploitable.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin, explicitly excluded by overlay and base Digital Identity exclusion list.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82825",
+    "published": "2026-10-01 04:57:57",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Hitachi Coding Software Suite contains a vulnerability related to Missing Authentication for Critical Function. This allows an unauthenticated attacker to invoke a critical API, potentially leading to unauthorized retrieval or alteration of sensitive information, or unauthorized manipulation.\n\n\nThis issue affects Hitachi Coding Software Suite: through 3.3.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Industrial development software suite with missing auth, lacks clear DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-13043",
+    "published": "2026-10-01 16:07:29",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A missing authentication vulnerability in the Kernel Memory Access Driver (PSKMAD) used by WatchGuard endpoint security products allows a local, authenticated attacker to bypass the driver's access-control handshake and issue arbitrary privileged commands to the driver, resulting in disclosure of kernel and process memory.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local kernel driver privilege escalation in endpoint security software, lacks DPI identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103651",
+    "published": "2026-10-01 07:34:02",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MISP contains a vulnerability in its one-time password (OTP) authentication flow that allows replay of a consumed HOTP (paper) token and rewinding of the token counter.\n\nThe HOTP verification logic compared the submitted token against a counter value that was cached in the user's session at the time the password was entered, rather than against the authoritative counter stored in the database. Because the session-cached counter is not updated after a token is successfully consumed, an attacker who holds a valid session (password already submitted) can reuse a previously burned HOTP token. The stale cached counter still matches the replayed token, granting a second successful authentication and effectively rewinding the counter state.\n\nPreconditions:\n\n- The target user has HOTP (paper token) second-factor authentication enabled.\n\n- The attacker possesses a valid session in which the password step has already been completed (the OTP step is pending).\n\n- The attacker has access to at least one HOTP token value (e.g., a paper token list).\n\nSecurity impact:\n\n- Bypass of the second authentication factor, allowing unauthorized access to a user's MISP account.\n\n- Corruption of the HOTP counter state, potentially invalidating subsequent legitimate tokens or enabling further replays.\n\nAffected versions: <2.5.48.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Threat intelligence platform rather than identity/access infrastructure, lacks clear DPI sector nexus despite OTP flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-80276",
+    "published": "2026-10-01 05:51:21",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Comelit Multi-User Gateway for VIP System (model 1456B) firmware versions 2.9.1 and 2.10.0 expose a network-accessible management interface that does not require authentication. Through this interface, sensitive device configuration data - including the Remote Configuration Password - can be read in cleartext by a remote, unauthenticated attacker.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Building intercom/IoT gateway with missing auth, explicitly excluded by base and overlay IoT/consumer rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-12423",
+    "published": "2026-10-01 16:21:52",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Foreman. The Red Hat Satellite /unattended/provision API endpoint is vulnerable to an authentication bypass due to a semantic logic flaw in host_verifier.rb. The application verifies the database state of a provisioning token rather than its actual presence in the incoming HTTP request. Because a host actively undergoing provisioning has an unexpired token in the database, the server's valid_host_token? method evaluates to true, granting access to the kickstart template even if the requester provides no token at all in the URL.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in IT provisioning software (Foreman/Satellite), lacks core identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-48005",
+    "published": "2026-10-01 16:01:35",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication checks in mod_auth_digest in Apache Software Foundation Apache HTTP Server before 2.4.69 on all platforms allows an unauthenticated remote client to cause a denial of service (forced re-authentication) via forged Authorization headers when Digest authentication is enabled with AuthDigestNcCheck .\n\nUsers are recommended to upgrade to version 2.4.69, which fixes this issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "DoS via forged auth headers in Apache mod_auth_digest, explicitly excluded as pure DoS without authentication bypass impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103256",
+    "published": "2026-10-01 10:42:00",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "n8n versions before 2.39.6 and 2.40.0 before 2.40.1 contain a credentials leak vulnerability in the Wekan and Baserow username-and-password credentials that sends unencrypted passwords to unvalidated hosts. Attackers with credential update permissions can modify the host field to receive account passwords at arbitrary hosts, bypassing domain validation controls.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Credential leak in workflow automation tool (n8n), lacks core identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103538",
+    "published": "2026-10-01 04:30:11",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security flaw has been discovered in ZongXR SuperMarket 1.0.0.0. Affected by this issue is the function OrderController.deleteOrder of the file order/src/main/java/com/supermarket/order/controller/OrderController.java of the component Order Deletion Endpoint. Performing a manipulation of the argument orderId results in missing authentication. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in niche retail application, no DPI or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81740",
+    "published": "2026-10-02 06:00:24",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Paytm Payment Gateway WordPress plugin before 2.8.9 does not verify that payment callbacks genuinely originate from the payment provider when its secret key has not been configured, which is its state immediately after activation, allowing unauthenticated attackers to change the status of arbitrary orders, including marking unpaid orders as paid and reducing stock.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability, explicitly excluded per consumer/hobbyist software rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92537",
+    "published": "2026-10-01 02:27:46",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Newsletter – Send awesome emails from WordPress plugin for WordPress is vulnerable to Insufficiently Protected Credentials in all versions up to, and including, 9.3.9 The plugin's public click-tracking REST route `/tnp/l/` is registered with `permission_callback => '__return_true'` and, upon receiving a valid keyed-MD5 signature, calls `set_user_cookie()`, which emits a `Set-Cookie: newsletter=<id>-<raw_token>` response header to the requester because the subscriber object loaded via `get_user()` lacks the `_trusted` property, causing `get_user_key()` to return the raw token column value instead of its MD5-masked variant. This makes it possible for unauthenticated attackers who obtain any signed click-tracking URL for a target subscriber to receive that subscriber's permanent raw authentication cookie, which they can then use to export the subscriber's full PII record via the JSON profile-export endpoint (`?na=px`), rewrite the subscriber's stored profile (`?na=ps`), and silently unsubscribe the subscriber via the RFC-8058 one-click endpoint (`?na=ocu`), none of which require a nonce, password, or email challenge. Signed tracking URLs are embedded in every external link of every newsletter delivered to a subscriber, carry no timestamp, and never expire until the site's relink key rotates, meaning that any party who observes such a URL — through a forwarded email, a shared inbox, a mail-gateway log, or Referer headers on the redirect target, which has no Referrer-Policy set — can replay it indefinitely to obtain the victim's credential.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability, explicitly excluded per consumer/hobbyist software rule despite credential exposure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104638",
+    "published": "2026-10-02 15:00:11",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security vulnerability has been detected in onetwothreeneth HospitalManagementSystem up to 9ef91ed6007314b6473110ed699dff76d158f61d. The impacted element is an unknown function of the file php/sessions.php. The manipulation of the argument ID leads to improper authentication. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Improper authentication in open-source hospital management demo, lacks enterprise identity infrastructure or clear DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-7174",
+    "published": "2026-10-01 09:54:10",
+    "cvss": 4.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CVE-2026-7174: Stored Cross-Site Scripting vulnerability in Entradium, by Crocantickets. Specifically, in the Name and Field parameters of the endpoint /tools/discount_wizard/discount_config during the process of creating discounts assigned to an event. This vulnerability allows JavaScript code to be injected into the affected parameters, which executes when an event’s discount list page is displayed. Successful exploitation of this vulnerability could allow a remote attacker to send a specially crafted URL to the victim and steal their session data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Stored XSS in event ticketing software, lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-7173",
+    "published": "2026-10-01 09:54:02",
+    "cvss": 4.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CVE-2026-7173: Cross-Site Scripting vulnerability in Entradium, by Crocantickets. Exploitation of this vulnerability could allow a remote attacker to send a specially crafted URL to the victim and steal their session data.\n\n  *  (Stored XSS) The City parameter in the endpoint /events/<event_name>/edit_general during the process of creating or editing events assigned to a promoter allows for the injection of JavaScript that will execute on the event’s public page.\n  *  (Reflected XSS) The Description parameter in the endpoint /events/<event_name>/edit-general when attempting to create or modify an event without filling in all required fields.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "XSS in event ticketing software, lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-7176",
+    "published": "2026-10-01 09:54:26",
+    "cvss": 4.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CVE-2026-7176: the Help text and Title parameters in the endpoint /events/<event_name>-<event_city>/custom_form/edit during the process of creating or modifying forms associated with ticket sales for an event, which allows for the injection of JavaScript that will execute on the public ticket purchase page for the event.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Stored XSS in event ticketing web application, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-7175",
+    "published": "2026-10-01 09:54:19",
+    "cvss": 4.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CVE-2026-7175: the Business Name parameter in the /promoters/edit endpoint of the My Profile section of a promoter’s profile, which allows the injection of JavaScript code that will execute on the promoter’s public page;",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Stored XSS in promoter profile management for ticketing software, lacks identity/access or DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103880",
+    "published": "2026-10-02 10:03:48",
+    "cvss": 0.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Asymmetric Resource Consumption vulnerability in Apache Directory LDAP API.\n\n\n\nStoring a password using the bcrypt algorithm with a high force like 30 in a LDAP server that supports this algorithm will cause the server CPU to  run for hours checking the credentials. A bounded cost should be enforced to avoid a server DOS.\n\n\n\nThis issue affects Apache Directory LDAP API: from 2.1.0 before 2.1.9.\n\n\n\nUsers are recommended to upgrade to version 2.1.9, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Resource exhaustion DoS in Apache Directory LDAP API, explicitly excluded as pure DoS with no authentication/access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102731",
+    "published": "2026-10-02 09:22:00",
+    "cvss": 0.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory allocation with excessive size value vulnerability in Apache Directory LDAP API.\n\n\n\nA malicious peer (or a MITM) can send a small BER-encoded response causing a large memory allocation before any data is received. This can lead to an OutOfMemoryError and denial of service.\n\n\n\nThe client JVM OOMs (OutOfMemoryError bypasses the DecoderException handlers) or pins the large allocation per connection while the attacker stalls.\n\n\n\nA handful of connections exhausts any heap. The same bytes from an unauthenticated pre-bind client hit any embedding server that did not set MAX_PDU_SIZE_ATTR.\n\n\n\nThis issue affects Apache Directory LDAP API: from 1.2.0 before 1.2.9.\n\n\n\nUsers are recommended to upgrade to version 1.2.9, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Memory allocation DoS in Apache Directory LDAP API, excluded per overlay hard rule for pure DoS without access-control impact.",
+      "fail_open": false
+    }
+  }
+]
