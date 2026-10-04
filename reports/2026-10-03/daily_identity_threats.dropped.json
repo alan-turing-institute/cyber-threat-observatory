@@ -1,0 +1,194 @@
+[
+  {
+    "id": "CVE-2026-97637",
+    "published": "2026-10-02 07:39:29",
+    "cvss": 9.8,
+    "epss": 0.00636,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The JSON API Auth plugin for WordPress is vulnerable to Authentication Bypass via Cached Session Cookie Disclosure in all versions up to, and including, 3.1.2. The vulnerability exists because the required PI-Media/json-api parent plugin caches controller dispatch results in transients keyed solely by URI and query string, ignoring HTTP method and POST body; this causes the `generate_auth_cookie()` endpoint — which embeds a live WordPress `logged_in` cookie produced by `wp_generate_auth_cookie()` directly in its JSON response body — to serve that cached authenticated response to any subsequent unauthenticated GET request to the same URI. This makes it possible for unauthenticated attackers to retrieve a valid Administrator `logged_in` session cookie from the cached response and use it to fully authenticate as the site Administrator, including via the same plugin's `get_currentuserinfo` endpoint and any cookie-authenticated controller action. Exploitation requires the PI-Media/json-api parent plugin to be installed and active with the Auth controller enabled, and a legitimate Administrator must have POSTed to `/api/auth/generate_auth_cookie/` within the preceding 24-hour cache TTL; the nominal HTTPS enforcement gate present in `Auth.php` is trivially bypassed by supplying `insecure=cool` as a request parameter.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19660",
+    "published": "2026-10-02 04:27:11",
+    "cvss": 9.8,
+    "epss": 0.00397,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Divi Membership plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 2.3.0. The `process_paypal_callback` function, hooked to the `init` action, accepts a base64-encoded `paypal_param` GET parameter with no IPN validation, no cryptographic signature check, no ownership verification, and no nonce, allowing it to trust an entirely attacker-controlled user ID value that is passed directly to `wp_set_current_user()` and `wp_set_auth_cookie()`. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including administrators — by supplying an arbitrary user ID in the `paypal_param` GET parameter, resulting in full site takeover. The vulnerability is further compounded by the fact that the PayPal gateway class is instantiated unconditionally regardless of whether PayPal is enabled or configured, ensuring the vulnerable hook is always registered on every front-end request.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14378",
+    "published": "2026-10-02 03:38:46",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The DevKit Pro plugin for WordPress is vulnerable to Authentication Bypass Leading to Administrator Account Takeover in all versions up to, and including, 2.3.0 This is due to the `revert_switch` handler trusting the attacker-controlled `original_user_id` cookie as the privileged identity: `verify_nonce_and_capability()` incorrectly checks the `manage_options` capability on the user identified by the cookie rather than on the actual requester via `current_user_can()`, while the switch-back form and a valid session-bound nonce are emitted publicly via `wp_footer` to any visitor — including unauthenticated users — whenever that cookie is present. This makes it possible for unauthenticated attackers to set the `original_user_id` cookie to any administrator's user ID, collect the rendered nonce, and POST it back to the `revert_switch` handler, causing `wp_set_auth_cookie()` to be called with the administrator's ID and granting the attacker a full administrator-level authenticated session and complete site takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105105",
+    "published": "2026-10-03 11:55:44",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CWE-306: Missing Authentication for Critical Function in the ait.core.server telemetry and command broker (ait-server) in NASA-AMMOS AIT-Core through 3.1.1 allows an unauthenticated remote attacker with network access to the ZeroMQ message bus to inject spacecraft command data, exfiltrate command and telemetry traffic, inject forged telemetry, or disrupt the command and telemetry bus. The ait-server ZeroMQ broker binds its XSUB and XPUB sockets to all network interfaces by default without authentication or transport security. An attacker able to reach TCP port 5559 can publish messages onto internal topics, including the __commands__ command topic. With the shipped default configuration, command messages are forwarded through command_stream and emitted on the command-uplink UDP path. An attacker able to reach TCP port 5560 can subscribe to command and telemetry traffic on the ground bus. AIT-Core 3.1.2 changes the default ZeroMQ bind addresses to loopback.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Space telemetry command broker lacking the required identity/access infrastructure nexus per overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71885",
+    "published": "2026-10-03 08:51:53",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Bouncy Castle for Java before 1.86, the Messaging Layer Security (MLS, RFC 9420) implementation did not bind an X.509 credential to a LeafNode's signature_key. LeafNode.verify() checked a leaf's signature against the signature_key carried in the leaf itself, while the credential's X.509 certificate chain was stored but never parsed or validated, so the end-entity certificate's public key was never required to match signature_key as RFC 9420 sec. 5.3 requires. A party could therefore present another party's certificate as its credential while signing the leaf, and the enclosing KeyPackage, with an unrelated key, and be accepted under that other party's identity through KeyPackage.verify() and the Group leaf-validation path. In a deployment that admits external commits without an independent credential-admission check, an unauthenticated attacker could be admitted under a victim's X.509 identity, evict the victim (resynchronization compares whole credentials rather than signing keys), derive the current epoch, decrypt subsequent group messages, and send messages accepted as the victim. TreeKEM.LeafNode now requires the end-entity certificate's subject public key, in the cipher suite's signature encoding, to equal signature_key for an X.509 credential and rejects the leaf otherwise, including an empty chain or a certificate whose key type does not match the cipher suite; certificate-chain and identity validation to a trust anchor remain the application's responsibility per RFC 9420 sec. 5.3.1. Deployments using only basic credentials are unaffected.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Cryptographic library flaw affecting MLS credential binding, but lacks direct identity/access infrastructure role per overlay precision bias.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91078",
+    "published": "2026-10-03 06:00:27",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The TillKit WordPress plugin before 1.0.5 does not require the hard-coded, publicly known PIN of the privileged POS account it creates on activation to be changed before use, and it authenticates its public POS login endpoint on that PIN alone with no identity or capability check, allowing unauthenticated attackers to obtain a privileged POS session and thereby read customer and site-user personal data and modify store data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103514",
+    "published": "2026-10-03 06:00:25",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WP 2FA  WordPress plugin before 4.1.0 does not invalidate a time-based one-time passcode once it has been used, allowing an attacker who knows an account's password and has observed a valid code within its validity window to replay it and bypass two-factor authentication, including on administrator accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105133",
+    "published": "2026-10-04 05:15:14",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Enterprise backup software with improper authentication, lacks identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-81740",
+    "published": "2026-10-02 06:00:24",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Paytm Payment Gateway WordPress plugin before 2.8.9 does not verify that payment callbacks genuinely originate from the payment provider when its secret key has not been configured, which is its state immediately after activation, allowing unauthenticated attackers to change the status of arbitrary orders, including marking unpaid orders as paid and reducing stock.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress payment plugin, explicitly excluded by consumer/hobbyist software rule despite payment context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97343",
+    "published": "2026-10-03 06:38:19",
+    "cvss": 4.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Burst Statistics – Simple WordPress Analytics (Google Analytics Alternative) plugin for WordPress is vulnerable to Improper Authentication leading to Account Persistence in all versions up to, and including, 3.7.1. This is due to the `maybe_load_shared_dashboard()` handler issuing a genuine WordPress session cookie for the `burst_statistics_viewer` account to any visitor presenting a valid share token via `wp_set_auth_cookie()`, while the plugin only blocks Application Passwords for the resulting `burst_viewer` role and does not restrict the core `/wp-json/wp/v2/users/me` password update endpoint or filter the `edit_user` capability for that account — leaving WordPress core's built-in rule that any authenticated user may update their own account fully in effect. This makes it possible for unauthenticated attackers to set an attacker-chosen password on the `burst_statistics_viewer` WordPress account, constituting a permanent takeover of that limited-privilege (`view_burst_statistics`) account that persists through share-token revocation, share-token expiration, and execution of the plugin's daily `cleanup_viewer_sessions()` routine. Exploitation requires that the attacker have obtained a valid `burst_share_token`, such as one that has been shared publicly or distributed to an untrusted party.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress analytics plugin falls under hard consumer/hobbyist software exclusion despite auth CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103880",
+    "published": "2026-10-02 10:03:48",
+    "cvss": 0.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Asymmetric Resource Consumption vulnerability in Apache Directory LDAP API.\n\n\n\nStoring a password using the bcrypt algorithm with a high force like 30 in a LDAP server that supports this algorithm will cause the server CPU to  run for hours checking the credentials. A bounded cost should be enforced to avoid a server DOS.\n\n\n\nThis issue affects Apache Directory LDAP API: from 2.1.0 before 2.1.9.\n\n\n\nUsers are recommended to upgrade to version 2.1.9, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pure DoS via bcrypt cost in LDAP API lacks authentication/access-control impact per hard exclude.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102731",
+    "published": "2026-10-02 09:22:00",
+    "cvss": 0.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory allocation with excessive size value vulnerability in Apache Directory LDAP API.\n\n\n\nA malicious peer (or a MITM) can send a small BER-encoded response causing a large memory allocation before any data is received. This can lead to an OutOfMemoryError and denial of service.\n\n\n\nThe client JVM OOMs (OutOfMemoryError bypasses the DecoderException handlers) or pins the large allocation per connection while the attacker stalls.\n\n\n\nA handful of connections exhausts any heap. The same bytes from an unauthenticated pre-bind client hit any embedding server that did not set MAX_PDU_SIZE_ATTR.\n\n\n\nThis issue affects Apache Directory LDAP API: from 1.2.0 before 1.2.9.\n\n\n\nUsers are recommended to upgrade to version 1.2.9, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pre-auth memory exhaustion DoS in LDAP API lacks authentication/access-control impact per hard exclude.",
+      "fail_open": false
+    }
+  }
+]
