@@ -1,0 +1,1467 @@
+[
+  {
+    "id": "CVE-2026-105170",
+    "identity": {
+      "title": "CVE-2026-105170 kishor-23 food-waste-management-system Admin Signup signup.php missing authentication",
+      "published": "2026-10-04 23:30:12",
+      "modified": "2026-10-04 23:30:12",
+      "description": "A weakness has been identified in kishor-23 food-waste-management-system 411989e3ecb82895e53dca7865f72145f03d7d93/b3a70b2c492dc9904de5be1ad9389bd79b87f82c. Affected is an unknown function of the file admin/signup.php of the component Admin Signup. This manipulation of the argument sign causes missing authentication. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/kishor-23/food-waste-management-system/issues/10"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-287",
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-287",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-287": "Improper Authentication",
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": "kishor-23",
+      "products": "food-waste-management-system",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/kishor-23/food-waste-management-system/issues/10",
+      "https://vuldb.com/submit/970276",
+      "https://github.com/kishor-23/food-waste-management-system/",
+      "https://vuldb.com/cve/CVE-2026-105170",
+      "https://vuldb.com/vuln/413402",
+      "https://vuldb.com/vuln/413402/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://www.cve.org/CVERecord?id=CVE-2026-105170",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105170"
+    },
+    "item_id": "CVE-2026-105170",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer/student project (food-waste-management-system) with no enterprise or DPI footprint, despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105169",
+    "identity": {
+      "title": "CVE-2026-105169 kishor-23 food-waste-management-system Take Order delivery.php sql injection",
+      "published": "2026-10-04 23:15:11",
+      "modified": "2026-10-04 23:15:11",
+      "description": "A security flaw has been discovered in kishor-23 food-waste-management-system 411989e3ecb82895e53dca7865f72145f03d7d93/b3a70b2c492dc9904de5be1ad9389bd79b87f82c. This impacts an unknown function of the file delivery/delivery.php of the component Take Order Handler. The manipulation of the argument order_id/delivery_person_id results in sql injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks. This product takes the approach of rolling releases to provide continious delivery. Therefore, version details for affected and updated releases are not available. The project was informed of the problem early through an issue report but has not responded yet."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/kishor-23/food-waste-management-system/issues/9"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "kishor-23",
+      "products": "food-waste-management-system",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/413401/cti",
+      "https://vuldb.com/vuln/413401",
+      "https://vuldb.com/cve/CVE-2026-105169",
+      "https://vuldb.com/submit/970275",
+      "https://github.com/kishor-23/food-waste-management-system/issues/9",
+      "https://github.com/kishor-23/food-waste-management-system/"
+    ],
+    "sources": {
+      "vulners_href": "https://www.cve.org/CVERecord?id=CVE-2026-105169",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105169"
+    },
+    "item_id": "CVE-2026-105169",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer/student project with no enterprise or DPI footprint, despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105167",
+    "identity": {
+      "title": "CVE-2026-105167",
+      "published": "2026-10-04 22:45:15",
+      "modified": "2026-10-04 23:16:59",
+      "description": "A vulnerability was determined in kishor-23 food-waste-management-system 411989e3ecb82895e53dca7865f72145f03d7d93/b3a70b2c492dc9904de5be1ad9389bd79b87f82c. The impacted element is an unknown function of the file admin/donate.php. Executing a manipulation of the argument location can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed. The project was informed of the problem early through an issue report but has not responded yet."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/kishor-23/food-waste-management-system/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "kishor-23",
+      "products": "food-waste-management-system",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/cve/CVE-2026-105167",
+      "https://vuldb.com/submit/970271",
+      "https://github.com/kishor-23/food-waste-management-system/",
+      "https://vuldb.com/vuln/413399/cti",
+      "https://github.com/kishor-23/food-waste-management-system/issues/7",
+      "https://vuldb.com/vuln/413399"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105167",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105167"
+    },
+    "item_id": "CVE-2026-105167",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer/student project with no enterprise or DPI footprint, despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105220",
+    "identity": {
+      "title": "CVE-2026-105220",
+      "published": "2026-10-04 22:31:46",
+      "modified": "2026-10-04 23:16:59",
+      "description": "Twine 2 desktop through 2.12.0 contains a cross-site scripting vulnerability in importStories() that executes markup from imported story files in the editor window. Attackers can craft a story file whose script calls the twineElectron openWithScratchFile IPC bridge to write and open a .bat file, executing code as the user."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/klembot/twinejs/commit/8e8a2bef5b1e20c58b99d22a2a4d8d867fb421cb"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "klembot",
+      "products": "twinejs",
+      "cpe_uris": "cpe:2.3:a:klembot:twinejs:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/klembot/twinejs/commit/8e8a2bef5b1e20c58b99d22a2a4d8d867fb421cb",
+      "https://github.com/klembot/twinejs/issues/1706",
+      "https://github.com/klembot/twinejs",
+      "https://www.vulncheck.com/advisories/twine-2-desktop-through-2.12.0-arbitrary-code-execution-via-imported-story-files",
+      "https://github.com/klembot/twinejs/blob/2.12.0/src/electron/main-process/scratch-file.ts#L57-L63",
+      "https://github.com/klembot/twinejs/blob/2.12.0/src/util/import.ts#L134-L136",
+      "https://github.com/klembot/twinejs/commit/3a9af28cabe9684730beb8b578132cad9bb5bc60"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105220",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105220"
+    },
+    "item_id": "CVE-2026-105220",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer creative desktop application (Twine) with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105166",
+    "identity": {
+      "title": "CVE-2026-105166",
+      "published": "2026-10-04 22:30:11",
+      "modified": "2026-10-04 23:16:59",
+      "description": "A vulnerability was found in kishor-23 food-waste-management-system 411989e3ecb82895e53dca7865f72145f03d7d93/b3a70b2c492dc9904de5be1ad9389bd79b87f82c. The affected element is the function insert of the file fooddonateform.php of the component Food Donation Form. Performing a manipulation of the argument image-choice results in sql injection. The attack is possible to be carried out remotely. The exploit has been made public and could be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The project was informed of the problem early through an issue report but has not responded yet."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/kishor-23/food-waste-management-system/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "kishor-23",
+      "products": "food-waste-management-system",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/413398",
+      "https://vuldb.com/cve/CVE-2026-105166",
+      "https://github.com/kishor-23/food-waste-management-system/",
+      "https://vuldb.com/vuln/413398/cti",
+      "https://vuldb.com/submit/970270",
+      "https://github.com/kishor-23/food-waste-management-system/issues/6"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105166",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105166"
+    },
+    "item_id": "CVE-2026-105166",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer/student project with no enterprise or DPI footprint, despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105086",
+    "identity": {
+      "title": "CVE-2026-105086",
+      "published": "2026-10-04 15:10:23",
+      "modified": "2026-10-04 16:16:30",
+      "description": "WWBN AVideo 12.4 through 29.2.0 contains a stored cross-site scripting vulnerability that allows authenticated uploaders to inject HTML by submitting doubly-encoded entities in video titles. Because safeString() strips tags before decoding entities and runs twice via setTitle() and save(), attackers can store markup that executes in trending, gallery, embed, and playlist pages."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-q62w-927x-vhhf"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: LOW, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "WWBN",
+      "products": "AVideo",
+      "cpe_uris": "cpe:2.3:a:wwbn:avideo:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "wwbn:avideo",
+          "vendor": "WWBN",
+          "product": "AVideo",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/wwbn-avideo-12.4-through-29.2.0-stored-xss-via-double-encoded-video-title",
+      "https://github.com/WWBN/AVideo/security/advisories/GHSA-q62w-927x-vhhf",
+      "https://github.com/WWBN/AVideo/commit/c4b6ca95a0ae3efa09919a98879870086cff150e"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105086",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105086"
+    },
+    "item_id": "CVE-2026-105086",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer video CMS with stored XSS, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105089",
+    "identity": {
+      "title": "CVE-2026-105089",
+      "published": "2026-10-04 15:04:53",
+      "modified": "2026-10-04 16:16:30",
+      "description": "WWBN AVideo through 29.2.0 contains a stored cross-site scripting vulnerability that allows users with upload permission to inject script by setting a malicious video trailer1 URL. The value is rendered unescaped in YouPHPFlix2 templates and channel playlists, letting attackers break out of onclick strings or iframe src attributes to execute JavaScript in victims' browsers."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/WWBN/AVideo/commit/c4adfde13d1f18e3a415722471efdcd8ab480035"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: LOW, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "WWBN",
+      "products": "AVideo",
+      "cpe_uris": "cpe:2.3:a:wwbn:avideo:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "wwbn:avideo",
+          "vendor": "WWBN",
+          "product": "AVideo",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/WWBN/AVideo/commit/c4adfde13d1f18e3a415722471efdcd8ab480035",
+      "https://github.com/WWBN/AVideo/security/advisories/GHSA-6wfr-c7fw-4xvw",
+      "https://www.vulncheck.com/advisories/wwbn-avideo-through-29.2.0-stored-xss-via-trailer1-in-youphpflix2-templates"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105089",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105089"
+    },
+    "item_id": "CVE-2026-105089",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer video CMS with stored XSS, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105149",
+    "identity": {
+      "title": "CVE-2026-105149",
+      "published": "2026-10-04 11:45:10",
+      "modified": "2026-10-04 13:16:55",
+      "description": "A security flaw has been discovered in mooSocial up to 3.2.4. This issue affects some unknown processing of the file /stores/all-products. Performing a manipulation of the argument rating results in sql injection. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://vuldb.com/vuln/413374/cti"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "n/a",
+      "products": "mooSocial",
+      "cpe_uris": "cpe:2.3:a:moosocial:moosocial:3.2.0:*:*:*:*:*:*:*,cpe:2.3:a:moosocial:moosocial:3.2.1:*:*:*:*:*:*:*,cpe:2.3:a:moosocial:moosocial:3.2.2:*:*:*:*:*:*:*,cpe:2.3:a:moosocial:moosocial:3.2.3:*:*:*:*:*:*:*,cpe:2.3:a:moosocial:moosocial:3.2.4:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/413374/cti",
+      "https://vuldb.com/vuln/413374",
+      "https://vuldb.com/cve/CVE-2026-105149",
+      "https://vuldb.com/submit/948272"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105149",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105149"
+    },
+    "item_id": "CVE-2026-105149",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Niche social networking CMS with SQL injection; no enterprise or DPI sector footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105148",
+    "identity": {
+      "title": "CVE-2026-105148",
+      "published": "2026-10-04 11:30:12",
+      "modified": "2026-10-04 13:16:55",
+      "description": "A vulnerability was identified in SciPhi-AI R2R up to 3.6.6. This vulnerability affects unknown code of the file py/shared/abstractions/llm.py of the component Retrieval Completion API Endpoint. Such manipulation of the argument generation_config.api_base leads to server-side request forgery. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://gist.github.com/DReazer/6c1fd0ef98900fbbfa383faa20f731f6"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cwe_primary": "CWE-918",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-918": "Server-Side Request Forgery (SSRF)"
+      }
+    },
+    "software": {
+      "vendors": "SciPhi-AI",
+      "products": "R2R",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/413373/cti",
+      "https://vuldb.com/cve/CVE-2026-105148",
+      "https://vuldb.com/vuln/413373",
+      "https://vuldb.com/submit/947817",
+      "https://gist.github.com/DReazer/6c1fd0ef98900fbbfa383faa20f731f6"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105148",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105148"
+    },
+    "item_id": "CVE-2026-105148",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Open-source LLM/RAG framework with SSRF; falls under developer tooling exclusion with no enterprise or DPI sector deployment context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105147",
+    "identity": {
+      "title": "CVE-2026-105147",
+      "published": "2026-10-04 11:15:12",
+      "modified": "2026-10-04 13:16:55",
+      "description": "A vulnerability was determined in SciPhi-AI R2R up to 3.6.6. This affects an unknown part of the component JWT Secret Handler. This manipulation of the argument DEFAULT_BCRYPT_SECRET_KEY/DEFAULT_NACL_SECRET_KEY causes hard-coded credentials. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://gist.github.com/DReazer/6bc4f88053ec35f8358395bcc0d1a0bb"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-259",
+        "CWE-798"
+      ],
+      "cwe_primary": "CWE-259",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-259": "Use of Hard-coded Password",
+        "CWE-798": "Use of Hard-coded Credentials"
+      }
+    },
+    "software": {
+      "vendors": "SciPhi-AI",
+      "products": "R2R",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/413372",
+      "https://vuldb.com/vuln/413372/cti",
+      "https://vuldb.com/submit/947748",
+      "https://vuldb.com/cve/CVE-2026-105147",
+      "https://gist.github.com/DReazer/6bc4f88053ec35f8358395bcc0d1a0bb"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105147",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105147"
+    },
+    "item_id": "CVE-2026-105147",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Hard-coded credentials in open-source LLM framework; no enterprise or DPI sector footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97307",
+    "identity": {
+      "title": "CVE-2026-97307",
+      "published": "2026-10-04 09:08:23",
+      "modified": "2026-10-04 11:16:33",
+      "description": "Insertion of Sensitive Information Into Sent Data vulnerability in StylemixThemes Cost Calculator Builder cost-calculator-builder allows Retrieve Embedded Sensitive Data.This issue affects Cost Calculator Builder: from n/a through 4.0.17."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/cost-calculator-builder/vulnerability/wordpress-cost-calculator-builder-plugin-4-0-17-sensitive-data-exposure-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-201"
+      ],
+      "cwe_primary": "CWE-201",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-201": "Insertion of Sensitive Information Into Sent Data"
+      }
+    },
+    "software": {
+      "vendors": "StylemixThemes",
+      "products": "Cost Calculator Builder",
+      "cpe_uris": "cpe:2.3:a:stylemixthemes:cost_calculator_builder:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/cost-calculator-builder/vulnerability/wordpress-cost-calculator-builder-plugin-4-0-17-sensitive-data-exposure-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-97307",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-97307"
+    },
+    "item_id": "CVE-2026-97307",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with information disclosure; consumer CMS add-on with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103344",
+    "identity": {
+      "title": "CVE-2026-103344",
+      "published": "2026-10-04 08:00:09",
+      "modified": "2026-10-04 09:16:38",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) unlimited-elements-for-elementor allows Reflected XSS.This issue affects Unlimited Elements For Elementor (Free Widgets, Addons, Templates): from n/a through 2.0.20."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00146,
+      "percentile": 0.03286,
+      "date": "2026-10-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-20-cross-site-scripting-xss-vulnerability-2?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Unlimited Elements",
+      "products": "Unlimited Elements For Elementor (Free Widgets, Addons, Templates)",
+      "cpe_uris": "cpe:2.3:a:unlimited-elements:unlimited_elements_for_elementor_\\(free_widgets\\,_addons\\,_templates\\):*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-20-cross-site-scripting-xss-vulnerability-2?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103344",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103344"
+    },
+    "item_id": "CVE-2026-103344",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress/Elementor plugin with reflected XSS; consumer CMS add-on with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103355",
+    "identity": {
+      "title": "CVE-2026-103355",
+      "published": "2026-10-04 08:00:09",
+      "modified": "2026-10-04 09:16:38",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) unlimited-elements-for-elementor allows Blind SQL Injection.This issue affects Unlimited Elements For Elementor (Free Widgets, Addons, Templates): from n/a through 2.0.20."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.0025,
+      "percentile": 0.14812,
+      "date": "2026-10-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-20-sql-injection-vulnerability-2?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unlimited Elements",
+      "products": "Unlimited Elements For Elementor (Free Widgets, Addons, Templates)",
+      "cpe_uris": "cpe:2.3:a:unlimited-elements:unlimited_elements_for_elementor_\\(free_widgets\\,_addons\\,_templates\\):*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-20-sql-injection-vulnerability-2?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103355",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103355"
+    },
+    "item_id": "CVE-2026-103355",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress/Elementor plugin with SQL injection; high CVSS does not override consumer CMS exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103062",
+    "identity": {
+      "title": "CVE-2026-103062",
+      "published": "2026-10-04 07:00:43",
+      "modified": "2026-10-04 09:16:37",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Cozmoslabs TranslatePress translatepress-multilingual allows Stored XSS.This issue affects TranslatePress: from n/a through 3.3.6."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00146,
+      "percentile": 0.03283,
+      "date": "2026-10-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/translatepress-multilingual/vulnerability/wordpress-translatepress-plugin-3-3-6-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Cozmoslabs",
+      "products": "TranslatePress",
+      "cpe_uris": "cpe:2.3:a:cozmoslabs:translatepress:*:*:*:*:*:wordpress:*:*",
+      "software_map": [
+        {
+          "key": "cozmoslabs:translatepress",
+          "vendor": "Cozmoslabs",
+          "product": "TranslatePress",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/translatepress-multilingual/vulnerability/wordpress-translatepress-plugin-3-3-6-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103062",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103062"
+    },
+    "item_id": "CVE-2026-103062",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with stored XSS; consumer CMS add-on with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97276",
+    "identity": {
+      "title": "CVE-2026-97276",
+      "published": "2026-10-04 07:00:43",
+      "modified": "2026-10-04 09:16:39",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in VeronaLabs WP Statistics wp-statistics allows Reflected XSS.This issue affects WP Statistics: from n/a through 14.16.14."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00146,
+      "percentile": 0.03283,
+      "date": "2026-10-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/wp-statistics/vulnerability/wordpress-wp-statistics-plugin-14-16-14-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "VeronaLabs",
+      "products": "WP Statistics",
+      "cpe_uris": "cpe:2.3:a:veronalabs:wp_statistics:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/wp-statistics/vulnerability/wordpress-wp-statistics-plugin-14-16-14-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-97276",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-97276"
+    },
+    "item_id": "CVE-2026-97276",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with reflected XSS; consumer CMS add-on with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103354",
+    "identity": {
+      "title": "CVE-2026-103354",
+      "published": "2026-10-04 07:00:42",
+      "modified": "2026-10-04 09:16:38",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Liquid Web / StellarWP Gutenberg Blocks by Kadence Blocks kadence-blocks allows Stored XSS.This issue affects Gutenberg Blocks by Kadence Blocks: from n/a through 3.7.11.1."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00146,
+      "percentile": 0.03287,
+      "date": "2026-10-04"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/kadence-blocks/vulnerability/wordpress-gutenberg-blocks-by-kadence-blocks-plugin-3-7-11-1-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Liquid Web / StellarWP",
+      "products": "Gutenberg Blocks by Kadence Blocks",
+      "cpe_uris": "cpe:2.3:a:liquidweb:stellarwp_gutenberg_blocks:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/kadence-blocks/vulnerability/wordpress-gutenberg-blocks-by-kadence-blocks-plugin-3-7-11-1-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103354",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103354"
+    },
+    "item_id": "CVE-2026-103354",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with stored XSS; consumer CMS add-on with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  }
+]

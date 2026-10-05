@@ -1,0 +1,114 @@
+[
+  {
+    "id": "CVE-2026-105105",
+    "published": "2026-10-03 11:55:44",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CWE-306: Missing Authentication for Critical Function in the ait.core.server telemetry and command broker (ait-server) in NASA-AMMOS AIT-Core through 3.1.1 allows an unauthenticated remote attacker with network access to the ZeroMQ message bus to inject spacecraft command data, exfiltrate command and telemetry traffic, inject forged telemetry, or disrupt the command and telemetry bus. The ait-server ZeroMQ broker binds its XSUB and XPUB sockets to all network interfaces by default without authentication or transport security. An attacker able to reach TCP port 5559 can publish messages onto internal topics, including the __commands__ command topic. With the shipped default configuration, command messages are forwarded through command_stream and emitted on the command-uplink UDP path. An attacker able to reach TCP port 5560 can subscribe to command and telemetry traffic on the ground bus. AIT-Core 3.1.2 changes the default ZeroMQ bind addresses to loopback.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication in NASA spacecraft telemetry broker, not identity/access infrastructure or DPI-relevant software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71885",
+    "published": "2026-10-03 08:51:53",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Bouncy Castle for Java before 1.86, the Messaging Layer Security (MLS, RFC 9420) implementation did not bind an X.509 credential to a LeafNode's signature_key. LeafNode.verify() checked a leaf's signature against the signature_key carried in the leaf itself, while the credential's X.509 certificate chain was stored but never parsed or validated, so the end-entity certificate's public key was never required to match signature_key as RFC 9420 sec. 5.3 requires. A party could therefore present another party's certificate as its credential while signing the leaf, and the enclosing KeyPackage, with an unrelated key, and be accepted under that other party's identity through KeyPackage.verify() and the Group leaf-validation path. In a deployment that admits external commits without an independent credential-admission check, an unauthenticated attacker could be admitted under a victim's X.509 identity, evict the victim (resynchronization compares whole credentials rather than signing keys), derive the current epoch, decrypt subsequent group messages, and send messages accepted as the victim. TreeKEM.LeafNode now requires the end-entity certificate's subject public key, in the cipher suite's signature encoding, to equal signature_key for an X.509 credential and rejects the leaf otherwise, including an empty chain or a certificate whose key type does not match the cipher suite; certificate-chain and identity validation to a trust anchor remain the application's responsibility per RFC 9420 sec. 5.3.1. Deployments using only basic credentials are unaffected.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Cryptographic library flaw in MLS implementation affecting credential binding, not an identity/access management system or DPI gateway.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91078",
+    "published": "2026-10-03 06:00:27",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The TillKit WordPress plugin before 1.0.5 does not require the hard-coded, publicly known PIN of the privileged POS account it creates on activation to be changed before use, and it authenticates its public POS login endpoint on that PIN alone with no identity or capability check, allowing unauthenticated attackers to obtain a privileged POS session and thereby read customer and site-user personal data and modify store data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability explicitly excluded by overlay hard rules for consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103514",
+    "published": "2026-10-03 06:00:25",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WP 2FA  WordPress plugin before 4.1.0 does not invalidate a time-based one-time passcode once it has been used, allowing an attacker who knows an account's password and has observed a valid code within its validity window to replay it and bypass two-factor authentication, including on administrator accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin excluded by base Digital Identity exclusion list despite MFA bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105133",
+    "published": "2026-10-04 05:15:14",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Improper authentication in backup software (AhsayCBS) lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105170",
+    "published": "2026-10-04 23:30:12",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in kishor-23 food-waste-management-system 411989e3ecb82895e53dca7865f72145f03d7d93/b3a70b2c492dc9904de5be1ad9389bd79b87f82c. Affected is an unknown function of the file admin/signup.php of the component Admin Signup. This manipulation of the argument sign causes missing authentication. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a niche food-waste management system lacks any DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97343",
+    "published": "2026-10-03 06:38:19",
+    "cvss": 4.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Burst Statistics – Simple WordPress Analytics (Google Analytics Alternative) plugin for WordPress is vulnerable to Improper Authentication leading to Account Persistence in all versions up to, and including, 3.7.1. This is due to the `maybe_load_shared_dashboard()` handler issuing a genuine WordPress session cookie for the `burst_statistics_viewer` account to any visitor presenting a valid share token via `wp_set_auth_cookie()`, while the plugin only blocks Application Passwords for the resulting `burst_viewer` role and does not restrict the core `/wp-json/wp/v2/users/me` password update endpoint or filter the `edit_user` capability for that account — leaving WordPress core's built-in rule that any authenticated user may update their own account fully in effect. This makes it possible for unauthenticated attackers to set an attacker-chosen password on the `burst_statistics_viewer` WordPress account, constituting a permanent takeover of that limited-privilege (`view_burst_statistics`) account that persists through share-token revocation, share-token expiration, and execution of the plugin's daily `cleanup_viewer_sessions()` routine. Exploitation requires that the attacker have obtained a valid `burst_share_token`, such as one that has been shared publicly or distributed to an untrusted party.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress analytics plugin vulnerability, explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  }
+]
