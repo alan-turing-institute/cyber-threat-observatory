@@ -1,0 +1,242 @@
+[
+  {
+    "id": "CVE-2026-105639",
+    "published": "2026-10-05 18:10:35",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Plane is an open-source project management tool. Prior to 1.4.0, Plane's signup flow creates a logged-in User row for any submitted email without an out-of-band ownership check, while User.email is unique=True. The authenticated user can call GET /api/users/me/workspaces/invitations/, which returns each WorkspaceMemberInvite whose email matches request.user.email. WorkSpaceMemberInviteSerializer uses fields = \"all\", exposing the token that protects the invitation join endpoint. An unauthenticated attacker who knows a target's email can register an account using that address, enumerate pending invitations, and accept an invitation as the target, joining a workspace at the invited role. The term pre-auth describes the attacker's initial state: the attacker has no credential before signup, while the enumeration and join requests use the session created by that signup. This issue is fixed in 1.4.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Account takeover in a generic open-source project management tool (Plane) with no identity infrastructure or public-sector DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94293",
+    "published": "2026-10-06 06:38:04",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated remote attacker can modify Asset Administration Shell submodel data via PATCH requests and can read all data exposed by the GET endpoints.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated data modification in Asset Administration Shell, an industrial IoT/IIoT standard explicitly excluded from DPI scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105763",
+    "published": "2026-10-05 23:05:56",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Twenty is an open-source CRM (customer relationship management) platform. From 1.20.10 until 2.7.0, the /metadata GraphQL connectedAccounts query returned connectionParameters from ConnectedAccountDTO for every connected account in a workspace, including plaintext IMAP, SMTP, and CalDAV passwords, because the field was not hidden and the lookup did not enforce the calling user's identity or account visibility. A normal workspace member could obtain other members' external-service credentials and use them to access mail or calendars and potentially reset third-party accounts. Google and Microsoft OAuth-only workspaces were not affected. This issue is fixed in version 2.7.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Credential exposure in Twenty, an open-source CRM platform, which lacks a core identity infrastructure or public-sector DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-39764",
+    "published": "2026-10-06 08:34:28",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Unauthenticated SQL Injection in Radius Booking — Booking Calendar for Appointments &amp; Services <= 1.0.19 versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated SQL injection in a WordPress booking plugin, explicitly excluded as consumer/hobbyist software with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105640",
+    "published": "2026-10-05 18:11:35",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Plane is an open-source project management tool. Prior to 1.4.0, Plane trusts email addresses returned by Gitea OAuth and by self-managed GitLab OAuth deployments where email confirmation is disabled, without verifying that the provider authenticated ownership of the address. An attacker can set an OAuth identity's unverified provider email to a victim's address, which Plane matches directly to the victim's existing local account. The attacker can then log in to the victim's Plane account without knowing the victim's password. GitHub, GitLab.com, and Google are not affected because those providers return verified email addresses. This issue is fixed in 1.4.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "OAuth email verification bypass in Plane, a generic project management tool, lacking identity infrastructure or public-sector DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-79820",
+    "published": "2026-10-05 14:47:04",
+    "cvss": 9.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A remote user validation failure vulnerability exists in HPE Integrated Lights-Out (iLO) 7 firmware.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "User validation failure in HPE iLO server management firmware, which falls outside identity/access infrastructure and DPI sector scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105786",
+    "published": "2026-10-05 23:18:27",
+    "cvss": 8.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. Prior to 3.7.13, packages/server/src/models/ApplicationModel.ts accepts a caller-chosen application authorization identifier, applications/:id/confirm binds that identifier to a logged-in user through a generic consent page, and the public packages/server/src/routes/api/application_auth.ts endpoint passes it to ApplicationModel.createAppPassword without authenticating or binding the redeemer. An attacker can cause a victim to approve the attacker's identifier, redeem a durable application ID and password, and exchange the credential for a victim session with full read and write access to synchronized data. This vulnerability is fixed in 3.7.13.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer note-taking application with no public-sector or DPI identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86671",
+    "published": "2026-10-05 16:21:57",
+    "cvss": 8.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Eclipse Che versions 7.29.0 and later, the GET `/api/scm/resolve` and `POST /api/factory/resolver` endpoints pass an attacker-controlled URL to `URLFetcher.fetch()`, which calls `new URL(url).openConnection()` with no scheme or host allow-list and returns the response body to the caller. Any authenticated Che user can read arbitrary local files via the file:// scheme (including the pod's Kubernetes service-account token at `file:///var/run/secrets/kubernetes.io/serviceaccount/token`), reach internal HTTP services and cloud instance metadata endpoints (169.254.169.254), and have their stored SCM personal access token attached as an `Authorization` header to a host of their choosing. The same credential-forwarding behavior also fires when a victim opens a workspace from a malicious devfile whose `parent.uri` points to an attacker-controlled server, enabling exfiltration of the victim's SCM PAT without direct API access. No fix is available.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Developer IDE platform SSRF and credential forwarding with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105704",
+    "published": "2026-10-06 04:15:13",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in SourceCodester Drug Recommendation System 1.0. This affects an unknown function of the component Auth Guard. Such manipulation of the argument user_id leads to improper authentication. The attack can be executed remotely. The exploit is publicly available and might be used.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Academic hobbyist recommendation system with no clinical healthcare or DPI identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105486",
+    "published": "2026-10-06 01:30:45",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in OSSRS srs up to 7.0-a1. This affects the function systemAPI.Run of the file internal/proxy/api.go of the component System API. Performing a manipulation results in missing authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 8.0-d0 mitigates this issue. The patch is named bb5fde228f4ca5bd26d96368b61f6e0c21df51df. The affected component should be upgraded.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Media streaming server API missing authentication with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105170",
+    "published": "2026-10-04 23:30:12",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in kishor-23 food-waste-management-system 411989e3ecb82895e53dca7865f72145f03d7d93/b3a70b2c492dc9904de5be1ad9389bd79b87f82c. Affected is an unknown function of the file admin/signup.php of the component Admin Signup. This manipulation of the argument sign causes missing authentication. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Hobbyist food-waste management project with no public-sector or DPI identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105133",
+    "published": "2026-10-04 05:15:14",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in Ahsay AhsayCBS up to 10.3.2. This affects the function checkSysPwd of the file com/ahsay/obs/api/ApiStructsAction.java of the component API. Performing a manipulation of the argument random results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 10.3.4 is able to mitigate this issue. It is recommended to upgrade the affected component.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Enterprise backup software API authentication flaw with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71299",
+    "published": "2026-10-05 19:06:52",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Maestro. Its REST API write endpoints were registered without proper authentication middleware. This allows a remote attacker to perform unauthorized write operations, such as creating, modifying, or deleting consumers and resource bundles. This could lead to data integrity issues or a denial of service (DoS).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic REST API missing authentication middleware in non-identity software 'Maestro', no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105233",
+    "published": "2026-10-05 05:45:09",
+    "cvss": 6.3,
+    "epss": 0.00227,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been found in kishor-23 food-waste-management-system 411989e3ecb82895e53dca7865f72145f03d7d93/b3a70b2c492dc9904de5be1ad9389bd79b87f82c. This affects an unknown function of the file login.php of the component Login Flow. Such manipulation of the argument PHPSESSID leads to session fixiation. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Session fixation in a hobbyist food-waste management system, excluded as non-DPI consumer software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71297",
+    "published": "2026-10-05 19:55:49",
+    "cvss": 5.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in the maestro gRPC broker. This vulnerability allows a remote attacker, with a valid client certificate, to bypass authentication. This bypass enables the attacker to subscribe to other consumers' event streams, leading to unauthorized information disclosure, or to publish forged agent status, which can compromise data integrity.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in generic gRPC event broker 'maestro', lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  }
+]

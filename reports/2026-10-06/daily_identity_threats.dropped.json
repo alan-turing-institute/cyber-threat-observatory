@@ -1,0 +1,306 @@
+[
+  {
+    "id": "CVE-2026-63692",
+    "published": "2026-10-06 14:38:07",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell Container Storage Modules, versions prior to 1.18.0, contain(s) a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Enterprise storage module missing authentication, lacks identity/access management nexus required for DPI stream.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63688",
+    "published": "2026-10-06 14:32:58",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell Container Storage Modules (CSM), versions prior to v1.18.0, contains a Missing Authentication for Critical Function vulnerability in the csm-authorization-storage gRPC server. An unauthenticated remote attacker could potentially exploit this vulnerability, leading to unauthorized access to storage backend administrator credentials for all registered storage arrays.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Credential exposure in storage backend infrastructure, not identity/access management software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94293",
+    "published": "2026-10-06 06:38:04",
+    "cvss": 9.8,
+    "epss": 0.00349,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated remote attacker can modify Asset Administration Shell submodel data via PATCH requests and can read all data exposed by the GET endpoints.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial IoT (Asset Administration Shell) context, explicitly excluded from DPI scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-106037",
+    "published": "2026-10-06 14:03:14",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Mooncake through 0.3.13.post1 contains a missing authentication vulnerability in the Store REST service, which binds to 0.0.0.0 without authentication on any route. Unauthenticated attackers can call routes such as /api/get, /api/put, /api/remove_all and /api/mount to read cached KV data with user prompts, inject or delete objects, and mount attacker-described segments.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI/LLM KV cache infrastructure with missing auth, excluded under LLM tooling rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105639",
+    "published": "2026-10-05 18:10:35",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Plane is an open-source project management tool. Prior to 1.4.0, Plane's signup flow creates a logged-in User row for any submitted email without an out-of-band ownership check, while User.email is unique=True. The authenticated user can call GET /api/users/me/workspaces/invitations/, which returns each WorkspaceMemberInvite whose email matches request.user.email. WorkSpaceMemberInviteSerializer uses fields = \"all\", exposing the token that protects the invitation join endpoint. An unauthenticated attacker who knows a target's email can register an account using that address, enumerate pending invitations, and accept an invitation as the target, joining a workspace at the invited role. The term pre-auth describes the attacker's initial state: the attacker has no credential before signup, while the enumeration and join requests use the session created by that signup. This issue is fixed in 1.4.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Account takeover in generic project management SaaS, lacks public-sector identity or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102159",
+    "published": "2026-10-06 19:39:53",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An access-control flaw in the CV-CUE backend may allow an unauthenticated network attacker to access functionality intended only for internal services. Successful exploitation may expose sensitive location information or disrupt affected services.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Generic backend access-control flaw with no identifiable identity or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105763",
+    "published": "2026-10-05 23:05:56",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Twenty is an open-source CRM (customer relationship management) platform. From 1.20.10 until 2.7.0, the /metadata GraphQL connectedAccounts query returned connectionParameters from ConnectedAccountDTO for every connected account in a workspace, including plaintext IMAP, SMTP, and CalDAV passwords, because the field was not hidden and the lookup did not enforce the calling user's identity or account visibility. A normal workspace member could obtain other members' external-service credentials and use them to access mail or calendars and potentially reset third-party accounts. Google and Microsoft OAuth-only workspaces were not affected. This issue is fixed in version 2.7.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Credential exposure in open-source CRM platform, not identity/access management infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-39764",
+    "published": "2026-10-06 08:34:28",
+    "cvss": 9.3,
+    "epss": 0.00304,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Unauthenticated SQL Injection in Radius Booking — Booking Calendar for Appointments &amp; Services <= 1.0.19 versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "WordPress booking plugin, explicitly excluded under consumer/hobbyist software rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105640",
+    "published": "2026-10-05 18:11:35",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Plane is an open-source project management tool. Prior to 1.4.0, Plane trusts email addresses returned by Gitea OAuth and by self-managed GitLab OAuth deployments where email confirmation is disabled, without verifying that the provider authenticated ownership of the address. An attacker can set an OAuth identity's unverified provider email to a victim's address, which Plane matches directly to the victim's existing local account. The attacker can then log in to the victim's Plane account without knowing the victim's password. GitHub, GitLab.com, and Google are not affected because those providers return verified email addresses. This issue is fixed in 1.4.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "OAuth account takeover in generic project management tool, lacks DPI identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-79820",
+    "published": "2026-10-05 14:47:04",
+    "cvss": 9.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A remote user validation failure vulnerability exists in HPE Integrated Lights-Out (iLO) 7 firmware.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Server management firmware user validation flaw, lacks identity/access management nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-106038",
+    "published": "2026-10-06 14:03:15",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Mooncake Store master through 0.3.13.post1 contains a missing authentication vulnerability that allows unauthenticated attackers to force-delete any object via Remove, RemoveByRegex, RemoveAll and BatchRemove on the coro_rpc port. Attackers can send forged requests with the force flag set to bypass lease checks, wipe keys matching any regex, or clear the entire store, causing cache loss and request failures.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a distributed cache/store with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105786",
+    "published": "2026-10-05 23:18:27",
+    "cvss": 8.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. Prior to 3.7.13, packages/server/src/models/ApplicationModel.ts accepts a caller-chosen application authorization identifier, applications/:id/confirm binds that identifier to a logged-in user through a generic consent page, and the public packages/server/src/routes/api/application_auth.ts endpoint passes it to ApplicationModel.createAppPassword without authenticating or binding the redeemer. An attacker can cause a victim to approve the attacker's identifier, redeem a durable application ID and password, and exchange the credential for a victim session with full read and write access to synchronized data. This vulnerability is fixed in 3.7.13.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer note-taking application with auth bypass, excluded by consumer/hobbyist software rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86671",
+    "published": "2026-10-05 16:21:57",
+    "cvss": 8.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Eclipse Che versions 7.29.0 and later, the GET `/api/scm/resolve` and `POST /api/factory/resolver` endpoints pass an attacker-controlled URL to `URLFetcher.fetch()`, which calls `new URL(url).openConnection()` with no scheme or host allow-list and returns the response body to the caller. Any authenticated Che user can read arbitrary local files via the file:// scheme (including the pod's Kubernetes service-account token at `file:///var/run/secrets/kubernetes.io/serviceaccount/token`), reach internal HTTP services and cloud instance metadata endpoints (169.254.169.254), and have their stored SCM personal access token attached as an `Authorization` header to a host of their choosing. The same credential-forwarding behavior also fires when a victim opens a workspace from a malicious devfile whose `parent.uri` points to an attacker-controlled server, enabling exfiltration of the victim's SCM PAT without direct API access. No fix is available.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "SSRF and credential forwarding in a cloud IDE platform, no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104850",
+    "published": "2026-10-06 16:08:21",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MCP TypeScript SDK is the official TypeScript SDK for Model Context Protocol servers and clients. Starting in version 1.12.0 and prior to versions 1.31.0 and 2.2.0, the SDK's OAuth client support let the MCP server a client connected to decide which authorization server received the client's OAuth credentials. Stored and pre-provisioned credentials were not bound to the authorization server they belong to. A malicious or compromised MCP server could name its own authorization server in its protected resource metadata. Without any user interaction, the client would send that server the `refresh_token` and `client_secret` stored from an earlier sign-in (1.x), or the configured `client_secret` or signed assertion of a bundled non-interactive provider (1.x and 2.x). Only those applications that use the SDK as an MCP client over HTTP with an `authProvider`: your own `OAuthClientProvider`, or the bundled `ClientCredentialsProvider`, `PrivateKeyJwtProvider`, `StaticPrivateKeyJwtProvider` or (2.x) `CrossAppAccessProvider` and that may connect to an MCP server the owners does not fully trust while holding credentials for a legitimate authorization server are affected. `@modelcontextprotocol/sdk` 1.31.0 (1.x) and `@modelcontextprotocol/client` 2.2.0 (2.x) patch the issue. A workaround for those who cannot upgrade is available. 2.0.0 and 2.1.0 already accept `expectedIssuer`. On 1.x, the only workaround is to connect OAuth-enabled clients only to MCP servers you trust.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "OAuth credential misbinding in an AI/LLM tooling SDK, excluded by LLM tooling rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105486",
+    "published": "2026-10-06 01:30:45",
+    "cvss": 7.3,
+    "epss": 0.00495,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in OSSRS srs up to 7.0-a1. This affects the function systemAPI.Run of the file internal/proxy/api.go of the component System API. Performing a manipulation results in missing authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 8.0-d0 mitigates this issue. The patch is named bb5fde228f4ca5bd26d96368b61f6e0c21df51df. The affected component should be upgraded.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a media streaming server API with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105704",
+    "published": "2026-10-06 04:15:13",
+    "cvss": 7.3,
+    "epss": 0.00397,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in SourceCodester Drug Recommendation System 1.0. This affects an unknown function of the component Auth Guard. Such manipulation of the argument user_id leads to improper authentication. The attack can be executed remotely. The exploit is publicly available and might be used.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate description for a niche demo application with no exploitable detail or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70411",
+    "published": "2026-10-06 15:17:21",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell Container Storage Modules (CSM), versions prior to 1.18.0, contains a Missing Authentication for Critical Function vulnerability in the csm-authorization-tenant gRPC service (TenantService). An unauthenticated adjacent network attacker could potentially exploit this vulnerability, leading to unauthorized creation of tenant entities, cross-tenant role injection, and modification of storage access control flags.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing authentication in enterprise container storage tenant service, lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71299",
+    "published": "2026-10-05 19:06:52",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in Maestro. Its REST API write endpoints were registered without proper authentication middleware. This allows a remote attacker to perform unauthorized write operations, such as creating, modifying, or deleting consumers and resource bundles. This could lead to data integrity issues or a denial of service (DoS).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing authentication middleware on Maestro REST API is a generic access control flaw in non-identity software with no clear DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105233",
+    "published": "2026-10-05 05:45:09",
+    "cvss": 6.3,
+    "epss": 0.00227,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been found in kishor-23 food-waste-management-system 411989e3ecb82895e53dca7865f72145f03d7d93/b3a70b2c492dc9904de5be1ad9389bd79b87f82c. This affects an unknown function of the file login.php of the component Login Flow. Such manipulation of the argument PHPSESSID leads to session fixiation. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Session fixation in a hobbyist food-waste management system project falls under the consumer/hobbyist exclusion with no DPI relevance.",
+      "fail_open": false
+    }
+  }
+]
