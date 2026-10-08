@@ -1,0 +1,4022 @@
+[
+  {
+    "id": "CVE-2026-96335",
+    "identity": {
+      "title": "CVE-2026-96335",
+      "published": "2026-10-07 17:09:50",
+      "modified": "2026-10-07 20:17:15",
+      "description": "Missing Authorization vulnerability in WPMU DEV Forminator allows Exploiting Incorrectly Configured Access Control Security Levels.\n\nThis issue affects Forminator: from n/a through 1.57.2."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/forminator/vulnerability/wordpress-forminator-plugin-1-57-2-broken-access-control-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "WPMU DEV",
+      "products": "Forminator",
+      "cpe_uris": "cpe:2.3:a:incsub:forminator:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/forminator/vulnerability/wordpress-forminator-plugin-1-57-2-broken-access-control-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-96335",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-96335"
+    },
+    "item_id": "CVE-2026-96335",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise/DPI footprint or active exploitation signal; falls under consumer-only drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-95606",
+    "identity": {
+      "title": "CVE-2026-95606",
+      "published": "2026-10-07 17:07:23",
+      "modified": "2026-10-07 18:17:31",
+      "description": "Deserialization of Untrusted Data vulnerability in Liquid Web / StellarWP The Events Calendar allows Object Injection.\n\nThis issue affects The Events Calendar: from n/a through 6.17.4."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/the-events-calendar/vulnerability/wordpress-the-events-calendar-plugin-6-17-4-php-object-injection-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data"
+      }
+    },
+    "software": {
+      "vendors": "Liquid Web / StellarWP",
+      "products": "The Events Calendar",
+      "cpe_uris": "cpe:2.3:a:stellarwp:the_events_calendar:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/the-events-calendar/vulnerability/wordpress-the-events-calendar-plugin-6-17-4-php-object-injection-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95606",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95606"
+    },
+    "item_id": "CVE-2026-95606",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise/DPI footprint or exploitation signal; consumer-only drop class applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-95605",
+    "identity": {
+      "title": "CVE-2026-95605",
+      "published": "2026-10-07 17:05:14",
+      "modified": "2026-10-07 19:17:45",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Passionate Programmer Peter WP Data Access allows Blind SQL Injection.\n\nThis issue affects WP Data Access: from n/a through 5.5.82."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/wp-data-access/vulnerability/wordpress-wp-data-access-plugin-5-5-82-sql-injection-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Passionate Programmer Peter",
+      "products": "WP Data Access",
+      "cpe_uris": "cpe:2.3:a:wpdataaccess:wp_data_access:*:*:*:*:*:wordpress:*:*",
+      "software_map": [
+        {
+          "key": "passionate programmer peter:wp data access",
+          "vendor": "Passionate Programmer Peter",
+          "product": "WP Data Access",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/wp-data-access/vulnerability/wordpress-wp-data-access-plugin-5-5-82-sql-injection-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95605",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95605"
+    },
+    "item_id": "CVE-2026-95605",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise/DPI footprint or exploitation signal; consumer-only drop class applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-95595",
+    "identity": {
+      "title": "CVE-2026-95595",
+      "published": "2026-10-07 17:03:19",
+      "modified": "2026-10-07 20:17:15",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Fontsplugin Disable and Remove Google Fonts | GDPR & DSGVO friendly disable-remove-google-fonts allows Reflected XSS.\n\nThis issue affects Disable and Remove Google Fonts | GDPR &amp; DSGVO friendly: from n/a through 2.0.2."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/disable-remove-google-fonts/vulnerability/wordpress-disable-and-remove-google-fonts-gdpr-dsgvo-friendly-plugin-2-0-2-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Fontsplugin",
+      "products": "Disable and Remove Google Fonts | GDPR & DSGVO friendly",
+      "cpe_uris": "cpe:2.3:a:fontsplugin:disable_and_remove_google_fonts_gdpr_dsgvo_friendly:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/disable-remove-google-fonts/vulnerability/wordpress-disable-and-remove-google-fonts-gdpr-dsgvo-friendly-plugin-2-0-2-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95595",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95595"
+    },
+    "item_id": "CVE-2026-95595",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-95534",
+    "identity": {
+      "title": "CVE-2026-95534",
+      "published": "2026-10-07 17:00:23",
+      "modified": "2026-10-07 18:17:31",
+      "description": "Deserialization of Untrusted Data vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) allows Object Injection.\n\nThis issue affects Unlimited Elements For Elementor (Free Widgets, Addons, Templates): from n/a through 2.0.19."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-19-php-object-injection-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data"
+      }
+    },
+    "software": {
+      "vendors": "Unlimited Elements",
+      "products": "Unlimited Elements For Elementor (Free Widgets, Addons, Templates)",
+      "cpe_uris": "cpe:2.3:a:unlimited-elements:unlimited_elements_for_elementor_\\(free_widgets\\,_addons\\,_templates\\):*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-19-php-object-injection-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95534",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-95534"
+    },
+    "item_id": "CVE-2026-95534",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress/Elementor plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94670",
+    "identity": {
+      "title": "CVE-2026-94670",
+      "published": "2026-10-07 16:57:43",
+      "modified": "2026-10-07 20:17:15",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Everest Forms allows Reflected XSS.\n\nThis issue affects Everest Forms: from n/a through 3.6.1."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/everest-forms/vulnerability/wordpress-everest-forms-plugin-3-6-1-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Everest Forms",
+      "products": "Everest Forms",
+      "cpe_uris": "cpe:2.3:a:wpeverest:everest_forms:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/everest-forms/vulnerability/wordpress-everest-forms-plugin-3-6-1-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94670",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94670"
+    },
+    "item_id": "CVE-2026-94670",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94662",
+    "identity": {
+      "title": "CVE-2026-94662",
+      "published": "2026-10-07 16:55:21",
+      "modified": "2026-10-07 18:17:31",
+      "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) allows Stored XSS.\n\nThis issue affects Unlimited Elements For Elementor (Free Widgets, Addons, Templates): from n/a through 2.0.19."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-19-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Unlimited Elements",
+      "products": "Unlimited Elements For Elementor (Free Widgets, Addons, Templates)",
+      "cpe_uris": "cpe:2.3:a:unlimited-elements:unlimited_elements_for_elementor_\\(free_widgets\\,_addons\\,_templates\\):*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/unlimited-elements-for-elementor/vulnerability/wordpress-unlimited-elements-for-elementor-free-widgets-addons-templates-plugin-2-0-19-cross-site-scripting-xss-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94662",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-94662"
+    },
+    "item_id": "CVE-2026-94662",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress/Elementor plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-46434",
+    "identity": {
+      "title": "CVE-2026-46434",
+      "published": "2026-10-07 13:55:19",
+      "modified": "2026-10-07 15:17:20",
+      "description": "wger is a free, open-source workout and fitness manager. Prior to version 2.6, a user with only the `gym_trainer` permission can deactivate any account in the same gym, including `gym_manager` and `general_gym_manager` accounts. The `UserDeactivateView` grants access to anyone holding any one of `gym.manage_gym`, `gym.manage_gyms`, or `gym.gym_trainer` (OR logic via `WgerMultiplePermissionRequiredMixin`), and performs no privilege-hierarchy check to prevent a lower-privileged role from disabling a higher-privileged one. Version 2.6 fixes the issue."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/wger-project/wger/releases/tag/2.6"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "wger-project",
+      "products": "wger",
+      "cpe_uris": "cpe:2.3:a:wger:wger:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/wger-project/wger/releases/tag/2.6",
+      "https://github.com/wger-project/wger/security/advisories/GHSA-x249-cx55-2h87"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-46434",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-46434"
+    },
+    "item_id": "CVE-2026-46434",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer fitness management software with no enterprise or DPI footprint; privilege escalation in a niche personal/gym app.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107181",
+    "identity": {
+      "title": "CVE-2026-107181",
+      "published": "2026-10-07 13:35:40",
+      "modified": "2026-10-07 17:16:53",
+      "description": "Telegram Desktop before 7.2.9 contains an IPC record-separator injection vulnerability in Core::Sandbox that allows remote attackers to inject OPEN: records via crafted tg:// links containing unescaped semicolons. Attackers can reach the interpret: scheme handler to upload local files, including tdata session keys, to an attacker channel, enabling account takeover."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/telegramdesktop/tdesktop/blob/v7.2.8/Telegram/SourceFiles/core/sandbox.cpp#L362-L364"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-143"
+      ],
+      "cwe_primary": "CWE-143",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-143": "Improper Neutralization of Record Delimiters"
+      }
+    },
+    "software": {
+      "vendors": "Telegram",
+      "products": "Telegram Desktop",
+      "cpe_uris": "cpe:2.3:a:telegram:telegram_desktop:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/telegramdesktop/tdesktop/blob/v7.2.8/Telegram/SourceFiles/core/sandbox.cpp#L362-L364",
+      "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+      "https://github.com/telegramdesktop/tdesktop/blob/v7.2.8/Telegram/SourceFiles/support/support_helper.cpp#L673-L751",
+      "https://github.com/telegramdesktop/tdesktop",
+      "https://github.com/telegramdesktop/tdesktop/commit/db3405699f8fc3ae28a58d2348b7d13a43c0590a",
+      "https://www.vulncheck.com/advisories/telegram-desktop-before-7.2.9-ipc-record-injection-file-exfiltration-via-interpret-scheme",
+      "https://github.com/telegramdesktop/tdesktop/releases/tag/v7.2.9"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-107181",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-107181"
+    },
+    "item_id": "CVE-2026-107181",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer messaging client vulnerability with no enterprise or DPI sector footprint; account takeover limited to personal app context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-43976",
+    "identity": {
+      "title": "CVE-2026-43976",
+      "published": "2026-10-07 13:33:11",
+      "modified": "2026-10-07 18:17:20",
+      "description": "wger is a free, open-source workout and fitness manager. Prior to version 2.6, five gym management views in wger apply a flawed gym-scope guard (`gym_a != gym_b`) that silently passes when both operands are `None`. A trainer with `gym.gym_trainer` and `gym.add_adminusernote` permissions and no gym assignment (`gym=None`) can read private admin notes, uploaded documents, gym contracts, user configuration, and user permission data for **any other unaffiliated user** on the instance. The subsequent querysets filter only on the attacker-supplied `member_id` with no secondary gym-scoped validation, so all records are disclosed. Version 2.6 fixes the issue."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/wger-project/wger/security/advisories/GHSA-c72h-82w6-rqfp"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-863"
+      ],
+      "cwe_primary": "CWE-863",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-863": "Incorrect Authorization"
+      }
+    },
+    "software": {
+      "vendors": "wger-project",
+      "products": "wger",
+      "cpe_uris": "cpe:2.3:a:wger:wger:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/wger-project/wger/security/advisories/GHSA-c72h-82w6-rqfp",
+      "https://github.com/wger-project/wger/releases/tag/2.6"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-43976",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-43976"
+    },
+    "item_id": "CVE-2026-43976",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer fitness management software with no enterprise or DPI footprint; information disclosure in a niche personal/gym app.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103435",
+    "identity": {
+      "title": "CVE-2026-103435",
+      "published": "2026-10-07 12:50:02",
+      "modified": "2026-10-07 15:16:57",
+      "description": "Claude Code validated that a target file path resided within the project working directory at permission-check time, but re-resolved the path at write time without repeating that validation. This time-of-check to time-of-use (TOCTOU) gap allowed an attacker who could write to the workspace to atomically replace a project file with a symlink, causing Claude Code to follow the symlink and write its output to an arbitrary file outside the project sandbox. Exploitation required the ability to win a race condition against the write operation and write access to the shared workspace, enabling a lower-privileged attacker to redirect benign edits to sensitive files (e.g., shell configuration) in a higher-privileged session.\n\nUsers on standard Claude Code auto-update have received this fix already. Users performing manual updates are advised to update to the latest version.\n\nThank you to hackerone.com/c_h4ck_0 for reporting this issue."
+    },
+    "cvss": {
+      "base_score": 7.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/anthropics/claude-code/security/advisories/GHSA-5j29-h97v-84ch"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "network, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-367",
+        "CWE-61"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+        "CWE-367": "Time-of-check Time-of-use (TOCTOU) Race Condition",
+        "CWE-61": "UNIX Symbolic Link (Symlink) Following"
+      }
+    },
+    "software": {
+      "vendors": "Anthropic",
+      "products": "@anthropic-ai/claude-code",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/anthropics/claude-code/security/advisories/GHSA-5j29-h97v-84ch"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103435",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103435"
+    },
+    "item_id": "CVE-2026-103435",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Developer AI tool sandbox escape requiring local workspace write access and race condition; no enterprise or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-106059",
+    "identity": {
+      "title": "CVE-2026-106059",
+      "published": "2026-10-07 11:59:38",
+      "modified": "2026-10-07 15:57:20",
+      "description": "GitAhead through 2.7.1 on macOS contains a command injection vulnerability that allows attackers to execute shell commands by crafting repository filenames interpolated unescaped into the Show in Finder AppleScript. Attackers can commit a file whose path contains a double quote followed by a do shell script payload, which runs as the victim user when Show in Finder is chosen."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/gitahead/gitahead/blob/v2.7.1/src/tools/ShowTool.cpp#L40-L48"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "gitahead",
+      "products": "gitahead",
+      "cpe_uris": "cpe:2.3:a:gitahead:gitahead:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/gitahead/gitahead/blob/v2.7.1/src/tools/ShowTool.cpp#L40-L48",
+      "https://github.com/gitahead/gitahead",
+      "https://github.com/gitahead/gitahead/issues/663",
+      "https://www.vulncheck.com/advisories/gitahead-through-2.7.1-on-macos-command-injection-via-show-in-finder-applescript"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-106059",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-106059"
+    },
+    "item_id": "CVE-2026-106059",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Command injection in macOS GitAhead GUI client requires user interaction and lacks enterprise or DPI deployment footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-106058",
+    "identity": {
+      "title": "CVE-2026-106058",
+      "published": "2026-10-07 11:59:37",
+      "modified": "2026-10-07 21:17:12",
+      "description": "GitAhead through 2.7.1 contains an OS command injection vulnerability in src/git/Filter.cpp that allows malicious repositories to execute commands by substituting crafted filenames into clean/smudge filter commands. Attackers can ship files named with $(command) selected via .gitattributes so checkout or staging runs the command through bash -c as the victim."
+    },
+    "cvss": {
+      "base_score": 7.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/gitahead/gitahead/blob/v2.7.1/src/git/Filter.cpp#L43-L70"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "gitahead",
+      "products": "gitahead",
+      "cpe_uris": "cpe:2.3:a:gitahead:gitahead:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/gitahead/gitahead/blob/v2.7.1/src/git/Filter.cpp#L43-L70",
+      "https://github.com/gitahead/gitahead/issues/661",
+      "https://www.vulncheck.com/advisories/gitahead-through-2.7.1-os-command-injection-via-git-filter-filenames",
+      "https://github.com/gitahead/gitahead"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-106058",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-106058"
+    },
+    "item_id": "CVE-2026-106058",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "OS command injection in GitAhead GUI client requires repository checkout and lacks enterprise or DPI deployment footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-42708",
+    "identity": {
+      "title": "CVE-2026-42708",
+      "published": "2026-10-07 11:59:35",
+      "modified": "2026-10-07 20:17:12",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in AF themes WP Post Author wp-post-author allows Blind SQL Injection.This issue affects WP Post Author: from n/a through 4.0.0."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/wp-post-author/vulnerability/wordpress-wp-post-author-plugin-4-0-0-sql-injection-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "AF themes",
+      "products": "WP Post Author",
+      "cpe_uris": "cpe:2.3:a:afthemes:wp_post_author:*:*:*:*:*:wordpress:*:*",
+      "software_map": [
+        {
+          "key": "af themes:wp post author",
+          "vendor": "AF themes",
+          "product": "WP Post Author",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/wp-post-author/vulnerability/wordpress-wp-post-author-plugin-4-0-0-sql-injection-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42708",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42708"
+    },
+    "item_id": "CVE-2026-42708",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "SQL injection in consumer WordPress plugin WP Post Author - explicitly excluded as consumer-only software with no DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-42710",
+    "identity": {
+      "title": "CVE-2026-42710",
+      "published": "2026-10-07 11:55:51",
+      "modified": "2026-10-07 17:16:55",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in 10Web Slider by 10Web slider-wd allows Blind SQL Injection.This issue affects Slider by 10Web: from n/a through 1.2.63."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/slider-wd/vulnerability/wordpress-slider-by-10web-plugin-1-2-63-sql-injection-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "10Web",
+      "products": "Slider by 10Web",
+      "cpe_uris": "cpe:2.3:a:10web:slider:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/slider-wd/vulnerability/wordpress-slider-by-10web-plugin-1-2-63-sql-injection-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42710",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42710"
+    },
+    "item_id": "CVE-2026-42710",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "SQL injection in consumer WordPress plugin Slider by 10Web - explicitly excluded as consumer-only software with no DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-42713",
+    "identity": {
+      "title": "CVE-2026-42713",
+      "published": "2026-10-07 10:57:33",
+      "modified": "2026-10-07 20:17:12",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Gopiplus Post title marquee scroll post-title-marquee-scroll allows Blind SQL Injection.This issue affects Post title marquee scroll: from n/a through 9.9."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/post-title-marquee-scroll/vulnerability/wordpress-post-title-marquee-scroll-plugin-9-9-sql-injection-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Gopiplus",
+      "products": "Post title marquee scroll",
+      "cpe_uris": "cpe:2.3:a:gopiplus:post_title_marquee_scroll:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/post-title-marquee-scroll/vulnerability/wordpress-post-title-marquee-scroll-plugin-9-9-sql-injection-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42713",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42713"
+    },
+    "item_id": "CVE-2026-42713",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "SQL injection in consumer WordPress plugin Post title marquee scroll - explicitly excluded as consumer-only software with no DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-42714",
+    "identity": {
+      "title": "CVE-2026-42714",
+      "published": "2026-10-07 10:56:56",
+      "modified": "2026-10-07 18:17:20",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Piggly Dev Pix por Piggly (para Woocommerce) pix-por-piggly allows Blind SQL Injection.This issue affects Pix por Piggly (para Woocommerce): from n/a through 2.1.2."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/pix-por-piggly/vulnerability/wordpress-pix-por-piggly-para-woocommerce-plugin-2-1-2-sql-injection-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Piggly Dev",
+      "products": "Pix por Piggly (para Woocommerce)",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/pix-por-piggly/vulnerability/wordpress-pix-por-piggly-para-woocommerce-plugin-2-1-2-sql-injection-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42714",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42714"
+    },
+    "item_id": "CVE-2026-42714",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WooCommerce plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-42720",
+    "identity": {
+      "title": "CVE-2026-42720",
+      "published": "2026-10-07 09:57:33",
+      "modified": "2026-10-07 13:24:53",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Sarah Giles Dynamic User Directory dynamic-user-directory allows Blind SQL Injection.This issue affects Dynamic User Directory: from n/a through 2.4."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00383,
+      "percentile": 0.30189,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/dynamic-user-directory/vulnerability/wordpress-dynamic-user-directory-plugin-2-4-sql-injection-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Sarah Giles",
+      "products": "Dynamic User Directory",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "sarah giles:dynamic user directory",
+          "vendor": "Sarah Giles",
+          "product": "Dynamic User Directory",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/dynamic-user-directory/vulnerability/wordpress-dynamic-user-directory-plugin-2-4-sql-injection-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42720",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42720"
+    },
+    "item_id": "CVE-2026-42720",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-42721",
+    "identity": {
+      "title": "CVE-2026-42721",
+      "published": "2026-10-07 09:56:56",
+      "modified": "2026-10-07 13:24:53",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in SERVIT Software Solutions affiliate-toolkit affiliate-toolkit-starter allows Blind SQL Injection.This issue affects affiliate-toolkit: from n/a through 3.9.1."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00383,
+      "percentile": 0.3019,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/affiliate-toolkit-starter/vulnerability/wordpress-affiliate-toolkit-plugin-3-9-1-sql-injection-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SERVIT Software Solutions",
+      "products": "affiliate-toolkit",
+      "cpe_uris": "cpe:2.3:a:servit:affiliate-toolkit:*:*:*:*:*:wordpress:*:*",
+      "software_map": [
+        {
+          "key": "servit software solutions:affiliate-toolkit",
+          "vendor": "SERVIT Software Solutions",
+          "product": "affiliate-toolkit",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/affiliate-toolkit-starter/vulnerability/wordpress-affiliate-toolkit-plugin-3-9-1-sql-injection-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42721",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-42721"
+    },
+    "item_id": "CVE-2026-42721",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15894",
+    "identity": {
+      "title": "CVE-2026-15894",
+      "published": "2026-10-07 08:55:25",
+      "modified": "2026-10-07 18:17:19",
+      "description": "The Bluetooth Mesh On-Demand Private Proxy solicitation handler in subsys/bluetooth/mesh/solicitation.c copies a received Solicitation PDU into a fixed 17-byte stack buffer without bounding the source length. In sol_pdu_decrypt(), out is allocated as NET_BUF_SIMPLE(17) and then filled with net_buf_simple_add_mem(out, in->data, in->len); net_buf_simple_add() guards its tailroom only with __ASSERT_NO_MSG, which is compiled out in production builds, so when in->len > 17 the underlying memcpy writes attacker-controlled bytes past the 17-byte stack buffer. The copy occurs before any decryption or authentication, so no key material is required to trigger it.\n\nThe oversized length arises because the mesh scan callback in subsys/bluetooth/mesh/adv.c calls net_buf_simple_restore() before dispatching to bt_mesh_sol_recv(), leaving buf->len covering the entire remaining advertising payload rather than just the Solicitation Service Data. After the parser locates the Service Data AD and consumes the Identification Type byte, the remaining buf->len is the 17-octet Network PDU plus any trailing advertising bytes, and prior to this fix there was no maximum-length check (only a minimum). An attacker can therefore append extra AD structures or padding after the Solicitation Service Data to make buf->len exceed 17.\n\nbt_mesh_scan_cb() is registered directly as the BLE scan callback, so buf is raw, unauthenticated advertising data received over the air. Any device in radio range can send a non-connectable advertisement carrying a crafted mesh Proxy Solicitation to a node that has CONFIG_BT_MESH_OD_PRIV_PROXY_SRV enabled and is currently eligible to be solicited (GATT proxy disabled, On-Demand Private Proxy enabled), with no pairing, bonding, or provisioning. The result is an attacker-controlled stack overwrite — plausibly leading to remote code execution and at minimum a reliable remote denial of service. The fix trims buf->len to the spec-fixed 17 octets (dropping the PDU if fewer remain) before decryption."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00307,
+      "percentile": 0.21565,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-x37p-38wq-cgwj"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-121",
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-121",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-121": "Stack-based Buffer Overflow",
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "zephyrproject",
+      "products": "zephyr",
+      "cpe_uris": "cpe:2.3:o:zephyrproject:zephyr:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "zephyrproject:zephyr",
+          "vendor": "zephyrproject",
+          "product": "zephyr",
+          "source": "cpe",
+          "sample_cpe": "cpe:2.3:o:zephyrproject:zephyr:*:-:*:*:*:*:*:*",
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/zephyrproject-rtos/zephyr/security/advisories/GHSA-x37p-38wq-cgwj",
+      "https://github.com/zephyrproject-rtos/zephyr/commit/4416ad13677259d180f35ce44338578694e48184"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15894",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15894"
+    },
+    "item_id": "CVE-2026-15894",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Bluetooth Mesh IoT protocol implementation with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89417",
+    "identity": {
+      "title": "CVE-2026-89417",
+      "published": "2026-10-07 08:28:11",
+      "modified": "2026-10-07 15:17:57",
+      "description": "The OMGF | GDPR/DSGVO Compliant, Faster Google Fonts. Easy. plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 's' Search Parameter via comments-atom Feed in all versions up to, and including, 6.3.10 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires that the front-end server serves the retained .tmp file without a Content-Type or X-Content-Type-Options header, enabling MIME-sniffing browsers such as Chromium to execute the injected script — a condition present by default on many Apache and nginx/php-fpm deployments."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00247,
+      "percentile": 0.14614,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/host-webfonts-local/tags/6.3.10/src/Optimize.php#L411"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "daanvandenbergh",
+      "products": "OMGF | GDPR/DSGVO Compliant, Faster Google Fonts. Easy.",
+      "cpe_uris": "cpe:2.3:a:daan:omgf:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/host-webfonts-local/tags/6.3.10/src/Optimize.php#L411",
+      "https://plugins.trac.wordpress.org/browser/host-webfonts-local/tags/6.3.10/src/Frontend/Process.php#L663",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/cd760ff9-fe72-44d6-a5f0-212a20dd2a51?source=cve",
+      "https://plugins.trac.wordpress.org/browser/host-webfonts-local/tags/6.3.10/src/Download.php#L78",
+      "https://plugins.trac.wordpress.org/browser/host-webfonts-local/tags/6.3.10/src/Optimize.php#L159",
+      "https://plugins.trac.wordpress.org/browser/host-webfonts-local/tags/6.3.10/src/Frontend/Process.php#L411",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&new=3707539%40host-webfonts-local%2Ftags%2F6.3.11&old=3641590%40host-webfonts-local%2Ftags%2F6.3.10",
+      "https://plugins.trac.wordpress.org/changeset/3707539/host-webfonts-local/trunk/src/Frontend/Process.php"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-89417",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-89417"
+    },
+    "item_id": "CVE-2026-89417",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint; explicit consumer-only drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102782",
+    "identity": {
+      "title": "CVE-2026-102782",
+      "published": "2026-10-07 08:06:03",
+      "modified": "2026-10-07 19:17:31",
+      "description": "Joomla Extension - ordasoft.com - Unauthenticated SQL injection in OrdaSoft Simple Membership < 7.4.0 - site/simplemembership.php dispatches task=checkLoginPass with no authentication or access control check of any kind. The handler reads a login request parameter through Joomla’s generic, non-sanitizing input filter, which strips HTML/script tags but never touches quotes or SQL syntax, and concatenates it directly into a query string with no escaping or parameterization:"
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00277,
+      "percentile": 0.18456,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://www.ordasoft.com/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "ordasoft.com",
+      "products": "OrdaSoft Simple Membership extension for Joomla",
+      "cpe_uris": "cpe:2.3:a:simple-membership-plugin:simple_membership:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ordasoft.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-102782",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-102782"
+    },
+    "item_id": "CVE-2026-102782",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Joomla plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82211",
+    "identity": {
+      "title": "CVE-2026-82211",
+      "published": "2026-10-07 06:47:53",
+      "modified": "2026-10-07 14:52:43",
+      "description": "The Nexi XPay Build WordPress plugin through 7.6.2 does not verify the payment result supplied to several of its unauthenticated routes, allowing attackers to mark arbitrary orders as paid or failed, to cancel them, and to obtain order keys which expose guest buyers' details."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00187,
+      "percentile": 0.07607,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/c1ab38b4-2445-4a56-a47e-aab2b8e8de1e/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Nexi XPay Build",
+      "cpe_uris": "cpe:2.3:a:nexi:xpay:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/c1ab38b4-2445-4a56-a47e-aab2b8e8de1e/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82211",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82211"
+    },
+    "item_id": "CVE-2026-82211",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress e-commerce plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82212",
+    "identity": {
+      "title": "CVE-2026-82212",
+      "published": "2026-10-07 06:47:53",
+      "modified": "2026-10-07 14:52:43",
+      "description": "The Nexi XPay Build WordPress plugin through 7.6.2 does not correctly validate the security token on its payment notification route, accepting the request when the target order has no stored token, which allows unauthenticated attackers to mark arbitrary orders as paid, or to mark genuinely paid orders as failed."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00131,
+      "percentile": 0.02322,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/66df6adb-336c-4660-9a63-5e6e550a2edb/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-345"
+      ],
+      "cwe_primary": "CWE-345",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-345": "Insufficient Verification of Data Authenticity"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Nexi XPay Build",
+      "cpe_uris": "cpe:2.3:a:nexi:xpay:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/66df6adb-336c-4660-9a63-5e6e550a2edb/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82212",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-82212"
+    },
+    "item_id": "CVE-2026-82212",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress e-commerce plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87782",
+    "identity": {
+      "title": "CVE-2026-87782",
+      "published": "2026-10-07 06:00:08",
+      "modified": "2026-10-07 14:52:43",
+      "description": "The Koinonia Link WordPress plugin before 1.1.5 does not check that a user is allowed to change roles before saving a role selection submitted with a profile update, allowing any authenticated user, such as a subscriber, to grant themselves the Administrator role."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00232,
+      "percentile": 0.12895,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/0f3af398-4a70-4987-9da8-b876b9e932c7/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Koinonia Link",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/0f3af398-4a70-4987-9da8-b876b9e932c7/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-87782",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-87782"
+    },
+    "item_id": "CVE-2026-87782",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87971",
+    "identity": {
+      "title": "CVE-2026-87971",
+      "published": "2026-10-07 06:00:08",
+      "modified": "2026-10-07 14:52:43",
+      "description": "The If-So Dynamic Content  WordPress plugin before 1.10.2 does not validate the URL scheme of a request-supplied value before reflecting it into a link on an admin page, allowing attackers to execute arbitrary JavaScript in the browser of a logged-in user who opens a crafted link."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00146,
+      "percentile": 0.03331,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/f03cb198-7d64-4405-9c2c-5342f24deb4f/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "If-So Dynamic Content",
+      "cpe_uris": "cpe:2.3:a:ovation:dynamic_content:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/f03cb198-7d64-4405-9c2c-5342f24deb4f/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-87971",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-87971"
+    },
+    "item_id": "CVE-2026-87971",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97188",
+    "identity": {
+      "title": "CVE-2026-97188",
+      "published": "2026-10-07 06:00:08",
+      "modified": "2026-10-07 14:52:43",
+      "description": "The String locator WordPress plugin before 2.6.8 does not restrict the classes allowed when deserializing the content of a database row saved through its database editor, allowing unauthenticated attackers to store a serialized PHP object that is instantiated when an administrator later opens and saves that row. If a suitable POP chain is present via another installed String locator WordPress plugin before 2.6.8 or , this can lead to arbitrary file deletion, sensitive data disclosure or remote code execution."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00375,
+      "percentile": 0.29329,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/cfb495ac-32fc-43e2-81b4-74faa8c164a4/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "String locator",
+      "cpe_uris": "cpe:2.3:a:instawp:string_locator:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/cfb495ac-32fc-43e2-81b4-74faa8c164a4/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-97188",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-97188"
+    },
+    "item_id": "CVE-2026-97188",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105316",
+    "identity": {
+      "title": "CVE-2026-105316",
+      "published": "2026-10-07 06:00:06",
+      "modified": "2026-10-07 14:52:43",
+      "description": "The Magee Shortcodes WordPress plugin through 2.1.1 does not sanitise and escape user input in some of its AJAX actions, which are available to unauthenticated users, before reflecting it back in the response, leading to Reflected Cross-Site Scripting."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00164,
+      "percentile": 0.05072,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/8240033a-bb4b-490f-97da-4ae768d2cb6d/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Magee Shortcodes",
+      "cpe_uris": "cpe:2.3:a:hoosoft:magee_shortcodes:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/8240033a-bb4b-490f-97da-4ae768d2cb6d/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105316",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105316"
+    },
+    "item_id": "CVE-2026-105316",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104677",
+    "identity": {
+      "title": "CVE-2026-104677",
+      "published": "2026-10-07 06:00:05",
+      "modified": "2026-10-07 14:52:43",
+      "description": "The WP Coder  WordPress plugin before 4.5.2 does not restrict access to its PHP code-execution feature to administrators, gating it on a content capability that the Editor role holds by default, which allows Editor-level users to save and execute arbitrary PHP code on the server and fully compromise the site."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0037,
+      "percentile": 0.28791,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/2e730bf3-ebf9-4c0d-bb05-8ca94c7cab60/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "WP Coder",
+      "cpe_uris": "cpe:2.3:a:wow-company:wp_coder:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/2e730bf3-ebf9-4c0d-bb05-8ca94c7cab60/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-104677",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-104677"
+    },
+    "item_id": "CVE-2026-104677",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102173",
+    "identity": {
+      "title": "CVE-2026-102173",
+      "published": "2026-10-07 05:30:40",
+      "modified": "2026-10-07 17:16:45",
+      "description": "The Kirki – Freeform Page Builder, Website Builder & Customizer plugin for WordPress is vulnerable to Stored Cross-Site Scripting via registration metadata in all versions up to, and including, 6.3.1 This is due to insufficient escaping in `ExceptionalElements::image_element()`, which concatenates a user-meta value straight into an `<img src=\"…\">` attribute. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute whenever a user accesses a page rendering a Kirki users collection whose image element is bound to one of the nine registration meta fields. Requires public user registration to be enabled and a published page carrying a `kirki-register` element, which prints the required element nonce into the public markup."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00366,
+      "percentile": 0.28367,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/368001e9-3806-41d5-902e-0facf7fb31ff?source=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "themeum",
+      "products": "Kirki – Freeform Page Builder, Website Builder & Customizer",
+      "cpe_uris": "cpe:2.3:a:themeum:kirki:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/368001e9-3806-41d5-902e-0facf7fb31ff?source=cve",
+      "https://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/ComponentLibrary/controller/CompLibFormHandler.php#L76",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&new=3718900%40kirki%2Ftags%2F6.3.2&old=3697265%40kirki%2Ftags%2F6.3.1",
+      "https://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/includes/HelperFunctions.php#L1151",
+      "https://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/includes/Frontend/Preview/ExceptionalElements.php#L1184",
+      "https://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/ComponentLibrary/controller/ElementGenerator.php#L259",
+      "https://plugins.trac.wordpress.org/changeset/3718900/kirki/trunk/includes/Frontend/Preview/ExceptionalElements.php",
+      "https://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/includes/Frontend/Preview/ExceptionalElements.php#L1079",
+      "https://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/ComponentLibrary/controller/CompLibFormHandler.php#L361",
+      "https://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/includes/Frontend/Preview/Utils.php#L308",
+      "https://plugins.trac.wordpress.org/browser/kirki/tags/6.3.1/ComponentLibrary/controller/CompLibFormHandler.php#L389"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-102173",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-102173"
+    },
+    "item_id": "CVE-2026-102173",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-14911",
+    "identity": {
+      "title": "CVE-2026-14911",
+      "published": "2026-10-07 02:13:30",
+      "modified": "2026-10-07 19:17:35",
+      "description": "Improper Neutralization of Input During Web Page Generation (“Cross-site Scripting”) in ASUS router modules allows a remote attacker to read DOM information, modify router settings, and cause a denial-of-service condition when an authenticated user visits a crafted URL.Refer to the '\nSecurity Update for ASUS Router Firmware  ' section on the ASUS Security Advisory for more information."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00319,
+      "percentile": 0.22839,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.asus.com/security-advisory/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "network, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "ASUS",
+      "products": "Router",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "asus:router",
+          "vendor": "ASUS",
+          "product": "Router",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.asus.com/security-advisory/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-14911",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-14911"
+    },
+    "item_id": "CVE-2026-14911",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer ASUS router firmware XSS requiring authentication, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19396",
+    "identity": {
+      "title": "CVE-2026-19396",
+      "published": "2026-10-07 02:07:33",
+      "modified": "2026-10-07 19:17:36",
+      "description": "A predictable seed in the pseudo-random number generator (PRNG) in the IFTTT pairing token generation of the ASUS RT-BE57 router allows an unauthenticated nearby user to derive the pairing token and read or modify router settings via observed values from an administrator-initiated IFTTT pairing session.Refer to the ' Security Update for ASUS Router Firmware  ' section on the ASUS Security Advisory for more information."
+    },
+    "cvss": {
+      "base_score": 7.7,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00127,
+      "percentile": 0.02062,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.asus.com/security-advisory"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-337"
+      ],
+      "cwe_primary": "CWE-337",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-337": "Predictable Seed in Pseudo-Random Number Generator (PRNG)"
+      }
+    },
+    "software": {
+      "vendors": "ASUS",
+      "products": "Router",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "asus:router",
+          "vendor": "ASUS",
+          "product": "Router",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.asus.com/security-advisory"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19396",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19396"
+    },
+    "item_id": "CVE-2026-19396",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer ASUS router PRNG weakness in IFTTT pairing, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19386",
+    "identity": {
+      "title": "CVE-2026-19386",
+      "published": "2026-10-07 02:05:31",
+      "modified": "2026-10-07 19:17:36",
+      "description": "A stack-based buffer overflow in the ASUS router modules allows an authenticated nearby user to execute arbitrary code via a crafted configuration file upload that exceeds the expected buffer size.Refer to the ' Security Update for ASUS Router Firmware  ' section on the ASUS Security Advisory for more information."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00192,
+      "percentile": 0.08121,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.asus.com/security-advisory"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-121",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "ASUS",
+      "products": "Router",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "asus:router",
+          "vendor": "ASUS",
+          "product": "Router",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.asus.com/security-advisory"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19386",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19386"
+    },
+    "item_id": "CVE-2026-19386",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer ASUS router firmware buffer overflow requiring authentication, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16528",
+    "identity": {
+      "title": "CVE-2026-16528",
+      "published": "2026-10-07 02:02:43",
+      "modified": "2026-10-07 19:17:35",
+      "description": "Insertion of Sensitive Information into Log File in certain ASUS router models allows a remote authenticated attacker to obtain DDNS credentials from the system log, potentially enabling modification of DNS settings.Refer to the ' Security Update for ASUS Router Firmware  ' section on the ASUS Security Advisory for more information."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00207,
+      "percentile": 0.09878,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.asus.com/security-advisory"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-532"
+      ],
+      "cwe_primary": "CWE-532",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-532": "Insertion of Sensitive Information into Log File"
+      }
+    },
+    "software": {
+      "vendors": "ASUS",
+      "products": "Router",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "asus:router",
+          "vendor": "ASUS",
+          "product": "Router",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.asus.com/security-advisory"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16528",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16528"
+    },
+    "item_id": "CVE-2026-16528",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer ASUS router log disclosure of DDNS credentials, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88962",
+    "identity": {
+      "title": "CVE-2026-88962",
+      "published": "2026-10-07 00:02:53",
+      "modified": "2026-10-07 15:17:57",
+      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper control of code generation."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00789,
+      "percentile": 0.54856,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7290694"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Langflow OSS",
+      "cpe_uris": "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*,cpe:2.3:a:ibm:langflow_oss:1.12.2:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7290694"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-88962",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-88962"
+    },
+    "item_id": "CVE-2026-88962",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche AI workflow tooling requiring authentication, no DPI sector or infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93443",
+    "identity": {
+      "title": "CVE-2026-93443",
+      "published": "2026-10-07 00:02:36",
+      "modified": "2026-10-07 14:44:18",
+      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of special elements used in code."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00582,
+      "percentile": 0.46074,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7290694"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Langflow OSS",
+      "cpe_uris": "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*,cpe:2.3:a:ibm:langflow_oss:1.12.2:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7290694"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93443",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93443"
+    },
+    "item_id": "CVE-2026-93443",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche AI workflow tooling requiring authentication, no DPI sector or infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93449",
+    "identity": {
+      "title": "CVE-2026-93449",
+      "published": "2026-10-07 00:02:05",
+      "modified": "2026-10-07 15:17:58",
+      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper control of code generation."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00582,
+      "percentile": 0.46074,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7290694"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Langflow OSS",
+      "cpe_uris": "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*,cpe:2.3:a:ibm:langflow_oss:1.12.2:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7290694"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93449",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93449"
+    },
+    "item_id": "CVE-2026-93449",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche AI workflow tooling requiring authentication, no DPI sector or infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93445",
+    "identity": {
+      "title": "CVE-2026-93445",
+      "published": "2026-10-07 00:01:50",
+      "modified": "2026-10-07 17:17:02",
+      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper control of generation of code."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0061,
+      "percentile": 0.47547,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7290694"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "cwe_primary": "CWE-94",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-94": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Langflow OSS",
+      "cpe_uris": "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*,cpe:2.3:a:ibm:langflow_oss:1.12.2:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7290694"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93445",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93445"
+    },
+    "item_id": "CVE-2026-93445",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche AI workflow tooling requiring authentication, no DPI sector or infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93447",
+    "identity": {
+      "title": "CVE-2026-93447",
+      "published": "2026-10-07 00:01:39",
+      "modified": "2026-10-07 17:17:02",
+      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow an attacker with access to the server secret and Redis write access to submit a malicious serialized cache value. When the value was retrieved, deserialization could have executed attacker-controlled code with the privileges of the service process."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00429,
+      "percentile": 0.35129,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7290694"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Langflow OSS",
+      "cpe_uris": "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*,cpe:2.3:a:ibm:langflow_oss:1.12.2:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7290694"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93447",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93447"
+    },
+    "item_id": "CVE-2026-93447",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Requires server secret and Redis write access, implausible preconditions for untargeted DPI exploitation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93675",
+    "identity": {
+      "title": "CVE-2026-93675",
+      "published": "2026-10-07 00:01:27",
+      "modified": "2026-10-07 17:17:03",
+      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote attacker to execute arbitrary code due to an expected dependency confusion."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00678,
+      "percentile": 0.50795,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7290694"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-440"
+      ],
+      "cwe_primary": "CWE-440",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-440": "Expected Behavior Violation"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Langflow OSS",
+      "cpe_uris": "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*,cpe:2.3:a:ibm:langflow_oss:1.12.2:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7290694"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93675",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93675"
+    },
+    "item_id": "CVE-2026-93675",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Dependency confusion in niche AI developer tooling, lacks broad enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93677",
+    "identity": {
+      "title": "CVE-2026-93677",
+      "published": "2026-10-07 00:01:14",
+      "modified": "2026-10-07 17:17:03",
+      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to obtain sensitive information due to exposure of sensitive information to an unauthorized actor."
+    },
+    "cvss": {
+      "base_score": 7.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0046,
+      "percentile": 0.37815,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7290694"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Langflow OSS",
+      "cpe_uris": "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*,cpe:2.3:a:ibm:langflow_oss:1.12.2:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7290694"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93677",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93677"
+    },
+    "item_id": "CVE-2026-93677",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authenticated information leak in niche AI workflow tooling, no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93678",
+    "identity": {
+      "title": "CVE-2026-93678",
+      "published": "2026-10-07 00:01:03",
+      "modified": "2026-10-07 14:44:18",
+      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to obtain sensitive information due to improper authorization."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "HIGH",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00382,
+      "percentile": 0.30062,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7290694"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "cwe_primary": "CWE-639",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-639": "Authorization Bypass Through User-Controlled Key"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Langflow OSS",
+      "cpe_uris": "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*,cpe:2.3:a:ibm:langflow_oss:1.12.2:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7290694"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93678",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93678"
+    },
+    "item_id": "CVE-2026-93678",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authenticated authorization flaw in niche AI workflow tooling, no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97673",
+    "identity": {
+      "title": "CVE-2026-97673",
+      "published": "2026-10-07 00:00:11",
+      "modified": "2026-10-07 17:17:04",
+      "description": "IBM Langflow OSS 1.0.0 through 1.12.2 could allow a remote authenticated attacker to execute arbitrary code due to improper input validation."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00435,
+      "percentile": 0.35788,
+      "date": "2026-10-07"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7290694"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-693"
+      ],
+      "cwe_primary": "CWE-693",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-693": "Protection Mechanism Failure"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Langflow OSS",
+      "cpe_uris": "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*,cpe:2.3:a:ibm:langflow_oss:1.12.2:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7290694"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-97673",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-97673"
+    },
+    "item_id": "CVE-2026-97673",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "LLM orchestration framework requiring authentication with no DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-70516",
+    "identity": {
+      "title": "CVE-2025-70516",
+      "published": "2026-10-07 00:00:00",
+      "modified": "2026-10-07 21:17:06",
+      "description": "The websocket handler of Fanvil x7a firmware version 2.6.0.1182 does not enforce proper authentication restrictions against sessionless users. The lack of restrictions grants anyone the ability to view any device resources such as operational logs or perform diagnostic requests."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.darkpoint.ca/blog/2026/02/27/Fanvil-x7a-PA2S-Vulnerability-Disclosure"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": null,
+      "products": null,
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.darkpoint.ca/blog/2026/02/27/Fanvil-x7a-PA2S-Vulnerability-Disclosure",
+      "http://download.fanvil.com/Firmware/Release/X7A/",
+      "https://www.fanvil.com/products/p1/x/20210921/5043.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-70516",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-70516"
+    },
+    "item_id": "CVE-2025-70516",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "VoIP desk phone firmware with unauthenticated info leak falls under consumer/office IoT exclusion with no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-70521",
+    "identity": {
+      "title": "CVE-2025-70521",
+      "published": "2026-10-07 00:00:00",
+      "modified": "2026-10-07 21:17:06",
+      "description": "The management portal's diagnostic ping tool of Fanvil x7a firmware version 2.6.0.1182 does not handle user supplied input securely. The lack of secure user input handling allows any unauthenticated attacker to inject commands and run code in the underlying Android operating system."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.darkpoint.ca/blog/2026/02/27/Fanvil-x7a-PA2S-Vulnerability-Disclosure"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-77"
+      ],
+      "cwe_primary": "CWE-77",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-77": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": null,
+      "products": null,
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.darkpoint.ca/blog/2026/02/27/Fanvil-x7a-PA2S-Vulnerability-Disclosure",
+      "https://www.fanvil.com/products/p5/wulianwangwangguan_1/20210921/5035.html",
+      "http://download.fanvil.com/Firmware/Release/PA2S/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-70521",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-70521"
+    },
+    "item_id": "CVE-2025-70521",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "VoIP desk phone firmware with unauthenticated RCE falls under consumer/office IoT exclusion despite high CVSS.",
+      "fail_open": false
+    }
+  }
+]

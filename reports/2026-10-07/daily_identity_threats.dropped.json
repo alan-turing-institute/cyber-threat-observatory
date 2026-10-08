@@ -1,0 +1,306 @@
+[
+  {
+    "id": "CVE-2026-63692",
+    "published": "2026-10-06 14:38:07",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell Container Storage Modules, versions prior to 1.18.0, contain(s) a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise storage software with missing authentication, lacks identity/access infrastructure nexus or DPI sector cues.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63688",
+    "published": "2026-10-06 14:32:58",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell Container Storage Modules (CSM), versions prior to v1.18.0, contains a Missing Authentication for Critical Function vulnerability in the csm-authorization-storage gRPC server. An unauthenticated remote attacker could potentially exploit this vulnerability, leading to unauthorized access to storage backend administrator credentials for all registered storage arrays.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise storage credential exposure, not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105192",
+    "published": "2026-10-07 09:40:11",
+    "cvss": 9.8,
+    "epss": 0.00671,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LMCache multiprocess mode, also called distributed mode, opens an unauthenticated ZeroMQ ROUTER so worker processes can register and share KV cache blocks. Messages on that socket are msgpack. Extension code 1 is passed to DeviceIPCWrapper.Deserialize, which calls pickle.loads, while the server is still decoding request arguments and before the handler runs. A single unauthenticated ZMQ DEALER message to the transport port (default 5555) therefore executes code as the user the LMCache process runs as. Official container images run that process as root. The transport binds to localhost unless the operator sets a routable address with --host, which is how multi-node deployments let peers connect.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI/LLM caching tooling with unauthenticated RCE, explicitly excluded from DPI identity scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94293",
+    "published": "2026-10-06 06:38:04",
+    "cvss": 9.8,
+    "epss": 0.00349,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated remote attacker can modify Asset Administration Shell submodel data via PATCH requests and can read all data exposed by the GET endpoints.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial IoT standard (Asset Administration Shell), excluded from DPI scope per IIoT/SCADA exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76480",
+    "published": "2026-10-07 16:15:52",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the engineering team for Cisco License On-Prem, formerly Cisco Smart Software Manager On-Prem (SSM On-Prem), has conducted a comprehensive internal security review. This review resulted in software hardening releases that address multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-76480 are related to issues with improper authentication that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-306.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise software licensing manager with improper authentication, lacks identity/access infrastructure nexus or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-62253",
+    "published": "2026-10-07 16:11:00",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Homer is open source telecom observability software. Prior to version 11.0.283, both JWT middleware functions (`JWTMiddleware` and `JWTMiddlewareV4`) immediately return `next(c)` when `jwtSecret == \"\"`. The JWT secret defaults to an empty string. On a default installation, all protected API endpoints under `/api/v1`, `/api/v3`, and `/api/v4` are completely unauthenticated. Version 11.0.283 patches the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Telecom observability software with default JWT bypass, not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76268",
+    "published": "2026-10-07 20:46:31",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Splunk Enterprise versions below 10.4.3 and 10.2.7, an unauthenticated user with network access to the Patroni Representational State Transfer (REST) Application Programming Interface (API) on a search head cluster member could execute attacker-controlled operating-system commands. The vulnerability is possible because this interface does not require authentication for critical configuration operations. For more information see Sidecar configuration settings (https://help.splunk.com/en/data-management/splunk-enterprise-admin-manual/10.2/splunk-sidecars/sidecar-configuration-settings) in the Splunk documentation.\n\nSplunk Enterprise versions 10.0.x and 9.4.x are not affected.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "SIEM/log management software with missing authentication on internal API, lacks identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102159",
+    "published": "2026-10-06 19:39:53",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An access-control flaw in the CV-CUE backend may allow an unauthenticated network attacker to access functionality intended only for internal services. Successful exploitation may expose sensitive location information or disrupt affected services.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Generic backend access-control flaw with no identity/access infrastructure role or DPI sector cues.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-106037",
+    "published": "2026-10-06 14:03:14",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Mooncake through 0.3.13.post1 contains a missing authentication vulnerability in the Store REST service, which binds to 0.0.0.0 without authentication on any route. Unauthenticated attackers can call routes such as /api/get, /api/put, /api/remove_all and /api/mount to read cached KV data with user prompts, inject or delete objects, and mount attacker-described segments.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI/LLM infrastructure caching service with missing authentication, excluded from DPI identity scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107204",
+    "published": "2026-10-07 15:24:03",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LMCache through 0.5.5 contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute Python code by posting scripts to the /run_script endpoint. Attackers can recover real builtins through the injected FastAPI app object, bypassing the guarded __import__, to import os and run operating system commands as the LMCache process.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI/LLM caching tooling with unauthenticated RCE, explicitly excluded from DPI identity scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107206",
+    "published": "2026-10-07 15:24:04",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LMCache through 0.5.5 contains a missing authentication vulnerability in the multiprocess mode HTTP server that allows remote unauthenticated attackers to access management endpoints listening on all interfaces by default. Attackers can read environment credentials via GET /env and configuration via GET /config, clear caches, delete cache objects, and modify tenant quotas to evict other tenants' cached data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "AI/ML caching software missing authentication on management endpoints; lacks identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107282",
+    "published": "2026-10-07 21:21:29",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.13  and 2.16.1, cross-host request replay updates the current request but leaves the target request and related proxy context pointing at the original origin. Connection-pool selection, CONNECT handling, realm selection, and TLS setup can consequently send the original host's path, Host header, Authorization credentials, or plaintext request to the replay destination. Documented ResponseFilter failover and retry paths can trigger the replay. This issue is fixed in versions 3.0.13 and 2.16.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Java HTTP client library credential leakage via request replay; foundational library but lacks direct identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-39764",
+    "published": "2026-10-06 08:34:28",
+    "cvss": 9.3,
+    "epss": 0.00304,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Unauthenticated SQL Injection in Radius Booking — Booking Calendar for Appointments &amp; Services <= 1.0.19 versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress booking plugin unauthenticated SQLi; consumer software exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-70516",
+    "published": "2026-10-07 00:00:00",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The websocket handler of Fanvil x7a firmware version 2.6.0.1182 does not enforce proper authentication restrictions against sessionless users. The lack of restrictions grants anyone the ability to view any device resources such as operational logs or perform diagnostic requests.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "IP phone firmware authentication bypass; consumer/IoT hardware exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-106038",
+    "published": "2026-10-06 14:03:15",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Mooncake Store master through 0.3.13.post1 contains a missing authentication vulnerability that allows unauthenticated attackers to force-delete any object via Remove, RemoveByRegex, RemoveAll and BatchRemove on the coro_rpc port. Attackers can send forged requests with the force flag set to bypass lease checks, wipe keys matching any regex, or clear the entire store, causing cache loss and request failures.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "AI/ML distributed cache missing authentication on control plane; lacks identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107205",
+    "published": "2026-10-07 15:24:04",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LMCache through 0.5.5 contains a missing authentication vulnerability in the multiprocess coordinator that allows remote unauthenticated attackers to access its HTTP fleet control API listening on all interfaces by default. Attackers can register or deregister instances via /instances, overwrite quotas via /quota endpoints, inject events via /events, and enumerate /directory/keys to disrupt caching and disclose placement metadata.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "AI/ML caching coordinator missing authentication on fleet API; software lacks DPI identity/access sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107231",
+    "published": "2026-10-07 21:06:26",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.13 and 2.16.1, Realm.Builder treats a Digest challenge that yields no usable nonce as a Basic challenge. A malicious origin or proxy can label a challenge Digest while omitting or emptying the nonce, causing the client to resend the username and password using reversible Basic authentication. Both origin and proxy challenge parsers are affected. This issue is fixed in versions 3.0.13 and 2.16.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Java HTTP client credential downgrade from Digest to Basic; foundational library but lacks direct identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107232",
+    "published": "2026-10-07 21:09:03",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The AsyncHttpClient (AHC) library allows Java applications to easily execute HTTP requests and asynchronously process HTTP responses. Prior to 3.0.12 on 3.x and 2.16.1 on 2.x, the client infers that an HTTP proxy tunnel exists from the last request method rather than the CONNECT result. After a proxy rejects CONNECT, redirect or authentication handlers can write an origin request and its Authorization credentials onto the still-plaintext proxy connection. Basic credentials can be recovered directly, while NTLM responses may be cracked or relayed. This issue is fixed in versions 3.0.12 and 2.16.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Credential leakage in generic Java HTTP client library (AsyncHttpClient) lacks direct identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104850",
+    "published": "2026-10-06 16:08:21",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MCP TypeScript SDK is the official TypeScript SDK for Model Context Protocol servers and clients. Starting in version 1.12.0 and prior to versions 1.31.0 and 2.2.0, the SDK's OAuth client support let the MCP server a client connected to decide which authorization server received the client's OAuth credentials. Stored and pre-provisioned credentials were not bound to the authorization server they belong to. A malicious or compromised MCP server could name its own authorization server in its protected resource metadata. Without any user interaction, the client would send that server the `refresh_token` and `client_secret` stored from an earlier sign-in (1.x), or the configured `client_secret` or signed assertion of a bundled non-interactive provider (1.x and 2.x). Only those applications that use the SDK as an MCP client over HTTP with an `authProvider`: your own `OAuthClientProvider`, or the bundled `ClientCredentialsProvider`, `PrivateKeyJwtProvider`, `StaticPrivateKeyJwtProvider` or (2.x) `CrossAppAccessProvider` and that may connect to an MCP server the owners does not fully trust while holding credentials for a legitimate authorization server are affected. `@modelcontextprotocol/sdk` 1.31.0 (1.x) and `@modelcontextprotocol/client` 2.2.0 (2.x) patch the issue. A workaround for those who cannot upgrade is available. 2.0.0 and 2.1.0 already accept `expectedIssuer`. On 1.x, the only workaround is to connect OAuth-enabled clients only to MCP servers you trust.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "OAuth credential exposure in MCP TypeScript SDK falls under LLM/AI tooling exclusion and lacks public-sector IdAM or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  }
+]
