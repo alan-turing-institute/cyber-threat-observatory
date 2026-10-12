@@ -1,0 +1,322 @@
+[
+  {
+    "id": "CVE-2026-108707",
+    "published": "2026-10-11 01:12:31",
+    "cvss": 9.8,
+    "epss": 0.00552,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Wukong_HRM through commit 186115e contains an authentication bypass vulnerability in ParamAspect that allows unauthenticated attackers to call every HRM API endpoint by omitting the AUTH-TOKEN header. Attackers gain HR administrator access to read payslips, salary history and employee personal data, download attachments, and modify or delete company-wide HR records.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Enterprise HRM application with authentication bypass, not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104732",
+    "published": "2026-10-10 03:26:45",
+    "cvss": 9.8,
+    "epss": 0.00473,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Advanced IP Blocker plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 8.13.13 The vulnerability exists because `handle_login_action()` performs no server-side check — via transient, session marker, or equivalent — that a requester completed step-1 password authentication before processing a step-2 TOTP submission for the POSTed `user_id`; compounding this, an error branch in the function unconditionally mints a fresh `advaipbl-2fa-interim-{user_id}` nonce and delivers it in a `Location` header to any unauthenticated caller, after which `display_2fa_login_form_step_2()` renders a valid `advaipbl-2fa-verify-{user_id}` nonce in HTML — both nonces computed against a fixed `uid=0` empty-session context and therefore fully reusable by the attacker across subsequent requests. This makes it possible for unauthenticated attackers to bypass authentication entirely for any 2FA-enabled account, including administrators, by brute-forcing an unthrottled 6-digit TOTP code (no attempt counter, no account lockout, and no `wp_login_failed` firing) and receiving a fully authenticated session cookie via `wp_set_auth_cookie` without ever supplying the account password, resulting in complete site takeover. Exploitation requires only a known `user_id` for an account that has the plugin's 2FA feature enabled.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite authentication bypass CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104803",
+    "published": "2026-10-10 07:41:44",
+    "cvss": 9.8,
+    "epss": 0.00449,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WPCOM Member plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.7.27 via the `uuid` and `code` parameters of the social-login callback handler registered on the `init` hook. The vulnerability exists because the `login` function's social-login flow performs no nonce validation, no OAuth state verification, and no per-visitor namespace isolation in the session store, allowing an unauthenticated attacker to issue a crafted GET request that writes an attacker-named, attacker-valued entry into the global session namespace (bypassing the per-visitor prefix by prepending an underscore), then issue a second GET request triggering `weapp_new_user()` to read that forged entry and resolve the attacker-supplied `openid` value to a bound WordPress account before `wp_set_auth_cookie()` establishes a fully authenticated session. This makes it possible for unauthenticated attackers to log in as any WordPress user — including administrators — whose bound social provider identifier (openid/unionid) is known or discoverable. Successful exploitation requires that the target site has at least one social provider configured (which activates the vulnerable handler) and that the attacker knows or can enumerate the victim account's bound openid or unionid.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite authentication bypass CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84734",
+    "published": "2026-10-11 06:00:13",
+    "cvss": 9.8,
+    "epss": 0.00146,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Mindstien Quick Login WordPress plugin through 1.0 does not correctly validate a value supplied in the request against the visitor's own session before authenticating them, allowing unauthenticated attackers to obtain a session as the administrator account the Mindstien Quick Login WordPress plugin through 1.0 is configured with.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite session validation flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84737",
+    "published": "2026-10-11 06:00:13",
+    "cvss": 9.8,
+    "epss": 0.00146,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Freeton WP WordPress plugin through 1.0.0 does not correctly validate the activation code when authenticating a user, allowing unauthenticated attackers to log in as any user whose email address they know, including administrators.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite authentication bypass CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108549",
+    "published": "2026-10-10 14:35:04",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "cc-connect through 1.5.0 contains a missing authentication vulnerability in the MAX platform adapter webhook mode in platform/max/max.go that accepts unauthenticated updates when no webhook_secret is configured. Remote attackers reaching the webhook listener on port 8080 can forge updates with an allowed or admin user_id to run privileged commands like /shell on the host.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Platform adapter webhook with missing authentication, not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88827",
+    "published": "2026-10-11 06:00:16",
+    "cvss": 8.8,
+    "epss": 0.00171,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Disable Users WordPress plugin through 1.0.5 does not enforce its account-disabling control on all authentication paths, allowing the holder of an account an administrator has disabled to continue authenticating with the account's full privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite account-disabling bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108863",
+    "published": "2026-10-11 13:26:09",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Katanemo Plano through 0.4.37 contains a missing authentication vulnerability that allows unauthenticated network attackers to access the Envoy admin interface, which is bound to all host interfaces on port 9901. Attackers can request the /config_dump endpoint to read configured LLM provider API keys in plaintext from the WASM filter configuration.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "AI proxy admin interface missing authentication leading to API key exposure, not identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108739",
+    "published": "2026-10-11 12:19:44",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenAgents Workspace backend through launcher-v1.0.17 contains an information disclosure vulnerability that allows unauthenticated attackers to list all workspaces via GET /v1/workspaces. Attackers can read the unmasked browserfabric_api_key in each workspace's settings map, along with workspace ids, slugs, creator emails and member lists.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Information disclosure of API keys and workspace metadata with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108522",
+    "published": "2026-10-11 04:00:17",
+    "cvss": 8.3,
+    "epss": 0.00419,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was found in Studio-Saelix Sencho up to 0.94.1. This affects an unknown part of the file /api/auth/login of the component Login Endpoint. Performing a manipulation of the argument X-Forwarded-For results in improper authentication. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The patch is named 79b86ddcd4aefdd6941f098e35990ab397b13c72. To fix this issue, it is recommended to deploy a patch. The vendor confirms: \"The login limiter relied on client-supplied X-Forwarded-For data without an explicit trusted-proxy boundary, allowing an attacker to rotate the apparent client address. The remediation now ignores forwarding headers by default, accepts them only from explicitly configured proxy CIDRs, and adds a separate failed-attempt limit keyed by normalized account identity.\"",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Niche software (Studio-Saelix Sencho) with login limiter bypass via X-Forwarded-For, lacking enterprise IdAM or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104759",
+    "published": "2026-10-10 07:41:47",
+    "cvss": 8.1,
+    "epss": 0.00515,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WPO365 | SEAMLESS WORDPRESS + MICROSOFT INTEGRATION (WPO365 | LOGIN) plugin for WordPress is vulnerable to Authentication Bypass via OIDC Nonce Replay in all versions up to, and including, 44.1 This is due to `Id_Token_Service_Deprecated::process_openidconnect_token()` using the incompatible WordPress core `wp_verify_nonce()` function to validate a nonce produced by `Nonce_Service::create_nonce()` — a 64-character hex value that `wp_verify_nonce()` can never successfully verify — causing the nonce check to silently fail without terminating authentication, so execution continues into `authenticate_oidc_user()` with the attacker-supplied `id_token`. This makes it possible for unauthenticated attackers who have obtained a previously-issued, valid `id_token` for a target account to replay that token and authenticate as any WordPress user, including administrators, resulting in full site takeover. This vulnerability is only exploitable when the `use_id_token_parser_v2` plugin option is enabled, as this is the configuration that routes token processing through the deprecated parser containing the broken nonce check.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin (WPO365) explicitly excluded by base and overlay rules for consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104797",
+    "published": "2026-10-10 03:26:44",
+    "cvss": 8.1,
+    "epss": 0.00408,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Advanced Form Integration — Connect Forms to 300+ Apps plugin for WordPress is vulnerable to Authentication Bypass via Unverified Password Change in all versions up to, and including, 2.9.0 The `adfoin_ultimatememberac_send_data` function, which powers the Ultimate Member \"Update Profile Field\" action, resolves the target WordPress user from an attacker-supplied email address and passes an attacker-controlled field key and value directly to `UM()->user()->update_profile()` in the `account` context — which explicitly bypasses Ultimate Member's banned-key validation — without performing any submitter identity verification, ownership check, capability check, current-password reauthentication, or restriction on sensitive keys such as `user_pass`. This makes it possible for unauthenticated attackers to change the password of any WordPress user account, including Administrator accounts, by submitting a public Contact Form 7 form with a target email and `user_pass` as the field key, enabling full site takeover. Exploitation requires an administrator to have pre-configured a Contact Form 7 integration that maps the target email, field key, and value from public form inputs to the Ultimate Member Update Profile Field action — the exact workflow the plugin's own UI advertises for this action type.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by base and overlay rules for consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94256",
+    "published": "2026-10-10 06:00:10",
+    "cvss": 8.1,
+    "epss": 0.00136,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The SMS Alert  WordPress plugin before 4.0.1 does not verify that the account being logged in is the one the verified one-time code belongs to, allowing unauthenticated attackers to sign in as any user with a stored phone number, including an administrator, by completing a code challenge on a phone they control.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by base and overlay rules for consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108737",
+    "published": "2026-10-11 12:19:42",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Traccar through 6.16.0 contains a weak password recovery vulnerability that allows attackers to reuse password reset tokens as session credentials because TokenManager does not bind tokens to a purpose. Attackers holding a leaked reset link can obtain a full session via /api/session or change passwords via /api/password/update, retaining access for seven days even after the victim resets their password.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "GPS tracking platform (Traccar) with session token reuse flaw, but lacks enterprise IdAM or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108548",
+    "published": "2026-10-10 14:35:03",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "AstronRPA through 1.1.6 contains an authentication bypass vulnerability in the OpenResty gateway's auth_handler.lua that accepts any Bearer token without validation. Unauthenticated attackers can send arbitrary Bearer values to reach /api/resource/ and /api/rpa-ai-service/ routes and spoof X-User-Id or user_id headers to act as any user.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "RPA platform (AstronRPA) gateway auth bypass, but not core identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108757",
+    "published": "2026-10-11 12:19:55",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Nexting pinclaw OpenClaw channel plugin through 0.3.0 contains a missing authentication vulnerability in src/core/http-router.ts that skips the authToken check on POST /pinclaw/send. Unauthenticated attackers reaching port 18790, which binds all interfaces by default, can inject blind prompts into the user's main OpenClaw agent session as user instructions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI agent plugin (OpenClaw) with missing auth, falls under LLM/hobbyist tooling exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108904",
+    "published": "2026-10-11 14:58:06",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "pH7Builder (pH7 Social Dating CMS) before 18.5.0 contains an information disclosure vulnerability that allows API clients to obtain sensitive member data because UserController::users() and user() return unfiltered database rows. Attackers holding a valid private API key can retrieve bcrypt password hashes, non-expiring hashValidation reset tokens, and TOTP secrets to take over accounts and bypass two-factor authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer dating CMS (pH7Builder) explicitly excluded by base and overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-42709",
+    "published": "2026-10-10 19:35:13",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Unauthenticated Cross Site Scripting (XSS) in Food Menu – Restaurant Menu & Online Ordering for WooCommerce <= 6.0.5 versions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "WooCommerce plugin XSS vulnerability, no identity/access nexus and consumer software exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108749",
+    "published": "2026-10-11 12:19:49",
+    "cvss": 6.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "docling-serve 1.14.0 through 1.36.0 contains a missing authentication vulnerability that allows unauthenticated attackers to access /v1/memory/stats and /v1/memory/counts because they omit the require_auth dependency. Attackers can bypass the configured DOCLING_SERVE_API_KEY to read process and cgroup memory telemetry, object type histograms, and force repeated gc.collect() heap enumeration.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI document service (docling-serve) missing auth on telemetry endpoints, no identity/access control impact and falls under info-leak exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107120",
+    "published": "2026-10-10 06:00:09",
+    "cvss": 5.3,
+    "epss": 0.00146,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Contest Gallery  WordPress plugin before 33.0.1 does not limit the number of attempts against its front-end registration email-verification step, which relies on a short numeric PIN, allowing unauthenticated attackers to brute-force the PIN and create and activate a WordPress account bound to an email address they do not own, gaining an authenticated session.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Explicit exclusion for WordPress plugins applies; consumer/hobbyist software with no DPI-sector identity nexus.",
+      "fail_open": false
+    }
+  }
+]

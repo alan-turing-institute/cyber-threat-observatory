@@ -1,0 +1,129 @@
+{
+  "alert_id": "54f21c09",
+  "report_date": "2026-10-11",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-10-12 04:01:34",
+  "items": [
+    {
+      "item_id": "CVE-2026-108718",
+      "item_type": "cve",
+      "title": "CVE-2026-108718 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108718",
+      "source": "WAVE",
+      "published": "2026-10-11",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Digital Identity sector: directly compromises OAuth authorization flows and token issuance, enabling persistent account takeover in data/analytics platforms.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-108718.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-18812f2095",
+      "item_type": "campaign",
+      "title": "GhostCode attackers abuse device codes to take over Microsoft 365 accounts",
+      "url": "https://computerworld.com/article/4223889/ghostcode-attackers-abuse-device-codes-to-take-over-microsoft-365-accounts.html",
+      "source": "ketch",
+      "published": "2026-10-11",
+      "category": "threats",
+      "pir": [
+        "1.b.2"
+      ],
+      "excerpt": "Threat actors behind the GhostCode campaign are exploiting Microsoft 365 device code authentication flows to bypass multi-factor authentication and seize enterprise accounts. By tricking users into entering legitimate device codes on malicious portals, attackers gain persistent access to email, Teams, and cloud storage. Infrastructure defenders should monitor for anomalous device code sign-ins, enforce conditional access policies, and educate users on recognizing fake authentication prompts.",
+      "signals": {
+        "dpi_fit": 9.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-c4669ac6ee",
+      "item_type": "campaign",
+      "title": "Inside an AI‑enabled device code phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+      "source": "ketch",
+      "published": "2026-10-11",
+      "category": "threats",
+      "pir": [
+        "1.c.1"
+      ],
+      "excerpt": "Microsoft security researchers detail a sophisticated phishing operation leveraging generative AI to craft highly convincing device code prompts. The campaign dynamically adapts language and branding to match target organizations, significantly increasing click-through rates. Defenders are advised to deploy AI-aware email filtering, restrict device code usage to trusted networks, and implement continuous authentication monitoring to detect rapid credential validation attempts.",
+      "signals": {
+        "dpi_fit": 9.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-9487078dcb",
+      "item_type": "campaign",
+      "title": "Device Code Phishing: Turning a Convenience Feature Into an MFA Bypass",
+      "url": "https://www.trendmicro.com/en_us/research/26/g/device-code-phishing.html",
+      "source": "ketch",
+      "published": "2026-10-11",
+      "category": "threats",
+      "pir": [
+        "1.b.1"
+      ],
+      "excerpt": "Trend Micro analyzes how the convenience of device code authentication is being weaponized to circumvent traditional MFA controls. Attackers host fake login pages that prompt users to input codes generated on their primary devices, effectively transferring session tokens to malicious infrastructure. IT teams should evaluate the risk-benefit ratio of device code flows, enforce step-up authentication for sensitive actions, and deploy endpoint detection to block unauthorized browser-based auth redi",
+      "signals": {
+        "dpi_fit": 8.8
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-2b6671e1c0",
+      "item_type": "campaign",
+      "title": "Device Code Phishing is an Evolution in Identity Takeover",
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/device-code-phishing-evolution-identity-takeover",
+      "source": "ketch",
+      "published": "2026-10-11",
+      "category": "threats",
+      "pir": [
+        "1.a.3"
+      ],
+      "excerpt": "Proofpoint examines the tactical shift from traditional credential harvesting to device code exploitation as a primary identity takeover vector. This evolution allows threat actors to bypass passwordless and MFA protections by leveraging legitimate OAuth flows. Security operations centers must update detection rules to flag rapid device code validations, implement zero-trust access controls, and conduct regular identity hygiene audits to mitigate lateral movement risks.",
+      "signals": {
+        "dpi_fit": 8.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-108865",
+      "item_type": "cve",
+      "title": "CVE-2026-108865",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108865",
+      "source": "vulners/duckdb",
+      "published": "2026-10-11",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "AmoyLab Unla through 0.10.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain valid access tokens because the OAuth2 server never authenticates a resource owner. Attackers can register a client, request a code from /authorize, and exchange it at /token to access OAuth2-protected MCP prefixes, proxied upstream APIs and injected credentials.",
+      "signals": {
+        "cvss": 8.8,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 1,
+      "daily_phishing_campaigns": 4,
+      "daily_identity_threats": 1
+    }
+  }
+}
