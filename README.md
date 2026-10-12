@@ -36,3 +36,15 @@ Analysis outcomes follow a 4-Tier System Logic:
 - TIER 2: High value but requires prerequisites (exploited/PoC but can't access from outside immediately, but provides high-impact gain)
 - TIER 3: Arsenal value, post-compromise utility, significant prerequisites, or barriers + low impact
 - TIER 4: Low kill chain utility, theoretical, or admin-only where legitimate access suffices
+
+## Licence
+
+Unless otherwise indicated, original non-code content in this repository, including documentation, reports, analysis and original datasets, is licensed under the [Creative Commons Attribution 4.0 International licence (CC BY 4.0)](LICENSE).
+
+CC BY 4.0 permits sharing and adaptation, including commercial reuse, provided you give appropriate credit, link to the licence and indicate any changes. Please credit the Cyber Threat Observatory, The Alan Turing Institute, retain any supplied author and copyright notices, and link to the relevant source file or report.
+
+Full licence text: [LICENSE](LICENSE). Licence overview: https://creativecommons.org/licenses/by/4.0/
+
+Third-party material, including reproduced vulnerability records, quotations and externally sourced data, remains subject to its original rights and licence terms and is not relicensed by this notice. Linked external resources are also outside its scope. No trademark rights or endorsement are granted.
+
+This is a content licence. Any software added to the repository should carry an explicit, appropriate software licence.
