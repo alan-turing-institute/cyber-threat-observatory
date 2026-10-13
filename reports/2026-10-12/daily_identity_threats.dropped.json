@@ -1,0 +1,274 @@
+[
+  {
+    "id": "CVE-2026-108907",
+    "published": "2026-10-12 16:15:10",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in Netcore NR268 1.7.121109. Affected is the function user_ok of the component CGI Execution. This manipulation causes improper authentication. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer/network router hardware explicitly excluded by DPI identity and overlay rules despite improper authentication.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108707",
+    "published": "2026-10-11 01:12:31",
+    "cvss": 9.8,
+    "epss": 0.00552,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Wukong_HRM through commit 186115e contains an authentication bypass vulnerability in ParamAspect that allows unauthenticated attackers to call every HRM API endpoint by omitting the AUTH-TOKEN header. Attackers gain HR administrator access to read payslips, salary history and employee personal data, download attachments, and modify or delete company-wide HR records.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise HR software lacks public-sector, healthcare, finance, or core identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84737",
+    "published": "2026-10-11 06:00:13",
+    "cvss": 9.8,
+    "epss": 0.00146,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Freeton WP WordPress plugin through 1.0.0 does not correctly validate the activation code when authenticating a user, allowing unauthenticated attackers to log in as any user whose email address they know, including administrators.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by DPI identity and overlay rules for consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84734",
+    "published": "2026-10-11 06:00:13",
+    "cvss": 9.8,
+    "epss": 0.00146,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Mindstien Quick Login WordPress plugin through 1.0 does not correctly validate a value supplied in the request against the visitor's own session before authenticating them, allowing unauthenticated attackers to obtain a session as the administrator account the Mindstien Quick Login WordPress plugin through 1.0 is configured with.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by DPI identity and overlay rules for consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57118",
+    "published": "2026-10-12 18:48:22",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.59, AgentTeam.launch and the Agents alias register GET /{path}/list, POST /{path}, and `POST /{path}/{agent_id}' without access-control checks before listing agents or calling agent.chat. A remotely exposed server can therefore let unauthenticated clients enumerate agents, consume model resources, access connected private context, and trigger agent tools or workflow side effects. This vulnerability is fixed in praisonaiagents 1.6.59.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "LLM/agent framework explicitly excluded by DPI identity rules and lacks identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92681",
+    "published": "2026-10-12 15:09:49",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In @neo4j/graphql versions up to and including 7.6.3, @authentication directives applied at the schema level or on the Query or Mutation types are silently ignored for top-level fields annotated with @cypher. Only @authentication directives placed directly on the individual fields are enforced. An application that exposes a top-level @cypher field and relies on schema-level or type-level @authentication to protect it allows unauthenticated callers to invoke the field and run the configured Cypher statement with the privileges of the GraphQL service account, which may permit reading and modifying data. Fixed in 7.6.4.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Database GraphQL layer authentication bypass lacks explicit public-sector, healthcare, finance, or core identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109321",
+    "published": "2026-10-12 16:05:13",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Grav Login OAuth plugin (grav-plugin-login-oauth) before 1.4.3 provisions OAuth accounts as ordinary Grav users with a deterministic <provider>.<id> username and an unsalted MD5 hash of the provider identifier as the password, without disabling password login. Unauthenticated remote attackers who learn or guess a provider identifier can reproduce these credentials and log in, gaining administrative control of privileged accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "CMS (Grav) OAuth plugin explicitly excluded by DPI identity and overlay rules for consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88827",
+    "published": "2026-10-11 06:00:16",
+    "cvss": 8.8,
+    "epss": 0.00171,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Disable Users WordPress plugin through 1.0.5 does not enforce its account-disabling control on all authentication paths, allowing the holder of an account an administrator has disabled to continue authenticating with the account's full privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin explicitly excluded by overlay despite authentication bypass wording.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108739",
+    "published": "2026-10-11 12:19:44",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenAgents Workspace backend through launcher-v1.0.17 contains an information disclosure vulnerability that allows unauthenticated attackers to list all workspaces via GET /v1/workspaces. Attackers can read the unmasked browserfabric_api_key in each workspace's settings map, along with workspace ids, slugs, creator emails and member lists.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pure information disclosure of API keys with no authentication or access-control impact, excluded by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108863",
+    "published": "2026-10-11 13:26:09",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Katanemo Plano through 0.4.37 contains a missing authentication vulnerability that allows unauthenticated network attackers to access the Envoy admin interface, which is bound to all host interfaces on port 9901. Attackers can request the /config_dump endpoint to read configured LLM provider API keys in plaintext from the WASM filter configuration.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Missing authentication on Envoy proxy admin interface primarily exposes LLM API keys rather than identity/access controls, weak software fit for DPI identity stream.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109312",
+    "published": "2026-10-12 16:05:07",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Grav Login plugin 2.7.0 before 3.9.9 contains an authentication bypass in processUserProfile(), which checks that the session user exists but not that a pending front-end 2FA session is fully authorized. Attackers with a victim's password who can publish a page form without an access rule can invoke update_user before completing 2FA to disable twofa_enabled and take over the account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "CMS login plugin (Grav) falls under consumer/hobbyist software exclusion despite 2FA bypass wording.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109313",
+    "published": "2026-10-12 16:05:08",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Grav Login plugin 2.7.0 before 3.9.9 contains an authentication bypass vulnerability that allows attackers with a valid password to skip two-factor authentication through remember-me cookie restoration. Attackers can obtain a persistent remember-me cookie after the password step and restore it as a fully authorized session without completing the second factor.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "CMS login plugin (Grav) falls under consumer/hobbyist software exclusion despite session/2FA bypass wording.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108522",
+    "published": "2026-10-11 04:00:17",
+    "cvss": 8.3,
+    "epss": 0.00419,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was found in Studio-Saelix Sencho up to 0.94.1. This affects an unknown part of the file /api/auth/login of the component Login Endpoint. Performing a manipulation of the argument X-Forwarded-For results in improper authentication. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The patch is named 79b86ddcd4aefdd6941f098e35990ab397b13c72. To fix this issue, it is recommended to deploy a patch. The vendor confirms: \"The login limiter relied on client-supplied X-Forwarded-For data without an explicit trusted-proxy boundary, allowing an attacker to rotate the apparent client address. The remediation now ignores forwarding headers by default, accepts them only from explicitly configured proxy CIDRs, and adds a separate failed-attempt limit keyed by normalized account identity.\"",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Improper authentication via X-Forwarded-For bypass in niche software (Studio-Saelix Sencho) with no clear identity/access infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108737",
+    "published": "2026-10-11 12:19:42",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Traccar through 6.16.0 contains a weak password recovery vulnerability that allows attackers to reuse password reset tokens as session credentials because TokenManager does not bind tokens to a purpose. Attackers holding a leaked reset link can obtain a full session via /api/session or change passwords via /api/password/update, retaining access for seven days even after the victim resets their password.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Weak password recovery and token reuse in GPS tracking software (Traccar) lacks identity/access infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108818",
+    "published": "2026-10-12 09:00:18",
+    "cvss": 7.3,
+    "epss": 0.00531,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in agno-agi agno up to 2.7.3/3.0.6. This affects the function get_authentication_dependency of the file auth.py. Such manipulation of the argument security_key leads to missing authentication. The attack may be launched remotely. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication in an AI/LLM agent library falls under the LLM tooling exclusion and lacks a DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108921",
+    "published": "2026-10-12 18:45:15",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in KusalkaSilva Learning-Management-System up to ffeb873f8803f1e9664384ff75000c7da45466d2. This impacts the function mysql_query of the file remove_announcements.php of the component State-Changing Endpoints. Performing a manipulation of the argument ID results in missing authentication. The attack may be initiated remotely. The exploit is now public and may be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a generic Learning Management System hits the explicit LMS exclusion and lacks a DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108757",
+    "published": "2026-10-11 12:19:55",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Nexting pinclaw OpenClaw channel plugin through 0.3.0 contains a missing authentication vulnerability in src/core/http-router.ts that skips the authToken check on POST /pinclaw/send. Unauthenticated attackers reaching port 18790, which binds all interfaces by default, can inject blind prompts into the user's main OpenClaw agent session as user instructions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication in an AI agent channel plugin falls under the LLM/AI tooling exclusion and lacks a DPI identity nexus.",
+      "fail_open": false
+    }
+  }
+]
