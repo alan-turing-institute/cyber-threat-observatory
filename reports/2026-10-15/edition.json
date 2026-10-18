@@ -1,0 +1,243 @@
+{
+  "alert_id": "0b6e08e7",
+  "report_date": "2026-10-15",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-10-18 19:07:31",
+  "items": [
+    {
+      "item_id": "CVE-2026-111923",
+      "item_type": "cve",
+      "title": "CVE-2026-111923 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111923",
+      "source": "WAVE",
+      "published": "2026-10-15",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Unauthenticated DoS on Fleet MDM disrupts device governance and compliance workflows across Government, Healthcare, and Finance sectors.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-111923.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-89ad4a2d52",
+      "item_type": "campaign",
+      "title": "Unmasking EvilTokens: Getting to the root of device code phishing | Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/",
+      "source": "ketch",
+      "published": "2026-10-15",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Microsoft investigates the EvilTokens infrastructure driving widespread device code phishing campaigns. The blog reveals how threat actors automate token harvesting at scale, exploiting legitimate OAuth flows to maintain persistent access. Recommendations include implementing token-bound policies, monitoring for suspicious device code requests, and deploying identity protection alerts to revoke compromised sessions immediately.",
+      "signals": {
+        "dpi_fit": 9.8
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-3113bc46da",
+      "item_type": "campaign",
+      "title": "Inside an AI‑enabled device code phishing campaign | Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+      "source": "ketch",
+      "published": "2026-10-15",
+      "category": "threats",
+      "pir": [
+        "1.j.3"
+      ],
+      "excerpt": "Microsoft details a sophisticated campaign leveraging AI-generated lures to bypass traditional filters and trick users into authorizing device code flows. Attackers exploit OAuth consent mechanisms to silently harvest valid tokens, enabling persistent access without credential theft. Defenders should monitor for anomalous consent grants, enforce conditional access policies, and deploy AI-aware detection models to identify synthetic phishing infrastructure.",
+      "signals": {
+        "dpi_fit": 9.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-b1ba4a56b3",
+      "item_type": "campaign",
+      "title": "Device Code Phishing is an Evolution in Identity Takeover | Proofpoint US",
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/device-code-phishing-evolution-identity-takeover",
+      "source": "ketch",
+      "published": "2026-10-15",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Proofpoint analyzes how device code phishing has matured into a primary vector for identity takeover. Unlike traditional credential harvesting, this method forces users to manually enter authorization codes, granting attackers direct token access. The report outlines TTPs, infrastructure patterns, and mitigation strategies including MFA fatigue defenses, token lifecycle management, and user awareness training focused on consent prompts.",
+      "signals": {
+        "dpi_fit": 9.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-5bc794d1d5",
+      "item_type": "campaign",
+      "title": "Access granted: phishing with device code authorization for account takeover | Proofpoint US",
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/access-granted-phishing-device-code-authorization-account-takeover",
+      "source": "ketch",
+      "published": "2026-10-15",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "This analysis breaks down the mechanics of device code authorization phishing, where attackers host fake login portals prompting victims to input codes from secondary devices. Successful grants yield valid OAuth tokens that bypass MFA. The article provides detection rules for SIEM platforms, recommends restricting app consent permissions, and highlights the growing prevalence of this technique across enterprise environments.",
+      "signals": {
+        "dpi_fit": 8.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-89905b5d2b",
+      "item_type": "campaign",
+      "title": "Storm-2372 conducts device code phishing campaign | Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/",
+      "source": "ketch",
+      "published": "2026-10-15",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Microsoft attributes a targeted device code phishing campaign to the Storm-2372 threat group. The actors leverage customized landing pages and social engineering to trick users into authorizing malicious apps. The report details campaign infrastructure, targeted sectors, and defensive measures such as blocking unknown app registrations and enforcing strict conditional access rules for high-value accounts.",
+      "signals": {
+        "dpi_fit": 8.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-1f8a3cdc42",
+      "item_type": "campaign",
+      "title": "Foreign Threat Actor Conducting Large-Scale Spearphishing Campaign with RDP Attachments | CISA",
+      "url": "https://www.cisa.gov/news-events/alerts/2024/10/31/foreign-threat-actor-conducting-large-scale-spearphishing-campaign-rdp-attachments",
+      "source": "ketch",
+      "published": "2026-10-15",
+      "category": "threats",
+      "pir": [
+        "1.d"
+      ],
+      "excerpt": "CISA warns of a foreign threat actor distributing spearphishing emails containing malicious RDP files designed to establish unauthorized remote access. The campaign targets government and enterprise networks, exploiting weak endpoint protections. Defenders are advised to block RDP file execution via email gateways, monitor for unexpected remote connections, and enforce network segmentation to limit lateral movement.",
+      "signals": {
+        "dpi_fit": 7.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-393b5fdcdc",
+      "item_type": "campaign",
+      "title": "Midnight Blizzard conducts large-scale spear-phishing campaign using RDP files | Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/10/29/midnight-blizzard-conducts-large-scale-spear-phishing-campaign-using-rdp-files/",
+      "source": "ketch",
+      "published": "2026-10-15",
+      "category": "threats",
+      "pir": [
+        "1.d"
+      ],
+      "excerpt": "Microsoft tracks Midnight Blizzard’s large-scale spearphishing campaign utilizing malicious RDP files to compromise enterprise networks. The threat actor leverages stolen credentials and remote access tools to establish persistence. Defenders should prioritize blocking RDP file downloads, monitoring for anomalous remote desktop sessions, and enforcing multi-factor authentication across all administrative accounts.",
+      "signals": {
+        "dpi_fit": 7.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-f74a7cdc93",
+      "item_type": "campaign",
+      "title": "Sophisticated Spearphishing Campaign Targets Government Organizations, IGOs, and NGOs | CISA",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-148a",
+      "source": "ketch",
+      "published": "2026-10-15",
+      "category": "threats",
+      "pir": [
+        "1.c"
+      ],
+      "excerpt": "CISA details a sophisticated spearphishing operation targeting government bodies, international organizations, and NGOs. Attackers use highly tailored lures and credential harvesting portals to gain initial access. The advisory recommends implementing email authentication protocols, restricting external sharing, and deploying advanced threat protection to detect and block malicious attachments and links.",
+      "signals": {
+        "dpi_fit": 6.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-111882",
+      "item_type": "cve",
+      "title": "CVE-2026-111882",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111882",
+      "source": "vulners/duckdb",
+      "published": "2026-10-17",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "phpMyFAQ 3.2.0-alpha before 4.1.9 and 4.2.0-alpha before 4.2.0-beta contains an authentication bypass vulnerability that allows IdP-authenticated users to skip TOTP two-factor authentication through the Keycloak and Entra ID SSO callbacks. Attackers holding a valid or phished IdP identity linked to a 2FA-enabled account can complete the OIDC flow and obtain a fully authenticated session, including administrator accounts.",
+      "signals": {
+        "cvss": 8.6,
+        "epss": 0.00387,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-111898",
+      "item_type": "cve",
+      "title": "CVE-2026-111898",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111898",
+      "source": "vulners/duckdb",
+      "published": "2026-10-17",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "phpMyFAQ 4.2.0-alpha before 4.2.0-beta contains an authentication bypass vulnerability that allows Keycloak users to take over local accounts by matching preferred_username or email. Attackers controlling a Keycloak identity with a colliding username or unverified email can log in through /auth/keycloak/authorize to bind their subject and gain superadmin privileges.",
+      "signals": {
+        "cvss": 7.7,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-111895",
+      "item_type": "cve",
+      "title": "CVE-2026-111895",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111895",
+      "source": "vulners/duckdb",
+      "published": "2026-10-17",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "phpMyFAQ 3.2.0 before 4.0.0 and 4.0.2 before 4.2.0-beta contains an authentication bypass in its Microsoft Entra ID login flow, which links users by the mutable preferred_username claim and whose AuthEntraId::create() ignores the duplicate-login exception while continuing with the existing local account. Attackers controlling an Entra identity in the configured tenant with a matching preferred_username can take over that local account, including super-admin accounts.",
+      "signals": {
+        "cvss": 7.6,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 1,
+      "daily_phishing_campaigns": 8,
+      "daily_identity_threats": 3
+    }
+  }
+}
