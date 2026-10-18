@@ -1,0 +1,258 @@
+[
+  {
+    "id": "CVE-2026-96951",
+    "published": "2026-10-13 19:01:26",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "General OS command injection with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104935",
+    "published": "2026-10-13 15:31:07",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Authentication bypass by spoofing in ICS before version 25.1.3.0 allows a remote unauthenticated attacker to execute arbitrary commands. This does not impact ICS version 22.7R2.14 or prior.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in unspecified ICS product, lacks clear identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108907",
+    "published": "2026-10-12 16:15:10",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in Netcore NR268 1.7.121109. Affected is the function user_ok of the component CGI Execution. This manipulation causes improper authentication. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home router improper authentication, explicitly excluded by overlay hard rules for IoT devices.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87689",
+    "published": "2026-10-13 00:53:00",
+    "cvss": 9.8,
+    "epss": 0.00367,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Metasploit Framework Web Service REST API (msf-ws) exposes the credential store through Msf::WebServices::CredentialServlet. Every mutating and read route in this servlet calls warden.authenticate! before processing a request, except the update_credential (PUT) and delete_credentials (DELETE) handlers for /api/v1/credentials, which omit the authentication call entirely. Because these handlers call directly into lib/msf/core/db_manager/cred.rb, which performs no authorization check of its own, any client able to reach the web service on its default 0.0.0.0:8080 listener can read, modify, or permanently delete every stored credential record — including passwords, hashes, and private keys stored for a shared team engagement — without presenting any authentication. All published versions of Metasploit Framework through 6.5.4 are affected. The issue is fixed in 6.5.5 by adding warden.authenticate! as the first statement in both handlers, matching the pattern used by every other route in the API.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Penetration testing framework credential store bypass, lacks DPI or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-53709",
+    "published": "2026-10-13 14:32:12",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MCP Context Forge is an MCP gateway and administrative platform. Prior to 1.0.2, mcpgateway/config.py and .env.example ship a known JWT_SECRET_KEY, while verify_jwt_token() accepts HS256 tokens signed with that key and get_current_user() creates a platform administrator when the token subject matches PLATFORM_ADMIN_EMAIL and REQUIRE_USER_IN_DB is false. A remote unauthenticated attacker can therefore mint accepted administrator tokens without a database account. While the vulnerable signing key remains configured and the platform-admin bootstrap remains enabled, forged access survives password rotation, account deletion, and session revocation, allowing administrative disclosure, modification, and service disruption. This issue is fixed in version 1.0.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI gateway platform with hardcoded JWT secret, excluded as non-DPI LLM tooling.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109575",
+    "published": "2026-10-12 19:32:13",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In HAProxy Data Plane API 2.2.0 through 3.4.3 (and corresponding Enterprise Edition releases), Server.ConfigureAPI() has process-global authentication logic that improperly drops security controls across multiple transport types. When a TLS Certificate Authority (tls_ca) is configured and a numeric TLS port (tls_port) is specified, the application globally disables Basic authentication on its shared internal request handler. Because this handler is shared concurrently among HTTP, HTTPS, and UNIX domain socket listeners, and mutual TLS (mTLS) client certificate verification (tls.RequireAndVerifyClientCert) is enforced exclusively on the HTTPS server path, all other simultaneously active non-mTLS listeners fail open. Consequently, an unauthenticated attacker capable of reaching an affected HTTP or UNIX management endpoint can completely bypass credentials to gain full API administrative access. This allows unauthorized remote or local actors to read sensitive, cleartext HAProxy configuration data or replace the managed configuration entirely via the raw configuration endpoint. This has been fixed in versions 3.4.4, 3.3.9, 3.2.17, 3.0.25, 2.9.29, and their respective EE backports by migrating to a per-request TLS connection-state validation model.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Reverse proxy authentication logic flaw, lacks identity/access infrastructure nexus required by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57118",
+    "published": "2026-10-12 18:48:22",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. Prior to praisonaiagents 1.6.59, AgentTeam.launch and the Agents alias register GET /{path}/list, POST /{path}, and `POST /{path}/{agent_id}' without access-control checks before listing agents or calling agent.chat. A remotely exposed server can therefore let unauthenticated clients enumerate agents, consume model resources, access connected private context, and trigger agent tools or workflow side effects. This vulnerability is fixed in praisonaiagents 1.6.59.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI multi-agent platform missing access controls, excluded as non-DPI LLM tooling.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69227",
+    "published": "2026-10-13 16:03:43",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw in Portal for ArcGIS allows unauthenticated access to certain /portaladmin/local API endpoints under specific conditions. This could enable an attacker to access administrative functionality that should require authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Enterprise GIS portal admin bypass, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55183",
+    "published": "2026-10-13 16:19:53",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "RClone Manager is a cross-platform GUI application designed to help users manage Rclone remotes efficiently. Prior to 0.2.7, RClone Manager starts the local rclone rcd service on 127.0.0.1:51900 with --rc-no-auth, --rc-allow-origin *, and --rc-serve. A malicious web page opened by a user while the daemon is running can therefore send cross-origin requests to the unauthenticated local API with the user's operating-system privileges. The requests can disclose configured storage credentials and potentially access, upload, modify, or exfiltrate locally stored files accessible to the user and files available through configured remotes; the advisory's possible command-execution impact remains unconfirmed. This issue is fixed in version 0.2.7.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Desktop storage management utility with local API auth bypass, excluded as consumer software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109321",
+    "published": "2026-10-12 16:05:13",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Grav Login OAuth plugin (grav-plugin-login-oauth) before 1.4.3 provisions OAuth accounts as ordinary Grav users with a deterministic <provider>.<id> username and an unsalted MD5 hash of the provider identifier as the password, without disabling password login. Unauthenticated remote attackers who learn or guess a provider identifier can reproduce these credentials and log in, gaining administrative control of privileged accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer CMS plugin (Grav) excluded by overlay hard rule despite authentication bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70279",
+    "published": "2026-10-13 19:01:10",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Exchange Server allows an unauthorized attacker to perform spoofing over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Cross-site scripting in Exchange Server with no authentication or access-control impact, failing identity nexus requirement.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92681",
+    "published": "2026-10-12 15:09:49",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In @neo4j/graphql versions up to and including 7.6.3, @authentication directives applied at the schema level or on the Query or Mutation types are silently ignored for top-level fields annotated with @cypher. Only @authentication directives placed directly on the individual fields are enforced. An application that exposes a top-level @cypher field and relies on schema-level or type-level @authentication to protect it allows unauthenticated callers to invoke the field and run the configured Cypher statement with the privileges of the GraphQL service account, which may permit reading and modifying data. Fixed in 7.6.4.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in developer database/GraphQL library lacks identity infrastructure role and DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-65173",
+    "published": "2026-10-13 13:00:43",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NVIDIA AIStore for Linux contains a missing authentication vulnerability in the token-revocation endpoint where an unauthenticated remote attacker may submit crafted token-revocation lists. A successful exploit may lead to data tampering and denial of service.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Missing authentication on storage system token-revocation endpoint lacks identity or access infrastructure role, failing DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83928",
+    "published": "2026-10-13 18:59:59",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Out-of-bounds write in Windows Local Security Authority Subsystem Service (LSASS) allows an unauthorized attacker to execute code over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Memory corruption remote code execution in Windows LSASS is an OS platform flaw, not an authentication bypass or identity mechanism vulnerability.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63161",
+    "published": "2026-10-13 19:57:38",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Omnispace Agora Project before 26.10.0 contains a session fixation vulnerability that allows remote attackers to hijack authenticated sessions by planting a known session identifier in a victim's browser prior to login. Attackers can exploit the application's failure to regenerate the session id upon successful authentication to gain unauthorized access to the victim's authenticated session after they log in.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Session fixation in Omnispace Agora Project lacks clear DPI sector or enterprise identity infrastructure context, leaning drop per precision bias.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110128",
+    "published": "2026-10-13 16:53:21",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "fuint through commit 4c4bc8a contains a missing authentication vulnerability that allows unauthenticated attackers to retrieve any member's order details via the /clientApi/order/detail endpoint. Attackers can enumerate sequential orderId values without an Access-Token to expose buyer names, national ID numbers, phone numbers, addresses, WeChat openIds and verification codes.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication on an e-commerce order endpoint exposing PII lacks identity/access infrastructure nexus and falls under consumer/info-leak exclusions.",
+      "fail_open": false
+    }
+  }
+]
