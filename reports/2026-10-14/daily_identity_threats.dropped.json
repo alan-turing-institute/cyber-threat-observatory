@@ -1,0 +1,306 @@
+[
+  {
+    "id": "CVE-2026-96951",
+    "published": "2026-10-13 19:01:26",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Command injection in Windows Shell lacks identity/access nexus or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104935",
+    "published": "2026-10-13 15:31:07",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Authentication bypass by spoofing in ICS before version 25.1.3.0 allows a remote unauthenticated attacker to execute arbitrary commands. This does not impact ICS version 22.7R2.14 or prior.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in ICS hits the explicit industrial/SCADA exclusion for DPI identity relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87689",
+    "published": "2026-10-13 00:53:00",
+    "cvss": 9.8,
+    "epss": 0.00367,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Metasploit Framework Web Service REST API (msf-ws) exposes the credential store through Msf::WebServices::CredentialServlet. Every mutating and read route in this servlet calls warden.authenticate! before processing a request, except the update_credential (PUT) and delete_credentials (DELETE) handlers for /api/v1/credentials, which omit the authentication call entirely. Because these handlers call directly into lib/msf/core/db_manager/cred.rb, which performs no authorization check of its own, any client able to reach the web service on its default 0.0.0.0:8080 listener can read, modify, or permanently delete every stored credential record — including passwords, hashes, and private keys stored for a shared team engagement — without presenting any authentication. All published versions of Metasploit Framework through 6.5.4 are affected. The issue is fixed in 6.5.5 by adding warden.authenticate! as the first statement in both handlers, matching the pattern used by every other route in the API.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Credential exposure in Metasploit Framework lacks enterprise or public-sector identity infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111911",
+    "published": "2026-10-17 18:46:28",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "phpMyFAQ 4.0.0 before 4.1.9 contains an authentication bypass vulnerability where WebAuthn registration endpoints attach credentials to any account without authentication or challenge validation. Attackers can stage a victim username, submit a forged fmt=none attestation to register a passkey, then log in bypassing passwords and TOTP for account takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WebAuthn bypass in phpMyFAQ falls under the consumer/generic CMS exclusion for DPI identity relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69227",
+    "published": "2026-10-13 16:03:43",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw in Portal for ArcGIS allows unauthenticated access to certain /portaladmin/local API endpoints under specific conditions. This could enable an attacker to access administrative functionality that should require authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Unauthenticated admin access in ArcGIS Portal lacks the identity/access infrastructure nexus required for DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-53709",
+    "published": "2026-10-13 14:32:12",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MCP Context Forge is an MCP gateway and administrative platform. Prior to 1.0.2, mcpgateway/config.py and .env.example ship a known JWT_SECRET_KEY, while verify_jwt_token() accepts HS256 tokens signed with that key and get_current_user() creates a platform administrator when the token subject matches PLATFORM_ADMIN_EMAIL and REQUIRE_USER_IN_DB is false. A remote unauthenticated attacker can therefore mint accepted administrator tokens without a database account. While the vulnerable signing key remains configured and the platform-admin bootstrap remains enabled, forged access survives password rotation, account deletion, and session revocation, allowing administrative disclosure, modification, and service disruption. This issue is fixed in version 1.0.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "JWT secret exposure in MCP Context Forge hits the LLM/AI tooling exclusion for DPI identity relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55183",
+    "published": "2026-10-13 16:19:53",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "RClone Manager is a cross-platform GUI application designed to help users manage Rclone remotes efficiently. Prior to 0.2.7, RClone Manager starts the local rclone rcd service on 127.0.0.1:51900 with --rc-no-auth, --rc-allow-origin *, and --rc-serve. A malicious web page opened by a user while the daemon is running can therefore send cross-origin requests to the unauthenticated local API with the user's operating-system privileges. The requests can disclose configured storage credentials and potentially access, upload, modify, or exfiltrate locally stored files accessible to the user and files available through configured remotes; the advisory's possible command-execution impact remains unconfirmed. This issue is fixed in version 0.2.7.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Local API authentication bypass in RClone Manager lacks enterprise or public-sector identity infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70279",
+    "published": "2026-10-13 19:01:10",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Exchange Server allows an unauthorized attacker to perform spoofing over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Cross-site scripting in Microsoft Exchange Server lacks an authentication or access-control impact required for DPI identity relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110653",
+    "published": "2026-10-17 02:31:06",
+    "cvss": 9.1,
+    "epss": 0.00403,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress plugin for WordPress is vulnerable to Authentication Bypass via Race Condition in all versions up to, and including, 5.7.4. This is due to a non-atomic read-modify-write on the OTP verification attempts counter in the `verifyOTP` function: the counter is incremented using a stale in-memory value with no conditional `WHERE attempts < 10` guard on the `UPDATE` and no `SELECT ... FOR UPDATE` row lock, creating a TOCTOU window that allows concurrent requests to bypass the 10-attempt lockout. This makes it possible for unauthenticated attackers — who know a target customer's registered email address or phone number — to fire concurrent requests to the `auth__verify_otp` endpoint, defeat the lockout cap, brute-force the 6-digit OTP code, and authenticate as the targeted LatePoint customer, gaining full access to their account, bookings, and personal data. The nonce check present on the endpoint (`otp_verify_otp_nonce`) does not mitigate this issue, as the nonce is publicly emitted by the unauthenticated `request_otp` and `resend_otp` endpoints and is trivially obtainable by any unauthenticated attacker prior to launching the race.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in a WordPress scheduling plugin hits the explicit WordPress/consumer CMS exclusion for DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63160",
+    "published": "2026-10-13 19:46:59",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Omnispace Agora Project before 26.10.0 contains a vulnerability where the persistent remember-me token is stored verbatim server-side, making the stored value identical to the bearer credential held in the user's cookie. Attackers who gain access to the stored token, such as through database or backup disclosure, can replay the plaintext value to authenticate as the victim user without needing their password.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Plaintext remember-me token storage in Omnispace Agora Project lacks a clear public-sector or enterprise identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63159",
+    "published": "2026-10-13 19:46:07",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Omnispace Agora Project before 26.10.0 contains a predictable password-reset token vulnerability that allows unauthenticated attackers to take over user accounts by computing the reset token as sha1(login.password), a deterministic and reusable value. Attackers can derive or brute-force the reset token from known or guessed login and password combinations to forge valid password-reset requests and hijack arbitrary accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Predictable password-reset token in Omnispace Agora Project, but software lacks enterprise or DPI identity nexus; lean drop per overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-65173",
+    "published": "2026-10-13 13:00:43",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NVIDIA AIStore for Linux contains a missing authentication vulnerability in the token-revocation endpoint where an unauthenticated remote attacker may submit crafted token-revocation lists. A successful exploit may lead to data tampering and denial of service.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Missing authentication on token-revocation endpoint in NVIDIA AIStore storage software, but lacks identity/access management or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63161",
+    "published": "2026-10-13 19:57:38",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Omnispace Agora Project before 26.10.0 contains a session fixation vulnerability that allows remote attackers to hijack authenticated sessions by planting a known session identifier in a victim's browser prior to login. Attackers can exploit the application's failure to regenerate the session id upon successful authentication to gain unauthorized access to the victim's authenticated session after they log in.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Session fixation in Omnispace Agora Project, but software lacks enterprise or DPI identity nexus; lean drop per overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111999",
+    "published": "2026-10-18 11:38:25",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vanus 0.8.0 through 0.9.0 contains a missing authentication vulnerability that allows unauthenticated remote attackers to publish events to any eventbus through the gateway CloudEvents HTTP receiver. Attackers can send forged CloudEvents to the /namespaces/{ns}/eventbus/{name}/events or legacy /gateway/{name} paths, bypassing token authentication and authPublish checks, so they are stored and delivered to subscription sinks.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing authentication on event publishing in Vanus event streaming platform, but lacks identity/access management or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111927",
+    "published": "2026-10-17 18:46:39",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Coder before 2.29.20, 2.33.0 before 2.33.12, 2.34.0 before 2.34.8, and 2.35.0 before 2.35.4 contains an improper hostname validation flaw in GetWorkspaceProxyByHostname whose SIMILAR TO pattern performs a prefix match, so any domain that is a string prefix of a workspace-proxy access URL is trusted as a proxy. Attackers owning such a domain can lure an authenticated victim to a crafted /api/v2/applications/auth-redirect link, capture the redirected application_connect API key, and replay it to access the victim's workspace apps.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Improper hostname validation leading to API key theft in Coder developer platform, but software lacks core DPI identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110128",
+    "published": "2026-10-13 16:53:21",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "fuint through commit 4c4bc8a contains a missing authentication vulnerability that allows unauthenticated attackers to retrieve any member's order details via the /clientApi/order/detail endpoint. Attackers can enumerate sequential orderId values without an Access-Token to expose buyer names, national ID numbers, phone numbers, addresses, WeChat openIds and verification codes.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication exposing PII in fuint e-commerce component, but software lacks enterprise identity or financial rail nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110097",
+    "published": "2026-10-13 16:53:02",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Ikaros 1.2.0 through 1.2.5 contains an authentication bypass vulnerability that allows attackers with a valid password to skip TOTP verification by reusing the login temp token. Attackers can present the temp token from the jwt/apply endpoint as a bearer JWT, refresh it, or use HTTP Basic login to gain full account access, including the master administrator.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer media server software (Ikaros) with auth bypass - excluded by consumer/hobbyist overlay rule despite JWT/TOTP keywords.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70175",
+    "published": "2026-10-13 19:00:26",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper authentication in ASP.NET Core allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Generic ASP.NET Core framework CVE with thin description and no specific identity/access mechanism or sector cues - lacks DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70571",
+    "published": "2026-10-13 19:01:10",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Stack-based buffer overflow in Microsoft Exchange Server allows an unauthorized attacker to execute code over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Stack-based buffer overflow in Exchange Server is a platform memory corruption flaw, not an authentication or identity/access mechanism vulnerability.",
+      "fail_open": false
+    }
+  }
+]
