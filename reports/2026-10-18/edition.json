@@ -1,0 +1,221 @@
+{
+  "alert_id": "b763d781",
+  "report_date": "2026-10-18",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-10-19 02:18:25",
+  "items": [
+    {
+      "item_id": "CVE-2026-111990",
+      "item_type": "cve",
+      "title": "CVE-2026-111990 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111990",
+      "source": "WAVE",
+      "published": "2026-10-18",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Unauthenticated SQLi in a Hospital Management System threatens patient data integrity and disrupts clinical scheduling operations.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-111990.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-112002",
+      "item_type": "cve",
+      "title": "CVE-2026-112002 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112002",
+      "source": "WAVE",
+      "published": "2026-10-18",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Directly impacts Digital Identity by allowing session hijackers to bypass Social/SSO provisioning, set local passwords, and enroll malicious 2FA, enabling persistent account takeover in self-hosted client portals.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-112002.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-800616a25e",
+      "item_type": "campaign",
+      "title": "Microsoft Disrupts YAM Store Network Behind 1 Billion Phishing Scams and M365 Device-Code Attacks",
+      "url": "https://windowsforum.com/news/microsoft-disrupts-yam-store-network-behind-1-billion-phishing-scams-and-m365-device-code-attacks.448313/post-1012947",
+      "source": "ketch",
+      "published": "2026-10-18",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "Microsoft’s security operations dismantled the YAM Store network, a massive infrastructure facilitating over one billion phishing attempts and widespread Microsoft 365 device-code attacks. The campaign leveraged compromised legitimate domains and cloud-hosted landing pages to bypass traditional email filters. Infrastructure defenders should monitor for anomalous OAuth consent grants, enforce conditional access policies restricting device-code flows, and implement DNS sinkholing for known malicio",
+      "signals": {
+        "dpi_fit": 9.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-c05567f614",
+      "item_type": "campaign",
+      "title": "The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime",
+      "url": "https://microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime",
+      "source": "ketch",
+      "published": "2026-10-18",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "This analysis maps the underground infrastructure ecosystem enabling global phishing campaigns, detailing how threat actors rent cloud instances, abuse CDN networks, and rotate domains to evade takedowns. Defenders can leverage the disclosed infrastructure indicators to enhance proxy filtering, block malicious ASN ranges, and deploy machine learning models for domain age and hosting pattern analysis. Understanding these supply-chain tactics is critical for hardening network egress controls and p",
+      "signals": {
+        "dpi_fit": 9.2
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-9487078dcb",
+      "item_type": "campaign",
+      "title": "Device Code Phishing: Turning a Convenience Feature Into an MFA Bypass",
+      "url": "https://www.trendmicro.com/en_us/research/26/g/device-code-phishing.html",
+      "source": "ketch",
+      "published": "2026-10-18",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "Trend Micro details how attackers exploit Microsoft’s device-code authentication flow to circumvent multi-factor authentication. By hosting malicious portals that prompt users to enter device codes, threat actors hijack active sessions without capturing passwords or MFA tokens. Infrastructure teams must disable unnecessary device-code grants via Azure AD conditional access, monitor for high-frequency consent requests, and educate users on recognizing legitimate device-code prompts. This techniqu",
+      "signals": {
+        "dpi_fit": 9.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-506f3932de",
+      "item_type": "campaign",
+      "title": "Abuse of Cloud-Native Infrastructure in Modern Phishing Campaigns - CYFIRMA",
+      "url": "https://cyfirma.com/research/abuse-of-cloud-native-infrastructure-in-modern-phishing-campaigns",
+      "source": "ketch",
+      "published": "2026-10-18",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "CYFIRMA researchers document how modern phishing operations increasingly leverage cloud-native services like serverless functions, object storage, and managed databases to host malicious payloads and phishing pages. This approach reduces infrastructure costs, improves uptime, and complicates traditional blocklisting. Defenders should implement cloud security posture management tools, audit third-party cloud resource usage, and deploy web application firewalls tuned to detect cloud-hosted phishin",
+      "signals": {
+        "dpi_fit": 8.8
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-c4669ac6ee",
+      "item_type": "campaign",
+      "title": "Inside an AI‑enabled device code phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+      "source": "ketch",
+      "published": "2026-10-18",
+      "category": "threats",
+      "pir": [
+        "1.g"
+      ],
+      "excerpt": "Microsoft Security researchers dissect a campaign utilizing generative AI to dynamically generate phishing pages and automate device-code harvesting at scale. The AI models adapt landing page content in real-time based on victim interaction, increasing conversion rates. Defenders should deploy AI-driven threat detection for behavioral anomalies, restrict OAuth app permissions, and implement user training focused on AI-generated social engineering cues. This marks a shift toward adaptive, automat",
+      "signals": {
+        "dpi_fit": 8.7
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-6b15601385",
+      "item_type": "campaign",
+      "title": "Microsoft Teams Phishing via Fake IT Helpdesk Impersonation (External Chat, Vishing, Screen Sharing, RMM",
+      "url": "https://intel.threadlinqs.com/threat/TL-2026-3778",
+      "source": "ketch",
+      "published": "2026-10-18",
+      "category": "threats",
+      "pir": [
+        "1.a"
+      ],
+      "excerpt": "Threat actors are conducting sophisticated social engineering campaigns within Microsoft Teams, impersonating IT helpdesk personnel to trick employees into sharing credentials, enabling screen sharing, or installing remote monitoring tools. The attacks combine external chat exploitation, vishing, and RMM abuse to bypass email security controls. Infrastructure defenders should enforce Teams external messaging restrictions, monitor for unusual RMM installation patterns, and implement just-in-time ",
+      "signals": {
+        "dpi_fit": 8.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-5a816ccdcc",
+      "item_type": "campaign",
+      "title": "SideWinder APT Credential Harvesting Campaign — PaaS Platform Abuse at Scale",
+      "url": "https://intel.breakglass.tech/post/sidewinder-mhil-zeabur",
+      "source": "ketch",
+      "published": "2026-10-18",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "BreakGlass Intelligence reveals how the SideWinder APT group abuses Platform-as-a-Service environments to host credential harvesting portals at scale. By leveraging legitimate PaaS providers, attackers bypass traditional infrastructure blocklists and maintain persistent access to stolen credentials. Infrastructure teams must monitor for anomalous PaaS resource provisioning, enforce strict identity governance for cloud platforms, and integrate threat intelligence feeds tracking PaaS abuse pattern",
+      "signals": {
+        "dpi_fit": 8.4
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-b1ccac818a",
+      "item_type": "campaign",
+      "title": "n8n Weaponized for Phishing and Device Fingerprinting",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-n8n-ai-workflow-phishing-20260416-csa-styl",
+      "source": "ketch",
+      "published": "2026-10-18",
+      "category": "threats",
+      "pir": [
+        "1.g"
+      ],
+      "excerpt": "CSA Labs reports on threat actors repurposing the open-source workflow automation tool n8n to orchestrate phishing campaigns and collect device fingerprints. Attackers deploy self-hosted n8n instances to automate email delivery, track victim interactions, and exfiltrate browser telemetry. Defenders should audit internal workflow automation deployments, restrict outbound API calls from automation servers, and monitor for unauthorized n8n instances in cloud environments. This highlights the risk o",
+      "signals": {
+        "dpi_fit": 8.2
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-104627",
+      "item_type": "cve",
+      "title": "CVE-2026-104627",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104627",
+      "source": "vulners/duckdb",
+      "published": "2026-10-18",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "The Gitea OpenID association callback in the security settings accepted a positive OpenID 2.0 assertion without checking that the signed-in user had started the linking. Because OpenID 2.0 allows unsolicited assertions, an attacker-controlled OpenID provider could attach the attacker's identity to the account of a signed-in victim who opened a crafted link, and the attacker could then sign in as the victim through OpenID login, which does not apply the local TOTP or WebAuthn checks. The callback",
+      "signals": {
+        "cvss": 0.0,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 2,
+      "daily_phishing_campaigns": 8,
+      "daily_identity_threats": 1
+    }
+  }
+}
