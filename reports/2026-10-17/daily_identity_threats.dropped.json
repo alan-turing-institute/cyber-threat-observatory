@@ -1,0 +1,114 @@
+[
+  {
+    "id": "CVE-2026-111911",
+    "published": "2026-10-17 18:46:28",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "phpMyFAQ 4.0.0 before 4.1.9 contains an authentication bypass vulnerability where WebAuthn registration endpoints attach credentials to any account without authentication or challenge validation. Attackers can stage a victim username, submit a forged fmt=none attestation to register a passkey, then log in bypassing passwords and TOTP for account takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Niche FAQ system with WebAuthn bypass lacks DPI-relevant identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110653",
+    "published": "2026-10-17 02:31:06",
+    "cvss": 9.1,
+    "epss": 0.00403,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress plugin for WordPress is vulnerable to Authentication Bypass via Race Condition in all versions up to, and including, 5.7.4. This is due to a non-atomic read-modify-write on the OTP verification attempts counter in the `verifyOTP` function: the counter is incremented using a stale in-memory value with no conditional `WHERE attempts < 10` guard on the `UPDATE` and no `SELECT ... FOR UPDATE` row lock, creating a TOCTOU window that allows concurrent requests to bypass the 10-attempt lockout. This makes it possible for unauthenticated attackers — who know a target customer's registered email address or phone number — to fire concurrent requests to the `auth__verify_otp` endpoint, defeat the lockout cap, brute-force the 6-digit OTP code, and authenticate as the targeted LatePoint customer, gaining full access to their account, bookings, and personal data. The nonce check present on the endpoint (`otp_verify_otp_nonce`) does not mitigate this issue, as the nonce is publicly emitted by the unauthenticated `request_otp` and `resend_otp` endpoints and is trivially obtainable by any unauthenticated attacker prior to launching the race.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111999",
+    "published": "2026-10-18 11:38:25",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vanus 0.8.0 through 0.9.0 contains a missing authentication vulnerability that allows unauthenticated remote attackers to publish events to any eventbus through the gateway CloudEvents HTTP receiver. Attackers can send forged CloudEvents to the /namespaces/{ns}/eventbus/{name}/events or legacy /gateway/{name} paths, bypassing token authentication and authPublish checks, so they are stored and delivered to subscription sinks.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Event streaming platform with missing authentication lacks identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111927",
+    "published": "2026-10-17 18:46:39",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Coder before 2.29.20, 2.33.0 before 2.33.12, 2.34.0 before 2.34.8, and 2.35.0 before 2.35.4 contains an improper hostname validation flaw in GetWorkspaceProxyByHostname whose SIMILAR TO pattern performs a prefix match, so any domain that is a string prefix of a workspace-proxy access URL is trusted as a proxy. Attackers owning such a domain can lure an authenticated victim to a crafted /api/v2/applications/auth-redirect link, capture the redirected application_connect API key, and replay it to access the victim's workspace apps.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Development environment platform with API key capture lacks DPI identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-112002",
+    "published": "2026-10-18 11:38:27",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "ProjectSend 2.5.0 before 2.7.0 contains an unverified password change vulnerability in PasswordController::update() that lets sessions of Social-provisioned accounts set local passwords without the current password. Attackers holding a stolen session cookie can send PUT /settings/password to create a durable local password, enroll their own second factor, and persistently take over the account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "File-sharing application with unverified password change lacks DPI identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-112016",
+    "published": "2026-10-18 11:38:37",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Netcore NR256CN through 1.5.140116 contains an unauthenticated file write vulnerability in the Boa-derived /bin/boa web server that allows remote attackers to overwrite update and restore staging files. Attackers can POST to a non-existent .cgi pathname to write attacker-controlled content into /tmp/boa_temp.update or /tmp/boa_temp.para, tampering with pending firmware updates or configuration restores or causing denial of service.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT router with unauthenticated file write is explicitly excluded.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111870",
+    "published": "2026-10-18 03:30:21",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security flaw has been discovered in itsmeravitejak Online-Examination-System up to e6208e630b14657999bbfe4c9912302d2a1e2449. The affected element is the function isAdmin of the file admin/admin.php. Performing a manipulation results in missing authentication. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Education examination system with missing authentication is explicitly excluded by sector rules.",
+      "fail_open": false
+    }
+  }
+]
