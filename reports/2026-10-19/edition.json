@@ -1,0 +1,302 @@
+{
+  "alert_id": "eb197b0f",
+  "report_date": "2026-10-19",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-10-21 20:50:05",
+  "items": [
+    {
+      "item_id": "CVE-2025-10149",
+      "item_type": "cve",
+      "title": "CVE-2025-10149 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-10149",
+      "source": "WAVE",
+      "published": "2026-10-19",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Directly impacts core Digital Identity infrastructure (WSO2 Identity Server) via SCIM authorization bypass enabling federated-to-local account takeover.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 5,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": "TIER_2_CVE-2025-10149.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-112252",
+      "item_type": "cve",
+      "title": "CVE-2026-112252 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112252",
+      "source": "WAVE",
+      "published": "2026-10-19",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Targets government safety bureaus and state-owned enterprises via a critical infrastructure compliance system, enabling unauthenticated RCE on internal regulatory networks.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-112252.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-13695",
+      "item_type": "cve",
+      "title": "CVE-2026-13695 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13695",
+      "source": "WAVE",
+      "published": "2026-10-19",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Unauthenticated SQLi on an enterprise HR login endpoint enables credential theft and PII exposure, directly impacting Digital Identity and Government/Finance workforce systems.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-13695.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-78164",
+      "item_type": "cve",
+      "title": "CVE-2026-78164 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78164",
+      "source": "WAVE",
+      "published": "2026-10-19",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Foundational enterprise middleware (Apache Camel) widely deployed in finance, healthcare, and government API routing; default-vulnerable secret/env-var leakage poses direct credential harvesting risk to regulated integrations.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-78164.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-85251",
+      "item_type": "cve",
+      "title": "CVE-2026-85251 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85251",
+      "source": "WAVE",
+      "published": "2026-10-19",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Foundational enterprise middleware handling OAuth2 tokens and credentials; redirect-based leakage risks identity, finance, and government integration flows.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 4,
+        "dpi_fit": 0.4
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-85251.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-800616a25e",
+      "item_type": "campaign",
+      "title": "Microsoft Disrupts YAM Store Network Behind 1 Billion Phishing Scams and M365 Device-Code Attacks",
+      "url": "https://windowsforum.com/news/microsoft-disrupts-yam-store-network-behind-1-billion-phishing-scams-and-m365-device-code-attacks.448313/post-1012947",
+      "source": "ketch",
+      "published": "2026-10-19",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "Microsoft’s security operations dismantled the YAM Store network, a massive infrastructure supporting over one billion phishing attempts and widespread Microsoft 365 device-code attacks. The campaign leveraged compromised OAuth flows to bypass traditional email filters, directly targeting identity providers. Defenders should monitor for anomalous device-code authorization requests, enforce conditional access policies, and block known malicious redirect URIs. This disruption highlights the scale ",
+      "signals": {
+        "dpi_fit": 9.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-506f3932de",
+      "item_type": "campaign",
+      "title": "Abuse of Cloud-Native Infrastructure in Modern Phishing Campaigns - CYFIRMA",
+      "url": "https://cyfirma.com/research/abuse-of-cloud-native-infrastructure-in-modern-phishing-campaigns",
+      "source": "ketch",
+      "published": "2026-10-19",
+      "category": "threats",
+      "pir": [
+        "1.g"
+      ],
+      "excerpt": "Modern phishing operations increasingly leverage cloud-native services like serverless functions, object storage, and CDN networks to host malicious payloads and evade detection. This infrastructure abuse allows attackers to scale campaigns rapidly while maintaining low costs and high resilience. IT defenders must shift focus from static URL blocking to behavioral analysis of cloud service usage. Implementing egress filtering, monitoring for anomalous API calls, and enforcing strict IAM policies",
+      "signals": {
+        "dpi_fit": 9.3
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-18812f2095",
+      "item_type": "campaign",
+      "title": "GhostCode attackers abuse device codes to take over Microsoft 365 accounts",
+      "url": "https://computerworld.com/article/4223889/ghostcode-attackers-abuse-device-codes-to-take-over-microsoft-365-accounts.html",
+      "source": "ketch",
+      "published": "2026-10-19",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "The GhostCode threat actor group is actively exploiting Microsoft 365 device-code authentication flows to hijack enterprise accounts. By tricking users into entering authorization codes on malicious portals, attackers bypass multi-factor authentication and gain persistent access to email, Teams, and cloud storage. Infrastructure defenders must implement strict conditional access rules, monitor for unusual device-code sign-ins, and educate users on recognizing fake verification prompts. Blocking ",
+      "signals": {
+        "dpi_fit": 9.2
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-5a816ccdcc",
+      "item_type": "campaign",
+      "title": "SideWinder APT Credential Harvesting Campaign — PaaS Platform Abuse at Scale",
+      "url": "https://intel.breakglass.tech/post/sidewinder-mhil-zeabur",
+      "source": "ketch",
+      "published": "2026-10-19",
+      "category": "threats",
+      "pir": [
+        "1.j.3"
+      ],
+      "excerpt": "The SideWinder APT group is conducting large-scale credential harvesting by abusing Platform-as-a-Service (PaaS) environments to host sophisticated phishing infrastructure. By leveraging legitimate cloud platforms, attackers bypass traditional security controls and target high-value identity accounts. The campaign utilizes automated deployment scripts and dynamic domain generation to maintain persistence. Defenders should monitor for unauthorized PaaS resource provisioning, enforce least-privile",
+      "signals": {
+        "dpi_fit": 9.1
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-a9cf5bd36d",
+      "item_type": "campaign",
+      "title": "Inside an AI‑enabled device code phishing campaign",
+      "url": "https://microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026",
+      "source": "ketch",
+      "published": "2026-10-19",
+      "category": "threats",
+      "pir": [
+        "1.h"
+      ],
+      "excerpt": "Threat actors are deploying AI-generated landing pages and dynamic content to enhance device-code phishing campaigns targeting Microsoft 365 tenants. These AI-driven sites mimic legitimate Microsoft login flows with high fidelity, increasing user compliance rates. The campaign automates token harvesting and rapidly rotates infrastructure to evade takedowns. Defenders should deploy AI-aware web filtering, monitor for rapid OAuth consent spikes, and enforce application allow-listing. Identity gove",
+      "signals": {
+        "dpi_fit": 9.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-d34d925d1d",
+      "item_type": "campaign",
+      "title": "Device Code Phishing: How EvilTokens Hit 12,000+ Inboxes",
+      "url": "https://ctiacademy.io/blog/device-code-phishing",
+      "source": "ketch",
+      "published": "2026-10-19",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "The EvilTokens campaign demonstrates how attackers weaponize device-code phishing to compromise thousands of inboxes simultaneously. By distributing malicious links via compromised accounts and spam, threat actors harvest OAuth tokens that grant broad M365 permissions. This technique circumvents traditional email security and MFA controls. Infrastructure teams should audit delegated permissions, restrict third-party app registrations, and implement real-time identity threat detection. Monitoring",
+      "signals": {
+        "dpi_fit": 8.8
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-954a361695",
+      "item_type": "campaign",
+      "title": "Device Code Phishing Hits 340+ Microsoft 365 Orgs Across Five Countries via OAuth Abuse",
+      "url": "https://news.u-labs.de/link?id=30726",
+      "source": "ketch",
+      "published": "2026-10-19",
+      "category": "threats",
+      "pir": [
+        "1.f"
+      ],
+      "excerpt": "A coordinated OAuth abuse campaign has impacted over 340 Microsoft 365 organizations across five countries, leveraging device-code phishing to steal identity tokens. Attackers exploit legitimate authentication mechanisms to bypass perimeter defenses and establish persistent access. The campaign highlights vulnerabilities in default cloud identity configurations. Defenders must enforce strict consent policies, disable unnecessary device-code flows where possible, and deploy identity protection so",
+      "signals": {
+        "dpi_fit": 8.7
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-6b15601385",
+      "item_type": "campaign",
+      "title": "Microsoft Teams Phishing via Fake IT Helpdesk Impersonation (External Chat, Vishing, Screen Sharing, RMM",
+      "url": "https://intel.threadlinqs.com/threat/TL-2026-3778",
+      "source": "ketch",
+      "published": "2026-10-19",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "Attackers are executing sophisticated phishing campaigns within Microsoft Teams by impersonating IT helpdesk personnel to initiate external chats, vishing calls, and unauthorized screen-sharing sessions. The tactic leverages trust in internal support channels to deploy Remote Monitoring and Management (RMM) tools on victim endpoints. Infrastructure defenders must restrict external Teams messaging, enforce strict RMM deployment policies, and monitor for anomalous helpdesk account activity. User t",
+      "signals": {
+        "dpi_fit": 8.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-113682",
+      "item_type": "cve",
+      "title": "CVE-2026-113682",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113682",
+      "source": "vulners/duckdb",
+      "published": "2026-10-20",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Networknt light-4j from 2.1.5 before 2.4.0 contains an authentication bypass vulnerability in BasicAuthHandler that allows unauthenticated attackers to log in as LDAP/AD-delegated users. Attackers can send a Basic Authorization header with a known username and empty password, triggering an unauthenticated LDAP bind that is accepted as successful authentication.",
+      "signals": {
+        "cvss": 9.1,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-80312",
+      "item_type": "cve",
+      "title": "CVE-2026-80312",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80312",
+      "source": "vulners/duckdb",
+      "published": "2026-10-19",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Improper Authentication vulnerability in Apache Camel OAuth component.\n\n\n\nThis issue affects Apache Camel: from 4.11.0 before 4.18.5, from 4.19.0 before 4.22.1.\n\n\n\nThe camel-oauth processors that guard a route did not stop the exchange when authentication could not be completed. Where a failure to establish an authenticated session should have terminated routing and returned an error to the caller, the processors fell through and returned control to the route, so the request continued to the pro",
+      "signals": {
+        "cvss": 8.2,
+        "epss": 0.00513,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 5,
+      "daily_phishing_campaigns": 8,
+      "daily_identity_threats": 2
+    }
+  }
+}

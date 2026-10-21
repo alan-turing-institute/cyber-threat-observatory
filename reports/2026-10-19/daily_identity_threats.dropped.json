@@ -1,0 +1,370 @@
+[
+  {
+    "id": "CVE-2026-112247",
+    "published": "2026-10-19 17:15:15",
+    "cvss": 4.3,
+    "epss": 0.00263,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "A weakness has been identified in Wuxi Wubang Security Software Five-in-One Safety Production Management Information System up to 3.5. This affects an unknown function of the file /FCKeditor/editor/filemanager/connectors/aspx/upload.aspx of the component Upload Endpoint. Executing a manipulation of the argument NewFile can lead to cross site scripting. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial safety management software with XSS vulnerability, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109442",
+    "published": "2026-10-20 00:46:06",
+    "cvss": 9.8,
+    "epss": 0.00694,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "piflow 2.0.0 through 2.0.1 contains a remote code execution vulnerability in its DeepAgents chat agent, whose POST /chat and POST /chat/stream endpoints lack authentication. Attackers can instruct the agent to call the exec_shell tool, which runs arbitrary commands via subprocess.run without human approval or an allow-list, exposing environment secrets such as LLM API keys and database credentials.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "LLM chat agent tooling with missing authentication, explicitly excluded by base DPI and overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77932",
+    "published": "2026-10-20 00:46:11",
+    "cvss": 9.8,
+    "epss": 0.00642,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "DB-GPT through 0.8.2 contains an unauthenticated remote code execution vulnerability because the /api/v1/chat/react-agent endpoint relies on a mock get_user_from_headers function that grants every caller the admin role. Unauthenticated attackers can send prompts that make the ReAct agent's unsandboxed code_interpreter and shell_interpreter tools run arbitrary Python or bash as root in the webserver container, including reaching the bundled database with default credentials.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Open-source LLM database tool with mock authentication bypass, excluded as non-DPI LLM tooling.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-90910",
+    "published": "2026-10-19 09:35:54",
+    "cvss": 9.8,
+    "epss": 0.00637,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function vulnerability in Apache Answer.\n\n\n\nThis issue affects Apache Answer: through 2.0.2.\n\n\n\nThe reaction API did not enforce content visibility controls, allowing unauthorized users to read reaction metadata from restricted content or add and remove their own reactions.\n\n\n\nUsers are recommended to upgrade to version 2.0.3, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Q&A platform missing authentication on reaction API, no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109437",
+    "published": "2026-10-19 18:22:57",
+    "cvss": 9.8,
+    "epss": 0.00608,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Cognition before 0.13.0 contains an unauthenticated remote code execution vulnerability due to defaulting its agent sandbox backend to local execution and shipping no authentication on its REST/SSE API. Attackers can create a session via POST /sessions and post a message via POST /sessions/{id}/messages without credentials, causing the Deep Agents ReAct loop to run attacker-directed shell commands through the local shell backend, resulting in remote code execution as the server process.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI agent framework with missing authentication, excluded as non-DPI LLM/tooling software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75128",
+    "published": "2026-10-20 00:46:08",
+    "cvss": 9.8,
+    "epss": 0.00522,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Langchain-Chatchat through 0.3.1.3 exposes a POST /tools/call API endpoint that invokes any registered tool by name without authentication, leaving the always-registered shell tool callable. Remote attackers can send a single request naming the shell tool to execute arbitrary OS commands as the server user (root in the shipped Docker image).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Langchain-based LLM tooling with unauthenticated API, excluded by base DPI and overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103091",
+    "published": "2026-10-19 02:24:35",
+    "cvss": 9.3,
+    "epss": 0.00496,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing Authorization (CWE-862) and Initialization of a Resource with an Insecure Default (CWE-1188) in the MCP proxy (HandleStreamPassThrough in mcp_service.go) and OIDC registration flow (GET /info and POST /register in internal/controlplane/server.go) in Google OSS Agent Mesh (SAM) versions 0.1.0-alpha.1 through 0.1.0-alpha.8 allow a remote attacker to self-enroll into the mesh and invoke arbitrary tools across all connected MCP backend nodes. Because GET /info publicly discloses OIDC configuration, POST /register auto-enrolls any valid OIDC token holder without claim filtering or ban checks, and the default policy binds sam:system:authenticated to wildcard services and targets, an attacker can obtain a mesh credential with full read, write, and execution access on backend services. Users should upgrade to version 0.1.0-alpha.9 or later, which enforces a fail-closed default policy, explicit policy-binding requirements on enrollment, and ban checks.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "OIDC registration flaw in AI agent mesh framework, software context lacks DPI identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-43844",
+    "published": "2026-10-20 08:45:47",
+    "cvss": 9.3,
+    "epss": 0.0041,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability in the proprietary protocol could allow an attacker to bypass the authentication mechanism.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no product, sector, or mechanism detail, explicitly excluded by overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102503",
+    "published": "2026-10-19 02:20:35",
+    "cvss": 9.3,
+    "epss": 0.00348,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing Authentication for Critical Function (CWE-306) and Missing Authorization (CWE-862) in the /libp2p-http ingress server (StartIngressServer in cmd/sam-node/node.go) in Google OSS Agent Mesh (SAM) versions 0.1.0-alpha.1 through 0.1.0-alpha.2 allow an unauthenticated remote libp2p peer to bypass Biscuit capability policy enforcement and invoke arbitrary registered backend services (including command/stdio-backed MCP servers, A2A, and inference endpoints). While the MCP protocol stream handler enforces WithBiscuitAuth and Authorize checks, the parallel /libp2p-http ingress routes requests directly to backend service handlers without verifying a Biscuit token or mesh enrollment. Users should upgrade to version 0.1.0-alpha.3 or later.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Capability policy bypass in AI agent mesh framework, lacks DPI identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-43845",
+    "published": "2026-10-20 08:48:28",
+    "cvss": 9.2,
+    "epss": 0.00339,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability in the password reset mechanism could allow an attacker to bypass the authentication mechanism.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no product or sector context, explicitly excluded by overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107400",
+    "published": "2026-10-19 23:46:46",
+    "cvss": 8.8,
+    "epss": 0.00438,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM TRIRIGA Application Platform 5.0.0 through 5.0.8 could allow a remote authenticated attacker to execute arbitrary code due to improper authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Enterprise facilities management platform with improper authentication leading to RCE, but lacks core identity or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82166",
+    "published": "2026-10-19 19:38:44",
+    "cvss": 8.8,
+    "epss": 0.00413,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell Application Store, versions prior to 26.05.0.7, contain a Missing Authentication for Critical Function vulnerability. An unauthenticated attacker with adjacent network access could potentially exploit this vulnerability, leading to arbitrary code execution.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Internal enterprise application distribution tool with missing authentication, not identity or DPI infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105949",
+    "published": "2026-10-20 11:30:29",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Cruise Control's Jetty ConstraintSecurityHandler registers security constraints on exact path specs without a catch-all wildcard constraint and without calling setDenyUncoveredHttpMethods(true). The servlet routes requests using Path.of(pathInfo).getFileName(), which strips all leading segments and trailing slashes. Requests like POST /kafkacruisecontrol/x/rebalance bypass authentication entirely but still dispatch to admin endpoints. All 15 admin endpoints become reachable without authentication. In AMQ Streams, the Strimzi operator's NetworkPolicy restricts Cruise Control port 9090 to operator pods only, reducing effective severity to Important.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Kafka cluster management tool with authentication bypass on admin endpoints, but lacks core identity or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-112775",
+    "published": "2026-10-19 19:10:53",
+    "cvss": 8.7,
+    "epss": 0.00311,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Craft CMS from 5.0.0 before 5.11.0 contains an authentication bypass vulnerability that allows attackers to reuse verification codes because users/verify-email does not invalidate them for active users. Attackers who obtain a victim's emailed code can submit it to users/set-password after the victim verifies an email change, resetting the password and taking over the account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Content management system with email verification bypass, excluded as non-identity web application per base rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111999",
+    "published": "2026-10-18 11:38:25",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vanus 0.8.0 through 0.9.0 contains a missing authentication vulnerability that allows unauthenticated remote attackers to publish events to any eventbus through the gateway CloudEvents HTTP receiver. Attackers can send forged CloudEvents to the /namespaces/{ns}/eventbus/{name}/events or legacy /gateway/{name} paths, bypassing token authentication and authPublish checks, so they are stored and delivered to subscription sinks.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Event streaming platform with missing authentication on event publishing, but not core identity or DPI infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-113358",
+    "published": "2026-10-20 10:41:42",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LavaLite CMS through 10.1.2 contains a missing authentication vulnerability in the Filer module that allows unauthenticated attackers to download stored files through the filer/download and filer/display routes. Attackers can supply arbitrary disk names and paths to FileController to retrieve private uploads from local storage or configured remote S3 disks.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "PHP content management system with missing authentication leading to file download, excluded as non-identity web application.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107186",
+    "published": "2026-10-19 16:32:05",
+    "cvss": 8.6,
+    "epss": 0.00362,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated user can send a DWR request with isPasswordUppercase as one call method and the next call method can be set to a run workflow rule. This allows for workflow rules to be run without authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Unauthenticated workflow rule execution via DWR library, lacks specific identity or DPI infrastructure context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111090",
+    "published": "2026-10-20 07:42:53",
+    "cvss": 7.8,
+    "epss": 0.00122,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A logic error exists in the signature verification routine resulting in acceptance of unauthenticated update and license files.It is necessary to use only the MyStormshield servers to retrieve update files or licenses, or to use automatic verification via SNS.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Signature verification bypass for software updates and licenses, not an identity or access control vulnerability.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-112002",
+    "published": "2026-10-18 11:38:27",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "ProjectSend 2.5.0 before 2.7.0 contains an unverified password change vulnerability in PasswordController::update() that lets sessions of Social-provisioned accounts set local passwords without the current password. Attackers holding a stolen session cookie can send PUT /settings/password to create a durable local password, enroll their own second factor, and persistently take over the account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Niche file-sharing web application with unverified password change and session abuse, not core identity/access infrastructure or DPI-sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-113469",
+    "published": "2026-10-20 08:29:49",
+    "cvss": 7.5,
+    "epss": 0.00155,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A failure has been identified in the SNS during dynamic data files signature check.\n\n\n\nA logic error in the signature verification routine resulting in acceptance of unauthenticated dynamic data update during Autoupdate routine.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Software update signature verification bypass with no authentication or access-control impact, outside identity/access scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111765",
+    "published": "2026-10-20 15:10:51",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A2A Java SDK is the official Java SDK for the Agent2Agent (A2A) Protocol. Starting in version 1.3.0.Final and prior to version 1.3.2.Final, the AndroidA2AHttpClient synchronous POST path overrides the disabled-redirect setting in AndroidA2AHttpClient.createConnection() with the PostBuilder default followRedirects value of true, leaving a residual of the earlier credential-redirect fix. JSONRPCTransport and RestTransport add interceptor-produced authentication headers and call synchronous post() without disabling redirects. AuthInterceptor permits X-API-Key, API-Key, X-Auth-Token, and X-Authentication headers; Android's repackaged OkHttp strips Authorization on cross-authority redirects but retains these nonstandard headers, disclosing a complete configured API key or token to another authority. The additional exposure applies when redirect or front-door behavior is compromised separately from the credential-handling component, or those components operate in different trust domains; a completely malicious initial origin already receives the credential on the first request. Autonomous clients require no human action, while user-invoked workflows can require interaction. Explicit followRedirects(false) prevents the redirected request. The demonstrated impact is credential disclosure, not subsequent credential use, integrity or availability impact, code execution, or host compromise. This issue is fixed in version 1.3.2.Final.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Credential leakage via HTTP redirects in a niche AI agent SDK, lacks identity/access infrastructure or DPI-sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-112104",
+    "published": "2026-10-19 10:15:19",
+    "cvss": 7.3,
+    "epss": 0.00803,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw has been found in eremef bandcamp-player up to 1.8.33-beta. The impacted element is an unknown function of the file database.ts of the component Remote Control Server. Executing a manipulation of the argument remoteEnabled can lead to missing authentication. The attack may be launched remotely. Upgrading to version 1.8.34-beta is sufficient to resolve this issue. This patch is called ccba99b66bc61acf46e4a332034799d7452ddea6. Upgrading the affected component is advised.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Consumer media player application with missing authentication, explicitly excluded as non-DPI hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-112143",
+    "published": "2026-10-19 13:15:20",
+    "cvss": 7.3,
+    "epss": 0.00514,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security flaw has been discovered in satya-vinay Events-Management-System up to 437c77ceb69bf9fe2e3f4f46f7871b83f425383a. Affected by this issue is some unknown functionality. Performing a manipulation results in missing authentication. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. Multiple endpoints are affected. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Niche event management web application with missing authentication, lacks identity/access infrastructure or DPI-sector relevance.",
+      "fail_open": false
+    }
+  }
+]
