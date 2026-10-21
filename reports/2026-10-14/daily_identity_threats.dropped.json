@@ -1,0 +1,354 @@
+[
+  {
+    "id": "CVE-2026-59774",
+    "published": "2026-10-14 14:28:25",
+    "cvss": 9.8,
+    "epss": 0.28308,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Gitea's Org-mode markup renderer processes INCLUDE directives supplied to the repository markup endpoint without preventing access to server-side files. An unauthenticated attacker can use a suitable public repository to read files accessible to the Gitea service account. If the disclosed files include app.ini and its INTERNAL_TOKEN, the attacker can chain the disclosure with internal logger access to modify a Git hook and execute commands as the Gitea service account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Developer code-hosting platform (Gitea) with no identity, healthcare, finance, or government sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97668",
+    "published": "2026-10-14 02:27:37",
+    "cvss": 9.8,
+    "epss": 0.00445,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Abandoned Cart Pro for WooCommerce plugin for WordPress is vulnerable to SQL Injection via the guest cart persistent meta_value in all versions up to, and including, 10.8.0 due to insufficient escaping on user supplied data and lack of sufficient preparation on the existing SQL query in the update_guest_persistent_cart() function. The abandoned_cart_info value, populated from attacker-controlled checkout fields such as the SMS consent field, is passed through stripslashes() and concatenated directly into an UPDATE statement while the adjacent SELECT and INSERT use prepared statements. This makes it possible for unauthenticated attackers to append additional SQL to the query. Because the sink is an UPDATE ... SET on the wp_usermeta table, the injection can both extract sensitive information from the database via time-based blind techniques and modify usermeta rows; it has been demonstrated to escalate an arbitrary account to administrator by writing a wp_capabilities row that shadows the legitimate one.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress e-commerce plugin explicitly excluded as consumer/hobbyist software with no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-99999",
+    "published": "2026-10-15 12:19:22",
+    "cvss": 9.3,
+    "epss": 0.00211,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv4: validate checksum_start before completing checksum\n\nIf a packet with bad checksum metadata gets into the ipv4 stack,\nskb_checksum_help can corrupt the network header and cause a bunch of\nmischief.\n\nThis was discovered and reported by Paulos, and has been reporoduced\nby others independently since.\n\nWe really shouldn't allow such packets in, but as a defence\nin depth measure, let's also check before we complete the checksum.\n\nA more complete validation at input is forthcoming, but needs more work.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Linux kernel networking stack flaw with no explicit identity, healthcare, finance, or government sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110447",
+    "published": "2026-10-14 02:27:42",
+    "cvss": 9.2,
+    "epss": 0.01225,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Collabora Online Built-in CODE Server before 26.4.303 (richdocumentscode), a Nextcloud app, allows remote code execution, as exploited in the wild in September and October 2026, a different vulnerability than CVE-2025-66208. This is an OS command injection in proxy.php when the CODE server isn't running (e.g., the product was recently restarted). The vulnerability is not present in standalone Collabora Online servers; only this deployment with CODE Server is affected.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Document collaboration server (Collabora/Nextcloud) with no explicit identity, healthcare, finance, or government sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-96951",
+    "published": "2026-10-13 19:01:26",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Improper neutralization of special elements used in a command ('command injection') in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Command injection in Windows Shell lacks identity/access nexus or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-0322",
+    "published": "2026-10-14 17:26:52",
+    "cvss": 8.6,
+    "epss": 0.01215,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "A remote code execution (RCE) vulnerability in the management interface of Palo Alto Networks PAN-OS® software enables an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\n\n\n\nThe security risk posed by this issue is minimized by restricting access to the management interface to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 .\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\n\n\nCloud NGFW and Prisma® Access are not impacted by this vulnerability.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Network firewall management interface RCE with no explicit identity, healthcare, finance, or government sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104935",
+    "published": "2026-10-13 15:31:07",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Authentication bypass by spoofing in ICS before version 25.1.3.0 allows a remote unauthenticated attacker to execute arbitrary commands. This does not impact ICS version 22.7R2.14 or prior.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in ICS hits the explicit industrial/SCADA exclusion for DPI identity relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55786",
+    "published": "2026-10-14 18:14:39",
+    "cvss": 8.4,
+    "epss": 0.00256,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. From 2.26.2 until 2.26.4, the HTTP MCP POST /mcp route accepts unauthenticated JSON-RPC tools/call requests and forwards execute_module arguments to the module registry without the require_auth dependency used by the REST execution routes. An unauthenticated caller can select sandbox.execute_shell and supply its command parameter, which reaches asyncio.create_subprocess_shell with the privileges of the flyto-core server process. The endpoint is reachable locally under the default loopback binding and becomes network reachable when an operator binds the server to a non-loopback interface, allowing arbitrary OS command execution and potential full host compromise. This issue is fixed in version 2.26.4.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI-agent workflow automation kernel with no identity, healthcare, finance, or government sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110936",
+    "published": "2026-10-15 14:01:17",
+    "cvss": 8.4,
+    "epss": 0.00135,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "A vulnerability has been identified in Siemens Software Center (All versions < V4.0.9.8). The affected application loads dynamic-link libraries (DLLs) from an uncontrolled search path. This could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Industrial software center DLL hijack with no explicit identity, healthcare, finance, or government sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-106931",
+    "published": "2026-10-14 04:45:07",
+    "cvss": 7.8,
+    "epss": 0.00662,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "SiteGuard Server Edition contains an OS command injection vulnerability, which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Web security appliance command injection with no explicit identity, healthcare, finance, or government sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-74920",
+    "published": "2026-10-15 06:00:14",
+    "cvss": 7.1,
+    "epss": 0.00146,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Document Gallery WordPress plugin through 5.1.1 does not properly sanitise and escape user input before reflecting it inside an HTML attribute in the response of an unauthenticated AJAX action, leading to a Reflected Cross-Site Scripting vulnerability which can be exploited against any visitor, including a logged-in administrator.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin XSS, explicitly excluded as consumer/hobbyist software with no identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103671",
+    "published": "2026-10-14 08:12:13",
+    "cvss": 4.7,
+    "epss": 0.00224,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "External control of assumed-Immutable web parameter issue exists in EC-CUBE plugin (for EC-CUBE 4 series) \"AmazonPay Plugin\". If exploited, the user may be redirected to an arbitrary website during the ordering process. As a result, user's account information may be obtained.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "E-commerce plugin open redirect, no core identity or financial infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84731",
+    "published": "2026-10-15 17:10:29",
+    "cvss": 10.0,
+    "epss": 0.01283,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An unauthenticated remote attacker can bypass authentication and gain full access to administrative API endpoints in Nutanix Prism Element by including a crafted internal management HTTP header. The vulnerability is caused by a misconfiguration in the application's authentication filters.\n\n\n\nConsequently, the server responds with a Set-Cookie header containing a valid JSESSIONID. This session cookie decodes to a JSON Web Token (JWT) granting maximum cluster administrative privileges. Successful exploitation allows the attacker to execute root-level commands on all Controller VMs (CVMs) in the cluster, leading to complete cluster destruction and unauthorized access to VM memory and virtual disks.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in virtualization cluster management, not identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16740",
+    "published": "2026-10-14 12:47:35",
+    "cvss": 9.8,
+    "epss": 0.01677,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function vulnerability in TR7 Cyber ​​Defense Inc. TR7 ASP on virtual appliance and TR7 Cyber ​​Defense Inc. TR7 ASP on physical appliance allows OS Command Injection.\n\nThis issue affects TR7 ASP: from 1.0.40.236 before 1.0.1554.2331; TR7 ASP: from 1.6.42.239 before 1.6.1554.2331.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication in web security appliance, not identity/access infrastructure or DPI sector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101956",
+    "published": "2026-10-14 16:18:04",
+    "cvss": 9.8,
+    "epss": 0.00749,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An Improper Authentication vulnerability in the J-Web web management component of Juniper Networks Junos OS allows an unauthenticated remote attacker to execute arbitrary Junos commands with root privileges via the exposed J-Web web interface.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in enterprise router management interface, not identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111322",
+    "published": "2026-10-15 21:43:31",
+    "cvss": 9.8,
+    "epss": 0.00691,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Archon 0.2.13 through 0.11.1 contains a missing authentication vulnerability that allows unauthenticated attackers to access the /api/* control API, which binds to 0.0.0.0 by default. Attackers with network access can send messages to the AI coding agent, which runs with bypassPermissions, to execute commands on the host as the Archon user.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI coding agent tool, explicitly excluded as LLM/dev tooling with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105038",
+    "published": "2026-10-15 20:43:30",
+    "cvss": 9.8,
+    "epss": 0.00646,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The EnergizeLab Eilik and EilikO FastAPI AI inference and profiling services expose AI model administration functions without authentication. An unauthenticated remote attacker can change AI model configuration and switch the model in use at runtime.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI inference service missing authentication, excluded as LLM/AI tooling with no identity or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109439",
+    "published": "2026-10-14 16:45:49",
+    "cvss": 9.8,
+    "epss": 0.00618,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Lantronix XPress-DR and XPress-DR-I (CoBos-family) firmware through 8.1.0.0 contains a missing authentication vulnerability that allows remote attackers to read and persistently overwrite device configuration by sending crafted frames to the unauthenticated UDP configuration protocol on port 30718. Attackers can send a type 0xF8 query to read live configuration data and a type 0xFD frame with exactly 0x78 body bytes to rewrite the device IP address and serial-channel forwarding records, causing changes to commit to EEPROM and persist across reboots. The XPress-DR product series reached end-of-life/end-of-support in February 2025.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial IoT serial converter firmware missing authentication, explicitly excluded as IIoT hardware with no identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101986",
+    "published": "2026-10-14 16:20:56",
+    "cvss": 9.8,
+    "epss": 0.00578,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An  Improper Authentication vulnerability in J-Web of Juniper Networks Junos OS and Junos OS Evolved allows an unauthenticated network attacker to bypass J-Web authentication and execute CGI content with elevated privileges via a crafted HTTP request.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in enterprise router management interface, not identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101954",
+    "published": "2026-10-14 17:22:07",
+    "cvss": 9.8,
+    "epss": 0.00492,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An Improper Authentication vulnerability in the J-Web management interface and its NETCONF session handling of Juniper Networks Junos OS and Junos OS Evolved allows an unauthenticated network attacker to obtain root-level device configuration access and take over the device via a reachable J-Web HTTP or HTTPS service when web management is enabled.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Network OS management interface auth bypass (Juniper Junos) lacks a DPI sector nexus or identity/access infrastructure role; falls under hard exclude for non-identity software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87689",
+    "published": "2026-10-13 00:53:00",
+    "cvss": 9.8,
+    "epss": 0.00367,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Metasploit Framework Web Service REST API (msf-ws) exposes the credential store through Msf::WebServices::CredentialServlet. Every mutating and read route in this servlet calls warden.authenticate! before processing a request, except the update_credential (PUT) and delete_credentials (DELETE) handlers for /api/v1/credentials, which omit the authentication call entirely. Because these handlers call directly into lib/msf/core/db_manager/cred.rb, which performs no authorization check of its own, any client able to reach the web service on its default 0.0.0.0:8080 listener can read, modify, or permanently delete every stored credential record — including passwords, hashes, and private keys stored for a shared team engagement — without presenting any authentication. All published versions of Metasploit Framework through 6.5.4 are affected. The issue is fixed in 6.5.5 by adding warden.authenticate! as the first statement in both handlers, matching the pattern used by every other route in the API.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Credential exposure in Metasploit Framework lacks enterprise or public-sector identity infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69227",
+    "published": "2026-10-13 16:03:43",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw in Portal for ArcGIS allows unauthenticated access to certain /portaladmin/local API endpoints under specific conditions. This could enable an attacker to access administrative functionality that should require authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Unauthenticated admin access in ArcGIS Portal lacks the identity/access infrastructure nexus required for DPI relevance.",
+      "fail_open": false
+    }
+  }
+]
