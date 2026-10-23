@@ -1,0 +1,386 @@
+[
+  {
+    "id": "CVE-2026-109619",
+    "published": "2026-10-21 13:54:43",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "General PHP memory corruption RCE with no identity/access mechanism or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109618",
+    "published": "2026-10-21 13:48:34",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "General PHP OOM memory corruption RCE with no identity/access mechanism or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2015-20124",
+    "published": "2026-10-20 20:31:24",
+    "cvss": 8.7,
+    "epss": 0.00389,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Aspose Importer & Exporter plugin for WordPress before 3.0 contains a path traversal vulnerability that allows unauthenticated attackers to download arbitrary files via the unsanitized 'file' parameter. Attackers can send GET requests to aspose_import_export_download.php with traversal sequences like ../../../wp-config.php to read database credentials. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-20.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin path traversal explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2016-20102",
+    "published": "2026-10-20 20:31:28",
+    "cvss": 6.1,
+    "epss": 0.00211,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "JavaMelody before 1.60.0 contains a reflected cross-site scripting vulnerability that allows unauthenticated attackers to inject script by supplying crafted values in the graph parameter of /monitoring?part=graph. Attackers can include a closing script tag in the graph value, which is only JavaScript-escaped in HtmlCounterReport, to execute script in victims' browsers. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-18.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Reflected XSS in a Java monitoring tool with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2014-125131",
+    "published": "2026-10-20 20:31:21",
+    "cvss": 6.1,
+    "epss": 0.00211,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "DedeCMS 5.6 and 5.7 contains a reflected cross-site scripting vulnerability that allows unauthenticated attackers to inject script by supplying unsanitized input to the adminDirHand parameter. Attackers can send crafted GET requests to /include/dialog/config.php that close the generated script tag and inject JavaScript, which executes in the victim's browser. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-23.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Reflected XSS in a generic CMS with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105944",
+    "published": "2026-10-21 18:17:37",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Apache Pulsar Manager is a web console for administering Apache Pulsar clusters. It has its own user accounts and login, and it can be configured with an HTTP authentication credential, such as a token, that it uses to call the Pulsar admin API on behalf of its users. Pulsar Manager has the following security issues:\n\n- The operation for creating the initial administrator (superuser) account is available without authentication, and it remains available after the instance has been initialized. Anyone who can reach Pulsar Manager can create an additional administrator account at any time and log in with it. This issue affects versions 0.3.0 and later.\n- Requests to the Pulsar admin API that Pulsar Manager proxies to the configured Pulsar cluster are not subject to Pulsar Manager's authentication. Version 0.2.0 checks the caller's permissions for some of these requests, but not for all of them. An unauthenticated user can therefore use Pulsar Manager to send requests to the Pulsar admin API, which the cluster processes with the credential configured in Pulsar Manager.\n- The destination of a proxied request can be chosen by the requester, and Pulsar Manager attaches its configured Pulsar admin credential to the request. An unauthenticated user can make Pulsar Manager send this credential to a host of the user's choosing, and the credential can then be used directly against the Pulsar cluster.\n- In versions 0.3.0 and later, Pulsar Manager does not distinguish between privilege levels of its accounts. Every account, including one created through the first issue, effectively has full administrative privileges in Pulsar Manager.\n\nThe impact depends on the version and the deployment. In versions 0.3.0 and later, any user who can reach Pulsar Manager over the network can take full control of Pulsar Manager. In all versions, when Pulsar Manager is configured with an HTTP authentication credential for a Pulsar cluster, any user who can reach Pulsar Manager can perform the Pulsar admin operations that this credential permits and can obtain the credential itself. When Pulsar Manager is configured with the token signing key of a Pulsar cluster, an administrator of Pulsar Manager can create tokens for the cluster.\n\nApache Pulsar Manager is no longer maintained and is completely unsupported. The Apache Pulsar PMC has retired it. There are no supported versions, and no further releases, fixes or security updates will be made for any version. These issues will not be fixed.\n\nUsing Pulsar Manager is not recommended. Users should stop using Pulsar Manager, remove existing deployments, and move to one of the alternatives described in the Administration UI documentation (https://pulsar.apache.org/docs/administration-ui). Users who have exposed Pulsar Manager configured with a Pulsar credential or token signing key should also consider replacing that credential or key.\n\nUntil a deployment is removed, users should not expose Pulsar Manager to untrusted networks, and should restrict network access to it to trusted administrators.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Missing authentication on a messaging platform admin console, but lacks clear identity infrastructure or DPI sector fit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109442",
+    "published": "2026-10-20 00:46:06",
+    "cvss": 9.8,
+    "epss": 0.00694,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "piflow 2.0.0 through 2.0.1 contains a remote code execution vulnerability in its DeepAgents chat agent, whose POST /chat and POST /chat/stream endpoints lack authentication. Attackers can instruct the agent to call the exec_shell tool, which runs arbitrary commands via subprocess.run without human approval or an allow-list, exposing environment secrets such as LLM API keys and database credentials.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication on an LLM/AI agent tool, explicitly excluded as non-DPI tooling with no identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77932",
+    "published": "2026-10-20 00:46:11",
+    "cvss": 9.8,
+    "epss": 0.00642,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "DB-GPT through 0.8.2 contains an unauthenticated remote code execution vulnerability because the /api/v1/chat/react-agent endpoint relies on a mock get_user_from_headers function that grants every caller the admin role. Unauthenticated attackers can send prompts that make the ReAct agent's unsandboxed code_interpreter and shell_interpreter tools run arbitrary Python or bash as root in the webserver container, including reaching the bundled database with default credentials.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Mock authentication in an LLM database tool, excluded as non-DPI AI tooling with no identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101521",
+    "published": "2026-10-20 21:21:20",
+    "cvss": 9.8,
+    "epss": 0.0056,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in Oracle APEX (component: General).  Supported versions that are affected are 24.1.0-24.1.21, 24.2.0-24.2.20 and  26.1.0-26.1.4. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTPS to compromise Oracle APEX.  Successful attacks of this vulnerability can result in takeover of Oracle APEX. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Generic Oracle APEX platform takeover vulnerability with no explicit identity/access mechanism or DPI sector evidence.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101767",
+    "published": "2026-10-20 21:22:48",
+    "cvss": 9.8,
+    "epss": 0.00533,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle Application Object Library product of Oracle E-Business Suite (component: Core).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Application Object Library.  Successful attacks of this vulnerability can result in takeover of Oracle Application Object Library. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Generic Oracle E-Business Suite platform takeover vulnerability with no explicit identity/access mechanism or DPI sector evidence.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101499",
+    "published": "2026-10-20 21:21:12",
+    "cvss": 9.8,
+    "epss": 0.00522,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle WebCenter Sites product of Oracle Fusion Middleware (component: WebCenter Sites).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebCenter Sites.  Successful attacks of this vulnerability can result in takeover of Oracle WebCenter Sites. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Enterprise CMS platform with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101484",
+    "published": "2026-10-20 21:21:07",
+    "cvss": 9.8,
+    "epss": 0.00522,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in Oracle Secure Backup (component: Backup and Restore).  Supported versions that are affected are 19.1.0.0.0 and   19.1.0.1.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via TCP to compromise Oracle Secure Backup.  Successful attacks of this vulnerability can result in takeover of Oracle Secure Backup. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Backup infrastructure software with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91323",
+    "published": "2026-10-20 21:25:18",
+    "cvss": 9.8,
+    "epss": 0.00522,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: Core).  Supported versions that are affected are 12.2.1.4.0, 14.1.1.0.0, 14.1.2.0.0 and  15.1.1.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebLogic Server.  Successful attacks of this vulnerability can result in takeover of Oracle WebLogic Server. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Enterprise application server with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83399",
+    "published": "2026-10-20 21:23:46",
+    "cvss": 9.8,
+    "epss": 0.00522,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle WebLogic Server product of Oracle Fusion Middleware (component: Core).  Supported versions that are affected are 12.2.1.4.0, 14.1.1.0.0, 14.1.2.0.0 and  15.1.1.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via T3, IIOP to compromise Oracle WebLogic Server.  Successful attacks of this vulnerability can result in takeover of Oracle WebLogic Server. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Enterprise application server with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75128",
+    "published": "2026-10-20 00:46:08",
+    "cvss": 9.8,
+    "epss": 0.00522,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Langchain-Chatchat through 0.3.1.3 exposes a POST /tools/call API endpoint that invokes any registered tool by name without authentication, leaving the always-registered shell tool callable. Remote attackers can send a single request naming the shell tool to execute arbitrary OS commands as the server user (root in the shipped Docker image).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "LLM chatbot tooling with unauthenticated API, explicitly excluded from DPI identity scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91220",
+    "published": "2026-10-20 21:24:42",
+    "cvss": 9.8,
+    "epss": 0.00486,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle Business Process Management Suite product of Oracle Fusion Middleware (component: Human Workflow).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Business Process Management Suite.  Successful attacks of this vulnerability can result in takeover of Oracle Business Process Management Suite. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Business process management software with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83397",
+    "published": "2026-10-20 21:23:45",
+    "cvss": 9.8,
+    "epss": 0.00486,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle Data Integrator product of Oracle Fusion Middleware (component: Console / Repository Explorer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Data Integrator.  Successful attacks of this vulnerability can result in takeover of Oracle Data Integrator. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Data integration platform with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91214",
+    "published": "2026-10-20 21:24:40",
+    "cvss": 9.8,
+    "epss": 0.00486,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle SOA Suite.  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Enterprise SOA middleware with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83396",
+    "published": "2026-10-20 21:23:45",
+    "cvss": 9.8,
+    "epss": 0.00486,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle Data Integrator product of Oracle Fusion Middleware (component: Console / Repository Explorer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via RMI to compromise Oracle Data Integrator.  Successful attacks of this vulnerability can result in takeover of Oracle Data Integrator. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Data integration platform with no identity, access, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-60432",
+    "published": "2026-10-20 21:23:22",
+    "cvss": 9.8,
+    "epss": 0.00486,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle Solaris product of Oracle Systems (component: Image Packaging System).  Supported versions that are affected are 11.3 and  11.4. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Solaris.  Successful attacks of this vulnerability can result in takeover of Oracle Solaris. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Oracle Solaris Image Packaging System is an OS package manager with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101763",
+    "published": "2026-10-20 21:22:47",
+    "cvss": 9.8,
+    "epss": 0.00486,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle Communications BRM - Elastic Charging Engine product of Oracle Communications (component: Cloud native deployment).  Supported versions that are affected are 15.0.0.0.0, 15.0.1.0.0, 15.1.0.0.0 and  15.2.0.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via RMI to compromise Oracle Communications BRM - Elastic Charging Engine.  Successful attacks of this vulnerability can result in takeover of Oracle Communications BRM - Elastic Charging Engine. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Oracle Communications BRM charging engine is telecom billing middleware with no identity/access or authentication mechanism nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91234",
+    "published": "2026-10-20 21:24:47",
+    "cvss": 9.8,
+    "epss": 0.00486,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Fabric Layer).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle SOA Suite.  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Oracle SOA Suite Fabric Layer is enterprise orchestration middleware with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91233",
+    "published": "2026-10-20 21:24:47",
+    "cvss": 9.8,
+    "epss": 0.00486,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle SOA Suite product of Oracle Fusion Middleware (component: Enterprise Scheduling System).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via SOAP to compromise Oracle SOA Suite.  Successful attacks of this vulnerability can result in takeover of Oracle SOA Suite. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Oracle SOA Suite Enterprise Scheduling System is enterprise scheduling middleware with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91495",
+    "published": "2026-10-20 21:26:16",
+    "cvss": 9.8,
+    "epss": 0.00486,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vulnerability in the Oracle WebCenter Content product of Oracle Fusion Middleware (component: Content Server).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle WebCenter Content.  Successful attacks of this vulnerability can result in takeover of Oracle WebCenter Content. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Oracle WebCenter Content Server is enterprise content management software with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  }
+]
