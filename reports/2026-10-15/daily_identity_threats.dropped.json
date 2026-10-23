@@ -1,0 +1,370 @@
+[
+  {
+    "id": "CVE-2026-94169",
+    "published": "2026-10-16 07:00:38",
+    "cvss": 10.0,
+    "epss": 0.00985,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Theme-one The Grid the-grid allows Command Injection.This issue affects The Grid: from n/a through 2.8.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress theme/plugin with command injection; consumer software exclusion applies with no identity or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102764",
+    "published": "2026-10-15 20:30:32",
+    "cvss": 9.8,
+    "epss": 0.0118,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "The vulnerability exists within internal components of BeyondTrust’s Remote Support product. The components did not adequately validate the origin of the messages it received. Under the right conditions, this could allow an attacker to perform file operations on the appliance.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise remote support software with message validation flaw, but lacks explicit authentication or identity/access nexus required by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109515",
+    "published": "2026-10-16 04:27:01",
+    "cvss": 9.8,
+    "epss": 0.00439,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The MailOptin – Popup, Optin Forms & Email Newsletters for Mailchimp, HubSpot, AWeber Etc. plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.2.78.6 This is due to the `subscribe_to_email_list` endpoint accepting an attacker-supplied `optin_data[form_custom_field_mappings]` parameter without any allow-list validation on destination keys, allowing the attacker-controlled mapping to override the administrator's saved mapping and pass arbitrary `wp_users` column names — including `ID` and `user_pass` — directly into `wp_insert_user()` via the `subscribe()` function. This makes it possible for unauthenticated attackers to force `wp_insert_user()` into UPDATE mode on any existing account by supplying a target user's numeric `ID`, overwrite that account's password with a pre-hashed value of their choosing, and thereby take over any WordPress user account — including administrators — leading to full site compromise. Exploitation requires that a WordPress User Registration opt-in form is published somewhere on the site, though the form's UUID is visible in page source and no authentication, nonce, or capability check is required to reach the vulnerable endpoint.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress marketing plugin with privilege escalation; consumer software exclusion applies despite auth-related impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89079",
+    "published": "2026-10-16 05:30:22",
+    "cvss": 9.8,
+    "epss": 0.00294,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Theme My Login plugin for WordPress is vulnerable to privilege escalation via account takeover in versions up to, and including, 7.2.1. This is due to the plugin not properly validating a user's identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user's passwords on multi-site setups in certain configurations.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress login plugin with password reset bypass; consumer software exclusion applies per overlay hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-99999",
+    "published": "2026-10-15 12:19:22",
+    "cvss": 9.3,
+    "epss": 0.00211,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv4: validate checksum_start before completing checksum\n\nIf a packet with bad checksum metadata gets into the ipv4 stack,\nskb_checksum_help can corrupt the network header and cause a bunch of\nmischief.\n\nThis was discovered and reported by Paulos, and has been reporoduced\nby others independently since.\n\nWe really shouldn't allow such packets in, but as a defence\nin depth measure, let's also check before we complete the checksum.\n\nA more complete validation at input is forthcoming, but needs more work.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Linux kernel IPv4 checksum validation flaw with no authentication, identity, or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110936",
+    "published": "2026-10-15 14:01:17",
+    "cvss": 8.4,
+    "epss": 0.00135,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "A vulnerability has been identified in Siemens Software Center (All versions < V4.0.9.8). The affected application loads dynamic-link libraries (DLLs) from an uncontrolled search path. This could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial software DLL hijacking vulnerability with no authentication or identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103895",
+    "published": "2026-10-16 04:26:59",
+    "cvss": 8.1,
+    "epss": 0.00427,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "The miniOrange OTP Login, Verification and SMS Notifications plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 5.5.8 via the `mo_by_pass_login()` function. This is due to `mo_delay_otp_process()` short-circuiting the authentication flow before password validation or the administrator intent gate (added in 5.5.6) can run, combined with the Delay OTP grace flag (`mov_last_verified_dttm`) being stored as a `user_meta` row keyed solely by target user ID with no binding to the originating session, cookie, IP address, or device. This makes it possible for unauthenticated attackers to authenticate as any WordPress user — including administrators — by submitting only a known username with the `mo_wp_login_intent=otp` parameter and any non-empty password, thereby inheriting a legitimate user's open Delay OTP grace window without ever supplying correct credentials. Exploitation requires the site to have OTP-only login (`wp_login_skip_password=1`, `wp_login_skip_password_fallback=0`) and Delay OTP Verification (`wp_login_delay_otp=1`) enabled, and the target account must currently be within its configured Delay OTP interval.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress OTP plugin with authentication bypass; consumer software exclusion applies per overlay hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-74920",
+    "published": "2026-10-15 06:00:14",
+    "cvss": 7.1,
+    "epss": 0.00146,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Document Gallery WordPress plugin through 5.1.1 does not properly sanitise and escape user input before reflecting it inside an HTML attribute in the response of an unauthenticated AJAX action, leading to a Reflected Cross-Site Scripting vulnerability which can be exploited against any visitor, including a logged-in administrator.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin reflected XSS with no identity or DPI nexus; consumer software exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111322",
+    "published": "2026-10-15 21:43:31",
+    "cvss": 9.8,
+    "epss": 0.00691,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Archon 0.2.13 through 0.11.1 contains a missing authentication vulnerability that allows unauthenticated attackers to access the /api/* control API, which binds to 0.0.0.0 by default. Attackers with network access can send messages to the AI coding agent, which runs with bypassPermissions, to execute commands on the host as the Archon user.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI coding agent tool with missing authentication, lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105038",
+    "published": "2026-10-15 20:43:30",
+    "cvss": 9.8,
+    "epss": 0.00646,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The EnergizeLab Eilik and EilikO FastAPI AI inference and profiling services expose AI model administration functions without authentication. An unauthenticated remote attacker can change AI model configuration and switch the model in use at runtime.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI inference service with missing authentication, lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111673",
+    "published": "2026-10-16 17:39:33",
+    "cvss": 9.8,
+    "epss": 0.0055,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IceCMS through 4.1.5 contains a missing authentication vulnerability that allows unauthenticated attackers to modify, delete, or disable any account because /User/** is excluded from the Shiro jwt filter. Attackers can send PUT requests to /User/updateUser to set a new password and role on any userId, including administrators, enabling full account takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic CMS with JWT filter bypass enabling account takeover, lacks core identity infrastructure or public-sector DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111704",
+    "published": "2026-10-16 17:39:56",
+    "cvss": 9.8,
+    "epss": 0.00508,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LangChat through commit 2a6285a contains a missing authentication vulnerability that allows unauthenticated remote attackers to access REST controllers because no Sa-Token interceptor is registered. Attackers can query /api/v1/auth/users to read plaintext passwords, retrieve LLM provider API keys, create super-admin accounts, and modify or delete data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "LLM chat interface with missing authentication and credential exposure, explicitly excluded as non-DPI tooling.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111626",
+    "published": "2026-10-16 17:39:01",
+    "cvss": 9.8,
+    "epss": 0.00445,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Webreaper Damselfly through 4.5.3 contains an authentication bypass vulnerability that allows unauthenticated attackers to access all /api/* routes because controller authorization attributes are commented out. Attackers can send PUT /api/users with Admin roles to create administrator accounts, or POST /api/users to reset any user's password, gaining full control.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Niche web utility with authentication bypass, lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111643",
+    "published": "2026-10-16 17:39:13",
+    "cvss": 9.8,
+    "epss": 0.00445,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Misaka Danmu Server through 2.8.9 contains an authentication bypass vulnerability that allows unauthenticated attackers to write arbitrary configuration keys via the unprotected POST /api/ui/config-history/rollback endpoint. Attackers can set the ipWhitelist key to their own /32 address, or alter trustedProxies and webhookApiKey, to access every protected endpoint as the administrator.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Live-stream comment server with authentication bypass, lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111641",
+    "published": "2026-10-16 17:39:11",
+    "cvss": 9.8,
+    "epss": 0.00433,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "FastapiAdmin through 3.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain sessions for any user by abusing unprotected auto-login endpoints. Attackers can list users via /api/v1/auth/auto-login/users, mint a superuser auto-login token, and exchange it for a JWT session to gain full administrative control.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic admin dashboard framework with session/JWT bypass, lacks core identity infrastructure or public-sector DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-64959",
+    "published": "2026-10-16 12:16:00",
+    "cvss": 9.8,
+    "epss": 0.00296,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'), Missing Authentication for Critical Function vulnerability in Apache Kylin. Impact most to the kylin services that are directly exposed to public network, which is not common. In-house kylin deployments are mostly not impacted.\n\n\n\nThis issue affects Apache Kylin: from 5 through 5.0.4. Certain backend cache API misses required authentication and can cause execution of injected SQL.\n\n\n\nUsers are recommended to upgrade to version 5.0.5, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Big data analytics engine with missing authentication and SQL injection, lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108709",
+    "published": "2026-10-16 19:38:21",
+    "cvss": 9.8,
+    "epss": 0.00251,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Authentication bypass within in-house network in Apache Kylin. Impact most to the kylin services that are directly exposed to public network, which is not common. In-house kylin deployments are mostly not impacted.\n\n\n\nThis issue affects Apache Kylin: from 4.0.4 through 5.0.4.\n\n\n\nUsers are recommended to upgrade to version 5.0.5, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Big data analytics engine with authentication bypass, lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-68573",
+    "published": "2026-10-16 19:32:22",
+    "cvss": 9.8,
+    "epss": 0.00247,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper Authentication vulnerability in Apache Kylin. Unauthenticated user may access to system cleanup actions. Impact most to the kylin services that are directly exposed to public network, which is not common. In-house kylin deployments are mostly not impacted. \n\n\n\nThis issue affects Apache Kylin: from 4 through 5.0.4.\n\n\n\nUsers are recommended to upgrade to version 5.0.5, which fixes the issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Big data analytics engine with improper authentication, lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57169",
+    "published": "2026-10-16 16:13:20",
+    "cvss": 9.6,
+    "epss": 0.00304,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dockhand is a Docker management application. Prior to 1.0.34, the in-browser container terminal endpoint /api/containers/<id>/exec does not enforce authentication on the WebSocket upgrade request. When an unauthenticated attacker has network reach to Dockhand, knows a target container ID, and targets a container with an interactive shell, the attacker can open a raw WebSocket terminal session and execute commands inside a known target container. This allows unauthenticated command execution inside the container, with possible host compromise when the container has sensitive mounts or privileged execution. This issue is fixed in version 1.0.34.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Container management application with missing authentication, lacks identity/access infrastructure nexus and falls outside DPI sectors.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-34006",
+    "published": "2026-10-15 09:30:03",
+    "cvss": 9.3,
+    "epss": 0.00534,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A missing authentication for critical function vulnerability has been reported to affect sMedio DTCP MOVE. If exploited, the vulnerability could allow remote attackers to gain access to the system.\n\nWe have already fixed the vulnerability in the following version:\nsMedio DTCP MOVE 1.4.5 and later",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Medical imaging software with missing authentication, lacks identity/access infrastructure nexus required by the overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105279",
+    "published": "2026-10-16 14:30:51",
+    "cvss": 9.3,
+    "epss": 0.00241,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In the default configuration, the archive accepts DICOM associations from an unregistered calling AE. A remote peer can use C-FIND and C-GET to enumerate and retrieve patient information and medical images. It can also use C-STORE to file fabricated study content under an existing patient identity.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "DICOM medical archive vulnerability, lacks identity/access infrastructure nexus and is a niche clinical system rather than core DPI.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111312",
+    "published": "2026-10-15 21:43:28",
+    "cvss": 9.2,
+    "epss": 0.00451,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenHealth through 0.2.0 contains a missing authentication and authorization vulnerability in the /api/health-data/[id] GET, PATCH and DELETE handlers that query records by id without session or authorId checks. Unauthenticated attackers who know a HealthData record id can read another user's medical record data and file metadata, overwrite it with arbitrary JSON, or delete it.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Health data application with missing authentication, not identity/access infrastructure or core DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16436",
+    "published": "2026-10-15 08:29:44",
+    "cvss": 9.2,
+    "epss": 0.00292,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Weak Password Recovery Mechanism for Forgotten Password vulnerability in Mitsubishi Electric GENESIS versions 11.03 and prior, GENESIS64 versions 10.97.3 and prior, ICONICS Suite versions 10.97.3 and prior, Hyper Historian versions 10.97.3 and prior, AnalytiX versions 10.97.3 and prior, MobileHMI 10.97.3 and prior, IoTWorX 10.97.3 and prior, MC Works64 all versions, GENESIS32 all versions, BizViz all versions, Mitsubishi Electric Iconics Digital Solutions GENESIS versions 11.03 and prior, GENESIS64 versions 10.97.3 and prior, ICONICS Suite versions 10.97.3 and prior, Hyper Historian versions 10.97.3 and prior, AnalytiX versions 10.97.3 and prior, MobileHMI 10.97.3 and prior, IoTWorX 10.97.3 and prior, GENESIS32 all versions, and BizViz all versions allows a remote attacker to unlock the system by obtaining the challenge response by some means. The challenge response used to unlock the system is common to all users and fixed. As a result, the attacker may disclose, tamper with, destroy, or delete internal information, or cause the affected system to enter a denial-of-service (DoS) condition.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial SCADA/IIoT software with weak password recovery, explicitly excluded by base Digital Identity and overlay rules.",
+      "fail_open": false
+    }
+  }
+]
