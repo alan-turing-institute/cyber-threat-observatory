@@ -1,0 +1,545 @@
+# DPI / LinkedIn daily shortlist
+
+- **Generated (UTC):** 2026-10-24 03:28:01Z
+- **Reports folder:** `/root/cyberobs-backfill-20261020/reports/2026-10-20`
+- **Included count:** 42
+
+Sorted by **dpi_rank** (desc), then **CVE ID**.
+
+| dpi_rank | Tier | CVE | Why DPI | LinkedIn hook |
+|----------|------|-----|---------|----------------|
+| 5 | 2 | CVE-2026-101690 | Unauthenticated ERP data access in Oracle E-Business Suite directly impacts Finance, Government, and Healthcare sectors by threatening core transactional, procurement, and supply chain data integrity. | Oracle E-Business Suite deployments across government, finance, and healthcare face a critical unauthenticated data access flaw (CVE-2026-101690). While typically internal, misconfigured gateways could expose core ERP data—patching and strict network segmentation are essential for DPI resilience. |
+| 5 | 2 | CVE-2026-101767 | Core ERP platform with unauthenticated RCE directly threatens financial records, payroll, and procurement systems widely deployed in Finance and Government sectors. | Unauthenticated RCE in Oracle E-Business Suite poses a critical risk to Finance and Government digital infrastructure, enabling full takeover of payroll, procurement, and financial data systems. Patching and network segmentation are urgent for regulated enterprises. |
+| 5 | 2 | CVE-2026-113729 | Impacts SAML/WS-Federation identity providers, causing unauthenticated DoS on public-facing authentication endpoints critical for digital identity workflows. | A TIER 2 DoS in a widely used SAML library can knock out federated login for entire organizations. Patching moov-io/signedxml is critical to keep digital identity endpoints resilient against unauthenticated XML bombs. |
+| 5 | 2 | CVE-2026-83407 | Core enterprise IAM gateway (Oracle Access Manager) with unauthenticated remote access to authentication/SSO data, directly impacting Digital Identity infrastructure. | Unauthenticated remote flaws in internet-facing IAM gateways like Oracle Access Manager pose immediate risks to digital identity ecosystems. Patching OAM is critical to protect SSO tokens, session management, and downstream access controls across regulated sectors. |
+| 5 | 2 | CVE-2026-83409 | Digital Identity sector: unauthenticated SAML authentication bypass in Oracle Access Manager enables full IAM gateway takeover and identity forgery. | Unauthenticated SAML flaws in enterprise SSO gateways like Oracle Access Manager can grant attackers full identity infrastructure control. Patching OAM is critical for protecting digital identity ecosystems against token forgery and MFA bypass. |
+| 5 | 2 | CVE-2026-83426 | Directly impacts core Digital Identity infrastructure by allowing unauthenticated bypass of enterprise IAM gateways, risking credential theft and unauthorized access to protected services. | Oracle Access Manager’s unauthenticated authentication bypass (CVE-2026-83426) highlights the critical need to harden public-facing IAM gateways. As a core Digital Identity component, OAM compromises can cascade across enterprise and government services, making timely patching essential for infrastructure resilience. |
+| 5 | 2 | CVE-2026-87251 | Critical unauthenticated SAML authentication bypass in Oracle Access Manager directly compromises Digital Identity infrastructure and enterprise SSO gateways. | A critical, unauthenticated SAML bypass in Oracle Access Manager could let attackers fully take over enterprise identity gateways and forge SSO tokens. With no public PoC yet, patching edge-facing IdAM deployments is a top priority for digital identity resilience. |
+| 5 | 2 | CVE-2026-87296 | Core enterprise IAM gateway flaw enabling unauthenticated access to authentication data and session tokens, directly impacting Digital Identity infrastructure. | Unauthenticated access to Oracle Access Manager’s authentication engine exposes session tokens and credentials, highlighting the critical need to patch public-facing IAM gateways in digital identity ecosystems. |
+| 5 | 2 | CVE-2026-87337 | Digital Identity: Critical unauthenticated flaw in Oracle Access Manager's authentication engine directly compromises enterprise and government identity gateways, enabling credential theft and session hijacking across downstream services. | A CVSS 10.0, unauthenticated vulnerability in Oracle Access Manager exposes internet-facing identity gateways to immediate compromise. For DPI operators, this underscores the urgent need to patch edge authentication proxies before attackers harvest credentials and pivot into protected citizen or enterprise services. |
+| 5 | 2 | CVE-2026-91212 | Digital Identity sector: unauthenticated access to Oracle Identity Manager Connector exposes synchronized identity data, directly impacting enterprise and national IdAM infrastructure. | National digital identity systems relying on Oracle Fusion Middleware face a high-impact, unauthenticated data exposure risk. Patching and internal network segmentation are critical to prevent lateral movement and credential harvesting in regulated IdAM environments. |
+| 5 | 2 | CVE-2026-91265 | Critical unauthenticated authentication bypass in Oracle JD Edwards ERP, directly impacting Finance and Government sectors managing financial transactions and public resource data. | Unauthenticated access to core ERP systems poses severe risks to financial and government operations. Patch Oracle JD Edwards immediately and enforce strict network segmentation to protect critical public and enterprise data. |
+| 5 | 2 | CVE-2026-91408 | Core IdAM platform vulnerability enabling unauthenticated full takeover of identity stores and credentials, directly impacting government, finance, and healthcare digital identity infrastructure. | Unauthenticated critical flaw in Oracle Identity Manager could grant attackers full control over enterprise identity stores. Patching and strict network segmentation are vital to protect digital identity infrastructure across regulated sectors. |
+| 5 | 2 | CVE-2026-91490 | Digital Identity: Unauthenticated LDAP Gateway flaw in Oracle Identity Manager enables silent identity store manipulation and lateral movement in enterprise IAM deployments. | Enterprise IAM backends are prime targets for lateral movement. CVE-2026-91490 allows unauthenticated manipulation of identity data in Oracle Identity Manager, highlighting the need for strict network segmentation and patching of internal IdAM infrastructure. |
+| 5 | 2 | CVE-2026-91491 | Core IdAM component (Oracle Identity Manager LDAP Gateway) with unauthenticated RCE directly threatens digital identity lifecycles and credential stores across government, finance, and healthcare infrastructure. | Unauthenticated full takeover of Oracle’s Identity Manager LDAP Gateway poses a critical lateral movement risk for enterprise identity fabrics. Patching and strict network segmentation are essential to protect digital identity lifecycles in regulated sectors. |
+| 4 | 2 | CVE-2026-101560 | Finance: Authenticated data manipulation in Oracle Commerce Platform threatens payment processing integrity and transaction records. | Enterprise e-commerce platforms face data integrity risks as CVE-2026-101560 allows authenticated manipulation of critical transaction records, directly impacting financial operations. |
+| 4 | 2 | CVE-2026-101590 | Critical unauthenticated authentication bypass in Oracle Helidon, a foundational Java microservices framework explicitly deployed across government, finance, and healthcare backend APIs. | Unauthenticated access to backend microservices can bypass perimeter controls entirely. This critical flaw in Oracle Helidon highlights why API gateway enforcement and framework-level patching are non-negotiable for regulated digital services. |
+| 4 | 2 | CVE-2026-101758 | Finance sector: unauthenticated access to telecom billing/revenue backend enables critical data exfiltration and financial record manipulation. | Telecom operators and regulated finance backends should prioritize patching Oracle BRM (CVE-2026-101758), as an unauthenticated flaw could allow attackers to manipulate billing records and exfiltrate sensitive revenue data. |
+| 4 | 2 | CVE-2026-101763 | Critical unauthenticated RMI flaw in Oracle telecom billing infrastructure enables full system takeover, directly impacting financial transaction processing and revenue management systems. | Telecom operators relying on Oracle BRM for real-time charging and billing face a critical internal network risk: an unauthenticated RMI flaw that grants attackers full system control. Patching and strict network segmentation are essential to protect financial transaction integrity and subscriber data. |
+| 4 | 2 | CVE-2026-113395 | Foundational edge router/firewall flaw enabling authenticated RCE; report explicitly ties impact to government, finance, healthcare, and digital identity connectivity. | Network edge devices underpin critical public and regulated services. This TIER 2 DrayTek router vulnerability underscores the operational risk of exposed admin interfaces and the need for rigorous firmware lifecycle management in DPI environments. |
+| 4 | 2 | CVE-2026-113682 | Critical authentication bypass in a Java microservices framework affecting LDAP/AD delegation, directly impacting enterprise and government digital identity infrastructure. | A critical auth bypass in the light-4j framework allows attackers to impersonate LDAP/AD users with just a known username and an empty password. Organizations relying on directory-backed microservices for citizen or enterprise services should prioritize patching to 2.4.0 immediately. |
+| 4 | 2 | CVE-2026-43845 | Critical unauthenticated admin bypass in industrial RTUs deployed across municipal utilities, wastewater systems, and hospital infrastructure, directly impacting Government and Healthcare sectors. | An unauthenticated authentication bypass in industrial edge devices threatens municipal utilities and hospital infrastructure. Public-sector OT networks must prioritize firmware updates and strict network segmentation to prevent service disruption. |
+| 4 | 2 | CVE-2026-83399 | Critical unauthenticated RCE in Oracle WebLogic Server, a foundational middleware platform explicitly deployed across finance, government, and healthcare sectors. | Unauthenticated remote code execution in Oracle WebLogic Server poses a severe lateral movement risk for regulated enterprises. While typically internal, default-enabled T3/IIOP protocols make segmentation and patching critical for finance, government, and healthcare deployments. |
+| 4 | 2 | CVE-2026-87346 | Foundational enterprise middleware (Oracle HTTP Server/WebLogic) explicitly underpins critical Finance, Government, and Healthcare digital services, requiring high-priority hardening for regulated environments. | Unauthenticated flaws in Oracle HTTP Server’s WebLogic proxy plug-in pose a direct risk to internet-facing edge infrastructure. Finance, government, and healthcare operators should prioritize patching this foundational middleware to protect critical public and regulated digital services. |
+| 4 | 2 | CVE-2026-91273 | Core ERP platform widely deployed in finance and government sectors, enabling unauthenticated access to critical financial, procurement, and citizen service data. | Unauthenticated access to Oracle JD Edwards ERP systems poses a significant post-compromise risk for finance and government sectors. Organizations relying on this infrastructure for payroll, procurement, and citizen services should prioritize patching and internal network segmentation. |
+| 4 | 2 | CVE-2026-91305 | Critical unauthenticated ERP bypass directly threatens financial data integrity and public-sector budgeting systems, impacting core Finance and Government digital infrastructure. | Unauthenticated access to core ERP systems poses a severe risk to financial and government operations. Patching Oracle JD Edwards is critical to protect fiscal data integrity and prevent post-compromise lateral movement in regulated environments. |
+| 4 | 2 | CVE-2026-91308 | Unauthenticated ERP data access in Oracle JD Edwards directly threatens financial records and government procurement systems widely deployed in regulated and public-sector environments. | Enterprise ERPs like Oracle JD Edwards underpin public finance and government operations. This unauthenticated flaw underscores why network segmentation and rapid patching are critical to safeguarding fiscal and civic data from post-compromise exfiltration. |
+| 4 | 2 | CVE-2026-91341 | TIER 2 flaw in Oracle Outside In SDK compromises data integrity and availability for enterprise document management, directly impacting Government, Finance, and Healthcare compliance workflows. | Enterprise document processing isn't just IT overhead—it's the backbone of public records and regulated compliance. This TIER 2 vulnerability in Oracle's Clean Content SDK underscores why internal SDK hardening is critical for Government, Finance, and Healthcare infrastructure. |
+| 4 | 2 | CVE-2026-91377 | Unauthenticated data exposure in Oracle Siebel CRM directly impacts Finance and Government sectors by risking customer PII, financial records, and citizen data in regulated enterprise deployments. | Unauthenticated access to enterprise CRM systems poses a direct threat to regulated sectors. This TIER 2 vulnerability in Oracle Siebel CRM highlights the critical need for strict network segmentation and patching in Finance and Government customer service environments. |
+| 4 | 2 | CVE-2026-91644 | Critical unauthenticated data access flaw in Oracle Essbase, a foundational analytics platform widely deployed across Finance and Government sectors for regulatory reporting and public expenditure tracking. | Unauthenticated access to enterprise analytics platforms like Oracle Essbase poses a direct threat to financial and governmental data integrity. As these systems underpin regulatory reporting and public budgeting, strict network segmentation and timely patching are essential for DPI resilience. |
+| 4 | 2 | CVE-2026-91665 | Critical unauthenticated RCE in Oracle Essbase, a core platform for enterprise financial planning and government fiscal forecasting. | Unauthenticated RCE in Oracle Essbase threatens financial planning and government budgeting systems. While typically internal, network segmentation is critical to prevent lateral movement and data breaches in regulated environments. |
+| 3 | 2 | CVE-2026-101463 | General enterprise CRM widely deployed across regulated sectors; unauthenticated access risks PII and sensitive business data exposure. | Oracle Siebel CRM faces an unauthenticated data access flaw (CVE-2026-101463) that bypasses authorization checks. Regulated organizations with customer-facing portals should enforce edge authentication and patch promptly to prevent PII exposure. |
+| 3 | 2 | CVE-2026-101499 | Critical unauthenticated remote takeover of a public-facing enterprise web content platform, posing direct risk to government and regulated sector digital service portals. | Oracle WebCenter Sites faces a critical, unauthenticated remote takeover flaw (CVE-2026-101499) with zero exploitation barriers. Public-facing digital service portals and enterprise web tiers must prioritize the October CPU patch to prevent immediate content poisoning and system compromise. |
+| 3 | 2 | CVE-2026-101521 | Foundational low-code platform explicitly deployed across Government, Finance, Healthcare, and Identity sectors for citizen/enterprise-facing applications. | Unauthenticated remote takeover in Oracle APEX (TIER 2) poses a critical risk to the low-code foundations of government, finance, and healthcare portals. Prioritize patching and network segmentation to protect sector-specific applications built on this enterprise stack. |
+| 3 | 2 | CVE-2026-103119 | Foundational web server vulnerability enabling unauthenticated data leakage and DoS across public-facing enterprise and DPI deployments. | Apache Tomcat's widespread use in public-facing services makes this unauthenticated buffer flaw a critical priority for infrastructure teams. Patching to 11.0.27 is essential to prevent cross-request data bleeding and service disruption. |
+| 3 | 2 | CVE-2026-105297 | TIER 2 DoS in a foundational edge proxy library that underpins public-facing API gateways and web services critical to DPI availability. | A TIER 2 HTTP/2 DoS in Cloudflare’s Pingora library shows how default configurations can take down edge proxies. DPI operators should patch or enforce stream limits to protect citizen-facing gateways from unauthenticated memory exhaustion. |
+| 3 | 2 | CVE-2026-113396 | TIER 2 authenticated RCE on a widely deployed edge firewall/router, posing a perimeter breach risk to any organization relying on it for network security. | Perimeter firewalls are the first line of defense for public and regulated services. This TIER 2 authenticated RCE in DrayTek Vigor2960 firmware highlights the critical need to patch edge infrastructure and enforce strict admin access controls before attackers pivot inward. |
+| 2 | 2 | CVE-2026-101459 | Enterprise CRM backend with contingent relevance to Government, Healthcare, and Finance sectors due to data breach and service disruption risks. | Oracle Siebel CRM faces a high-severity access control flaw (CVE-2026-101459) that could let low-privilege users breach critical data or disrupt services. Regulated sectors relying on Siebel for citizen or patient engagement should prioritize patching and strict access reviews. |
+| 2 | 2 | CVE-2026-101467 | Tier 2 unauthenticated data manipulation flaw in Oracle Siebel CRM portal, widely deployed across regulated Finance, Healthcare, and Government environments with compliance implications. | Enterprise CRM portals often sit at the edge of regulated digital services. This unauthenticated data manipulation flaw in Oracle Siebel CRM highlights the need for strict WAF controls and patch discipline across Finance, Healthcare, and Government deployments. |
+| 2 | 2 | CVE-2026-101531 | TIER 2 unauthenticated data exposure in Oracle OBIEE, a horizontal analytics platform explicitly noted for deployments in regulated government, finance, and healthcare reporting environments. | Unauthenticated data exposure in Oracle OBIEE (CVE-2026-101531) underscores the risk of internal analytics platforms in regulated sectors. Even with network segmentation, missing authorization controls can leak critical financial, healthcare, or government reporting data. Apply the October CPU and verify access controls. |
+| 2 | 2 | CVE-2026-113394 | General infrastructure edge firewall deployed across public sector and telecom networks; authenticated root RCE threatens foundational connectivity and lateral movement into regulated services. | A publicly available PoC for an authenticated root RCE in the DrayTek Vigor2960 underscores the risk to internet-exposed edge firewalls supporting public and telecom infrastructure. Securing admin panels with MFA and network segmentation is essential to protect foundational DPI connectivity. |
+| 2 | 2 | CVE-2026-91233 | Critical unauthenticated RCE in Oracle SOA Suite, widely deployed as internal orchestration middleware across government, finance, and healthcare environments. | Enterprise middleware doesn't always sit behind the firewall, but when it does, unauthenticated RCE like CVE-2026-91233 becomes a high-value lateral movement target. For regulated sectors relying on Oracle SOA Suite for core workflows, patching and strict network segmentation are non-negotiable. |
+| 2 | 2 | CVE-2026-9589 | TIER 2 missing authorization in enterprise customer engagement platform deployed across commercial and public-sector environments. | CVE-2026-9589 exposes configuration isolation failures in Unblu Spark, a platform used by public-sector entities for citizen engagement, requiring authenticated access to exploit. |
+
+## Skipped without LLM (TIER 3/4 heuristic)
+
+- `TIER_3_CVE-2026-101387.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101388.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101390.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101398.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101409.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101410.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101411.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101420.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101421.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101422.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101427.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101428.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101431.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101434.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101446.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101447.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101450.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101451.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101452.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101457.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101461.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101464.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101466.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101469.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101473.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101477.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101478.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101479.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101481.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101482.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101495.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101498.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101501.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101503.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101504.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101505.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101506.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101508.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101518.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101519.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101520.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101525.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101526.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101527.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101528.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101529.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101532.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101534.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101535.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101536.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101540.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101541.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101542.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101543.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101544.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101545.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101546.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101548.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101549.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101551.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101552.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101554.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101555.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101556.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101557.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101566.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101567.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101572.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101585.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101593.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101594.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101596.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101598.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101599.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101602.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101603.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101634.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101635.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101636.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101638.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101640.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101641.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101642.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101643.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101645.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101646.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101647.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101648.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101649.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101650.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101653.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101654.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101655.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101656.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101658.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101660.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101661.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101662.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101664.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101665.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101672.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101676.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101680.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101681.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101682.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101683.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101684.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101685.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101686.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101687.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101688.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101689.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101692.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101694.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101698.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101699.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101700.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101703.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101704.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101705.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101707.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101708.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101712.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101719.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101735.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101736.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101742.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101744.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101759.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101765.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101768.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101769.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101770.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101772.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101773.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101775.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101781.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101783.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101785.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101786.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101791.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101796.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101797.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101808.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101809.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101813.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101815.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101816.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101818.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101820.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101822.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101823.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101824.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101825.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101826.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101827.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101829.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101830.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101831.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101833.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101834.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101837.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101840.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101841.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101842.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101847.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101849.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101851.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101852.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101853.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-101854.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-105311.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-105312.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-105941.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-105949.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-107755.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-109440.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-109444.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-111090.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-111767.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-112066.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-112407.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-112940.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-112942.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-112994.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-112997.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-112999.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113017.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113024.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113025.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113028.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113037.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113041.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113043.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113046.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113062.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113063.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113065.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113067.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113073.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113074.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113076.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113080.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113084.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113087.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113100.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113118.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113120.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113130.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113140.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113146.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113148.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113153.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113156.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113162.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113170.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113177.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113180.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113182.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113183.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113184.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113195.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113197.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113200.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113202.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113203.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113232.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113233.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113249.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113258.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113265.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113272.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113292.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113294.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113308.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113314.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113321.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113327.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113331.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113342.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113344.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113351.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113354.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113380.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113386.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113402.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113403.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113404.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113405.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113406.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113407.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113469.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113619.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113672.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113679.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113708.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113709.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113718.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113722.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113723.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113725.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113726.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113727.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113732.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113776.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-113810.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-14933.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-28328.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-43837.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-43838.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-43847.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-47025.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-60432.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-60662.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-76587.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-77926.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-77930.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-77937.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-77938.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-82891.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-83361.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-83363.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-83366.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-83367.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-83370.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-83393.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-83397.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-83402.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-83403.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-83404.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-85267.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-86949.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-86961.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87263.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87300.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87301.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87305.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87306.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87307.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87308.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87309.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87310.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87312.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87313.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87314.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87315.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87316.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87347.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87351.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87356.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87357.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87358.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87359.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87363.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87364.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87369.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87394.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87397.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87402.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87403.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87404.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87408.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87417.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87419.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87420.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-87421.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-90797.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-90800.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91211.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91213.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91215.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91216.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91217.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91218.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91221.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91222.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91223.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91224.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91225.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91226.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91227.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91228.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91229.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91230.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91231.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91232.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91235.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91236.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91237.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91238.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91239.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91241.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91242.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91243.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91250.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91251.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91253.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91254.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91255.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91256.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91259.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91260.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91266.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91267.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91268.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91269.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91270.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91271.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91272.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91286.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91287.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91288.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91295.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91296.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91299.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91303.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91304.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91306.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91307.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91310.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91311.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91313.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91314.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91315.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91316.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91321.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91325.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91326.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91327.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91328.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91337.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91338.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91340.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91342.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91343.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91344.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91345.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91346.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91347.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91348.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91349.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91354.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91355.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91358.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91405.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91406.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91407.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91415.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91433.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91437.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91438.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91442.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91448.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91457.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91458.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91459.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91460.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91465.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91473.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91478.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91483.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91484.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91488.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91489.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91492.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91493.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91494.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91495.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91496.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91499.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91502.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91503.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91504.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91506.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91511.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91512.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91515.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91520.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91521.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91527.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91532.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91534.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91535.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91537.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91539.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91545.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91546.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91549.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91550.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91557.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91563.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91568.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91573.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91579.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91597.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91604.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91608.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91622.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91623.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91624.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91625.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91627.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91632.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91635.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91636.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91637.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91638.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91639.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91642.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91647.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91651.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91653.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91655.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91656.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91658.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91659.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91661.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91663.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91664.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-91668.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-92162.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-92559.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-93441.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-93442.md` — heuristic TIER 3/4
+- `TIER_3_CVE-2026-93888.md` — heuristic TIER 3/4
+- `TIER_4_CVE-2026-101679.md` — heuristic TIER 3/4
+- `TIER_4_CVE-2026-101810.md` — heuristic TIER 3/4
+- `TIER_4_CVE-2026-87395.md` — heuristic TIER 3/4
+- `TIER_4_CVE-2026-87398.md` — heuristic TIER 3/4
+- `TIER_4_CVE-2026-91350.md` — heuristic TIER 3/4
