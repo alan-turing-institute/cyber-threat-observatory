@@ -1,0 +1,322 @@
+[
+  {
+    "id": "CVE-2026-110956",
+    "published": "2026-10-24 06:00:18",
+    "cvss": 9.8,
+    "epss": 0.00186,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The asVereinbase  WordPress plugin before 1.1.8 does not require a valid password or a genuine second factor before authenticating a user, treating an empty stored value as a match, so an unauthenticated attacker can log in as any user, including an administrator.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Explicit exclusion for WordPress plugin; consumer software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-46651",
+    "published": "2026-10-23 14:15:28",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 24.03 to before version 26.05, the DownloadTaskEndpoint WebSocket endpoint (/tasks/download/monitor.socket) in goobi-viewer-core accepts download requests from unauthenticated users. This issue has been patched in version 26.05.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in a library digitization viewer with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57116",
+    "published": "2026-10-23 12:06:55",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. From version 4.2.1 to before version 4.6.59, PraisonAI's AgentOS FastAPI deployment surface remains unauthenticated in current main and in releases after the published patched version for GHSA-pm96-6xpr-978x / CVE-2026-40151. The chat route directly calls agent.chat(request.message). No-auth and wrong-bearer requests both execute the deployed agent. This is broader than passive metadata disclosure. In any deployment where AgentOS wraps agents with tools, private context, memory, API integrations, or cost-bearing model calls, an unauthenticated reachable client can drive those agents. This issue has been patched in version 4.6.59.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated access in an AI agent orchestration tool with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19677",
+    "published": "2026-10-23 01:21:08",
+    "cvss": 9.3,
+    "epss": 0.00533,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An authentication bypass vulnerability in the public onPhase/ frevvo registration form version 11.0.14 allows an unauthenticated remote attacker to authenticate as an arbitrary tenant user, obtain TenantAdmin and Designer privileges, and execute arbitrary operating system commands via manipulation of registration parameters containing a valid tenant name and existing user identifier.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in a commercial form/low-code platform with no clear identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-114357",
+    "published": "2026-10-23 13:39:28",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for a critical function in the Android Debug Bridge daemon (adbd) in DJI CrystalSky ZS600C firmware v0.3.9.7 through v0.6.6.9 allows an attacker to obtain an unauthenticated shell (uid 2000), a foothold for privilege escalation to root. The device ships with ro.adb.secure=0 (no host key authorization) and USB ADB enabled by default; ADB over TCP is not enabled by default but, once enabled (e.g. via the shipped /system/bin/adbd_tcp.sh or 'setprop persist.adb.tcp.port 5555'), the same unauthenticated shell is reachable over the network (CVSS 4.0 base 9.3).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Explicit exclusion for consumer/industrial IoT drone controller firmware; no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86055",
+    "published": "2026-10-23 04:09:27",
+    "cvss": 8.7,
+    "epss": 0.004,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Part-DB is an open source inventory management system for electronic components. Prior to version 2.13.3, Part-DB builds the absolute URL of the password-reset link it emails to a user from the client-supplied HTTP Host header, with no trusted-host validation. An unauthenticated attacker who submits a forgot-password request for a known account while sending a spoofed Host header causes Part-DB to email that account a reset link whose hostname is attacker-controlled, while still embedding the genuine reset token. When the victim opens the link (or an automated inbound mail-security scanner dereferences it), the valid token is disclosed to the attacker, who replays it against the real instance to set a new password and take over the account. Because the seeded admin account can be targeted, this yields full pre-authentication administrative account takeover. This issue has been patched in version 2.13.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Password reset flaw in an open-source electronics inventory tool with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93489",
+    "published": "2026-10-23 07:07:13",
+    "cvss": 8.7,
+    "epss": 0.00189,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper Authentication in ASUS router modules allows an unauthenticated nearby user to send an HTTP request and forge an access ticket, subsequently enabling the user to perform administrator operations.\nRefer to the ' Security Update for ASUS Router Firmware ' section on the ASUS Security Advisory for more information.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Explicit exclusion for consumer home router firmware; no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-56837",
+    "published": "2026-10-23 11:57:48",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. From version 4.6.56 to before version 4.6.59, PraisonAI's LinearBot starts a public webhook listener on 0.0.0.0 and treats LINEAR_WEBHOOK_SECRET as optional. When the secret is absent, startup only logs a warning and _handle_webhook() skips Linear-Signature verification entirely. An unauthenticated network caller who can reach the webhook endpoint can submit a forged Linear-Event: AgentSession request. The forged request is parsed, scheduled for background processing, dispatched to _handle_agent_session(), and passed into BotSessionManager.chat(). The bot then attempts to post the agent response back to Linear under the configured bot token. The PoV is offline and deterministic. It does not contact Linear. It calls the webhook handler directly, monkey-patches the outbound Linear comment path, and proves both sides of the boundary. This issue has been patched in version 4.6.59.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Webhook secret bypass in an AI agent orchestration tool with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-58202",
+    "published": "2026-10-23 20:27:36",
+    "cvss": 8.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 2.0.0, the account-confirmation link in emails is built from the request Host header, with no allowlist. The unauthenticated POST /api/auth/resend-confirmation rotates a pending invitee's confirmation token and emails a link whose host comes from the request. An attacker who sends one resend-confirmation with Host: attacker.example and a pending invitee's email causes that invitee to receive a confirmation email whose only link points to the attacker. If the invitee clicks, the one-time confirmation token reaches the attacker, who then confirms the account on the real tenant domain and registers a passkey they control, taking over the account before the legitimate invitee ever uses it. All released versions through v1.1.0 are affected; no patched version exists yet. Reaching the app with a spoofed Host depends on the front proxy: the stock Caddy catch-all forwards it, while an operator who configures explicit per-tenant proxy blocks is not affected (see Details 4). The invite path builds links from the trusted tenant.domain (invite/+server.ts:204-210); the resend-confirmation path builds them from the request Host. This issue has been patched in version 2.0.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Host header poisoning on account confirmation in a commercial appointment booking app with no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-56836",
+    "published": "2026-10-23 11:57:28",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. From version 4.5.112 to before version 4.6.59, PraisonAI's installed console entrypoint is Typer-first. In current releases, the recipe command is registered in the Typer app and praisonai recipe serve dispatches to the deprecated Typer command in src/praisonai/praisonai/cli/commands/recipe.py. That Typer command can start the Recipe HTTP server on a non-localhost interface with no authentication. It prints a deprecation warning, and then launches the server. Because config.auth is absent, create_app() does not attach the API-key or JWT middleware. Unauthenticated requests can then reach the recipe API and, when enabled, /admin/reload. This issue has been patched in version 4.6.59.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI agent development tooling with missing auth on a dev server, excluded by overlay as non-DPI LLM/tooling context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57146",
+    "published": "2026-10-23 12:08:16",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "PraisonAI is a multi-agent teams system. From version 4.5.115 to before version 4.6.61, the published A2U advisory GHSA-f292-66h9-fpmf says unauthenticated A2U event streaming was fixed in praisonai 4.5.115. Current head still exposes the same A2U subscription and event routes without authentication when the operator starts the documented CLI entrypoint. The current CLI wrapper does not expose --api-key, does not install the common API-key middleware, and does not generate a token for A2U. It calls create_a2u_routes(app) directly. That helper only enforces auth if A2U_AUTH_TOKEN is already present; if the variable is missing, _authenticate_request() returns None and treats auth as disabled. This issue has been patched in version 4.6.61.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI agent framework with missing authentication on event streaming, excluded as non-DPI LLM/tooling context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55459",
+    "published": "2026-10-23 14:16:44",
+    "cvss": 7.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 25.01 to before version 26.05, AuthenticationEndpoint.verifyOpenIdToken builds its verifier as JWT.require(algorithm).withIssuer(issuer).build() and does not enforce the aud claim during cryptographic validation. The aud check is performed manually afterwards via a single string-equality call, which only handles single-string aud values. In a multi-RP IdP setup, a token whose single-string aud matches the viewer's client ID but was issued for a different relying party passes the check and authenticates the attacker as the token's sub. This issue has been patched in version 26.05.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "OIDC audience claim bypass in niche archival viewer, weak DPI software fit and no public-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55457",
+    "published": "2026-10-23 14:16:27",
+    "cvss": 7.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. Prior to version 26.05, Configuration.getWebApiToken returns the empty string when webapi.authorization.token is not configured. AuthorizationFilter compares the supplied token against this default without first checking that the configured token is non-empty. A request to any @AuthorizationBinding-protected endpoint with an empty ?token= value is therefore accepted. This issue has been patched in version 26.05.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "API authentication bypass via empty default token in niche archival viewer, weak DPI software fit and no public-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-115973",
+    "published": "2026-10-24 18:15:15",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in FaveoSuite Faveo Helpdesk 2.0.3. Affected by this issue is the function ForgotPasswordController::sendResetLinkEmail/PasswordController::reset of the file app/Http/Controllers/Auth/ForgotPasswordController.php. The manipulation leads to weak password recovery. The attack may be initiated remotely. The vendor was contacted early about this disclosure.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Weak password recovery in commercial helpdesk software, lacks clear DPI identity or public-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107858",
+    "published": "2026-10-23 05:08:46",
+    "cvss": 7.2,
+    "epss": 0.0036,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing Origin Validation in WebSockets (CWE-1385) and Permissive Cross-domain Policy with Untrusted Domains (CWE-942) in the development web server (ADK Web) in Google Agent Development Kit (ADK) for Java (com.google.adk:google-adk-dev versions 0.1.0 before 1.13.0 and com.google.adk:google-adk-maven-plugin versions 0.3.0 before 1.13.0) allow a remote attacker to control a locally running agent and read its data via a malicious web page visited by a developer while the server is running. The /run_live WebSocket endpoint accepts connections from any origin by default (hardcoded via setAllowedOrigins(\"*\") in versions 0.1.0 through 1.5.0, and defaulting to * via adk.web.cors.origins in versions 1.6.0 through 1.12.0), and since version 0.4.0 the REST API returns Access-Control-Allow-Origin: * by default. Because the server has no authentication and requests originate from the developer's browser (so binding to localhost does not prevent exploitation), a cross-origin page can send messages to the agent (triggering registered tools), stream agent responses, and list, read, create, or delete sessions and artifacts. In versions 1.6.0 through 1.12.0, users can mitigate the issue by setting the adk.web.cors.origins property to an explicit allowlist of trusted origins (such as http://localhost:8000). The vulnerability is fixed in version 1.13.0, which enforces a same-origin default for CORS and the /run_live WebSocket endpoint, and rejects DNS-rebinding requests over loopback.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Development web server for AI agent toolkit with permissive CORS, excluded as non-DPI tooling with no authentication impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-46347",
+    "published": "2026-10-23 14:14:51",
+    "cvss": 6.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. Prior to version 26.05, when a password reset link is visited, the application generates a replacement password in a predictable way and emails it to the account holder. The insufficient entropy allows the password to be brute-forced by an attacker who can approximate the server-side generation time. Exploiting this finding in isolation requires the victim to have triggered the reset themselves and the attacker to infer the server time from network or email metadata. This issue has been patched in version 26.05.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Predictable password generation in Goobi viewer, a niche digital repository application, lacks DPI identity infrastructure or sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-55463",
+    "published": "2026-10-23 14:17:06",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 4.11.0 to before version 26.05, several Jakarta WebSocket endpoints in goobi-viewer-core (DownloadTaskEndpoint, CampaignEndpoint, AutocompleteEndpoint, UserEndpoint) accept connections without verifying that the associated HttpSession belongs to a logged-in user, and none validate the Origin header against an allowlist. An unauthenticated attacker can therefore connect to these endpoints; through CampaignEndpoint this allows polluting the in-process crowdsourcing page-lock map and broadcasting forged lock messages, disrupting reviewers' work. This issue has been patched in version 26.05.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing session validation on WebSocket endpoints in Goobi viewer, a niche content management tool, has no DPI identity or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-46346",
+    "published": "2026-10-23 14:14:39",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. Prior to version 26.05, the password reset token is predictably based on the time of the reset request. An attacker who knows the target's email address can request a reset and then brute-force the token. Exploiting this finding alone forces an unauthorized password reset on any account. This issue has been patched in version 26.05.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Predictable password reset token in Goobi viewer allows account takeover but the software is a niche digital repository, not DPI identity infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-115750",
+    "published": "2026-10-23 13:03:32",
+    "cvss": 6.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "mcp-from-openapi from 2.5.0 before 2.9.0 contains a credential exposure vulnerability that allows attackers to capture Authorization and Cookie headers because safeFetch() forwards them on cross-origin redirects. Attackers controlling a spec host or abusing an open redirect can redirect fromURL() spec requests to their own origin to steal bearer tokens or cookies.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Credential forwarding flaw in mcp-from-openapi developer library, not a DPI-relevant identity or access management system.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-57207",
+    "published": "2026-10-23 13:40:31",
+    "cvss": 5.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NetBox MCP Server is a simple read-only Model Context Protocol server for NetBox. Prior to version 1.2.1, when running with TRANSPORT=http, the MCP server has no authentication on the HTTP endpoint. Any client that can reach the port gets a valid MCP session and full access to all four NetBox tools - no token or credential needed. This issue has been patched in version 1.2.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing authentication on NetBox MCP server, an IT infrastructure management bridge, lacks DPI identity/access or sector relevance.",
+      "fail_open": false
+    }
+  }
+]
