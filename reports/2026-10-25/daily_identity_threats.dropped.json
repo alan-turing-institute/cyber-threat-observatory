@@ -1,0 +1,66 @@
+[
+  {
+    "id": "CVE-2026-110956",
+    "published": "2026-10-24 06:00:18",
+    "cvss": 9.8,
+    "epss": 0.00186,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The asVereinbase  WordPress plugin before 1.1.8 does not require a valid password or a genuine second factor before authenticating a user, treating an empty stored value as a match, so an unauthenticated attacker can log in as any user, including an administrator.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by base DPI and overlay rules despite authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-115973",
+    "published": "2026-10-24 18:15:15",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in FaveoSuite Faveo Helpdesk 2.0.3. Affected by this issue is the function ForgotPasswordController::sendResetLinkEmail/PasswordController::reset of the file app/Http/Controllers/Auth/ForgotPasswordController.php. The manipulation leads to weak password recovery. The attack may be initiated remotely. The vendor was contacted early about this disclosure.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Weak password recovery in commercial helpdesk software lacks clear DPI sector or core identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116070",
+    "published": "2026-10-25 11:50:58",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Docker-Proxy through 5.1.9 contains a missing authentication vulnerability in the hubcmdui routes/config.js that allows unauthenticated attackers to read and overwrite configuration via /api/config. Attackers can retrieve the WeChat webhook URL and Telegram bot token, and overwrite menuItems links, proxyDomain, and the monitoring webhook destination receiving alerts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication in Docker reverse proxy configuration tool lacks identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-115996",
+    "published": "2026-10-24 22:30:21",
+    "cvss": 3.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in Unitree Robotics Unitree Go2 up to 1.1.13/1.1.14.1/1.1.15.1. This affects the function WebSocketClient.connect of the file websocket.py of the component chat_go. Performing a manipulation results in improper certificate validation. The attack may be initiated remotely. The attack's complexity is rated as high. The exploitability is reported as difficult. The vendor confirmed early: \"These issues were previously submitted by the researcher through our Security Response Center platform and are tracked internally as follows: Submission 990504 corresponds to our internal ticket #616 (Go2 chat_go WSS client disabled TLS server certificate validation, CWE-295).\"",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Improper certificate validation in consumer robotics/IoT device explicitly excluded by base DPI rules.",
+      "fail_open": false
+    }
+  }
+]

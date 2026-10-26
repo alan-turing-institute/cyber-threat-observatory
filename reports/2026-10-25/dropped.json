@@ -1,0 +1,1326 @@
+[
+  {
+    "id": "CVE-2026-116062",
+    "identity": {
+      "title": "CVE-2026-116062",
+      "published": "2026-10-25 17:30:15",
+      "modified": "2026-10-25 18:16:46",
+      "description": "A security flaw has been discovered in SourceCodester Performance Indicator System 1.0. This issue affects some unknown processing of the file /opils/staff/save_profile.php. The manipulation of the argument Contact results in sql injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/hubdk01/cve/issues/13"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Performance Indicator System",
+      "cpe_uris": "cpe:2.3:a:performance_indicator_system_project:performance_indicator_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/hubdk01/cve/issues/13",
+      "https://vuldb.com/vuln/426145/cti",
+      "https://vuldb.com/submit/999430",
+      "https://vuldb.com/cve/CVE-2026-116062",
+      "https://vuldb.com/vuln/426145",
+      "https://www.sourcecodester.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116062",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116062"
+    },
+    "item_id": "CVE-2026-116062",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche PHP script from SourceCodester with no enterprise or DPI footprint, despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116061",
+    "identity": {
+      "title": "CVE-2026-116061",
+      "published": "2026-10-25 17:15:16",
+      "modified": "2026-10-25 18:16:46",
+      "description": "A vulnerability was identified in SourceCodester Performance Indicator System 1.0. This vulnerability affects unknown code of the file /opils/staff/edit_dealer.php. The manipulation of the argument Contact leads to sql injection. The attack may be initiated remotely. The exploit is publicly available and might be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/hubdk01/cve/issues/12"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Performance Indicator System",
+      "cpe_uris": "cpe:2.3:a:performance_indicator_system_project:performance_indicator_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/cve/CVE-2026-116061",
+      "https://github.com/hubdk01/cve/issues/12",
+      "https://www.sourcecodester.com/",
+      "https://vuldb.com/vuln/426144/cti",
+      "https://vuldb.com/submit/999428",
+      "https://vuldb.com/vuln/426144"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116061",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116061"
+    },
+    "item_id": "CVE-2026-116061",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche PHP script from SourceCodester with no enterprise or DPI footprint, despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116060",
+    "identity": {
+      "title": "CVE-2026-116060",
+      "published": "2026-10-25 16:30:18",
+      "modified": "2026-10-25 17:17:02",
+      "description": "A vulnerability was determined in SourceCodester Performance Indicator System 1.0. This affects an unknown part of the file /opils/staff/adddealer.php. Executing a manipulation of the argument Contact can lead to sql injection. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/hubdk01/cve/issues/11"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SourceCodester",
+      "products": "Performance Indicator System",
+      "cpe_uris": "cpe:2.3:a:performance_indicator_system_project:performance_indicator_system:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/426143",
+      "https://vuldb.com/submit/999167",
+      "https://vuldb.com/vuln/426143/cti",
+      "https://vuldb.com/cve/CVE-2026-116060",
+      "https://github.com/hubdk01/cve/issues/11",
+      "https://www.sourcecodester.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116060",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116060"
+    },
+    "item_id": "CVE-2026-116060",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche PHP script from SourceCodester with no enterprise or DPI footprint, despite public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116208",
+    "identity": {
+      "title": "CVE-2026-116208",
+      "published": "2026-10-25 13:20:38",
+      "modified": "2026-10-25 14:17:02",
+      "description": "YesWiki from 4.6.2 before 4.7.0 contains a missing authorization vulnerability in ActivityPubService::syncActorPosts that lets malicious ActivityPub servers manipulate other actors' mirrored entries. Attackers can serve a poisoned outbox with cross-actor Delete, Update, or Create activities during admin-initiated sync to delete, overwrite, forge, or mass-delete entries."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-cr64-h6xp-9g2j"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "YesWiki",
+      "products": "yeswiki",
+      "cpe_uris": "cpe:2.3:a:yeswiki:yeswiki:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "yeswiki:yeswiki",
+          "vendor": "YesWiki",
+          "product": "yeswiki",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/yeswiki-4.6.2-before-4.7.0-missing-authorization-in-activitypub-syncactorposts",
+      "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-cr64-h6xp-9g2j"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116208",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116208"
+    },
+    "item_id": "CVE-2026-116208",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Wiki software with missing authorization in ActivityPub sync, lacking explicit enterprise or DPI sector deployment context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116204",
+    "identity": {
+      "title": "CVE-2026-116204",
+      "published": "2026-10-25 13:20:35",
+      "modified": "2026-10-25 14:17:01",
+      "description": "YesWiki before 4.7.0 contains a cross-site request forgery vulnerability in the despam action (tools/security/actions/despam.php) that lets unauthenticated attackers delete or restore pages through an administrator's session. Attackers can plant an auto-submitting raw HTML form on a wiki page, so an administrator who views it posts clean, suppr[], or rev[] parameters that delete PagePrincipale, configuration pages, or overwrite current content."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-cv88-hx5q-vq72"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-352"
+      ],
+      "cwe_primary": "CWE-352",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-352": "Cross-Site Request Forgery (CSRF)"
+      }
+    },
+    "software": {
+      "vendors": "YesWiki",
+      "products": "yeswiki",
+      "cpe_uris": "cpe:2.3:a:yeswiki:yeswiki:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "yeswiki:yeswiki",
+          "vendor": "YesWiki",
+          "product": "yeswiki",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-cv88-hx5q-vq72",
+      "https://www.vulncheck.com/advisories/yeswiki-before-4.7.0-csrf-via-despam-admin-action"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116204",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116204"
+    },
+    "item_id": "CVE-2026-116204",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "CSRF in wiki software with limited impact and no explicit enterprise or DPI sector context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116171",
+    "identity": {
+      "title": "CVE-2026-116171",
+      "published": "2026-10-25 13:20:13",
+      "modified": "2026-10-25 15:17:02",
+      "description": "SiYuan 3.5.4 before 3.8.7 on Windows contains a sensitive-path denylist bypass in IsSensitivePath because the Windows extended-length prefix (\\\\?\\) survives filepath.Clean and matches no forbidden prefix. Authenticated API callers can prepend the prefix to localPath in /api/import/importStdMd to copy workspace conf files, including the API token and TLS private keys, into assets served to unauthenticated clients."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-6gmc-424x-xgpm"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:b3log:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/siyuan-3.5.4-before-3.8.7-sensitive-path-bypass-via-windows-extended-length-prefix",
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-6gmc-424x-xgpm"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116171",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116171"
+    },
+    "item_id": "CVE-2026-116171",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer personal knowledge-base application with no enterprise or DPI footprint, lacking exploitation signals.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116167",
+    "identity": {
+      "title": "CVE-2026-116167",
+      "published": "2026-10-25 13:20:10",
+      "modified": "2026-10-25 14:16:55",
+      "description": "SiYuan from 2.9.0 before 3.8.7 contains a cross-site scripting vulnerability in the unauthenticated /check-auth page that assigns the to parameter to window.location.href without scheme validation. Attackers can send a crafted link with a javascript: URI that executes after victim login, invoking kernel APIs to read or modify workspace content and settings."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-fmj3-xc2f-6w4w"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:b3log:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/siyuan-2.9.0-before-3.8.7-xss-via-check-auth-to-parameter",
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-fmj3-xc2f-6w4w"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116167",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116167"
+    },
+    "item_id": "CVE-2026-116167",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer personal knowledge-base application with no enterprise or DPI footprint, lacking exploitation signals.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116166",
+    "identity": {
+      "title": "CVE-2026-116166",
+      "published": "2026-10-25 13:20:09",
+      "modified": "2026-10-25 14:16:55",
+      "description": "SiYuan 3.6.0 before 3.8.7 accepts and persists the networkServeTLS setting but never enforces it, so the kernel port keeps serving full API access over plain HTTP alongside HTTPS. Network-adjacent attackers can sniff the cleartext login flow and session cookie, which lacks the Secure attribute while responses omit HSTS, to hijack kernel API sessions."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-hpj5-f7cj-vvwr"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-319"
+      ],
+      "cwe_primary": "CWE-319",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-319": "Cleartext Transmission of Sensitive Information"
+      }
+    },
+    "software": {
+      "vendors": "siyuan-note",
+      "products": "siyuan",
+      "cpe_uris": "cpe:2.3:a:b3log:siyuan:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "siyuan-note:siyuan",
+          "vendor": "siyuan-note",
+          "product": "siyuan",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/siyuan-3.6.0-before-3.8.7-cleartext-transmission-via-unenforced-networkservetls-setting",
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-hpj5-f7cj-vvwr"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116166",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116166"
+    },
+    "item_id": "CVE-2026-116166",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer note-taking application with no enterprise or DPI footprint; session hijack risk does not meet DPI sector thresholds.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116071",
+    "identity": {
+      "title": "CVE-2026-116071",
+      "published": "2026-10-25 11:50:59",
+      "modified": "2026-10-25 12:16:29",
+      "description": "rotki before 1.44.2 contains a weak key derivation vulnerability that allows attackers to brute-force backups because the premium sync key is a single unsalted SHA-256 of the user password. Attackers who obtain an uploaded backup blob can run GPU-parallel offline password guessing and decrypt the database containing exchange API keys, secrets, wallet addresses and transaction history."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/rotki/rotki"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-916"
+      ],
+      "cwe_primary": "CWE-916",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-916": "Use of Password Hash With Insufficient Computational Effort"
+      }
+    },
+    "software": {
+      "vendors": "rotki",
+      "products": "rotki",
+      "cpe_uris": "cpe:2.3:a:rotki:rotki:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/rotki/rotki",
+      "https://github.com/rotki/rotki/issues/13393",
+      "https://github.com/rotki/rotki/pull/13401",
+      "https://github.com/rotki/rotki/blob/v1.44.1/rotkehlchen/data_handler.py#L263-L294",
+      "https://www.vulncheck.com/advisories/rotki-before-1.44.2-weak-key-derivation-for-premium-cloud-backup-encryption",
+      "https://github.com/rotki/rotki/blob/v1.44.1/rotkehlchen/crypto.py#L17-L45",
+      "https://github.com/rotki/rotki/releases/tag/v1.44.2"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116071",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116071"
+    },
+    "item_id": "CVE-2026-116071",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Personal finance and cryptocurrency portfolio tracker with no enterprise or DPI infrastructure footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116067",
+    "identity": {
+      "title": "CVE-2026-116067",
+      "published": "2026-10-25 11:50:56",
+      "modified": "2026-10-25 12:16:28",
+      "description": "Paisa before 0.7.8 contains a path traversal vulnerability in the GetFile, GetSheet, DeleteBackups, and DeleteSheetBackups handlers that lets unauthenticated attackers read files and delete backups through ../ sequences in file names. Attackers can send crafted names to the editor file and delete_backups endpoints to read any server-readable file and remove backup files outside the journal or sheets directory."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ananthakumaran/paisa/issues/420"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "ananthakumaran",
+      "products": "paisa",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/ananthakumaran/paisa/issues/420",
+      "https://github.com/ananthakumaran/paisa/blob/v0.7.7/internal/server/editor.go#L49-L70",
+      "https://www.vulncheck.com/advisories/paisa-before-0.7.8-path-traversal-via-editor-and-sheet-api",
+      "https://github.com/ananthakumaran/paisa/releases/tag/v0.7.8",
+      "https://github.com/ananthakumaran/paisa/commit/035949351f7c0d0f90ecf767aa1e28b4d5a0ae31",
+      "https://github.com/ananthakumaran/paisa"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116067",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116067"
+    },
+    "item_id": "CVE-2026-116067",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Niche accounting application with unauthenticated path traversal but no clear enterprise or DPI deployment context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116050",
+    "identity": {
+      "title": "CVE-2026-116050",
+      "published": "2026-10-25 08:45:18",
+      "modified": "2026-10-25 09:16:27",
+      "description": "A vulnerability has been found in krupalshah Employee Recruitment System up to 922ff6d208278282e7c8e36d70d9ae356adec9fe. This affects an unknown part of the file /source/registerform3.php of the component Registration. The manipulation of the argument pemail leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00254,
+      "percentile": 0.1676,
+      "date": "2026-10-25"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ubfbuz3/cve/issues/61"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "krupalshah",
+      "products": "Employee Recruitment System",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/426132/cti",
+      "https://vuldb.com/vuln/426132",
+      "https://github.com/ubfbuz3/cve/issues/61",
+      "https://vuldb.com/submit/995471",
+      "https://vuldb.com/cve/CVE-2026-116050"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116050",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116050"
+    },
+    "item_id": "CVE-2026-116050",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche, unmaintained recruitment software with SQL injection but no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116049",
+    "identity": {
+      "title": "CVE-2026-116049",
+      "published": "2026-10-25 08:30:16",
+      "modified": "2026-10-25 09:16:27",
+      "description": "A flaw has been found in krupalshah EmployeeRecruitmentSystem up to 922ff6d208278282e7c8e36d70d9ae356adec9fe. Affected by this issue is the function mysql_query of the file /source/registerform2.php of the component Registration Wizard. Executing a manipulation of the argument university/institute/branch/degree/status/cpi/semester/experience can lead to sql injection. It is possible to launch the attack remotely. The exploit has been published and may be used. This product takes the approach of rolling releases to provide continious delivery. Therefore, version details for affected and updated releases are not available. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00254,
+      "percentile": 0.16758,
+      "date": "2026-10-25"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ubfbuz3/cve/issues/60"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "krupalshah",
+      "products": "EmployeeRecruitmentSystem",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/426131",
+      "https://github.com/ubfbuz3/cve/issues/60",
+      "https://vuldb.com/cve/CVE-2026-116049",
+      "https://vuldb.com/submit/995468",
+      "https://vuldb.com/vuln/426131/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116049",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116049"
+    },
+    "item_id": "CVE-2026-116049",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche, unmaintained recruitment software with SQL injection but no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116048",
+    "identity": {
+      "title": "CVE-2026-116048",
+      "published": "2026-10-25 08:00:10",
+      "modified": "2026-10-25 08:16:26",
+      "description": "A vulnerability was detected in krupalshah EmployeeRecruitmentSystem up to 922ff6d208278282e7c8e36d70d9ae356adec9fe. Affected by this vulnerability is the function mysql_query of the file /source/registerform1.php of the component Registration. Performing a manipulation of the argument firstname/middlename/lastname/gender/birthdate/state/statespecify/city/cityspecify results in sql injection. It is possible to initiate the attack remotely. The exploit is now public and may be used. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00254,
+      "percentile": 0.16758,
+      "date": "2026-10-25"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ubfbuz3/cve/issues/59"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "krupalshah",
+      "products": "EmployeeRecruitmentSystem",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/426130",
+      "https://vuldb.com/submit/995467",
+      "https://github.com/ubfbuz3/cve/issues/59",
+      "https://vuldb.com/cve/CVE-2026-116048",
+      "https://vuldb.com/vuln/426130/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116048",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116048"
+    },
+    "item_id": "CVE-2026-116048",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche, unmaintained recruitment software with SQL injection but no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-115999",
+    "identity": {
+      "title": "CVE-2026-115999",
+      "published": "2026-10-25 01:46:02",
+      "modified": "2026-10-25 02:16:26",
+      "description": "A vulnerability has been found in mansi-k Restaurant_IMS d7ad49f61ab7cc1ec6eb359ac2b5378bdbde0694. Affected is the function mysqli_connect of the file lsmodal.php. The manipulation of the argument login_id/epsw leads to sql injection. Remote exploitation of the attack is possible. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0026,
+      "percentile": 0.17487,
+      "date": "2026-10-25"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://vuldb.com/cve/CVE-2026-115999"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "mansi-k",
+      "products": "Restaurant_IMS",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/cve/CVE-2026-115999",
+      "https://vuldb.com/vuln/426096",
+      "https://vuldb.com/submit/992141",
+      "https://vuldb.com/vuln/426096/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-115999",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-115999"
+    },
+    "item_id": "CVE-2026-115999",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche restaurant inventory system lacks enterprise or DPI sector footprint and shows no exploitation signal.",
+      "fail_open": false
+    }
+  }
+]
