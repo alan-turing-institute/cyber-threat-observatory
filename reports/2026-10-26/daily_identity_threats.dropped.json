@@ -1,0 +1,322 @@
+[
+  {
+    "id": "CVE-2026-102649",
+    "published": "2026-10-26 17:09:08",
+    "cvss": 9.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Burrito is a Terraform Automation Collaboration Software (TACoS) Kubernetes operator. Prior to 0.13.0, `POST /api/webhook` accepts unsigned GitHub and GitLab events when a `TerraformRepository`'s credentials omit `webhookSecret` or set it to an empty value, including credentials configured for git authentication and polling. `Credential.WebhookSecret` is optional, and `go-playground/webhooks` skips signature or token verification when the secret is empty. Anyone who can reach `burrito-server`'s endpoint and knows a tracked repository's URL can forge events to create or delete `TerraformPullRequest` custom resources with attacker-chosen `Branch`, `Base`, and `ID` fields. For GitHub `pull_request` events, the controller fetches changed files using the real pull request number but does not cross-check the payload's branch against that pull request. Pairing a real, existing pull request number with an unrelated existing branch in the same repository can therefore cause an unauthorized `terraform plan` for affected layers using the operator's stored git and cloud credentials. Code analysis also indicates that the resulting plan can be posted to the real pull request's comment thread, exposing and misattributing another branch's infrastructure changes. Auto-apply is disabled for these temporary layers, so this vulnerability alone cannot force a `terraform apply`; plan-time provider and data-source code execution depends on the selected branch's contents. This issue is fixed in version 0.13.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "DevOps Kubernetes operator, not core identity/access infrastructure; no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116485",
+    "published": "2026-10-26 13:08:51",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "danmu_api before 1.21.7 contains an authentication bypass vulnerability that allows unauthenticated attackers to modify server environment configuration when the default TOKEN is used and ADMIN_TOKEN is unset. Attackers can send POST requests to /api/env/set, /api/env/add, or /api/env/del to set ADMIN_TOKEN, lock out operators, redirect OTHER_SERVER or PROXY_URL for SSRF, and trigger redeployment.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer streaming/media API software, excluded by overlay; no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116214",
+    "published": "2026-10-26 13:08:47",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MacCMS v10 before 2026.1000.4054 contains an authentication bypass vulnerability that allows unauthenticated attackers to reset any member's password because check_msg() never compares msg_to. Attackers can request a recovery code to their own mailbox via user/findpass_msg, then submit it to user/findpass_reset with the victim's email or phone to take over the account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Generic CMS/blog software, excluded by base Digital Identity exclusions.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110475",
+    "published": "2026-10-26 12:20:36",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "This vulnerability exists in the CreditNirvana Collections Platform due to improper authentication and authorization controls at the platform login service. An unauthenticated remote attacker could exploit this vulnerability by manipulating authentication requests and accessing APIs without a valid authenticated session on the targeted system.\n\nSuccessful exploitation of this vulnerability could allow the attacker to enumerate platform users, establish sessions as arbitrary users including administrative users, access and modify sensitive information with the privileges of the impersonated user.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Private debt collection SaaS, not core identity infrastructure or public financial rail.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77052",
+    "published": "2026-10-26 14:45:37",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "boneIO Black exposes a Node-RED instance without authentication at the /nodered/ path through a Caddy reverse proxy. The Node-RED Admin API allows deploying flows that can execute arbitrary system commands. An unauthenticated attacker on the local network can deploy a malicious flow to achieve remote code execution and gain full control over the home automation system.\n\n\nThis issue was fixed in version 1.6.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home automation hardware, excluded by base Digital Identity exclusions.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77053",
+    "published": "2026-10-26 14:45:42",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "boneIO Black firmware ships with authentication disabled by default. Its management web API listens on all network interfaces and exposes all endpoints without requiring credentials. An unauthenticated remote attacker can fully control the device, causing denial of service, modifying configuration, and operating connected physical circuits.\nThis issue was fixed in version 1.6.0: a device without an administrator account refuses API requests until the owner creates one in the first-run wizard, and every API route is restricted to an authenticated role.\n\nVersions before 1.2.0 are based on Debian 10, are no longer supported and cannot be upgraded in place; affected devices should be re-flashed with the 1.6.0 system image.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home automation firmware, excluded by base Digital Identity exclusions.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-71456",
+    "published": "2026-10-26 16:20:31",
+    "cvss": 8.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Use of hard-coded cryptographic key vulnerability in Johnson Controls Kantech Entrapass allows Padding Oracle Crypto Attack.\n\nThis issue affects Kantech Entrapass: before 9.20.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Physical access control system, not digital identity or DPI infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116634",
+    "published": "2026-10-26 18:09:41",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OmniRoute 3.8.50 before 3.8.52 contains a missing authentication vulnerability that allows unauthenticated attackers to issue sync tokens via POST /api/sync/tokens when requireLogin is disabled. Attackers can use the issued token against GET /api/sync/bundle to retrieve decrypted provider credentials and plaintext API keys, with tokens persisting after login is re-enabled.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Web hosting control panel, not core identity/access infrastructure; credential exposure lacks DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-94380",
+    "published": "2026-10-26 11:15:45",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Weak Password Recovery Mechanism for Forgotten Password vulnerability in HAVELSAN Inc. Liman MYS allows Password Recovery Exploitation.\n\nThis issue affects Liman MYS: from 2.3.4-1124 before 2.3.5-1131.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Maritime traffic management system, not digital identity or DPI infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-112427",
+    "published": "2026-10-26 20:41:20",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "An authentication issue was addressed with improved state management. This issue is fixed in macOS Golden Gate 27.2. A remote attacker may be able to cause arbitrary code execution.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer OS (macOS) with vague authentication issue, no DPI identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116110",
+    "published": "2026-10-26 02:30:27",
+    "cvss": 7.3,
+    "epss": 0.0041,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was found in GiantappMan LiveWallPaper 2.6.8.0 on Windows. This issue affects some unknown processing of the file /LiveWallpaper/UploadFile of the component SignalR Hub. Performing a manipulation results in missing authentication. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The patch is named b62f878899adbfc2968e3345442f3a3df91b774d. It is suggested to install a patch to address this issue. The vendor was contacted early about this disclosure.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer desktop wallpaper application with missing authentication, explicitly excluded as non-DPI hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116257",
+    "published": "2026-10-26 10:30:14",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in BillaBear up to 2025.01.03. Affected by this issue is the function processInstall of the file src/BillaBear/Controller/InstallController.php of the component Installation Handler. This manipulation causes missing authentication. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a niche PHP installation handler with unclear enterprise identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116070",
+    "published": "2026-10-25 11:50:58",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Docker-Proxy through 5.1.9 contains a missing authentication vulnerability in the hubcmdui routes/config.js that allows unauthenticated attackers to read and overwrite configuration via /api/config. Attackers can retrieve the WeChat webhook URL and Telegram bot token, and overwrite menuItems links, proxyDomain, and the monitoring webhook destination receiving alerts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "DevOps proxy tool with missing authentication on configuration endpoint, lacking identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116817",
+    "published": "2026-10-26 23:05:44",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenPanel before 3.0.0 contains a missing authentication vulnerability that allows unauthenticated attackers to access the Bull Board dashboard served on the worker HTTP port. Attackers can query /api/queues and call mutating Bull Board APIs to add, retry, or clean jobs and read queue data, metrics, and datastore health.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Job queue monitoring dashboard with missing authentication, not identity or access control infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116604",
+    "published": "2026-10-26 23:45:20",
+    "cvss": 6.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been found in SourceCodester Online Food Ordering System 1.0. The affected element is an unknown function of the file admin/delete_admin.php. The manipulation of the argument ID leads to missing authentication. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Niche commercial food ordering script with missing authentication, excluded as non-DPI consumer software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116371",
+    "published": "2026-10-26 16:30:18",
+    "cvss": 6.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in Akuvox Akubela HyPanel PS51 51.130.40.26. The impacted element is an unknown function of the file /login. Executing a manipulation of the argument engrmode with the input admin can lead to improper authentication. The attack may be launched remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "VoIP phone management panel with improper authentication on login endpoint, lacking core identity infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-113440",
+    "published": "2026-10-26 13:49:17",
+    "cvss": 6.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Insufficiently Protected Credentials vulnerability in hackney in benoitc hackney allows a redirecting server to obtain the basic_auth and cookie credentials of a request via a same-host redirect to another scheme or port. With follow_redirect enabled, hackney:follow_redirect/10 in src/hackney.erl reissues the request to the Location target after hackney:maybe_strip_auth_on_redirect/3, which compared only the hostname of the current and the redirect URL. A redirect from https to http on the same host resent the Authorization and Cookie headers in cleartext, where an on-path attacker can read them, and a redirect to another port on the same host handed them to a different service. location_trusted forwards credentials to any target by design and is unchanged.\n\nThis issue affects hackney: from 2.0.0 before 4.9.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "General-purpose Erlang HTTP client library credential leak on redirect lacks clear identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103319",
+    "published": "2026-10-26 06:00:18",
+    "cvss": 5.3,
+    "epss": 0.00137,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The OPay Payment Gateway for WooCommerce WordPress plugin through 2.5.5 does not properly verify that payment notifications originate from the payment provider, as the secret used to validate their signature is empty by default, allowing unauthenticated attackers to forge a valid notification and mark arbitrary orders as paid, cancelled or failed.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress payment plugin explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103306",
+    "published": "2026-10-26 06:00:18",
+    "cvss": 5.3,
+    "epss": 0.00137,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Online Payments with iK Pay Gateway WordPress plugin before 3.0.4 does not properly verify the authenticity of its payment gateway callback on a default installation, allowing unauthenticated attackers to forge a successful payment notification and mark arbitrary orders as paid without any payment being made, and to mark arbitrary unprocessed orders as failed.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress payment plugin explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77061",
+    "published": "2026-10-26 14:46:09",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "boneIO Black directly excludes several API endpoints from the authentication. An unauthenticated remote attacker on the local network can retrieve system logs, firmware version, serial number, MQTT username, configuration file listings, and API documentation. This data aids reconnaissance and enables targeted attacks against the device.\nThis issue was fixed in version 1.6.0: every API route requires an authenticated role, the interactive API documentation is disabled, and the serial number is withheld from anonymous callers.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "IoT device info-leak with no direct authentication or access-control impact falls under base IoT exclusion.",
+      "fail_open": false
+    }
+  }
+]
