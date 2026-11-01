@@ -1,0 +1,306 @@
+[
+  {
+    "id": "CVE-2026-116512",
+    "published": "2026-10-31 07:46:51",
+    "cvss": 9.8,
+    "epss": 0.00584,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Project Manager – AI Powered Project Management, Task Management, Kanban Board & Time Tracker plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 4.1.1 via the 'id' parameter parameter. This is due to unsanitized 'id' parameter value concatenated directly into the pipe-delimited validation rule string, which is then split and each token invoked as a dynamic PHP function with no allowlist check. This makes it possible for unauthenticated attackers to execute code on the server. This is exploitable by unauthenticated attackers because WordPress core executes the route argument's validate_callback inside WP_REST_Server::dispatch() before the route's permission_callback is invoked, meaning the Project_Manage_Capability authorization gate is never reached on the vulnerable code path.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin RCE, explicitly excluded by overlay and base Digital Identity rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103039",
+    "published": "2026-10-30 06:47:32",
+    "cvss": 9.8,
+    "epss": 0.00508,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Gravity Forms plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 3.1.2 via a Post Custom Field whose input type is List. This is due to GFFormsModel::create_post() passing the submitted value to WordPress' unrestricted global maybe_unserialize() rather than the plugin's own hardened GFCommon::maybe_unserialize(), which was added in 3.1.1 and passes allowed_classes => false precisely to prevent object instantiation. Where the field has a content template enabled, the submitted row reaches that call verbatim. This makes it possible for unauthenticated attackers to inject a PHP object into post meta. No PHP Object Injection gadget chain is present in the plugin itself; however, if a gadget chain is present via an additional plugin or theme, it could allow the attacker to perform actions such as remote code execution. Where the custom field is mapped to the protected _wp_page_template meta key, WordPress itself supplies the chain: validate_file() accepts non-scalars, WP_Theme::__toString() then resolves an attacker-controlled path, and on hosts with a readable PEAR install and register_argc_argv enabled this yields remote code execution.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin object injection, explicitly excluded by overlay and base rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119096",
+    "published": "2026-10-31 07:46:49",
+    "cvss": 9.8,
+    "epss": 0.00463,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "The Uncanny Toolkit for LearnDash plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 3.8.2 via the `email` parameter of the `uo_login_action()` function. This is due to a parser-differential flaw in which the plugin's account-verification gate resolves the submitted `email` value using the raw, unsanitized string passed to `get_user_by()`, while the subsequent `wp_signon()` call relies on WordPress core's internal `sanitize_user()` to strip appended junk characters — causing the gate lookup to fail and be skipped entirely while the real account is still resolved and authenticated. This makes it possible for unauthenticated attackers to log in to unverified or administrator-suspended accounts whose credentials they already possess, obtaining a valid `wordpress_logged_in` session cookie and defeating the plugin's account-approval and account-suspension controls. The nonce required to reach the handler is freely obtainable in the same request from the unauthenticated `ult-refresh-nonce` endpoint, making exploitation trivial for any attacker with network access to the site and knowledge of a target account's credentials.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress/LMS plugin authentication bypass, explicitly excluded by base and overlay consumer software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-31704",
+    "published": "2026-10-30 10:25:46",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "A vulnerability has been found in the Dahua Intelligent Connection Center. A remote attacker could send a specially crafted request to the affected system, allowing the attacker to execute arbitrary commands, resulting in remote code execution.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial IoT camera system RCE, explicitly excluded by base sector rules and lacks identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2010-20125",
+    "published": "2026-10-30 14:23:34",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "DedeCMS before 5.7 contains a file inclusion vulnerability in plus/carbuyaction.php that allows remote unauthenticated attackers to control the include path by manipulating the uninitialized code parameter passed to require_once. Attackers can supply path traversal sequences ../../ to include arbitrary local files outside the intended payment directory, potentially achieving local file disclosure. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-18.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "CMS file inclusion vulnerability with no authentication or access-control impact, excluded by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119977",
+    "published": "2026-10-31 05:33:07",
+    "cvss": 8.1,
+    "epss": 0.006,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress Core RCE during upgrades, explicitly excluded by base and overlay consumer software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103898",
+    "published": "2026-10-31 07:46:52",
+    "cvss": 8.1,
+    "epss": 0.0044,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "The Wp Social Login and Register Social Counter plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 3.2.2. This is due to the social login REST callback registered at `/wp-json/wslu-social-login/type/{provider}/` with `permission_callback => __return_true` locating an existing WordPress account solely by the email string returned from the OAuth provider and calling `wp_set_auth_cookie()` without a password check, while the only verification guard — `!empty($getProfile->emailVerified)` in `inc/admin-create-user.php` — is a no-op for the bundled Hybridauth Facebook and Twitter adapters, both of which assign the raw email string rather than a boolean verified flag to `emailVerified`. This makes it possible for unauthenticated attackers to obtain a fully authenticated session as any existing WordPress user, including Administrators, whose registered email address can be presented through a configured Facebook or Twitter login on the target site. Exploitation requires only that the attacker control an OAuth account whose provider-returned email matches the target account's registered WordPress email address; no local credentials, nonce, or prior foothold is needed.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress social login plugin authentication bypass, explicitly excluded by base and overlay consumer software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2015-20130",
+    "published": "2026-10-30 14:23:44",
+    "cvss": 6.1,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Netsweeper before 4.0.11 and 4.1.0 before 4.1.5 contains a reflected cross-site scripting vulnerability in webadmin/reporter/view_server_log.php that allows remote attackers to execute arbitrary JavaScript by injecting malicious code through the log request parameter, which is reflected into the HTML response without output encoding. Attackers can craft a malicious URL and induce a user to request it, resulting in arbitrary JavaScript execution within the victim's browser session against the Netsweeper web administration interface. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-19.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Reflected XSS in filtering software with no authentication or access-control impact, excluded by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118539",
+    "published": "2026-10-30 03:09:13",
+    "cvss": 0.0,
+    "epss": 0.00222,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Missing Authorization vulnerability in Drupal Commerce Core allows Forceful Browsing. This issue affects Commerce Core versions: from 0.0.0 to 2.41, from 3.0.0 to 3.3.13.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "E-commerce platform missing authorization flaw, lacks DPI sector nexus and identity infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110799",
+    "published": "2026-10-30 14:19:17",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to version 1.0.8.7, the password reset functionality is vulnerable to an Authentication Bypass due to insufficient validation of the user and token GET parameters. This issue has been patched in version 1.0.8.7.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer CMS/page builder with password reset bypass, excluded by base consumer software rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-62863",
+    "published": "2026-10-30 20:33:14",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MoLing is a computer-use and browser-use based MCP server. Prior to 0.5.0, when MoLing runs in SSE mode using `-l`, its `/sse` and `/message` HTTP endpoints do not authenticate requests and the `mcp-go` dependency sets `Access-Control-Allow-Origin: *`. A malicious web page can open a cross-origin `EventSource` to `/sse`, including a loopback listener, and read the `endpoint` event to obtain `sessionId`. After a victim running SSE mode visits that page, the attacker can use the disclosed `sessionId` against `/message` to send unauthorized MCP tool calls. Depending on the configured tools, those calls can read or write local files, execute commands or perform other actions. Binding only to loopback does not prevent this browser-mediated attack. This issue is fixed in version 0.5.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI/MCP server tool with missing endpoint authentication, lacks DPI identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82104",
+    "published": "2026-10-30 08:01:55",
+    "cvss": 9.4,
+    "epss": 0.00416,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Teltonika Networks RUTOS devices running versions from 7.22 through 7.24.2 and TSWOS devices running versions 1.9 through 1.10, a vulnerability exists whereby an unauthenticated user can directly call LUA functions, bypassing validations that might be called under normal API requests. Due to those requests not following proper flows, this could lead to OS command execution.\n\n\n\nThis issue affects RUT: from 7.22 through 7.24.2; RUTX: from 7.22 through 7.24.2; RUTM: from 7.22 through 7.24.2; RUTC: from 7.22 through 7.24.2; ATRM: from 7.22 through 7.24.2; TAP: from 7.22 through 7.24.2; CAP: from 7.22 through 7.24.2; OXA: from 7.22 through 7.24.2; DAP: from 7.22 through 7.24.2; TRB: from 7.22 through 7.24.2; OTD: from 7.22 through 7.24.2; EBG: from 7.22 through 7.24.2; SWM: from 1.9 through 1.10; TSW: from 1.9 through 1.10.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "IoT router firmware with unauthenticated command execution, excluded by base IoT/router exclusion rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61729",
+    "published": "2026-10-30 14:24:04",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "SOCFortress CoPilot focuses on providing a single pane of glass for all your security operations needs. Prior to 0.1.76, `verify_graylog_header` in `backend/app/active_response/routes/graylog.py` and `verify_velociraptor_header` in `backend/app/incidents/routes/incident_alert.py` authenticate webhooks against `GRAYLOG_API_HEADER_VALUE` and `VELOCIRAPTOR_API_HEADER_VALUE` with the same publicly hardcoded fallback. The same default is shipped in `.env.example`. Deployments that leave either setting unset or unchanged permit an anonymous caller with the known header value to bypass the JWT authentication required by normal APIs. `POST /api/graylog/invoke` forwards attacker-selected `COMMAND`, `ACTION`, `VALUE` and `AGENT_ID` to the configured Wazuh manager without the command-enum validation of the authenticated invocation route, allowing active-response scripts to disrupt endpoints and manipulate defensive controls. `POST /api/incidents/alerts/create/threshold` and `POST /api/incidents/alerts/create/velo-sigma` accept forged alerts for arbitrary `customer_code` values and drive attacker-controlled OpenSearch queries. Active-response delivery requires a configured reachable Wazuh manager. Deployments with independently changed header secrets are not subject to this default-secret bypass. This issue is fixed in version 0.1.76.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Security operations platform with hardcoded webhook header bypass, lacks core identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-61730",
+    "published": "2026-10-30 14:25:53",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "SOCFortress CoPilot focuses on providing a single pane of glass for all your security operations needs. In affected deployments, the unauthenticated `/scoutsuite-report` `StaticFiles` mount in `backend/copilot.py` exposes the `scoutsuite-report` directory even though normal /api routes require JWT authentication. Generated HTML reports and `scoutsuite-results/scoutsuite_results_<name>.js` files disclose AWS, Azure and GCP IAM principals, resource inventories, misconfigurations and findings. Report names derive from caller-selected names with predictable defaults. During an admin- or analyst-initiated GCP scan, `backend/app/integrations/scoutsuite/routes/scoutsuite.py` saves the uploaded Google service-account JSON key into that same web-served directory. In `backend/app/integrations/scoutsuite/services/scoutsuite.py`, `generate_gcp_report_background` removes the key only after the scan finishes. Any anonymous client that can reach the host and request the file path can therefore retrieve the private key during the scan and use the service account's cloud permissions, as well as read retained cloud-security reports. Credential isolation is released in version 0.1.77; a release fully remediating the report-disclosure component has not been established.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated info-leak of cloud IAM reports and service keys, excluded as pure information disclosure without identity access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-62302",
+    "published": "2026-10-30 19:29:46",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "MyTube is a self-hosted downloader and player for several video websites. Prior to version 1.10.3, `server.ts` calls `registerStaticRoutes` and `registerCloudRoutes` before `registerApiRoutes`, where `authMiddleware` and `roleBasedAuthMiddleware` are mounted. Because Express processes middleware in registration order, `staticRoutes.ts` and `cloudRoutes.ts` remain outside the authentication stack even when `loginEnabled=true`. Unauthenticated clients can access local videos through `/videos/*`, thumbnails through `/images/*` and `/images-small/*`, avatars through `/avatars/*`, subtitles through `/subtitles/*`, cloud thumbnail caches through `/api/cloud/thumbnail-cache/*`, and cloud signed URLs or redirects through `/cloud/videos/:filename` and `/cloud/images/:filename`. The frontend login wall does not protect direct media requests. Cloud routes return 404 when cloud storage is unconfigured, but that is not an authentication rejection; protected API routes correctly return 401. Combined with hidden-video path leaks, the flaw permits unauthenticated downloads of hidden media. Default loginEnabled=false single-user deployments have no authentication boundary to bypass. This issue is fixed in version 1.10.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Self-hosted media player with middleware ordering auth bypass, excluded as consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-22110",
+    "published": "2026-10-30 10:34:24",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The web server does not check authentication on POST or PUT. An unauthenticated attacker can reboot the charger; by brute-forcing the configid, they can also set the service password and then change any setting.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "IoT/charger device web server with missing authentication, excluded by consumer/IoT exclusion rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63396",
+    "published": "2026-10-30 22:42:12",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Coop is an open source review and moderation tool from ROOST. Prior to 1.0.0, an unauthenticated actor can query `Query.allOrgs` through `/api/v1/graphql` on a publicly accessible deployment and obtain data for all organizations, including organization IDs, names, email addresses, website URLs and on-call alert email addresses. The `usersWhoCanReviewEveryQueue` field also exposes reviewing users' IDs, email addresses, first and last names, roles, permissions and creation dates. Running the service on an authenticated private network prevents outside actors from directly querying the GraphQL API. This issue is fixed in version 1.0.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Information disclosure in open-source content moderation tool lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116242",
+    "published": "2026-10-30 19:55:13",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "pgAdmin 4 opens SSH tunnels with the sshtunnel library but gave it neither host_pkey_directories nor ssh_config_file, so it always loaded the unencrypted private keys in ~/.ssh of the operating-system account running pgAdmin, read that account's ~/.ssh/config (IdentityFile, User, HostName, ProxyCommand) for the tunnel host, and could use its ssh-agent. In server mode any user could therefore configure a tunnel to a host that accepts the service account's key, with no credentials of their own or with an identity file that did not exist in their storage, and reach it as that account.\n\nThe fix makes tunnels in server mode use only the identity file or password the user configured: the service account's keys, configuration and agent are no longer used, and an identity file that cannot be found in the user's storage is reported instead of falling back to ~/.ssh. Desktop mode is unchanged.\n\nThis issue affects pgAdmin 4: before 9.19.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "SSH key credential exposure in pgAdmin database administration tool lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116247",
+    "published": "2026-10-30 19:55:16",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "When a server in pgAdmin 4 had no password file, client certificate or client key configured, or the configured one could not be found, pgAdmin left the parameter out of the connection and libpq fell back to the defaults of the operating-system account running pgAdmin: ~/.pgpass, ~/.postgresql/postgresql.crt and postgresql.key, or PGPASSFILE, PGSSLCERT and PGSSLKEY. In server mode any user could therefore connect to a server with the service account's saved passwords or client certificate, and supplying only a copy of its public certificate was enough for libpq to pair it with the service account's private key. A pg_service.conf entry, or a maintenance database name read as a connection string by pg_dumpall, could bring the same files back for the utilities.\n\nThe fix gives each of these parameters a value in server mode, the user's own file or otherwise a path that can never be opened, in the connection string, in the environment of the utilities and in the --dbname connection string that ranks above a service entry. Desktop mode is unchanged.\n\nThis issue affects pgAdmin 4: before 9.19.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Credential fallback exposure in pgAdmin database administration tool lacks identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  }
+]
