@@ -1,0 +1,283 @@
+{
+  "alert_id": "8f82b160",
+  "report_date": "2026-11-01",
+  "product_name": "Infrastructure Daily Brief",
+  "tlp": "GREEN",
+  "published_at": "2026-11-02 02:34:36",
+  "items": [
+    {
+      "item_id": "CVE-2026-120232",
+      "item_type": "cve",
+      "title": "CVE-2026-120232 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120232",
+      "source": "WAVE",
+      "published": "2026-11-01",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "TIER 2 local privilege escalation in endpoint restoration software deployed on government kiosks and healthcare terminals, posing post-compromise risks to public-facing infrastructure.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 2,
+        "dpi_fit": 0.2
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-120232.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-84170",
+      "item_type": "cve",
+      "title": "CVE-2026-84170 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84170",
+      "source": "WAVE",
+      "published": "2026-11-01",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "General-purpose Java web framework deployed in government and critical public services; unbounded uploads risk DoS for citizen-facing applications.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 2,
+        "dpi_fit": 0.2
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-84170.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-95863",
+      "item_type": "cve",
+      "title": "CVE-2026-95863 (Tier 2)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95863",
+      "source": "WAVE",
+      "published": "2026-11-01",
+      "category": "cyber_news",
+      "pir": [
+        "3.k"
+      ],
+      "excerpt": "Tier 2 passive XSS in Apache Wicket, a foundational Java web framework deployed across enterprise and government-facing applications.",
+      "signals": {
+        "tier": "2",
+        "dpi_rank": 2,
+        "dpi_fit": 0.2
+      },
+      "deep_dive_path": "TIER_2_CVE-2026-95863.md",
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-03fb091ccf",
+      "item_type": "campaign",
+      "title": "Unmasking EvilTokens: Getting to the root of device code phishing",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/",
+      "source": "ketch",
+      "published": "2026-11-01",
+      "category": "threats",
+      "pir": [
+        "1.d"
+      ],
+      "excerpt": "This analysis dissects the EvilTokens infrastructure, revealing how threat actors automate device code phishing to bypass multi-factor authentication. Defenders will find detailed indicators of compromise, network traffic patterns, and mitigation strategies for OAuth 2.0 device authorization flows. The report emphasizes the need for conditional access policies and real-time token monitoring to prevent silent identity takeover in enterprise environments.",
+      "signals": {
+        "dpi_fit": 9.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-f5d64cee2c",
+      "item_type": "campaign",
+      "title": "Breaking the code: Multi-stage ‘code of conduct’ phishing campaign leads to AiTM token compromise",
+      "url": "https://microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm",
+      "source": "ketch",
+      "published": "2026-11-01",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Examines a sophisticated multi-stage campaign leveraging social engineering around corporate compliance to deploy Adversary-in-the-Middle proxies. The article details how attackers capture session tokens in real-time, rendering traditional MFA ineffective. Infrastructure teams are advised to implement token binding, deploy browser isolation, and monitor for anomalous OAuth consent grants to neutralize this evolving identity threat.",
+      "signals": {
+        "dpi_fit": 9.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-a539f90734",
+      "item_type": "campaign",
+      "title": "Inside an AI‑enabled device code phishing campaign",
+      "url": "https://microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign",
+      "source": "ketch",
+      "published": "2026-11-01",
+      "category": "threats",
+      "pir": [
+        "1.c"
+      ],
+      "excerpt": "Explores the integration of generative AI into device code phishing operations, enabling dynamic landing pages and personalized lures at scale. The breakdown highlights automated infrastructure provisioning and evasion techniques used to bypass email security gateways. Defenders should prioritize AI-driven threat detection, enforce strict OAuth scope limitations, and educate users on recognizing AI-crafted authorization prompts.",
+      "signals": {
+        "dpi_fit": 8.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-2b6671e1c0",
+      "item_type": "campaign",
+      "title": "Device Code Phishing is an Evolution in Identity Takeover",
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/device-code-phishing-evolution-identity-takeover",
+      "source": "ketch",
+      "published": "2026-11-01",
+      "category": "threats",
+      "pir": [
+        "1.d"
+      ],
+      "excerpt": "Provides a comprehensive overview of how device code phishing has matured into a primary vector for enterprise identity compromise. The report maps the attack lifecycle from initial lure to token exfiltration, emphasizing the limitations of current email filtering. IT infrastructure defenders are guided through architectural adjustments, including conditional access rules, token revocation workflows, and enhanced logging for OAuth endpoints.",
+      "signals": {
+        "dpi_fit": 8.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-083eeeef17",
+      "item_type": "campaign",
+      "title": "Joint advisory: state-sponsored spear-phishing campaigns targeting critical infrastructure",
+      "url": "https://suvat.uk/blog/five-eyes-advisory.html",
+      "source": "ketch",
+      "published": "2026-11-01",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "A Five Eyes intelligence advisory detailing coordinated spear-phishing operations by state-sponsored actors against critical infrastructure sectors. The document outlines TTPs, including supply chain manipulation and credential harvesting via malicious attachments. Infrastructure defenders are urged to segment OT/IT networks, enforce strict email attachment sandboxing, and monitor for lateral movement indicators following initial compromise.",
+      "signals": {
+        "dpi_fit": 8.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-b0addd6542",
+      "item_type": "campaign",
+      "title": "The ‘code of conduct’ phishing campaign: What MSPs need to know right now",
+      "url": "https://blog.barracuda.com/2026/05/07/code-of-conduct-phishing-campaign-msp-response",
+      "source": "ketch",
+      "published": "2026-11-01",
+      "category": "threats",
+      "pir": [
+        "1.a"
+      ],
+      "excerpt": "Focuses on the operational impact of the ‘code of conduct’ phishing wave on managed service providers and their client infrastructure. The article provides actionable response playbooks, including tenant isolation, credential reset protocols, and detection rules for security information and event management platforms. Essential reading for MSPs managing multi-tenant identity environments under active threat.",
+      "signals": {
+        "dpi_fit": 8.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-b0465fd057",
+      "item_type": "campaign",
+      "title": "Storm-2372 conducts device code phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2025/02/13/storm-2372-conducts-device-code-phishing-campaign/",
+      "source": "ketch",
+      "published": "2026-11-01",
+      "category": "threats",
+      "pir": [
+        "1.e"
+      ],
+      "excerpt": "Documents a targeted campaign by the Storm-2372 threat group utilizing device code authorization flows to infiltrate government and defense contractor networks. The analysis covers infrastructure hosting, domain generation algorithms, and persistence mechanisms. Defenders should review OAuth application permissions, implement just-in-time access controls, and correlate login telemetry with known adversary infrastructure.",
+      "signals": {
+        "dpi_fit": 7.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "phish-f9f0ce33b6",
+      "item_type": "campaign",
+      "title": "Access granted: phishing with device code authorization for account takeover",
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/access-granted-phishing-device-code-authorization-account-takeover",
+      "source": "ketch",
+      "published": "2026-11-01",
+      "category": "threats",
+      "pir": [
+        "1.d"
+      ],
+      "excerpt": "Details the technical mechanics behind device code authorization phishing, demonstrating how attackers exploit legitimate OAuth endpoints to bypass perimeter defenses. The report includes packet captures, consent screen manipulation techniques, and recommended detection signatures. Infrastructure teams are advised to audit third-party application integrations and deploy user behavior analytics to flag anomalous authorization requests.",
+      "signals": {
+        "dpi_fit": 7.0
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-103898",
+      "item_type": "cve",
+      "title": "CVE-2026-103898",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103898",
+      "source": "vulners/duckdb",
+      "published": "2026-10-31",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "The Wp Social Login and Register Social Counter plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 3.2.2. This is due to the social login REST callback registered at `/wp-json/wslu-social-login/type/{provider}/` with `permission_callback => __return_true` locating an existing WordPress account solely by the email string returned from the OAuth provider and calling `wp_set_auth_cookie()` without a password check, while the only verification guard — `",
+      "signals": {
+        "cvss": 8.1,
+        "epss": 0.0044,
+        "wild_exploited": true,
+        "dpi_fit": 0.7
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-82840",
+      "item_type": "cve",
+      "title": "CVE-2026-82840",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82840",
+      "source": "vulners/duckdb",
+      "published": "2026-11-01",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "Session fixation in Apache Wicket.\n\norg.apache.wicket.authroles.authentication.AuthenticatedWebSession is the authentication base class of Wicket's role-based security module, and its signIn(String, String) method is the entry point through which an application authenticates a session. Renewing the container session id at that point is the standard defence against an attacker who has fixed a session id in a victim's browser, and Wicket provides that renewal as org.apache.wicket.Session#changeSes",
+      "signals": {
+        "cvss": 7.2,
+        "epss": null,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    },
+    {
+      "item_id": "CVE-2026-120263",
+      "item_type": "cve",
+      "title": "CVE-2026-120263",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120263",
+      "source": "vulners/duckdb",
+      "published": "2026-11-01",
+      "category": "threats",
+      "pir": [
+        "1.b"
+      ],
+      "excerpt": "When `[oauth2_client].ACCOUNT_LINKING` is set to `auto` (not the default) and registration is enabled, the link-account sign-up form looked up the existing account to link by the user name or email submitted in the form instead of the identity asserted by the OAuth2 provider. An attacker with an account on a configured OAuth2 provider could submit another user's name, link their external identity to that Gitea account and be signed in as it without its password, including as an administrator. Th",
+      "signals": {
+        "cvss": 0.0,
+        "epss": 0.00198,
+        "wild_exploited": false,
+        "dpi_fit": 0.5
+      },
+      "deep_dive_path": null,
+      "score": 0.0
+    }
+  ],
+  "metadata": {
+    "modules": {
+      "daily_critical_cves": 3,
+      "daily_phishing_campaigns": 8,
+      "daily_identity_threats": 3
+    }
+  }
+}
