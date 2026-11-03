@@ -1,0 +1,162 @@
+[
+  {
+    "id": "CVE-2026-86596",
+    "published": "2026-11-02 21:30:23",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The s2Member plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, <= 260927 via the 'item_name' parameter parameter. This is due to insufficient sanitization in strip_php_tags_deep(), which only strips literal '<?' sequences, combined with a post-interpolation placeholder cleanup that reassembles a valid '<?php' opener after the attacker-controlled value has already been embedded in the email template. This makes it possible for authenticated attackers, with custom-level access and above, to execute code on the server.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120446",
+    "published": "2026-11-02 14:29:06",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "madong-admin-saas through 5.1.4 contains a missing authentication vulnerability in the platform tenant management API because the 'platformapi' middleware key never matches the 'platform' application. Unauthenticated remote attackers can call /platformapi/tenant/account, bind-plan and sync-data endpoints to list, create, modify, disable or delete tenants and bind subscription plans.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Generic SaaS tenant management API missing authentication lacks DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120447",
+    "published": "2026-11-02 14:29:06",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "HotGo through 2.15.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to choose the SMS login verification code by supplying the Code field to /admin/sms/send. Attackers who know a user's mobile number can set a known code and sign in through /admin/site/mobileLogin to take over accounts, including administrators.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Generic platform SMS login bypass lacks evidence of DPI sector or identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119731",
+    "published": "2026-11-02 18:54:28",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Munshi (by Petpooja) before 2026-06-30 contained a payment bypass vulnerability in its subscription payment webhook at POST /api/payment/order/webhook, which lacks webhook authentication, cryptographic signature verification, source validation, and independent server-side confirmation with the payment provider. A remote, unauthenticated attacker can submit a forged payment-success notification referencing an order obtained from the payment-status redirect URL, causing the backend to mark the subscription as paid/active and granting paid access without an actual successful payment.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Payment webhook bypass in SaaS lacks the identity/access nexus required for this threat stream.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77877",
+    "published": "2026-11-02 15:19:26",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Control Web Panel (CWP) before webpanel_version 1.30 contains a missing authentication vulnerability that allows attackers able to reach the loopback API service to invoke root-privileged API routes without presenting an access token. Attackers can access endpoints such as /v1/restoredatabase/, /generaluser/, /last_access/, /valid_user/, /valid_token/, and /user_panel_dashboard/ to perform unauthorized actions with root privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Web hosting control panel API missing authentication lacks DPI identity or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111560",
+    "published": "2026-11-02 12:59:03",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Command injection in Barracuda appliance timezone configuration lacks identity/access nexus required for this stream.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120191",
+    "published": "2026-11-01 01:00:26",
+    "cvss": 7.3,
+    "epss": 0.00803,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in Presenton up to 0.9.11-beta. Affected by this issue is some unknown functionality of the component API. This manipulation causes missing authentication. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 0.9.12-beta can resolve this issue. Patch name: 44c8a61122b21f17642d717b0c4d6f2c54c0f180. You should upgrade the affected component.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no exploitable detail or software context, explicitly excluded by overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120314",
+    "published": "2026-11-02 02:01:12",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Network-AI from 5.14.0 before 5.15.5 contains a missing authentication vulnerability in the A2AServer class that allows unauthenticated attackers to access task operations when no secret is configured. Attackers can send JSON-RPC requests to tasks/send, tasks/get, and tasks/cancel without a Bearer token to execute tasks, read results, and cancel tasks.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Generic AI/network tool API missing authentication lacks DPI identity or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119740",
+    "published": "2026-11-02 19:54:27",
+    "cvss": 7.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Nexbox A95X TV boxes built on the Amlogic S905X platform contain an unauthenticated console exposed via an internal UART header on the PCB that allows physical attackers to obtain an interactive shell as uid 2000 (system) without any credentials. Attackers with physical access and a USB-to-TTL adapter can leverage this shell to reach the pppoe_wrapper vendor daemon, which contains an OS command injection vulnerability executed as root, resulting in full root-level compromise of the device.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT TV box with physical UART access and command injection, explicitly excluded as non-DPI consumer hardware.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120278",
+    "published": "2026-11-01 23:45:16",
+    "cvss": 5.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in WAVLINK WN536AX6-A V260507_2.0.0. Impacted is the function sub_416d48/sub_41a7c0 of the file /bin/ioos of the component VPN Client List Handler. Performing a manipulation of the argument opt results in missing authentication. The attack can be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer Wi-Fi router with missing authentication in VPN client handler, excluded as non-DPI consumer networking hardware.",
+      "fail_open": false
+    }
+  }
+]
