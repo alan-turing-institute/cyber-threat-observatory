@@ -1,0 +1,322 @@
+[
+  {
+    "id": "CVE-2026-86596",
+    "published": "2026-11-02 21:30:23",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The s2Member plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, <= 260927 via the 'item_name' parameter parameter. This is due to insufficient sanitization in strip_php_tags_deep(), which only strips literal '<?' sequences, combined with a post-interpolation placeholder cleanup that reassembles a valid '<?php' opener after the attacker-controlled value has already been embedded in the email template. This makes it possible for authenticated attackers, with custom-level access and above, to execute code on the server.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92188",
+    "published": "2026-11-03 23:50:58",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Quest Foglight for Databases ForgeMBeanServerSupport Missing Authentication Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the ForgeMBeanServerSupport module. The issue results from the lack of authentication prior to allowing access to functionality. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29168.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Database monitoring software with missing authentication lacks identity/access or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2022-29966",
+    "published": "2026-11-03 23:00:59",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Emerson Ovation has several protocols that have no authentication, which could allow an attacker to change controller configuration or cause a denial-of-service condition.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Industrial control system (SCADA) with missing authentication explicitly excluded from DPI identity scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120446",
+    "published": "2026-11-02 14:29:06",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "madong-admin-saas through 5.1.4 contains a missing authentication vulnerability in the platform tenant management API because the 'platformapi' middleware key never matches the 'platform' application. Unauthenticated remote attackers can call /platformapi/tenant/account, bind-plan and sync-data endpoints to list, create, modify, disable or delete tenants and bind subscription plans.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Generic SaaS admin platform with missing authentication lacks identity infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89292",
+    "published": "2026-11-03 09:31:27",
+    "cvss": 9.2,
+    "epss": 0.00453,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Eclipse Mnestix Browser versions 1.6.0 up until but excluding 2.3.0 it was possible for an unauthenticated attacker to exfiltrate the MNESTIX_BACKEND_API_KEY for all configured Infrastructures.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Browser tool API key exfiltration with no authentication or access-control impact lacks DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120447",
+    "published": "2026-11-02 14:29:06",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "HotGo through 2.15.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to choose the SMS login verification code by supplying the Code field to /admin/sms/send. Attackers who know a user's mobile number can set a known code and sign in through /admin/site/mobileLogin to take over accounts, including administrators.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Generic web platform SMS login bypass lacks identity infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119731",
+    "published": "2026-11-02 18:54:28",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Munshi (by Petpooja) before 2026-06-30 contained a payment bypass vulnerability in its subscription payment webhook at POST /api/payment/order/webhook, which lacks webhook authentication, cryptographic signature verification, source validation, and independent server-side confirmation with the payment provider. A remote, unauthenticated attacker can submit a forged payment-success notification referencing an order obtained from the payment-status redirect URL, causing the backend to mark the subscription as paid/active and granting paid access without an actual successful payment.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Restaurant management software payment webhook bypass lacks financial services or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121555",
+    "published": "2026-11-03 15:17:12",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Foxel through 2.4.0 contains a missing authentication vulnerability that allows unauthenticated attackers to read files by requesting the /api/fs/stream and /api/fs/thumb endpoints. Attackers can supply a VFS mount prefix and relative path to retrieve full file contents or thumbnails across all mounts, bypassing PathRule permission grants.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "File management platform (Foxel) missing auth on file endpoints; not core identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77877",
+    "published": "2026-11-02 15:19:26",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Control Web Panel (CWP) before webpanel_version 1.30 contains a missing authentication vulnerability that allows attackers able to reach the loopback API service to invoke root-privileged API routes without presenting an access token. Attackers can access endpoints such as /v1/restoredatabase/, /generaluser/, /last_access/, /valid_user/, /valid_token/, and /user_panel_dashboard/ to perform unauthorized actions with root privileges.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Web hosting control panel (CWP) missing auth on loopback API; not identity/access infrastructure or DPI-relevant software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111560",
+    "published": "2026-11-02 12:59:03",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Command injection in Barracuda appliance timezone configuration requiring authenticated admin; no authentication or identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121557",
+    "published": "2026-11-03 15:17:14",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "WPPConnect Server through 2.10.74 contains a missing authentication vulnerability that allows unauthenticated attackers to send WhatsApp messages by calling the Chatwoot webhook route without verifyToken middleware. Attackers who know or guess a connected session name can POST outgoing message bodies to send arbitrary texts or files from that account to any number.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WhatsApp API bridge (WPPConnect) missing auth on webhook route; consumer/business messaging tool, not identity/access infrastructure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120538",
+    "published": "2026-11-03 04:43:10",
+    "cvss": 8.1,
+    "epss": 0.0043,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Easy Digital Downloads plugin for WordPress is vulnerable to authentication bypass leading to administrator account takeover in all versions up to, and including, 3.7.2. During a PayPal guest checkout, the email address entered in the guest-checkout field is trusted as proof of identity: edd_get_purchase_form_user() binds the new guest order to an existing WordPress user purely on an email-address match, rewriting the order's user_id to that user's ID. The PayPal capture sink PurchaseUser::maybe_log_in_after_capture() then looked the user up by the order email (get_user_by( 'email', $order->email )) and, when $order->user_id equalled that user's ID (which the email-binding step guarantees), issued an authenticated session with wp_set_auth_cookie(). An unauthenticated attacker who starts a guest checkout using an administrator's email address (where that administrator has no existing EDD customer record) and completes the PayPal purchase flow therefore receives an authenticated session as that administrator — a full account takeover. The same sink is reachable through the standard PayPal checkout and the REST UnbrandedCard and Fastlane flows.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin (Easy Digital Downloads) auth bypass; explicitly excluded as consumer/hobbyist software per overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120574",
+    "published": "2026-11-03 04:43:09",
+    "cvss": 8.1,
+    "epss": 0.00331,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The SureCart plugin for WordPress is vulnerable to unauthenticated account takeover in all versions up to, and including, 4.9.5. The passwordless one-time-code login REST route (VerificationCodeController::verify(), whose permission callback returns true) resolves an attacker-supplied login to any WordPress user, verifies a 6-digit code, and on success calls $user->login() → wp_set_auth_cookie() for a user of any role. In the affected versions this path has no per-account attempt counter, no persistent email/IP lockout or rate limit (the upstream CDN throttle is bypassable via IP rotation), and no restriction preventing high-privilege accounts from being logged in through it. An unauthenticated attacker can trigger a code for any user (including an administrator) via the companion unauthenticated endpoint and brute-force the 6-digit code to obtain an authenticated session as that user, resulting in a full administrator account takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin (SureCart) unauthenticated account takeover; explicitly excluded as consumer/hobbyist software per overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63482",
+    "published": "2026-11-03 19:35:13",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Yeti bridges the gap between CTI and DFIR practitioners by providing a Forensics Intelligence platform and pipeline. Prior to 2.5.1, YETI registers the audit router without Depends(auth.get_current_active_user), and core/web/apiv2/audit.py does not perform a route-level authentication check for /api/v2/audit/timeline/{id}. An unauthenticated network attacker can use an empty, partial, or specific wildcard path to query TimelineLog records containing the actor, target_id, action, and details fields, including analyst usernames, object identifiers and values, and before-and-after object data. This exposes the operational history of threat-intelligence objects while other application routers require authentication. This issue is fixed in version 2.5.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "CTI/DFIR platform (Yeti) missing auth on audit endpoint; niche security tool with no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120314",
+    "published": "2026-11-02 02:01:12",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Network-AI from 5.14.0 before 5.15.5 contains a missing authentication vulnerability in the A2AServer class that allows unauthenticated attackers to access task operations when no secret is configured. Attackers can send JSON-RPC requests to tasks/send, tasks/get, and tasks/cancel without a Bearer token to execute tasks, read results, and cancel tasks.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Network monitoring tool (Network-AI) missing auth on task API; not identity/access infrastructure or DPI-relevant software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-88810",
+    "published": "2026-11-02 16:29:46",
+    "cvss": 7.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A privilege escalation issue was discovered in Rancher Manager's role-based access control. The inheritedNamespacedRules field of a GlobalRole propagates permissions into named namespaces of every downstream cluster managed by the Rancher instance, but it was not subject to the privilege-escalation validation applied to the other permission-carrying fields of a GlobalRole. As a result, a non-administrative user could be granted, through a global role  binding, permissions in downstream clusters that exceed the permissions that user already holds. This affected SUSE Rancher 2.15.2 only, and SUSE Rancher Webhook 0.11.0 up to 0.11.4, and 0.12.0 up to 0.12.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Kubernetes management platform (Rancher) RBAC privilege escalation; not core identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119740",
+    "published": "2026-11-02 19:54:27",
+    "cvss": 7.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Nexbox A95X TV boxes built on the Amlogic S905X platform contain an unauthenticated console exposed via an internal UART header on the PCB that allows physical attackers to obtain an interactive shell as uid 2000 (system) without any credentials. Attackers with physical access and a USB-to-TTL adapter can leverage this shell to reach the pppoe_wrapper vendor daemon, which contains an OS command injection vulnerability executed as root, resulting in full root-level compromise of the device.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Consumer IoT TV box (Nexbox) physical UART console and command injection; explicitly excluded as consumer hardware per overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121501",
+    "published": "2026-11-03 19:00:21",
+    "cvss": 6.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in mathurvishal CloudClassroom-PHP-Project. The affected element is the function session_regenerate_id of the file loginlinkadmin.php. Executing a manipulation of the argument PHPSESSID can lead to session fixiation. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Session fixation in a niche educational LMS PHP project falls under the education/LMS exclusion for Digital Identity.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121531",
+    "published": "2026-11-03 21:45:07",
+    "cvss": 6.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability has been found in Umami 3.3.x/3.4.0/3.4.1. This affects an unknown part of the file src/app/api/auth/login/route.ts of the component 2FA Policy Handler. The manipulation leads to use of single-factor authentication. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "MFA bypass in Umami web analytics software lacks a DPI identity/access infrastructure nexus, falling under the non-identity software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120971",
+    "published": "2026-11-03 04:16:03",
+    "cvss": 5.3,
+    "epss": 0.00343,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in RESTEasy's default exception mapper. When an unhandled exception other than a WebApplicationException is not handled by an application exception mapper, RESTEasy returns the exception's localized message in the HTTP 500 response body. A remote unauthenticated attacker who can trigger such an exception may obtain information contained in that message. The behavior was reproduced with RESTEasy 7.0.2.Final.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure information leak via HTTP 500 error messages with no authentication or access-control impact, explicitly excluded by overlay.",
+      "fail_open": false
+    }
+  }
+]
