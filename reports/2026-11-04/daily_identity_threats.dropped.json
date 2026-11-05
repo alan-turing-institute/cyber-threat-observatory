@@ -1,0 +1,338 @@
+[
+  {
+    "id": "CVE-2026-121615",
+    "published": "2026-11-04 02:15:20",
+    "cvss": 10.0,
+    "epss": 0.00754,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in Linksys E5600 1.1.0.26. Affected is an unknown function of the file /cgi-bin/mesh_login.cgi of the component Login Handler. Executing a manipulation can lead to improper authentication. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home router (Linksys E5600) with improper authentication, explicitly excluded by overlay hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121933",
+    "published": "2026-11-04 19:15:17",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw has been found in Linksys E5350 1.0.00.037. This impacts the function save_settings of the file /wizard/apply.cgi of the component Setup Wizard. Executing a manipulation of the argument wizard_router_pwd can lead to missing authentication. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer home router (Linksys E5350) with missing authentication, explicitly excluded by overlay hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-97693",
+    "published": "2026-11-04 21:14:50",
+    "cvss": 9.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Yuxi is a large-model-based intelligent knowledge base and knowledge graph agent development platform.  From 0.6.0.beta1 until 0.7.1, there is insufficient isolation between execution-capable Docker sandboxes and trusted application services. A low-privileged authenticated user who can execute commands in their own sandbox can reach other tenants' sandbox APIs, access their files and secrets, execute commands in active sandboxes, and enumerate, create, or delete sandboxes through the unauthenticated provisioner without knowing administrator, database, or MinIO credentials. Sandboxes can also reach shared internal services; if shipped default service credentials remain unchanged, an attacker can use them, and if the exposed PostgreSQL account is a superuser, obtain command execution in the PostgreSQL container. These paths can disclose or modify cross-tenant data and sandbox state or cause denial of service through sandbox deletion without a container escape or kernel vulnerability. This vulnerability is fixed in 0.7.1. Existing deployments must separately rotate persisted PostgreSQL, Neo4j, or MinIO credentials that were previously set to documented or shipped defaults because upgrading the Compose files does not automatically rotate them.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "AI/LLM development platform with container isolation flaws, falling under LLM tooling exclusion and lacking a DPI identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-71457",
+    "published": "2026-11-04 20:36:45",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "vtenext 25.02 before 25.02.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to change any account password via hub/rpwd.php without token verification. Attackers knowing a valid user_name can send action=change_password to RecoverPwd::displayChangePwd() and log in as administrators lacking two-factor authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in niche business software (vtenext) without a clear DPI identity infrastructure or public-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92188",
+    "published": "2026-11-03 23:50:58",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Quest Foglight for Databases ForgeMBeanServerSupport Missing Authentication Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the ForgeMBeanServerSupport module. The issue results from the lack of authentication prior to allowing access to functionality. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29168.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing authentication in enterprise database monitoring software (Quest Foglight), lacking a DPI identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102895",
+    "published": "2026-11-04 21:16:59",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "GPUStack is an open-source GPU cluster manager for AI model serving and GPU instance provisioning. Prior to 2.2.0, get_current_user in gpustack/api/auth.py treated a loopback request source as the built-in administrator when force_auth_localhost was false, which was the default. A remote request could appear to originate from 127.0.0.1 because client_ip_getter accepted a same-host reverse proxy peer or a client-supplied X-GPUStack-Real-IP loopback value. The bypass allowed unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml. Exploitation was observed in the wild against a 2.1.1 deployment. This issue is fixed in version 2.2.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in open-source AI/GPU cluster manager, falling under LLM/AI tooling exclusion and lacking DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2022-29966",
+    "published": "2026-11-03 23:00:59",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Emerson Ovation has several protocols that have no authentication, which could allow an attacker to change controller configuration or cause a denial-of-service condition.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Industrial control system (Emerson Ovation) with unauthenticated protocols, explicitly excluded under SCADA/ICS hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-54378",
+    "published": "2026-11-04 22:09:16",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "VitaFit cloud API before 2026-10-30 contained a broken access control vulnerability that allows any authenticated user to obtain temporary AWS credentials by calling the POST /front/user/s3/token/ endpoint. Attackers can use these improperly scoped credentials to list the shared storage bucket and read or overwrite other users' stored files, enabling unauthorized cross-user data access and manipulation.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Broken access control in consumer fitness/cloud API (VitaFit) with AWS credential exposure, lacking clinical or DPI identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89292",
+    "published": "2026-11-03 09:31:27",
+    "cvss": 9.2,
+    "epss": 0.00453,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Eclipse Mnestix Browser versions 1.6.0 up until but excluding 2.3.0 it was possible for an unauthenticated attacker to exfiltrate the MNESTIX_BACKEND_API_KEY for all configured Infrastructures.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "API key exfiltration in a developer infrastructure browser extension (Eclipse Mnestix), lacking a DPI identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121816",
+    "published": "2026-11-04 06:24:31",
+    "cvss": 8.8,
+    "epss": 0.00354,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Herowatch Mini developed by About Time Technologies has a Missing Authentication vulnerability. Unauthenticated remote attackers can connect to the affected device's ADB service and obtain an ADB shell, thereby accessing device resources or performing related operations.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT device (Herowatch Mini) with exposed ADB service; hard exclude for consumer/IoT software per overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121555",
+    "published": "2026-11-03 15:17:12",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Foxel through 2.4.0 contains a missing authentication vulnerability that allows unauthenticated attackers to read files by requesting the /api/fs/stream and /api/fs/thumb endpoints. Attackers can supply a VFS mount prefix and relative path to retrieve full file contents or thumbnails across all mounts, bypassing PathRule permission grants.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication on file endpoints in Foxel (non-identity file management software); no DPI sector or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82033",
+    "published": "2026-11-04 18:42:26",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "DeepSeek Harness prior to 0.1.2-alpha.2, and specifically commit 3e24087, contains a missing authentication vulnerability in its web profile HTTP and WebSocket RPC control plane, allowing any local process, including those running as a different OS user, to reach unauthenticated session methods such as session.create and session.prompt. Attackers can invoke session.prompt to trigger the agent's bash and filesystem tools, achieve arbitrary command execution as the victim user using their configured model credentials, intercept live session traffic and logs over the event mux stream, and bypass human tool-approval checks via POST /api/respond by matching only rpcId, approvalId, and sessionId values broadcast over the ungated stream.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "LLM/agent development tooling (DeepSeek Harness) with local RPC auth bypass; excluded per base LLM tooling and overlay non-identity software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102340",
+    "published": "2026-11-04 20:39:55",
+    "cvss": 8.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Telepresence enables local development against a remote Kubernetes or OpenShift cluster. Prior to 2.31.0, the Traffic Manager gRPC API on port 8081 accepts unauthenticated cluster-network callers, ArriveAsClient stores a caller-supplied Namespace using only the ManagesNamespace manager watchlist check, and CreateIntercept can target any managed namespace without checking the session's Kubernetes RBAC. An attacker operating any pod with network access to the manager can register in an arbitrary managed namespace, create service intercepts, receive intercepted traffic, and obtain the victim pod's complete container environment, including secrets, tokens, and API keys. The default cluster-wide deployment manages all namespaces. This vulnerability is fixed in 2.31.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Developer Kubernetes tooling (Telepresence) with unauthenticated gRPC API access; lacks identity/access infrastructure nexus and falls under non-DPI software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92704",
+    "published": "2026-11-04 15:24:16",
+    "cvss": 8.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "SharpEmu is an experimental PlayStation 5 emulator for Windows and Linux. In version 0.0.3-release.3 and earlier, the repository-provided debugger frontend tooling is vulnerable while running. This tooling is not included in the release archives. The frontend exposes an HTTP API on 127.0.0.1:8765 without authentication or CSRF token. Its  do_POST  handler in  tools/SharpEmu.DebuggerFrontend/debugger_frontend.py  does not validate the Origin, Referer, Sec-Fetch-Site, or Host headers. The  _read_json_body()  function also accepts JSON sent with browser-simple content types instead of requiring  application/json . A malicious page that can reach the loopback listener can send cross-origin requests to  /api/launch ,  /api/command , and  /api/connect . Chromium may require Local Network Access permission for pages served from public origins. Local-origin pages and other delivery paths are not consistently subject to this restriction. The  /api/launch  endpoint accepts an attacker-selected  emulatorPath  if it points to an existing file on the victim’s host. On POSIX systems, that file must also be executable. The endpoint additionally requires an existing  ebootPath . The  /api/command  endpoint exposes debugger operations, including  write-memory ,  set-register , and  continue . The  /api/connect  endpoint can initiate outbound TCP connections. These operations can let an attacker execute an existing binary with the victim’s privileges, control the attached emulated process, or reach network services accessible from the host. DNS rebinding can additionally let the attacker read API responses interactively. This issue is fixed in version 0.0.3-release.3-patch.1",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Gaming emulator (SharpEmu) debugger frontend with missing auth and CSRF; hard exclude for consumer/hobbyist gaming software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121971",
+    "published": "2026-11-04 17:43:34",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The component ScopingHttpClient in Symfony HttpClient merges the options of its default scope (such as auth_bearer or auth_basic) into a request before resolving a relative URL against the base_uri, allowing a network-path reference such as \"//evil.example/steal\" to be sent to another origin together with the default scope’s credentials, and resulting in potential disclosure of those credentials to an attacker-controlled server. This affects Symfony in versions 5.x prior to 5.4.56, 6.x prior to 6.4.50, 7.x prior to 7.4.23, and 8.x prior to 8.1.11.\n\n\n\nThe resolved URL falls outside the origin of the base URI, yet it keeps the merged options, whereas the absolute spelling \"https://evil.example/steal\" receives none. The same happens with a different port or user-info part on the same host.\n\n\n\n\n\n\n\n\n\nThis is reachable whenever an attacker controls the beginning of a URL passed to a client built with a base_uri and credentials, including those created with HttpClient::createForBaseUri() or configured under framework.http_client.scoped_clients.\n\nTo solve the issue, after resolving a relative URL against the base URI of the default scope, ScopingHttpClient now compares the scheme and authority of the result with those of the base URI, parsed the way the request is sent.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Credential leakage in Symfony HttpClient (general web framework component); lacks identity/access infrastructure nexus and falls under non-DPI software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121557",
+    "published": "2026-11-03 15:17:14",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "WPPConnect Server through 2.10.74 contains a missing authentication vulnerability that allows unauthenticated attackers to send WhatsApp messages by calling the Chatwoot webhook route without verifyToken middleware. Attackers who know or guess a connected session name can POST outgoing message bodies to send arbitrary texts or files from that account to any number.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication in WPPConnect Server (third-party WhatsApp API bridge); lacks identity/access infrastructure nexus and falls under non-DPI software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120538",
+    "published": "2026-11-03 04:43:10",
+    "cvss": 8.1,
+    "epss": 0.0043,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Easy Digital Downloads plugin for WordPress is vulnerable to authentication bypass leading to administrator account takeover in all versions up to, and including, 3.7.2. During a PayPal guest checkout, the email address entered in the guest-checkout field is trusted as proof of identity: edd_get_purchase_form_user() binds the new guest order to an existing WordPress user purely on an email-address match, rewriting the order's user_id to that user's ID. The PayPal capture sink PurchaseUser::maybe_log_in_after_capture() then looked the user up by the order email (get_user_by( 'email', $order->email )) and, when $order->user_id equalled that user's ID (which the email-binding step guarantees), issued an authenticated session with wp_set_auth_cookie(). An unauthenticated attacker who starts a guest checkout using an administrator's email address (where that administrator has no existing EDD customer record) and completes the PayPal purchase flow therefore receives an authenticated session as that administrator — a full account takeover. The same sink is reachable through the standard PayPal checkout and the REST UnbrandedCard and Fastlane flows.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin (Easy Digital Downloads) explicitly excluded as consumer/hobbyist software despite authentication bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120574",
+    "published": "2026-11-03 04:43:09",
+    "cvss": 8.1,
+    "epss": 0.00331,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The SureCart plugin for WordPress is vulnerable to unauthenticated account takeover in all versions up to, and including, 4.9.5. The passwordless one-time-code login REST route (VerificationCodeController::verify(), whose permission callback returns true) resolves an attacker-supplied login to any WordPress user, verifies a 6-digit code, and on success calls $user->login() → wp_set_auth_cookie() for a user of any role. In the affected versions this path has no per-account attempt counter, no persistent email/IP lockout or rate limit (the upstream CDN throttle is bypassable via IP rotation), and no restriction preventing high-privilege accounts from being logged in through it. An unauthenticated attacker can trigger a code for any user (including an administrator) via the companion unauthenticated endpoint and brute-force the 6-digit code to obtain an authenticated session as that user, resulting in a full administrator account takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin (SureCart) explicitly excluded as consumer/hobbyist software despite unauthenticated account takeover mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76506",
+    "published": "2026-11-04 16:27:03",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability in the web-based management interface of Cisco UCS Central Software could allow an authenticated, remote attacker to achieve remote code execution or conduct information disclosure attacks on an affected device.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input in an HTTP request. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected endpoint on an affected device. A successful exploit could allow the attacker to execute arbitrary commands, write arbitrary files to the filesystem, and obtain sensitive information. To exploit this vulnerability, the attacker must have valid user credentials on the affected device.\r\nCisco has released software updates that address this vulnerability There are no workarounds that address this vulnerability.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Enterprise data center management software (Cisco UCS Central) with authenticated RCE/info disclosure, lacking identity/access infrastructure nexus or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-62126",
+    "published": "2026-11-04 08:00:16",
+    "cvss": 7.5,
+    "epss": 0.00263,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Allocation of Resources Without Limits or Throttling vulnerability in miniOrange SAML SP Single Sign On miniorange-saml-20-single-sign-on allows HTTP DoS.This issue affects SAML SP Single Sign On: from n/a through 6.1.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Pure DoS vulnerability in SAML SSO software explicitly excluded by overlay rules as lacking authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63482",
+    "published": "2026-11-03 19:35:13",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Yeti bridges the gap between CTI and DFIR practitioners by providing a Forensics Intelligence platform and pipeline. Prior to 2.5.1, YETI registers the audit router without Depends(auth.get_current_active_user), and core/web/apiv2/audit.py does not perform a route-level authentication check for /api/v2/audit/timeline/{id}. An unauthenticated network attacker can use an empty, partial, or specific wildcard path to query TimelineLog records containing the actor, target_id, action, and details fields, including analyst usernames, object identifiers and values, and before-and-after object data. This exposes the operational history of threat-intelligence objects while other application routers require authentication. This issue is fixed in version 2.5.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche DFIR/CTI platform (Yeti) with missing authentication on an audit endpoint, lacking identity/access infrastructure nexus or DPI sector relevance.",
+      "fail_open": false
+    }
+  }
+]
