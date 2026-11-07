@@ -824,7 +824,7 @@
     "identity": {
       "title": "CVE-2026-118494",
       "published": "2026-11-05 18:02:09",
-      "modified": "2026-11-05 19:17:12",
+      "modified": "2026-11-06 20:21:07",
       "description": "Joomla Extension - jreviews.com - Secret configs cached in a web-accessible in JReviews 1.0.0-5.12.0, 6.0.0-6.6.9 - JReviews caches its full settings table, including the Joomla global configuration secret (copied into cms_secret) and third-party API keys and secrets, to a serialized file under components/com_s2framework/tmp/cache/core/ inside the web root. The file has no PHP guard and the directory has no .htaccess, so anyone who knows the file name can read it without authentication."
     },
     "cvss": {
@@ -841,9 +841,9 @@
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00467,
+      "percentile": 0.40602,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -910,7 +910,7 @@
     "identity": {
       "title": "CVE-2026-107129",
       "published": "2026-11-05 17:58:05",
-      "modified": "2026-11-05 20:17:40",
+      "modified": "2026-11-06 20:20:05",
       "description": "Joomla Extension - balbooa.com - Unauthenticated arbitrary file deletion via path traversal in Gridbox < 2.20.5.0"
     },
     "cvss": {
@@ -920,16 +920,16 @@
       "attack_complexity": "LOW",
       "privileges_required": "HIGH",
       "user_interaction": "NONE",
-      "scope": null,
+      "scope": "UNCHANGED",
       "confidentiality_impact": "NONE",
       "integrity_impact": "HIGH",
       "availability_impact": "LOW",
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00402,
+      "percentile": 0.34704,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -948,9 +948,9 @@
       "top_reference_url": "https://www.balbooa.com/gridbox"
     },
     "ssvc": {
-      "exploitation": null,
-      "automatable": null,
-      "technical_impact": null,
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
       "poc": false
     },
     "barriers": {
@@ -996,7 +996,7 @@
     "identity": {
       "title": "CVE-2026-107903",
       "published": "2026-11-05 17:56:53",
-      "modified": "2026-11-05 20:17:40",
+      "modified": "2026-11-06 20:20:05",
       "description": "Joomla Extension - balbooa.com - Stored XSS in reviews via inconsistent sanitization in Gridbox < 2.20.5.0"
     },
     "cvss": {
@@ -1005,17 +1005,17 @@
       "attack_vector": "NETWORK",
       "attack_complexity": "LOW",
       "privileges_required": "NONE",
-      "user_interaction": "ACTIVE",
-      "scope": null,
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
       "confidentiality_impact": "HIGH",
       "integrity_impact": "HIGH",
       "availability_impact": "LOW",
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00339,
+      "percentile": 0.27493,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -1034,16 +1034,16 @@
       "top_reference_url": "https://www.balbooa.com/gridbox"
     },
     "ssvc": {
-      "exploitation": null,
-      "automatable": null,
-      "technical_impact": null,
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
       "poc": false
     },
     "barriers": {
       "attack_vector": "NETWORK",
       "privileges_required": "NONE",
-      "user_interaction": "ACTIVE",
-      "summary": "network, privileges: NONE, user interaction: ACTIVE"
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
     },
     "weakness": {
       "cwe_ids": [
@@ -1082,7 +1082,7 @@
     "identity": {
       "title": "CVE-2026-105607",
       "published": "2026-11-05 17:51:43",
-      "modified": "2026-11-05 20:17:39",
+      "modified": "2026-11-06 20:20:05",
       "description": "Joomla Extension - balbooa.com - Unauthenticated stored XSS in the \"Recent Comments / Recent Reviews\" widget in Gridbox < 2.20.5.0"
     },
     "cvss": {
@@ -1091,17 +1091,17 @@
       "attack_vector": "NETWORK",
       "attack_complexity": "LOW",
       "privileges_required": "NONE",
-      "user_interaction": "ACTIVE",
-      "scope": null,
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
       "confidentiality_impact": "HIGH",
       "integrity_impact": "HIGH",
       "availability_impact": "LOW",
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00305,
+      "percentile": 0.23453,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -1120,16 +1120,16 @@
       "top_reference_url": "https://www.balbooa.com/gridbox"
     },
     "ssvc": {
-      "exploitation": null,
-      "automatable": null,
-      "technical_impact": null,
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
       "poc": false
     },
     "barriers": {
       "attack_vector": "NETWORK",
       "privileges_required": "NONE",
-      "user_interaction": "ACTIVE",
-      "summary": "network, privileges: NONE, user interaction: ACTIVE"
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
     },
     "weakness": {
       "cwe_ids": [
@@ -1168,7 +1168,7 @@
     "identity": {
       "title": "CVE-2026-115452",
       "published": "2026-11-05 17:51:21",
-      "modified": "2026-11-05 20:17:42",
+      "modified": "2026-11-06 20:20:05",
       "description": "Joomla Extension - tassos.gr - Privileged stored XSS in Advanced Custom Fields 2.8.2-2.8.15, 3.0.0-3.1.8 and Smile Pack 1.1.2-1.2.9, 2.0.0-2.1.6 - A user who could edit a Map marker label, like an article author, could add a script that ran for anyone who opened the marker."
     },
     "cvss": {
@@ -1178,16 +1178,16 @@
       "attack_complexity": "LOW",
       "privileges_required": "HIGH",
       "user_interaction": "NONE",
-      "scope": null,
+      "scope": "UNCHANGED",
       "confidentiality_impact": "HIGH",
       "integrity_impact": "HIGH",
       "availability_impact": "LOW",
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00352,
+      "percentile": 0.29008,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -1206,9 +1206,9 @@
       "top_reference_url": "https://www.tassos.gr/"
     },
     "ssvc": {
-      "exploitation": null,
-      "automatable": null,
-      "technical_impact": null,
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
       "poc": false
     },
     "barriers": {
@@ -1541,7 +1541,7 @@
     "identity": {
       "title": "CVE-2026-54145",
       "published": "2026-11-05 16:33:32",
-      "modified": "2026-11-05 17:18:19",
+      "modified": "2026-11-06 21:41:14",
       "description": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. In affected versions before 0.57.5, the approval gate uses the JSON-RPC bearer token as an approval session identifier. This exposes the credential through persisted approval records, events, debug logs, and RPC responses, including during normal desktop operation. An attacker who obtains these artifacts can recover the token and access the core RPC interface while it remains valid. This can expose sensitive agent and integration data and permit privileged operations. Stable tokens remain usable until rotated; launch-specific tokens remain usable while the corresponding core instance is active. The fix is included in version 0.57.5."
     },
     "cvss": {
@@ -1558,9 +1558,9 @@
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00086,
+      "percentile": 0.00304,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -1634,7 +1634,7 @@
     "identity": {
       "title": "CVE-2026-54140",
       "published": "2026-11-05 16:13:31",
-      "modified": "2026-11-05 17:18:18",
+      "modified": "2026-11-06 21:41:14",
       "description": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, OpenHuman places names, descriptions, titles, and parameter definitions returned by configured external MCP servers into the agent model context without neutralizing instructions or bounding the descriptive fields. The McpRemoteTool records produced by list_tools preserve this remote content, while tool filtering considers the tool name and the prompt-injection detector screens user messages rather than MCP definitions. A malicious or compromised MCP server can therefore return a poisoned description that is evaluated on every agent turn and may direct the model to invoke other available tools, disclose accessible data, or perform unauthorized actions without a separate malicious user message. The issue affects users who configure an attacker-controlled or compromised MCP server. This issue is fixed in version 0.57.13."
     },
     "cvss": {
@@ -1651,9 +1651,9 @@
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00554,
+      "percentile": 0.46419,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -1808,11 +1808,154 @@
     }
   },
   {
+    "id": "CVE-2026-123151",
+    "identity": {
+      "title": "CVE-2026-123151",
+      "published": "2026-11-05 16:08:57",
+      "modified": "2026-11-06 08:16:19",
+      "description": "A flaw was found in the GNU debugger (GDB). When GDB connects to a remote debug target, a malicious target can cause GDB to overflow a buffer on the stack while parsing the target's replies. This can crash GDB or potentially allow the target to execute arbitrary code in the GDB client process with the privileges of the user running GDB."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00513,
+      "percentile": 0.43936,
+      "date": "2026-11-06"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://access.redhat.com/security/cve/CVE-2026-123151"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-121",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat",
+      "products": "Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 6,Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 9,Red Hat Enterprise Linux 9,Red Hat Hardened Images",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "red hat:red hat enterprise linux 10",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 10",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 6",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 6",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 7",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 7",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 8",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 8",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 9",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 9",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-123151",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2567333"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123151",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123151"
+    },
+    "item_id": "CVE-2026-123151",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Developer debugging tool (GDB) with no enterprise or DPI sector footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
     "id": "CVE-2026-121997",
     "identity": {
       "title": "CVE-2026-121997",
       "published": "2026-11-05 16:08:54",
-      "modified": "2026-11-05 19:17:16",
+      "modified": "2026-11-06 19:55:40",
       "description": "A heap buffer overflow in gdbserver's QTDPsrc packet handler allows an unauthenticated remote attacker to achieve native code execution in the gdbserver process. The vulnerability results from a mismatch between a packet's declared source length and the actual data length, causing hex2bin to write beyond the allocated heap buffer."
     },
     "cvss": {
@@ -1829,9 +1972,9 @@
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.0071,
+      "percentile": 0.53719,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -1847,12 +1990,12 @@
       "has_exploit_reference": false,
       "has_public_exploit_provider": false,
       "has_github_exploit": false,
-      "top_reference_url": "https://bugzilla.redhat.com/show_bug.cgi?id=2565679"
+      "top_reference_url": "https://access.redhat.com/security/cve/CVE-2026-121997"
     },
     "ssvc": {
-      "exploitation": null,
-      "automatable": null,
-      "technical_impact": null,
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
       "poc": false
     },
     "barriers": {
@@ -1934,8 +2077,8 @@
       ]
     },
     "references": [
-      "https://bugzilla.redhat.com/show_bug.cgi?id=2565679",
-      "https://access.redhat.com/security/cve/CVE-2026-121997"
+      "https://access.redhat.com/security/cve/CVE-2026-121997",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2565679"
     ],
     "sources": {
       "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-121997",
@@ -1955,7 +2098,7 @@
     "identity": {
       "title": "CVE-2026-121996",
       "published": "2026-11-05 16:08:52",
-      "modified": "2026-11-05 19:17:16",
+      "modified": "2026-11-06 19:55:34",
       "description": "A length validation flaw in gdbserver's agent-expression parser allows an unauthenticated remote attacker to read uninitialized heap memory from the gdbserver process and cause a denial of service. Disclosed heap content includes addresses suitable for defeating ASLR in further exploitation."
     },
     "cvss": {
@@ -1972,9 +2115,9 @@
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00471,
+      "percentile": 0.40897,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -1993,9 +2136,9 @@
       "top_reference_url": "https://access.redhat.com/security/cve/CVE-2026-121996"
     },
     "ssvc": {
-      "exploitation": null,
-      "automatable": null,
-      "technical_impact": null,
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
       "poc": false
     },
     "barriers": {
@@ -2098,7 +2241,7 @@
     "identity": {
       "title": "CVE-2026-121995",
       "published": "2026-11-05 16:08:49",
-      "modified": "2026-11-05 17:18:00",
+      "modified": "2026-11-06 19:55:35",
       "description": "A stack buffer overflow in the GDB client's tracepoint upload handler allows an attacker-controlled debug stub to corrupt stack memory automatically during connection setup. The overflow results from GDB reading beyond the current reply boundary into a stale prior reply in the shared packet buffer."
     },
     "cvss": {
@@ -2115,9 +2258,9 @@
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00293,
+      "percentile": 0.22032,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -2241,7 +2384,7 @@
     "identity": {
       "title": "CVE-2026-121994",
       "published": "2026-11-05 16:08:46",
-      "modified": "2026-11-05 19:17:16",
+      "modified": "2026-11-06 19:55:31",
       "description": "A stack buffer overflow in the GDB client's remote protocol handler allows an attacker-controlled debug target to execute arbitrary code in the GDB process. The vulnerability exists in fetch_register_using_p, which decodes a stub's register reply into an alloca-sized buffer without bounding writes by the register width."
     },
     "cvss": {
@@ -2258,9 +2401,9 @@
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00481,
+      "percentile": 0.41694,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -2276,12 +2419,12 @@
       "has_exploit_reference": false,
       "has_public_exploit_provider": false,
       "has_github_exploit": false,
-      "top_reference_url": "https://bugzilla.redhat.com/show_bug.cgi?id=2565676"
+      "top_reference_url": "https://access.redhat.com/security/cve/CVE-2026-121994"
     },
     "ssvc": {
-      "exploitation": null,
-      "automatable": null,
-      "technical_impact": null,
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
       "poc": false
     },
     "barriers": {
@@ -2363,8 +2506,8 @@
       ]
     },
     "references": [
-      "https://bugzilla.redhat.com/show_bug.cgi?id=2565676",
-      "https://access.redhat.com/security/cve/CVE-2026-121994"
+      "https://access.redhat.com/security/cve/CVE-2026-121994",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2565676"
     ],
     "sources": {
       "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-121994",
@@ -2930,8 +3073,8 @@
     "identity": {
       "title": "CVE-2026-123028",
       "published": "2026-11-05 14:00:20",
-      "modified": "2026-11-05 19:17:17",
-      "description": "A vulnerability was identified in itsourcecode Online Book Store 1.0. Affected by this issue is some unknown functionality of the file /admin_edit.php. The manipulation of the argument bookisbn leads to sql injection. It is possible to initiate the attack remotely. The exploit is publicly available and might be used."
+      "modified": "2026-11-06 09:17:01",
+      "description": "A vulnerability was identified in itsourcecode Online Book Store 1.0. Affected by this issue is some unknown functionality of the file /admin_edit.php. The manipulation of the argument bookisbn with the input 1%27%20AND%20GTID_SUBSET(CONCAT(0x71717a6b71,(SELECT%20(ELT(6040=6040,1))),0x716b6a7171),6040)--%20LpDt as part of String leads to sql injection. It is possible to initiate the attack remotely. The exploit is publicly available and might be used."
     },
     "cvss": {
       "base_score": 7.3,
@@ -2947,9 +3090,9 @@
       "band": "High"
     },
     "epss": {
-      "score": null,
-      "percentile": null,
-      "date": null
+      "score": 0.00357,
+      "percentile": 0.29552,
+      "date": "2026-11-06"
     },
     "exploitation": {
       "wild_exploited": false,
@@ -2968,9 +3111,9 @@
       "top_reference_url": "https://github.com/yomymy/Submit/issues/1"
     },
     "ssvc": {
-      "exploitation": null,
-      "automatable": null,
-      "technical_impact": null,
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
       "poc": false
     },
     "barriers": {
@@ -2998,12 +3141,12 @@
       "software_map": []
     },
     "references": [
+      "https://vuldb.com/vuln/431400",
       "https://vuldb.com/submit/1027526",
-      "https://github.com/yomymy/Submit/issues/1",
-      "https://itsourcecode.com/",
       "https://vuldb.com/vuln/431400/cti",
+      "https://itsourcecode.com/",
       "https://vuldb.com/cve/CVE-2026-123028",
-      "https://vuldb.com/vuln/431400"
+      "https://github.com/yomymy/Submit/issues/1"
     ],
     "sources": {
       "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123028",
@@ -3127,7 +3270,7 @@
     "identity": {
       "title": "CVE-2026-118869",
       "published": "2026-11-05 08:17:57",
-      "modified": "2026-11-05 19:17:14",
+      "modified": "2026-11-06 20:36:20",
       "description": "An OS command injection vulnerability exists in SHIRASAGI, which may allow an authenticated attacker to execute arbitrary OS commands on the system running the product."
     },
     "cvss": {
@@ -3165,9 +3308,9 @@
       "top_reference_url": "https://www.ss-proj.org/support/1743.html"
     },
     "ssvc": {
-      "exploitation": null,
-      "automatable": null,
-      "technical_impact": null,
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
       "poc": false
     },
     "barriers": {
@@ -3374,6 +3517,522 @@
       "score": 0.3,
       "primary_pir": "none",
       "reason": "XXE in media streaming software with no DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109150",
+    "identity": {
+      "title": "CVE-2026-109150",
+      "published": "2026-11-05 06:00:30",
+      "modified": "2026-11-06 13:17:22",
+      "description": "The WP PageNavi Style WordPress plugin through 1.4 does not sanitise and escape some of its settings, and has no CSRF check when they are saved, which could allow attackers to make a logged-in administrator store arbitrary JavaScript via a CSRF attack that is then executed in the browser of everyone who visits the site's front end."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00106,
+      "percentile": 0.01116,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/10a889d8-9e15-42b9-a001-622e97ab5d06/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "WP PageNavi Style",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/10a889d8-9e15-42b9-a001-622e97ab5d06/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-109150",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-109150"
+    },
+    "item_id": "CVE-2026-109150",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2025-15702",
+    "identity": {
+      "title": "CVE-2025-15702",
+      "published": "2026-11-05 06:00:28",
+      "modified": "2026-11-06 13:17:21",
+      "description": "The Cloud Blocks WordPress plugin through 1.1.8 does not perform any authorisation or sanitisation when storing block asset URLs, allowing unauthenticated users to store malicious scripts that are executed in the browser of any privileged user, such as an administrator, who opens the block editor."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00173,
+      "percentile": 0.06772,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/586f975b-1448-4ff5-b030-aa7bcdd45318/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Cloud Blocks",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/586f975b-1448-4ff5-b030-aa7bcdd45318/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-15702",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2025-15702"
+    },
+    "item_id": "CVE-2025-15702",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-100144",
+    "identity": {
+      "title": "CVE-2026-100144",
+      "published": "2026-11-05 06:00:28",
+      "modified": "2026-11-06 13:17:21",
+      "description": "The IVPAY payments WordPress plugin through 1.0.8 does not sanitise a value from its payment callback before using it in a SQL statement, and treats an empty API key, which is its own default, as valid authentication, allowing unauthenticated attackers to read arbitrary data from the database."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00208,
+      "percentile": 0.10993,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/d90db791-2223-480b-8d2f-b84170318fc4/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "IVPAY payments",
+      "cpe_uris": "cpe:2.3:a:oracle:payments:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/d90db791-2223-480b-8d2f-b84170318fc4/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-100144",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-100144"
+    },
+    "item_id": "CVE-2026-100144",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86442",
+    "identity": {
+      "title": "CVE-2026-86442",
+      "published": "2026-11-05 06:00:24",
+      "modified": "2026-11-06 13:17:31",
+      "description": "The WP Event Manager  WordPress plugin before 3.4.2 does not verify the ownership or the post type of a user supplied post identifier in its front-end event submission flow, allowing unauthenticated attackers to read and overwrite the content of arbitrary unpublished posts and pages, and to convert them into events."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00137,
+      "percentile": 0.03114,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/bcc4df7e-86a0-4614-9b3a-8629f6335b8a/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "cwe_primary": "CWE-639",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-639": "Authorization Bypass Through User-Controlled Key"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "WP Event Manager",
+      "cpe_uris": "cpe:2.3:a:wp-eventmanager:wp_event_manager:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/bcc4df7e-86a0-4614-9b3a-8629f6335b8a/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-86442",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-86442"
+    },
+    "item_id": "CVE-2026-86442",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-16304",
+    "identity": {
+      "title": "CVE-2026-16304",
+      "published": "2026-11-05 06:00:23",
+      "modified": "2026-11-06 13:17:30",
+      "description": "The WP Event Manager  WordPress plugin before 3.4.2 does not properly validate ownership or the type of the user-supplied post identifiers processed by one of its frontend forms, allowing any user with a Subscriber account or above to reassign the authorship of arbitrary posts to themselves and to force them to be published. This results in content takeover and in the public disclosure of otherwise private or draft content, and requires the relevant frontend feature to be enabled."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00132,
+      "percentile": 0.02817,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/53d611e2-4ca6-4117-bc33-040488c19a72/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "cwe_primary": "CWE-639",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-639": "Authorization Bypass Through User-Controlled Key"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "WP Event Manager",
+      "cpe_uris": "cpe:2.3:a:wp-eventmanager:wp_event_manager:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/53d611e2-4ca6-4117-bc33-040488c19a72/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16304",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-16304"
+    },
+    "item_id": "CVE-2026-16304",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19256",
+    "identity": {
+      "title": "CVE-2026-19256",
+      "published": "2026-11-05 06:00:23",
+      "modified": "2026-11-06 13:17:30",
+      "description": "The All In One Login WordPress plugin before 2.5.0 does not adequately restrict the number of attempts that can be made against the short numeric code used by its default-enabled passwordless email login, and does not feed those failed attempts into its own brute-force protection, allowing unauthenticated attackers to take over any account including administrators."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00137,
+      "percentile": 0.03114,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/576162c1-324f-4618-b167-c05e37f50c74/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "All In One Login",
+      "cpe_uris": "cpe:2.3:a:wpexperts:all_in_one_login:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/576162c1-324f-4618-b167-c05e37f50c74/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19256",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19256"
+    },
+    "item_id": "CVE-2026-19256",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no exploitation signal.",
       "fail_open": false
     }
   },
