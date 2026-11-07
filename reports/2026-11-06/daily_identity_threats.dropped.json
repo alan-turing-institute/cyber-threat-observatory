@@ -1,0 +1,226 @@
+[
+  {
+    "id": "CVE-2026-73116",
+    "published": "2026-11-05 11:53:52",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Insufficiently Protected Credentials vulnerability in Apache Juneau.\n\nThe Apache Juneau RestClient followed HTTP redirects while keeping credential headers from the original request, so a server that redirected the client to a different host or port, or from HTTPS to HTTP, could receive headers such as Authorization, Cookie, Proxy-Authorization and X-API-Key.\n\nThis issue affects Apache Juneau: through 9.2.0.\n\nUsers are recommended to upgrade to version 9.2.1, which fixes the issue. The fix applies to HTTP clients created by the RestClient builder; applications that supply their own HttpClient must disable automatic redirects or strip credential headers on cross-origin redirects themselves.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "General-purpose Java web framework credential leak on redirects, no identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119516",
+    "published": "2026-11-06 08:00:31",
+    "cvss": 9.8,
+    "epss": 0.00386,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Deserialization of Untrusted Data vulnerability in Mamunur Rashid Radius Booking — Booking Calendar for Appointments &amp; Services radius-booking allows Object Injection.This issue affects Radius Booking — Booking Calendar for Appointments &amp; Services: from n/a through 1.0.20.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress booking plugin, explicitly excluded as consumer/hobbyist software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120844",
+    "published": "2026-11-06 08:00:31",
+    "cvss": 9.8,
+    "epss": 0.00331,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Incorrect Privilege Assignment vulnerability in miniOrange OAuth Single Sign On – SSO (OAuth Client) miniorange-login-with-eve-online-google-facebook allows Privilege Escalation.This issue affects OAuth Single Sign On – SSO (OAuth Client): from n/a through 7.1.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress OAuth SSO plugin, excluded under consumer/WordPress exclusion rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119757",
+    "published": "2026-11-05 21:44:41",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "BTCPay Server before 2.4.2, including 2.4.2 release candidates, contains an information disclosure vulnerability that allows unauthenticated remote attackers to retrieve .macaroon credential files for an LND (Lightning Network Daemon) node. Attackers can use the exposed macaroon to gain full control of the LND node, including moving funds, resulting in theft of funds from affected deployments.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Self-hosted Bitcoin payment server credential leak, not core identity/access infrastructure or traditional financial rails.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123208",
+    "published": "2026-11-05 18:16:42",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "noname Electron desktop build v1.11.2 through v1.11.6.1 contains an unauthenticated local file server with wildcard CORS that allows malicious websites to read, overwrite, or delete installation files. Attackers can send cross-origin requests to /writeFile on localhost port 8089 to overwrite renderer scripts, executing JavaScript with Node.js access as the local user.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Desktop Electron app local file server flaw, excluded as consumer/non-DPI software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89017",
+    "published": "2026-11-06 17:50:47",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Skyline DataMiner BrokerGateway contains an embedded API key vulnerability that allows unauthenticated attackers to retrieve the installation-specific BrokerGateway key even while pairing mode is disabled. Attackers can use the retrieved key to obtain the unrestricted DataMinerUser.creds NATS credential and gain trusted message-bus access via TCP port 4222 without any prior DataMiner credentials. Fixed in DataMiner 10.6.9 CU1, 10.6.0 CU7, 10.5.0 CU19, and 10.4.0 CU22.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Industrial SCADA/IIoT platform API key leak, excluded under industrial/SCADA rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111493",
+    "published": "2026-11-05 21:56:17",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Lack of authentication and authorization in the Images.ashx endpoint in MatchPoint, which allows profile photos to be downloaded using predictable identifiers. An unauthenticated remote attacker could enumerate these identifiers and collect users' photos. Linking these photos to identities may be facilitated by other vulnerabilities in the platform.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "CMS profile photo info-leak with no identity/access control impact, excluded per overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-49393",
+    "published": "2026-11-05 16:34:55",
+    "cvss": 8.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.56.0, the core server protects HTTP POST requests to /rpc with bearer middleware but exposes Socket.IO rpc:request and chat:start handlers without equivalent transport or handler-level authentication. A local unauthenticated client can connect to the Socket.IO namespace and dispatch requests through the same protected controller path that rejects a missing bearer on /rpc. Depending on the selected method, the attacker can read configuration or health data, start agent flows, interact with integrated account APIs, alter local data, or stop and restart services. This issue is fixed in version 0.56.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Desktop agent harness with missing local authentication, excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107912",
+    "published": "2026-11-05 13:27:11",
+    "cvss": 7.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in the management interface of the Quarkus framework, specifically within the quarkus-vertx-http component. The issue occurs when the framework incorrectly combines the management root path with specific permission rules, leading to a situation where security policies are applied to the wrong internal paths. As a result, an attacker can bypass intended authorization checks and gain unauthorized access to sensitive management endpoints.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Authorization bypass in general-purpose Quarkus framework management interface, lacks identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-49407",
+    "published": "2026-11-05 16:46:35",
+    "cvss": 7.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before version 0.57.44, its local  /ws/dictation  WebSocket endpoint lacks client authentication and browser-origin validation. An unauthenticated client, including a malicious web page able to reach the endpoint, can submit audio and trigger resource-intensive speech-to-text processing. Earlier affected versions also accumulate audio in an unbounded buffer, allowing continuous streaming to exhaust process memory. These conditions can degrade performance, exhaust resources, or crash the application. This issue is fixed in version 0.57.44.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication on desktop agent WebSocket endpoint causing resource exhaustion, excluded as consumer software with DoS impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82965",
+    "published": "2026-11-05 17:14:20",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in the SAML implementation of Keycloak, an open-source identity and access management solution. The SAML Artifact Resolution and ECP SOAP endpoints do not properly limit the size or complexity of incoming XML requests. An unauthenticated remote attacker can exploit this by sending specially crafted, large XML messages that cause the server to consume excessive memory. This leads to the application running out of memory and crashing, resulting in a denial of service for all users.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pure DoS in Keycloak SAML parser with no authentication or access-control impact, excluded per overlay hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107123",
+    "published": "2026-11-05 16:04:47",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in the SAML XML processing component of Keycloak, an open-source identity and access management solution. The issue occurs when the server parses XML documents containing excessively long dateTime or duration values. Because these strings are not properly validated before processing, the XML parser consumes excessive CPU time. An unauthenticated remote attacker can exploit this by sending specially crafted SAML requests to the server, leading to high CPU utilization and a denial of service for all users.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pure DoS via CPU exhaustion in Keycloak SAML XML parsing, excluded per overlay hard rules for pure DoS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107602",
+    "published": "2026-11-05 16:04:51",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in the SAML 1.1 XML parsing logic of Keycloak, an open-source identity and access management solution. The issue occurs when the parser encounters unexpected elements within a security token's key information section, causing the processing thread to enter an infinite loop. An unauthenticated remote attacker could exploit this by sending specially crafted requests, leading to 100% CPU usage and a total denial of service that requires a server restart to resolve.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pure DoS via infinite loop in Keycloak SAML 1.1 parser, excluded per overlay hard rules for pure DoS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110931",
+    "published": "2026-11-05 16:04:53",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A flaw was found in the SAML 1.1 assertion parser of Keycloak, a tool used for identity and access management. The issue occurs when the parser handles a specific element called AuthorityBinding within an authentication statement. Due to an incomplete fix for a previous vulnerability, the parser can enter an infinite loop that consumes all available memory, causing the entire Keycloak service to crash and become unavailable to users.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pure DoS via memory exhaustion in Keycloak SAML assertion parser, excluded per overlay hard rules for pure DoS.",
+      "fail_open": false
+    }
+  }
+]

@@ -1,0 +1,3873 @@
+[
+  {
+    "id": "CVE-2026-111494",
+    "identity": {
+      "title": "CVE-2026-111494",
+      "published": "2026-11-05 21:58:02",
+      "modified": "2026-11-05 22:36:02",
+      "description": "Incorrect validation of TLS certificates in the MatchPoint Android app due to a TrustManager that accepts any certificate and a permissive hostname validator. Additionally, the app allows unencrypted HTTP traffic. An attacker capable of intercepting the victim's traffic could read and modify communications, including credentials and personal data."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-295"
+      ],
+      "cwe_primary": "CWE-295",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-295": "Improper Certificate Validation"
+      }
+    },
+    "software": {
+      "vendors": "TPC Software",
+      "products": "Matchpoint",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-111494",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-111494"
+    },
+    "item_id": "CVE-2026-111494",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Consumer mobile app TLS bypass with no explicit enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111493",
+    "identity": {
+      "title": "CVE-2026-111493",
+      "published": "2026-11-05 21:56:17",
+      "modified": "2026-11-05 22:36:02",
+      "description": "Lack of authentication and authorization in the Images.ashx endpoint in MatchPoint, which allows profile photos to be downloaded using predictable identifiers. An unauthenticated remote attacker could enumerate these identifiers and collect users' photos. Linking these photos to identities may be facilitated by other vulnerabilities in the platform."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": "TPC Software",
+      "products": "Matchpoint",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-111493",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-111493"
+    },
+    "item_id": "CVE-2026-111493",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer app profile photo enumeration with no enterprise or DPI footprint and low impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111492",
+    "identity": {
+      "title": "CVE-2026-111492",
+      "published": "2026-11-05 21:53:32",
+      "modified": "2026-11-05 22:36:02",
+      "description": "SQL injection in the push notification handler of the MatchPoint Android app, which processes messages from Firebase Cloud Messaging and constructs queries by concatenating untrusted data. An attacker capable of interacting with the component could manipulate queries and access sensitive information from the local database, including credentials stored in the versions described in the report. The scope of the injection is limited to the device."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "TPC Software",
+      "products": "Matchpoint",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-tpc-softwares-matchpoint"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-111492",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-111492"
+    },
+    "item_id": "CVE-2026-111492",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Device-scoped SQL injection in consumer mobile app with no remote exploitation vector or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111768",
+    "identity": {
+      "title": "CVE-2026-111768",
+      "published": "2026-11-05 21:22:44",
+      "modified": "2026-11-05 22:17:45",
+      "description": "The Model Context Protocol TypeScript SDK provides TypeScript client and server implementations of the Model Context Protocol. From 1.3.0 until 1.32.0 in @modelcontextprotocol/sdk and from 2.0.0 until 2.3.0 in @modelcontextprotocol/server, HTTP servers did not enforce a limit on the number of array elements and object keys validated in one request. The affected surface is validation of HTTP requests containing arrays or object keys. The trigger is an array-element or object-key validation workload large enough to exhaust memory while remaining within the request size limit. A single request within the default 4 MiB limit can terminate the process with JavaScript heap exhaustion. No credentials are required unless the application authenticates before SDK processing. Tools accepting arrays or records carry the greatest risk. stdio-only servers do not expose the HTTP request path. Upgrading alone does not enable the new validation bound. Operators must configure both a tool-input element bound and an appropriate request body size limit. This issue is fixed in @modelcontextprotocol/sdk 1.32.0 and @modelcontextprotocol/server 2.3.0."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/1.32.0"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "cwe_primary": "CWE-770",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-770": "Allocation of Resources Without Limits or Throttling"
+      }
+    },
+    "software": {
+      "vendors": "modelcontextprotocol,@modelcontextprotocol,@modelcontextprotocol",
+      "products": "typescript-sdk,server,sdk",
+      "cpe_uris": "cpe:2.3:a:lfprojects:mcp_typescript_sdk:*:*:*:*:*:*:*:*,cpe:2.3:a:splunk:model_context_protocol_server:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "modelcontextprotocol:typescript-sdk",
+          "vendor": "modelcontextprotocol",
+          "product": "typescript-sdk",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/1.32.0",
+      "https://github.com/modelcontextprotocol/typescript-sdk/pull/2926",
+      "https://github.com/modelcontextprotocol/typescript-sdk/commit/6d8dbc6cb590edf766fcb66b636ca6b654e99c37",
+      "https://github.com/modelcontextprotocol/typescript-sdk/commit/fd26801b3b387742fe24a90ed4b275dd6072209f",
+      "https://github.com/modelcontextprotocol/typescript-sdk/releases/tag/@modelcontextprotocol/server@2.3.0",
+      "https://github.com/modelcontextprotocol/typescript-sdk/pull/2927",
+      "https://github.com/modelcontextprotocol/typescript-sdk/security/advisories/GHSA-46jr-4wx8-v453"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-111768",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-111768"
+    },
+    "item_id": "CVE-2026-111768",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "AI/LLM developer SDK with DoS vulnerability, no DPI sector or identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77622",
+    "identity": {
+      "title": "CVE-2026-77622",
+      "published": "2026-11-05 20:52:39",
+      "modified": "2026-11-05 21:18:53",
+      "description": "Sliver is a command and control framework. Prior to 1.7.6, an HTTP(S) listener using the PNG encoder accepts attacker-controlled PNG dimensions without an effective decoded-size or pixel limit in util/encoders/images.go, while the listener nonce space implemented in server/encoders/encoders.go is small enough to search remotely. An unauthenticated attacker who identifies a valid nonce can submit a highly compressed image to PNGEncoder.Decode, where it expands during png.Decode, exhausting server memory and causing a complete loss of availability. This vulnerability is fixed in 1.7.6."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/BishopFox/sliver/commit/80273462bd8b2a3cd724d2d6d0301a0cabfa977d"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "cwe_primary": "CWE-770",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-770": "Allocation of Resources Without Limits or Throttling"
+      }
+    },
+    "software": {
+      "vendors": "BishopFox",
+      "products": "sliver",
+      "cpe_uris": "cpe:2.3:a:bishopfox:sliver:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "bishopfox:sliver",
+          "vendor": "BishopFox",
+          "product": "sliver",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/BishopFox/sliver/commit/80273462bd8b2a3cd724d2d6d0301a0cabfa977d",
+      "https://github.com/BishopFox/sliver/security/advisories/GHSA-663m-7x7m-g4fw",
+      "https://github.com/BishopFox/sliver/releases/tag/v1.7.6"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77622",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77622"
+    },
+    "item_id": "CVE-2026-77622",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Offensive C2 framework vulnerability with no enterprise or DPI deployment footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-34157",
+    "identity": {
+      "title": "CVE-2026-34157",
+      "published": "2026-11-05 20:26:04",
+      "modified": "2026-11-05 21:18:47",
+      "description": "Wails is a framework for building desktop applications using Go and web technologies. From 2.0.0 until 2.13.0, BindingsAllowedOrigins in v2/internal/frontend/originvalidator/originValidator.go passes wildcard patterns to wildcardPatternToRegex, which expands every asterisk to an unrestricted regular-expression match. When an application configures a trailing or partial-label wildcard immediately after an allowed domain, an attacker-controlled lookalike origin can match the allowed suffix and invoke bound Go methods through IPC. A complete-component subdomain wildcard is an unaffected configuration. The resulting confidentiality, integrity, and availability impact depends on the file, database, command, credential, or other operations exposed by the application's bound methods. This issue is fixed in version 2.13.0."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/wailsapp/wails/commit/bcc5941b72fdab6a13942b58871a2696faa85b81"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "network, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-625"
+      ],
+      "cwe_primary": "CWE-625",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-625": "Permissive Regular Expression"
+      }
+    },
+    "software": {
+      "vendors": "wailsapp",
+      "products": "wails",
+      "cpe_uris": "cpe:2.3:a:wallosapp:wallos:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/wailsapp/wails/commit/bcc5941b72fdab6a13942b58871a2696faa85b81",
+      "https://github.com/wailsapp/wails/releases/tag/v2.13.0",
+      "https://github.com/wailsapp/wails/security/advisories/GHSA-47hv-j4px-h3c9",
+      "https://github.com/wailsapp/wails/pull/5074"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-34157",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-34157"
+    },
+    "item_id": "CVE-2026-34157",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Desktop application development framework with IPC origin validation bypass, no enterprise or DPI deployment footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-87008",
+    "identity": {
+      "title": "CVE-2026-87008",
+      "published": "2026-11-05 20:13:23",
+      "modified": "2026-11-05 21:18:54",
+      "description": "Code Graph RAG is an AI-powered knowledge graph and retrieval system for querying, understanding, and editing multi-language codebases. Prior to 0.0.589, AstGrepService in codebase_rag/tools/ast_grep_service.py enumerates files beneath project_root and relies on should_skip_path in codebase_rag/utils/path_utils.py to classify them, but the containment check operates on unresolved lexical paths. A symbolic link planted inside an analyzed repository can therefore reference a file outside the configured root while still appearing in scope. The structural_search tool follows the link and discloses readable content without an approval gate, while structural_replace with dry_run=False follows it and overwrites writable content; the MCP path invokes structural replacement without the agent-loop approval control. An attacker who causes a victim to analyze a repository containing such a link can read credentials, keys, environment files, or sibling source and can modify files accessible to the code-graph-rag process. This issue is fixed in version 0.0.589."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/vitali87/code-graph-rag/commit/2648c95aa550ce2d9361a8e75ed669d5f4b451b8"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-59"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+        "CWE-59": "Improper Link Resolution Before File Access ('Link Following')"
+      }
+    },
+    "software": {
+      "vendors": "vitali87",
+      "products": "code-graph-rag",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/vitali87/code-graph-rag/commit/2648c95aa550ce2d9361a8e75ed669d5f4b451b8",
+      "https://github.com/vitali87/code-graph-rag/security/advisories/GHSA-85gg-2gfq-q95m",
+      "https://github.com/vitali87/code-graph-rag/releases/tag/v0.0.589"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-87008",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-87008"
+    },
+    "item_id": "CVE-2026-87008",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Developer AI/code-analysis tool with no enterprise or DPI sector footprint; falls under LLM/tooling exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77604",
+    "identity": {
+      "title": "CVE-2026-77604",
+      "published": "2026-11-05 20:10:19",
+      "modified": "2026-11-05 20:18:00",
+      "description": "Code Graph RAG is an AI-powered knowledge graph and retrieval system for querying, understanding, and editing multi-language codebases. Prior to 0.0.345, the MCPToolsRegistry.read_file implementation in codebase_rag/mcp/tools.py joins attacker-controlled file_path input to project_root without resolving and verifying containment when offset or limit selects the paginated branch. An absolute path causes pathlib to discard the configured root, while relative traversal can also resolve outside it. The protected non-paginated branch uses validate_project_path, but the paginated branch bypasses that validation before opening the path. An unauthenticated caller of a network-exposed HTTP MCP server can therefore read arbitrary UTF-8-readable files available to the server process, including credentials, environment data, private keys, source, and configuration; local callers through the stdio transport can reach the same vulnerable code path. This issue is fixed in version 0.0.345."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/vitali87/code-graph-rag/commit/6541e920a27961fa8f3ff49ef38c0e0bd09cd626"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "vitali87",
+      "products": "code-graph-rag",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/vitali87/code-graph-rag/commit/6541e920a27961fa8f3ff49ef38c0e0bd09cd626",
+      "https://github.com/vitali87/code-graph-rag/security/advisories/GHSA-vvr2-h2jp-838m",
+      "https://github.com/vitali87/code-graph-rag/releases/tag/v0.0.345"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77604",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77604"
+    },
+    "item_id": "CVE-2026-77604",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Developer AI/code-analysis tool with no enterprise or DPI sector footprint; unauthenticated flaw but outside DPI scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123208",
+    "identity": {
+      "title": "CVE-2026-123208",
+      "published": "2026-11-05 18:16:42",
+      "modified": "2026-11-05 19:17:20",
+      "description": "noname Electron desktop build v1.11.2 through v1.11.6.1 contains an unauthenticated local file server with wildcard CORS that allows malicious websites to read, overwrite, or delete installation files. Attackers can send cross-origin requests to /writeFile on localhost port 8089 to overwrite renderer scripts, executing JavaScript with Node.js access as the local user."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/libnoname/noname/pull/4606"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": "libnoname",
+      "products": "noname",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/libnoname/noname/pull/4606",
+      "https://github.com/libnoname/noname/blob/0b7e4be4b6ef64ab8579b2ffc643a2a626e4fede/packages/fs/src/index.ts#L71-L74",
+      "https://github.com/libnoname/noname/commit/b5793c5abdc957a3a2c0ad44abfc4849f3ac3219",
+      "https://github.com/libnoname/noname/blob/0b7e4be4b6ef64ab8579b2ffc643a2a626e4fede/apps/electron/app/main.ts#L6-L13",
+      "https://github.com/libnoname/noname/issues/4524",
+      "https://www.vulncheck.com/advisories/noname-1.11.2-through-1.11.6.1-missing-authentication-in-electron-local-file-server"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123208",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123208"
+    },
+    "item_id": "CVE-2026-123208",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer desktop Electron application with no enterprise or DPI footprint; dropped per consumer-only exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118494",
+    "identity": {
+      "title": "CVE-2026-118494",
+      "published": "2026-11-05 18:02:09",
+      "modified": "2026-11-05 19:17:12",
+      "description": "Joomla Extension - jreviews.com - Secret configs cached in a web-accessible in JReviews 1.0.0-5.12.0, 6.0.0-6.6.9 - JReviews caches its full settings table, including the Joomla global configuration secret (copied into cms_secret) and third-party API keys and secrets, to a serialized file under components/com_s2framework/tmp/cache/core/ inside the web root. The file has no PHP guard and the directory has no .htaccess, so anyone who knows the file name can read it without authentication."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://jreviews.com/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-538"
+      ],
+      "cwe_primary": "CWE-538",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-538": "Insertion of Sensitive Information into Externally-Accessible File or Directory"
+      }
+    },
+    "software": {
+      "vendors": "jreviews.com",
+      "products": "JReviews component for Joomla",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://jreviews.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-118494",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-118494"
+    },
+    "item_id": "CVE-2026-118494",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla extension with no enterprise or DPI footprint, falls under consumer CMS add-on exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107129",
+    "identity": {
+      "title": "CVE-2026-107129",
+      "published": "2026-11-05 17:58:05",
+      "modified": "2026-11-05 20:17:40",
+      "description": "Joomla Extension - balbooa.com - Unauthenticated arbitrary file deletion via path traversal in Gridbox < 2.20.5.0"
+    },
+    "cvss": {
+      "base_score": 8.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.balbooa.com/gridbox"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "balbooa.com",
+      "products": "Gridbox extension for Joomla",
+      "cpe_uris": "cpe:2.3:a:balbooa:gridbox:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.balbooa.com/gridbox"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-107129",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-107129"
+    },
+    "item_id": "CVE-2026-107129",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla extension with no enterprise or DPI footprint, falls under consumer CMS add-on exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107903",
+    "identity": {
+      "title": "CVE-2026-107903",
+      "published": "2026-11-05 17:56:53",
+      "modified": "2026-11-05 20:17:40",
+      "description": "Joomla Extension - balbooa.com - Stored XSS in reviews via inconsistent sanitization in Gridbox < 2.20.5.0"
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "ACTIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.balbooa.com/gridbox"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "ACTIVE",
+      "summary": "network, privileges: NONE, user interaction: ACTIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "balbooa.com",
+      "products": "Gridbox extension for Joomla",
+      "cpe_uris": "cpe:2.3:a:balbooa:gridbox:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.balbooa.com/gridbox"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-107903",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-107903"
+    },
+    "item_id": "CVE-2026-107903",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla extension with no enterprise or DPI footprint, falls under consumer CMS add-on exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105607",
+    "identity": {
+      "title": "CVE-2026-105607",
+      "published": "2026-11-05 17:51:43",
+      "modified": "2026-11-05 20:17:39",
+      "description": "Joomla Extension - balbooa.com - Unauthenticated stored XSS in the \"Recent Comments / Recent Reviews\" widget in Gridbox < 2.20.5.0"
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "ACTIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.balbooa.com/gridbox"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "ACTIVE",
+      "summary": "network, privileges: NONE, user interaction: ACTIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "balbooa.com",
+      "products": "Gridbox extension for Joomla",
+      "cpe_uris": "cpe:2.3:a:balbooa:gridbox:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.balbooa.com/gridbox"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105607",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105607"
+    },
+    "item_id": "CVE-2026-105607",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla extension with no enterprise or DPI footprint, falls under consumer CMS add-on exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-115452",
+    "identity": {
+      "title": "CVE-2026-115452",
+      "published": "2026-11-05 17:51:21",
+      "modified": "2026-11-05 20:17:42",
+      "description": "Joomla Extension - tassos.gr - Privileged stored XSS in Advanced Custom Fields 2.8.2-2.8.15, 3.0.0-3.1.8 and Smile Pack 1.1.2-1.2.9, 2.0.0-2.1.6 - A user who could edit a Map marker label, like an article author, could add a script that ran for anyone who opened the marker."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.tassos.gr/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "tassos.gr,tassos.gr",
+      "products": "Advanced Custom Fields extension for Joomla,Smile Pack extension for Joomla",
+      "cpe_uris": "cpe:2.3:a:advancedcustomfields:advanced_custom_fields:*:*:*:*:*:joomla:*:*,cpe:2.3:a:advancedcustomfields:advanced_custom_fields:*:*:*:*:*:joomla:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.tassos.gr/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-115452",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-115452"
+    },
+    "item_id": "CVE-2026-115452",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Joomla extension with no enterprise or DPI footprint, falls under consumer CMS add-on exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107359",
+    "identity": {
+      "title": "CVE-2026-107359",
+      "published": "2026-11-05 17:37:53",
+      "modified": "2026-11-05 20:17:40",
+      "description": "Improper input validation in the beacon handler for WF200 firmware versions 3.17.0 and earlier may result in a divide-by-zero fault."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/SiliconLabsSoftware/docs-security-advisories/blob/main/Advisories/500-599/A-00000593.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-369"
+      ],
+      "cwe_primary": "CWE-369",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-369": "Divide By Zero"
+      }
+    },
+    "software": {
+      "vendors": "Silicon Labs",
+      "products": "WF200 FW",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/SiliconLabsSoftware/docs-security-advisories/blob/main/Advisories/500-599/A-00000593.md"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-107359",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-107359"
+    },
+    "item_id": "CVE-2026-107359",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer IoT firmware with divide-by-zero crash, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-77439",
+    "identity": {
+      "title": "CVE-2026-77439",
+      "published": "2026-11-05 17:25:59",
+      "modified": "2026-11-05 18:17:10",
+      "description": "Immich is a self-hosted photo and video management solution. Prior to 3.0.3, an authenticated user with editor access to a shared album can change the existing owner's role because album member role updates do not protect the owner from modification. By demoting the owner and then promoting themselves, an editor can take ownership of the album, remove the original owner, and delete the album. This vulnerability is fixed in version 3.0.3."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/immich-app/immich/releases/tag/v3.0.3"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269",
+        "CWE-639"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management",
+        "CWE-639": "Authorization Bypass Through User-Controlled Key"
+      }
+    },
+    "software": {
+      "vendors": "immich-app",
+      "products": "immich",
+      "cpe_uris": "cpe:2.3:a:futo:immich:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "immich-app:immich",
+          "vendor": "immich-app",
+          "product": "immich",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/immich-app/immich/releases/tag/v3.0.3",
+      "https://github.com/immich-app/immich/security/advisories/GHSA-c9mf-h82r-8p4j",
+      "https://github.com/immich-app/immich/pull/29883",
+      "https://github.com/immich-app/immich/commit/84dff19ca9a467752d848ff54763d62c04ebf960"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77439",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-77439"
+    },
+    "item_id": "CVE-2026-77439",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer self-hosted photo management software requiring authenticated editor access, with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120859",
+    "identity": {
+      "title": "CVE-2026-120859",
+      "published": "2026-11-05 17:14:58",
+      "modified": "2026-11-05 18:17:05",
+      "description": "PyMoDAQ before 4.4.13, and pymodaq_data, pymodaq_gui, and pymodaq_utils before 5.1.15, 5.2.x before 5.2.14, and 5.3.x before 5.3.10, contain deserialization of untrusted data and eval injection vulnerabilities that allow attackers to execute arbitrary code by supplying crafted files that a user opens. Attackers can store pickled objects in HDF5 string nodes that StringARRAY.array_to_string() passes to pickle.loads() when the node is browsed or read, place Python expressions in HDF5 attributes that JsonConverter.json2object() evaluates, supply a .dock file that load_layout_state() unpickles from the Dashboard Load layout action, or embed Python expressions in XML settings files that elt_to_dict() and set_txt_from_elt() evaluate."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/PyMoDAQ/PyMoDAQ/commit/6c7fff74d82624c640bd79513f5b4675ea6d88da"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502",
+        "CWE-95"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data",
+        "CWE-95": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+      }
+    },
+    "software": {
+      "vendors": "PyMoDAQ,PyMoDAQ,PyMoDAQ,PyMoDAQ",
+      "products": "PyMoDAQ,pymodaq_data,pymodaq_gui,pymodaq_utils",
+      "cpe_uris": "cpe:2.3:a:pymodaq:pymodaq:*:*:*:*:*:*:*:*,cpe:2.3:a:pymodaq:data:*:*:*:*:*:*:*:*,cpe:2.3:a:pymodaq:data:*:*:*:*:*:*:*:*,cpe:2.3:a:pymodaq:data:*:*:*:*:*:*:*:*,cpe:2.3:a:pymodaq:gui:*:*:*:*:*:*:*:*,cpe:2.3:a:pymodaq:gui:*:*:*:*:*:*:*:*,cpe:2.3:a:pymodaq:gui:*:*:*:*:*:*:*:*,cpe:2.3:a:pymodaq:utils:*:*:*:*:*:*:*:*,cpe:2.3:a:pymodaq:utils:*:*:*:*:*:*:*:*,cpe:2.3:a:pymodaq:utils:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/PyMoDAQ/PyMoDAQ/commit/6c7fff74d82624c640bd79513f5b4675ea6d88da",
+      "https://github.com/PyMoDAQ/PyMoDAQ/releases/tag/5.2.14",
+      "https://github.com/PyMoDAQ/PyMoDAQ/blob/5.3.9/packages/pymodaq_data/src/pymodaq_data/h5modules/backends.py#L477-L478",
+      "https://github.com/PyMoDAQ/PyMoDAQ/security/advisories/GHSA-jw9g-5c9x-cf84",
+      "https://github.com/PyMoDAQ/PyMoDAQ/releases/tag/4.4.13",
+      "https://www.vulncheck.com/advisories/pymodaq-before-5.3.10-arbitrary-code-execution-via-crafted-hdf5-dock-layout-and-xml-settings-files",
+      "https://github.com/PyMoDAQ/PyMoDAQ/commit/3bf9042a58f5d4870a2b45fe2c9423aafe6b9203",
+      "https://github.com/PyMoDAQ/PyMoDAQ/commit/041e8a22b3dbe3c986ec0ea3c6b46a22f5efe374",
+      "https://github.com/PyMoDAQ/PyMoDAQ/commit/ae0042513eb979c84da690825902658c625718d1",
+      "https://github.com/PyMoDAQ/PyMoDAQ/releases/tag/5.1.15",
+      "https://github.com/PyMoDAQ/PyMoDAQ/releases/tag/5.3.10"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-120859",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-120859"
+    },
+    "item_id": "CVE-2026-120859",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Scientific data acquisition Python framework requiring user file interaction, with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-54145",
+    "identity": {
+      "title": "CVE-2026-54145",
+      "published": "2026-11-05 16:33:32",
+      "modified": "2026-11-05 17:18:19",
+      "description": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. In affected versions before 0.57.5, the approval gate uses the JSON-RPC bearer token as an approval session identifier. This exposes the credential through persisted approval records, events, debug logs, and RPC responses, including during normal desktop operation. An attacker who obtains these artifacts can recover the token and access the core RPC interface while it remains valid. This can expose sensitive agent and integration data and permit privileged operations. Stable tokens remain usable until rotated; launch-specific tokens remain usable while the corresponding core instance is active. The fix is included in version 0.57.5."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/tinyhumansai/openhuman/pull/2952"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200",
+        "CWE-312",
+        "CWE-532"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor",
+        "CWE-312": "Cleartext Storage of Sensitive Information",
+        "CWE-532": "Insertion of Sensitive Information into Log File"
+      }
+    },
+    "software": {
+      "vendors": "tinyhumansai",
+      "products": "openhuman",
+      "cpe_uris": "cpe:2.3:a:tinyhumans:openhuman:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/tinyhumansai/openhuman/pull/2952",
+      "https://github.com/tinyhumansai/openhuman/security/advisories/GHSA-ww8p-c82p-p8wx",
+      "https://github.com/tinyhumansai/openhuman/commit/c5ff4a3516a9ad889b19a97eb1bba624908658fe",
+      "https://github.com/tinyhumansai/openhuman/releases/tag/v0.57.5"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-54145",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-54145"
+    },
+    "item_id": "CVE-2026-54145",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Developer AI agent harness with credential exposure, no enterprise or DPI sector footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-54140",
+    "identity": {
+      "title": "CVE-2026-54140",
+      "published": "2026-11-05 16:13:31",
+      "modified": "2026-11-05 17:18:18",
+      "description": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, OpenHuman places names, descriptions, titles, and parameter definitions returned by configured external MCP servers into the agent model context without neutralizing instructions or bounding the descriptive fields. The McpRemoteTool records produced by list_tools preserve this remote content, while tool filtering considers the tool name and the prompt-injection detector screens user messages rather than MCP definitions. A malicious or compromised MCP server can therefore return a poisoned description that is evaluated on every agent turn and may direct the model to invoke other available tools, disclose accessible data, or perform unauthorized actions without a separate malicious user message. The issue affects users who configure an attacker-controlled or compromised MCP server. This issue is fixed in version 0.57.13."
+    },
+    "cvss": {
+      "base_score": 8.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/tinyhumansai/openhuman/releases/tag/v0.57.13"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-1427"
+      ],
+      "cwe_primary": "CWE-1427",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-1427": "Improper Neutralization of Input Used for LLM Prompting"
+      }
+    },
+    "software": {
+      "vendors": "tinyhumansai",
+      "products": "openhuman",
+      "cpe_uris": "cpe:2.3:a:tinyhumans:openhuman:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/tinyhumansai/openhuman/releases/tag/v0.57.13",
+      "https://github.com/tinyhumansai/openhuman/commit/00b8a669c6e6391a1be9f724bd9c8f755ee3c43e",
+      "https://github.com/tinyhumansai/openhuman/pull/3215",
+      "https://github.com/tinyhumansai/openhuman/security/advisories/GHSA-g6j9-89xv-v752"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-54140",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-54140"
+    },
+    "item_id": "CVE-2026-54140",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "AI agent harness prompt injection vulnerability, developer tool with no enterprise or DPI sector footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102739",
+    "identity": {
+      "title": "CVE-2026-102739",
+      "published": "2026-11-05 16:09:12",
+      "modified": "2026-11-05 17:17:32",
+      "description": "ESPectre is a Wi-Fi motion sensing platform for ESP32. Prior to 3.0.0-rc1, Micro-ESPectre analysis tools, including tools/6_optimize_filter_params.py, tools/1_analyze_raw_data.py, and tools/10_train_ml_model.py, load NPZ datasets with NumPy pickle support enabled through micro-espectre/tools/csi_utils.py and a direct loader. A malicious dataset contributor or pull-request author can place an object-typed array in a .npz file under micro-espectre/data, causing pickle-controlled code to execute as the maintainer or developer when a documented analysis tool accesses the field. This issue is fixed in version 3.0.0-rc1."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/francescopace/espectre/commit/adf495ceed41840497347f0196ba4a6968fc4ee1"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data"
+      }
+    },
+    "software": {
+      "vendors": "francescopace",
+      "products": "espectre",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/francescopace/espectre/commit/adf495ceed41840497347f0196ba4a6968fc4ee1",
+      "https://github.com/francescopace/espectre/pull/154",
+      "https://github.com/francescopace/espectre/releases/tag/3.0.0-rc1",
+      "https://github.com/francescopace/espectre/security/advisories/GHSA-g96x-h6rg-cqq3"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-102739",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-102739"
+    },
+    "item_id": "CVE-2026-102739",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "IoT Wi-Fi sensing platform developer tool with pickle deserialization risk, no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121997",
+    "identity": {
+      "title": "CVE-2026-121997",
+      "published": "2026-11-05 16:08:54",
+      "modified": "2026-11-05 19:17:16",
+      "description": "A heap buffer overflow in gdbserver's QTDPsrc packet handler allows an unauthenticated remote attacker to achieve native code execution in the gdbserver process. The vulnerability results from a mismatch between a packet's declared source length and the actual data length, causing hex2bin to write beyond the allocated heap buffer."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://bugzilla.redhat.com/show_bug.cgi?id=2565679"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-122"
+      ],
+      "cwe_primary": "CWE-122",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-122": "Heap-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat",
+      "products": "Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 6,Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 9,Red Hat Enterprise Linux 9,Red Hat Hardened Images",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "red hat:red hat enterprise linux 10",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 10",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 6",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 6",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 7",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 7",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 8",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 8",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 9",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 9",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2565679",
+      "https://access.redhat.com/security/cve/CVE-2026-121997"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-121997",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-121997"
+    },
+    "item_id": "CVE-2026-121997",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Debugging server remote RCE, developer tool without enterprise or DPI sector deployment context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121996",
+    "identity": {
+      "title": "CVE-2026-121996",
+      "published": "2026-11-05 16:08:52",
+      "modified": "2026-11-05 19:17:16",
+      "description": "A length validation flaw in gdbserver's agent-expression parser allows an unauthenticated remote attacker to read uninitialized heap memory from the gdbserver process and cause a denial of service. Disclosed heap content includes addresses suitable for defeating ASLR in further exploitation."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://access.redhat.com/security/cve/CVE-2026-121996"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-822"
+      ],
+      "cwe_primary": "CWE-822",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-822": "Untrusted Pointer Dereference"
+      }
+    },
+    "software": {
+      "vendors": "Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat",
+      "products": "Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 6,Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 9,Red Hat Enterprise Linux 9,Red Hat Hardened Images",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "red hat:red hat enterprise linux 10",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 10",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 6",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 6",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 7",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 7",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 8",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 8",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 9",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 9",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-121996",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2565678"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-121996",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-121996"
+    },
+    "item_id": "CVE-2026-121996",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Debugging server information leak and DoS, developer tool without enterprise or DPI sector footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121995",
+    "identity": {
+      "title": "CVE-2026-121995",
+      "published": "2026-11-05 16:08:49",
+      "modified": "2026-11-05 17:18:00",
+      "description": "A stack buffer overflow in the GDB client's tracepoint upload handler allows an attacker-controlled debug stub to corrupt stack memory automatically during connection setup. The overflow results from GDB reading beyond the current reply boundary into a stale prior reply in the shared packet buffer."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://access.redhat.com/security/cve/CVE-2026-121995"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-121",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat",
+      "products": "Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 6,Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 9,Red Hat Enterprise Linux 9,Red Hat Hardened Images",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "red hat:red hat enterprise linux 10",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 10",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 6",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 6",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 7",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 7",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 8",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 8",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 9",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 9",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-121995",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2565677"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-121995",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-121995"
+    },
+    "item_id": "CVE-2026-121995",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "GDB client stack overflow triggered by debug stub, developer tool with no DPI or enterprise footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121994",
+    "identity": {
+      "title": "CVE-2026-121994",
+      "published": "2026-11-05 16:08:46",
+      "modified": "2026-11-05 19:17:16",
+      "description": "A stack buffer overflow in the GDB client's remote protocol handler allows an attacker-controlled debug target to execute arbitrary code in the GDB process. The vulnerability exists in fetch_register_using_p, which decodes a stub's register reply into an alloca-sized buffer without bounding writes by the register width."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://bugzilla.redhat.com/show_bug.cgi?id=2565676"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-121",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat,Red Hat",
+      "products": "Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 10,Red Hat Enterprise Linux 6,Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 8,Red Hat Enterprise Linux 9,Red Hat Enterprise Linux 9,Red Hat Hardened Images",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "red hat:red hat enterprise linux 10",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 10",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 6",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 6",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 7",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 7",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 8",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 8",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        },
+        {
+          "key": "red hat:red hat enterprise linux 9",
+          "vendor": "Red Hat",
+          "product": "Red Hat Enterprise Linux 9",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2565676",
+      "https://access.redhat.com/security/cve/CVE-2026-121994"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-121994",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-121994"
+    },
+    "item_id": "CVE-2026-121994",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "GDB client remote protocol RCE, developer debugging tool without enterprise or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102615",
+    "identity": {
+      "title": "CVE-2026-102615",
+      "published": "2026-11-05 15:32:30",
+      "modified": "2026-11-05 16:17:24",
+      "description": "HeyForm is an open-source form builder. Prior to 3.0.1, /api/upload accepts a file according to the client-controlled multipart file.mimetype while retaining an HTML filename, and static/upload serves the resulting file as text/html with contentSecurityPolicy: false. An ordinary user can therefore upload active HTML that executes on the HeyForm origin when a victim opens its returned URL. The same-origin script can access /graphql with the victim's session and read or modify data available to that account. The code also permits upload requests tied to an active public form through formId, openToken, and a fieldId belonging to a file or signature question, although the advisory did not fully verify that unauthenticated path end to end. This issue is fixed in version 3.0.1."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/heyform/heyform/security/advisories/GHSA-pxw5-pjrc-j758"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: LOW, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "heyform",
+      "products": "heyform",
+      "cpe_uris": "cpe:2.3:a:heyform:heyform:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/heyform/heyform/security/advisories/GHSA-pxw5-pjrc-j758",
+      "https://github.com/heyform/heyform/releases/tag/v3.0.1",
+      "https://github.com/heyform/heyform/commit/849f7101d4370b29e716b2d7ee14a86c2f598f3a"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-102615",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-102615"
+    },
+    "item_id": "CVE-2026-102615",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Open-source web form builder with stored XSS and session hijack, lacking enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-70659",
+    "identity": {
+      "title": "CVE-2026-70659",
+      "published": "2026-11-05 15:26:33",
+      "modified": "2026-11-05 16:17:48",
+      "description": "stable-diffusion.cpp is a pure C/C++ library for running diffusion model (Stable Diffusion, Flux, Wan, Qwen Image, Z-Image, and more) inference. From master-742-1a13107 until master-763-4fcc6fe, IMatrixCollector::load_imatrix in src/runtime/imatrix.cpp reuses the values and counts vectors for entries with the same tensor name but resizes them only when they are empty. An untrusted .imatrix file can provide a small nval for the first entry and a larger nval for a second entry with the same name, causing the accumulation loop to write attacker-controlled floating-point and integer values beyond both heap buffers. Loading the file through the --imat-in conversion path can corrupt the heap or crash the process before a model is required. This issue is fixed in master-763-4fcc6fe."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/leejet/stable-diffusion.cpp/commit/4fcc6fef10c6f686801c6e257b22cd6a3deb906b"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-1284",
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-1284",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-1284": "Improper Validation of Specified Quantity in Input",
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "leejet",
+      "products": "stable-diffusion.cpp",
+      "cpe_uris": "cpe:2.3:a:leejet:stable-diffusion.cpp:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/leejet/stable-diffusion.cpp/commit/4fcc6fef10c6f686801c6e257b22cd6a3deb906b",
+      "https://github.com/leejet/stable-diffusion.cpp/security/advisories/GHSA-6q7q-2v9c-x8m7",
+      "https://github.com/leejet/stable-diffusion.cpp/pull/1750",
+      "https://github.com/leejet/stable-diffusion.cpp/releases/tag/master-763-4fcc6fe"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-70659",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-70659"
+    },
+    "item_id": "CVE-2026-70659",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "AI inference library with heap overflow via crafted file, lacking enterprise/DPI footprint or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123096",
+    "identity": {
+      "title": "CVE-2026-123096",
+      "published": "2026-11-05 15:11:50",
+      "modified": "2026-11-05 16:17:46",
+      "description": "anacrolix/torrent through 1.61.0 contains a memory exhaustion vulnerability in the tracker/http package that allows malicious trackers to crash clients by returning unbounded responses. Attackers controlling an HTTP tracker in a torrent file or magnet link can return huge or gzip-compressed announce or scrape responses that Client.Announce and Client.Scrape buffer without limits, exhausting process memory."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/anacrolix/torrent"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "cwe_primary": "CWE-770",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-770": "Allocation of Resources Without Limits or Throttling"
+      }
+    },
+    "software": {
+      "vendors": "anacrolix",
+      "products": "torrent",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/anacrolix/torrent",
+      "https://github.com/anacrolix/torrent/blob/v1.61.0/tracker/http/http.go#L114-L126",
+      "https://github.com/anacrolix/torrent/commit/92ad51490479bb8b94720f964b1c67e5a1d68faa",
+      "https://www.vulncheck.com/advisories/anacrolix-torrent-through-1.61.0-memory-exhaustion-via-unbounded-http-tracker-response",
+      "https://github.com/anacrolix/torrent/pull/1143"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123096",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123096"
+    },
+    "item_id": "CVE-2026-123096",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "BitTorrent client library with memory exhaustion via tracker responses, lacking enterprise/DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123095",
+    "identity": {
+      "title": "CVE-2026-123095",
+      "published": "2026-11-05 15:11:49",
+      "modified": "2026-11-05 16:17:46",
+      "description": "mpv 0.29.0 before 0.42.0 contains a playlist injection vulnerability in the bundled ytdl_hook script that allows remote attackers to add unchecked entries by embedding newlines in playlist URLs. Attackers controlling a feed or page can bypass url_is_safe() to open file:// or av:// inputs, reading local files or loading shared objects via ladspa for code execution."
+    },
+    "cvss": {
+      "base_score": 7.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/mpv-player/mpv/pull/18762"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-93"
+      ],
+      "cwe_primary": "CWE-93",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-93": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+      }
+    },
+    "software": {
+      "vendors": "mpv-player",
+      "products": "mpv",
+      "cpe_uris": "cpe:2.3:a:mpv:mpv:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/mpv-0.29.0-before-0.42.0-playlist-entry-injection-via-ytdl-hook-newlines",
+      "https://github.com/mpv-player/mpv/pull/18762",
+      "https://github.com/mpv-player/mpv/blob/v0.41.0/player/lua/ytdl_hook.lua#L244-L251",
+      "https://github.com/mpv-player/mpv/blob/v0.41.0/player/lua/ytdl_hook.lua#L1115-L1137",
+      "https://github.com/mpv-player/mpv/releases/tag/v0.42.0",
+      "https://github.com/mpv-player/mpv",
+      "https://github.com/mpv-player/mpv/commit/c3096515dcd26c14004f985538b5aa41db613856"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123095",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123095"
+    },
+    "item_id": "CVE-2026-123095",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer media player (mpv) with playlist injection, lacking enterprise/DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-122328",
+    "identity": {
+      "title": "CVE-2026-122328",
+      "published": "2026-11-05 15:11:47",
+      "modified": "2026-11-05 16:17:45",
+      "description": "SDL_mixer 3.1.2 through 3.2.4 contains a stack-based buffer overflow vulnerability in FetchXLaw() of src/decoder_wav.c when decoding A-law or mu-law WAV files. Attackers can supply a crafted WAV file whose doubly-offset float expansion overwrites about 1 KB of adjacent stack memory, causing crashes or potentially code execution."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/libsdl-org/SDL_mixer/commit/df966f698e18ae849bd92796a26311e79c555718"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-121",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "libsdl-org",
+      "products": "SDL_mixer",
+      "cpe_uris": "cpe:2.3:a:libsdl-org:sdl-mixer:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/libsdl-org/SDL_mixer/commit/df966f698e18ae849bd92796a26311e79c555718",
+      "https://www.vulncheck.com/advisories/sdl-mixer-3.1.2-through-3.2.4-stack-based-buffer-overflow-via-fetchxlaw-in-wav-decoder",
+      "https://github.com/libsdl-org/SDL_mixer/blob/release-3.2.4/src/decoder_wav.c#L1658-1659",
+      "https://hackmd.io/@haindpwn/sdl-mixer-fetchxlaw-stack-overflow",
+      "https://github.com/libsdl-org/SDL_mixer/blob/release-3.2.4/src/decoder_wav.c#L750-761",
+      "https://github.com/libsdl-org/SDL_mixer",
+      "https://github.com/libsdl-org/SDL_mixer/issues/907",
+      "https://github.com/libsdl-org/SDL_mixer/pull/910"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-122328",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-122328"
+    },
+    "item_id": "CVE-2026-122328",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Audio decoding library (SDL_mixer) with stack overflow via crafted WAV, lacking enterprise/DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-122329",
+    "identity": {
+      "title": "CVE-2026-122329",
+      "published": "2026-11-05 15:11:47",
+      "modified": "2026-11-05 16:17:46",
+      "description": "SDL_mixer 3.1.2 through 3.2.4 contains a stack-based buffer overflow in FetchXLaw() in src/decoder_aiff.c due to miscalculated output offsets when expanding A-law or mu-law samples. Attackers can supply a crafted AIFF-C file that overwrites roughly 1 KB of adjacent stack memory when decoded, causing crashes or potential code execution."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/libsdl-org/SDL_mixer/blob/release-3.2.4/src/decoder_aiff.c#L86-97"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-121",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "libsdl-org",
+      "products": "SDL_mixer",
+      "cpe_uris": "cpe:2.3:a:libsdl-org:sdl-mixer:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/libsdl-org/SDL_mixer/blob/release-3.2.4/src/decoder_aiff.c#L86-97",
+      "https://hackmd.io/@haindpwn/sdl-mixer-fetchxlaw-stack-overflow",
+      "https://github.com/libsdl-org/SDL_mixer/commit/34486847a607540ce9ef5fbe20979c7140bf8c82",
+      "https://github.com/libsdl-org/SDL_mixer",
+      "https://github.com/libsdl-org/SDL_mixer/issues/907",
+      "https://www.vulncheck.com/advisories/sdl-mixer-3.1.2-through-3.2.4-stack-based-buffer-overflow-via-fetchxlaw-in-aiff-decoder",
+      "https://github.com/libsdl-org/SDL_mixer/blob/release-3.2.4/src/decoder_aiff.c#L535-536"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-122329",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-122329"
+    },
+    "item_id": "CVE-2026-122329",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Audio decoding library (SDL_mixer) with stack overflow via crafted AIFF-C, lacking enterprise/DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123028",
+    "identity": {
+      "title": "CVE-2026-123028",
+      "published": "2026-11-05 14:00:20",
+      "modified": "2026-11-05 19:17:17",
+      "description": "A vulnerability was identified in itsourcecode Online Book Store 1.0. Affected by this issue is some unknown functionality of the file /admin_edit.php. The manipulation of the argument bookisbn leads to sql injection. It is possible to initiate the attack remotely. The exploit is publicly available and might be used."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/yomymy/Submit/issues/1"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-74",
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-74",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-74": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "itsourcecode",
+      "products": "Online Book Store",
+      "cpe_uris": "cpe:2.3:a:itsourcecode:online_book_store:1.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/submit/1027526",
+      "https://github.com/yomymy/Submit/issues/1",
+      "https://itsourcecode.com/",
+      "https://vuldb.com/vuln/431400/cti",
+      "https://vuldb.com/cve/CVE-2026-123028",
+      "https://vuldb.com/vuln/431400"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123028",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123028"
+    },
+    "item_id": "CVE-2026-123028",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "SQL injection in itsourcecode Online Book Store 1.0, a consumer/demo tutorial application with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123019",
+    "identity": {
+      "title": "CVE-2026-123019",
+      "published": "2026-11-05 12:00:20",
+      "modified": "2026-11-05 21:18:45",
+      "description": "A weakness has been identified in eosphoros-ai DB-GPT up to 0.8.2. Impacted is the function exec_module of the file hf_adapter.py of the component HuggingFace Adapter. Executing a manipulation of the argument trust_remote_code can lead to inclusion of functionality from untrusted control sphere. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ybyu-ieu/agent-security-advisories/blob/main/dbgpt/dbgpt-hf-model-trust-remote-code-default-remote-code-execution.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-829"
+      ],
+      "cwe_primary": "CWE-829",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-829": "Inclusion of Functionality from Untrusted Control Sphere"
+      }
+    },
+    "software": {
+      "vendors": "eosphoros-ai",
+      "products": "DB-GPT",
+      "cpe_uris": "cpe:2.3:a:dbgpt:db-gpt:0.8.0:*:*:*:*:*:*:*,cpe:2.3:a:dbgpt:db-gpt:0.8.1:*:*:*:*:*:*:*,cpe:2.3:a:dbgpt:db-gpt:0.8.2:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "eosphoros-ai:db-gpt",
+          "vendor": "eosphoros-ai",
+          "product": "db-gpt",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/ybyu-ieu/agent-security-advisories/blob/main/dbgpt/dbgpt-hf-model-trust-remote-code-default-remote-code-execution.md",
+      "https://vuldb.com/vuln/431393",
+      "https://vuldb.com/vuln/431393/cti",
+      "https://vuldb.com/cve/CVE-2026-123019",
+      "https://github.com/eosphoros-ai/DB-GPT/issues/3290",
+      "https://github.com/eosphoros-ai/DB-GPT/",
+      "https://vuldb.com/submit/1033097"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123019",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123019"
+    },
+    "item_id": "CVE-2026-123019",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "LLM/HuggingFace-style tooling with no clear enterprise or DPI sector footprint; base exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118869",
+    "identity": {
+      "title": "CVE-2026-118869",
+      "published": "2026-11-05 08:17:57",
+      "modified": "2026-11-05 19:17:14",
+      "description": "An OS command injection vulnerability exists in SHIRASAGI, which may allow an authenticated attacker to execute arbitrary OS commands on the system running the product."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.01059,
+      "percentile": 0.64634,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ss-proj.org/support/1743.html"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "SHIRASAGI Project",
+      "products": "SHIRASAGI",
+      "cpe_uris": "cpe:2.3:a:ss-proj:shirasagi:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.ss-proj.org/support/1743.html",
+      "https://jvn.jp/en/jp/JVN55454512/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-118869",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-118869"
+    },
+    "item_id": "CVE-2026-118869",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Authenticated OS command injection in niche software with no DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-100109",
+    "identity": {
+      "title": "CVE-2026-100109",
+      "published": "2026-11-05 07:35:20",
+      "modified": "2026-11-05 20:17:36",
+      "description": "The Security For WooCommerce WordPress plugin from 1.0.10 to 1.0.16 does not perform capability checks when creating users through an action available to unauthenticated visitors, and lets the caller choose the new account's role, allowing unauthenticated attackers to create administrator accounts and take over the site."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00369,
+      "percentile": 0.30959,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/b4d26eb3-ab32-456e-9f69-9ab300fdf44c/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [],
+      "cwe_primary": null,
+      "cwe_family": null,
+      "cwe_names": {}
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Security For WooCommerce",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/b4d26eb3-ab32-456e-9f69-9ab300fdf44c/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-100109",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-100109"
+    },
+    "item_id": "CVE-2026-100109",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint, explicitly excluded despite high CVSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123029",
+    "identity": {
+      "title": "CVE-2026-123029",
+      "published": "2026-11-05 06:45:37",
+      "modified": "2026-11-05 07:17:26",
+      "description": "Wowza Streaming Engine before 4.12.2 processes XML external entities, which allows remote attackers to read local files with the privileges of the Wowza Streaming Engine process."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00395,
+      "percentile": 0.33865,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.wowza.com/docs/xxe-allows-reading-local-files"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-611"
+      ],
+      "cwe_primary": "CWE-611",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-611": "Improper Restriction of XML External Entity Reference"
+      }
+    },
+    "software": {
+      "vendors": "Wowza",
+      "products": "Streaming Engine",
+      "cpe_uris": "cpe:2.3:a:wowza:streaming_engine:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.wowza.com/docs/xxe-allows-reading-local-files"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123029",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123029"
+    },
+    "item_id": "CVE-2026-123029",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "XXE in media streaming software with no DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123014",
+    "identity": {
+      "title": "CVE-2026-123014",
+      "published": "2026-11-05 05:25:55",
+      "modified": "2026-11-05 06:17:07",
+      "description": "iTerm2 before 3.7.7beta2 has an argument injection vulnerability in the x-man-page: URL handler, allowing an attacker to execute arbitrary commands with the privileges of the logged-in user by inducing the user to open a crafted URL in iTerm2. Percent-encoded NUL characters survive input sanitization and are subsequently converted to whitespace during command-line parsing, allowing injection of additional arguments to /usr/bin/man. An attacker can inject the -P option to select an attacker-controlled pager command. NOTE: this issue exists because of an incomplete fix for CVE-2023-46321."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00475,
+      "percentile": 0.41193,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://gitlab.com/gnachman/iterm2/-/commit/314ba43920dbce08808c032e89966918090bdf8e"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "network, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-88"
+      ],
+      "cwe_primary": "CWE-88",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-88": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')"
+      }
+    },
+    "software": {
+      "vendors": "iTerm2",
+      "products": "iTerm2",
+      "cpe_uris": "cpe:2.3:a:iterm2:iterm2:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "iterm2:iterm2",
+          "vendor": "iTerm2",
+          "product": "iTerm2",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://iterm2.com/downloads.html",
+      "https://gitlab.com/gnachman/iterm2/-/commit/314ba43920dbce08808c032e89966918090bdf8e",
+      "https://gitlab.com/gnachman/iterm2/-/commit/f29420ae4d3e0f986ee24ea286885d32af58175a"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123014",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123014"
+    },
+    "item_id": "CVE-2026-123014",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Client-side terminal emulator vulnerability requiring user interaction, no enterprise or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118193",
+    "identity": {
+      "title": "CVE-2026-118193",
+      "published": "2026-11-05 04:48:07",
+      "modified": "2026-11-05 21:18:40",
+      "description": "The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.19.1 via the `donor_default_user_role` parameter. This is due to the `sanitize_option_donor_default_user_role()` function applying only a narrow literal check against the string `'administrator'` rather than enforcing the plugin's own `give_get_donor_safe_user_roles()` allowlist on save, and due to the `give_core_settings_import_callback()` AJAX handler writing imported JSON directly into the `give_settings` option via `update_option()` without invoking the sanitize filter at all. This makes it possible for authenticated attackers with the GiveWP Manager role (holding the `manage_give_settings` capability) and above to configure donor registration to assign privileged WordPress roles — up to and including Administrator via the import path — to every new donor account created through the platform. Via the settings save path, the Administrator role is blocked but any other elevated role (Editor, Author, etc.) is accepted; via the Tools › Import JSON path, the sanitize filter is bypassed entirely, allowing the Administrator role itself to be stored and subsequently applied to all newly registered donor accounts."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00397,
+      "percentile": 0.34101,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/changeset/3782355/give/trunk/includes/admin/settings/class-settings-advanced.php"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "stellarwp",
+      "products": "GiveWP – Donation Plugin and Fundraising Platform",
+      "cpe_uris": "cpe:2.3:a:givewp:givewp:*:*:*:*:*:wordpress:*:*",
+      "software_map": [
+        {
+          "key": "stellarwp:givewp – donation plugin and fundraising platform",
+          "vendor": "stellarwp",
+          "product": "GiveWP – Donation Plugin and Fundraising Platform",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/changeset/3782355/give/trunk/includes/admin/settings/class-settings-advanced.php",
+      "https://plugins.trac.wordpress.org/browser/give/tags/4.19.0/src/Donors/Actions/CreateUserFromDonor.php#L23",
+      "https://plugins.trac.wordpress.org/browser/give/tags/4.19.0/includes/admin/admin-actions.php#L971",
+      "https://plugins.trac.wordpress.org/browser/give/tags/4.19.0/includes/admin/settings/class-settings-advanced.php#L436",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/f2ab1544-2428-4c93-b973-8280ff7a2903?source=cve",
+      "https://plugins.trac.wordpress.org/browser/give/tags/4.19.0/includes/process-donation.php#L1200"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-118193",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-118193"
+    },
+    "item_id": "CVE-2026-118193",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint, explicitly excluded despite privilege escalation vector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116617",
+    "identity": {
+      "title": "CVE-2026-116617",
+      "published": "2026-11-05 04:48:06",
+      "modified": "2026-11-05 21:18:39",
+      "description": "The Motors – Car Dealership & Classified Listings Plugin plugin for WordPress is vulnerable to File Deletion in all versions up to, and including, 1.4.128 The vulnerability exists because `stm_save_user_extra_fields()`, hooked to `personal_options_update`, writes the attacker-controlled `stm_dealer_logo_path` parameter directly to user meta without an ownership check binding the submitted path to the submitting user — unlike the `stm_payment_status` and `stm_lost_password_hash` fields, this field is not gated by a `manage_options` or `edit_users` capability check. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete image files belonging to other users under `wp-content/uploads` — including other users' avatars, dealer logos, and uploaded media — by storing a crafted path via their own profile and then triggering `unlink()` through the become-dealer form on their author page. Note that the two path guards (`stm_mvl_is_path_within_uploads` and `stm_mvl_is_allowed_image_file`) do restrict the attack surface to files with an image extension that resolve within the uploads basedir; files outside that directory, such as `wp-config.php` or plugin PHP files, cannot be reached."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00492,
+      "percentile": 0.42445,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/motors-car-dealership-classified-listings/tags/1.4.126/includes/user-extra.php#L449"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "stylemix",
+      "products": "Motors – Car Dealership & Classified Listings Plugin",
+      "cpe_uris": "cpe:2.3:a:stylemix:motors:*:*:*:*:*:wordpress:*:*",
+      "software_map": [
+        {
+          "key": "stylemix:motors – car dealership & classified listings plugin",
+          "vendor": "stylemix",
+          "product": "Motors – Car Dealership & Classified Listings Plugin",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/motors-car-dealership-classified-listings/tags/1.4.126/includes/user-extra.php#L449",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/9760bf39-6ec3-416e-95f0-3b3ce3ecdf7f?source=cve",
+      "https://plugins.svn.wordpress.org/motors-car-dealership-classified-listings/",
+      "https://plugins.trac.wordpress.org/browser/motors-car-dealership-classified-listings/tags/1.4.126/templates/user/private/become-dealer.php#L168",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&new=3774781%40motors-car-dealership-classified-listings%2Ftags%2F1.4.129&old=3766015%40motors-car-dealership-classified-listings%2Ftags%2F1.4.128",
+      "https://plugins.trac.wordpress.org/browser/motors-car-dealership-classified-listings/tags/1.4.126/includes/helpers.php#L1400"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116617",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116617"
+    },
+    "item_id": "CVE-2026-116617",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-93389",
+    "identity": {
+      "title": "CVE-2026-93389",
+      "published": "2026-11-05 04:48:06",
+      "modified": "2026-11-05 21:18:54",
+      "description": "The LiteSpeed Cache plugin for WordPress is vulnerable to unauthenticated disclosure of sensitive WooCommerce customer data in all versions up to, and including, 7.9.1 With Cache REST enabled (the shipped default cache-rest=1), LiteSpeed stores WooCommerce Store API GET responses (/wc/store/v1/cart and /wc/store/v1/checkout) as PUBLIC cache objects and does not vary the cache on the Cart-Token or WooCommerce session. A shopper's personalized cart/checkout response is therefore served to any later, cookie-less and token-less client as an LSCache HIT. This makes it possible for unauthenticated attackers to read another shopper's billing and shipping details (name, company, street address, email, phone), cart contents and totals, and the shopper's live Cart-Token session JWT and nonce (enabling cart/checkout-session hijack), plus order_key on the checkout endpoint."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0023,
+      "percentile": 0.13974,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4a66498d-7cf0-4480-b946-94e38f8fd350?source=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "litespeedtech",
+      "products": "LiteSpeed Cache",
+      "cpe_uris": "cpe:2.3:a:litespeedtech:litespeed_cache:*:*:*:*:*:wordpress:*:*",
+      "software_map": [
+        {
+          "key": "litespeedtech:litespeed cache",
+          "vendor": "litespeedtech",
+          "product": "LiteSpeed Cache",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/4a66498d-7cf0-4480-b946-94e38f8fd350?source=cve",
+      "https://plugins.trac.wordpress.org/changeset/3757253/litespeed-cache/trunk/src/control.cls.php"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93389",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-93389"
+    },
+    "item_id": "CVE-2026-93389",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress/WooCommerce plugin with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-122992",
+    "identity": {
+      "title": "CVE-2026-122992",
+      "published": "2026-11-05 02:36:35",
+      "modified": "2026-11-05 03:17:25",
+      "description": "In G4KLX DStarGateway and F4FXL DStarGateway before 7b75de6, dstarCallsignToAPRS in APRSUtils.cpp has an integer underflow via an empty RS-MS1A sender field."
+    },
+    "cvss": {
+      "base_score": 9.2,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00318,
+      "percentile": 0.24907,
+      "date": "2026-11-05"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/g4klx/DStarGateway"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-191"
+      ],
+      "cwe_primary": "CWE-191",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-191": "Integer Underflow (Wrap or Wraparound)"
+      }
+    },
+    "software": {
+      "vendors": "G4KLX",
+      "products": "DStarGateway",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/g4klx/DStarGateway",
+      "https://github.com/F4FXL/DStarGateway/blob/7b75de605dca542a2953dd74c16f0eac96a8944e/README.md?plain=1#L159-L161",
+      "https://github.com/F4FXL/DStarGateway/pull/71"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-122992",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-122992"
+    },
+    "item_id": "CVE-2026-122992",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Niche amateur radio gateway software with no enterprise or DPI footprint and no exploitation signal.",
+      "fail_open": false
+    }
+  }
+]
