@@ -1,0 +1,242 @@
+[
+  {
+    "id": "CVE-2026-118066",
+    "published": "2026-11-07 11:26:26",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "The Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress plugin for WordPress is vulnerable to Authentication Bypass via Account Takeover in all versions up to, and including, 5.7.6. This is due to the `OsModel::build_conditions_query()` function in `lib/models/model.php` comparing WHERE-clause values against the literal strings `'IS NULL'` and `'IS NOT NULL'` and concatenating a match directly into SQL without binding it as a parameter, a flaw that neither `sanitize_text_field()` nor the 5.7.5 `is_scalar()` hardening guard closes, since both pass the scalar sentinel through unchanged. This makes it possible for unauthenticated attackers to send `params[password_reset_token]=IS NOT NULL` to the public `customer_cabinet__change_password` AJAX route to match every non-null `account_nonse` value, resolving to the lowest-id customer and overwriting that customer's password to an attacker-chosen value — granting full access to their bookings, orders, and PII, and, when the `wp_users_as_customers` option is enabled, takeover of the linked WordPress subscriber or customer-role account. The attacker can first identify the target customer's email by sending `params[order_intent_key]=IS NOT NULL` to the public `steps__start_from_order_intent` route, which returns the name and email from the first matching order intent, and can then self-arm the required 15-minute password-reset freshness window by triggering a reset for that customer directly.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay and base Digital Identity rules despite authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118267",
+    "published": "2026-11-07 11:26:32",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The WP Data Access – App Builder for Tables, Forms, Dashboards, Charts & Maps plugin for WordPress is vulnerable to Incorrect Authorization leading to Privilege Escalation in all versions up to, and including, 5.5.89 This is due to the plugin's write endpoints (`wpda/app/update`, `wpda/app/delete`, `wpda/app/insert`) passing the attacker-supplied `key` and `val` parameters directly to `$wpdadb->update`, `$wpdadb->delete`, and `$wpdadb->insert` without enforcing the container's row-filter (`defaultWhere`) or per-column allow-list (`isSelected`) restrictions that are correctly applied on the read endpoints. This makes it possible for authenticated attackers, with Subscriber-level access and above, to write to arbitrary rows and columns outside the configured restrictions — including overwriting the `user_pass` field of the WordPress administrator account in `wp_users` — and subsequently authenticate as the administrator, achieving full site takeover. Exploitation requires an administrator to have published a Data App that enables write transactions (update, delete, or insert) for Subscriber-level or anonymous users, which is an explicitly advertised use-case of the plugin. Exploitation by unauthenticated attackers requires that the administrator has published a Data App whose rest_api.authorization is 'anonymous' and whose container has transactions.update (or delete/insert) enabled. On a default installation, where that is not configured, the vulnerability requires attackers with subscriber-level access and above.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay and base Digital Identity rules despite authorization bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120043",
+    "published": "2026-11-07 04:27:14",
+    "cvss": 7.5,
+    "epss": 0.00403,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Affiliate Program Suite — SliceWP Affiliates plugin for WordPress is vulnerable to generic SQL Injection via the 'email' parameter in all versions up to, and including, 1.2.14 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The injection is reachable without any account because the vulnerable code path is triggered via the user_register hook fired on every successful WooCommerce My Account registration, which requires only a guest-obtainable nonce.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress/WooCommerce plugin excluded as consumer software; SQLi lacks direct identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119516",
+    "published": "2026-11-06 08:00:31",
+    "cvss": 9.8,
+    "epss": 0.00386,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Deserialization of Untrusted Data vulnerability in Mamunur Rashid Radius Booking — Booking Calendar for Appointments &amp; Services radius-booking allows Object Injection.This issue affects Radius Booking — Booking Calendar for Appointments &amp; Services: from n/a through 1.0.20.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with deserialization flaw, lacks identity/access nexus and falls under consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120844",
+    "published": "2026-11-06 08:00:31",
+    "cvss": 9.8,
+    "epss": 0.00331,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Incorrect Privilege Assignment vulnerability in miniOrange OAuth Single Sign On – SSO (OAuth Client) miniorange-login-with-eve-online-google-facebook allows Privilege Escalation.This issue affects OAuth Single Sign On – SSO (OAuth Client): from n/a through 7.1.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite OAuth/SSO functionality.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110955",
+    "published": "2026-11-06 06:00:24",
+    "cvss": 9.8,
+    "epss": 0.00147,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Wurdey WordPress plugin through 1.0.0 does not verify a request signature before logging a user in, allowing unauthenticated attackers to authenticate as an administrator knowing only the administrator's username.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay and base Digital Identity rules despite authentication bypass.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-59104",
+    "published": "2026-11-06 21:41:49",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "UgCS server before 6.2 contains an authentication bypass in the HCI protocol login handler (LoginHandler) exposed on TCP port 3334. When the user database contains exactly one user (the default single-operator installation), a LoginRequest with empty userLogin and userPassword fields is interpreted as \\\"use the only user\\\" rather than as invalid credentials, and the server returns a fully authenticated session. Because the service listens on all interfaces (0.0.0.0) without TLS by default, an unauthenticated remote attacker with network access to port 3334 can obtain an authenticated session without knowing any credential and then issue privileged commands, including commanding connected drones and uploading flight routes.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in drone control server (UgCS), which falls under industrial/IoT exclusions and lacks a DPI identity or public-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104014",
+    "published": "2026-11-07 11:26:33",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Naimur Email OTP Verification for WooCommerce plugin for WordPress is vulnerable to authentication bypass in versions up to, and including, 2.1.0. This is due to the plugin's password-reset finalization endpoint (the wp_ajax_nopriv_ceovw_update_new_password action handled by CEOVW_AJAX::update_new_password()) authorizing the reset solely by the presence of a database row marking an email as 'VERIFIED', with no timestamp check, no session binding, and no per-reset token — combined with mark_otp_as_verified_for_reset() leaving the row in that state after a user enters their code (abandoning the flow leaves the row behind), and a scheduled 'ceovw_cleanup_expired_otps_event' cron that has no add_action() handler anywhere in the plugin so cleanup never runs. This makes it possible for unauthenticated attackers to take over any account whose owner previously requested and verified a password-reset code and did not immediately finish choosing a new password — the attacker needs only the victim's email address and a nonce that the plugin itself localizes publicly into the CEOVW_APP global on the WooCommerce account page for logged-out visitors, after which they call the endpoint, overwrite the victim's password, and are returned a live wordpress_logged_in_ session cookie for that user (full site takeover if the account is an administrator).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in a WordPress/WooCommerce plugin, explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86005",
+    "published": "2026-11-06 21:10:41",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, the administrative BullMQ dashboard was mounted without an authentication check. The vulnerable surface is the Bull Board/BullMQ administration dashboard at /apps/queues. A remote unauthenticated attacker reaches /apps/queues on a Chartbrew instance where Redis and BullMQ are enabled and a reverse proxy does not independently block the route. The dashboard trusted network reachability as authorization and exposed its queue-management interface directly. Redis and BullMQ must be enabled and the route must be reachable. Available actions depend on the installed Bull Board version and queue state, while confidentiality depends on job payload and log contents. An unauthenticated user can inspect exposed job payloads and logs and, when enabled by the installed version and queue state, retry or delete jobs or otherwise alter queue processing, affecting confidentiality, integrity, or availability. This issue is fixed in version 5.2.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication on an admin dashboard in Chartbrew, a data visualization tool with no identity, access, or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-65960",
+    "published": "2026-11-06 20:10:27",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Tetragon is an eBPF-based security observability and runtime enforcement project. Versions before 1.7.0 can use a Helm default that exposes the privileged Tetragon gRPC API through an unauthenticated TCP listener on localhost:54321. An attacker who can run or compromise same-node hostNetwork pods can reach the listener and invoke privileged methods without authentication. These methods can add, delete, or reconfigure tracing policies and change debug settings, potentially resulting in privilege escalation or container escape. Version 1.7.0 changes the default endpoint to a Unix-domain socket. Deployments that do not expose an unauthenticated TCP listener are not affected.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Unauthenticated access to a security observability gRPC API in Tetragon, which lacks an identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123993",
+    "published": "2026-11-06 18:52:34",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Hisense VIDAA Smart TV firmware V0000.01.00a.P0220 contains an unauthenticated access vulnerability where a QA build of the Google Cobalt browser engine exposes the WebDriver automation server on TCP port 4444 across all network interfaces without any authentication or pairing requirement. A LAN-adjacent attacker can connect to the exposed WebDriver service to execute arbitrary JavaScript, read and exfiltrate sensitive localStorage data including ACR telemetry, MAC addresses, ad-service credentials, and location data, inject persistent content onto the display, and access the window.hisense native bridge to perform filesystem read/write and system-state operations.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated WebDriver exposure in consumer Smart TV firmware, explicitly excluded as consumer IoT with no DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124027",
+    "published": "2026-11-06 19:14:44",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "ChatWiki before 2.10.0 contains a missing authentication vulnerability in the GET /manage/getLibRawFileOnePage route that allows unauthenticated attackers to read other tenants' documents. Attackers can enumerate sequential admin_user_id and file id query parameters, bypassing the ownership check, to retrieve PDF-rendered pages of any tenant's knowledge-base documents.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication and IDOR in ChatWiki knowledge-base software, which lacks an identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-89017",
+    "published": "2026-11-06 17:50:47",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Skyline DataMiner BrokerGateway contains an embedded API key vulnerability that allows unauthenticated attackers to retrieve the installation-specific BrokerGateway key even while pairing mode is disabled. Attackers can use the retrieved key to obtain the unrestricted DataMinerUser.creds NATS credential and gain trusted message-bus access via TCP port 4222 without any prior DataMiner credentials. Fixed in DataMiner 10.6.9 CU1, 10.6.0 CU7, 10.5.0 CU19, and 10.4.0 CU22.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "API key and credential exposure in Skyline DataMiner industrial monitoring software, excluded as SCADA/IIoT with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102344",
+    "published": "2026-11-06 20:39:24",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Lavish is the new editor for your HTML artifacts. Prior to 0.1.43, the lavish-axi loopback HTTP server did not authenticate requests or validate Host and Origin values on session, artifact, prompt, and polling routes. A website visited while the server is running can use DNS rebinding to send same-origin browser requests to the local service. POST /api/sessions accepts a caller-selected file path and returns its deterministic session key; GET /artifact/:key/index.html then returns the file contents, allowing disclosure of any file readable by the server process without an existing session. An attacker can also queue text through POST /api/:key/prompts for an active agent session when the artifact path is known or guessed. Visiting the attacker-controlled website is the required user interaction. This vulnerability is fixed in 0.1.43.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Local developer utility with missing authentication on loopback routes, excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123963",
+    "published": "2026-11-07 12:30:12",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security vulnerability has been detected in OpenBMB Internet of Agents up to 9d78e88e47160eb42ee1ee8538c05e1c2c47877a. The impacted element is the function register of the file im_server/app.py of the component Agent Registry. Such manipulation of the argument desc/name leads to missing authentication. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication in an AI agent registry framework, excluded as LLM/tooling software with no public-sector identity or DPI nexus.",
+      "fail_open": false
+    }
+  }
+]
