@@ -1,0 +1,2819 @@
+[
+  {
+    "id": "CVE-2026-116501",
+    "identity": {
+      "title": "CVE-2026-116501",
+      "published": "2026-11-08 17:05:18",
+      "modified": "2026-11-08 17:16:37",
+      "description": "IBM Qiskit SDK 2.4.0 through 2.6.1 could allow a local attacker to execute arbitrary code due to an out-of-bounds write caused by improper input validation when accessing a corrupted unitary matrix."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7295237"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-787",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Qiskit SDK",
+      "cpe_uris": "cpe:2.3:a:ibm:qiskit_sdk:2.4.0:*:*:*:*:*:*:*,cpe:2.3:a:ibm:qiskit_sdk:2.6.1:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "ibm:qiskit sdk",
+          "vendor": "IBM",
+          "product": "Qiskit SDK",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7295237"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116501",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116501"
+    },
+    "item_id": "CVE-2026-116501",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local-only exploit in a developer quantum computing SDK with no enterprise or DPI deployment footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116499",
+    "identity": {
+      "title": "CVE-2026-116499",
+      "published": "2026-11-08 17:03:54",
+      "modified": "2026-11-08 17:16:36",
+      "description": "IBM Qiskit SDK 1.4.2 through 2.6.2 could allow a local attacker to execute arbitrary code due to deserialization of untrusted data."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.ibm.com/support/pages/node/7295238"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data"
+      }
+    },
+    "software": {
+      "vendors": "IBM",
+      "products": "Qiskit SDK",
+      "cpe_uris": "cpe:2.3:a:ibm:qiskit_sdk:1.4.2:*:*:*:*:*:*:*,cpe:2.3:a:ibm:qiskit_sdk:2.6.2:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "ibm:qiskit sdk",
+          "vendor": "IBM",
+          "product": "Qiskit SDK",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.ibm.com/support/pages/node/7295238"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116499",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116499"
+    },
+    "item_id": "CVE-2026-116499",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local-only exploit in a developer quantum computing SDK with no enterprise or DPI deployment footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-114189",
+    "identity": {
+      "title": "CVE-2026-114189",
+      "published": "2026-11-08 16:00:13",
+      "modified": "2026-11-08 19:17:34",
+      "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in WPVibes AnyWhere Elementor anywhere-elementor allows Blind SQL Injection.This issue affects AnyWhere Elementor: from n/a through 1.3.0."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/anywhere-elementor/vulnerability/wordpress-anywhere-elementor-plugin-1-3-0-sql-injection-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "WPVibes",
+      "products": "AnyWhere Elementor",
+      "cpe_uris": "cpe:2.3:a:wpvibes:anywhere_elementor_pro:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/anywhere-elementor/vulnerability/wordpress-anywhere-elementor-plugin-1-3-0-sql-injection-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-114189",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-114189"
+    },
+    "item_id": "CVE-2026-114189",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint; falls under consumer-only drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109899",
+    "identity": {
+      "title": "CVE-2026-109899",
+      "published": "2026-11-08 16:00:12",
+      "modified": "2026-11-08 19:17:33",
+      "description": "Missing Authorization vulnerability in Melapress Melapress Role Editor melapress-role-editor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Melapress Role Editor: from n/a through 1.3.0."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/melapress-role-editor/vulnerability/wordpress-melapress-role-editor-plugin-1-3-0-broken-access-control-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "Melapress",
+      "products": "Melapress Role Editor",
+      "cpe_uris": "cpe:2.3:a:melapress:role_editor:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/melapress-role-editor/vulnerability/wordpress-melapress-role-editor-plugin-1-3-0-broken-access-control-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-109899",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-109899"
+    },
+    "item_id": "CVE-2026-109899",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint; falls under consumer-only drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109900",
+    "identity": {
+      "title": "CVE-2026-109900",
+      "published": "2026-11-08 16:00:12",
+      "modified": "2026-11-08 19:17:33",
+      "description": "Incorrect Privilege Assignment vulnerability in Melapress Melapress Role Editor melapress-role-editor allows Privilege Escalation.This issue affects Melapress Role Editor: from n/a through 1.3.0."
+    },
+    "cvss": {
+      "base_score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://patchstack.com/database/wordpress/plugin/melapress-role-editor/vulnerability/wordpress-melapress-role-editor-plugin-1-3-0-privilege-escalation-vulnerability?_s_id=cve"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-266"
+      ],
+      "cwe_primary": "CWE-266",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-266": "Incorrect Privilege Assignment"
+      }
+    },
+    "software": {
+      "vendors": "Melapress",
+      "products": "Melapress Role Editor",
+      "cpe_uris": "cpe:2.3:a:melapress:role_editor:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/melapress-role-editor/vulnerability/wordpress-melapress-role-editor-plugin-1-3-0-privilege-escalation-vulnerability?_s_id=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-109900",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-109900"
+    },
+    "item_id": "CVE-2026-109900",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint; falls under consumer-only drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124492",
+    "identity": {
+      "title": "CVE-2026-124492",
+      "published": "2026-11-08 13:16:08",
+      "modified": "2026-11-08 14:18:18",
+      "description": "SunEditor before 3.4.0 contains a stored cross-site scripting vulnerability in ModalAnchorEditor's #createBookmarkList, which inserts entity-decoded h1-h6 header textContent into the bookmark list via innerHTML without escaping. Attackers can store HTML-encoded payloads in editor headers that execute JavaScript when a victim opens the link modal and types # in the URL input."
+    },
+    "cvss": {
+      "base_score": 8.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/JiHong88/suneditor/security/advisories/GHSA-5pp5-5qrp-vq56"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: LOW, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "JiHong88",
+      "products": "suneditor",
+      "cpe_uris": "cpe:2.3:a:jihong88:suneditor:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/suneditor-before-3.4.0-stored-xss-via-link-modal-bookmark-list",
+      "https://github.com/JiHong88/suneditor/security/advisories/GHSA-5pp5-5qrp-vq56"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124492",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124492"
+    },
+    "item_id": "CVE-2026-124492",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Generic web editor library with stored XSS, no enterprise or DPI sector footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124442",
+    "identity": {
+      "title": "CVE-2026-124442",
+      "published": "2026-11-08 13:15:35",
+      "modified": "2026-11-08 14:18:11",
+      "description": "AzuraCast before 0.24.0 contains a server-side request forgery vulnerability that allows users with station WebHooks permission to bypass the UserUrlFilter SSRF guard through HTTP redirects. Attackers can configure Mastodon, Telegram, GroupMe, or RadioReg webhooks pointing to a redirecting URL, causing the Guzzle client to reach internal services and expose responses via test logs."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/AzuraCast/AzuraCast/security/advisories/GHSA-3mcm-xm6c-fj44"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cwe_primary": "CWE-918",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-918": "Server-Side Request Forgery (SSRF)"
+      }
+    },
+    "software": {
+      "vendors": "AzuraCast",
+      "products": "AzuraCast",
+      "cpe_uris": "cpe:2.3:a:azuracast:azuracast:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/AzuraCast/AzuraCast/security/advisories/GHSA-3mcm-xm6c-fj44",
+      "https://www.vulncheck.com/advisories/azuracast-before-0.24.0-ssrf-filter-bypass-via-webhook-connector-redirects"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124442",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124442"
+    },
+    "item_id": "CVE-2026-124442",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Niche internet radio broadcasting software with SSRF requiring specific webhook permissions, lacking clear enterprise or DPI sector footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124434",
+    "identity": {
+      "title": "CVE-2026-124434",
+      "published": "2026-11-08 13:15:29",
+      "modified": "2026-11-08 14:18:09",
+      "description": "Grav Lightbox Gallery plugin 1.1.0 before 1.3.2 on Grav 2.x calls any medium method named in image, thumb or thumb_options shortcode values without core's allowed media action check. A page editor can chain addMetaFile with value, toYaml or toJson to read server-readable YAML files, such as account password hashes, 2FA secrets and API keys, into a publicly viewable page."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/getgrav/grav/security/advisories/GHSA-jq4h-4q3q-hr32"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    },
+    "software": {
+      "vendors": "getgrav",
+      "products": "grav",
+      "cpe_uris": "cpe:2.3:a:getgrav:grav:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "getgrav:grav",
+          "vendor": "getgrav",
+          "product": "grav",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/grav-lightbox-gallery-1.1.0-before-1.3.2-file-read-via-shortcode-media-actions",
+      "https://github.com/getgrav/grav/security/advisories/GHSA-jq4h-4q3q-hr32"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124434",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124434"
+    },
+    "item_id": "CVE-2026-124434",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer CMS plugin (Grav Lightbox Gallery) with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-110963",
+    "identity": {
+      "title": "CVE-2026-110963",
+      "published": "2026-11-08 06:00:31",
+      "modified": "2026-11-08 19:17:33",
+      "description": "The Userplace  WordPress plugin through 1.2.0 does not perform authorization checks on an AJAX action available to unauthenticated users and publicly exposes the nonce that protects it, allowing unauthenticated attackers to create an administrator account or write arbitrary site options, leading to full site takeover."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00137,
+      "percentile": 0.03116,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/c30f71d3-2ec4-4bee-8864-f7c19cf6fcb7/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Userplace",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/c30f71d3-2ec4-4bee-8864-f7c19cf6fcb7/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-110963",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-110963"
+    },
+    "item_id": "CVE-2026-110963",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint and no active exploitation signal, falling under the consumer-only drop class.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-106015",
+    "identity": {
+      "title": "CVE-2026-106015",
+      "published": "2026-11-08 06:00:30",
+      "modified": "2026-11-08 19:17:32",
+      "description": "The Ecommerce Affiliate WordPress plugin through 1.0.0 does not restrict one-time password issuance and verification to the legitimate account owner, nor limit verification attempts, allowing unauthenticated attackers to take over any account, including administrators."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00137,
+      "percentile": 0.03116,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/7222ff86-fc0e-42e5-ac68-f9506c90fb70/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-287"
+      ],
+      "cwe_primary": "CWE-287",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-287": "Improper Authentication"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Ecommerce Affiliate",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/7222ff86-fc0e-42e5-ac68-f9506c90fb70/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-106015",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-106015"
+    },
+    "item_id": "CVE-2026-106015",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109925",
+    "identity": {
+      "title": "CVE-2026-109925",
+      "published": "2026-11-08 06:00:30",
+      "modified": "2026-11-08 19:17:33",
+      "description": "The Productive Commerce  WordPress plugin before 1.1.54 does not sanitise and escape a parameter before using it in a SQL statement, allowing unauthenticated attackers to perform SQL injection attacks."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00177,
+      "percentile": 0.07349,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/4f6cf8d4-4c76-4cfe-be5c-030fa86e6926/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Productive Commerce",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/4f6cf8d4-4c76-4cfe-be5c-030fa86e6926/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-109925",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-109925"
+    },
+    "item_id": "CVE-2026-109925",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103303",
+    "identity": {
+      "title": "CVE-2026-103303",
+      "published": "2026-11-08 06:00:29",
+      "modified": "2026-11-08 19:17:31",
+      "description": "The Turisbook Booking System WordPress plugin through 1.3.8 does not have authorisation and CSRF checks when saving its settings, and does not sanitise and escape one of them before outputting it in an admin page, allowing unauthenticated users to perform Stored Cross-Site Scripting attacks against administrators."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00156,
+      "percentile": 0.04827,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/10693b34-ab03-4c24-bd9d-5a2efbfdbeb2/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Turisbook Booking System",
+      "cpe_uris": "cpe:2.3:a:salonbookingsystem:salon_booking_system:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/10693b34-ab03-4c24-bd9d-5a2efbfdbeb2/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103303",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-103303"
+    },
+    "item_id": "CVE-2026-103303",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-114432",
+    "identity": {
+      "title": "CVE-2026-114432",
+      "published": "2026-11-08 06:00:29",
+      "modified": "2026-11-08 19:17:34",
+      "description": "The Contact Form 7 WordPress plugin before 6.2.4 does not validate the type or extension of files uploaded through a form file field, and a flaw in its temporary-file cleanup leaves the uploaded file on disk, allowing unauthenticated users to upload arbitrary files to the site. On a stock Debian or Ubuntu Apache configuration, which lists directory contents and maps .phar to the PHP handler, the stored file can be located and executed, leading to Remote Code Execution. On other configurations, including nginx and Apache with .htaccess overrides enabled, the issue is limited to an arbitrary file written into the uploads directory, which may still be served as active content such as HTML or SVG from the site's own origin."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00215,
+      "percentile": 0.12004,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": true,
+      "wild_exploited_sources": [
+        "vulncheck_kev",
+        "vulners"
+      ],
+      "wild_exploited_by_vulncheck_kev": true,
+      "vulncheck_kev_date_added": "2026-11-08",
+      "vulncheck_evidence_count": 1,
+      "vulncheck_exploit_repo_count": 0,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/6b0a5d1f-84fb-425f-8d37-ddde5703937c/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-434"
+      ],
+      "cwe_primary": "CWE-434",
+      "cwe_family": "File Upload",
+      "cwe_names": {
+        "CWE-434": "Unrestricted Upload of File with Dangerous Type"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Contact Form 7",
+      "cpe_uris": "cpe:2.3:a:rocklobster:contact_form_7:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/6b0a5d1f-84fb-425f-8d37-ddde5703937c/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-114432",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-114432"
+    },
+    "item_id": "CVE-2026-114432",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Widely used WordPress plugin but explicitly in the consumer-only drop class with no active exploitation or enterprise DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-114713",
+    "identity": {
+      "title": "CVE-2026-114713",
+      "published": "2026-11-08 02:31:48",
+      "modified": "2026-11-08 11:16:32",
+      "description": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00293,
+      "percentile": 0.21991,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.unrealircd.org/index/news"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-140"
+      ],
+      "cwe_primary": "CWE-140",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-140": "Improper Neutralization of Delimiters"
+      }
+    },
+    "software": {
+      "vendors": "UnrealIRCd",
+      "products": "UnrealIRCd",
+      "cpe_uris": "cpe:2.3:a:unrealircd:unrealircd:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.unrealircd.org/index/news",
+      "https://www.unrealircd.org/",
+      "https://forums.unrealircd.org/viewtopic.php?t=9487",
+      "http://www.openwall.com/lists/oss-security/2026/11/08/1"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-114713",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-114713"
+    },
+    "item_id": "CVE-2026-114713",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Niche IRC server software with no clear enterprise or DPI sector footprint and no active exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123560",
+    "identity": {
+      "title": "CVE-2026-123560",
+      "published": "2026-11-08 01:38:01",
+      "modified": "2026-11-08 02:16:48",
+      "description": "Zebra before 7.0.0 contains an incomplete cleanup vulnerability that allows unauthenticated peers to stall initial sync by serving a forged checkpoint block body. Attackers can supply a body with forged authorizing data near the final checkpoint, leaving rejected hashes in the sent-hash set so the node stops requesting blocks until restart."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00343,
+      "percentile": 0.28073,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-9hq5-pfgc-cx5h"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-459"
+      ],
+      "cwe_primary": "CWE-459",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-459": "Incomplete Cleanup"
+      }
+    },
+    "software": {
+      "vendors": "ZcashFoundation",
+      "products": "zebra",
+      "cpe_uris": "cpe:2.3:a:gnu:zebra:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/zebra-before-7.0.0-sync-denial-of-service-via-forged-checkpoint-block-body",
+      "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-9hq5-pfgc-cx5h"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123560",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123560"
+    },
+    "item_id": "CVE-2026-123560",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Cryptocurrency node software with sync-stalling DoS, outside core DPI finance, government, or healthcare sectors.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123559",
+    "identity": {
+      "title": "CVE-2026-123559",
+      "published": "2026-11-08 01:38:00",
+      "modified": "2026-11-08 02:16:48",
+      "description": "Zebra before 7.0.0 contains an inefficient algorithmic complexity vulnerability that allows unauthenticated peers to exhaust verification threads by submitting transactions with many transparent inputs. Attackers can relay invalid transactions with tens of thousands of inputs, forcing quadratic ZIP-244 or ZIP-243 digest recomputation that stalls Rayon-backed block verification for minutes."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00343,
+      "percentile": 0.28071,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-j4cw-58mj-7w6v"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-407"
+      ],
+      "cwe_primary": "CWE-407",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-407": "Inefficient Algorithmic Complexity"
+      }
+    },
+    "software": {
+      "vendors": "ZcashFoundation",
+      "products": "zebra",
+      "cpe_uris": "cpe:2.3:a:gnu:zebra:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-j4cw-58mj-7w6v",
+      "https://www.vulncheck.com/advisories/zebra-before-7.0.0-denial-of-service-via-quadratic-sighash-computation"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123559",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123559"
+    },
+    "item_id": "CVE-2026-123559",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Cryptocurrency node software with thread-exhaustion DoS, lacking enterprise or DPI sector footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123558",
+    "identity": {
+      "title": "CVE-2026-123558",
+      "published": "2026-11-08 01:37:59",
+      "modified": "2026-11-08 02:16:47",
+      "description": "Zebra zebrad before 7.0.0 contains a denial of service vulnerability that allows a malicious peer to stall checkpoint sync by cancelling the verifier rewind after a failed commit. Attackers can serve a forged block with altered authorizing data plus a restart-triggering block, leaving the verifier rejecting honest blocks until restart."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00343,
+      "percentile": 0.28073,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-2w9f-9wx8-f5c8"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-460"
+      ],
+      "cwe_primary": "CWE-460",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-460": "Improper Cleanup on Thrown Exception"
+      }
+    },
+    "software": {
+      "vendors": "ZcashFoundation",
+      "products": "zebra",
+      "cpe_uris": "cpe:2.3:a:gnu:zebra:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/zebra-before-7.0.0-checkpoint-sync-denial-of-service-via-cancelled-verifier-rewind",
+      "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-2w9f-9wx8-f5c8"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123558",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123558"
+    },
+    "item_id": "CVE-2026-123558",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Cryptocurrency node software (Zebra/Zcash) with no enterprise, identity, or DPI-sector footprint; remote DoS only.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123557",
+    "identity": {
+      "title": "CVE-2026-123557",
+      "published": "2026-11-08 01:37:58",
+      "modified": "2026-11-08 02:16:47",
+      "description": "ZcashFoundation Zebra zebrad before 7.0.0 contains a reachable assertion race condition that allows unauthenticated remote peers to abort the node by triggering disconnection during a blocked outbound send. Malicious peers can return empty FindBlocks or FindHeaders replies and stop reading their socket, dropping an unresolved MustUseClientResponseSender and terminating syncing nodes."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00308,
+      "percentile": 0.23793,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-6v36-c42v-v98p"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-617"
+      ],
+      "cwe_primary": "CWE-617",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-617": "Reachable Assertion"
+      }
+    },
+    "software": {
+      "vendors": "ZcashFoundation",
+      "products": "zebra",
+      "cpe_uris": "cpe:2.3:a:gnu:zebra:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/zebra-zebrad-before-7.0.0-reachable-assertion-dos-via-peer-disconnection",
+      "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-6v36-c42v-v98p"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123557",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123557"
+    },
+    "item_id": "CVE-2026-123557",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Cryptocurrency node software (Zebra/Zcash) with no enterprise, identity, or DPI-sector footprint; remote DoS only.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123555",
+    "identity": {
+      "title": "CVE-2026-123555",
+      "published": "2026-11-08 01:37:57",
+      "modified": "2026-11-08 02:16:47",
+      "description": "Zebra from 2.3.0 before 7.0.0 contains a denial of service vulnerability that allows unauthenticated peers to evade misbehavior scoring by sending transactions or blocks with invalid transparent scripts. Attackers can flood mempool with script-failing transactions or serve forged v5 block bodies with altered scriptSig bytes to exhaust CPU and repeatedly stall block sync."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00432,
+      "percentile": 0.37658,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ZcashFoundation/zebra/commit/e8db87eb69254e0d4eedd058eadd48bdfa09065a"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-755"
+      ],
+      "cwe_primary": "CWE-755",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-755": "Improper Handling of Exceptional Conditions"
+      }
+    },
+    "software": {
+      "vendors": "ZcashFoundation,ZcashFoundation",
+      "products": "zebra,zebra",
+      "cpe_uris": "cpe:2.3:a:gnu:zebra:*:*:*:*:*:*:*:*,cpe:2.3:a:gnu:zebra:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/ZcashFoundation/zebra/commit/e8db87eb69254e0d4eedd058eadd48bdfa09065a",
+      "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-jq45-ghw5-v37x",
+      "https://www.vulncheck.com/advisories/zebra-2.3.0-before-7.0.0-denial-of-service-via-unscored-script-verification-failures"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123555",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123555"
+    },
+    "item_id": "CVE-2026-123555",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Cryptocurrency node software (Zebra/Zcash) with no enterprise, identity, or DPI-sector footprint; remote DoS only.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123554",
+    "identity": {
+      "title": "CVE-2026-123554",
+      "published": "2026-11-08 01:37:56",
+      "modified": "2026-11-08 02:16:47",
+      "description": "Zebra zebrad 6.4.0 before 7.0.0 performs quadratic work in the mempool coinbase-maturity check because Transaction::coinbase_spend_restriction() rebuilds the transaction's output list once per spent outpoint. Any connected peer can repeatedly send unsigned transactions with many transparent inputs and outputs, which are rejected without a misbehavior score, to pin verification threads."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00432,
+      "percentile": 0.37658,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-7jp4-mq53-4cvq"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-407"
+      ],
+      "cwe_primary": "CWE-407",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-407": "Inefficient Algorithmic Complexity"
+      }
+    },
+    "software": {
+      "vendors": "ZcashFoundation",
+      "products": "zebra",
+      "cpe_uris": "cpe:2.3:a:gnu:zebra:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/ZcashFoundation/zebra/security/advisories/GHSA-7jp4-mq53-4cvq",
+      "https://www.vulncheck.com/advisories/zebra-zebrad-6.4.0-before-7.0.0-denial-of-service-via-mempool-coinbase-maturity-check",
+      "https://github.com/ZcashFoundation/zebra/commit/08743d669b33a19bce2a5d54001bd468c03a196e"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123554",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123554"
+    },
+    "item_id": "CVE-2026-123554",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Cryptocurrency node software (Zebra/Zcash) with no enterprise, identity, or DPI-sector footprint; remote DoS only.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123531",
+    "identity": {
+      "title": "CVE-2026-123531",
+      "published": "2026-11-08 01:37:40",
+      "modified": "2026-11-08 02:16:43",
+      "description": "Vikunja from 1.0.0 before 2.7.1 contains an uncontrolled resource consumption vulnerability that allows authenticated users to bypass service.maxitemsperpage by sending page=0 to /api/v1 list endpoints. Attackers can self-register and repeatedly request page=0 to force unbounded SQL queries, memory materialisation, and per-row query fan-out, degrading availability for other users."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00369,
+      "percentile": 0.31076,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-v579-5fwc-gr28"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "cwe_primary": "CWE-400",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-400": "Uncontrolled Resource Consumption"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/vikunja-1.0.0-before-2.7.1-pagination-limit-bypass-via-page-0-parameter",
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-v579-5fwc-gr28"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123531",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123531"
+    },
+    "item_id": "CVE-2026-123531",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Resource exhaustion in Vikunja task management app requires authentication and lacks DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123525",
+    "identity": {
+      "title": "CVE-2026-123525",
+      "published": "2026-11-08 01:37:34",
+      "modified": "2026-11-08 02:16:42",
+      "description": "Vikunja before 2.7.1 allocates memory without limits in its Trello, Todoist and Microsoft To Do migration importers, which buffer remote attachment downloads and API responses in memory without size caps. Authenticated users can start a migration that references huge attacker-served attachments or yields oversized API responses, exhausting memory and crashing the shared API process for all tenants."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00307,
+      "percentile": 0.23634,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-wqjr-22r7-5437"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "cwe_primary": "CWE-770",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-770": "Allocation of Resources Without Limits or Throttling"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-wqjr-22r7-5437",
+      "https://www.vulncheck.com/advisories/vikunja-before-2.7.1-memory-exhaustion-dos-via-trello-todoist-and-microsoft-to-do-migrations"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123525",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123525"
+    },
+    "item_id": "CVE-2026-123525",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Memory exhaustion in Vikunja migration importers requires authentication and lacks DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123523",
+    "identity": {
+      "title": "CVE-2026-123523",
+      "published": "2026-11-08 01:37:33",
+      "modified": "2026-11-08 02:16:41",
+      "description": "Vikunja before 2.7.1 contains an uncontrolled resource consumption vulnerability that allows authenticated users to exhaust server memory by requesting avatars at many distinct sizes. Attackers can upload a noisy avatar and fetch it at each size up to 1024, caching roughly a gigabyte per account without eviction and causing the API process to be OOM-killed."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00307,
+      "percentile": 0.23634,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-3x3m-2j93-w46j"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "cwe_primary": "CWE-770",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-770": "Allocation of Resources Without Limits or Throttling"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-3x3m-2j93-w46j",
+      "https://www.vulncheck.com/advisories/vikunja-before-2.7.1-memory-exhaustion-via-unbounded-avatar-size-cache"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123523",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123523"
+    },
+    "item_id": "CVE-2026-123523",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Avatar resizing DoS in Vikunja requires authentication and lacks DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123522",
+    "identity": {
+      "title": "CVE-2026-123522",
+      "published": "2026-11-08 01:37:32",
+      "modified": "2026-11-08 02:16:41",
+      "description": "Vikunja before 2.7.1 contains an authorization bypass vulnerability that allows authenticated users to read any task by injecting a crafted task object into a no-op Kanban bucket move. Attackers can set task.id to a victim task and task.project_id to their own project, routing full task contents to their webhook and forging mention notifications."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00312,
+      "percentile": 0.24323,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-5q33-h98p-rgh9"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "cwe_primary": "CWE-639",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-639": "Authorization Bypass Through User-Controlled Key"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/vikunja-before-2.7.1-task-information-disclosure-via-kanban-bucket-move-webhook",
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-5q33-h98p-rgh9"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123522",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123522"
+    },
+    "item_id": "CVE-2026-123522",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Authorization bypass in Vikunja task management requires authentication and lacks DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123520",
+    "identity": {
+      "title": "CVE-2026-123520",
+      "published": "2026-11-08 01:37:31",
+      "modified": "2026-11-08 02:16:41",
+      "description": "Vikunja from 0.18.0 before 2.7.1 contains a privilege escalation vulnerability that allows team owners to gain admin or ownership of read-only shared projects by deleting accounts. Attackers can create a bot, add it to their team, and delete it through the bots endpoint, triggering ensureProjectAdminUser to promote read-only shares and lock out the real owner."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00301,
+      "percentile": 0.23037,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-hq66-9qg8-jwqg"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-hq66-9qg8-jwqg",
+      "https://www.vulncheck.com/advisories/vikunja-0.18.0-before-2.7.1-privilege-escalation-via-account-deletion"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123520",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123520"
+    },
+    "item_id": "CVE-2026-123520",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Privilege escalation in Vikunja task management requires authentication and lacks DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123519",
+    "identity": {
+      "title": "CVE-2026-123519",
+      "published": "2026-11-08 01:37:30",
+      "modified": "2026-11-08 02:16:41",
+      "description": "Vikunja before 2.7.1 contains a denial of service vulnerability that allows authenticated users to exhaust API process memory by uploading WeKan or vikunja-file imports with no item-count cap. Attackers can submit a ~22 MB WeKan JSON with hundreds of thousands of cards or duplicate IDs to the wekan migrate endpoint, triggering OOM and crashing the instance."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00307,
+      "percentile": 0.23633,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-g2xc-jv9q-46wq"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "cwe_primary": "CWE-770",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-770": "Allocation of Resources Without Limits or Throttling"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/vikunja-before-2.7.1-memory-exhaustion-dos-via-wekan-and-vikunja-file-imports",
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-g2xc-jv9q-46wq"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123519",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123519"
+    },
+    "item_id": "CVE-2026-123519",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Import DoS in Vikunja requires authentication and lacks DPI sector nexus or exploitation signal.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123516",
+    "identity": {
+      "title": "CVE-2026-123516",
+      "published": "2026-11-08 01:37:28",
+      "modified": "2026-11-08 02:16:40",
+      "description": "Vikunja before 2.7.1 contains a resource exhaustion vulnerability in the vikunja-file ZIP importer that allows authenticated users to consume CPU and memory by uploading archives with excessive entries. Attackers can upload export ZIPs containing many empty or non-files/ entries that bypass the per-entry caps, forcing scanArchive to process every entry twice."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00297,
+      "percentile": 0.22526,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-mqq8-869v-48q8"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "cwe_primary": "CWE-770",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-770": "Allocation of Resources Without Limits or Throttling"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-mqq8-869v-48q8",
+      "https://www.vulncheck.com/advisories/vikunja-before-2.7.1-resource-exhaustion-via-vikunja-file-zip-import"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123516",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123516"
+    },
+    "item_id": "CVE-2026-123516",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche self-hosted task management software with no DPI-sector deployment or active exploitation signal; authenticated resource exhaustion flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123517",
+    "identity": {
+      "title": "CVE-2026-123517",
+      "published": "2026-11-08 01:37:28",
+      "modified": "2026-11-08 02:16:40",
+      "description": "Vikunja before 2.7.1 contains an information disclosure vulnerability that allows authenticated users to determine whether private teams exist by calling the team member self-removal endpoint. Attackers can send DELETE requests to /teams/{id}/members/{own username} for arbitrary team ids and use the distinguishable responses to learn if a team exists, is SSO-managed, or has a single member."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00223,
+      "percentile": 0.12995,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-v3r6-33v3-79c2"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-204"
+      ],
+      "cwe_primary": "CWE-204",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-204": "Observable Response Discrepancy"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/vikunja-before-2.7.1-information-disclosure-via-team-self-removal-endpoint",
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-v3r6-33v3-79c2"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123517",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123517"
+    },
+    "item_id": "CVE-2026-123517",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche productivity application lacking enterprise/DPI footprint or exploitation signal; authenticated information disclosure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123512",
+    "identity": {
+      "title": "CVE-2026-123512",
+      "published": "2026-11-08 01:37:25",
+      "modified": "2026-11-08 02:16:39",
+      "description": "Vikunja before 2.7.1 embeds live password-reset, email-confirmation and account-deletion tokens in the URL query string of emailed links, so the full request URI, including the token, is written to Vikunja's HTTP access log and any reverse-proxy logs when a user clicks the link. Attackers with read access to those logs can replay an unredeemed password-reset token to take over the account or an account-deletion token to confirm the deletion."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00266,
+      "percentile": 0.18648,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-qf5p-grf5-wcq4"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: HIGH, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-532"
+      ],
+      "cwe_primary": "CWE-532",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-532": "Insertion of Sensitive Information into Log File"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-qf5p-grf5-wcq4",
+      "https://www.vulncheck.com/advisories/vikunja-before-2.7.1-sensitive-token-exposure-via-url-query-in-access-logs"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123512",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123512"
+    },
+    "item_id": "CVE-2026-123512",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Token exposure in a self-hosted task manager rather than a core identity or DPI-sector platform; no active exploitation or enterprise deployment evidence.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123513",
+    "identity": {
+      "title": "CVE-2026-123513",
+      "published": "2026-11-08 01:37:25",
+      "modified": "2026-11-08 02:16:40",
+      "description": "Vikunja before 2.7.1 contains a credential exposure vulnerability that allows attackers to steal stored auth tokens by inducing users to switch the frontend API URL. Because checkAndSetApiUrl leaves origin-independent localStorage tokens in place, the bearer token and desktop OAuth refresh token are sent to the attacker's server, enabling account takeover."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0025,
+      "percentile": 0.16475,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-rj93-wmch-2crq"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-201"
+      ],
+      "cwe_primary": "CWE-201",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-201": "Insertion of Sensitive Information Into Sent Data"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/vikunja-before-2.7.1-auth-token-leak-via-api-url-change",
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-rj93-wmch-2crq"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123513",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123513"
+    },
+    "item_id": "CVE-2026-123513",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Credential exposure in a niche productivity application, not an IdP or DPI-sector service; lacks exploitation signal or broad enterprise footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123501",
+    "identity": {
+      "title": "CVE-2026-123501",
+      "published": "2026-11-08 01:37:17",
+      "modified": "2026-11-08 02:16:37",
+      "description": "Vikunja before 2.7.1 contains an uncontrolled resource consumption vulnerability that allows authenticated users to exhaust server memory through concurrent image decodes in avatar and background uploads. Attackers can send several parallel tiny, highly compressible PNGs decoded at up to 50 megapixels each, pushing the API process into memory pressure or an OOM kill."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00307,
+      "percentile": 0.23635,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-9hxw-pxcq-4q8q"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "cwe_primary": "CWE-400",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-400": "Uncontrolled Resource Consumption"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-9hxw-pxcq-4q8q",
+      "https://www.vulncheck.com/advisories/vikunja-before-2.7.1-memory-exhaustion-dos-via-unbounded-image-decodes"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123501",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123501"
+    },
+    "item_id": "CVE-2026-123501",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Authenticated DoS in a self-hosted task management tool with no evident DPI-sector relevance or active exploitation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123497",
+    "identity": {
+      "title": "CVE-2026-123497",
+      "published": "2026-11-08 01:37:14",
+      "modified": "2026-11-08 02:16:37",
+      "description": "Vikunja veans before 2.7.1 contains a protocol downgrade vulnerability in serverCandidates that allows on-path attackers to force plain HTTP during veans init and login. Attackers can block HTTPS ports so discovery accepts an unverified HTTP response, capturing passwords, TOTP codes or bot tokens and persisting cleartext API traffic."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00158,
+      "percentile": 0.04967,
+      "date": "2026-11-08"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-wqw2-rgwv-99qx"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-319"
+      ],
+      "cwe_primary": "CWE-319",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-319": "Cleartext Transmission of Sensitive Information"
+      }
+    },
+    "software": {
+      "vendors": "go-vikunja",
+      "products": "vikunja",
+      "cpe_uris": "cpe:2.3:a:vikunja:vikunja:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-wqw2-rgwv-99qx",
+      "https://www.vulncheck.com/advisories/vikunja-veans-before-2.7.1-https-to-http-downgrade-in-server-discovery"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123497",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-123497"
+    },
+    "item_id": "CVE-2026-123497",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Protocol downgrade in a niche client app capturing credentials, but product lacks DPI-sector deployment or active exploitation signal.",
+      "fail_open": false
+    }
+  }
+]

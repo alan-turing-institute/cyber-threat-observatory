@@ -1,0 +1,210 @@
+[
+  {
+    "id": "CVE-2026-114432",
+    "published": "2026-11-08 06:00:29",
+    "cvss": 9.8,
+    "epss": 0.00215,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Contact Form 7 WordPress plugin before 6.2.4 does not validate the type or extension of files uploaded through a form file field, and a flaw in its temporary-file cleanup leaves the uploaded file on disk, allowing unauthenticated users to upload arbitrary files to the site. On a stock Debian or Ubuntu Apache configuration, which lists directory contents and maps .phar to the PHP handler, the stored file can be located and executed, leading to Remote Code Execution. On other configurations, including nginx and Apache with .htaccess overrides enabled, the issue is limited to an arbitrary file written into the uploads directory, which may still be served as active content such as HTML or SVG from the site's own origin.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability with no identity or DPI nexus; explicitly excluded by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118066",
+    "published": "2026-11-07 11:26:26",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "The Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress plugin for WordPress is vulnerable to Authentication Bypass via Account Takeover in all versions up to, and including, 5.7.6. This is due to the `OsModel::build_conditions_query()` function in `lib/models/model.php` comparing WHERE-clause values against the literal strings `'IS NULL'` and `'IS NOT NULL'` and concatenating a match directly into SQL without binding it as a parameter, a flaw that neither `sanitize_text_field()` nor the 5.7.5 `is_scalar()` hardening guard closes, since both pass the scalar sentinel through unchanged. This makes it possible for unauthenticated attackers to send `params[password_reset_token]=IS NOT NULL` to the public `customer_cabinet__change_password` AJAX route to match every non-null `account_nonse` value, resolving to the lowest-id customer and overwriting that customer's password to an attacker-chosen value — granting full access to their bookings, orders, and PII, and, when the `wp_users_as_customers` option is enabled, takeover of the linked WordPress subscriber or customer-role account. The attacker can first identify the target customer's email by sending `params[order_intent_key]=IS NOT NULL` to the public `steps__start_from_order_intent` route, which returns the name and email from the first matching order intent, and can then self-arm the required 15-minute password-reset freshness window by triggering a reset for that customer directly.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin authentication bypass; consumer software exclusion applies despite auth CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118267",
+    "published": "2026-11-07 11:26:32",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The WP Data Access – App Builder for Tables, Forms, Dashboards, Charts & Maps plugin for WordPress is vulnerable to Incorrect Authorization leading to Privilege Escalation in all versions up to, and including, 5.5.89 This is due to the plugin's write endpoints (`wpda/app/update`, `wpda/app/delete`, `wpda/app/insert`) passing the attacker-supplied `key` and `val` parameters directly to `$wpdadb->update`, `$wpdadb->delete`, and `$wpdadb->insert` without enforcing the container's row-filter (`defaultWhere`) or per-column allow-list (`isSelected`) restrictions that are correctly applied on the read endpoints. This makes it possible for authenticated attackers, with Subscriber-level access and above, to write to arbitrary rows and columns outside the configured restrictions — including overwriting the `user_pass` field of the WordPress administrator account in `wp_users` — and subsequently authenticate as the administrator, achieving full site takeover. Exploitation requires an administrator to have published a Data App that enables write transactions (update, delete, or insert) for Subscriber-level or anonymous users, which is an explicitly advertised use-case of the plugin. Exploitation by unauthenticated attackers requires that the administrator has published a Data App whose rest_api.authorization is 'anonymous' and whose container has transactions.update (or delete/insert) enabled. On a default installation, where that is not configured, the vulnerability requires attackers with subscriber-level access and above.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin authorization flaw; consumer software exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120043",
+    "published": "2026-11-07 04:27:14",
+    "cvss": 7.5,
+    "epss": 0.00403,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Affiliate Program Suite — SliceWP Affiliates plugin for WordPress is vulnerable to generic SQL Injection via the 'email' parameter in all versions up to, and including, 1.2.14 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The injection is reachable without any account because the vulnerable code path is triggered via the user_register hook fired on every successful WooCommerce My Account registration, which requires only a guest-obtainable nonce.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin SQL injection with no identity or DPI nexus; consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104014",
+    "published": "2026-11-07 11:26:33",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Naimur Email OTP Verification for WooCommerce plugin for WordPress is vulnerable to authentication bypass in versions up to, and including, 2.1.0. This is due to the plugin's password-reset finalization endpoint (the wp_ajax_nopriv_ceovw_update_new_password action handled by CEOVW_AJAX::update_new_password()) authorizing the reset solely by the presence of a database row marking an email as 'VERIFIED', with no timestamp check, no session binding, and no per-reset token — combined with mark_otp_as_verified_for_reset() leaving the row in that state after a user enters their code (abandoning the flow leaves the row behind), and a scheduled 'ceovw_cleanup_expired_otps_event' cron that has no add_action() handler anywhere in the plugin so cleanup never runs. This makes it possible for unauthenticated attackers to take over any account whose owner previously requested and verified a password-reset code and did not immediately finish choosing a new password — the attacker needs only the victim's email address and a nonce that the plugin itself localizes publicly into the CEOVW_APP global on the WooCommerce account page for logged-out visitors, after which they call the endpoint, overwrite the victim's password, and are returned a live wordpress_logged_in_ session cookie for that user (full site takeover if the account is an administrator).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress/WooCommerce plugin authentication bypass; consumer software exclusion applies despite auth CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-117545",
+    "published": "2026-11-08 17:06:33",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM webMethods Integration Server 12.1 could allow a remote authenticated attacker to bypass security restrictions due to improper authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Improper authentication in enterprise integration server lacks a clear identity/access infrastructure nexus per overlay guidance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123543",
+    "published": "2026-11-08 01:37:49",
+    "cvss": 8.7,
+    "epss": 0.00394,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenAM before 16.1.4 contains a denial of service vulnerability that allows unauthenticated attackers to exhaust server resources by sending serialized Java data without size or structure limits. Attackers can send small crafted requests to remote SDK endpoints, classic login pages, or the administration console to block authentication, session validation and policy decisions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pure denial-of-service in OpenAM that blocks authentication flows lacks direct authentication or access-control impact per overlay hard excludes.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17324",
+    "published": "2026-11-07 04:33:16",
+    "cvss": 8.3,
+    "epss": 0.0046,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to access sensitive configuration data and perform unauthorized actions due to missing authentication for a critical function.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Missing authentication in API gateway software lacks a direct identity/access infrastructure role per overlay guidance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17358",
+    "published": "2026-11-07 04:33:45",
+    "cvss": 8.2,
+    "epss": 0.00477,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to bypass authentication across tenants due to improper authentication. Authentication checks are not sufficiently isolated between tenants, which could allow a user from one tenant to be accepted by another.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Tenant authentication bypass in API management platform lacks a core identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-17326",
+    "published": "2026-11-07 04:33:18",
+    "cvss": 8.1,
+    "epss": 0.00578,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to bypass security restrictions due to improper authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Improper authentication in API gateway software lacks a clear identity/access infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-106015",
+    "published": "2026-11-08 06:00:30",
+    "cvss": 8.1,
+    "epss": 0.00137,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Ecommerce Affiliate WordPress plugin through 1.0.0 does not restrict one-time password issuance and verification to the legitimate account owner, nor limit verification attempts, allowing unauthenticated attackers to take over any account, including administrators.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability explicitly excluded by overlay consumer/hobbyist software rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118904",
+    "published": "2026-11-08 19:48:22",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM webMethods Integration Server 12.1 could allow a remote authenticated attacker to bypass security restrictions due to improper authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Improper authentication in enterprise integration server lacks a clear identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123963",
+    "published": "2026-11-07 12:30:12",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security vulnerability has been detected in OpenBMB Internet of Agents up to 9d78e88e47160eb42ee1ee8538c05e1c2c47877a. The impacted element is the function register of the file im_server/app.py of the component Agent Registry. Such manipulation of the argument desc/name leads to missing authentication. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in an AI agent registry framework (LLM tooling), which hits the base Digital Identity exclusion and lacks a DPI-relevant identity/access role.",
+      "fail_open": false
+    }
+  }
+]
