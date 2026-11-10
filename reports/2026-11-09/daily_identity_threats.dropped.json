@@ -1,0 +1,178 @@
+[
+  {
+    "id": "CVE-2026-114432",
+    "published": "2026-11-08 06:00:29",
+    "cvss": 9.8,
+    "epss": 0.00215,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Contact Form 7 WordPress plugin before 6.2.4 does not validate the type or extension of files uploaded through a form file field, and a flaw in its temporary-file cleanup leaves the uploaded file on disk, allowing unauthenticated users to upload arbitrary files to the site. On a stock Debian or Ubuntu Apache configuration, which lists directory contents and maps .phar to the PHP handler, the stored file can be located and executed, leading to Remote Code Execution. On other configurations, including nginx and Apache with .htaccess overrides enabled, the issue is limited to an arbitrary file written into the uploads directory, which may still be served as active content such as HTML or SVG from the site's own origin.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin explicitly excluded from DPI scope despite high CVSS and wild exploitation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123751",
+    "published": "2026-11-09 06:00:29",
+    "cvss": 0.0,
+    "epss": 0.00277,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The WP Duplicate  WordPress plugin through 1.1.11 does not properly verify a request authentication value and does not validate the path or type of uploaded files, making it possible for unauthenticated attackers to write arbitrary files to the server and achieve remote code execution. This vulnerability is being actively exploited in the wild.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin explicitly excluded from DPI scope despite active exploitation.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124577",
+    "published": "2026-11-09 07:15:16",
+    "cvss": 9.8,
+    "epss": 0.02067,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in Intelbras SG 2404 PoE L2+ 1.00.70/1.00.72. The affected element is an unknown function of the file /EXCU_SHELL of the component Web Management Interface. Executing a manipulation can lead to improper authentication. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 1.00.74 is sufficient to fix this issue. Upgrading the affected component is advised.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Network switch web interface authentication bypass, non-identity infrastructure with no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-117545",
+    "published": "2026-11-08 17:06:33",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM webMethods Integration Server 12.1 could allow a remote authenticated attacker to bypass security restrictions due to improper authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Enterprise integration middleware with improper authentication, lacks core identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123543",
+    "published": "2026-11-08 01:37:49",
+    "cvss": 8.7,
+    "epss": 0.00394,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenAM before 16.1.4 contains a denial of service vulnerability that allows unauthenticated attackers to exhaust server resources by sending serialized Java data without size or structure limits. Attackers can send small crafted requests to remote SDK endpoints, classic login pages, or the administration console to block authentication, session validation and policy decisions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pure denial-of-service/resource exhaustion in OpenAM, explicitly excluded as lacking direct authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-106015",
+    "published": "2026-11-08 06:00:30",
+    "cvss": 8.1,
+    "epss": 0.00137,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Ecommerce Affiliate WordPress plugin through 1.0.0 does not restrict one-time password issuance and verification to the legitimate account owner, nor limit verification attempts, allowing unauthenticated attackers to take over any account, including administrators.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin explicitly excluded from DPI scope despite account takeover impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118904",
+    "published": "2026-11-08 19:48:22",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM webMethods Integration Server 12.1 could allow a remote authenticated attacker to bypass security restrictions due to improper authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Enterprise integration middleware lacks a clear identity/access infrastructure nexus per overlay hard excludes.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124573",
+    "published": "2026-11-09 06:15:15",
+    "cvss": 7.3,
+    "epss": 0.00405,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was found in logseq 2.0.1/2.0.2. This affects the function validate-auth-token of the file src/electron/electron/server.cljs of the component Local HTTP API. The manipulation results in missing authentication. The attack may be performed from remote. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal knowledge management desktop app (Logseq) falls under consumer/hobbyist software hard exclude.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120113",
+    "published": "2026-11-08 17:12:01",
+    "cvss": 6.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Aspera Connect 1.6.1 through 4.2.19 could allow a remote attacker to obtain sensitive information and modify host trust configuration due to missing authentication and overly permissive cross-origin access controls in the local HTTP service. By persuading a victim to visit a malicious web page, an attacker could perform unauthorized cross-origin requests to read and modify configuration.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "File transfer client (Aspera Connect) lacks identity/access infrastructure nexus per overlay hard excludes.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123530",
+    "published": "2026-11-08 01:37:38",
+    "cvss": 6.0,
+    "epss": 0.00262,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vikunja before 2.7.1 contains a missing authentication vulnerability that allows attackers holding a stolen session to enroll and enable TOTP without the account password. Attackers can call the TOTP enroll and enable endpoints with their own secret to lock the owner out, persisting even after password reset.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "MFA enrollment flaw in Vikunja task manager lacks DPI-relevant identity infrastructure role; niche productivity software excluded.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124578",
+    "published": "2026-11-09 07:30:16",
+    "cvss": 5.3,
+    "epss": 0.00397,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A security vulnerability has been detected in Pantum BP5100DW 3.A.4.7. The impacted element is an unknown function of the file /shtml/omDB.shtml of the component Web Interface. The manipulation leads to missing authentication. The attack may be initiated remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in Pantum printer web interface explicitly excluded as consumer IoT/printer hardware.",
+      "fail_open": false
+    }
+  }
+]
