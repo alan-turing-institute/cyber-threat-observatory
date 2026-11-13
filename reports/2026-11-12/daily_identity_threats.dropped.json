@@ -1,0 +1,258 @@
+[
+  {
+    "id": "CVE-2026-126537",
+    "published": "2026-11-11 12:34:45",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Ninja Forms - File Uploads add-on for WordPress is vulnerable to Arbitrary File Deletion (and arbitrary file read via S3/Dropbox/Google Drive exfiltration) in versions up to, and including, 3.3.36. The flaw spans NF_FU_Fields_Upload::process() in includes/fields/upload.php — which returns early (leaving the client-supplied files[] intact) whenever a public submission carries a nonempty extra.saveProgress — and NF_FU_External_Abstracts_Service::process_upload() in includes/external/abstracts/service.php, whose authoritative-path reload only fires when the client sends upload_id. By omitting upload_id, an attacker's data[file_path] survives into the Background Upload queue and is used by both upload_file_to_s3() (as SourceFile) and the maybe_delete_server_file() unlink() call in includes/external/abstracts/backgroundupload.php, with no canonicalization or upload-directory containment check (the plugin's own is_path_within_upload_dir() helper is only applied on admin paths). This makes it possible for unauthenticated attackers to delete arbitrary files on the affected site's server which may make remote code execution possible — specifically, deleting wp-config.php forces WordPress into its setup screen, enabling full site takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability, explicitly excluded as consumer/hobbyist software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123039",
+    "published": "2026-11-12 14:02:13",
+    "cvss": 7.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in firewall OS daemon, lacks identity/access infrastructure nexus required by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123478",
+    "published": "2026-11-11 11:00:21",
+    "cvss": 7.1,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Meow Apps AI Engine ai-engine allows Stored XSS.This issue affects AI Engine: from n/a through 3.9.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Stored XSS in a generic AI application, no authentication or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119529",
+    "published": "2026-11-11 06:00:10",
+    "cvss": 0.0,
+    "epss": 0.00254,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Gravity Forms WordPress plugin before 3.2.2 does not properly restrict the file types that unauthenticated users can upload through its chunked file upload feature, allowing them to read server environment variables and the contents of files within the web root on servers configured to parse Server-Side Include documents, such as Apache with SSI enabled.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin vulnerability, explicitly excluded as consumer/hobbyist software with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-127275",
+    "published": "2026-11-12 23:45:21",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in Linksys EA8100 1.0.3.216940. This issue affects the function SetRemoteSetting/SetUnsecuredWiFiWarning of the file ui_server.lua of the component JNAP API. This manipulation of the argument isEnabled/enabled causes missing authentication. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer router vulnerability, explicitly excluded by base and overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-126768",
+    "published": "2026-11-11 18:11:15",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpsTree REMS through 1.0.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain valid JWTs by setting the client-controlled is_local_auth field. Attackers can send a POST /api/v1/user/login/ request for the admin account with an invalid password and is_local_auth true to gain SuperUser administrative access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Authentication bypass and JWT manipulation in niche remote management software, lacks clear DPI identity/access role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-67449",
+    "published": "2026-11-11 21:51:23",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Portabase is a database backup and restore tool for PostgreSQL, MySQL, MsSQL, MariaDB, Firebird SQL, SQLite, MongoDB, Redis, Files and Docker Volume. Prior to version 1.21.2, a path traversal in the TUS upload webhook handler (app/api/tus/hooks/route.ts) allowed an unauthenticated attacker to overwrite arbitrary files under the private data directory, including /data/private/keys/master_key.bin (the AES-256-GCM master key). This issue has been patched in version 1.21.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Path traversal in database backup tool compromising encryption keys, lacks authentication or identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124002",
+    "published": "2026-11-12 19:34:26",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "XWEB EVO versions 5.2.3 through before 5.7.0 contains a pre-authentication OS command injection vulnerability that allows unauthenticated remote attackers to execute arbitrary OS commands by injecting shell metacharacters into the username field of login.lua, cleanout.lua, or api.lua before the password check occurs. Attackers can exploit this flaw combined with the setuid-root wlua interpreter to execute commands with root privileges, achieving full system compromise. This product line reached it's end of service date in March 2026.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Pre-authentication RCE in web server software, lacks identity/access infrastructure nexus required by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-126254",
+    "published": "2026-11-11 21:31:50",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A numeric truncation error vulnerability in Fortinet FortiOS 8.0.0 through 8.0.1, FortiOS 7.6.0 through 7.6.7, FortiOS 7.4.0 through 7.4.12, FortiOS 7.2.0 through 7.2.13 may allow a configured ibgp neighbor to send malicious/malformed attributes to all connected routers via a specially crafted request",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "BGP routing attribute manipulation in FortiOS, lacks authentication or identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120868",
+    "published": "2026-11-12 23:39:03",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in Packet Processing can lead to unpredictable or erroneous behavior or Denial of Service in NetScaler ADC and NetScaler Gateway.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Pure denial-of-service memory overflow in NetScaler with no authentication or access-control impact, excluded by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-127046",
+    "published": "2026-11-12 12:05:04",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The MISP Modules website component contains an information disclosure vulnerability in the external tools management interface. The /external_tools/list endpoint returned stored API keys (the api_key field) in its JSON response via the ExternalTools model serializer. Additionally, the browser-based edit form pre-populated the API key input field with the stored credential value, exposing it in the DOM.\n\nThe /external_tools/list endpoint is accessible without authentication (the regression tests verify the response for both authenticated and unauthenticated clients), meaning any network-reachable client could retrieve the API keys for all configured external tools. These keys are used by the server to authenticate submissions to external analysis or enrichment services, so their disclosure allows an attacker to impersonate the MISP instance or directly access those external services.\n\nThe vulnerability also affected the edit workflow: the change_config endpoint previously required the API key to be present and non-empty on every save, forcing the key to round-trip through the client. The browser JavaScript stored the key in a reactive state object and updated the in-memory tool list with the credential value, further increasing the window of exposure in client-side memory and network traffic.\n\nAffected component: the website sub-application of MISP Modules, specifically the external_tools module (serializer in models.py, list endpoint, and the external_tools_index.html template). The impact is limited to confidentiality of the stored API keys; no integrity or availability impact on the MISP Modules website itself is indicated by the patch.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Information disclosure of API keys in MISP threat intelligence platform lacks direct identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19422",
+    "published": "2026-11-12 12:16:50",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Zohocorp ManageEngine DDI Central versions below 6301 is affected by an authentication bypass vulnerability in Windows DNS and DHCP agent synchronization APIs, allowing unauthenticated user to impersonate onboarded Windows servers and perform unauthorized DNS and DHCP modifications.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in DNS/DHCP management software lacks direct identity/access infrastructure nexus per overlay criteria.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-85632",
+    "published": "2026-11-11 14:24:31",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function and Improper validation of integrity check value vulnerability in Sipay Electronic Money and Payment Services Inc. WooCommerce Virtual POS Module allows Authentication Bypass and Application API Message Manipulation via Man-in-the-Middle.\n\nThis issue affects WooCommerce Virtual POS Module: from 26.8.3 before 26.9.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WooCommerce plugin vulnerability explicitly excluded as consumer/hobbyist software per overlay hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124014",
+    "published": "2026-11-12 20:05:59",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "XWEB EVO 4.3.0 through 5.8.8 contains an unauthenticated arbitrary file write vulnerability that allows remote attackers to modify the system configuration file /etc/xwebconfig.json by sending a crafted POST request to config.lua with action=set, which performs no session validation and writes the raw, unvalidated request body. Attackers can tamper with configuration values such as model and plugin fields or trigger a SYSTEM_NOT_CONFIGURED state via the unauthenticated action=get and action=set operations, resulting in configuration tampering and denial of service. This product line reached it's end of service date in March 2026.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Generic web server configuration tampering with no identity, access, or DPI-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-75869",
+    "published": "2026-11-12 12:40:30",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Zohocorp ManageEngine DDI Central versions below 6301 is affected by an authorization bypass and PowerShell command injection vulnerability that allowed authenticated non-administrative users to target unauthorized Windows DHCP subnets and potentially execute arbitrary commands on managed Windows DHCP servers through crafted DNS suffix values.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Authorization bypass in enterprise network management software (DDI Central) with no core identity/access or DPI-sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103883",
+    "published": "2026-11-11 11:31:07",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The 6Storage Rentals plugin for WordPress is vulnerable to Authentication Bypass leading to Administrator Account Takeover in all versions up to, and including, 2.31.0. The vulnerability exists because the `six_storage_portal_registration()` AJAX handler — registered on `wp_ajax_six_storage_portal_plugin_registration` — performs no capability check and no nonce verification before writing the caller-supplied `six_storage_online_api_url` POST parameter to the site-wide option of the same name; the unauthenticated `six_storage_create_wp_user()` handler then redeems a transient seeded from that attacker-controlled URL's response and unconditionally calls `wp_set_current_user()` and `wp_set_auth_cookie()` with no ownership or credential verification. This makes it possible for authenticated attackers, with Subscriber-level access and above, to authenticate as any existing WordPress user — including any administrator whose email address is known or guessable — resulting in full site compromise. This issue represents an incomplete fix for a prior vulnerability: the 2.29.0 remediation moved the target email out of POST data into a server-side transient, but because any Subscriber can still overwrite the outbound API URL that populates that transient, the full authentication bypass chain remains exploitable in three AJAX requests.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin authentication bypass explicitly excluded as consumer/hobbyist software with no DPI-sector nexus.",
+      "fail_open": false
+    }
+  }
+]
