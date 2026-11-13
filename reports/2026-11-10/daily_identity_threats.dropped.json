@@ -1,0 +1,306 @@
+[
+  {
+    "id": "CVE-2026-89324",
+    "published": "2026-11-10 21:28:25",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "The Basel Post Types plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.18. The vulnerability exists because a missing-quotes coding error in the defined() call for SECURE_AUTH_SALT inside BASEL_Auth::get_config() causes PHP to evaluate the constant's value rather than its name, making the check always fail and permanently falling back to the static hardcoded salt 2NlBUibcszrVtNmDnxqDbwCOpLWq91eatIz6O1O that is publicly visible in the theme source code; because this salt is static and known, an attacker can compute a valid Opauth signature entirely offline and submit a forged ?opauth callback to the unauthenticated init hook endpoint processed by register_or_login. This makes it possible for unauthenticated attackers to authenticate as any existing WordPress user, including administrators, by forging a callback tied to a known target account email address — bypassing all password verification, multi-factor authentication, and ownership checks, and receiving a fully authenticated session cookie via wc_set_customer_auth_cookie(). Exploitation requires WooCommerce to be active and at least one Basel social-login provider (Facebook, Google, or VKontakte) to be configured with a valid app_id and app_secret in the theme settings.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by overlay hard rules despite authentication bypass mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109467",
+    "published": "2026-11-10 18:15:11",
+    "cvss": 9.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper authentication in Azure DevOps allows an authorized attacker to execute code over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "CI/CD platform with vague improper authentication lacks direct identity/access infrastructure nexus per overlay criteria.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119990",
+    "published": "2026-11-10 18:21:39",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function in Azure OpenAI allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI/LLM service context explicitly excluded from identity sector relevance despite missing authentication flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-125883",
+    "published": "2026-11-10 21:19:11",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper restriction of XML external entity reference vulnerability in N-able N-central allows XML Schema Poisoning.\n\nThis issue affects N-central: before 26.4.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "XXE vulnerability lacks authentication or access-control impact, falling outside identity/access overlay scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-125881",
+    "published": "2026-11-10 21:24:33",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Server-Side request forgery (SSRF) vulnerability in N-able N-central allows Server Side Request Forgery.\n\nThis issue affects N-central: before 26.4.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "SSRF vulnerability lacks authentication or access-control impact, falling outside identity/access overlay scope.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-8372",
+    "published": "2026-11-10 05:36:58",
+    "cvss": 8.8,
+    "epss": 0.00216,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability that could allow an attacker to gain unauthorized access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate description with no product, mechanism, or identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123180",
+    "published": "2026-11-10 16:03:43",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A missing authentication vulnerability in the listed NETGEAR RAX models allows an network adjacent attacker who has authenticated to wifi network to obtain sensitive information and tamper with device configuration, including administrator credentials, without authenticating to the device. This affects the confidentiality, integrity and availability of the router.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router (NETGEAR RAX) explicitly excluded despite missing authentication vulnerability.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-12573",
+    "published": "2026-11-10 11:22:34",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Zoho Corporation ManageEngine DDI Central versions 6200 and below are vulnerable to Cisco IOS command injection via DHCP pool name leading to arbitrary commands on managed Cisco routers.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Network management software (ManageEngine DDI) with command injection lacks an identity or access-control nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-119824",
+    "published": "2026-11-10 18:22:41",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication for critical function in Remote Desktop Client allows an unauthorized attacker to perform tampering over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Remote desktop client missing authentication lacks the gateway or directory service role required for identity infrastructure relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118207",
+    "published": "2026-11-10 18:21:49",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper input validation in Microsoft Exchange Server allows an authorized attacker to execute code over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Microsoft Exchange Server RCE via input validation lacks a direct identity or access-control mechanism nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118150",
+    "published": "2026-11-10 18:21:46",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Authorization bypass through user-controlled key in Microsoft Exchange Server allows an authorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Authorization bypass in Microsoft Exchange Server lacks a core identity or access-management role per overlay precision rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118154",
+    "published": "2026-11-10 18:21:48",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Reliance on untrusted inputs in a security decision in Microsoft Exchange Server allows an authorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Security decision bypass in Exchange Server touches access control but lacks a dedicated identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-118149",
+    "published": "2026-11-10 18:21:45",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper control of generation of code ('code injection') in Microsoft Exchange Server allows an authorized attacker to execute code over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Code injection RCE in Exchange Server lacks a direct identity or authentication nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-125878",
+    "published": "2026-11-10 21:22:40",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in N-able N-central allows Resource Injection.\n\nThis issue affects N-central: before 26.4.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Cross-site scripting in IT management software (N-able N-central) lacks an identity or access-control nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-92684",
+    "published": "2026-11-10 16:46:02",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing Authentication for Critical Function in aggregation queries in Neo4j @neo4j/graphql 5.0.0 before 5.12.17 and 7.0.0 before 7.6.8 allows remote attackers to read protected data via GraphQL aggregation queries. Field-level @authentication is not enforced on string aggregates, which can return stored values verbatim, and connection-root aggregates bypass an entity's AGGREGATE authentication requirement, allowing unauthenticated callers to obtain aggregate results.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "GraphQL library missing authentication on aggregation queries lacks a DPI-relevant identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-125879",
+    "published": "2026-11-10 21:23:18",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Incorrect privilege assignment vulnerability in N-able N-central allows Privilege Escalation.\n\nThis issue affects N-central: before 26.4.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "IT management software privilege escalation lacks a clear DPI identity/access infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-112185",
+    "published": "2026-11-10 16:58:30",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Eclipse Kura versions 5.1.0 through 5.6.2, the Configuration REST API v2 (org.eclipse.kura.rest.configuration.provider) does not restrict access to the configuration of the UserAdmin persistence component to identities holding the kura.admin permission. An authenticated identity holding only the rest.configuration permission can read the password hashes of all identities, including administrators, which are stored as unsalted SHA-256 digests. The same identity can also modify identities and permission assignments, and restore previous configuration snapshots, which allows escalation to full administrative privileges. The issue is fixed in Eclipse Kura 5.6.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "IoT gateway framework falls under the explicit IoT/IIoT exclusion despite identity and credential handling details.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-125882",
+    "published": "2026-11-10 21:25:23",
+    "cvss": 8.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Relative path traversal vulnerability in N-able N-central allows Path Traversal.\n\nThis issue affects N-central: before 26.4.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.05,
+      "primary_pir": "none",
+      "reason": "Path traversal in IT management software has no authentication or identity/access nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-125329",
+    "published": "2026-11-10 18:28:44",
+    "cvss": 8.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Kaneo is a project management application with boards, Gantt charts, and GitHub integration that can be self-hosted or used as a cloud service. Prior to 2.13.0, GET /api/external-link/task/:taskId returns integration.config to any workspace member, including the viewer role, when a task has a linked Gitea issue or pull request. The plaintext integration.config contains the Gitea accessToken and webhookSecret, allowing the token's granted Gitea actions and forged webhook deliveries that pass HMAC verification. GitHub integrations and installations without a configured Gitea integration are not affected. This issue is fixed in version 2.13.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Project management application credential exposure lacks a DPI-relevant identity/access infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  }
+]
