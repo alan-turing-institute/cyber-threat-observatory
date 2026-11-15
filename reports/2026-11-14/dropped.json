@@ -1,0 +1,1578 @@
+[
+  {
+    "id": "CVE-2026-129353",
+    "identity": {
+      "title": "CVE-2026-129353",
+      "published": "2026-11-14 23:15:19",
+      "modified": "2026-11-15 00:16:51",
+      "description": "A vulnerability was detected in D-Link DIR-600L 2.17/2.17b02. Affected by this vulnerability is the function authenticationcgi_main of the file authentication.cgi. Performing a manipulation of the argument id/password results in stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit is now public and may be used."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ruanyi101/router-firmware-security-advisories/blob/main/router-firmware-GitHub-advisories/advisories/D-Link-DIR-600L-authentication-cgi.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "D-Link",
+      "products": "DIR-600L",
+      "cpe_uris": "cpe:2.3:h:dlink:dir-600l:2.17:*:*:*:*:*:*:*,cpe:2.3:h:dlink:dir-600l:2.17b02:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "d-link:dir-600l",
+          "vendor": "D-Link",
+          "product": "DIR-600L",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/vuln/437416/cti",
+      "https://vuldb.com/submit/1043523",
+      "https://github.com/ruanyi101/router-firmware-security-advisories/blob/main/router-firmware-GitHub-advisories/advisories/D-Link-DIR-600L-authentication-cgi.md",
+      "https://vuldb.com/cve/CVE-2026-129353",
+      "https://www.dlink.com/",
+      "https://vuldb.com/vuln/437416"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129353",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129353"
+    },
+    "item_id": "CVE-2026-129353",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router with no enterprise or DPI footprint; high CVSS and public exploit do not override the consumer software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129352",
+    "identity": {
+      "title": "CVE-2026-129352",
+      "published": "2026-11-14 23:00:27",
+      "modified": "2026-11-14 23:16:48",
+      "description": "A vulnerability was detected in TRENDnet TEW-657BRM 1.00.1. This issue affects some unknown processing of the file /usr/sbin/upgrade_flash.cgi. Performing a manipulation of the argument boundary results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor explains: \"\"I am not able to confirm if such vulnerability exists as the product has been EOL for more than 15 years. We will send out an announcement letting customers know.\""
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ruanyi101/router-firmware-security-advisories/blob/main/router-firmware-GitHub-advisories/advisories/TRENDnet-TEW-657BRM-upgrade_flash.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-121"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-121": "Stack-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "TRENDnet",
+      "products": "TEW-657BRM",
+      "cpe_uris": "cpe:2.3:h:trendnet:tew-657brm:1.00.1:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "trendnet:tew-657brm",
+          "vendor": "trendnet",
+          "product": "tew-657brm",
+          "source": "cpe",
+          "sample_cpe": "cpe:2.3:h:trendnet:tew-657brm:-:*:*:*:*:*:*:*",
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://vuldb.com/vuln/437398",
+      "https://github.com/ruanyi101/router-firmware-security-advisories/blob/main/router-firmware-GitHub-advisories/advisories/TRENDnet-TEW-657BRM-upgrade_flash.md",
+      "https://vuldb.com/submit/1043522",
+      "https://vuldb.com/cve/CVE-2026-129352",
+      "https://vuldb.com/vuln/437398/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129352",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129352"
+    },
+    "item_id": "CVE-2026-129352",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router with no enterprise or DPI footprint; EOL status and consumer context exclude it despite high CVSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129351",
+    "identity": {
+      "title": "CVE-2026-129351",
+      "published": "2026-11-14 22:30:23",
+      "modified": "2026-11-14 23:16:47",
+      "description": "A security vulnerability has been detected in TRENDnet TEW-657BRM 1.00.1. This vulnerability affects the function sprintf of the file /setup.cgi of the component mini_httpd. Such manipulation leads to out-of-bounds write. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor explains: \"\"I am not able to confirm if such vulnerability exists as the product has been EOL for more than 15 years. We will send out an announcement letting customers know.\" This vulnerability only affects products that are no longer supported by the maintainer."
+    },
+    "cvss": {
+      "base_score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ruanyi101/router-firmware-security-advisories/blob/main/router-firmware-GitHub-advisories/advisories/TRENDnet-TEW-657BRM-mini_httpd.md"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "TRENDnet",
+      "products": "TEW-657BRM",
+      "cpe_uris": "cpe:2.3:h:trendnet:tew-657brm:1.00.1:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "trendnet:tew-657brm",
+          "vendor": "trendnet",
+          "product": "tew-657brm",
+          "source": "cpe",
+          "sample_cpe": "cpe:2.3:h:trendnet:tew-657brm:-:*:*:*:*:*:*:*",
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/ruanyi101/router-firmware-security-advisories/blob/main/router-firmware-GitHub-advisories/advisories/TRENDnet-TEW-657BRM-mini_httpd.md",
+      "https://vuldb.com/vuln/437397/cti",
+      "https://vuldb.com/submit/1043518",
+      "https://vuldb.com/vuln/437397",
+      "https://vuldb.com/cve/CVE-2026-129351"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129351",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129351"
+    },
+    "item_id": "CVE-2026-129351",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router with no enterprise or DPI footprint; EOL status and consumer context exclude it despite high CVSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129261",
+    "identity": {
+      "title": "CVE-2026-129261",
+      "published": "2026-11-14 16:00:15",
+      "modified": "2026-11-14 16:17:04",
+      "description": "A vulnerability was found in Kingston FURY CTRL RGB Control Software up to 2.0.66.0. The impacted element is an unknown function in the library NTIOLib_X64.sys of the component IOCTL Handler. Performing a manipulation results in exposed ioctl with insufficient access control. The attack is only possible with local access."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://vuldb.com/vuln/437302"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-782"
+      ],
+      "cwe_primary": "CWE-782",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-782": "Exposed IOCTL with Insufficient Access Control"
+      }
+    },
+    "software": {
+      "vendors": "Kingston",
+      "products": "FURY CTRL RGB Control Software",
+      "cpe_uris": "cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.0:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.1:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.2:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.3:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.4:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.5:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.6:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.7:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.8:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.9:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.10:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.11:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.12:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.13:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.14:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.15:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.16:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.17:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.18:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.19:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.20:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.21:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.22:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.23:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.24:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.25:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.26:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.27:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.28:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.29:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.30:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.31:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.32:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.33:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.34:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.35:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.36:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.37:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.38:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.39:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.40:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.41:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.42:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.43:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.44:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.45:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.46:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.47:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.48:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.49:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.50:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.51:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.52:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.53:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.54:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.55:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.56:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.57:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.58:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.59:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.60:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.61:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.62:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.63:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.64:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.65:*:*:*:*:*:*:*,cpe:2.3:a:kingston:fury_ctrl_rgb_control_software:2.0.66.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/437302",
+      "https://vuldb.com/cve/CVE-2026-129261",
+      "https://vuldb.com/vuln/437302/cti",
+      "https://vuldb.com/submit/1043190"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129261",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129261"
+    },
+    "item_id": "CVE-2026-129261",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116753",
+    "identity": {
+      "title": "CVE-2026-116753",
+      "published": "2026-11-14 15:32:27",
+      "modified": "2026-11-14 16:17:03",
+      "description": "The Multi Step for Contact Form 7 plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'multipart field name (array key)' parameter in all versions up to, and including, 2.9.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires the target CF7 form to have the 'Save every step' option enabled and the Database for Contact Form 7 companion plugin to be active with its 'Expandable' table option enabled, both of which are disabled by default."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/cf7-multi-step/tags/2.9.1/inc/frontend/validation.php#L330"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "ninjateam",
+      "products": "Multi Step for Contact Form 7",
+      "cpe_uris": "cpe:2.3:a:ninjateam:multi_step_for_contact_form_7:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/cf7-multi-step/tags/2.9.1/inc/frontend/validation.php#L330",
+      "https://wordpress.org/plugins/cf7-multi-step/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/b9700627-97f2-4da1-a984-934062bd5014?source=cve",
+      "https://plugins.trac.wordpress.org/browser/cf7-multi-step/tags/2.9.1/inc/frontend/validation.php#L291",
+      "https://plugins.trac.wordpress.org/browser/cf7-multi-step/tags/2.9.1/inc/frontend/validation.php#L20",
+      "https://plugins.trac.wordpress.org/browser/cf7-multi-step/tags/2.9.2/inc/frontend/validation.php"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116753",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-116753"
+    },
+    "item_id": "CVE-2026-116753",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint; consumer CMS add-on exclusion applies despite stored XSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120687",
+    "identity": {
+      "title": "CVE-2026-120687",
+      "published": "2026-11-14 15:32:26",
+      "modified": "2026-11-14 16:17:04",
+      "description": "The Lightbox & Modal Popup WordPress Plugin – FooBox plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'img alt attribute inside .wp-caption container' parameter in all versions up to, and including, 2.8.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is exploitable by Subscriber-level users when bbPress is installed, as its bbp_filter_kses filter chain permits img and pre tags while preserving numeric character references inside attribute values, allowing encoded payloads to bypass save-time sanitization and reach the vulnerable sink fully intact. Exploitation by attackers with subscriber-level access and above requires that bbPress 2.6.20 is installed, a public forum exists, and either the first topic has already been approved or subsequent topics clear moderation. On a default installation, where that is not configured, the vulnerability requires attackers with contributor-level access and above."
+    },
+    "cvss": {
+      "base_score": 7.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/foobox-image-lightbox/tags/2.8.7/free/includes/class-script-generator.php#L175"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "fooplugins",
+      "products": "Lightbox & Modal Popup WordPress Plugin – FooBox",
+      "cpe_uris": "cpe:2.3:a:fooplugins:foobox:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/foobox-image-lightbox/tags/2.8.7/free/includes/class-script-generator.php#L175",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&new=3789888%40foobox-image-lightbox%2Ftags%2F2.8.8&old=3741260%40foobox-image-lightbox%2Ftags%2F2.8.7",
+      "https://plugins.trac.wordpress.org/browser/foobox-image-lightbox/tags/2.8.7/free/js/foobox.free.min.js",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/66b5a5a2-8f70-4a85-ad03-8bd159cafdf5?source=cve",
+      "https://plugins.trac.wordpress.org/changeset/3789888/foobox-image-lightbox"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-120687",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-120687"
+    },
+    "item_id": "CVE-2026-120687",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint; consumer CMS add-on exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129258",
+    "identity": {
+      "title": "CVE-2026-129258",
+      "published": "2026-11-14 14:30:22",
+      "modified": "2026-11-14 15:16:58",
+      "description": "A vulnerability was identified in Tenda AC18 15.03.05.05_multi/15.03.05.19 Build 6318. Affected by this vulnerability is an unknown functionality of the file /cgi-bin/upgrade of the component Firmware Upgrade Handler. Such manipulation of the argument upgradeFile leads to insufficient verification of data authenticity. The attack may be launched remotely. The exploit is publicly available and might be used."
+    },
+    "cvss": {
+      "base_score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/longqx223/Tenda-ac-18-V15.03.05.05-/blob/main/2026-10-19-Tenda-AC18-unsigned-firmware-update-advisory-EN.pdf"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-345"
+      ],
+      "cwe_primary": "CWE-345",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-345": "Insufficient Verification of Data Authenticity"
+      }
+    },
+    "software": {
+      "vendors": "Tenda",
+      "products": "AC18",
+      "cpe_uris": "cpe:2.3:h:tenda:ac18_multi:15.03.05.05_multi:*:*:*:*:*:*:*,cpe:2.3:h:tenda:ac18:15.03.05.19_build_6318:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "tenda:ac18",
+          "vendor": "Tenda",
+          "product": "AC18",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.tenda.com.cn/",
+      "https://vuldb.com/submit/1043033",
+      "https://vuldb.com/vuln/437295",
+      "https://github.com/longqx223/Tenda-ac-18-V15.03.05.05-/blob/main/2026-10-19-Tenda-AC18-unsigned-firmware-update-advisory-EN.pdf",
+      "https://vuldb.com/cve/CVE-2026-129258",
+      "https://vuldb.com/vuln/437295/cti"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129258",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129258"
+    },
+    "item_id": "CVE-2026-129258",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router with no enterprise or DPI footprint; consumer context excludes it despite high CVSS and public exploit.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-18053",
+    "identity": {
+      "title": "CVE-2026-18053",
+      "published": "2026-11-14 12:33:23",
+      "modified": "2026-11-14 13:17:23",
+      "description": "The MemberDash plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.8.7. This is due to a mass-assignment vulnerability in the `user_account_manager()` function's edit_profile branch, where all submitted `$_POST` fields are iterated and directly assigned to the current member object via the `MS_Model` `__set()` magic method with no field allowlist and no capability or ownership check on the submitted `id` parameter. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject an arbitrary user ID via the `id` parameter — overwriting any WordPress user's email address and password, including the site administrator's — and subsequently use those modified credentials to gain full administrative access to the site."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/70d0bc5e-8db6-4a42-af19-d41280ec1207?source=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "cwe_primary": "CWE-639",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-639": "Authorization Bypass Through User-Controlled Key"
+      }
+    },
+    "software": {
+      "vendors": "LearnDash",
+      "products": "MemberDash",
+      "cpe_uris": "cpe:2.3:a:learndash:memberdash:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/70d0bc5e-8db6-4a42-af19-d41280ec1207?source=cve",
+      "https://docs.nexcess.com/software/changelogs/learndash/memberdash/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18053",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-18053"
+    },
+    "item_id": "CVE-2026-18053",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint; consumer CMS add-on exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19907",
+    "identity": {
+      "title": "CVE-2026-19907",
+      "published": "2026-11-14 12:33:23",
+      "modified": "2026-11-14 13:17:23",
+      "description": "The Shipo plugin for WordPress is vulnerable to Authentication Bypass in versions 1.6 through 1.8.0. This is due to the `authenticate_rest_user()` function parsing the `LOGGED_IN_COOKIE` value and authenticating the named user without verifying the cookie's cryptographic signature. The function's intended `/wp-json/shipo/` route restriction can also be bypassed by placing that substring in the query string of an unrelated REST endpoint. This makes it possible for unauthenticated attackers who know an existing username to impersonate that user, including an administrator, and perform authorized actions through the REST API, including creating another administrator account."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/changeset/3701532/shipo"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-287"
+      ],
+      "cwe_primary": "CWE-287",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-287": "Improper Authentication"
+      }
+    },
+    "software": {
+      "vendors": "shipo",
+      "products": "Shipo",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/changeset/3701532/shipo",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/ce5ea515-5ae1-4771-9bfb-5a0f4b3fce22?source=cve"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19907",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-19907"
+    },
+    "item_id": "CVE-2026-19907",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with no enterprise or DPI footprint; consumer CMS add-on exclusion applies despite authentication bypass and high CVSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120522",
+    "identity": {
+      "title": "CVE-2026-120522",
+      "published": "2026-11-14 12:33:22",
+      "modified": "2026-11-14 13:17:20",
+      "description": "The Cloud Storage Manager for Fluent Forms – Google Drive, Dropbox, OneDrive, S3 Uploads plugin for WordPress is vulnerable to Arbitrary File Write in all versions up to, and including, 1.2.0. This is due to missing authorization checks on the `connection/{driver}/save` and `/download/single-file` REST endpoints, combined with insufficient path validation in the Google Drive `downloadFile()` function, where the Google Drive metadata `name` value is concatenated into a local path without `basename()`, `sanitize_file_name()`, or canonical path validation. This makes it possible for unauthenticated attackers to store attacker-controlled Google Drive credentials, trigger a download of an attacker-owned file whose provider-returned filename contains path traversal, and write attacker-controlled content outside the intended `downloads` directory. When the written file has a PHP extension and lands in a web-accessible location, this can lead to remote code execution."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/58fd04ae-fff2-42b1-ae98-168195d84290?source=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "fluentwiz",
+      "products": "Cloud Storage Manager for Fluent Forms – Google Drive, Dropbox, OneDrive, S3 Uploads",
+      "cpe_uris": "cpe:2.3:a:fluentcms:cloud_storage_manager_for_fluent_forms:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/58fd04ae-fff2-42b1-ae98-168195d84290?source=cve",
+      "https://plugins.trac.wordpress.org/changeset/3656663/cloud-storage-manager"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-120522",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-120522"
+    },
+    "item_id": "CVE-2026-120522",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint, explicitly excluded despite high CVSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129431",
+    "identity": {
+      "title": "CVE-2026-129431",
+      "published": "2026-11-14 12:32:53",
+      "modified": "2026-11-14 13:17:22",
+      "description": "Ettercap through 0.8.5.1 contains a heap out-of-bounds read vulnerability in dissector_socks() in src/dissectors/ec_socks.c that allows network-adjacent attackers to read heap memory via unchecked SOCKS5 username/password lengths. Attackers can send a crafted SOCKS5 authentication packet observed by Ettercap to read up to 255 bytes past the heap buffer, disclosing memory printed and logged as captured credentials."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Ettercap/ettercap"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "cwe_primary": "CWE-125",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-125": "Out-of-bounds Read"
+      }
+    },
+    "software": {
+      "vendors": "Ettercap",
+      "products": "ettercap",
+      "cpe_uris": "cpe:2.3:a:ettercap-project:ettercap:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/Ettercap/ettercap",
+      "https://github.com/Ettercap/ettercap/blob/v0.8.5.1/src/dissectors/ec_socks.c#L108-L124",
+      "https://www.vulncheck.com/advisories/ettercap-through-0.8.5.1-heap-out-of-bounds-read-via-socks5-dissector",
+      "https://github.com/Ettercap/ettercap/pull/1340"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129431",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129431"
+    },
+    "item_id": "CVE-2026-129431",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector ADJACENT, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129432",
+    "identity": {
+      "title": "CVE-2026-129432",
+      "published": "2026-11-14 12:32:53",
+      "modified": "2026-11-14 13:17:22",
+      "description": "Ettercap through 0.8.5.1 contains a heap out-of-bounds read vulnerability in dissector_mountd() in src/dissectors/ec_mountd.c that validates RPC credential and directory lengths independently rather than against the packet end. Network-adjacent attackers can send a crafted MOUNT MNT call to read up to 100 bytes past the heap buffer, leaking memory to the console and logs."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Ettercap/ettercap"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "cwe_primary": "CWE-125",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-125": "Out-of-bounds Read"
+      }
+    },
+    "software": {
+      "vendors": "Ettercap",
+      "products": "ettercap",
+      "cpe_uris": "cpe:2.3:a:ettercap-project:ettercap:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/Ettercap/ettercap",
+      "https://www.vulncheck.com/advisories/ettercap-through-0.8.5.1-heap-out-of-bounds-read-in-nfs-mountd-dissector",
+      "https://github.com/Ettercap/ettercap/pull/1341",
+      "https://github.com/Ettercap/ettercap/blob/v0.8.5.1/src/dissectors/ec_mountd.c#L88-L103"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129432",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129432"
+    },
+    "item_id": "CVE-2026-129432",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector ADJACENT, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129255",
+    "identity": {
+      "title": "CVE-2026-129255",
+      "published": "2026-11-14 12:30:17",
+      "modified": "2026-11-14 13:17:22",
+      "description": "A vulnerability was identified in CoolerMaster MASTERPLUS+ 1.9.6. This affects the function sub_11504 in the library WinRing0x64.sys of the component Device Driver. The manipulation of the argument PhysicalAddress leads to incorrect default permissions. The attack can only be performed from a local environment. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://vuldb.com/vuln/437286/cti"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-266",
+        "CWE-276"
+      ],
+      "cwe_primary": "CWE-266",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-266": "Incorrect Privilege Assignment",
+        "CWE-276": "Incorrect Default Permissions"
+      }
+    },
+    "software": {
+      "vendors": "CoolerMaster",
+      "products": "MASTERPLUS+",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/437286/cti",
+      "https://vuldb.com/cve/CVE-2026-129255",
+      "https://vuldb.com/vuln/437286",
+      "https://vuldb.com/submit/1042970"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129255",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129255"
+    },
+    "item_id": "CVE-2026-129255",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129250",
+    "identity": {
+      "title": "CVE-2026-129250",
+      "published": "2026-11-14 11:30:19",
+      "modified": "2026-11-14 12:17:44",
+      "description": "A security vulnerability has been detected in Edimax BR6478ACV2 1.23. The impacted element is the function formPPTPSetup of the file webs. The manipulation of the argument pptpUserName leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+    },
+    "cvss": {
+      "base_score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://vuldb.com/vuln/437280/cti"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-119",
+        "CWE-120"
+      ],
+      "cwe_primary": "CWE-119",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-119": "Improper Restriction of Operations within the Bounds of a Memory Buffer",
+        "CWE-120": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      }
+    },
+    "software": {
+      "vendors": "Edimax",
+      "products": "BR6478ACV2",
+      "cpe_uris": "cpe:2.3:h:edimax:br6478acv2:1.23:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vuldb.com/vuln/437280/cti",
+      "https://vuldb.com/cve/CVE-2026-129250",
+      "https://vuldb.com/vuln/437280",
+      "https://lavender-bicycle-a5a.notion.site/EDIMAX-BR6478ACV2-formPPTPSetup-3f953a41781f8017b959ec7b4df6b3ad?source=copy_link",
+      "https://vuldb.com/submit/1033650"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129250",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129250"
+    },
+    "item_id": "CVE-2026-129250",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer home router with no enterprise or DPI footprint, explicitly excluded despite public exploit disclosure.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129427",
+    "identity": {
+      "title": "CVE-2026-129427",
+      "published": "2026-11-14 11:19:54",
+      "modified": "2026-11-14 12:17:44",
+      "description": "Stored XSS via avatar upload chained with an authentication bypass in /Attachments leads to ATO\nin Cervantes version v1.3-beta could allow an attacker to execute arbitrary code in another user's browser with elevated privileges"
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.grayback.es/en/advisories"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: LOW, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "cwe_primary": "CWE-79",
+      "cwe_family": "XSS",
+      "cwe_names": {
+        "CWE-79": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    },
+    "software": {
+      "vendors": "CervantesSec",
+      "products": "cervantes",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.grayback.es/en/advisories",
+      "https://www.grayback.es/advisories"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129427",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129427"
+    },
+    "item_id": "CVE-2026-129427",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche beta software with no identifiable enterprise or DPI deployment context, insufficient evidence for DPI relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124969",
+    "identity": {
+      "title": "CVE-2026-124969",
+      "published": "2026-11-14 04:46:10",
+      "modified": "2026-11-14 05:18:32",
+      "description": "The Optimole – Optimize Images | Convert WebP & AVIF | CDN & Lazy Load | Image Optimization plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the replace_urls_in_value function in all versions up to, and including, 4.2.19. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Successful exploitation requires PEAR's Archive_Tar library to be present and loadable on the host (common in official WordPress Docker images and many PHP distributions), and an administrator must subsequently use the plugin's Rename control on any attachment after the attacker has staged a malicious payload in a comment. Successful exploitation additionally requires an action by an administrator — the attacker cannot trigger the vulnerability on their own."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "LOW",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00454,
+      "percentile": 0.39983,
+      "date": "2026-11-14"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://plugins.trac.wordpress.org/browser/optimole-wp/tags/4.2.19/inc/media_rename/attachment_db_renamer.php#L319"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "cwe_primary": "CWE-502",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-502": "Deserialization of Untrusted Data"
+      }
+    },
+    "software": {
+      "vendors": "optimole",
+      "products": "Optimole – Optimize Images | Convert WebP & AVIF | CDN & Lazy Load | Image Optimization",
+      "cpe_uris": "cpe:2.3:a:optimole:optimize_images_convert_webp_avif_cdn_lazy_load_image_optimization:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/optimole-wp/tags/4.2.19/inc/media_rename/attachment_db_renamer.php#L319",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/277b9a34-8e0b-496e-b07b-602b25f125d8?source=cve",
+      "https://plugins.trac.wordpress.org/browser/optimole-wp/tags/4.2.19/inc/media_rename/attachment_db_renamer.php#L548",
+      "https://plugins.trac.wordpress.org/browser/optimole-wp/tags/4.2.19/inc/media_rename/attachment_edit.php#L311",
+      "https://plugins.trac.wordpress.org/browser/optimole-wp/tags/4.2.19/inc/media_rename/attachment_db_renamer.php#L415",
+      "https://plugins.trac.wordpress.org/browser/optimole-wp/tags/4.2.19/inc/media_rename/attachment_rename.php#L107",
+      "https://plugins.trac.wordpress.org/browser/optimole-wp/tags/4.2.20"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124969",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124969"
+    },
+    "item_id": "CVE-2026-124969",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint, explicitly excluded despite arbitrary file deletion impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-126173",
+    "identity": {
+      "title": "CVE-2026-126173",
+      "published": "2026-11-14 04:46:10",
+      "modified": "2026-11-14 05:18:37",
+      "description": "The AutomatorWP Pro plugin for WordPress' webhook addon is vulnerable to authorization bypass in all versions up to, and including, 1.4.4. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to reset the password of any WordPress account, including administrators, resulting in full account takeover. This is only exploitable when an administrator has configured an automation pairing a Receive Webhook trigger — with an 'Is the user ID' field — to an Update-User action whose User ID field is left blank and whose Password field is mapped to the webhook password tag, which is a documented, supported plugin configuration."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": 0.00537,
+      "percentile": 0.45817,
+      "date": "2026-11-14"
+    },
+    "exploitation": {
+      "wild_exploited": true,
+      "wild_exploited_sources": [
+        "vulncheck_kev"
+      ],
+      "wild_exploited_by_vulncheck_kev": true,
+      "vulncheck_kev_date_added": "2026-11-14",
+      "vulncheck_evidence_count": 1,
+      "vulncheck_exploit_repo_count": 0,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/04ea5758-2400-4885-8342-c57d61206ef1?source=cve"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-862",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "AutomatorWP",
+      "products": "AutomatorWP Webhooks",
+      "cpe_uris": "cpe:2.3:a:automatorwp:webhooks:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/04ea5758-2400-4885-8342-c57d61206ef1?source=cve",
+      "https://automatorwp.com/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-126173",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-126173"
+    },
+    "item_id": "CVE-2026-126173",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint, explicitly excluded despite authorization bypass severity.",
+      "fail_open": false
+    }
+  }
+]

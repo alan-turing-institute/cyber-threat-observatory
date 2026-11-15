@@ -1,0 +1,338 @@
+[
+  {
+    "id": "CVE-2024-58406",
+    "published": "2026-11-13 15:57:13",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Huatian Dynamic OA8000 collaborative office system contains an unauthenticated path traversal vulnerability in /OAapp/jsp/trace/ntkodownload.jsp, where the filename request parameter is used to locate a file without restricting access to an intended directory or rejecting traversal sequences. Attackers can supply ../ sequences to read arbitrary files from the server, such as the Tomcat configuration at ROOT/WEB-INF/web.xml, exposing sensitive configuration, source, and credential material that can enable further compromise. Exploitation evidence was first observed by the Shadowserver Foundation on 2024-11-20.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Enterprise OA system path traversal exposing credentials, not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124218",
+    "published": "2026-11-13 09:35:16",
+    "cvss": 8.2,
+    "epss": 0.01019,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "The Drag and Drop File Upload for Elementor Forms plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the remove_files function in all versions up to, and including, 1.6.2 This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). This vulnerability is reachable when the \"yeepdf_not_save\" privacy option is enabled, a commonly used production setting that triggers the remove_files() cleanup path.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress/Elementor plugin explicitly excluded by base and overlay hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-19907",
+    "published": "2026-11-14 12:33:23",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Shipo plugin for WordPress is vulnerable to Authentication Bypass in versions 1.6 through 1.8.0. This is due to the `authenticate_rest_user()` function parsing the `LOGGED_IN_COOKIE` value and authenticating the named user without verifying the cookie's cryptographic signature. The function's intended `/wp-json/shipo/` route restriction can also be bypassed by placing that substring in the query string of an unrelated REST endpoint. This makes it possible for unauthenticated attackers who know an existing username to impersonate that user, including an administrator, and perform authorized actions through the REST API, including creating another administrator account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by base and overlay hard rules despite authentication bypass CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82504",
+    "published": "2026-11-13 20:45:22",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "VITEC EZ TV Platform Server before 8.5.0 contains an unrestricted file upload vulnerability in the upload handler that allows unauthenticated remote attackers to upload arbitrary files by supplying a target filename in the X-FILENAME request header with no authentication or file type validation required. Attackers can upload a malicious ASPX file directly to the web-accessible uploads directory, where it is immediately executable by the web server, achieving remote code execution in the context of the web server process. Patches are available for versions 8.3.0, 8.3.1, 8.4.0, and 8.4.1. Users running releases prior to 8.3.0 should upgrade to 8.5.0+.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Broadcast TV platform server file upload vulnerability, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107412",
+    "published": "2026-11-13 02:21:30",
+    "cvss": 9.5,
+    "epss": 0.00305,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Multiple Memory overflow vulnerabilities can lead to unpredictable or erroneous behavior and Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Citrix NetScaler DoS via memory overflow explicitly excluded by overlay hard rule for pure DoS with no auth/access impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107410",
+    "published": "2026-11-13 02:10:10",
+    "cvss": 9.3,
+    "epss": 0.00359,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in NetScaler Push can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Citrix NetScaler DoS via memory overflow explicitly excluded by overlay hard rule for pure DoS with no auth/access impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107409",
+    "published": "2026-11-13 02:05:45",
+    "cvss": 9.3,
+    "epss": 0.00359,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory corruption in DNS-over-HTTPS (DoH) can lead to unpredictable or erroneous behavior or a Denial of Service in Citrix NetScaler",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Citrix NetScaler DoH DoS via memory corruption explicitly excluded by overlay hard rule for pure DoS with no auth/access impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107415",
+    "published": "2026-11-13 03:05:57",
+    "cvss": 9.3,
+    "epss": 0.00334,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in Email OTP authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Citrix NetScaler Email OTP DoS via memory overflow excluded by overlay hard rule for pure DoS without auth bypass or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107408",
+    "published": "2026-11-13 02:04:05",
+    "cvss": 9.3,
+    "epss": 0.00329,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory corruption in DNS / DNS-over-HTTPS (DoH) can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Citrix NetScaler DNS/DoH DoS via memory corruption explicitly excluded by overlay hard rule for pure DoS with no auth/access impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-107407",
+    "published": "2026-11-13 02:01:33",
+    "cvss": 9.3,
+    "epss": 0.00329,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in SMPP traffic can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure DoS via memory overflow in SMPP traffic with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120864",
+    "published": "2026-11-13 08:10:07",
+    "cvss": 9.3,
+    "epss": 0.0031,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in ICA proxy can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure DoS via memory overflow in ICA proxy with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111334",
+    "published": "2026-11-13 07:33:09",
+    "cvss": 9.3,
+    "epss": 0.00265,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in Endpoint Analysis (EPA/EPAS) can lead to unpredictable or erroneous behavior or a Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure DoS via memory overflow in EPA module with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-126377",
+    "published": "2026-11-13 09:36:03",
+    "cvss": 9.2,
+    "epss": 0.00558,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vvveb before 1.0.9.0 contains an authentication bypass vulnerability in generateCookie() in system/user/user.php that uses loose comparison to validate MD5 cookie hashes. Unauthenticated attackers can brute-force cookie values until the server's MD5 computation yields a 0e magic hash, then forge persistent cookies for account takeover.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in Vvveb web editor falls under consumer/hobbyist software exclusion with no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124020",
+    "published": "2026-11-13 21:43:00",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Control Web Panel (CWP) before webpanel_version 1.30.6 contains a host header injection vulnerability that allows unauthenticated attackers to manipulate the password-recovery reset URL by injecting the HTTP Host header into the /v1/lostpass/ route's token generation process. Attackers can lure an automated mail-security scanner into visiting the poisoned reset link to exfiltrate the live recovery token, replay it at /login/index.php?acc=newpass to set a new password, and subsequently abuse the File Manager and Crontab modules to achieve command execution as the targeted hosting account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Password recovery manipulation in Control Web Panel hosting control panel lacks a clear public-sector identity or DPI infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-126294",
+    "published": "2026-11-13 09:36:29",
+    "cvss": 8.7,
+    "epss": 0.00535,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Grav Login plugin before 3.11.0 contains an authentication bypass vulnerability that allows attackers with an account password to skip two-factor verification when the global twofa_enabled setting is off. Attackers can sign in through the /login form, remember-me cookie, or magic link to obtain a session the API plugin accepts, gaining full account permissions including super-admin control.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in Grav CMS login plugin falls under generic CMS/blog exclusion with no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111340",
+    "published": "2026-11-13 03:07:04",
+    "cvss": 8.7,
+    "epss": 0.00334,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in KBA (knowledge-based authentication) can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure DoS via memory overflow in KBA module with no authentication bypass or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120867",
+    "published": "2026-11-13 08:14:51",
+    "cvss": 8.7,
+    "epss": 0.0031,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in SSL/TLS/DTLS can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure DoS via memory overflow in SSL/TLS stack with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120861",
+    "published": "2026-11-13 07:58:38",
+    "cvss": 8.7,
+    "epss": 0.0031,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow / improper handling in GSLB and geolocation (MEP, static-proximity, config-sync) can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Pure DoS via memory overflow in GSLB/geolocation with no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120862",
+    "published": "2026-11-13 08:02:05",
+    "cvss": 8.7,
+    "epss": 0.0031,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in SIP ALG (LSN) and DNS answer-section logging datapaths can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Memory overflow in SIP ALG and DNS logging datapaths causes DoS with no authentication or access-control impact, triggering the pure DoS hard exclude.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120863",
+    "published": "2026-11-13 08:03:43",
+    "cvss": 8.7,
+    "epss": 0.0031,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in the management plane can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Management plane memory overflow causes DoS without direct identity or authentication nexus, excluded as pure DoS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120865",
+    "published": "2026-11-13 08:11:19",
+    "cvss": 8.7,
+    "epss": 0.0031,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Memory overflow in HTTP/3 (QUIC) can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "HTTP/3 QUIC memory overflow causes DoS with no authentication or access-control impact, excluded as pure DoS.",
+      "fail_open": false
+    }
+  }
+]
