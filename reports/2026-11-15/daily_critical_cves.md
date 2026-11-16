@@ -1,0 +1,16 @@
+# DPI / LinkedIn daily shortlist
+
+- **Generated (UTC):** 2026-11-16 01:56:44Z
+- **Reports folder:** `/root/cyber-threat-observatory/reports/2026-11-15`
+- **Included count:** 6
+
+Sorted by **dpi_rank** (desc), then **CVE ID**.
+
+| dpi_rank | Tier | CVE | Why DPI | LinkedIn hook |
+|----------|------|-----|---------|----------------|
+| 5 | 2 | CVE-2026-129359 | Hardcoded credential bypass in core 5G/LTE telecom orchestrator directly impacts Government and General Infrastructure sectors by threatening national communications control planes. | A hardcoded credential in the Linux Foundation Magma 5G/LTE orchestrator bypasses internal authentication, posing a direct risk to national telecom control planes and government-critical communications infrastructure. Network segmentation remains the primary defense until a vendor patch is released. |
+| 4 | 2 | CVE-2026-129349 | Critical authentication bypass in Apache Shiro's LDAP realm directly undermines Digital Identity verification and access control in enterprise and public-facing services. | A critical auth bypass in Apache Shiro's LDAP realm could let attackers hijack accounts with just a username—reminding us that even non-default caching configs can undermine digital identity frameworks. |
+| 4 | 2 | CVE-2026-129360 | Impacts critical 5G/LTE management planes used by national telecom operators and government-backed connectivity initiatives, risking unauthorized network control and service disruption. | A ready-to-use PoC exposes an authentication bypass in Linux Foundation Magma's 5G/LTE orchestrator, allowing attackers to impersonate operators via a spoofed HTTP header. National telecom and government-backed networks relying on this open-source stack should enforce strict network segmentation and proxy hardening immediately. |
+| 3 | 2 | CVE-2026-129451 | Critical authenticated path traversal in widely deployed edge routers used by government and SMB networks, risking full device compromise and network perimeter breach. | Edge routers form the backbone of public and enterprise network perimeters. This TIER 2 flaw in DrayTek Vigor2960 firmware allows authenticated attackers to write, read, or delete files as root—highlighting the urgent need for strict admin access controls and timely patching in government and SMB deployments. |
+| 3 | 2 | CVE-2026-129483 | Foundational authentication library for email and directory services with broad applicability across government, healthcare, and finance deployments, despite requiring an opt-in SRP configuration. | A critical authentication bypass in Cyrus SASL’s SRP mechanism could allow full account takeover in email and directory systems. While the vulnerable component requires explicit configuration, its foundational role across government, healthcare, and finance infrastructure makes it a priority for regulated environments to audit and disable. |
+| 2 | 2 | CVE-2026-129453 | TIER 2 authenticated RCE in enterprise perimeter firewall firmware; critical for securing network edges of regulated/public digital services. | Enterprise firewalls remain a high-value target: CVE-2026-129453 enables authenticated RCE on DrayTek Vigor2960 edge devices. Patch to v1.5.1.7 and restrict WAN admin access to protect your digital service perimeter. |

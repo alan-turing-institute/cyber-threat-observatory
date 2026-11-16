@@ -1,0 +1,34 @@
+[
+  {
+    "id": "CVE-2026-19907",
+    "published": "2026-11-14 12:33:23",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Shipo plugin for WordPress is vulnerable to Authentication Bypass in versions 1.6 through 1.8.0. This is due to the `authenticate_rest_user()` function parsing the `LOGGED_IN_COOKIE` value and authenticating the named user without verifying the cookie's cryptographic signature. The function's intended `/wp-json/shipo/` route restriction can also be bypassed by placing that substring in the query string of an unrelated REST endpoint. This makes it possible for unauthenticated attackers who know an existing username to impersonate that user, including an administrator, and perform authorized actions through the REST API, including creating another administrator account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin explicitly excluded by base and overlay rules despite authentication bypass CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120725",
+    "published": "2026-11-15 21:13:51",
+    "cvss": 0.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "With `REQUIRE_SIGNIN_VIEW = true`, the Git LFS endpoints still answered unauthenticated requests for repositories that are not private. An anonymous client who knows the path of such a repository and the SHA-256 of an LFS object could download the object, and could use the batch endpoint to test whether an object exists. The Git LFS endpoints now require authentication when sign-in is required to view the instance.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in Git LFS code hosting endpoints lacks a direct identity/access infrastructure nexus per overlay rules.",
+      "fail_open": false
+    }
+  }
+]
