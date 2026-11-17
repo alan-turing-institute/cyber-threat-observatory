@@ -1,0 +1,5128 @@
+[
+  {
+    "id": "CVE-2026-130327",
+    "identity": {
+      "title": "CVE-2026-130327",
+      "published": "2026-11-16 22:39:45",
+      "modified": "2026-11-16 23:17:15",
+      "description": "In Open Object Rexx (ooRexx) before 5.2.0, RXAPI relies on a world-writable /tmp file unless XDG_RUNTIME_DIR is set, or localhost TCP port 10010, allowing RXAPI communication by any local user, e.g., for injection of a macro that will be executed by a REXX script."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://sourceforge.net/p/oorexx/bugs/1981/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-732"
+      ],
+      "cwe_primary": "CWE-732",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-732": "Incorrect Permission Assignment for Critical Resource"
+      }
+    },
+    "software": {
+      "vendors": "Open Object Rexx",
+      "products": "ooRexx",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://sourceforge.net/p/oorexx/bugs/1981/",
+      "https://sourceforge.net/p/oorexx/code-0/12916/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130327",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130327"
+    },
+    "item_id": "CVE-2026-130327",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-130320",
+    "identity": {
+      "title": "CVE-2026-130320",
+      "published": "2026-11-16 22:27:49",
+      "modified": "2026-11-16 23:17:15",
+      "description": "In Open Object Rexx (ooRexx) before 5.2.0, RXAPI mishandles nameArg and userid bounds checking, possibly leading to arbitrary code execution via crafted messages."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://sourceforge.net/p/oorexx/bugs/1982/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-122"
+      ],
+      "cwe_primary": "CWE-122",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-122": "Heap-based Buffer Overflow"
+      }
+    },
+    "software": {
+      "vendors": "Open Object Rexx",
+      "products": "ooRexx",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://sourceforge.net/p/oorexx/bugs/1982/",
+      "https://sourceforge.net/p/oorexx/code-0/12916/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130320",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130320"
+    },
+    "item_id": "CVE-2026-130320",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-130290",
+    "identity": {
+      "title": "CVE-2026-130290",
+      "published": "2026-11-16 22:12:44",
+      "modified": "2026-11-16 22:18:24",
+      "description": "In Open Object Rexx (ooRexx) before 5.2.0, RXAPI has a heap buffer over-read in a QueueManager DataQueue::addmethod. In particular, the code blindly trusts the message.parameter1 value provided by the client as the size used to fill the data from the queueData heap buffer. An attacker sends a large parameter1 value in an ADD_TO_SESSION_QUEUE or ADD_TO_NAMED_QUEUE message and then retrieves data with a PULL_FROM_SESSION_QUEUE message. (A very large value causes a process crash.)"
+    },
+    "cvss": {
+      "base_score": 7.9,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://sourceforge.net/p/oorexx/bugs/1983/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-130"
+      ],
+      "cwe_primary": "CWE-130",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-130": "Improper Handling of Length Parameter Inconsistency"
+      }
+    },
+    "software": {
+      "vendors": "Open Object Rexx",
+      "products": "ooRexx",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://sourceforge.net/p/oorexx/bugs/1983/",
+      "https://sourceforge.net/p/oorexx/code-0/12916/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130290",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130290"
+    },
+    "item_id": "CVE-2026-130290",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-130067",
+    "identity": {
+      "title": "CVE-2026-130067",
+      "published": "2026-11-16 22:00:07",
+      "modified": "2026-11-16 22:18:21",
+      "description": "7-Zip File Manager before 26.03 fails to detect archive entry names padded with Unicode space characters, allowing attackers to bypass the deceptive file name warning in CPanel::IsVirus_Message. Attackers can craft archive entries like a PDF name followed by ideographic spaces and .hta to hide the real extension, executing script content via ShellExecuteExW when opened."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/ip7z/7zip/blob/26.02/CPP/7zip/UI/FileManager/PanelItemOpen.cpp#L867-L893"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-451"
+      ],
+      "cwe_primary": "CWE-451",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-451": "User Interface (UI) Misrepresentation of Critical Information"
+      }
+    },
+    "software": {
+      "vendors": "7-Zip",
+      "products": "7-Zip",
+      "cpe_uris": "cpe:2.3:a:7-zip:7-zip:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "7-zip:7-zip",
+          "vendor": "7-Zip",
+          "product": "7-Zip",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/ip7z/7zip/blob/26.02/CPP/7zip/UI/FileManager/PanelItemOpen.cpp#L867-L893",
+      "https://github.com/ip7z/7zip/releases/tag/26.03",
+      "https://www.vulncheck.com/advisories/7-zip-file-manager-before-26.03-file-name-spoofing-warning-bypass-via-unicode-spaces",
+      "https://www.7-zip.org/history.txt",
+      "https://github.com/ip7z/7zip/commit/0766b733fe3e06dd2a7f9a3cfbf2108ac73abd17"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130067",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130067"
+    },
+    "item_id": "CVE-2026-130067",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-130078",
+    "identity": {
+      "title": "CVE-2026-130078",
+      "published": "2026-11-16 21:59:59",
+      "modified": "2026-11-16 22:18:23",
+      "description": "B3log Solo through 4.4.0 contains a missing authorization vulnerability in B3Receiver.receiveArticle that allows visitor accounts to modify any article via the POST /apis/symphony/article endpoint. Attackers can supply their username as userB3Key, since OAuth-created visitors receive it as their B3 key, and overwrite any article's title, content and tags."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/88250/solo/blob/v4.4.0/src/main/java/org/b3log/solo/processor/B3Receiver.java#L146-L194"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "cwe_primary": "CWE-639",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-639": "Authorization Bypass Through User-Controlled Key"
+      }
+    },
+    "software": {
+      "vendors": "b3log",
+      "products": "Solo",
+      "cpe_uris": "cpe:2.3:a:b3log:solo:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/b3log-solo-through-4.4.0-missing-authorization-via-symphony-article-sync-endpoint",
+      "https://github.com/88250/solo/blob/v4.4.0/src/main/java/org/b3log/solo/processor/B3Receiver.java#L146-L194",
+      "https://github.com/88250/solo/blob/v4.4.0/src/main/java/org/b3log/solo/processor/OAuthProcessor.java#L152-L163",
+      "https://github.com/88250/solo/commit/46308431d479b61d4ac5cc768474efa140c23cc8"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130078",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130078"
+    },
+    "item_id": "CVE-2026-130078",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Blog and content platform (B3log Solo) with missing authorization, falls under consumer CMS exclusion with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-130080",
+    "identity": {
+      "title": "CVE-2026-130080",
+      "published": "2026-11-16 21:59:58",
+      "modified": "2026-11-16 22:18:23",
+      "description": "B3log Solo through 4.4.0 contains an SQL injection vulnerability in the console article update API that allows authenticated authors to inject SQL through unvalidated JSON property names. Attackers can send a PUT request to /console/article/ with crafted property names used as UPDATE column names, then read query results back through the updated article."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/88250/solo/blob/v4.4.0/src/main/java/org/b3log/solo/processor/console/ArticleConsole.java#L472-L479"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-89"
+      ],
+      "cwe_primary": "CWE-89",
+      "cwe_family": "Injection",
+      "cwe_names": {
+        "CWE-89": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+      }
+    },
+    "software": {
+      "vendors": "b3log",
+      "products": "Solo",
+      "cpe_uris": "cpe:2.3:a:b3log:solo:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/b3log-solo-through-4.4.0-sql-injection-via-article-json-property-names",
+      "https://github.com/88250/solo/blob/v4.4.0/src/main/java/org/b3log/solo/processor/console/ArticleConsole.java#L472-L479",
+      "https://github.com/88250/solo/commit/46308431d479b61d4ac5cc768474efa140c23cc8",
+      "https://github.com/88250/solo/blob/v4.4.0/src/main/java/org/b3log/solo/repository/ArticleRepository.java#L80-L86"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130080",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130080"
+    },
+    "item_id": "CVE-2026-130080",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "SQL injection in B3log Solo blog platform, consumer CMS context with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-130081",
+    "identity": {
+      "title": "CVE-2026-130081",
+      "published": "2026-11-16 21:59:57",
+      "modified": "2026-11-16 22:18:23",
+      "description": "B3log Solo through 4.4.0 contains an information disclosure vulnerability that allows unauthenticated attackers to obtain article view passwords by querying the public GET /articles API. The ArticleProcessor.getArticlesByPage handler leaves the articleViewPwd property in JSON responses, letting attackers read passwords for encrypted articles and access their protected content."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/88250/solo/blob/v4.4.0/src/main/java/org/b3log/solo/processor/ArticleProcessor.java#L348-L369"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-201"
+      ],
+      "cwe_primary": "CWE-201",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-201": "Insertion of Sensitive Information Into Sent Data"
+      }
+    },
+    "software": {
+      "vendors": "b3log",
+      "products": "Solo",
+      "cpe_uris": "cpe:2.3:a:b3log:solo:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/88250/solo/blob/v4.4.0/src/main/java/org/b3log/solo/processor/ArticleProcessor.java#L348-L369",
+      "https://github.com/88250/solo/blob/v4.4.0/src/main/java/org/b3log/solo/service/DataModelService.java#L785-L813",
+      "https://www.vulncheck.com/advisories/b3log-solo-through-4.4.0-article-view-password-disclosure-via-articles",
+      "https://github.com/88250/solo/commit/46308431d479b61d4ac5cc768474efa140c23cc8"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130081",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-130081"
+    },
+    "item_id": "CVE-2026-130081",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Information disclosure in B3log Solo blog platform, consumer CMS context with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69154",
+    "identity": {
+      "title": "CVE-2026-69154",
+      "published": "2026-11-16 21:23:27",
+      "modified": "2026-11-16 22:18:25",
+      "description": "The Coder VS Code extension opens Coder workspaces in VS Code with a single click. From 0.1.20 until 1.14.6, a malicious repository can provide .vscode/settings.json values for security-sensitive Coder settings because the extension permits workspace and folder scope to override those settings. Values such as coder.headerCommand and coder.tlsCertRefreshCommand are later executed as shell commands, while other affected settings can redirect the Coder CLI binary or download source, inject CLI or SSH flags, replace TLS material, disable TLS verification, or change identity and credential-storage behavior. A victim with the extension installed must open the malicious workspace or repository; when the extension activates, attacker-controlled commands can run with the victim user's privileges. The issue also affects untrusted workspaces because the extension declares untrusted-workspace support without preventing consumption of the workspace-controlled settings. This issue is fixed in version 1.14.6."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/coder/vscode-coder/pull/965"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-15",
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-15",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-15": "External Control of System or Configuration Setting",
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "coder",
+      "products": "vscode-coder",
+      "cpe_uris": "cpe:2.3:a:coder:coder:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/coder/vscode-coder/pull/965",
+      "https://github.com/coder/vscode-coder/commit/9ee5140aec532b347b72834767ea4f99c01666a0",
+      "https://github.com/coder/vscode-coder/security/advisories/GHSA-9q2g-22gh-hmgg",
+      "https://github.com/coder/vscode-coder/releases/tag/v1.14.6"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69154",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-69154"
+    },
+    "item_id": "CVE-2026-69154",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124017",
+    "identity": {
+      "title": "CVE-2026-124017",
+      "published": "2026-11-16 20:41:00",
+      "modified": "2026-11-16 21:17:21",
+      "description": "Phison E12 and E18 PCIe SSD controllers contain a Secure Boot bypass vulnerability that allows a privileged local attacker to inject persistent boot-patch tuples into the unsigned, CRC-protected flash ID page read by the BootROM. By overwriting a fuse-derived RAM variable via a crafted patch entry using Phison Vendor Specific Commands, an attacker can force CRC-only firmware verification instead of signature checking, enabling an unsigned firmware image to load and creating a persistent controller-level implant that survives firmware reinstallation and operates below the host operating system."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/VL4DR/DEFUSE/tree/add-defuse-doc"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-347"
+      ],
+      "cwe_primary": "CWE-347",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-347": "Improper Verification of Cryptographic Signature"
+      }
+    },
+    "software": {
+      "vendors": "Phison,Phison",
+      "products": "E12,E18",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/phison-e12-e18-ssd-controller-bootrom-secure-boot-bypass",
+      "https://github.com/VL4DR/DEFUSE/tree/add-defuse-doc"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124017",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124017"
+    },
+    "item_id": "CVE-2026-124017",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124019",
+    "identity": {
+      "title": "CVE-2026-124019",
+      "published": "2026-11-16 20:09:10",
+      "modified": "2026-11-16 20:18:55",
+      "description": "VB-Audio VB-CABLE virtual audio device kernel streaming driver (vbaudio_cable64_win10.sys 10.0.10011.16384) contains out-of-bounds read and write vulnerabilities in its KSPROPSETID_Audio MUTE, VOLUMELEVEL, and PEAKMETER2 property handlers that allow a local standard user to supply an all-channels sentinel value which is improperly used as a loop terminator or array index instead of being bounds-checked. Attackers can exploit the accessible low-integrity KS filter device object to write attacker-controlled values sequentially into kernel memory corrupting kernel globals and object pointers, or read past an array boundary to leak kernel memory, resulting in local privilege escalation or denial of service via a kernel bug check."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.vulncheck.com/advisories/vb-audio-vb-cable-kernel-driver-out-of-bounds-write"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-125",
+        "CWE-787"
+      ],
+      "cwe_primary": "CWE-125",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-125": "Out-of-bounds Read",
+        "CWE-787": "Out-of-bounds Write"
+      }
+    },
+    "software": {
+      "vendors": "VB-Audio",
+      "products": "VB-CABLE",
+      "cpe_uris": "cpe:2.3:a:vb-audio:vb-cable:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/vb-audio-vb-cable-kernel-driver-out-of-bounds-write",
+      "https://vb-audio.com/Cable/index.htm"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124019",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124019"
+    },
+    "item_id": "CVE-2026-124019",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-62336",
+    "identity": {
+      "title": "CVE-2026-62336",
+      "published": "2026-11-16 19:53:38",
+      "modified": "2026-11-16 20:19:07",
+      "description": "qbee-agent is the device agent component of the qbee.io IoT device management platform. Prior to 2026.27, the privileged createFile helper followed attacker-controlled symbolic links during file creation. A local unprivileged user whose account is managed by the SSH Keys bundle could replace ~/.ssh with a link to /root/.ssh, causing the agent to write an authorized key for root. On systems using RAUC download mode with ineffective kernel symlink protection, the predictable /tmp/.bundle.raucb.part path could be linked to a system file and then overwritten or truncated during an update. A file-distribution destination beneath an attacker-controlled directory could similarly redirect the partial-download path so the agent changed ownership of a sensitive file. These vectors could result in root privilege escalation, arbitrary file modification, or denial of service. This issue is fixed in version 2026.27."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/qbee-io/qbee-agent/commit/0fdf8e411de5d0c142ae2590cf1c54bdfc2e529a"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22",
+        "CWE-367",
+        "CWE-377",
+        "CWE-59"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+        "CWE-367": "Time-of-check Time-of-use (TOCTOU) Race Condition",
+        "CWE-377": "Insecure Temporary File",
+        "CWE-59": "Improper Link Resolution Before File Access ('Link Following')"
+      }
+    },
+    "software": {
+      "vendors": "qbee-io",
+      "products": "qbee-agent",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/qbee-io/qbee-agent/commit/0fdf8e411de5d0c142ae2590cf1c54bdfc2e529a",
+      "https://github.com/qbee-io/qbee-agent/security/advisories/GHSA-xhv5-8fpq-g7hf",
+      "https://github.com/qbee-io/qbee-agent/releases/tag/2026.27",
+      "https://github.com/qbee-io/qbee-agent/pull/131"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-62336",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-62336"
+    },
+    "item_id": "CVE-2026-62336",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101327",
+    "identity": {
+      "title": "CVE-2026-101327",
+      "published": "2026-11-16 19:10:52",
+      "modified": "2026-11-16 21:17:16",
+      "description": "A maliciously crafted DLL placed in a predictable, attacker-writable temporary directory used by the Autodesk Installer can lead to privilege escalation to NT AUTHORITY\\SYSTEM due to insufficient validation of loaded libraries. An attacker with local and low-privilege access could exploit this vulnerability to execute arbitrary code as SYSTEM."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://emsfs.autodesk.com/utility/odis/1/installer/latest/AdODIS-installer.exe"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-427"
+      ],
+      "cwe_primary": "CWE-427",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-427": "Uncontrolled Search Path Element"
+      }
+    },
+    "software": {
+      "vendors": "Autodesk",
+      "products": "Installer",
+      "cpe_uris": "cpe:2.3:a:autodesk:installer:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "autodesk:installer",
+          "vendor": "Autodesk",
+          "product": "Installer",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://emsfs.autodesk.com/utility/odis/1/installer/latest/AdODIS-installer.exe",
+      "https://www.autodesk.com/trust/security-advisories/adsk-sa-2026-0020"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-101327",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-101327"
+    },
+    "item_id": "CVE-2026-101327",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83817",
+    "identity": {
+      "title": "CVE-2026-83817",
+      "published": "2026-11-16 18:57:14",
+      "modified": "2026-11-16 22:18:25",
+      "description": "CodeWhale is a DeepSeek and MiMo coding agent for the terminal. Prior to 0.9.0, DEFAULT_AUTOMATION_AUTO_APPROVE caused AutomationRecord::task_auto_approve to resolve an omitted setting to true, and the automation_create schema advertised the same insecure default. enqueue_run_task converted that omission into an explicit true value, bypassing the safer task-path fallback and selecting ApprovalMode::Bypass for each scheduled run. After a user approved creation of an apparently benign recurring automation, subsequent executions could silently authorize mutating tools without a human present, and an automation created with shell access could repeatedly execute commands. This issue is fixed in version 0.9.0."
+    },
+    "cvss": {
+      "base_score": 7.5,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/codewhale-hq/Codewhale/commit/208421b9d23d81cea3311a1eeb2a2ea81d637686"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-1188",
+        "CWE-862"
+      ],
+      "cwe_primary": "CWE-1188",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-1188": "Initialization of a Resource with an Insecure Default",
+        "CWE-862": "Missing Authorization"
+      }
+    },
+    "software": {
+      "vendors": "codewhale-hq",
+      "products": "CodeWhale",
+      "cpe_uris": "cpe:2.3:a:codewhale-hq:codewhale:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/codewhale-hq/Codewhale/commit/208421b9d23d81cea3311a1eeb2a2ea81d637686",
+      "https://github.com/codewhale-hq/Codewhale/releases/tag/v0.9.0",
+      "https://github.com/codewhale-hq/Codewhale/security/advisories/GHSA-8hp3-xxrg-v9c8"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-83817",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-83817"
+    },
+    "item_id": "CVE-2026-83817",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Developer terminal coding agent with insecure auto-approval defaults; lacks enterprise or DPI infrastructure footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-83816",
+    "identity": {
+      "title": "CVE-2026-83816",
+      "published": "2026-11-16 18:55:40",
+      "modified": "2026-11-16 22:18:25",
+      "description": "CodeWhale is a DeepSeek and MiMo coding agent for the terminal. Prior to 0.9.0, the ExecShellTool::approval_requirement_for path used is_parallel_readonly_command to downgrade commands to automatic approval based on a flag-stripped command allowlist. The allowlist treated fd, rg, and git grep as read-only even when fd -x or fd --exec, rg --pre, or git grep --open-files-in-pager selected an external program. registered_tool_approval_required returned without displaying a prompt for that automatic classification, and the later command-safety check also treated the base utilities as safe. Attacker-controlled content that influenced an agent tool call could therefore cause arbitrary program execution on the developer host without the approval promised by the default interactive profile, resulting in unauthorized access, modification, or disruption. This issue is fixed in version 0.9.0."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/codewhale-hq/Codewhale/commit/208421b9d23d81cea3311a1eeb2a2ea81d637686"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78",
+        "CWE-863"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-863": "Incorrect Authorization"
+      }
+    },
+    "software": {
+      "vendors": "codewhale-hq",
+      "products": "CodeWhale",
+      "cpe_uris": "cpe:2.3:a:codewhale-hq:codewhale:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/codewhale-hq/Codewhale/commit/208421b9d23d81cea3311a1eeb2a2ea81d637686",
+      "https://github.com/codewhale-hq/Codewhale/security/advisories/GHSA-3mgh-93r5-r7jf",
+      "https://github.com/codewhale-hq/Codewhale/releases/tag/v0.9.0"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-83816",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-83816"
+    },
+    "item_id": "CVE-2026-83816",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Arbitrary command execution in developer terminal coding agent; lacks enterprise or DPI infrastructure footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-64890",
+    "identity": {
+      "title": "CVE-2026-64890",
+      "published": "2026-11-16 17:09:43",
+      "modified": "2026-11-16 17:17:34",
+      "description": ": Cleartext Storage of Sensitive Information vulnerability in Johnson Controls Open Blue Companion Android App on Android allows : Retrieve Embedded Secrets from Software.\n\nThis issue affects Open Blue Companion Android App: before R2.22.0."
+    },
+    "cvss": {
+      "base_score": 7.0,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "HIGH",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.johnsoncontrols.com/trust-center/cybersecurity/security-advisories"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-312"
+      ],
+      "cwe_primary": "CWE-312",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-312": "Cleartext Storage of Sensitive Information"
+      }
+    },
+    "software": {
+      "vendors": "Johnson Controls",
+      "products": "Open Blue Companion Android App",
+      "cpe_uris": "cpe:2.3:a:johnsoncontrols:open_blue_companion_android:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.johnsoncontrols.com/trust-center/cybersecurity/security-advisories"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-64890",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-64890"
+    },
+    "item_id": "CVE-2026-64890",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86046",
+    "identity": {
+      "title": "CVE-2026-86046",
+      "published": "2026-11-16 17:05:26",
+      "modified": "2026-11-16 19:17:53",
+      "description": "termux-sync is an open source tool for backing up and restoring a Termux environment across devices. Prior to 1.2.4, termux-sync restore uses the parent directory of the untrusted manifest.json files.*.source value as an extraction destination, and extract_archive calls tarfile.extract on archive members without enforcing a destination boundary. A victim who restores a malicious or tampered backup from local, shared, GitHub, or Google Drive storage can have files written anywhere the Termux user can write, including shell startup files or executable scripts that can lead to code execution when later used. The restore path also accepts unsafe backup_name values for temporary paths, and archive members are not constrained to the intended destination. This issue is fixed in version 1.2.4."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/djunekz/termux-sync/commit/9c8637b280ee3e126885def5ff5b326c289ee7cf"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "djunekz",
+      "products": "termux-sync",
+      "cpe_uris": "cpe:2.3:a:djunekz:termux_sync:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/djunekz/termux-sync/commit/9c8637b280ee3e126885def5ff5b326c289ee7cf",
+      "https://github.com/djunekz/termux-sync/releases/tag/v1.2.4",
+      "https://github.com/djunekz/termux-sync/security/advisories/GHSA-259w-wmqg-fp76"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-86046",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-86046"
+    },
+    "item_id": "CVE-2026-86046",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche Android developer tool with no enterprise or DPI footprint, requiring local backup restoration.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-84443",
+    "identity": {
+      "title": "CVE-2026-84443",
+      "published": "2026-11-16 16:40:34",
+      "modified": "2026-11-16 20:26:32",
+      "description": "LibreOffice Base documents can bind macros to document events, such as opening or closing the document. The macro security setting decides whether macros that come with a document may run. Macros bound to the events of a Base document were run without the macro security setting being applied, so opening or converting a crafted database document could run a macro and, through it, any command. In fixed versions macros bound to the events of a Base document follow the macro security setting, as macros in other documents do."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.libreoffice.org/about-us/security/advisories/cve-2026-84443"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "local, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-693"
+      ],
+      "cwe_primary": "CWE-693",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-693": "Protection Mechanism Failure"
+      }
+    },
+    "software": {
+      "vendors": "The Document Foundation",
+      "products": "LibreOffice",
+      "cpe_uris": "cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*,cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "the document foundation:libreoffice",
+          "vendor": "The Document Foundation",
+          "product": "LibreOffice",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.libreoffice.org/about-us/security/advisories/cve-2026-84443"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-84443",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-84443"
+    },
+    "item_id": "CVE-2026-84443",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-108169",
+    "identity": {
+      "title": "CVE-2026-108169",
+      "published": "2026-11-16 16:40:30",
+      "modified": "2026-11-16 20:26:32",
+      "description": "LibreOffice can open a web query file (.iqy), which names a web page to import into a spreadsheet, when the file is given on its command line, for example when a file manager or another program opens the file with LibreOffice. The address in such a file was used without the checks that apply to an address given on the command line directly, so a crafted file could make LibreOffice do something other than open a web page, up to running code. In fixed versions only an http or https address is taken from a web query file."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.libreoffice.org/about-us/security/advisories/cve-2026-108169"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "local, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-179"
+      ],
+      "cwe_primary": "CWE-179",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-179": "Incorrect Behavior Order: Early Validation"
+      }
+    },
+    "software": {
+      "vendors": "The Document Foundation",
+      "products": "LibreOffice",
+      "cpe_uris": "cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*,cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "the document foundation:libreoffice",
+          "vendor": "The Document Foundation",
+          "product": "LibreOffice",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.libreoffice.org/about-us/security/advisories/cve-2026-108169"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-108169",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-108169"
+    },
+    "item_id": "CVE-2026-108169",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104920",
+    "identity": {
+      "title": "CVE-2026-104920",
+      "published": "2026-11-16 16:40:28",
+      "modified": "2026-11-16 20:26:32",
+      "description": "LibreOffice Calc can link a cell range to an external data source, and the link is saved in the document. A Java database driver for such a link is loaded from a class path. Opening a crafted document could still load a Java database driver from a location outside the local machine and run its code, by a route that the fix for CVE-2026-63277 did not cover. In fixed versions an entry in a Java class path has to be a file URL that names a file on the local machine."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.libreoffice.org/about-us/security/advisories/cve-2026-104920"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "local, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-183",
+        "CWE-829"
+      ],
+      "cwe_primary": "CWE-183",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-183": "Permissive List of Allowed Inputs",
+        "CWE-829": "Inclusion of Functionality from Untrusted Control Sphere"
+      }
+    },
+    "software": {
+      "vendors": "The Document Foundation",
+      "products": "LibreOffice",
+      "cpe_uris": "cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*,cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "the document foundation:libreoffice",
+          "vendor": "The Document Foundation",
+          "product": "LibreOffice",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.libreoffice.org/about-us/security/advisories/cve-2026-104920"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-104920",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-104920"
+    },
+    "item_id": "CVE-2026-104920",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104692",
+    "identity": {
+      "title": "CVE-2026-104692",
+      "published": "2026-11-16 16:40:27",
+      "modified": "2026-11-16 20:26:32",
+      "description": "LibreOffice bundles the HSQLDB database engine, which can be used through the generic JDBC database driver as well as through the support for embedded databases. HSQLDB lets SQL statements call Java methods, limited to the classes that are permitted. When HSQLDB was used through the generic JDBC driver this limit did not apply, so SQL in a crafted document could call any Java method and run code. In fixed versions SQL can call only the built-in functions of HSQLDB, whichever way the database is reached."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.libreoffice.org/about-us/security/advisories/cve-2026-104692"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "local, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-1188",
+        "CWE-470"
+      ],
+      "cwe_primary": "CWE-1188",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-1188": "Initialization of a Resource with an Insecure Default",
+        "CWE-470": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')"
+      }
+    },
+    "software": {
+      "vendors": "The Document Foundation",
+      "products": "LibreOffice",
+      "cpe_uris": "cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*,cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "the document foundation:libreoffice",
+          "vendor": "The Document Foundation",
+          "product": "LibreOffice",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.libreoffice.org/about-us/security/advisories/cve-2026-104692"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-104692",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-104692"
+    },
+    "item_id": "CVE-2026-104692",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104007",
+    "identity": {
+      "title": "CVE-2026-104007",
+      "published": "2026-11-16 16:40:26",
+      "modified": "2026-11-16 20:26:32",
+      "description": "LibreOffice can connect to databases through JDBC drivers written in Java. A spreadsheet can use a database as the source of a pivot table, and the database document that describes the connection names the driver to use. The location the driver was loaded from was taken from the database document itself, so a crafted document could make LibreOffice load and run Java code that the document supplied when it was opened. This is a different route to the problem fixed for CVE-2026-63277. In fixed versions the driver location is taken only from the driver configuration of the user, and a pivot table whose source is a database document named by a URL connects only once the user allows links to be updated."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.libreoffice.org/about-us/security/advisories/cve-2026-104007"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "local, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-829"
+      ],
+      "cwe_primary": "CWE-829",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-829": "Inclusion of Functionality from Untrusted Control Sphere"
+      }
+    },
+    "software": {
+      "vendors": "The Document Foundation",
+      "products": "LibreOffice",
+      "cpe_uris": "cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*,cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "the document foundation:libreoffice",
+          "vendor": "The Document Foundation",
+          "product": "LibreOffice",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.libreoffice.org/about-us/security/advisories/cve-2026-104007"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-104007",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-104007"
+    },
+    "item_id": "CVE-2026-104007",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101930",
+    "identity": {
+      "title": "CVE-2026-101930",
+      "published": "2026-11-16 16:40:25",
+      "modified": "2026-11-16 20:26:32",
+      "description": "LibreOffice Writer can open HTML documents, and an HTML document can bind macros to events of the document as a whole, such as the document being opened or closed. Macros bound to these events were not taken into account by the macro security check, so they could run when the document was opened, whatever the macro security level. In fixed versions these macros follow the macro security settings like any other macro in the document."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.libreoffice.org/about-us/security/advisories/cve-2026-101930"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "local, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-693"
+      ],
+      "cwe_primary": "CWE-693",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-693": "Protection Mechanism Failure"
+      }
+    },
+    "software": {
+      "vendors": "The Document Foundation",
+      "products": "LibreOffice",
+      "cpe_uris": "cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*,cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "the document foundation:libreoffice",
+          "vendor": "The Document Foundation",
+          "product": "LibreOffice",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.libreoffice.org/about-us/security/advisories/cve-2026-101930"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-101930",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-101930"
+    },
+    "item_id": "CVE-2026-101930",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101892",
+    "identity": {
+      "title": "CVE-2026-101892",
+      "published": "2026-11-16 16:40:23",
+      "modified": "2026-11-16 20:26:32",
+      "description": "LibreOffice documents in ODF format can contain form controls, such as buttons and text fields, and each control names the component that implements it. The component a control named was created even when it was not a form control, and the settings stored with the control were applied to it, so a crafted document could change the configuration of LibreOffice in a way that led to code being run. In fixed versions a control whose component is not a form control is ignored."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.libreoffice.org/about-us/security/advisories/cve-2026-101892"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "local, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-470",
+        "CWE-829"
+      ],
+      "cwe_primary": "CWE-470",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-470": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')",
+        "CWE-829": "Inclusion of Functionality from Untrusted Control Sphere"
+      }
+    },
+    "software": {
+      "vendors": "The Document Foundation",
+      "products": "LibreOffice",
+      "cpe_uris": "cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*,cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "the document foundation:libreoffice",
+          "vendor": "The Document Foundation",
+          "product": "LibreOffice",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.libreoffice.org/about-us/security/advisories/cve-2026-101892"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-101892",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-101892"
+    },
+    "item_id": "CVE-2026-101892",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101352",
+    "identity": {
+      "title": "CVE-2026-101352",
+      "published": "2026-11-16 16:40:22",
+      "modified": "2026-11-16 20:26:32",
+      "description": "A document can carry its own user interface customizations, such as keyboard shortcuts, menus and toolbars, which take effect while the document is open. A command bound in these customizations could run a macro or a script even when the macro security settings did not allow the macros of the document, so a user who pressed a shortcut or chose a menu item in a crafted document could run code without any warning. In fixed versions the customizations of a document are treated like its other macro content, and the macro and script commands in them are only kept when the macros of the document are allowed."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.libreoffice.org/about-us/security/advisories/cve-2026-101352"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "local, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-357",
+        "CWE-693"
+      ],
+      "cwe_primary": "CWE-357",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-357": "Insufficient UI Warning of Dangerous Operations",
+        "CWE-693": "Protection Mechanism Failure"
+      }
+    },
+    "software": {
+      "vendors": "The Document Foundation",
+      "products": "LibreOffice",
+      "cpe_uris": "cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*,cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "the document foundation:libreoffice",
+          "vendor": "The Document Foundation",
+          "product": "LibreOffice",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.libreoffice.org/about-us/security/advisories/cve-2026-101352"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-101352",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-101352"
+    },
+    "item_id": "CVE-2026-101352",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-100101",
+    "identity": {
+      "title": "CVE-2026-100101",
+      "published": "2026-11-16 16:40:21",
+      "modified": "2026-11-16 20:26:32",
+      "description": "On Linux and other Unix-like systems, LibreOffice can send the current document as an email attachment with File > Send > Email Document, which starts the mail client through a script bundled with LibreOffice. The script let the shell interpret the name of the document's file, so a file with a crafted name could run commands when it was sent by email. In fixed versions the script passes the file name and the other details to the mail client as plain arguments."
+    },
+    "cvss": {
+      "base_score": 8.4,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "ACTIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.libreoffice.org/about-us/security/advisories/cve-2026-100101"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "ACTIVE",
+      "summary": "local, privileges: NONE, user interaction: ACTIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "The Document Foundation",
+      "products": "LibreOffice",
+      "cpe_uris": "cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*,cpe:2.3:a:libreoffice:libreoffice:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "the document foundation:libreoffice",
+          "vendor": "The Document Foundation",
+          "product": "LibreOffice",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.libreoffice.org/about-us/security/advisories/cve-2026-100101"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-100101",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-100101"
+    },
+    "item_id": "CVE-2026-100101",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-113630",
+    "identity": {
+      "title": "CVE-2026-113630",
+      "published": "2026-11-16 16:31:01",
+      "modified": "2026-11-16 21:17:20",
+      "description": "Command injection in the documentserver-flush-cache.sh maintenance helper in ONLYOFFICE Docs (Document Server) 9.4.0-129 on the official onlyoffice/documentserver container allows a local attacker with command execution as the ds user to execute arbitrary commands as root via a crafted --hash argument that is interpolated unvalidated into a GNU sed expression, where the sed e flag runs attacker-controlled commands. The packaged sudoers policy permits ds to run the helper as root without a password and with unrestricted arguments."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/jburgess-r7/onlyoffice-2026-pocs"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "ONLYOFFICE",
+      "products": "Docs (Document Server)",
+      "cpe_uris": "cpe:2.3:a:docker:docs:*:*:*:*:*:document_server:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.rapid7.com/blog/post/ve-from-view-only-access-to-container-root-five-vulnerabilities-in-onlyoffice-docs-fixed/",
+      "https://github.com/jburgess-r7/onlyoffice-2026-pocs"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-113630",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-113630"
+    },
+    "item_id": "CVE-2026-113630",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-91115",
+    "identity": {
+      "title": "CVE-2026-91115",
+      "published": "2026-11-16 16:26:50",
+      "modified": "2026-11-16 22:18:25",
+      "description": "Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. From 6.0.0 until 6.2.13, the writer option of i18nTextCollectorTask is passed to the dependency injector without validating that it names an allowed writer implementation. A crafted dev task URL can therefore instantiate arbitrary objects with attacker-controlled constructor arguments and execute code on the server. An administrator can be induced to run the task by following a link because the nested task did not require confirmation, and a site in dev mode exposes the path without authentication. CMS 5 is not affected. This issue is fixed in version 6.2.13."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/silverstripe/silverstripe-framework/security/advisories/GHSA-c94f-87xg-65wf"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "network, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-470"
+      ],
+      "cwe_primary": "CWE-470",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-470": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')"
+      }
+    },
+    "software": {
+      "vendors": "silverstripe",
+      "products": "silverstripe-framework",
+      "cpe_uris": "cpe:2.3:a:silverstripe:framework:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "silverstripe:silverstripe-framework",
+          "vendor": "silverstripe",
+          "product": "silverstripe-framework",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/silverstripe/silverstripe-framework/security/advisories/GHSA-c94f-87xg-65wf",
+      "https://github.com/silverstripe/silverstripe-framework/commit/2df498b1fad25db95dbd882117dcd0527a5fdbfa",
+      "https://www.silverstripe.org/download/security-releases/cve-2026-91115",
+      "https://github.com/silverstripe/silverstripe-framework/releases/tag/6.2.13",
+      "https://github.com/silverstripe/silverstripe-framework/pull/12035"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91115",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-91115"
+    },
+    "item_id": "CVE-2026-91115",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "PHP CMS framework vulnerability with no active exploitation signal and primarily consumer/web publishing footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129941",
+    "identity": {
+      "title": "CVE-2026-129941",
+      "published": "2026-11-16 15:06:14",
+      "modified": "2026-11-16 18:17:31",
+      "description": "Prime CMS (@primecms/core) through 0.4.0-beta.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to register accounts via the createUser mutation on /prime/graphql. Because the isAuthenticated() guard has its check commented out and createAbility() hard-codes every role to admin, attackers can log in with full administrative control over content, users, webhooks and settings."
+    },
+    "cvss": {
+      "base_score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/birkir/prime/blob/v0.3.4-beta.3/packages/prime-core/src/modules/internal/utils/createAbility.ts#L7-L15"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": "birkir",
+      "products": "prime",
+      "cpe_uris": "cpe:2.3:a:birkir:prime:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/birkir/prime/blob/v0.3.4-beta.3/packages/prime-core/src/modules/internal/utils/createAbility.ts#L7-L15",
+      "https://www.vulncheck.com/advisories/prime-cms-through-0.4.0-beta.0-authentication-bypass-via-createuser-graphql-mutation",
+      "https://github.com/birkir/prime/issues/549",
+      "https://github.com/birkir/prime/blob/v0.3.4-beta.3/packages/prime-core/src/modules/internal/index.ts#L67-L69",
+      "https://github.com/birkir/prime/blob/v0.3.4-beta.3/packages/prime-core/src/modules/internal/utils/isAuthenticated.ts#L1-L6"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129941",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129941"
+    },
+    "item_id": "CVE-2026-129941",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche beta CMS authentication bypass with no enterprise or DPI footprint, despite high CVSS.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129943",
+    "identity": {
+      "title": "CVE-2026-129943",
+      "published": "2026-11-16 15:06:13",
+      "modified": "2026-11-16 15:17:29",
+      "description": "Prime CMS (@primecms/core) through 0.4.0-beta.0 contains an OS command injection vulnerability in the updateSystem GraphQL mutation that allows authenticated administrators to execute shell commands via the package version string. Attackers can append shell metacharacters to the unvalidated version value, which is passed to child_process.exec() in yarn add or npm install commands, executing commands as the server process."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/birkir/prime/issues/549"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "cwe_primary": "CWE-78",
+      "cwe_family": "Command Injection",
+      "cwe_names": {
+        "CWE-78": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    },
+    "software": {
+      "vendors": "birkir",
+      "products": "prime",
+      "cpe_uris": "cpe:2.3:a:birkir:prime:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/birkir/prime/issues/549",
+      "https://github.com/birkir/prime/blob/v0.3.4-beta.3/packages/prime-core/src/modules/internal/utils/updateNpmPackages.ts#L4-L15",
+      "https://www.vulncheck.com/advisories/prime-cms-through-0.4.0-beta.0-os-command-injection-via-updatesystem-mutation",
+      "https://github.com/birkir/prime/blob/v0.3.4-beta.3/packages/prime-core/src/modules/internal/resolvers/PrimeResolver.ts#L110-L132"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129943",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129943"
+    },
+    "item_id": "CVE-2026-129943",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche beta CMS command injection requiring admin authentication, with no enterprise or DPI footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129956",
+    "identity": {
+      "title": "CVE-2026-129956",
+      "published": "2026-11-16 15:06:04",
+      "modified": "2026-11-16 15:17:31",
+      "description": "Sandboxie-Plus before 1.18.6 contains a local privilege escalation vulnerability in SbieSvc that allows standard users to launch UpdUtil.exe as SYSTEM via MSGID_PROCESS_RUN_UPDATER requests. Attackers can inject code into a signed SandMan.exe process to bypass the signature check and write attacker-controlled files to arbitrary paths, achieving SYSTEM code execution."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/sandboxie-plus/Sandboxie/commit/4e121cc4dacdc31973adcb81581b0414d48c26fc"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "cwe_primary": "CWE-269",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-269": "Improper Privilege Management"
+      }
+    },
+    "software": {
+      "vendors": "sandboxie-plus",
+      "products": "Sandboxie",
+      "cpe_uris": "cpe:2.3:a:sandboxie-plus:sandboxie:*:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "sandboxie-plus:sandboxie",
+          "vendor": "sandboxie-plus",
+          "product": "Sandboxie",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://github.com/sandboxie-plus/Sandboxie/commit/4e121cc4dacdc31973adcb81581b0414d48c26fc",
+      "https://github.com/sandboxie-plus/Sandboxie/blob/v1.18.5/Sandboxie/core/svc/ProcessServer.cpp#L1519-L1611",
+      "https://github.com/sandboxie-plus/Sandboxie/security/advisories/GHSA-46vh-v2q6-wrcv",
+      "https://github.com/sandboxie-plus/Sandboxie/blob/v1.18.5/SandboxieTools/UpdUtil/UpdUtil.cpp#L1349-L1386",
+      "https://www.vulncheck.com/advisories/sandboxie-plus-before-1.18.6-privilege-escalation-via-sbiesvc-msgid-process-run-updater",
+      "https://github.com/sandboxie-plus/Sandboxie/releases/tag/v1.18.6"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129956",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129956"
+    },
+    "item_id": "CVE-2026-129956",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-3859",
+    "identity": {
+      "title": "CVE-2026-3859",
+      "published": "2026-11-16 14:47:32",
+      "modified": "2026-11-16 16:17:53",
+      "description": "XSS vulnerability in Vibe Versions <= 4.0.8.7 could allow an attacker to inject malicious JavaScript through crafted\nsearch input."
+    },
+    "cvss": {
+      "base_score": 7.4,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "ACTIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://my.opentext.com/support/article/12544795"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "ACTIVE",
+      "summary": "network, privileges: NONE, user interaction: ACTIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-80"
+      ],
+      "cwe_primary": "CWE-80",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-80": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)"
+      }
+    },
+    "software": {
+      "vendors": "OpenText",
+      "products": "Vibe",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://my.opentext.com/support/article/12544795"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-3859",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-3859"
+    },
+    "item_id": "CVE-2026-3859",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Client-side XSS in niche/consumer software with no evident enterprise or DPI footprint; low impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129855",
+    "identity": {
+      "title": "CVE-2026-129855",
+      "published": "2026-11-16 14:19:37",
+      "modified": "2026-11-16 17:17:32",
+      "description": "RedAmon before 7.8.0 contains a missing authentication vulnerability in the kali-sandbox terminal server that allows unauthenticated attackers to obtain a root shell by connecting to its WebSocket listener on port 8016. Attackers who can reach the port from co-resident containers or the host loopback can send keystrokes to an interactive /bin/bash session, executing commands as root inside the kali-sandbox container."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/samugit83/redamon/security/advisories/GHSA-3cjg-8cp8-j269"
+    },
+    "ssvc": {
+      "exploitation": "poc",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": true
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "cwe_primary": "CWE-306",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-306": "Missing Authentication for Critical Function"
+      }
+    },
+    "software": {
+      "vendors": "samugit83",
+      "products": "RedAmon",
+      "cpe_uris": "cpe:2.3:a:samugit83:redamon:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/redamon-before-7.8.0-unauthenticated-root-shell-via-terminal-pty-websocket",
+      "https://github.com/samugit83/redamon/security/advisories/GHSA-3cjg-8cp8-j269",
+      "https://github.com/samugit83/redamon/blob/b13da9cb5ad35ae75428b8f21794e799a25fd201/mcp/servers/terminal_server.py#L57-L72",
+      "https://github.com/samugit83/redamon/releases/tag/v7.8.0"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129855",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129855"
+    },
+    "item_id": "CVE-2026-129855",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector ADJACENT, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129857",
+    "identity": {
+      "title": "CVE-2026-129857",
+      "published": "2026-11-16 14:19:36",
+      "modified": "2026-11-16 19:17:44",
+      "description": "Microsoft jxrlib through 1.1 and the mircomir jxrlib fork before 1.3.1 contain a heap buffer overflow in ReadBinaryData() in jxrgluelib/JXRMeta.c caused by integer overflow of the metadata count. Attackers can supply a JPEG XR file with a count of 0xFFFFFFFE or 0xFFFFFFFF, wrapping PKAlloc(uCount + 2) to an undersized buffer that the following file read overflows, corrupting heap memory in decoding applications."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/mircomir/jxrlib/commit/cb97e6debb5019cfa774f314c230629da05fc746"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-190"
+      ],
+      "cwe_primary": "CWE-190",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-190": "Integer Overflow or Wraparound"
+      }
+    },
+    "software": {
+      "vendors": "Microsoft,mircomir",
+      "products": "jxrlib,jxrlib",
+      "cpe_uris": "cpe:2.3:a:microsoft:jxrlib:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/mircomir/jxrlib/commit/cb97e6debb5019cfa774f314c230629da05fc746",
+      "https://seclists.org/oss-sec/2026/q4/368",
+      "https://github.com/mircomir/jxrlib/blob/1.3.6/README.md#changelog",
+      "https://www.vulncheck.com/advisories/microsoft-jxrlib-through-1.1-heap-buffer-overflow-via-readbinarydata-integer-overflow",
+      "https://github.com/4creators/jxrlib/blob/v2019.10.9/jxrgluelib/JXRMeta.c#L677-L690"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129857",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129857"
+    },
+    "item_id": "CVE-2026-129857",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129868",
+    "identity": {
+      "title": "CVE-2026-129868",
+      "published": "2026-11-16 14:19:28",
+      "modified": "2026-11-16 15:17:24",
+      "description": "Rocboss paopao-ce through 0.6.0-alpha.3 fails to validate the attachment_price field when creating posts, allowing authenticated users to set negative prices on charge attachments. Attackers with two ordinary accounts can download the attachment via GET /v1/attachment, where the negative price increases the buyer's wallet balance, minting funds to purchase other users' paid attachments."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/rocboss/paopao-ce"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-1284"
+      ],
+      "cwe_primary": "CWE-1284",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-1284": "Improper Validation of Specified Quantity in Input"
+      }
+    },
+    "software": {
+      "vendors": "rocboss",
+      "products": "paopao-ce",
+      "cpe_uris": "cpe:2.3:a:rocboss:paopao-ce:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vul.yulun.ac.cn/20261116/paopao-ce/",
+      "https://github.com/rocboss/paopao-ce",
+      "https://github.com/rocboss/paopao-ce/blob/v0.6.0-alpha.3/internal/dao/jinzhu/wallet.go#L101-L117",
+      "https://www.vulncheck.com/advisories/rocboss-paopao-ce-through-0.6.0-alpha.3-wallet-balance-minting-via-negative-attachment-price",
+      "https://github.com/rocboss/paopao-ce/blob/v0.6.0-alpha.3/internal/servants/web/priv.go#L890-L900"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129868",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129868"
+    },
+    "item_id": "CVE-2026-129868",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche community/social platform with economic manipulation flaw; lacks enterprise or DPI sector footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129870",
+    "identity": {
+      "title": "CVE-2026-129870",
+      "published": "2026-11-16 14:19:27",
+      "modified": "2026-11-16 19:17:45",
+      "description": "Rocboss paopao-ce 0.2.0 through 0.6.0-alpha.3 contains a path traversal vulnerability in LocalOSS DeleteObject that allows authenticated users to delete arbitrary files by submitting crafted media values. Attackers can send dot-dot-slash sequences in the avatar or media content to POST /v1/user/avatar or POST /v1/post/comment, deleting server-writable files including configuration and data."
+    },
+    "cvss": {
+      "base_score": 8.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/rocboss/paopao-ce/blob/v0.6.0-alpha.3/internal/dao/storage/localoss.go#L149-L151"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "rocboss",
+      "products": "paopao-ce",
+      "cpe_uris": "cpe:2.3:a:rocboss:paopao-ce:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/rocboss/paopao-ce/blob/v0.6.0-alpha.3/internal/dao/storage/localoss.go#L149-L151",
+      "https://github.com/rocboss/paopao-ce",
+      "https://github.com/rocboss/paopao-ce/blob/v0.6.0-alpha.3/internal/servants/web/core.go#L361-L371",
+      "https://www.vulncheck.com/advisories/rocboss-paopao-ce-0.2.0-through-0.6.0-alpha.3-path-traversal-in-localoss-file-deletion",
+      "https://vul.yulun.ac.cn/20261116/paopao-ce/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129870",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129870"
+    },
+    "item_id": "CVE-2026-129870",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche community platform with path traversal; consumer-only footprint without enterprise or DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129878",
+    "identity": {
+      "title": "CVE-2026-129878",
+      "published": "2026-11-16 14:19:21",
+      "modified": "2026-11-16 19:17:45",
+      "description": "DeepAudit 2.0.0-beta.1 through 3.8.0 contains an HTML injection vulnerability in ReportGenerator.generate_task_report that allows registered users to read server files and perform SSRF. Attackers can create a project whose name contains a link attachment element and download the task PDF report to retrieve local files or internal network responses."
+    },
+    "cvss": {
+      "base_score": 7.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/services/report_generator.py#L489-L499"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cwe_primary": "CWE-918",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-918": "Server-Side Request Forgery (SSRF)"
+      }
+    },
+    "software": {
+      "vendors": "lintsinghua",
+      "products": "DeepAudit",
+      "cpe_uris": "cpe:2.3:a:lintsinghua:deepaudit:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/deepaudit-2.0.0-beta.1-through-3.8.0-file-read-and-ssrf-via-pdf-report-subtitle",
+      "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/services/report_generator.py#L489-L499",
+      "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/services/report_generator.py#L454-L466",
+      "https://vul.yulun.ac.cn/20261106/deepaudit/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129878",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129878"
+    },
+    "item_id": "CVE-2026-129878",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Requires authentication in a niche audit tool with no active exploitation or broad enterprise footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129879",
+    "identity": {
+      "title": "CVE-2026-129879",
+      "published": "2026-11-16 14:19:20",
+      "modified": "2026-11-16 20:19:02",
+      "description": "DeepAudit 2.0.0-beta.1 through 3.8.0 contains a path traversal vulnerability that allows authenticated users to write arbitrary files by importing projects with crafted IDs. Attackers can set absolute or ../ project IDs via /api/v1/database/import, then upload ZIPs through /api/v1/scan/upload-zip following cloned symlinks to overwrite app/main.py for remote code execution."
+    },
+    "cvss": {
+      "base_score": 8.8,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/api/v1/endpoints/database.py#L202-L251"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "lintsinghua",
+      "products": "DeepAudit",
+      "cpe_uris": "cpe:2.3:a:lintsinghua:deepaudit:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/api/v1/endpoints/database.py#L202-L251",
+      "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/services/zip_storage.py#L22-L48",
+      "https://www.vulncheck.com/advisories/deepaudit-2.0.0-beta.1-through-3.8.0-path-traversal-via-upload-zip-project-id",
+      "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/api/v1/endpoints/scan.py#L230-L268",
+      "https://vul.yulun.ac.cn/20261106/deepaudit/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129879",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129879"
+    },
+    "item_id": "CVE-2026-129879",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Requires authentication in a niche audit tool with no active exploitation or broad enterprise footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129880",
+    "identity": {
+      "title": "CVE-2026-129880",
+      "published": "2026-11-16 14:19:20",
+      "modified": "2026-11-16 15:17:27",
+      "description": "DeepAudit 2.0.0-beta.5 through 3.8.0 contains a server-side request forgery vulnerability that allows registered users to leak server-wide GitLab or Gitea tokens via repository_url. Attackers can create a gitlab or gitea project pointing to a controlled host and request its branches to capture the operator's token and reach internal hosts."
+    },
+    "cvss": {
+      "base_score": 8.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "CHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/services/scanner.py#L122-L152"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "cwe_primary": "CWE-918",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-918": "Server-Side Request Forgery (SSRF)"
+      }
+    },
+    "software": {
+      "vendors": "lintsinghua",
+      "products": "DeepAudit",
+      "cpe_uris": "cpe:2.3:a:lintsinghua:deepaudit:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/deepaudit-2.0.0-beta.5-through-3.8.0-ssrf-via-project-branch-listing-leaks-git-tokens",
+      "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/services/scanner.py#L122-L152",
+      "https://vul.yulun.ac.cn/20261106/deepaudit/",
+      "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/api/v1/endpoints/projects.py#L720-L760",
+      "https://github.com/lintsinghua/DeepAudit/blob/9aa46568f20b2ab2dbc1878a4479392012c1230a/backend/app/utils/repo_utils.py#L38-L68"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129880",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129880"
+    },
+    "item_id": "CVE-2026-129880",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Requires authentication in a niche audit tool with no active exploitation or broad enterprise footprint.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129888",
+    "identity": {
+      "title": "CVE-2026-129888",
+      "published": "2026-11-16 14:19:14",
+      "modified": "2026-11-16 15:17:28",
+      "description": "Cetmix Tower through 17.0.3.0.0 and 18.0 before 18.0.4.0.1 contains an improper SSH host key verification vulnerability in SSHConnection.connect() that falls back to Paramiko's AutoAddPolicy when no host key is pinned. On-path attackers using ARP or DNS spoofing can present their own host key during Skip Host Key or Get from Host connections to capture stored SSH passwords and tamper with commands and files."
+    },
+    "cvss": {
+      "base_score": 7.6,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/cetmix/cetmix-tower/security/advisories/GHSA-q88c-38jh-8936"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "adjacent, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-295"
+      ],
+      "cwe_primary": "CWE-295",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-295": "Improper Certificate Validation"
+      }
+    },
+    "software": {
+      "vendors": "Cetmix",
+      "products": "Cetmix Tower",
+      "cpe_uris": "cpe:2.3:a:ansible:tower:*:*:*:*:*:*:*:*,cpe:2.3:a:ansible:tower:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/cetmix-tower-through-17.0.3.0.0-and-18.0-before-18.0.4.0.1-improper-ssh-host-key-verification",
+      "https://github.com/cetmix/cetmix-tower/security/advisories/GHSA-q88c-38jh-8936",
+      "https://github.com/cetmix/cetmix-tower/pull/515",
+      "https://github.com/cetmix/cetmix-tower/blob/ce7715e7b9f2046ae86f54d1f4b4f2eab2499b0f/cetmix_tower_server/ssh/ssh.py#L91-L120",
+      "https://github.com/cetmix/cetmix-tower/commit/3665d4cc324cefbe0d00109e0031a586d5fad5e7"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129888",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129888"
+    },
+    "item_id": "CVE-2026-129888",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector ADJACENT, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129690",
+    "identity": {
+      "title": "CVE-2026-129690",
+      "published": "2026-11-16 13:09:44",
+      "modified": "2026-11-16 14:17:07",
+      "description": "The\nvulnerability enables any attacker with admin access to dump credentials of all\naccounts stored on the device, which can then be reused for lateral movement or\nfurther compromise. Since\npasswords are stored or processed in a recoverable format, this represents a\ncritical failure in secure credential handling."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.barox.ch/advisories/detail?nr=BSEC-ADV-2026-0001"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-200",
+        "CWE-257"
+      ],
+      "cwe_primary": "CWE-200",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-200": "Exposure of Sensitive Information to an Unauthorized Actor",
+        "CWE-257": "Storing Passwords in a Recoverable Format"
+      }
+    },
+    "software": {
+      "vendors": "barox Kommunikation GmbH,barox Kommunikation AG",
+      "products": "RY-GSP22-26/370,RY-LGSP23-10G",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://security.barox.ch/advisories/detail?nr=BSEC-ADV-2026-0001",
+      "https://www.cirosec.de/sa/sa-2026-010"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129690",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129690"
+    },
+    "item_id": "CVE-2026-129690",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Requires admin access on an unnamed device with no enterprise or DPI sector context, lacking sufficient signal for relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111559",
+    "identity": {
+      "title": "CVE-2026-111559",
+      "published": "2026-11-16 12:23:00",
+      "modified": "2026-11-16 16:17:48",
+      "description": "Batflat CMS does not sanitize data passed to the /contact endpoint. A remote unauthenticated attacker can send a POST request with a crafted message, causing arbitrary PHP code execution with www-data user privileges.\n\n\nThe project is no longer maintained and the issue has not been fixed."
+    },
+    "cvss": {
+      "base_score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "Critical"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Tymbark7372/CVE-2026-111559"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-1336"
+      ],
+      "cwe_primary": "CWE-1336",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-1336": "Improper Neutralization of Special Elements Used in a Template Engine"
+      }
+    },
+    "software": {
+      "vendors": "sruupl",
+      "products": "Batflat",
+      "cpe_uris": "cpe:2.3:a:batflat:batflat:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://cert.pl/en/posts/2026/11/CVE-2026-111559",
+      "https://github.com/Tymbark7372/CVE-2026-111559"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-111559",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-111559"
+    },
+    "item_id": "CVE-2026-111559",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Consumer/niche CMS with no enterprise or DPI footprint, falling under the consumer-only software drop class despite unauthenticated RCE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-15707",
+    "identity": {
+      "title": "CVE-2026-15707",
+      "published": "2026-11-16 11:54:32",
+      "modified": "2026-11-16 20:37:04",
+      "description": "An uncontrolled search path vulnerability (CWE-427) in statically linked OpenSSL libraries within Netskope Client (stAgentSvc.exe) and Endpoint DLP (epdlp.exe) on Windows allows an authenticated local attacker to execute arbitrary code with elevated SYSTEM privileges. The services retain internal build-time paths referencing a secondary drive location. On Windows systems where default volume permissions allow standard users to create root-level directories on secondary drives, an attacker can place a malicious configuration file (openssl.cnf) that is loaded under the NT AUTHORITY\\SYSTEM context upon service startup or system reboot. Under default operating system permissions, macOS and Linux are not susceptible, and mobile platforms are unaffected."
+    },
+    "cvss": {
+      "base_score": 8.5,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.netskope.com/resources/netskope-resources/netskope-security-advisory-nskpsa-2026-005"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-427"
+      ],
+      "cwe_primary": "CWE-427",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-427": "Uncontrolled Search Path Element"
+      }
+    },
+    "software": {
+      "vendors": "Netskope,Netskope",
+      "products": "Netskope Client,Netskope Endpoint DLP",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "netskope:netskope client",
+          "vendor": "Netskope",
+          "product": "Netskope Client",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://www.netskope.com/resources/netskope-resources/netskope-security-advisory-nskpsa-2026-005"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15707",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-15707"
+    },
+    "item_id": "CVE-2026-15707",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21176",
+    "identity": {
+      "title": "CVE-2026-21176",
+      "published": "2026-11-16 11:46:54",
+      "modified": "2026-11-16 14:17:08",
+      "description": "Unquoted search path or element in Samsung Device Care prior to version 4.0.80 allows local attackers to execute arbitrary code."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.samsungmobile.com/serviceWeb.smsb?year=2026&month=11"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [],
+      "cwe_primary": null,
+      "cwe_family": null,
+      "cwe_names": {}
+    },
+    "software": {
+      "vendors": "Samsung Mobile",
+      "products": "Samsung Device Care",
+      "cpe_uris": "cpe:2.3:o:samsung:samsung_mobile:4.0.80:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://security.samsungmobile.com/serviceWeb.smsb?year=2026&month=11"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21176",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21176"
+    },
+    "item_id": "CVE-2026-21176",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21175",
+    "identity": {
+      "title": "CVE-2026-21175",
+      "published": "2026-11-16 11:46:53",
+      "modified": "2026-11-16 14:17:08",
+      "description": "Incorrect permission assignment for critical resource in Samsung Update prior to version 3.0.111.0 allows local attackers to execute arbitrary code."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.samsungmobile.com/serviceWeb.smsb?year=2026&month=11"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [],
+      "cwe_primary": null,
+      "cwe_family": null,
+      "cwe_names": {}
+    },
+    "software": {
+      "vendors": "Samsung Mobile",
+      "products": "Samsung Update",
+      "cpe_uris": "cpe:2.3:o:samsung:samsung_mobile:3.0.111.0:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://security.samsungmobile.com/serviceWeb.smsb?year=2026&month=11"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21175",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21175"
+    },
+    "item_id": "CVE-2026-21175",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21167",
+    "identity": {
+      "title": "CVE-2026-21167",
+      "published": "2026-11-16 11:46:45",
+      "modified": "2026-11-16 12:17:57",
+      "description": "Binding to an unrestricted IP address in Smart Switch prior to version 3.7.74.7 allows adjacent attackers to bypass authentication. User interaction is required for triggering this vulnerability."
+    },
+    "cvss": {
+      "base_score": 8.6,
+      "severity": "HIGH",
+      "attack_vector": "ADJACENT",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.samsungmobile.com/serviceWeb.smsb?year=2026&month=11"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "ADJACENT",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "adjacent, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [],
+      "cwe_primary": null,
+      "cwe_family": null,
+      "cwe_names": {}
+    },
+    "software": {
+      "vendors": "Samsung Mobile",
+      "products": "Smart Switch",
+      "cpe_uris": "cpe:2.3:a:samsung:smart_switch:3.7.74.7:*:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "samsung mobile:smart switch",
+          "vendor": "Samsung Mobile",
+          "product": "Smart Switch",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://security.samsungmobile.com/serviceWeb.smsb?year=2026&month=11"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21167",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21167"
+    },
+    "item_id": "CVE-2026-21167",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector ADJACENT, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21153",
+    "identity": {
+      "title": "CVE-2026-21153",
+      "published": "2026-11-16 11:46:28",
+      "modified": "2026-11-16 14:17:07",
+      "description": "Stack-based buffer overflow in libsecuibc.so prior to SMR Nov-2026 Release 1 allows local attackers to execute arbitrary code."
+    },
+    "cvss": {
+      "base_score": 7.4,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "HIGH",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=11"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [],
+      "cwe_primary": null,
+      "cwe_family": null,
+      "cwe_names": {}
+    },
+    "software": {
+      "vendors": "Samsung Mobile",
+      "products": "Samsung Mobile Devices",
+      "cpe_uris": "cpe:2.3:o:samsung:android:14.0:smr-nov-2026-r1:*:*:*:*:*:*,cpe:2.3:o:samsung:android:15.0:smr-nov-2026-r1:*:*:*:*:*:*,cpe:2.3:o:samsung:android:16.0:smr-nov-2026-r1:*:*:*:*:*:*,cpe:2.3:o:samsung:android:17.0:smr-nov-2026-r1:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "samsung mobile:samsung mobile devices",
+          "vendor": "Samsung Mobile",
+          "product": "Samsung Mobile Devices",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=11"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21153",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21153"
+    },
+    "item_id": "CVE-2026-21153",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21152",
+    "identity": {
+      "title": "CVE-2026-21152",
+      "published": "2026-11-16 11:46:27",
+      "modified": "2026-11-16 14:17:07",
+      "description": "Improper input validation in libMyFilterPlugin.camera.samsung.so prior to SMR Nov-2026 Release 1 allows local attackers to potentially execute arbitrary code. User interaction is required for triggering this vulnerability."
+    },
+    "cvss": {
+      "base_score": 7.0,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "ACTIVE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=11"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "ACTIVE",
+      "summary": "local, privileges: LOW, user interaction: ACTIVE"
+    },
+    "weakness": {
+      "cwe_ids": [],
+      "cwe_primary": null,
+      "cwe_family": null,
+      "cwe_names": {}
+    },
+    "software": {
+      "vendors": "Samsung Mobile",
+      "products": "Samsung Mobile Devices",
+      "cpe_uris": "cpe:2.3:o:samsung:android:14.0:smr-nov-2026-r1:*:*:*:*:*:*,cpe:2.3:o:samsung:android:15.0:smr-nov-2026-r1:*:*:*:*:*:*,cpe:2.3:o:samsung:android:16.0:smr-nov-2026-r1:*:*:*:*:*:*,cpe:2.3:o:samsung:android:17.0:smr-nov-2026-r1:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "samsung mobile:samsung mobile devices",
+          "vendor": "Samsung Mobile",
+          "product": "Samsung Mobile Devices",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=11"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21152",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21152"
+    },
+    "item_id": "CVE-2026-21152",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-21151",
+    "identity": {
+      "title": "CVE-2026-21151",
+      "published": "2026-11-16 11:46:25",
+      "modified": "2026-11-16 14:17:07",
+      "description": "Improper privilege management in TransitionPlayer prior to SMR Nov-2026 Release 1 allows local privileged attackers to execute arbitrary code with launcher privilege."
+    },
+    "cvss": {
+      "base_score": 8.3,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "scope": null,
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=11"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "HIGH",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: HIGH, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [],
+      "cwe_primary": null,
+      "cwe_family": null,
+      "cwe_names": {}
+    },
+    "software": {
+      "vendors": "Samsung Mobile",
+      "products": "Samsung Mobile Devices",
+      "cpe_uris": "cpe:2.3:o:samsung:android:14.0:smr-nov-2026-r1:*:*:*:*:*:*,cpe:2.3:o:samsung:android:15.0:smr-nov-2026-r1:*:*:*:*:*:*,cpe:2.3:o:samsung:android:16.0:smr-nov-2026-r1:*:*:*:*:*:*,cpe:2.3:o:samsung:android:17.0:smr-nov-2026-r1:*:*:*:*:*:*",
+      "software_map": [
+        {
+          "key": "samsung mobile:samsung mobile devices",
+          "vendor": "Samsung Mobile",
+          "product": "Samsung Mobile Devices",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://security.samsungmobile.com/securityUpdate.smsb?year=2026&month=11"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21151",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-21151"
+    },
+    "item_id": "CVE-2026-21151",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-67250",
+    "identity": {
+      "title": "CVE-2026-67250",
+      "published": "2026-11-16 11:26:11",
+      "modified": "2026-11-16 21:17:30",
+      "description": "A local privilege escalation (LPE) vulnerability in Pebble’s installers could allow a local attacker with low privilege access to place a malicious Dynamic Link Library (DLL) where a privileged executable file will load it."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-163/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: LOW, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [],
+      "cwe_primary": null,
+      "cwe_family": null,
+      "cwe_names": {}
+    },
+    "software": {
+      "vendors": "Creative Labs,Creative Labs,Creative Labs,Creative Labs,Creative Labs",
+      "products": "Creative Pebble V3,Creative Pebble Nova,Creative Pebble Pro,Creative Pebble X,Creative Pebble X Plus",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-163/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-67250",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-67250"
+    },
+    "item_id": "CVE-2026-67250",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-63245",
+    "identity": {
+      "title": "CVE-2026-63245",
+      "published": "2026-11-16 11:05:58",
+      "modified": "2026-11-16 21:17:29",
+      "description": "A local privilege escalation (LPE) vulnerability in the Audigy Rx driver’s Emupia2k.sys file could allow a local attacker with low privilege access to gain higher privileges, such as administrator rights."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": null,
+      "percentile": null,
+      "date": null
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-163/"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: LOW, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [],
+      "cwe_primary": null,
+      "cwe_family": null,
+      "cwe_names": {}
+    },
+    "software": {
+      "vendors": "Creative Labs",
+      "products": "Sound Blaster Audigy 5/Rx driver",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-163/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-63245",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-63245"
+    },
+    "item_id": "CVE-2026-63245",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-102448",
+    "identity": {
+      "title": "CVE-2026-102448",
+      "published": "2026-11-16 09:35:33",
+      "modified": "2026-11-16 15:17:07",
+      "description": "A vulnerability has been identified in Rexroth IndraWorks. This flaw allows an attacker to execute arbitrary code on the user’s system by parsing a manipulated file, because the file parser fails to properly sanitize the path name(s) or references embedded in the manipulated file. Exploitation requires user interaction, specifically opening a specially crafted file, which then causes the application to traverse outside the target directory and to write files in unauthorized locations, eventually enabling Remote Code Execution (RCE). This can lead to a complete compromise of the system running Rexroth IndraWorks."
+    },
+    "cvss": {
+      "base_score": 7.8,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00247,
+      "percentile": 0.16139,
+      "date": "2026-11-16"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://psirt.bosch.com/security-advisories/BOSCH-SA-591522.html"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "total",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "REQUIRED",
+      "summary": "local, privileges: NONE, user interaction: REQUIRED"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "cwe_primary": "CWE-22",
+      "cwe_family": "Path Traversal",
+      "cwe_names": {
+        "CWE-22": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    },
+    "software": {
+      "vendors": "Bosch Rexroth,Bosch Rexroth",
+      "products": "IndraWorks,OPC DA Client",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://psirt.bosch.com/security-advisories/BOSCH-SA-591522.html"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-102448",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-102448"
+    },
+    "item_id": "CVE-2026-102448",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124672",
+    "identity": {
+      "title": "CVE-2026-124672",
+      "published": "2026-11-16 08:27:56",
+      "modified": "2026-11-16 12:17:47",
+      "description": "The Burst Statistics WordPress plugin before 3.7.5 does not verify that a request is actually being routed to its own REST API before unloading every other active plugin for that request, allowing unauthenticated attackers to have requests processed with other plugins' protections (such as REST access restrictions, hidden login pages and two-factor authentication) switched off, and to cause other plugins' scheduled tasks to be discarded."
+    },
+    "cvss": {
+      "base_score": 7.3,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "LOW",
+      "integrity_impact": "LOW",
+      "availability_impact": "LOW",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00277,
+      "percentile": 0.20413,
+      "date": "2026-11-16"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://wpscan.com/vulnerability/9ed32c00-5685-42a4-8eb9-4aef8c18eaba/"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "yes",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "cwe_primary": "CWE-20",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-20": "Improper Input Validation"
+      }
+    },
+    "software": {
+      "vendors": "Unknown",
+      "products": "Burst Statistics",
+      "cpe_uris": "cpe:2.3:a:burst-statistics:burst_statistics:*:*:*:*:*:wordpress:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://wpscan.com/vulnerability/9ed32c00-5685-42a4-8eb9-4aef8c18eaba/"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124672",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-124672"
+    },
+    "item_id": "CVE-2026-124672",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Consumer WordPress plugin with no enterprise or DPI footprint; explicitly excluded by overlay drop rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-105925",
+    "identity": {
+      "title": "CVE-2026-105925",
+      "published": "2026-11-16 07:24:55",
+      "modified": "2026-11-16 21:17:17",
+      "description": "A denial of service vulnerability in the Qt QXmlSimpleReader class of the Qt 5 Core Compatibility APIs module (Qt 6) and the Qt XML module (Qt 5)."
+    },
+    "cvss": {
+      "base_score": 8.2,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "scope": null,
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "NONE",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00129,
+      "percentile": 0.02552,
+      "date": "2026-11-16"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": false,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://codereview.qt-project.org/c/qt/qt5compat/+/761591"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "NONE",
+      "user_interaction": "PASSIVE",
+      "summary": "local, privileges: NONE, user interaction: PASSIVE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-776"
+      ],
+      "cwe_primary": "CWE-776",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-776": "Improper Restriction of Recursive Entity References in DTDs ('XML Entity Expansion')"
+      }
+    },
+    "software": {
+      "vendors": "qt",
+      "products": "qt",
+      "cpe_uris": null,
+      "software_map": [
+        {
+          "key": "qt:qt",
+          "vendor": "Qt",
+          "product": "Qt",
+          "source": "cna_vendor_product",
+          "sample_cpe": null,
+          "category": null,
+          "platform": null,
+          "surface": null,
+          "tags": null
+        }
+      ]
+    },
+    "references": [
+      "https://codereview.qt-project.org/c/qt/qt5compat/+/761591",
+      "https://codereview.qt-project.org/c/qt/qt5compat/+/768372",
+      "https://codereview.qt-project.org/c/qt/qt5compat/+/777950",
+      "https://www.qt.io/security-advisories?search=CVE-2026-105925",
+      "https://codereview.qt-project.org/c/qt/qt5compat/+/768810"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105925",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-105925"
+    },
+    "item_id": "CVE-2026-105925",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129606",
+    "identity": {
+      "title": "CVE-2026-129606",
+      "published": "2026-11-16 05:43:47",
+      "modified": "2026-11-16 21:17:28",
+      "description": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') vulnerability in Samsung Open Source mTower allows Overflow Buffers."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "LOCAL",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "NONE",
+      "integrity_impact": "HIGH",
+      "availability_impact": "HIGH",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00135,
+      "percentile": 0.03011,
+      "date": "2026-11-16"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/Samsung/mTower/pull/254"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "LOCAL",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "local, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-120"
+      ],
+      "cwe_primary": "CWE-120",
+      "cwe_family": "Memory Corruption",
+      "cwe_names": {
+        "CWE-120": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+      }
+    },
+    "software": {
+      "vendors": "Samsung Open Source",
+      "products": "mTower",
+      "cpe_uris": null,
+      "software_map": []
+    },
+    "references": [
+      "https://github.com/Samsung/mTower/pull/254"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129606",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129606"
+    },
+    "item_id": "CVE-2026-129606",
+    "_relevance": {
+      "keep": false,
+      "score": 0.0,
+      "primary_pir": "none",
+      "reason": "barrier_gate: attack vector LOCAL, no exploitation signal",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129539",
+    "identity": {
+      "title": "CVE-2026-129539",
+      "published": "2026-11-16 01:50:50",
+      "modified": "2026-11-16 19:17:43",
+      "description": "SSCMS 7.2.0 through 7.4.0 contains an arbitrary file read vulnerability that allows any registered user-center account to copy server files by supplying source paths to the layerImageUpload endpoint. Attackers can send siteId 0 with crafted filePaths entries to copy configuration files into their public sitefiles/home upload directory and download them anonymously."
+    },
+    "cvss": {
+      "base_score": 7.1,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.0026,
+      "percentile": 0.17841,
+      "date": "2026-11-16"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": false,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": false,
+      "has_github_exploit": false,
+      "top_reference_url": "https://github.com/siteserver/cms/blob/09ab59b9dd422782d9e1fe54f05088645f7c93e7/src/SSCMS.Web/Controllers/Home/Common/Form/LayerImageUploadController.Submit.cs#L114-L130"
+    },
+    "ssvc": {
+      "exploitation": "none",
+      "automatable": "no",
+      "technical_impact": "partial",
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "LOW",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: LOW, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-73"
+      ],
+      "cwe_primary": "CWE-73",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-73": "External Control of File Name or Path"
+      }
+    },
+    "software": {
+      "vendors": "siteserver",
+      "products": "SSCMS",
+      "cpe_uris": "cpe:2.3:a:sscms:siteserver_cms:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://www.vulncheck.com/advisories/sscms-7.2.0-through-7.4.0-arbitrary-file-read-via-layerimageupload-endpoint",
+      "https://vul.yulun.ac.cn/20261114/siteserver-cms/",
+      "https://github.com/siteserver/cms/blob/09ab59b9dd422782d9e1fe54f05088645f7c93e7/src/SSCMS.Web/Controllers/Home/Common/Form/LayerImageUploadController.Submit.cs#L114-L130",
+      "https://github.com/siteserver/cms/issues/3909"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129539",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129539"
+    },
+    "item_id": "CVE-2026-129539",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Generic CMS (SSCMS) arbitrary file read requiring registered account; no explicit DPI or enterprise footprint evidenced.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129493",
+    "identity": {
+      "title": "CVE-2026-129493",
+      "published": "2026-11-16 00:00:37",
+      "modified": "2026-11-16 20:19:01",
+      "description": "Bolo (bolo-solo) 1.7 through 2.6.4 contains an information disclosure vulnerability that allows unauthenticated attackers to read article view passwords via the public GET /articles endpoint. Attackers can retrieve the plaintext articleViewPwd field returned by ArticleProcessor.getArticlesByPage and submit it to read password-protected article content."
+    },
+    "cvss": {
+      "base_score": 8.7,
+      "severity": "HIGH",
+      "attack_vector": "NETWORK",
+      "attack_complexity": "LOW",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "scope": "UNCHANGED",
+      "confidentiality_impact": "HIGH",
+      "integrity_impact": "NONE",
+      "availability_impact": "NONE",
+      "band": "High"
+    },
+    "epss": {
+      "score": 0.00484,
+      "percentile": 0.42229,
+      "date": "2026-11-16"
+    },
+    "exploitation": {
+      "wild_exploited": false,
+      "wild_exploited_sources": [],
+      "wild_exploited_by_vulncheck_kev": false,
+      "vulncheck_kev_date_added": null,
+      "vulncheck_evidence_count": null,
+      "vulncheck_exploit_repo_count": null,
+      "wild_exploited_by_cisa_kev": false,
+      "cisa_kev_date_added": null,
+      "wild_exploited_by_cisa": false,
+      "has_exploit_bulletin": true,
+      "has_exploit_reference": true,
+      "has_public_exploit_provider": true,
+      "has_github_exploit": true,
+      "top_reference_url": "https://github.com/bolo-blog/bolo-solo/issues/331"
+    },
+    "ssvc": {
+      "exploitation": null,
+      "automatable": null,
+      "technical_impact": null,
+      "poc": false
+    },
+    "barriers": {
+      "attack_vector": "NETWORK",
+      "privileges_required": "NONE",
+      "user_interaction": "NONE",
+      "summary": "network, privileges: NONE, user interaction: NONE"
+    },
+    "weakness": {
+      "cwe_ids": [
+        "CWE-201"
+      ],
+      "cwe_primary": "CWE-201",
+      "cwe_family": null,
+      "cwe_names": {
+        "CWE-201": "Insertion of Sensitive Information Into Sent Data"
+      }
+    },
+    "software": {
+      "vendors": "bolo-blog",
+      "products": "bolo-solo",
+      "cpe_uris": "cpe:2.3:a:adlered:bolo-solo:*:*:*:*:*:*:*:*",
+      "software_map": []
+    },
+    "references": [
+      "https://vul.yulun.ac.cn/20261115/bolo-solo/",
+      "https://www.vulncheck.com/advisories/bolo-bolo-solo-1.7-through-2.6.4-article-password-disclosure-via-articles",
+      "https://github.com/bolo-blog/bolo-solo/issues/331",
+      "https://github.com/bolo-blog/bolo-solo/blob/e0ab6b1f57a4ba66b4a42a7b6ceafb87c33290cc/src/main/java/org/b3log/solo/processor/ArticleProcessor.java#L442-L478"
+    ],
+    "sources": {
+      "vulners_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129493",
+      "nvd_href": "https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2026-129493"
+    },
+    "item_id": "CVE-2026-129493",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Personal blog/CMS platform (Bolo) with low-impact information disclosure; consumer-only software with no DPI footprint.",
+      "fail_open": false
+    }
+  }
+]

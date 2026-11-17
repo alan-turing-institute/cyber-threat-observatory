@@ -1,0 +1,274 @@
+[
+  {
+    "id": "CVE-2026-130071",
+    "published": "2026-11-16 22:00:04",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "TridotsTech go1cms master branch through commit 7f68d05 and version-3 branch before commit ead8da3 contains a missing authentication vulnerability in the guest-whitelisted update_doc method that allows unauthenticated attackers to modify any document. Attackers can supply a doctype, name and arbitrary fields that are saved with ignore_permissions=True, altering User records to escalate privileges, take over accounts or tamper with business data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Generic CMS/ERP software with auth bypass, not identity/access infrastructure; consumer/hobbyist exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129941",
+    "published": "2026-11-16 15:06:14",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Prime CMS (@primecms/core) through 0.4.0-beta.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to register accounts via the createUser mutation on /prime/graphql. Because the isAuthenticated() guard has its check commented out and createAbility() hard-codes every role to admin, attackers can log in with full administrative control over content, users, webhooks and settings.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Headless CMS software, not identity/access infrastructure; consumer/hobbyist exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-130072",
+    "published": "2026-11-16 22:00:04",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to rename files by sending PUT /rename requests handled before authentication middleware. Attackers can supply absolute or ../ paths in the from and to arrays to move any file the Node.js process can access outside the configured root, causing data loss or denial of service.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Web file manager software, not identity/access infrastructure; consumer/hobbyist exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129855",
+    "published": "2026-11-16 14:19:37",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "RedAmon before 7.8.0 contains a missing authentication vulnerability in the kali-sandbox terminal server that allows unauthenticated attackers to obtain a root shell by connecting to its WebSocket listener on port 8016. Attackers who can reach the port from co-resident containers or the host loopback can send keystrokes to an interactive /bin/bash session, executing commands as root inside the kali-sandbox container.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche Linux security tool, not enterprise identity/access infrastructure; consumer/hobbyist exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129494",
+    "published": "2026-11-16 00:00:36",
+    "cvss": 8.7,
+    "epss": 0.00403,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "CloudPaste 1.1.0 through 1.9.1 contains an information disclosure vulnerability that allows unauthenticated attackers to obtain WebDAV storage credentials through the unauthenticated /api/proxy/link endpoint. Attackers who know a public share slug can retrieve the Basic Authorization header containing the WebDAV username and password, then read, modify, or delete files on the WebDAV server.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "File-sharing application with credential info-leak; no direct authentication bypass mechanism, falls under info-leak exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129877",
+    "published": "2026-11-16 14:19:22",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "DeepAudit 2.0.0-beta.1 through 3.8.0 contains an information disclosure vulnerability that allows unauthenticated attackers to retrieve server secrets through the /api/v1/config/defaults endpoint. Attackers can send a GET request to obtain the operator's LLM provider API keys and GitHub or GitLab tokens, then abuse those services and accessible repositories.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "AI auditing tool with API key info-leak; no authentication/access-control bypass, falls under info-leak exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76823",
+    "published": "2026-11-16 21:03:35",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260706.0, the logsWorkerConfig GraphQL query is authorized with the broad CONNECTORAPI capability and returns Elasticsearch connection details including elasticsearch_username, elasticsearch_password, elasticsearch_api_key, the URL, index, proxy, and TLS-verification setting. A holder of any connector API bearer token can retrieve this credential material. If the returned credentials are valid and Elasticsearch is reachable, the caller can directly read, modify, or delete OpenCTI indices and audit history outside application-layer role, marking, organization, and audit controls, with the practical impact bounded by the credentials' privileges and network reachability. This issue is fixed in version 7.260706.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Cyber threat intelligence platform, not identity/access infrastructure; authorization flaw in application logic rather than core IdAM mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129547",
+    "published": "2026-11-16 11:51:50",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Kalmia through 0.2.0 contains an authentication bypass vulnerability in RsPressMiddleware that allows unauthenticated attackers to access private documentation by supplying any non-empty viewToken cookie. Attackers can send requests with a forged viewToken cookie, which is never validated as a JWT, to read all pages and assets of RequireAuth documentation sites.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Documentation site middleware, not identity/access infrastructure; consumer/hobbyist exclusion applies.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129703",
+    "published": "2026-11-16 08:36:51",
+    "cvss": 7.8,
+    "epss": 0.00312,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In the vulnerability-lookup web application, the authentication decorators for feed-key requests (auth_feedkey_func in website/decorators.py) and API-key requests (auth_func in website/web/api/v1/common.py) called Flask-Login's login_user() function. This caused the HTTP response to a request authenticated solely by a feed key (supplied as the X-FEED-KEY URL parameter) or an API key (supplied as the X-API-KEY header) to set a session cookie that grants full authenticated access to every page in the application, without requiring a password or two-factor authentication.\n\nThe practical impact is that any party possessing a leaked feed URL (a common occurrence, as feed URLs are shared with RSS readers) or an API key could obtain a valid web session for the associated account. This session provides access to the user's account page, which exposes the API key and other profile data, and for accounts with the administrator role, access to the /admin interface, enabling full administrative control of the application.\n\nThe vulnerability affects all users whose feed key or API key is exposed. No prior authentication, user interaction, or special network conditions are required; a single HTTP request with the token is sufficient to establish the session. The session persists until it expires, and because it is not bound to the original credential (a related CWE-613 issue noted by the developers), revoking the feed key or API key does not invalidate the already-created session.\n\nThe fix replaces the login_user() call with assignment to g._login_user, which Flask-Login's current_user property reads for the current request only, without writing any session cookie. The affected views remain unchanged and continue to see the authenticated user for the single request.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche vulnerability-lookup web application with session cookie injection, lacks DPI sector nexus or enterprise identity infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-115563",
+    "published": "2026-11-16 20:24:05",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The Model Context Protocol Python SDK is the official Python SDK for Model Context Protocol servers and clients. From 1.9.1 until 1.30.0 and 2.2.0, OAuth client support in mcp.client.auth can send credentials to an authorization server chosen by an untrusted MCP server. ClientCredentialsOAuthProvider and PrivateKeyJWTOAuthProvider cannot identify the authorization server that owns their credentials. Affected HTTP clients using those providers, OAuthClientProvider, or the deprecated 1.x RFC7523OAuthClientProvider can disclose a client_secret, authorization code, PKCE code_verifier, or signed client assertion. MCP servers, stdio clients, and clients that attach their own tokens or headers are not affected. Interactive OAuthClientProvider use requires a person to start sign-in, while the unattended providers do not. For ClientCredentialsOAuthProvider and PrivateKeyJWTOAuthProvider, callers must configure issuer= after upgrading because omission still follows the MCP server's advertised authorization server, and the deprecated RFC7523OAuthClientProvider must be replaced because it has no issuer option. A stored client registration without an issuer remains unbound after upgrading, so stored OAuth client information must be cleared once to register again or a manually pre-registered record must be updated with its issuer. This issue is fixed in versions 1.30.0 and 2.2.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI/LLM tooling SDK (MCP) with OAuth credential disclosure, explicitly excluded by base DPI identity rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129360",
+    "published": "2026-11-15 03:15:17",
+    "cvss": 7.3,
+    "epss": 0.00411,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in Linux Foundation Magma up to 1.9.0. The impacted element is an unknown function of the file orc8r/cloud/go/services/obsidian/access/operator.go of the component Obsidian REST. Executing a manipulation of the argument X-Magma-Client-Cert-Serial can lead to authentication bypass by spoofing. The attack can be launched remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Telecom core network software (Magma) with certificate spoofing bypass, lacks explicit DPI sector or enterprise identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-129942",
+    "published": "2026-11-16 15:06:14",
+    "cvss": 6.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Prime CMS (@primecms/core) through 0.4.0-beta.0 contains a missing authentication vulnerability that allows unauthenticated attackers to invoke privileged GraphQL mutations because the @Authorized() decorator is omitted. Attackers can call updateWebhook, createRelease, unpublishDocument and updateUser at /prime/graphql to create releases and, with a record UUID, redirect webhooks, unpublish documents, or overwrite user profiles.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Headless CMS software with missing authentication on GraphQL mutations, falls under generic web/CMS exclusion with no DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-69221",
+    "published": "2026-11-16 19:52:34",
+    "cvss": 5.9,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Faust.js is a headless WordPress toolkit. Prior to 1.8.12, the FaustWP generateAuthorizationCode GraphQL mutation called wp_authenticate_username_password and wp_authenticate_email_password directly instead of using wp_authenticate. This bypassed callbacks registered on WordPress's outer authenticate filter, including policies for multifactor authentication, single sign-on, IP allowlists, or disabled accounts. On a site using FaustWP local login and one of those policies, an attacker with a valid username or email and password could obtain an authorization code and exchange it through /api/faust/auth/token for access and refresh tokens even when the normal WordPress login path would deny access. This issue is fixed in version 1.8.12.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress headless toolkit bypassing authentication filters, explicitly excluded by base DPI identity rules for generic WordPress contexts.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-104253",
+    "published": "2026-11-16 21:05:41",
+    "cvss": 5.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260715.0, a ProfileQuery response can expose the user's TOTP MFA secret after activation. A person who can access the profile response can recover the secret, enroll a duplicate authenticator, and generate valid one-time codes, undermining the account's second-factor protection. This issue is fixed in version 7.260715.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Threat intelligence platform exposing TOTP secrets, lacks core identity/access infrastructure role or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-113447",
+    "published": "2026-11-16 12:23:44",
+    "cvss": 5.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "visualTicket is vulnerable to Session Fixation via the symfony session identifier passed in the URL. The application accepts the symfony session ID from the query string and set it as a session cookie in the HTTP response, allowing the browser's active session to be overwritten. This behaviour enables an attacker to fix a session ID for a victim and later hijack the authenticated session.\n\n\n\n\nThis issue was fixed in version 20260817.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Niche ticketing application with session fixation, lacks enterprise identity infrastructure role or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-128841",
+    "published": "2026-11-16 09:03:45",
+    "cvss": 0.0,
+    "epss": 0.0021,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "** UNSUPPORTED WHEN ASSIGNED ** Missing authentication for critical function vulnerability in Apache Griffin Web Service. The REST API does not have any authentication. This includes sensitive endpoints, such as job submission when a Livy/Spark backend is configured. The API must be properly secured on the network level, and this fact was arguably not documented as clearly as it could have.\n\n\n\nThis issue affects Apache Griffin Web Service: all versions.\n\n\n\nAs this project is retired, we do not plan to release a version that fixes this issue. Users are recommended to find an alternative or restrict access to the instance to trusted users.\n\n\n\nNOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Retired data quality framework with missing API authentication, lacks identity/access infrastructure role or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120725",
+    "published": "2026-11-15 21:13:51",
+    "cvss": 0.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "With `REQUIRE_SIGNIN_VIEW = true`, the Git LFS endpoints still answered unauthenticated requests for repositories that are not private. An anonymous client who knows the path of such a repository and the SHA-256 of an LFS object could download the object, and could use the batch endpoint to test whether an object exists. The Git LFS endpoints now require authentication when sign-in is required to view the instance.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in Git LFS version control endpoints lacks a clear identity/access infrastructure role or DPI sector nexus per overlay exclusions.",
+      "fail_open": false
+    }
+  }
+]
