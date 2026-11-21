@@ -1,0 +1,242 @@
+[
+  {
+    "id": "CVE-2026-80188",
+    "published": "2026-11-20 13:34:46",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The BuddyBoss Addons plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in versions up to, and including, 1.2.1. This is due to the Social Login REST endpoint trusting unverified Apple and Facebook identity-token claims and linking an attacker-controlled provider identifier to an existing WordPress user selected by the token’s email claim. This makes it possible for unauthenticated attackers who know a user’s email address to associate their provider identity with that account, including administrator accounts, and subsequently authenticate as the victim. Successful exploitation requires the BuddyBoss Platform plugin to be installed and active, with the Social Login module and selected provider enabled and configured. On sites with the separate BuddyBoss App JWT component, the vulnerable REST request can return an application token immediately.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin with authentication bypass, explicitly excluded as consumer/hobbyist software per overlay hard excludes.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-114516",
+    "published": "2026-11-19 21:48:21",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Etherpad is a real-time collaborative editor. From 1.8.14 until 3.3.3, the pre-authentication /static/* plugin asset handler in src/node/utils/Minify.ts performs a backslash-to-forward-slash conversion after src/node/utils/sanitizePathname.ts has completed its POSIX path checks. On POSIX systems the sanitizer correctly treats backslashes as ordinary filename bytes, but the later conversion turns encoded backslash-separated parent-directory segments into traversal components without revalidation or containment. The expressPreSession registration and the always-present ep_etherpad-lite core pseudo-plugin make this path reachable without credentials, allowing a remote attacker to read any file available to the Etherpad process. Disclosed configuration or environment secrets can expose administrator credentials, after which the administrator plugin installer can provide in-process code execution and full server compromise. This issue is fixed in version 3.3.3.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Pre-authentication path traversal and information disclosure in Etherpad collaborative editor, lacking authentication or access-control impact per overlay excludes.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-96805",
+    "published": "2026-11-20 18:58:14",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The affected products have an unauthenticated command injection, which may allow an in-range BLE device to gain access to write to the control interface and influence braking with no authentication or pairing.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Unauthenticated command injection in automotive BLE braking control, explicitly excluded as vehicle/IoT context per base and overlay rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76536",
+    "published": "2026-11-19 19:55:23",
+    "cvss": 9.4,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Splunk Enterprise versions below 10.4.5, 10.2.9, 10.0.12, and 9.4.17, an unauthenticated user could use an empty clustering shared secret to read and modify clustering configuration through the cluster configuration Representational State Transfer (REST) API endpoint on a standalone instance. This could expose clustering configuration, persist attacker-controlled clustering settings, and disrupt clustering operations.\nThe vulnerability is possible because Splunk Enterprise accepts the empty clustering shared secret as a shared-authentication candidate on a standalone instance when clustering is turned off.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in Splunk Enterprise clustering configuration, lacking direct identity or access-management nexus per overlay criteria.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-22308",
+    "published": "2026-11-19 17:17:06",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The preview mode of the OPC (OnPage Composer) page\nbuilder of JTL-Shop is activated by a request parameter alone and\nrenders page data supplied in the request without checking for an authenticated\nbackend session with the corresponding permission. Several portlet properties\nare output without output encoding. An unauthenticated remote attacker\ncan thereby cause script code to be executed in the browser of a\nvisitor or administrator who opens a crafted link; in the case of an\nadministrator, actions can be performed with the administrator's privileges. Third-party\nplugins whose portlets evaluate property values as templates can\nadditionally be made to execute template code through the same entry point. This is\na separate flaw in such plugins and does not affect the portlets of JTL-Shop itself.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Missing authentication and XSS in JTL-Shop e-commerce page builder, excluded as shop/commerce software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-86130",
+    "published": "2026-11-19 18:28:35",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A missing authentication vulnerability in WatchGuard Dimension's log collection service allows a remote, unauthenticated attacker to execute arbitrary SQL statements and ultimately execute arbitrary code as the Dimension WebUI process user by sending specially crafted network requests.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing authentication leading to RCE in WatchGuard Dimension log service, classified as non-identity security software per overlay excludes.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123058",
+    "published": "2026-11-19 11:48:17",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The web installer of JTL-Shop executes its\nstate-changing installation tasks without checking whether the shop is already\ninstalled, and was not removed or locked after the installation. An unauthenticated\nremote attacker who can reach the installer directory can supply their own\ndatabase credentials, create administrator and synchronisation accounts and\noverwrite the shop configuration. This can lead to a full takeover of\nthe shop, including code execution on the server.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Unauthenticated installer bypass and account creation in JTL-Shop e-commerce platform, excluded as shop software with no DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82339",
+    "published": "2026-11-19 21:03:50",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "IBM Guardium Data Protection 12.2 is vulnerable to missing authentication in the SharePoint S-TAP RelayService, allowing an unauthenticated network attacker to inject forged audit events and access the active monitoring policy.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Missing authentication in IBM Guardium audit relay service, lacking direct identity or access-control infrastructure nexus per overlay criteria.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-120753",
+    "published": "2026-11-19 14:48:18",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Eclipse Ditto versions 1.1.0 to 3.9.8, when pre-authentication is enabled, the gateway service accepts the pre-authenticated subject not only from the `x-ditto-pre-authenticated` HTTP header set by a trusted reverse proxy, but also from an undocumented `x-ditto-pre-authenticated` URL query parameter that a client can set. A reverse proxy that only overwrites the header therefore does not stop clients from supplying their own subject. With the default configuration of the Ditto Helm chart (`global.jwtOnly: false`, which implicitly enables pre-authentication), the bundled nginx skips HTTP Basic authentication for any request with an `Authorization: Bearer` header and forwards it without the pre-authentication header. An unauthenticated remote attacker can send an invalid Bearer token together with the query parameter to authenticate as any chosen policy subject. Pre-authentication succeeds before the JWT is validated, so the attacker can read and modify Things and Policies with that subject's permissions. As a mitigation, disable pre-authentication in the gateway (`ENABLE_PRE_AUTHENTICATION=false`) or, when using the Helm chart, configure `global.jwtOnly: true`.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "IIoT framework gateway pre-auth bypass hits industrial/IoT exclusion for Digital Identity sector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-76535",
+    "published": "2026-11-19 19:55:22",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Splunk Enterprise versions below 10.6.1, 10.4.5, 10.2.9, 10.0.12, and 9.4.17, an unauthenticated user could run arbitrary Search Processing Language (SPL) searches through RapidDiag task collection as an authenticated user. With this access, the user could read or modify data and configuration available to that authenticated user.\nThe vulnerability is possible because Splunk Enterprise accepts an empty shared secret when it authenticates RapidDiag task-collection requests.\nFor more information see Using RapidDiag (https://help.splunk.com/en/splunk-enterprise/administer/troubleshoot/9.3/contact-splunk-support/using-rapiddiag) in the Splunk documentation.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "SIEM diagnostic tool auth bypass lacks core identity/access infrastructure role per overlay exclusions.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-111506",
+    "published": "2026-11-19 13:17:05",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell PowerStore contains a Missing Authentication vulnerability that a network-adjacent attacker could exploit to bypass authentication and authorization, leading to information disclosure and denial of service.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Enterprise storage array missing authentication lacks identity/access infrastructure nexus per overlay exclusions.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-122247",
+    "published": "2026-11-20 16:43:37",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Budibase is an open-source low-code platform. Prior to 3.50.0, the public POST /api/global/users/init endpoint on a self-hosted single-tenant deployment accepts an attacker-controlled tenantId and evaluates checkAnyUserExists() in the selected tenant database instead of the legitimate default tenant. An unauthenticated attacker can select an unused tenant namespace to bypass the one-time initialization guard, causing packages/worker/src/api/controllers/global/users.ts to create a tenant-specific CouchDB database and a global-administrator document without a session or CSRF token. Repeating this operation with unique tenant identifiers can exhaust datastore resources and leave latent privileged records. The created administrator cannot log into the default tenant while multi-tenancy remains disabled, which limits the immediate impact to persistent writes, denial of service, and records that may become usable during later multi-tenant operation or migration. This issue is fixed in versions 3.50.0 and 4.0.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Low-code platform admin account creation bypass lacks core identity/access infrastructure role per overlay exclusions.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-54039",
+    "published": "2026-11-20 20:03:01",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LibreChat is an enhanced ChatGPT clone that supports multiple AI providers. From 0.7.0 until 0.8.6, when local registration is enabled and at least one social provider is configured, POST /api/auth/register passes an unparsed request object into api/server/services/AuthService.js, allowing an unauthenticated attacker to persist a forged provider value for a known victim email. The api/strategies/socialLogin.js email-fallback path then accepts the planted record when the victim signs in because it compares the stored provider name without requiring the provider subject identifier. The victim OAuth session and the attacker local-password session become bound to the same user record, giving the attacker persistent read and write access to data created by the victim. The first-user administrator role is an additional conditional impact only on a fresh deployment. This issue is fixed in version 0.8.6.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "LLM chat interface context triggers the explicit Digital Identity exclusion for LLM tooling despite the OAuth session binding flaw.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82675",
+    "published": "2026-11-20 16:35:11",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to donor account account takeover in all versions up to, and including, 4.17.0. This is due to the plugin not properly validating a donor's identity prior to updating the password of a linked WordPress account. The donation receipt processes an attacker-controlled first name through the V3 template engine and then reprocesses the result through the legacy `{meta_donor_*}` engine, which can disclose the donor's email-access bearer token. The donor-dashboard password endpoint accepts that token by itself and calls `wp_set_password()` for the WordPress user linked to the donor. This makes it possible for unauthenticated attackers to reset the password of any WordPress account linked to a GiveWP donor record and gain access to that account. If the linked account is an administrator, the attacker can achieve full site compromise and remote code execution through standard administrator functionality. A published GiveWP form with a usable gateway, enabled donor email access (enabled by default), knowledge of the donor email address, and an account already linked to the targeted donor record are required. NOTE: This vulnerability can be chained with CVE-2026-82676 to satisfy the administrator donor pre-requisite for a targeted administrator user attack.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin context triggers the explicit consumer/hobbyist exclusion despite the unauthenticated password reset mechanism.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-133089",
+    "published": "2026-11-19 12:10:23",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In JetBrains TeamCity before 2026.2.2, 2026.1.6 the TFS helper process exposed an unauthenticated command server",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "CI/CD platform (TeamCity) with unauthenticated command server lacks an identity/access infrastructure nexus and falls outside DPI scope.",
+      "fail_open": false
+    }
+  }
+]
