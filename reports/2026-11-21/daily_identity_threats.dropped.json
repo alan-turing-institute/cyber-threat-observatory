@@ -1,0 +1,274 @@
+[
+  {
+    "id": "CVE-2026-127027",
+    "published": "2026-11-20 14:42:03",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Poste.io is vulnerable to remote code execution in DMARC report processing. Email sent to dmarc-reports@<domain> is saved without sender verification. Script that runs as root unpacks the attachments using unsafe shell commands, allowing command injection through crafted attachments (e.g. file names or archive contents). A remote unauthenticated attacker who can send an email to the server's port 25 can execute arbitrary commands as root within the Poste.io container.\n\n\nThis issue was fixed in version 2.5.22.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Remote code execution in email server DMARC processing lacks an authentication or identity/access nexus required by the overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-80188",
+    "published": "2026-11-20 13:34:46",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The BuddyBoss Addons plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in versions up to, and including, 1.2.1. This is due to the Social Login REST endpoint trusting unverified Apple and Facebook identity-token claims and linking an attacker-controlled provider identifier to an existing WordPress user selected by the token’s email claim. This makes it possible for unauthenticated attackers who know a user’s email address to associate their provider identity with that account, including administrator accounts, and subsequently authenticate as the victim. Successful exploitation requires the BuddyBoss Platform plugin to be installed and active, with the Social Login module and selected provider enabled and configured. On sites with the separate BuddyBoss App JWT component, the vulnerable REST request can return an application token immediately.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin authentication bypass is explicitly excluded by base Digital Identity and overlay consumer software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-96805",
+    "published": "2026-11-20 18:58:14",
+    "cvss": 9.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The affected products have an unauthenticated command injection, which may allow an in-range BLE device to gain access to write to the control interface and influence braking with no authentication or pairing.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Automotive braking control vulnerability is explicitly excluded by base vehicle and IIoT sector rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-134287",
+    "published": "2026-11-21 16:35:19",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "OpenRemote core before 1.34.0 contains an authentication bypass vulnerability in UserAssetProvisioningMQTTHandler that allows unauthenticated attackers to impersonate provisioned devices without proof of private key possession. Attackers can publish a known device's public certificate to the provisioning request topic, authenticating their anonymous MQTT connection as the device's service account to read and modify assets.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "IoT device provisioning authentication bypass in OpenRemote falls under industrial/IoT exclusions with no public-sector identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-134352",
+    "published": "2026-11-21 16:34:28",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Rclone from 1.51.0 before 1.76.0 contains an authentication bypass vulnerability in serve sftp --auth-proxy because the generateCacheKey cache key omits the authentication method. Attackers knowing a victim's base64 public key can submit it as a password from the same client IP to reuse the cached entry and gain read-write VFS access.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in Rclone SFTP serve mode lacks a DPI-relevant identity or access infrastructure role.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-124626",
+    "published": "2026-11-21 17:01:36",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "@fastify/express is a compatibility layer that lets Express middleware run inside the Fastify web framework. In versions 4.0.5 through 4.0.9, the plugin matches path-scoped Express middleware with a matcher that requires a non-empty value for a dynamic segment, while Fastify's router accepts an empty parameter or wildcard value. When a route and an Express middleware mount share a dynamic pattern, a request with an empty segment matches the Fastify route and runs the handler while the middleware mounted on that pattern is skipped, so on a scoped mount an unauthenticated request can reach a protected handler. No special configuration is required, and the practical impact depends on what the empty value selects in the application. The issue is fixed in @fastify/express 4.0.10, and users should upgrade to 4.0.10 or later.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Web framework routing bypass in @fastify/express lacks a specific identity or access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-133867",
+    "published": "2026-11-21 16:59:29",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "@fastify/express is a compatibility layer that lets Express middleware run inside the Fastify web framework. In versions 4.0.7 through 4.0.9, the plugin does not rewrite regular-expression mount paths to account for a parameterized plugin prefix, so when middleware is mounted with a regular expression inside a plugin registered under a parameterized prefix, the Express matcher treats the prefix parameter as literal text and never matches the real request path. As a result, Express silently skips that middleware while Fastify still runs the route handler, so an application that relies on regular-expression mounted middleware for authentication or authorization inside a parameterized-prefix plugin exposes protected routes to unauthenticated clients. No special configuration is required beyond a parameterized prefix and a regular-expression mount. The issue is fixed in @fastify/express 4.0.10, and users should upgrade to 4.0.10 or later.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Web framework middleware bypass in @fastify/express lacks a specific identity or access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-134249",
+    "published": "2026-11-21 16:35:56",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "SiYuan before 3.8.10 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain Administrator role by spoofing X-Forwarded-For through a loopback-trusted reverse proxy. Attackers can send requests with Host set to localhost and X-Forwarded-For set to 127.0.0.1 to read private note-history contents via the /history/*path route when no lock-screen password is set.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Personal note-taking application authentication bypass is explicitly excluded by consumer and hobbyist software rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-122247",
+    "published": "2026-11-20 16:43:37",
+    "cvss": 8.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Budibase is an open-source low-code platform. Prior to 3.50.0, the public POST /api/global/users/init endpoint on a self-hosted single-tenant deployment accepts an attacker-controlled tenantId and evaluates checkAnyUserExists() in the selected tenant database instead of the legitimate default tenant. An unauthenticated attacker can select an unused tenant namespace to bypass the one-time initialization guard, causing packages/worker/src/api/controllers/global/users.ts to create a tenant-specific CouchDB database and a global-administrator document without a session or CSRF token. Repeating this operation with unique tenant identifiers can exhaust datastore resources and leave latent privileged records. The created administrator cannot log into the default tenant while multi-tenancy remains disabled, which limits the immediate impact to persistent writes, denial of service, and records that may become usable during later multi-tenant operation or migration. This issue is fixed in versions 3.50.0 and 4.0.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Low-code platform initialization bypass creating admin records, lacks core identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-82675",
+    "published": "2026-11-20 16:35:11",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to donor account account takeover in all versions up to, and including, 4.17.0. This is due to the plugin not properly validating a donor's identity prior to updating the password of a linked WordPress account. The donation receipt processes an attacker-controlled first name through the V3 template engine and then reprocesses the result through the legacy `{meta_donor_*}` engine, which can disclose the donor's email-access bearer token. The donor-dashboard password endpoint accepts that token by itself and calls `wp_set_password()` for the WordPress user linked to the donor. This makes it possible for unauthenticated attackers to reset the password of any WordPress account linked to a GiveWP donor record and gain access to that account. If the linked account is an administrator, the attacker can achieve full site compromise and remote code execution through standard administrator functionality. A published GiveWP form with a usable gateway, enabled donor email access (enabled by default), knowledge of the donor email address, and an account already linked to the targeted donor record are required. NOTE: This vulnerability can be chained with CVE-2026-82676 to satisfy the administrator donor pre-requisite for a targeted administrator user attack.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress donation plugin account takeover, explicitly excluded as consumer/hobbyist software per base rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-54039",
+    "published": "2026-11-20 20:03:01",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LibreChat is an enhanced ChatGPT clone that supports multiple AI providers. From 0.7.0 until 0.8.6, when local registration is enabled and at least one social provider is configured, POST /api/auth/register passes an unparsed request object into api/server/services/AuthService.js, allowing an unauthenticated attacker to persist a forged provider value for a known victim email. The api/strategies/socialLogin.js email-fallback path then accepts the planted record when the victim signs in because it compares the stored provider name without requiring the provider subject identifier. The victim OAuth session and the attacker local-password session become bound to the same user record, giving the attacker persistent read and write access to data created by the victim. The first-user administrator role is an additional conditional impact only on a fresh deployment. This issue is fixed in version 0.8.6.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "AI chat frontend account takeover via OAuth session binding, lacks identity infrastructure nexus and falls under non-DPI software exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-134284",
+    "published": "2026-11-21 16:35:21",
+    "cvss": 7.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Vikunja from 1.0.0 before 2.8.0 contains an account takeover vulnerability that allows attackers to hijack SSO identities by planting local accounts with unverified victim emails. When emailfallback is enabled, attackers register or edit a local account using the victim's email, causing the victim's first OIDC login to link into the attacker-controlled account and expose their data.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Task management application SSO hijacking via unverified email, lacks core identity/access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-54044",
+    "published": "2026-11-20 20:12:10",
+    "cvss": 7.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "LibreChat is an enhanced ChatGPT clone that supports multiple AI providers. Prior to 0.8.7, POST /api/agents/actions/:agent_id in api/server/routes/agents/actions.js loads an existing action with owner credentials and merges editor-controlled metadata.domain and metadata.raw_spec while preserving metadata.api_key and related OAuth client secrets. A collaborator with EDIT permission can repoint an action to an attacker-controlled host, and a later tool invocation decrypts and sends the retained owner credential to that destination. This issue is fixed in version 0.8.7.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "OAuth client secret exfiltration in AI chat frontend, non-identity software with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-132661",
+    "published": "2026-11-20 14:56:01",
+    "cvss": 7.6,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Postgres Enterprise Manager (PEM), multi-factor authentication (MFA) is not enforced on the PEM web application's own routes. An attacker who knows the password of a user who has enrolled a second factor can skip the second factor and call PEM's pages and APIs directly, with that user's permissions. A similar issue in pgAdmin 4 was assigned CVE-2024-4215.\nFrom PEM 10.6.1, every authenticated PEM route requires a completed MFA check.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "MFA bypass in database management console, lacks identity/access infrastructure nexus per overlay criteria.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-133502",
+    "published": "2026-11-20 08:45:17",
+    "cvss": 7.3,
+    "epss": 0.00719,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A weakness has been identified in blinkospace blinko up to 1.8.8. Affected is an unknown function of the file /api/auth/verify-2fa of the component 2FA Endpoint. This manipulation of the argument userId causes improper authentication. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 1.8.9 is able to address this issue. Patch name: 80e1c4ffaffe66a97df2b5d85fad864ff3691dc8. Upgrading the affected component is advised.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Niche consumer software (blinkospace blinko) with improper authentication; lacks DPI-relevant identity infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-133983",
+    "published": "2026-11-21 14:15:22",
+    "cvss": 7.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in eigent-ai eigent up to 1.0.2. Affected by this vulnerability is an unknown functionality of the file backend/app/controller/chat_controller.py of the component Local Agent Control API. Performing a manipulation results in missing authentication. The attack may be initiated remotely. Upgrading to version 1.0.3 addresses this issue. The patch is named 59f43afcb1b0ba7b2de8c65d585124f196c4aa17. It is recommended to upgrade the affected component.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "AI/LLM agent framework (eigent-ai) with missing authentication; falls under LLM tooling exclusion and lacks DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-132664",
+    "published": "2026-11-20 14:56:02",
+    "cvss": 7.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "In Postgres Enterprise Manager (PEM), any PEM user can read the encrypted passwords that PEM agents use to connect to monitored servers, including the PEM backend superuser password stored when the PEM server is configured. Unless a custom encryption key is configured, these passwords are encrypted with a key that is the same in every PEM installation, so they can be decrypted.\nFrom PEM 10.6.1, PEM users can no longer read these passwords.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Credential exposure in Postgres Enterprise Manager, an enterprise database management tool lacking a clear DPI sector or core identity infrastructure nexus.",
+      "fail_open": false
+    }
+  }
+]
