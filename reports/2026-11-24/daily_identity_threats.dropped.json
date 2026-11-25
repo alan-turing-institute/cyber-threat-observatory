@@ -1,0 +1,322 @@
+[
+  {
+    "id": "CVE-2026-129514",
+    "published": "2026-11-24 13:48:12",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Deserialization of Untrusted Data vulnerability in the application/vnd.hex+erlang request body parser in hexpm hexpm allows an unauthenticated remote attacker to execute operating system commands via a crafted Erlang external term format request body. This vulnerability was actively exploited against the hex.pm service on 2026-11-23.\n\nHexpmWeb.ErlangFormat.decode/1 in lib/hexpm_web/erlang_format.ex decodes the body with Plug.Crypto.non_executable_binary_to_term/2, which accepts maps that have a __struct__ key. HexpmWeb.PlugParser.parse/5 returns the decoded term as the request params. The parser runs in the endpoint before routing and authentication, so a POST to any route reaches it. Elixir dispatches protocols on the __struct__ key, so the client selects which Inspect and Enumerable implementations run when error reporting inspects the params. A chain through Ecto.Query.DynamicExpr and DBConnection.Stream reaches an apply/3 call on a {module, function, args} tuple taken from the request body.\n\nThis issue affects hex.pm: from 2016-02-23 before 2026-11-23; hexpm/hexpm: from ab1bbcef7cc8395d1056d3b1aa6a174353492d59 before 379b0a29bcc95164249f38ad7d772a37a8ff9533.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Open-source package registry (hex.pm) with deserialization RCE, no identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-128791",
+    "published": "2026-11-24 04:03:41",
+    "cvss": 10.0,
+    "epss": 0.00543,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Any WiFi client can send HTTP DELETE to /meeting-recording/delete to permanently delete files without authentication.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer/office WiFi device missing authentication on file deletion endpoint, explicitly excluded as non-DPI IoT/hardware.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-9790",
+    "published": "2026-11-24 03:18:13",
+    "cvss": 10.0,
+    "epss": 0.00543,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Endpoints accessible without authentication from any WiFi client (e.g., /user/hasSimCard, /user/pooling, /api/device-info).",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WiFi/IoT device exposing unauthenticated endpoints, lacks identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-128798",
+    "published": "2026-11-24 05:59:45",
+    "cvss": 10.0,
+    "epss": 0.00406,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Any connected WiFi client can fetch device info and meeting recording metadata without credentials.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WiFi device information disclosure without authentication, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-130169",
+    "published": "2026-11-23 22:31:04",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.6.26 through 0.7.4, AutoGPT Platform ships a publicly known, hardcoded default JWT verification key in backend/.env.default and autogpt_platform/.env.default. Because HS256 is symmetric, anyone who knows the secret can forge valid JWTs for any user or for the admin role, bypassing authentication and authorization without user interaction. This issue is fixed in version 0.8.0.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "AI workflow automation platform with hardcoded JWT key, lacks enterprise identity/access infrastructure or DPI sector relevance.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-62841",
+    "published": "2026-11-23 21:49:58",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper authentication in Azure Event Grid allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Cloud event routing service with improper authentication, not core identity/access infrastructure or DPI sector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-136136",
+    "published": "2026-11-24 23:15:09",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was identified in Netis WF2409E up to 20261026. Affected by this issue is some unknown functionality of the file /cgi-bin/skk_set.cgi of the component CGI Interface. The manipulation of the argument app/password/new_pwd_confirm/passwd_set/mode_name/wl_link leads to improper authentication. The attack may be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer WiFi router with improper authentication, explicitly excluded as non-DPI IoT/hardware.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-121613",
+    "published": "2026-11-23 09:01:10",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication and authorization on an exposed interface allows an unauthenticated remote attacker to send arbitrary commands to the affected component, which can force a device reboot or let the attacker upload malicious firmware.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Generic embedded/IoT device missing authentication on management interface, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-135208",
+    "published": "2026-11-23 15:44:50",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Kerberos Agent before 3.14.4 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge administrator tokens because JWTMiddleWare() falls back to the hard-coded key TOBECHANGED. Attackers can sign HS256 tokens with arbitrary username and role claims to access /api and /config routes, exposing RTSP, ONVIF, Hub and encryption keys, rewriting configuration, and stopping the camera.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Surveillance camera software with hardcoded JWT key, explicitly excluded as consumer IoT/camera hardware despite product name.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-133469",
+    "published": "2026-11-23 17:07:16",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "XO (Xen Orchestra) is a solution to visualize, manage, backup and delegate your XCP-ng (or XenServer) infrastructure. Prior to 6.9.2 and 6.10.1, REST cookie parsing turns authenticationToken=j:%7B%7D into {}. REST authentication passes that object to the XO token provider without requiring a string. The token collection treats {} as an unfiltered lookup and returns its first token; the provider authenticates as that token's owner if it is unexpired. The authenticated /rest/v0/users/me/authentication_tokens route then returns reusable login token IDs. This vulnerability is actively exploited in the wild. This vulnerability is fixed in 6.9.2 and 6.10.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Virtualization management platform with authentication token bypass, not core identity/access infrastructure or DPI sector.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123215",
+    "published": "2026-11-24 19:36:37",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Copeland XWEB Pro contains a missing authentication vulnerability. Fixed in 1.16.1.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in Copeland XWEB Pro industrial automation software, excluded by base SCADA/IIoT rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-65175",
+    "published": "2026-11-24 13:19:40",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "NVIDIA AIStore contains a vulnerability in storage-target node-control authorization where an unauthenticated attacker could access administrative functions through a target's public interface. A successful exploit might lead to information disclosure, data tampering, or denial of service.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Authorization bypass in NVIDIA AIStore enterprise storage software lacks identity/access infrastructure nexus required by overlay.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109490",
+    "published": "2026-11-23 21:49:56",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Authentication Methods Portal Extension allows an unauthorized attacker to elevate privileges over a network.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "XSS in a vaguely named authentication portal extension lacks clear identity infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-135211",
+    "published": "2026-11-23 15:44:46",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "BISHENG before 3.0.0 contains a missing authentication vulnerability in the /api/v2/workflow/invoke and /api/v2/workflow/stop routes that allows unauthenticated attackers to run workflows as the administrator. Attackers knowing a workflow UUID can supply an override replacing a Code node's code parameter with Python passed to exec(), achieving remote code execution, or stop other users' workflow sessions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in BISHENG AI workflow platform, excluded by base LLM/tooling rule and lack of identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-101864",
+    "published": "2026-11-23 22:16:52",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "EUSurvey through 1.6, prior to commit a4161a9, contains a weak password recovery mechanism that allows attackers who obtain a still-valid password-reset link to take over accounts that use a local EUSurvey password. The /auth/reset/ flow checks only the age of a reset code and does not invalidate it after the password is changed, and issuing a newer link leaves earlier links active, so a used or superseded link remains valid for up to 24 hours from issuance and can be reused to set a new password, sign in as the affected user, and lock that user out.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Weak password recovery in EUSurvey survey platform lacks DPI-relevant identity infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-123214",
+    "published": "2026-11-24 17:27:30",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Joomla! Core - [20261111] - Core - Missing authentication in web installer in Joomla 4.0.0-5.4.10, 6.0.0-6.2.0 - The web installer remains usable on an installed site as long as the installation folder exists, allowing unauthenticated users to rewrite the configuration.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authentication in Joomla CMS web installer, excluded by base consumer/web platform rule.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-135389",
+    "published": "2026-11-24 16:49:29",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Pion DTLS is a Go implementation of Datagram Transport Layer Security. From 2.1.0 until 3.1.14, a server with a SessionStore saved the session ID and master secret after ClientKeyExchange, before receiving a valid Finished message and before enforcing the configured client-authentication checks. A remote client can omit its Certificate message, send ClientKeyExchange, leave the first handshake unfinished, and then resume the cached session using the master secret it learned during key exchange. The server must use a SessionStore and negotiate a certificate-based cipher suite. The attack can bypass client certificates required through RequireAnyClientCert or RequireAndVerifyClientCert, or a rejecting VerifyConnection callback. WebRTC users are not affected. The abbreviated handshake can allow unauthorized access to application data. The issue is fixed in version 3.1.14.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "DTLS transport library vulnerability bypassing client certificates, not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-116445",
+    "published": "2026-11-24 17:22:50",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Dell PowerStore SDNAS contains a local privilege-escalation vulnerability that could allow a low-privileged attacker to execute code in the kernel on the NAS node.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Local privilege escalation in enterprise storage hardware, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-136159",
+    "published": "2026-11-24 14:17:07",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "TypiCMS Core before 17.0.46 contains an insufficiently protected credentials vulnerability that allows authenticated users with \"read users\" permission to view plaintext api_token values for all users, including superusers, via the GET /api/users endpoint. Attackers can steal a superuser's non-expiring, non-rotatable api_token from the JSON response and use it to gain full superuser API access, enabling creation and deletion of users, roles, and all content.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Credential exposure in TypiCMS (CMS/blog platform) falls under base Digital Identity exclusion for generic CMS/blog software.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-136181",
+    "published": "2026-11-24 17:05:25",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "cnpmcore 3.46.0 before 3.84.3 and 4.0.0 before 4.37.3 contains an information disclosure vulnerability that allows unauthenticated attackers to obtain upstream registry authTokens via the GET /-/registry endpoints lacking AdminAccess middleware. Attackers can request /-/registry or /-/registry/:id and replay the leaked authToken as a Bearer credential to enumerate, download, or publish packages upstream.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Information disclosure of registry auth tokens in cnpmcore (npm registry proxy), not identity/access infrastructure or DPI sector software.",
+      "fail_open": false
+    }
+  }
+]
