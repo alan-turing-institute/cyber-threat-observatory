@@ -1,0 +1,194 @@
+[
+  {
+    "id": "CVE-2026-129968",
+    "published": "2026-11-25 12:55:44",
+    "cvss": 9.3,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "LiteSpeed Cache Plugin for Prestashop does not verify authenticity of \"pd\" parameter and uses it to render a template without checking that it is a real .tpl file. An unauthenticated attacker can send specially crafted requests to a store that cause the server to process attacker-suplied content, potentially giving the attacker full control of the store and access to customer and payment data.\n\n\nThis issue was fixed in version 1.6.2.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "E-commerce plugin (Prestashop), consumer/retail context, no DPI identity or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-133335",
+    "published": "2026-11-25 11:12:25",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Joomla Extension - virtuemart.net - Unauthenticated local file inclusion leading to remote code execution via controller fallback in VirtueMart extension 4.0.0-4.8.7 - The main controller of the component fell back to including a controller file derived from the request without filtering the name, allowing path traversal to arbitrary local PHP files. Depending on the server setup, for example an available pearcmd.php, this could be used to execute code. The issue has been exploited in the wild. Fixed in 4.8.8.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Joomla e-commerce extension, consumer CMS context, no DPI identity or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-132165",
+    "published": "2026-11-26 00:44:41",
+    "cvss": 0.0,
+    "epss": 0.11053,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "Missing Authentication for Critical Function vulnerability in Drupal Drupal core allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Drupal core versions: from 0.0.0 to 10.6.22, from 11.0.0 to 11.3.22, from 11.4.0 to 11.4.13.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Generic CMS framework (Drupal core) with missing auth, lacks specific identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-136716",
+    "published": "2026-11-26 00:44:43",
+    "cvss": 0.0,
+    "epss": 0.01014,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Improper Check for Unusual or Exceptional Conditions vulnerability in Drupal Drupal core allows Forceful Browsing. This issue affects Drupal core versions: from 0.0.0 to 10.6.23, from 11.0.0 to 11.3.23, from 11.4.0 to 11.4.14.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Drupal core forceful browsing vulnerability, no identity/access or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-136547",
+    "published": "2026-11-25 05:00:21",
+    "cvss": 10.0,
+    "epss": 0.0108,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was determined in Tenda RX3 16.03.13.11_multi. Impacted is the function R7WebsSecurityHandler of the component httpd. Executing a manipulation can lead to improper authentication. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer router (Tenda RX3), explicitly excluded IoT/hardware context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-136553",
+    "published": "2026-11-25 06:30:24",
+    "cvss": 10.0,
+    "epss": 0.01052,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability was detected in Tenda RX3 16.03.13.11_multi. Affected is an unknown function of the file /goform/fast_setting_wifi_set. Performing a manipulation of the argument loginPwd results in improper authentication. It is possible to initiate the attack remotely. The exploit is now public and may be used.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Consumer router (Tenda RX3), explicitly excluded IoT/hardware context.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-78114",
+    "published": "2026-11-25 10:22:16",
+    "cvss": 10.0,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Session Fixation in the login flow of Apache JSPWiki versions 2.10 through 3.0.0 on all platforms. The session identifier was not replaced when a user authenticated, so an attacker who could set a known session identifier in the browser of a victim could use the same identifier after the victim logged in.\n\n\n\nUsers are recommended to upgrade to version 3.0.1 (3.x) or 2.12.6 (2.x), which fix this issue.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Session fixation in generic wiki software (JSPWiki), lacks DPI identity infrastructure or sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-135888",
+    "published": "2026-11-25 12:19:44",
+    "cvss": 9.2,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Directory traversal vulnerability in the custom-homepage asset endpoint (/__api__/custom/home/) \nallows remote attackers to read arbitrary files readable by the Package Manager service account via a filesystem path appended to the request URI in Posit Software, PBC Posit Package Manager: \n\n\n\n\n\n  *  before 2025.09.6,\n  *  2025.12.x before 2025.12.4\n  *  2026.04.x before 2026.04.4\n  *  2026.05.x before 2026.05.2\n  *  2026.06.x before 2026.06.2\n  *  2026.08.x before 2026.08.2\n  *  2026.09.x before 2026.09.2\n  *  2026.10.x before 2026.10.2\n  *  2026.11.x before 2026.11.2\n\n\n\n\n\n\n\n\nNOTE: In the default configuration, where Server.LandingPage is unset, request paths are resolved from the filesystem root, so no directory-traversal sequences are required and exploitation is not detected by scanners that test only for ../ sequences.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Directory traversal/info leak in developer package manager, no authentication or access-control impact.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-133464",
+    "published": "2026-11-25 18:26:54",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "SeaweedFS is a distributed storage system for files and blobs. Prior to version 4.46, FileStore.ValidatePassword in the SFTP server does not reject zero-length secrets before comparing them, causing an empty login password to match any account configured without one, such as public-key-only or certificate-only users. Because password authentication is enabled by default, a remote attacker who knows a valid username can log in without a key or secret and obtain an SFTP session with that user's home directory and path permissions. This issue is fixed in version 4.46.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "SFTP authentication bypass in distributed storage software lacks direct identity or access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-137465",
+    "published": "2026-11-26 16:01:42",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Parse Server 3.10.0 before 8.6.123 and 9.0.0 before 9.11.1-alpha.4 contains an authentication bypass in the Google Play Games authentication adapter, which does not verify that the supplied player ID belongs to the presented access token. Attackers can sign in with their own Google Play Games credential while claiming another user's player ID to take over that account or link that player ID to their own account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in Google Play Games adapter for Parse Server falls under gaming/consumer exclusion.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-137584",
+    "published": "2026-11-26 13:39:51",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Twenty through 2.63.0 in multi-workspace mode contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain pending invitation tokens by registering an invitee's email via the signUp GraphQL mutation. Attackers can submit the leaked personalInviteToken to signUpInWorkspace to join the workspace with the invitation's role, including Admin, and obtain a verified email.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Authentication bypass in workspace/CRM application lacks core identity or access infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-135279",
+    "published": "2026-11-26 16:51:11",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "@fastify/express is the plugin that lets an application run Express middleware and Express applications inside the Fastify web framework. In versions before 4.0.14, a request with an empty dynamic route parameter reaches a Fastify route handler while middleware mounted for that path inside an Express Router or sub-application is skipped, because Fastify's router accepts an empty value where Express requires a non-empty one, and an unanchored regular-expression mount passed to the plugin is bypassed the same way. An earlier fix covered only the mount paths passed to the plugin directly, not middleware mounted inside a routed Express application. An attacker can use this to bypass authentication or other middleware-based access controls on the affected routes, with the practical impact depending on what the empty value selects in the application. The issue is fixed in @fastify/express 4.0.14, and users should upgrade to 4.0.14 or later. As a workaround, enforce authentication in a Fastify hook such as preHandler that runs after routing, mount the middleware on a static parent path, or require non-empty values in the route params schema.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Routing bypass in web framework plugin lacks direct identity or access infrastructure nexus.",
+      "fail_open": false
+    }
+  }
+]
