@@ -1,0 +1,258 @@
+[
+  {
+    "id": "CVE-2026-132165",
+    "published": "2026-11-26 00:44:41",
+    "cvss": 0.0,
+    "epss": 0.11053,
+    "wild": true,
+    "identity_nexus": true,
+    "description": "Missing Authentication for Critical Function vulnerability in Drupal Drupal core allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Drupal core versions: from 0.0.0 to 10.6.22, from 11.0.0 to 11.3.22, from 11.4.0 to 11.4.13.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Drupal core is a generic CMS/framework, not identity/access infrastructure; falls under CMS exclusion despite auth CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-136716",
+    "published": "2026-11-26 00:44:43",
+    "cvss": 0.0,
+    "epss": 0.01014,
+    "wild": true,
+    "identity_nexus": false,
+    "description": "Improper Check for Unusual or Exceptional Conditions vulnerability in Drupal Drupal core allows Forceful Browsing. This issue affects Drupal core versions: from 0.0.0 to 10.6.23, from 11.0.0 to 11.3.23, from 11.4.0 to 11.4.14.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Drupal core is a generic CMS with no identity/access infrastructure role; forceful browsing lacks DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-137724",
+    "published": "2026-11-27 05:33:03",
+    "cvss": 10.0,
+    "epss": 0.0054,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "A vulnerability in the Platform component of Mitel OpenScape 4000, and OpenScape 4000 Manager could allow an unauthenticated attacker to conduct an unauthorized access attack due to improper authentication mechanisms. A successful exploit could allow an attacker to obtain sensitive information and gain unauthorized access to system. This vulnerability affects OpenScape 4000, versions V11 R0.22 through V11 R2.11 and V10 R1.68 and earlier, and OpenScape 4000 Manager, versions V11 R0.22 through V11 R2.11 and V10 R1.34 through V10 R1.68. This is MTLVULN-1785.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Mitel OpenScape is an enterprise telephony platform, not identity/access infrastructure; improper auth lacks DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-137499",
+    "published": "2026-11-26 16:01:04",
+    "cvss": 9.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Budibase from 3.41.0 before 4.0.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to take over password-less global Builder accounts via unverified-email OIDC/SSO account linking. Attackers can assert a victim's email with email_verified=false at a trusted IdP, bypassing the isAccountLinkable allowlist to control all apps, datasources, and automations.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.45,
+      "primary_pir": "none",
+      "reason": "Budibase is a low-code app builder, not core identity infrastructure; OIDC linking flaw lacks strong DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-137584",
+    "published": "2026-11-26 13:39:51",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Twenty through 2.63.0 in multi-workspace mode contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain pending invitation tokens by registering an invitee's email via the signUp GraphQL mutation. Attackers can submit the leaked personalInviteToken to signUpInWorkspace to join the workspace with the invitation's role, including Admin, and obtain a verified email.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "Twenty is a CRM application, not identity/access infrastructure; invitation token leak lacks DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-135279",
+    "published": "2026-11-26 16:51:11",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "@fastify/express is the plugin that lets an application run Express middleware and Express applications inside the Fastify web framework. In versions before 4.0.14, a request with an empty dynamic route parameter reaches a Fastify route handler while middleware mounted for that path inside an Express Router or sub-application is skipped, because Fastify's router accepts an empty value where Express requires a non-empty one, and an unanchored regular-expression mount passed to the plugin is bypassed the same way. An earlier fix covered only the mount paths passed to the plugin directly, not middleware mounted inside a routed Express application. An attacker can use this to bypass authentication or other middleware-based access controls on the affected routes, with the practical impact depending on what the empty value selects in the application. The issue is fixed in @fastify/express 4.0.14, and users should upgrade to 4.0.14 or later. As a workaround, enforce authentication in a Fastify hook such as preHandler that runs after routing, mount the middleware on a static parent path, or require non-empty values in the route params schema.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.25,
+      "primary_pir": "none",
+      "reason": "Fastify/Express plugin is a generic web framework component, not identity/access infrastructure; middleware bypass lacks DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-137465",
+    "published": "2026-11-26 16:01:42",
+    "cvss": 9.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Parse Server 3.10.0 before 8.6.123 and 9.0.0 before 9.11.1-alpha.4 contains an authentication bypass in the Google Play Games authentication adapter, which does not verify that the supplied player ID belongs to the presented access token. Attackers can sign in with their own Google Play Games credential while claiming another user's player ID to take over that account or link that player ID to their own account.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.35,
+      "primary_pir": "none",
+      "reason": "Parse Server is a general-purpose backend framework, not core identity infrastructure; adapter-specific auth bypass lacks strong DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-115283",
+    "published": "2026-11-27 04:17:31",
+    "cvss": 8.8,
+    "epss": 0.00399,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication vulnerability in BS2500/BS500 Virtage Firmware.\n\n\nThis issue affects BladeSymphony BS2500: from 02-02 through 02-76; BladeSymphony BS500: from 01-01 through 02-76.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.2,
+      "primary_pir": "none",
+      "reason": "BladeSymphony firmware is hardware management software, not identity/access infrastructure; missing authentication lacks DPI identity nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-137953",
+    "published": "2026-11-27 15:22:30",
+    "cvss": 8.8,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Pydantic Deep 0.2.18 before 0.4.0 contains a missing authentication vulnerability in the bundled DeepResearch FastAPI app that exposes HTTP routes and the /ws/chat WebSocket. Remote attackers reaching the server bound to all interfaces can enumerate sessions, read event logs and workspace files, drive the research agent, and delete sessions.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.15,
+      "primary_pir": "none",
+      "reason": "Missing authentication in an AI/LLM research tool (Pydantic Deep), excluded by overlay as non-identity software with no DPI nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-138034",
+    "published": "2026-11-27 19:15:12",
+    "cvss": 8.7,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "bigcommerce-api-mcp before 1.0.1 contains a missing authentication vulnerability that allows remote unauthenticated attackers to invoke MCP tools because the /sse and /messages routes skip the authenticateRequest middleware. Attackers can open /sse to obtain a session id and POST JSON-RPC tool calls to /messages to retrieve store product, order and customer records using the operator's BigCommerce API key.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.3,
+      "primary_pir": "none",
+      "reason": "Missing authentication in a niche e-commerce MCP integration tool, lacking core identity/access infrastructure or DPI sector nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-115288",
+    "published": "2026-11-27 04:17:27",
+    "cvss": 8.4,
+    "epss": 0.00345,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication vulnerability in BS2500/BS500 Virtage Firmware.\n\nThis issue affects BladeSymphony BS2500: from 02-02 through 02-76*; BladeSymphony BS500: from 01-01 through 02-76*.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate firmware CVE description with no exploitable detail or identity/access mechanism, excluded per overlay hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-115284",
+    "published": "2026-11-27 04:17:31",
+    "cvss": 8.4,
+    "epss": 0.00345,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing authentication vulnerability in BS2500/BS500 Virtage Firmware.\n\nThis issue affects BladeSymphony BS2500: from 02-02 through 02-76; BladeSymphony BS500: from 01-01 through 02-76.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Boilerplate firmware CVE description with no exploitable detail or identity/access mechanism, excluded per overlay hard rules.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-103886",
+    "published": "2026-11-26 15:47:52",
+    "cvss": 8.1,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The App Builder – Create Native Android & iOS Apps On The Flight plugin for WordPress is vulnerable to Authentication Bypass via Google ID Token Audience Validation Bypass in all versions up to, and including, 5.7.1. This is due to the `LoginGoogle::login()` function failing to validate the `aud` (audience) claim of the supplied `idToken` against any OAuth client ID belonging to the WordPress site, failing to verify the `email_verified` claim, and resolving WordPress accounts solely by the email claim without binding to the Google `sub` (subject) identifier — while the `/app-builder/v1/login` REST endpoint is registered with a `permission_callback` that unconditionally returns `true`, leaving it fully reachable by unauthenticated requesters. This makes it possible for unauthenticated attackers to authenticate as any existing WordPress user — including Administrators — whose email address is known, by supplying a Google-signed ID token obtained from an entirely unrelated OAuth client containing the target user's email claim, which causes the plugin to issue a signed App Builder JWT granting that user's full privileges. Exploitation requires the attacker to obtain a valid Google-signed ID token carrying the target user's email address, which can be achieved by operating a separate Google OAuth client and inducing the target user to authenticate through it.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "WordPress plugin authentication bypass, explicitly excluded by overlay as consumer/hobbyist software regardless of auth CWE.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-137306",
+    "published": "2026-11-26 01:37:16",
+    "cvss": 7.6,
+    "epss": 0.00473,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Grav Admin plugin before 1.10.65 contains a password reset poisoning vulnerability in LoginController::taskForgot() that ignores the Require Trusted Host setting when building reset links. Unauthenticated attackers who know an administrator's username can submit the forgot-password form with a forged Host header, capturing the reset token when clicked to take over accounts.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.4,
+      "primary_pir": "none",
+      "reason": "Password reset poisoning in a CMS plugin (Grav) falls under the generic blog/CMS exclusion, lacking a clear enterprise identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-109586",
+    "published": "2026-11-26 15:47:55",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "The WP STAGING – Backups & Restore, Migration & Clone Plugin – Cloud Backups, Scheduled Backups plugin for WordPress is vulnerable to Authorization Bypass in all versions up to, and including, 4.17.0 via the `REQUEST_URI` query parameter. This is due to a parser-differential flaw in `showLoginForm()`: the plugin's `isRestUrl()` function performs an unanchored `strpos()` prefix match against the full `REQUEST_URI` — including the query string — and short-circuits all authorization checks (including `isStagingSite()` and `current_user_can('manage_options')`) whenever it detects a REST-like URL, while WordPress core only treats a request as a REST API call when the `rest_route` query variable is non-empty. This makes it possible for unauthenticated attackers to bypass the staging-site login gate entirely by appending an empty `rest_route` parameter (e.g. `/wp-json/?rest_route=`), causing the plugin to skip its gate while core proceeds to render the ordinary theme front end, exposing the full theme-rendered contents of the staging site — including private post content, page-builder output, WooCommerce pages, and site search results over the staging database. This bypass only affects staging sites where the login gate is active, which is the default state for any site cloned by the plugin when the `wpstg_is_staging_site` option is set to `true` or the `.wp-staging` marker file is present in `ABSPATH`.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Authorization bypass in a WordPress plugin explicitly excluded as consumer/hobbyist software with no DPI identity infrastructure nexus.",
+      "fail_open": false
+    }
+  },
+  {
+    "id": "CVE-2026-134488",
+    "published": "2026-11-26 18:09:02",
+    "cvss": 7.5,
+    "epss": null,
+    "wild": false,
+    "identity_nexus": true,
+    "description": "Missing Authorization vulnerability in Mamunur Rashid Radius Booking — Booking Calendar for Appointments &amp; Services radius-booking allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Radius Booking — Booking Calendar for Appointments &amp; Services: from n/a through 1.0.22.",
+    "_relevance": {
+      "keep": false,
+      "score": 0.1,
+      "primary_pir": "none",
+      "reason": "Missing authorization in a WordPress booking plugin explicitly excluded as consumer/hobbyist software with no DPI relevance.",
+      "fail_open": false
+    }
+  }
+]
